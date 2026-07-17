@@ -1,0 +1,16 @@
+# Dependências e artefatos
+node_modules/
+package-lock.json
+package.json
+
+# Cache do Firebase (gerado no deploy)
+.firebase/
+
+# Arquivos temporários / de teste
+testgit_tmp/
+t.js
+test-*.js
+
+# Sistema
+.DS_Store
+Thumbs.db
