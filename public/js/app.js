@@ -20,7 +20,8 @@ window.App = (function () {
     });
   });
 
-  let attempts = [];   // cache das tentativas do usuário
+  let attempts = [];
+  let fcKeyHandler = null;   // cache das tentativas do usuário
 
   // ---------- helpers ----------
   function esc(str) {
@@ -140,18 +141,15 @@ window.App = (function () {
       '<section class="sec"><h2>' + esc(sec.titulo) + "</h2>" + (sec.html || "") + "</section>"
     ).join("");
 
-    // flashcards
+    // flashcards (entrada para o modo de estudo card-a-card)
     const fcHtml = (m.flashcards && m.flashcards.length) ? (
-      '<div class="block-head"><h2><i class="ti ti-cards"></i> Flashcards</h2>' +
-      '<span class="hint">Clique no cartão para revelar a resposta · ' + m.flashcards.length + " cartões</span></div>" +
-      '<div class="fc-grid">' + m.flashcards.map((f, i) => (
-        '<button class="fc" data-fc="' + i + '" aria-expanded="false">' +
-          '<span class="fc-tema">' + esc(f.tema) + "</span>" +
-          '<span class="fc-q">' + esc(f.pergunta) + "</span>" +
-          '<span class="fc-a">' + esc(f.resposta) + "</span>" +
-          '<span class="fc-flip"><i class="ti ti-rotate-clockwise"></i> ver resposta</span>' +
-        "</button>"
-      )).join("") + "</div>"
+      '<div class="block-head"><h2><i class="ti ti-cards"></i> Flashcards</h2></div>' +
+      '<a class="fc-entry" href="#/fc/' + m.id + '">' +
+        '<div class="fc-entry-ic"><i class="ti ti-cards"></i></div>' +
+        '<div class="fc-entry-body"><h3>Estudar flashcards</h3>' +
+          '<p>' + m.flashcards.length + ' cartões · um a um, com Acertei / Errei</p></div>' +
+        '<span class="fc-entry-cta">Começar <i class="ti ti-arrow-right"></i></span>' +
+      "</a>"
     ) : "";
 
     // simulados
@@ -187,12 +185,112 @@ window.App = (function () {
       fcHtml +
       simSection;
 
-    document.querySelectorAll(".fc").forEach((el) => {
-      el.addEventListener("click", () => {
-        const open = el.classList.toggle("open");
-        el.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-    });
+  }
+
+  // ---------- flashcards: modo de estudo card-a-card ----------
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  function renderFlashcards(mid, onlyWrong) {
+    const m = idx.m[mid];
+    if (!m || !(m.flashcards || []).length) return renderMateria(mid);
+    const a = m._assunto;
+    const cards = m.flashcards;
+
+    let order = cards.map((_, i) => i);
+    if (onlyWrong && onlyWrong.length) order = onlyWrong.slice();
+    shuffle(order);
+    let pos = 0;
+    const results = {};
+
+    $app().innerHTML =
+      crumb([{ label: "Assuntos", href: "#/" }, { label: a.nome, href: "#/a/" + a.id }, { label: m.nome, href: "#/m/" + m.id }, { label: "Flashcards" }]) +
+      '<div id="fc-stage" class="fc-stage"></div>';
+    const stage = document.getElementById("fc-stage");
+
+    function draw() {
+      if (pos >= order.length) return summary();
+      const c = cards[order[pos]];
+      const n = order.length;
+      stage.innerHTML =
+        '<div class="fcs-top"><span class="fcs-count">Cartão ' + (pos + 1) + " de " + n + "</span>" +
+          '<a class="btn-ghost sm" href="#/m/' + mid + '"><i class="ti ti-x"></i> Sair</a></div>' +
+        '<div class="fcs-bar"><div class="fcs-bar-fill" style="width:' + Math.round((pos / n) * 100) + '%"></div></div>' +
+        '<div class="fcs-card">' +
+          '<span class="fcs-tema">' + esc(c.tema) + "</span>" +
+          '<div class="fcs-q">' + esc(c.pergunta) + "</div>" +
+          '<div class="fcs-a" id="fcs-a" hidden><span class="fcs-a-label">Resposta</span>' + esc(c.resposta) + "</div>" +
+        "</div>" +
+        '<div class="fcs-actions" id="fcs-actions"><button class="btn-primary wide" id="btn-reveal"><i class="ti ti-eye"></i> Mostrar resposta <span class="kbd">espaço</span></button></div>' +
+        '<div class="fcs-judge" id="fcs-judge" hidden>' +
+          '<button class="judge err" id="btn-err"><i class="ti ti-x"></i> Errei</button>' +
+          '<button class="judge ok" id="btn-ok"><i class="ti ti-check"></i> Acertei</button>' +
+        "</div>";
+      document.getElementById("btn-reveal").onclick = reveal;
+      document.getElementById("btn-err").onclick = function () { judge(false); };
+      document.getElementById("btn-ok").onclick = function () { judge(true); };
+    }
+
+    function reveal() {
+      const el = document.getElementById("fcs-a");
+      if (!el) return;
+      el.hidden = false;
+      document.getElementById("fcs-actions").hidden = true;
+      document.getElementById("fcs-judge").hidden = false;
+    }
+
+    function judge(correct) {
+      results[order[pos]] = correct;
+      pos++;
+      draw();
+    }
+
+    function summary() {
+      const total = order.length;
+      const acertos = Object.keys(results).filter((k) => results[k]).length;
+      const wrong = order.filter((ci) => results[ci] === false);
+      const pct = total ? Math.round((acertos / total) * 100) : 0;
+      const cls = pct >= 80 ? "ok" : pct >= 60 ? "warn" : "bad";
+      window.STORE.saveAttempt({
+        kind: "flashcards", materiaId: m.id, materiaNome: m.nome, assuntoId: a.id,
+        assuntoNome: a.nome, acertos: acertos, total: total, pct: pct
+      }).catch(function (e) { console.error(e); });
+      stage.innerHTML =
+        '<div class="fcs-summary ' + cls + '">' +
+          '<i class="ti ti-' + (pct >= 80 ? "confetti" : "flag") + ' fcs-sum-ic"></i>' +
+          '<div class="fcs-sum-num">' + acertos + " / " + total + "</div>" +
+          '<div class="fcs-sum-msg">Você acertou ' + pct + "% dos cartões" + (wrong.length ? " · " + wrong.length + " pra revisar" : " · gabaritou!") + "</div>" +
+        "</div>" +
+        '<div class="fcs-sum-actions">' +
+          (wrong.length ? '<button class="btn-primary wide" id="btn-retry"><i class="ti ti-refresh"></i> Revisar os ' + wrong.length + " que errei</button>" : "") +
+          '<button class="btn-ghost wide" id="btn-again"><i class="ti ti-rotate"></i> Refazer todos</button>' +
+          '<a class="btn-ghost wide" href="#/m/' + mid + '"><i class="ti ti-arrow-left"></i> Voltar à matéria</a>' +
+        "</div>";
+      if (wrong.length) document.getElementById("btn-retry").onclick = function () { renderFlashcards(mid, wrong); };
+      document.getElementById("btn-again").onclick = function () { renderFlashcards(mid); };
+    }
+
+    if (fcKeyHandler) window.removeEventListener("keydown", fcKeyHandler);
+    fcKeyHandler = function (e) {
+      if (!document.getElementById("fc-stage")) return;
+      const judgeVisible = document.getElementById("fcs-judge") && !document.getElementById("fcs-judge").hidden;
+      if (e.code === "Space" || e.key === " ") {
+        e.preventDefault();
+        if (!judgeVisible) reveal();
+      } else if (judgeVisible && (e.key === "1" || e.key === "ArrowLeft")) {
+        e.preventDefault(); judge(false);
+      } else if (judgeVisible && (e.key === "2" || e.key === "ArrowRight")) {
+        e.preventDefault(); judge(true);
+      }
+    };
+    window.addEventListener("keydown", fcKeyHandler);
+
+    draw();
   }
 
   // ---------- executar simulado ----------
@@ -364,10 +462,12 @@ window.App = (function () {
     const h = (location.hash || "#/").replace(/^#/, "");
     const parts = h.split("/").filter(Boolean); // ex: ["s","lgpd-01","rev","abc"]
     window.scrollTo(0, 0);
+    if (fcKeyHandler) { window.removeEventListener("keydown", fcKeyHandler); fcKeyHandler = null; }
     if (parts.length === 0) return renderHome();
     switch (parts[0]) {
       case "a": return renderAssunto(parts[1]);
       case "m": return renderMateria(parts[1]);
+      case "fc": return renderFlashcards(parts[1]);
       case "s":
         if (parts[2] === "rev") return renderReview(parts[1], decodeURIComponent(parts[3] || ""));
         return renderSimulado(parts[1]);

@@ -167,3 +167,44 @@ a{color:inherit;text-decoration:none}
 .fc.open .fc-a{display:block}
 .fc-flip{font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:5px}
 .fc.open .fc-flip{display:none}
+
+/* ---------- entrada dos flashcards ---------- */
+.fc-entry{display:flex;align-items:center;gap:15px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px;margin-bottom:24px;transition:.14s}
+.fc-entry:hover{border-color:var(--brand);transform:translateY(-1px)}
+.fc-entry-ic{flex-shrink:0;display:grid;place-items:center;width:46px;height:46px;border-radius:11px;background:var(--brand-soft);color:var(--brand);font-size:24px}
+.fc-entry-body{flex:1;min-width:0}
+.fc-entry-body h3{margin:0 0 2px;font-size:16px;font-weight:600}
+.fc-entry-body p{margin:0;font-size:13.5px;color:var(--ink-soft)}
+.fc-entry-cta{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--brand)}
+
+/* ---------- página de estudo card-a-card ---------- */
+.fc-stage{max-width:560px;margin:0 auto}
+.fcs-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.fcs-count{font-size:13px;color:var(--muted);font-weight:500}
+.fcs-bar{height:6px;background:var(--line);border-radius:20px;overflow:hidden;margin-bottom:18px}
+.fcs-bar-fill{height:100%;background:var(--brand);border-radius:20px;transition:width .25s ease}
+.fcs-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:26px 24px;min-height:200px;display:flex;flex-direction:column}
+.fcs-tema{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--brand);font-weight:600;margin-bottom:12px}
+.fcs-q{font-size:19px;line-height:1.5;font-weight:500;color:var(--ink)}
+.fcs-a{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line-strong);font-size:15.5px;line-height:1.65;color:var(--ink-soft)}
+.fcs-a-label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--ok);font-weight:600;margin-bottom:6px}
+.fcs-actions{margin-top:16px}
+.wide{width:100%;justify-content:center}
+.kbd{font-size:11px;padding:1px 7px;border:1px solid rgba(255,255,255,.5);border-radius:5px;opacity:.8;margin-left:2px}
+.fcs-judge{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.judge{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-size:16px;font-weight:500;cursor:pointer;border-radius:11px;padding:16px;border:1.5px solid;transition:.12s}
+.judge.err{background:var(--bad-bg);color:var(--bad-ink);border-color:var(--bad)}
+.judge.ok{background:var(--ok-bg);color:var(--ok-ink);border-color:var(--ok)}
+.judge:hover{transform:translateY(-1px);filter:brightness(1.03)}
+.judge:active{transform:scale(.98)}
+
+/* resumo do fim */
+.fcs-summary{text-align:center;border-radius:16px;padding:30px 24px;margin-bottom:18px}
+.fcs-summary.ok{background:var(--ok-bg)} .fcs-summary.warn{background:var(--warn-bg)} .fcs-summary.bad{background:var(--bad-bg)}
+.fcs-sum-ic{font-size:40px;margin-bottom:6px}
+.fcs-summary.ok .fcs-sum-ic,.fcs-summary.ok .fcs-sum-num,.fcs-summary.ok .fcs-sum-msg{color:var(--ok-ink)}
+.fcs-summary.warn .fcs-sum-ic,.fcs-summary.warn .fcs-sum-num,.fcs-summary.warn .fcs-sum-msg{color:var(--warn-ink)}
+.fcs-summary.bad .fcs-sum-ic,.fcs-summary.bad .fcs-sum-num,.fcs-summary.bad .fcs-sum-msg{color:var(--bad-ink)}
+.fcs-sum-num{font-size:34px;font-weight:700;line-height:1.1}
+.fcs-sum-msg{font-size:14.5px;margin-top:4px}
+.fcs-sum-actions{display:flex;flex-direction:column;gap:10px;max-width:560px;margin:0 auto}
