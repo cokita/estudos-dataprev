@@ -658,11 +658,19 @@ window.CONTENT = {
           "resumo": [
             {
               "titulo": "De onde veio",
-              "html": "\n                <p>É a \"constituição da internet\" brasileira (2014), criada para garantir direitos dos usuários e regras claras — neutralidade de rede, privacidade e liberdade de expressão — num ambiente que até então não tinha lei própria.</p>\n              "
+              "html": "\n                <p>É a \"constituição da internet\" brasileira (2014), criada para garantir direitos dos usuários e regras claras — neutralidade de rede, privacidade e liberdade de expressão — num ambiente que até então não tinha lei própria.</p>\n                <p><b>Fundamentos (art. 2º):</b> o respeito à liberdade de expressão, além do reconhecimento da escala mundial da rede, dos direitos humanos, da pluralidade, da livre iniciativa e da finalidade social da rede.</p>\n                <p><b>Princípios (art. 3º):</b> liberdade de expressão; proteção da privacidade; proteção dos dados pessoais; preservação e garantia da neutralidade de rede; preservação da estabilidade, segurança e funcionalidade da rede; responsabilização dos agentes conforme suas atividades; preservação da natureza participativa da rede; e liberdade dos modelos de negócios.</p>\n              "
             },
             {
               "titulo": "Pontos que mais caem",
-              "html": "\n                <p><b>Neutralidade de rede (art. 9º):</b> tratar todos os pacotes de forma isonômica, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação.</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Registros de conexão</span> guarda por 1 ano (provedor de conexão, art. 13)</div>\n                  <div class=\"def\"><span class=\"def-t\">Registros de acesso a aplicações</span> guarda por 6 meses (provedor de aplicações, art. 15)</div>\n                </div>\n                <p><b>Responsabilidade (art. 19):</b> em regra, o provedor de aplicações só responde por conteúdo de terceiro se, após ordem judicial específica, não o remover.</p>\n                <div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Atenção:</b> o regime do art. 19 foi objeto de decisão do STF em 2025 — confira o entendimento mais recente antes da prova.</div>\n                <p><b>Direitos do usuário (art. 7º):</b> inviolabilidade da intimidade e vida privada; sigilo das comunicações (salvo ordem judicial); não suspensão da conexão salvo débito; informações claras nos contratos; não repasse de dados a terceiros sem consentimento.</p>\n              "
+              "html": "\n                <p><b>Neutralidade de rede (art. 9º):</b> tratar todos os pacotes de forma isonômica, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação. A discriminação só é lícita por requisitos técnicos indispensáveis ou priorização de serviços de emergência — e nunca pode causar dano, ser anticoncorrencial ou implicar conteúdo pago.</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Registros de conexão</span> guarda por <b>1 ano</b>, obrigatória, pelo provedor de conexão (art. 13)</div>\n                  <div class=\"def\"><span class=\"def-t\">Registros de acesso a aplicações</span> guarda por <b>6 meses</b>, pelo provedor de aplicações (art. 15)</div>\n                </div>\n                <div class=\"warn\"><b>Pegadinha:</b> o provedor de CONEXÃO é <b>proibido</b> de guardar registros de acesso a aplicações (art. 14). E a autoridade policial ou administrativa pode requerer <b>cautelarmente</b> a guarda por prazo maior, mas o <b>acesso ao conteúdo dos registros só com ordem judicial</b> (arts. 10, 13, §2º, e 15, §3º).</div>\n                <p><b>Direitos do usuário (art. 7º):</b> inviolabilidade da intimidade e vida privada; inviolabilidade e sigilo do fluxo das comunicações e das comunicações privadas armazenadas (salvo ordem judicial); não suspensão da conexão salvo débito; manutenção da qualidade contratada; informações claras nos contratos; não fornecimento de dados a terceiros sem consentimento livre, expresso e informado; e exclusão definitiva dos dados ao término da relação.</p>\n              "
+            },
+            {
+              "titulo": "Responsabilidade por conteúdo de terceiros — e o que o STF decidiu em 2025",
+              "html": "\n                <p><b>A regra original (art. 19):</b> o provedor de aplicações só responde civilmente por conteúdo gerado por terceiro se, <b>após ordem judicial específica</b>, não tornar o conteúdo indisponível. O objetivo declarado era proteger a liberdade de expressão e impedir a censura privada.</p>\n                <p><b>A exceção do art. 21:</b> em caso de divulgação não autorizada de <b>imagens de nudez ou de atos sexuais de caráter privado</b>, basta a <b>notificação extrajudicial</b> do participante ou seu representante — não precisa de ordem judicial.</p>\n                <div class=\"warn\"><b>ATUALIZAÇÃO DECISIVA — STF, 26/06/2025</b> (Temas 987 e 533 de repercussão geral, RE 1.037.396 e RE 1.057.258). Por <b>8 votos a 3</b>, o STF declarou o art. 19 <b>parcialmente inconstitucional</b>, por proteção deficiente (omissão parcial) de bens constitucionais relevantes. <b>O artigo continua no texto da lei</b> — o que mudou foi a interpretação, válida <b>enquanto não sobrevier nova legislação</b>.</div>\n                <p><b>Como ficou o regime, em blocos:</b></p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Regra geral agora é o art. 21</span> o provedor responde por conteúdo de terceiro que configure crime ou ato ilícito a partir de <b>notificação extrajudicial</b>, sem necessidade de ordem judicial (vale também para contas denunciadas como inautênticas)</div>\n                  <div class=\"def\"><span class=\"def-t\">Crimes contra a honra</span> <b>continua valendo o art. 19</b> (exige ordem judicial), sem prejuízo de remoção por notificação extrajudicial</div>\n                  <div class=\"def\"><span class=\"def-t\">Replicação de conteúdo já julgado ilícito</span> deve ser removido por todos os provedores, independentemente de nova decisão, a partir de notificação judicial ou extrajudicial</div>\n                  <div class=\"def\"><span class=\"def-t\">Presunção de responsabilidade</span> em <b>anúncios e impulsionamentos pagos</b> e em <b>redes artificiais de distribuição (bots)</b> — responde independentemente de notificação, salvo se comprovar atuação diligente</div>\n                  <div class=\"def\"><span class=\"def-t\">Dever de cuidado (falha sistêmica)</span> deve indisponibilizar <b>imediatamente</b> conteúdos de um rol taxativo de crimes graves: atos antidemocráticos, terrorismo, induzimento ao suicídio/automutilação, incitação à discriminação, condutas homofóbicas e transfóbicas, crimes contra a mulher, crimes sexuais contra vulneráveis e pornografia infantil, e tráfico de pessoas</div>\n                  <div class=\"def\"><span class=\"def-t\">Marketplaces</span> respondem pelo <b>Código de Defesa do Consumidor</b></div>\n                </div>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Dois detalhes que a banca pode explorar: a <b>falha sistêmica</b> exige circulação massiva — conteúdo ilícito <b>isolado e atomizado</b> não basta (aí incide o art. 21); e <b>não há responsabilidade objetiva</b> na aplicação da tese. Ficam ressalvadas ainda a legislação eleitoral e os atos do TSE.</div>\n              "
+            },
+            {
+              "titulo": "Sanções (art. 12) e aplicação da lei brasileira (art. 11)",
+              "html": "\n                <p><b>Art. 11:</b> aplica-se a lei brasileira a qualquer operação de coleta, armazenamento, guarda e tratamento de registros, dados pessoais ou comunicações por provedores, desde que <b>ao menos um dos atos ocorra em território nacional</b> — inclusive se a atividade for feita por empresa com sede no exterior, bastando que oferte serviço ao público brasileiro ou integre grupo econômico com presença no Brasil.</p>\n                <p><b>Art. 12 — sanções</b>, aplicadas de forma <b>isolada ou cumulativa</b>, sem prejuízo das demais sanções cíveis, criminais ou administrativas:</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">I — Advertência</span> <b>com indicação de prazo para adoção de medidas corretivas</b> (tem, portanto, face repressiva e corretiva)</div>\n                  <div class=\"def\"><span class=\"def-t\">II — Multa</span> de <b>até 10%</b> do faturamento do grupo econômico no Brasil no <b>seu último exercício</b>, excluídos os tributos, considerados a condição econômica do infrator e a proporcionalidade</div>\n                  <div class=\"def\"><span class=\"def-t\">III — Suspensão temporária</span> das atividades que envolvam os atos do art. 11</div>\n                  <div class=\"def\"><span class=\"def-t\">IV — Proibição</span> de exercício das atividades que envolvam os atos do art. 11</div>\n                </div>\n                <div class=\"destaque\"><b>Três pegadinhas clássicas aqui:</b> a multa é de <b>até</b> 10% (não é fixa em 10%); o cálculo usa o <b>último exercício</b> (não a média de três anos); e a lei <b>não</b> tem vácuo quanto a empresas estrangeiras — pelo parágrafo único do art. 12, a filial, sucursal, escritório ou estabelecimento situado no País <b>responde solidariamente</b> pelo pagamento da multa.</div>\n              "
             }
           ],
           "flashcards": [
@@ -674,27 +682,67 @@ window.CONTENT = {
             {
               "tema": "Marco Civil",
               "pergunta": "O que é neutralidade de rede (art. 9º)?",
-              "resposta": "O responsável pela transmissão deve tratar de forma isonômica todos os pacotes de dados, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação."
+              "resposta": "O responsável pela transmissão deve tratar de forma isonômica todos os pacotes de dados, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação. A discriminação só se admite por requisitos técnicos indispensáveis ou priorização de serviços de emergência."
             },
             {
               "tema": "Marco Civil",
               "pergunta": "Prazo de guarda dos registros de CONEXÃO.",
-              "resposta": "1 ano, sob sigilo, mantido pelo provedor de conexão (art. 13)."
+              "resposta": "1 ano, sob sigilo, em ambiente controlado e de segurança, pelo provedor de conexão (art. 13)."
             },
             {
               "tema": "Marco Civil",
               "pergunta": "Prazo de guarda dos registros de ACESSO A APLICAÇÕES.",
-              "resposta": "6 meses, mantido pelo provedor de aplicações (art. 15)."
+              "resposta": "6 meses, mantido pelo provedor de aplicações constituído como pessoa jurídica com fins econômicos (art. 15)."
             },
             {
               "tema": "Marco Civil",
-              "pergunta": "Quando o provedor de aplicações responde por conteúdo de terceiro (art. 19)?",
-              "resposta": "Em regra, só se, após ordem judicial específica, não remover o conteúdo. (Atenção: o art. 19 foi objeto de decisão do STF em 2025 — confira o entendimento atual.)"
+              "pergunta": "O provedor de conexão pode guardar registros de acesso a aplicações?",
+              "resposta": "Não. É expressamente vedado (art. 14). E o acesso ao conteúdo dos registros, em qualquer caso, depende de ordem judicial."
+            },
+            {
+              "tema": "Marco Civil",
+              "pergunta": "Qual era a regra do art. 19 sobre responsabilidade por conteúdo de terceiros?",
+              "resposta": "O provedor de aplicações só respondia civilmente se, após ordem judicial específica, não tornasse indisponível o conteúdo gerado por terceiro."
+            },
+            {
+              "tema": "Marco Civil",
+              "pergunta": "O que o STF decidiu sobre o art. 19 do Marco Civil?",
+              "resposta": "Em 26/06/2025 (Temas 987 e 533; RE 1.037.396 e RE 1.057.258), por 8x3, declarou o art. 19 PARCIALMENTE INCONSTITUCIONAL por proteção deficiente. O artigo segue no texto da lei, mas passa a ser interpretado de outro modo enquanto não vier nova legislação: a regra geral passa a ser o art. 21 — responsabilidade a partir de notificação extrajudicial."
+            },
+            {
+              "tema": "Marco Civil",
+              "pergunta": "Após a decisão do STF, em que caso ainda se exige ordem judicial?",
+              "resposta": "Nos crimes contra a honra, em que continua a se aplicar o art. 19 — sem prejuízo da possibilidade de remoção por notificação extrajudicial."
+            },
+            {
+              "tema": "Marco Civil",
+              "pergunta": "Em que hipóteses o STF fixou presunção de responsabilidade do provedor?",
+              "resposta": "Em anúncios e impulsionamentos pagos e em redes artificiais de distribuição (chatbots ou robôs). Nesses casos responde independentemente de notificação, salvo se comprovar que atuou diligentemente e em tempo razoável."
+            },
+            {
+              "tema": "Marco Civil",
+              "pergunta": "O que é 'falha sistêmica' na tese do STF?",
+              "resposta": "Deixar de adotar medidas adequadas de prevenção ou remoção de conteúdos de um rol taxativo de crimes graves (atos antidemocráticos, terrorismo, induzimento ao suicídio, incitação à discriminação, homofobia/transfobia, crimes contra a mulher, crimes sexuais contra vulneráveis e pornografia infantil, tráfico de pessoas). Conteúdo ilícito isolado e atomizado não configura falha sistêmica — nesse caso incide o art. 21."
+            },
+            {
+              "tema": "Marco Civil",
+              "pergunta": "O que prevê o art. 21 do Marco Civil?",
+              "resposta": "Responsabilidade subsidiária do provedor de aplicações pela divulgação não autorizada de imagens de nudez ou atos sexuais de caráter privado quando, após NOTIFICAÇÃO EXTRAJUDICIAL do participante ou representante, não remover o conteúdo — sem necessidade de ordem judicial."
+            },
+            {
+              "tema": "Marco Civil",
+              "pergunta": "Quais as sanções do art. 12 do Marco Civil?",
+              "resposta": "Advertência com prazo para medidas corretivas; multa de até 10% do faturamento do grupo econômico no Brasil no último exercício, excluídos tributos; suspensão temporária das atividades; e proibição do exercício das atividades. Podem ser aplicadas isolada ou cumulativamente."
+            },
+            {
+              "tema": "Marco Civil",
+              "pergunta": "E se a infratora for empresa estrangeira?",
+              "resposta": "Não há lacuna: pelo parágrafo único do art. 12, a filial, sucursal, escritório ou estabelecimento situado no País responde solidariamente pelo pagamento da multa."
             },
             {
               "tema": "Marco Civil",
               "pergunta": "Cite direitos do usuário (art. 7º).",
-              "resposta": "Inviolabilidade da intimidade e vida privada; sigilo das comunicações (salvo ordem judicial); não suspensão da conexão salvo débito; informações claras nos contratos; não repasse de dados a terceiros sem consentimento."
+              "resposta": "Inviolabilidade da intimidade e vida privada; sigilo do fluxo das comunicações e das comunicações privadas armazenadas (salvo ordem judicial); não suspensão da conexão salvo débito; qualidade contratada; informações claras nos contratos; não fornecimento de dados a terceiros sem consentimento; e exclusão definitiva dos dados ao término da relação."
             }
           ],
           "simulados": []
@@ -707,38 +755,96 @@ window.CONTENT = {
           "resumo": [
             {
               "titulo": "De onde veio",
-              "html": "\n                <p>Surgiu após o vazamento de fotos íntimas da atriz Carolina Dieckmann (2012), quando se percebeu que não havia crime específico para punir a invasão de dispositivos e o roubo de dados. O art. 2º inseriu os arts. 154-A e 154-B no Código Penal (e alterou o 266 e o 298).</p>\n              "
+              "html": "\n                <p>Surgiu após o vazamento de fotos íntimas da atriz Carolina Dieckmann (2012), quando se percebeu que não havia crime específico para punir a invasão de dispositivos e o roubo de dados. O art. 2º inseriu os arts. <b>154-A</b> e <b>154-B</b> no Código Penal; o art. 3º alterou os arts. <b>266</b> (interrupção de serviço telemático ou de informação de utilidade pública) e <b>298</b> (equiparou o cartão de crédito ou débito a documento particular, para fins de falsificação).</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> A lei é de 2012, mas a redação que vale hoje é a da <b>Lei nº 14.155/2021</b>, que endureceu as penas e ampliou o tipo. Estudar a redação antiga é o erro mais caro nessa matéria.</div>\n              "
             },
             {
-              "titulo": "O crime e a ação penal",
-              "html": "\n                <p><b>Art. 154-A (caput):</b> invadir dispositivo informático alheio, conectado ou não à rede, com o fim de obter, adulterar ou destruir dados sem autorização, ou instalar vulnerabilidades para obter vantagem ilícita. <b>Pena:</b> reclusão de 1 a 4 anos e multa (após a Lei 14.155/2021).</p>\n                <p><b>Qualificadora (§3º):</b> se resulta obtenção de comunicações privadas, segredos comerciais/industriais, informações sigilosas ou controle remoto não autorizado — reclusão de 2 a 5 anos e multa.</p>\n                <p><b>Ação penal (art. 154-B):</b> mediante representação, salvo se cometido contra a administração pública — aí é ação penal pública incondicionada.</p>\n              "
+              "titulo": "O tipo penal do art. 154-A (redação da Lei 14.155/2021)",
+              "html": "\n                <p><b>Caput:</b> \"Invadir dispositivo informático <b>de uso alheio</b>, <b>conectado ou não</b> à rede de computadores, com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do <b>usuário</b> do dispositivo, ou de instalar vulnerabilidades para obter vantagem ilícita.\" <b>Pena: reclusão, de 1 a 4 anos, e multa.</b></p>\n                <div class=\"warn\"><b>O que a Lei 14.155/2021 mudou no caput — e é onde a banca ataca:</b><br>1) A pena saiu de <b>detenção de 3 meses a 1 ano</b> para <b>reclusão de 1 a 4 anos</b>.<br>2) <b>Caiu a elementar \"mediante violação indevida de mecanismo de segurança\"</b> — hoje o crime existe ainda que o dispositivo não tivesse proteção alguma.<br>3) Trocou \"dispositivo alheio\" por \"de uso alheio\" e \"titular\" por \"<b>usuário</b>\" do dispositivo.</div>\n                <div class=\"destaque\"><b>Duas pegadinhas de ouro:</b> (1) o dispositivo <b>não precisa estar conectado</b> à rede — \"conectado ou não\" está no tipo; (2) é <b>crime formal</b>: basta invadir <b>com o fim de</b> obter, adulterar ou destruir. <b>Não</b> se exige que os dados sejam efetivamente obtidos ou adulterados.</div>\n                <p><b>§1º — equiparação:</b> incorre na mesma pena quem <b>produz, oferece, distribui, vende ou difunde</b> dispositivo ou programa de computador com o intuito de permitir a prática da conduta do caput.</p>\n                <p><b>§2º — aumento:</b> aumenta-se a pena de <b>1/3 a 2/3</b> se da invasão resulta <b>prejuízo econômico</b>.</p>\n                <p><b>§3º — forma qualificada:</b> se da invasão resultar a obtenção de conteúdo de comunicações eletrônicas privadas, segredos comerciais ou industriais, informações sigilosas assim definidas em lei, ou o controle remoto não autorizado do dispositivo. <b>Pena: reclusão, de 2 a 5 anos, e multa.</b></p>\n                <p><b>§4º — aumento sobre a qualificada:</b> na hipótese do §3º, aumenta-se de <b>1/3 a 2/3</b> se houver <b>divulgação, comercialização ou transmissão a terceiro</b> dos dados obtidos.</p>\n                <p><b>§5º — aumento pela vítima:</b> aumenta-se de <b>1/3 à metade</b> se o crime for praticado contra: I — Presidente da República, governadores e prefeitos; II — Presidente do STF; III — Presidente da Câmara dos Deputados, do Senado, de Assembleia Legislativa, da Câmara Legislativa do DF ou de Câmara Municipal; IV — dirigente máximo da administração direta e indireta federal, estadual, municipal ou do DF.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Repare que o §5º fala em <b>PRESIDENTE</b> das casas legislativas. Vice-presidente de Câmara, por exemplo, <b>não</b> está no rol — o aumento não incide. É exatamente esse tipo de troca que a FGV usa.</div>\n              "
+            },
+            {
+              "titulo": "Ação penal (art. 154-B) — o ponto que a FGV já cobrou",
+              "html": "\n                <p>Nos crimes do art. 154-A, procede-se <b>mediante representação</b> (ação penal pública condicionada), <b>salvo</b> se o crime for cometido contra a <b>administração pública direta ou indireta</b> de qualquer dos Poderes da União, Estados, DF ou Municípios, <b>ou contra empresas concessionárias de serviços públicos</b> — nesses casos, ação penal pública <b>incondicionada</b>.</p>\n                <div class=\"destaque\"><b>Consequência prática:</b> em nenhuma hipótese o art. 154-A admite <b>queixa-crime</b> (que é o instrumento da ação penal <b>privada</b>). A vítima particular <b>representa</b>; o Ministério Público é quem <b>denuncia</b>. Se a questão narrar um ofendido ajuizando queixa-crime, a deflagração está errada.</div>\n              "
+            },
+            {
+              "titulo": "Os outros crimes eletrônicos da Lei 14.155/2021",
+              "html": "\n                <p>A mesma lei que endureceu o art. 154-A criou duas figuras que costumam aparecer coladas a ele:</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Furto por meio eletrônico (art. 155, §4º-B)</span> furto mediante fraude cometido por dispositivo eletrônico ou informático, conectado ou não à rede, com ou sem violação de mecanismo de segurança ou uso de programa malicioso — <b>reclusão de 4 a 8 anos</b> e multa</div>\n                  <div class=\"def\"><span class=\"def-t\">Fraude eletrônica (art. 171, §2º-A)</span> estelionato cometido com informações fornecidas pela vítima ou por terceiro induzido a erro por redes sociais, contatos telefônicos ou e-mail fraudulento — <b>reclusão de 4 a 8 anos</b> e multa</div>\n                </div>\n                <p><b>Aumentos:</b> no furto eletrônico, de 1/3 a 2/3 se usado servidor mantido <b>fora do território nacional</b>, e de 1/3 ao dobro se praticado <b>contra idoso ou vulnerável</b> (§4º-C). Na fraude eletrônica, de 1/3 a 2/3 pelo servidor no exterior (§2º-B); e o estelionato contra idoso ou vulnerável aumenta de 1/3 ao dobro (§4º).</p>\n                <p><b>Competência (CPP, art. 70, §4º):</b> nos estelionatos praticados mediante depósito, cheque sem fundos ou transferência de valores, a competência é definida pelo <b>domicílio da vítima</b>; havendo pluralidade de vítimas, firma-se pela <b>prevenção</b>.</p>\n              "
             }
           ],
           "flashcards": [
             {
               "tema": "Delitos Informáticos",
-              "pergunta": "O que a Lei 12.737/2012 (art. 2º) fez no Código Penal?",
-              "resposta": "Inseriu os arts. 154-A e 154-B (e alterou o 266 e o 298), criando o crime de invasão de dispositivo informático. É a 'Lei Carolina Dieckmann'."
+              "pergunta": "O que a Lei 12.737/2012 fez no Código Penal?",
+              "resposta": "Inseriu os arts. 154-A e 154-B (invasão de dispositivo informático e ação penal) e alterou os arts. 266 (interrupção de serviço telemático) e 298 (equiparou cartão de crédito/débito a documento particular). É a 'Lei Carolina Dieckmann'."
             },
             {
               "tema": "Delitos Informáticos",
-              "pergunta": "Descreva o crime do art. 154-A.",
-              "resposta": "Invadir dispositivo informático alheio, conectado ou não à rede, com o fim de obter, adulterar ou destruir dados sem autorização, ou instalar vulnerabilidades para obter vantagem ilícita."
+              "pergunta": "Descreva o crime do art. 154-A na redação atual.",
+              "resposta": "Invadir dispositivo informático de uso alheio, conectado ou não à rede de computadores, com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do usuário do dispositivo, ou de instalar vulnerabilidades para obter vantagem ilícita."
             },
             {
               "tema": "Delitos Informáticos",
               "pergunta": "Pena atual do caput do art. 154-A.",
-              "resposta": "Reclusão de 1 a 4 anos e multa (após a Lei 14.155/2021; antes era detenção de 3 meses a 1 ano)."
+              "resposta": "Reclusão de 1 a 4 anos e multa (Lei 14.155/2021). Antes era detenção de 3 meses a 1 ano."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "Ainda é preciso violar mecanismo de segurança para configurar o art. 154-A?",
+              "resposta": "Não. A Lei 14.155/2021 REMOVEU a elementar 'mediante violação indevida de mecanismo de segurança'. Hoje o crime se configura ainda que o dispositivo não tivesse proteção."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "O dispositivo precisa estar conectado à rede para haver crime?",
+              "resposta": "Não. O tipo diz expressamente 'conectado ou não à rede de computadores'."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "É preciso que os dados sejam efetivamente obtidos ou adulterados?",
+              "resposta": "Não. É crime formal: basta invadir COM O FIM de obter, adulterar ou destruir dados, ou de instalar vulnerabilidades. O resultado não precisa se consumar."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "O que prevê o §1º do art. 154-A?",
+              "resposta": "Incorre na mesma pena quem produz, oferece, distribui, vende ou difunde dispositivo ou programa de computador com o intuito de permitir a prática da conduta do caput."
             },
             {
               "tema": "Delitos Informáticos",
               "pergunta": "Qualificadora do §3º do art. 154-A.",
-              "resposta": "Se resulta obtenção de comunicações eletrônicas privadas, segredos comerciais/industriais, informações sigilosas ou controle remoto não autorizado: reclusão de 2 a 5 anos e multa."
+              "resposta": "Se da invasão resultar obtenção de conteúdo de comunicações eletrônicas privadas, segredos comerciais ou industriais, informações sigilosas definidas em lei, ou controle remoto não autorizado do dispositivo: reclusão de 2 a 5 anos e multa."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "Quais são as causas de aumento do art. 154-A?",
+              "resposta": "§2º: 1/3 a 2/3 se da invasão resulta prejuízo econômico. §4º: 1/3 a 2/3 na hipótese do §3º se houver divulgação, comercialização ou transmissão a terceiro dos dados. §5º: 1/3 à metade se praticado contra determinadas autoridades."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "Contra quais autoridades incide o aumento do §5º do art. 154-A?",
+              "resposta": "Presidente da República, governadores e prefeitos; Presidente do STF; Presidente da Câmara dos Deputados, do Senado, de Assembleia Legislativa, da Câmara Legislativa do DF ou de Câmara Municipal; e dirigente máximo da administração direta e indireta federal, estadual, municipal ou do DF. Atenção: só os PRESIDENTES das casas — vice-presidente não está no rol."
             },
             {
               "tema": "Delitos Informáticos",
               "pergunta": "Como se procede a ação penal (art. 154-B)?",
-              "resposta": "Mediante representação, salvo se o crime for cometido contra a administração pública — nesse caso, ação penal pública incondicionada."
+              "resposta": "Mediante representação (ação penal pública condicionada), salvo se o crime for cometido contra a administração pública direta ou indireta de qualquer dos Poderes da União, Estados, DF ou Municípios, ou contra empresas concessionárias de serviços públicos — aí é ação penal pública incondicionada."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "Cabe queixa-crime no art. 154-A?",
+              "resposta": "Não. A queixa-crime é instrumento da ação penal privada, e o art. 154-A é sempre ação penal pública (condicionada à representação ou incondicionada). Quem deflagra é o Ministério Público."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "O que é o furto por meio eletrônico (art. 155, §4º-B)?",
+              "resposta": "Furto mediante fraude cometido por meio de dispositivo eletrônico ou informático, conectado ou não à rede, com ou sem violação de mecanismo de segurança ou uso de programa malicioso: reclusão de 4 a 8 anos e multa (Lei 14.155/2021)."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "O que é a fraude eletrônica (art. 171, §2º-A)?",
+              "resposta": "Estelionato cometido com informações fornecidas pela vítima ou por terceiro induzido a erro por meio de redes sociais, contatos telefônicos ou e-mail fraudulento: reclusão de 4 a 8 anos e multa."
+            },
+            {
+              "tema": "Delitos Informáticos",
+              "pergunta": "Qual o foro competente no estelionato por transferência ou depósito?",
+              "resposta": "O do domicílio da vítima (CPP, art. 70, §4º, incluído pela Lei 14.155/2021); havendo pluralidade de vítimas, a competência firma-se pela prevenção."
             }
           ],
           "simulados": []

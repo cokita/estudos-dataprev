@@ -6,11 +6,19 @@
   "resumo": [
     {
       "titulo": "De onde veio",
-      "html": "\n                <p>É a \"constituição da internet\" brasileira (2014), criada para garantir direitos dos usuários e regras claras — neutralidade de rede, privacidade e liberdade de expressão — num ambiente que até então não tinha lei própria.</p>\n              "
+      "html": "\n                <p>É a \"constituição da internet\" brasileira (2014), criada para garantir direitos dos usuários e regras claras — neutralidade de rede, privacidade e liberdade de expressão — num ambiente que até então não tinha lei própria.</p>\n                <p><b>Fundamentos (art. 2º):</b> o respeito à liberdade de expressão, além do reconhecimento da escala mundial da rede, dos direitos humanos, da pluralidade, da livre iniciativa e da finalidade social da rede.</p>\n                <p><b>Princípios (art. 3º):</b> liberdade de expressão; proteção da privacidade; proteção dos dados pessoais; preservação e garantia da neutralidade de rede; preservação da estabilidade, segurança e funcionalidade da rede; responsabilização dos agentes conforme suas atividades; preservação da natureza participativa da rede; e liberdade dos modelos de negócios.</p>\n              "
     },
     {
       "titulo": "Pontos que mais caem",
-      "html": "\n                <p><b>Neutralidade de rede (art. 9º):</b> tratar todos os pacotes de forma isonômica, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação.</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Registros de conexão</span> guarda por 1 ano (provedor de conexão, art. 13)</div>\n                  <div class=\"def\"><span class=\"def-t\">Registros de acesso a aplicações</span> guarda por 6 meses (provedor de aplicações, art. 15)</div>\n                </div>\n                <p><b>Responsabilidade (art. 19):</b> em regra, o provedor de aplicações só responde por conteúdo de terceiro se, após ordem judicial específica, não o remover.</p>\n                <div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Atenção:</b> o regime do art. 19 foi objeto de decisão do STF em 2025 — confira o entendimento mais recente antes da prova.</div>\n                <p><b>Direitos do usuário (art. 7º):</b> inviolabilidade da intimidade e vida privada; sigilo das comunicações (salvo ordem judicial); não suspensão da conexão salvo débito; informações claras nos contratos; não repasse de dados a terceiros sem consentimento.</p>\n              "
+      "html": "\n                <p><b>Neutralidade de rede (art. 9º):</b> tratar todos os pacotes de forma isonômica, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação. A discriminação só é lícita por requisitos técnicos indispensáveis ou priorização de serviços de emergência — e nunca pode causar dano, ser anticoncorrencial ou implicar conteúdo pago.</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Registros de conexão</span> guarda por <b>1 ano</b>, obrigatória, pelo provedor de conexão (art. 13)</div>\n                  <div class=\"def\"><span class=\"def-t\">Registros de acesso a aplicações</span> guarda por <b>6 meses</b>, pelo provedor de aplicações (art. 15)</div>\n                </div>\n                <div class=\"warn\"><b>Pegadinha:</b> o provedor de CONEXÃO é <b>proibido</b> de guardar registros de acesso a aplicações (art. 14). E a autoridade policial ou administrativa pode requerer <b>cautelarmente</b> a guarda por prazo maior, mas o <b>acesso ao conteúdo dos registros só com ordem judicial</b> (arts. 10, 13, §2º, e 15, §3º).</div>\n                <p><b>Direitos do usuário (art. 7º):</b> inviolabilidade da intimidade e vida privada; inviolabilidade e sigilo do fluxo das comunicações e das comunicações privadas armazenadas (salvo ordem judicial); não suspensão da conexão salvo débito; manutenção da qualidade contratada; informações claras nos contratos; não fornecimento de dados a terceiros sem consentimento livre, expresso e informado; e exclusão definitiva dos dados ao término da relação.</p>\n              "
+    },
+    {
+      "titulo": "Responsabilidade por conteúdo de terceiros — e o que o STF decidiu em 2025",
+      "html": "\n                <p><b>A regra original (art. 19):</b> o provedor de aplicações só responde civilmente por conteúdo gerado por terceiro se, <b>após ordem judicial específica</b>, não tornar o conteúdo indisponível. O objetivo declarado era proteger a liberdade de expressão e impedir a censura privada.</p>\n                <p><b>A exceção do art. 21:</b> em caso de divulgação não autorizada de <b>imagens de nudez ou de atos sexuais de caráter privado</b>, basta a <b>notificação extrajudicial</b> do participante ou seu representante — não precisa de ordem judicial.</p>\n                <div class=\"warn\"><b>ATUALIZAÇÃO DECISIVA — STF, 26/06/2025</b> (Temas 987 e 533 de repercussão geral, RE 1.037.396 e RE 1.057.258). Por <b>8 votos a 3</b>, o STF declarou o art. 19 <b>parcialmente inconstitucional</b>, por proteção deficiente (omissão parcial) de bens constitucionais relevantes. <b>O artigo continua no texto da lei</b> — o que mudou foi a interpretação, válida <b>enquanto não sobrevier nova legislação</b>.</div>\n                <p><b>Como ficou o regime, em blocos:</b></p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Regra geral agora é o art. 21</span> o provedor responde por conteúdo de terceiro que configure crime ou ato ilícito a partir de <b>notificação extrajudicial</b>, sem necessidade de ordem judicial (vale também para contas denunciadas como inautênticas)</div>\n                  <div class=\"def\"><span class=\"def-t\">Crimes contra a honra</span> <b>continua valendo o art. 19</b> (exige ordem judicial), sem prejuízo de remoção por notificação extrajudicial</div>\n                  <div class=\"def\"><span class=\"def-t\">Replicação de conteúdo já julgado ilícito</span> deve ser removido por todos os provedores, independentemente de nova decisão, a partir de notificação judicial ou extrajudicial</div>\n                  <div class=\"def\"><span class=\"def-t\">Presunção de responsabilidade</span> em <b>anúncios e impulsionamentos pagos</b> e em <b>redes artificiais de distribuição (bots)</b> — responde independentemente de notificação, salvo se comprovar atuação diligente</div>\n                  <div class=\"def\"><span class=\"def-t\">Dever de cuidado (falha sistêmica)</span> deve indisponibilizar <b>imediatamente</b> conteúdos de um rol taxativo de crimes graves: atos antidemocráticos, terrorismo, induzimento ao suicídio/automutilação, incitação à discriminação, condutas homofóbicas e transfóbicas, crimes contra a mulher, crimes sexuais contra vulneráveis e pornografia infantil, e tráfico de pessoas</div>\n                  <div class=\"def\"><span class=\"def-t\">Marketplaces</span> respondem pelo <b>Código de Defesa do Consumidor</b></div>\n                </div>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Dois detalhes que a banca pode explorar: a <b>falha sistêmica</b> exige circulação massiva — conteúdo ilícito <b>isolado e atomizado</b> não basta (aí incide o art. 21); e <b>não há responsabilidade objetiva</b> na aplicação da tese. Ficam ressalvadas ainda a legislação eleitoral e os atos do TSE.</div>\n              "
+    },
+    {
+      "titulo": "Sanções (art. 12) e aplicação da lei brasileira (art. 11)",
+      "html": "\n                <p><b>Art. 11:</b> aplica-se a lei brasileira a qualquer operação de coleta, armazenamento, guarda e tratamento de registros, dados pessoais ou comunicações por provedores, desde que <b>ao menos um dos atos ocorra em território nacional</b> — inclusive se a atividade for feita por empresa com sede no exterior, bastando que oferte serviço ao público brasileiro ou integre grupo econômico com presença no Brasil.</p>\n                <p><b>Art. 12 — sanções</b>, aplicadas de forma <b>isolada ou cumulativa</b>, sem prejuízo das demais sanções cíveis, criminais ou administrativas:</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">I — Advertência</span> <b>com indicação de prazo para adoção de medidas corretivas</b> (tem, portanto, face repressiva e corretiva)</div>\n                  <div class=\"def\"><span class=\"def-t\">II — Multa</span> de <b>até 10%</b> do faturamento do grupo econômico no Brasil no <b>seu último exercício</b>, excluídos os tributos, considerados a condição econômica do infrator e a proporcionalidade</div>\n                  <div class=\"def\"><span class=\"def-t\">III — Suspensão temporária</span> das atividades que envolvam os atos do art. 11</div>\n                  <div class=\"def\"><span class=\"def-t\">IV — Proibição</span> de exercício das atividades que envolvam os atos do art. 11</div>\n                </div>\n                <div class=\"destaque\"><b>Três pegadinhas clássicas aqui:</b> a multa é de <b>até</b> 10% (não é fixa em 10%); o cálculo usa o <b>último exercício</b> (não a média de três anos); e a lei <b>não</b> tem vácuo quanto a empresas estrangeiras — pelo parágrafo único do art. 12, a filial, sucursal, escritório ou estabelecimento situado no País <b>responde solidariamente</b> pelo pagamento da multa.</div>\n              "
     }
   ],
   "flashcards": [
@@ -22,27 +30,67 @@
     {
       "tema": "Marco Civil",
       "pergunta": "O que é neutralidade de rede (art. 9º)?",
-      "resposta": "O responsável pela transmissão deve tratar de forma isonômica todos os pacotes de dados, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação."
+      "resposta": "O responsável pela transmissão deve tratar de forma isonômica todos os pacotes de dados, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação. A discriminação só se admite por requisitos técnicos indispensáveis ou priorização de serviços de emergência."
     },
     {
       "tema": "Marco Civil",
       "pergunta": "Prazo de guarda dos registros de CONEXÃO.",
-      "resposta": "1 ano, sob sigilo, mantido pelo provedor de conexão (art. 13)."
+      "resposta": "1 ano, sob sigilo, em ambiente controlado e de segurança, pelo provedor de conexão (art. 13)."
     },
     {
       "tema": "Marco Civil",
       "pergunta": "Prazo de guarda dos registros de ACESSO A APLICAÇÕES.",
-      "resposta": "6 meses, mantido pelo provedor de aplicações (art. 15)."
+      "resposta": "6 meses, mantido pelo provedor de aplicações constituído como pessoa jurídica com fins econômicos (art. 15)."
     },
     {
       "tema": "Marco Civil",
-      "pergunta": "Quando o provedor de aplicações responde por conteúdo de terceiro (art. 19)?",
-      "resposta": "Em regra, só se, após ordem judicial específica, não remover o conteúdo. (Atenção: o art. 19 foi objeto de decisão do STF em 2025 — confira o entendimento atual.)"
+      "pergunta": "O provedor de conexão pode guardar registros de acesso a aplicações?",
+      "resposta": "Não. É expressamente vedado (art. 14). E o acesso ao conteúdo dos registros, em qualquer caso, depende de ordem judicial."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "Qual era a regra do art. 19 sobre responsabilidade por conteúdo de terceiros?",
+      "resposta": "O provedor de aplicações só respondia civilmente se, após ordem judicial específica, não tornasse indisponível o conteúdo gerado por terceiro."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "O que o STF decidiu sobre o art. 19 do Marco Civil?",
+      "resposta": "Em 26/06/2025 (Temas 987 e 533; RE 1.037.396 e RE 1.057.258), por 8x3, declarou o art. 19 PARCIALMENTE INCONSTITUCIONAL por proteção deficiente. O artigo segue no texto da lei, mas passa a ser interpretado de outro modo enquanto não vier nova legislação: a regra geral passa a ser o art. 21 — responsabilidade a partir de notificação extrajudicial."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "Após a decisão do STF, em que caso ainda se exige ordem judicial?",
+      "resposta": "Nos crimes contra a honra, em que continua a se aplicar o art. 19 — sem prejuízo da possibilidade de remoção por notificação extrajudicial."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "Em que hipóteses o STF fixou presunção de responsabilidade do provedor?",
+      "resposta": "Em anúncios e impulsionamentos pagos e em redes artificiais de distribuição (chatbots ou robôs). Nesses casos responde independentemente de notificação, salvo se comprovar que atuou diligentemente e em tempo razoável."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "O que é 'falha sistêmica' na tese do STF?",
+      "resposta": "Deixar de adotar medidas adequadas de prevenção ou remoção de conteúdos de um rol taxativo de crimes graves (atos antidemocráticos, terrorismo, induzimento ao suicídio, incitação à discriminação, homofobia/transfobia, crimes contra a mulher, crimes sexuais contra vulneráveis e pornografia infantil, tráfico de pessoas). Conteúdo ilícito isolado e atomizado não configura falha sistêmica — nesse caso incide o art. 21."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "O que prevê o art. 21 do Marco Civil?",
+      "resposta": "Responsabilidade subsidiária do provedor de aplicações pela divulgação não autorizada de imagens de nudez ou atos sexuais de caráter privado quando, após NOTIFICAÇÃO EXTRAJUDICIAL do participante ou representante, não remover o conteúdo — sem necessidade de ordem judicial."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "Quais as sanções do art. 12 do Marco Civil?",
+      "resposta": "Advertência com prazo para medidas corretivas; multa de até 10% do faturamento do grupo econômico no Brasil no último exercício, excluídos tributos; suspensão temporária das atividades; e proibição do exercício das atividades. Podem ser aplicadas isolada ou cumulativamente."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "E se a infratora for empresa estrangeira?",
+      "resposta": "Não há lacuna: pelo parágrafo único do art. 12, a filial, sucursal, escritório ou estabelecimento situado no País responde solidariamente pelo pagamento da multa."
     },
     {
       "tema": "Marco Civil",
       "pergunta": "Cite direitos do usuário (art. 7º).",
-      "resposta": "Inviolabilidade da intimidade e vida privada; sigilo das comunicações (salvo ordem judicial); não suspensão da conexão salvo débito; informações claras nos contratos; não repasse de dados a terceiros sem consentimento."
+      "resposta": "Inviolabilidade da intimidade e vida privada; sigilo do fluxo das comunicações e das comunicações privadas armazenadas (salvo ordem judicial); não suspensão da conexão salvo débito; qualidade contratada; informações claras nos contratos; não fornecimento de dados a terceiros sem consentimento; e exclusão definitiva dos dados ao término da relação."
     }
   ]
 }
