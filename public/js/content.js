@@ -305,7 +305,7 @@ window.CONTENT = {
             },
             {
               "titulo": "A quem se aplica e conceitos-chave",
-              "html": "\n                <p><b>Abrangência (art. 1º e 2º):</b> todos os entes (União, Estados, DF, Municípios) e todos os Poderes; administração direta e indireta — incluindo autarquias, fundações, empresas públicas e sociedades de economia mista.</p>\n                <p><b>Entidades privadas sem fins lucrativos</b> que recebem recursos públicos também se sujeitam, mas <b>só quanto à parcela de recursos públicos recebidos</b>.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> A DataPrev é empresa pública federal — logo, está integralmente sujeita à LAI.</div>\n                <p><b>Conceitos do art. 4º (cobrados na literalidade):</b></p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Autenticidade</span> QUEM produziu/expediu/modificou a informação</div>\n                  <div class=\"def\"><span class=\"def-t\">Integridade</span> informação NÃO modificada (origem, trânsito, destino)</div>\n                  <div class=\"def\"><span class=\"def-t\">Primariedade</span> coletada na FONTE, com máximo detalhamento, sem modificação</div>\n                  <div class=\"def\"><span class=\"def-t\">Disponibilidade</span> pode ser conhecida e usada por quem é autorizado</div>\n                </div>\n              "
+              "html": "\n                <p><b>Abrangência (art. 1º e 2º):</b> todos os entes (União, Estados, DF, Municípios) e todos os Poderes; administração direta e indireta — incluindo autarquias, fundações, empresas públicas e sociedades de economia mista.</p>\n                <p><b>Entidades privadas sem fins lucrativos</b> que recebem recursos públicos também se sujeitam, mas <b>só quanto à parcela de recursos públicos recebidos</b>.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> A DataPrev é empresa pública federal — logo, está integralmente sujeita à LAI.</div>\n                <div class=\"warn\"><b>NOVIDADE — Lei nº 15.141/2025</b> (alta chance de cair): incluiu os arts. <b>8º-A</b> e <b>8º-B</b>. Os <b>serviços sociais autônomos</b> (Sistema S) que recebam contribuições ou recursos públicos federais por contrato de gestão devem divulgar plano de cargos e salários, quantitativo de empregados por cargo e faixa salarial (com nome e cargo), parcelas remuneratórias e indenizatórias e funções gratificadas. Os <b>conselhos de fiscalização profissional</b> devem divulgar, de forma nominal e individualizada, as parcelas remuneratórias e indenizatórias de seus empregados.</div>\n                <p><b>Conceitos do art. 4º (cobrados na literalidade):</b></p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Autenticidade</span> QUEM produziu/expediu/modificou a informação</div>\n                  <div class=\"def\"><span class=\"def-t\">Integridade</span> informação NÃO modificada (origem, trânsito, destino)</div>\n                  <div class=\"def\"><span class=\"def-t\">Primariedade</span> coletada na FONTE, com máximo detalhamento, sem modificação</div>\n                  <div class=\"def\"><span class=\"def-t\">Disponibilidade</span> pode ser conhecida e usada por quem é autorizado</div>\n                </div>\n              "
             },
             {
               "titulo": "Transparência, prazos e sigilo",
@@ -317,7 +317,7 @@ window.CONTENT = {
             },
             {
               "titulo": "Classificação, competência e desclassificação",
-              "html": "\n                <p>São classificáveis as informações <b>imprescindíveis à segurança da sociedade ou do Estado</b> (art. 23). A classificação deve usar o critério <b>menos restritivo</b> possível; o prazo pode ser por data ou por <b>evento</b> (ex.: até a conclusão de uma obra).</p>\n                <p><b>Quem coloca o sigilo (art. 27):</b> Ultrassecreta — Presidente, Vice, Ministros, Comandantes das Forças e Chefes de Missão Diplomática; Secreta — as anteriores + titulares de autarquias, fundações, empresas públicas e sociedades de economia mista; Reservada — as anteriores + funções de direção/chefia (DAS 101.5 ou superior).</p>\n                <p><b>Pedi acesso e o documento é sigiloso — e agora?</b> O acesso é negado enquanto o sigilo durar, mas você não fica sem saída: pode <b>recorrer</b> (autoridade superior → CGU → CMRI) e pode <b>pedir a reavaliação</b>, com vistas à desclassificação ou à redução do prazo.</p>\n                <p><b>Quem derruba o sigilo (desclassifica):</b> a própria autoridade que classificou (ou uma superior), de ofício ou por provocação; e, no âmbito federal, a <b>CMRI</b>, que reavalia as classificações ultrassecretas e secretas — e é a única que pode prorrogar o sigilo ultrassecreto.</p>\n                <div class=\"warn\"><b>Prorrogação:</b> só a <b>ultrassecreta</b> se prorroga — uma única vez, por até + 25 anos (teto de 50). Secreta e reservada NÃO se prorrogam.</div>\n              "
+              "html": "\n                <p>São classificáveis as informações <b>imprescindíveis à segurança da sociedade ou do Estado</b> (art. 23). A classificação deve usar o critério <b>menos restritivo</b> possível; o prazo pode ser por data ou por <b>evento</b> (ex.: até a conclusão de uma obra).</p>\n                <p><b>Quem coloca o sigilo (art. 27):</b> Ultrassecreta — Presidente, Vice, Ministros, Comandantes das Forças e Chefes de Missão Diplomática; Secreta — as anteriores + titulares de autarquias, fundações, empresas públicas e sociedades de economia mista; Reservada — as anteriores + funções de direção/chefia (DAS 101.5 ou superior).</p>\n                <p><b>Pedi acesso e o documento é sigiloso — e agora?</b> O acesso é negado enquanto o sigilo durar, mas você não fica sem saída: pode <b>recorrer</b> (autoridade superior → CGU → CMRI) e pode <b>pedir a reavaliação</b>, com vistas à desclassificação ou à redução do prazo.</p>\n                <p><b>Quem derruba o sigilo (desclassifica):</b> a própria autoridade que classificou (ou uma superior), de ofício ou por provocação; e, no âmbito federal, a <b>CMRI</b>, que reavalia as classificações ultrassecretas e secretas — e é a única que pode prorrogar o sigilo ultrassecreto.</p>\n                <div class=\"warn\"><b>Prorrogação:</b> só a <b>ultrassecreta</b> se prorroga — uma única vez, por até + 25 anos (teto de 50), por decisão da CMRI (art. 35, §1º, III e §2º). Secreta e reservada NÃO se prorrogam.</div>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Cuidado com o \"prazo máximo\":</b> a própria lei chama 25/15/5 de \"prazos máximos\" (art. 24, §1º). Se o enunciado reproduz esse artigo, é CERTO — a prorrogação está em outro artigo e só entra na conta quando a questão falar em prorrogar, renovar ou citar a CMRI.</div>\n                <p><b>Detalhes que a banca adora:</b> a delegação para classificar como ultrassecreta e secreta é permitida, <b>vedada a subdelegação</b> (art. 27, §1º); a classificação ultrassecreta feita por Comandantes das Forças e Chefes de Missão deve ser <b>ratificada pelo Ministro de Estado</b> (art. 27, §2º); informações que ponham em risco a segurança do Presidente e do Vice e de seus cônjuges e filhos são classificadas como <b>RESERVADAS</b> e ficam sob sigilo até o fim do mandato (art. 24, §2º); e, se a CMRI não deliberar sobre a revisão no prazo, ocorre a <b>desclassificação automática</b> (art. 35, §4º).</p>\n              "
             },
             {
               "titulo": "Responsabilidades e pegadinhas da FGV",
@@ -402,6 +402,26 @@ window.CONTENT = {
             },
             {
               "tema": "LAI",
+              "pergunta": "Se a ultrassecreta pode ser prorrogada, por que 25 anos é chamado de \"prazo máximo\"?",
+              "resposta": "Porque é a redação literal do art. 24, §1º, que nomeia 25/15/5 como os prazos máximos de restrição. A prorrogação está em outro dispositivo (art. 35, §1º, III e §2º), é da CMRI, exclusiva da ultrassecreta e limitada a uma única renovação (teto de 50 anos). Na prova: enunciado que reproduz o art. 24, §1º é CERTO."
+            },
+            {
+              "tema": "LAI",
+              "pergunta": "Como são classificadas as informações que põem em risco a segurança do Presidente e do Vice?",
+              "resposta": "Como RESERVADAS, ficando sob sigilo até o término do mandato em exercício ou do último mandato, em caso de reeleição (art. 24, §2º). Abrange também cônjuges e filhos."
+            },
+            {
+              "tema": "LAI",
+              "pergunta": "O que a Lei nº 15.141/2025 acrescentou à LAI?",
+              "resposta": "Os arts. 8º-A e 8º-B: serviços sociais autônomos (Sistema S) que recebam recursos públicos federais por contrato de gestão devem divulgar plano de cargos e salários, quantitativo de empregados e remunerações; e os conselhos de fiscalização profissional devem divulgar, de forma nominal e individualizada, as parcelas remuneratórias de seus empregados."
+            },
+            {
+              "tema": "LAI",
+              "pergunta": "Na LAI, quem precisa apresentar justificativa: o requerente ou o órgão?",
+              "resposta": "O órgão. O requerente NUNCA justifica o pedido (art. 10, §3º — é vedado exigir os motivos). Já a Administração precisa de justificativa expressa para prorrogar o prazo de resposta de 20 para 30 dias, e apenas cientifica o requerente (art. 11, §2º)."
+            },
+            {
+              "tema": "LAI",
               "pergunta": "Quem impõe o sigilo a uma informação — o cidadão que pede ou a Administração?",
               "resposta": "A própria Administração. Uma autoridade (art. 27) classifica o documento como imprescindível à segurança do Estado/sociedade. O cidadão nunca pede sigilo; ele pede acesso."
             },
@@ -454,7 +474,7 @@ window.CONTENT = {
                     "Errado"
                   ],
                   "answer": 0,
-                  "exp": "Certo. É a regra do art. 11: resposta imediata quando a informação estiver disponível; caso contrário, 20 dias + 10 de prorrogação (total máximo de 30 dias), com justificativa expressa e ciência ao requerente."
+                  "exp": "Certo. É a regra do art. 11: resposta imediata quando a informação estiver disponível; caso contrário, 20 dias + 10 de prorrogação (total máximo de 30 dias). ATENÇÃO À PEGADINHA: a justificativa expressa é do ÓRGÃO, para poder prorrogar o prazo — não do requerente. O requerente apenas é cientificado (art. 11, §2º). Não confunda com o art. 10, §3º, que veda exigir do cidadão os motivos do pedido: quem nunca justifica é quem pede; quem justifica a prorrogação é a Administração. Pista no enunciado: se o requerente é 'cientificado', não é ele quem justifica."
                 },
                 {
                   "type": "ce",
@@ -465,11 +485,11 @@ window.CONTENT = {
                     "Errado"
                   ],
                   "answer": 0,
-                  "exp": "Certo. Decore 25 / 15 / 5 (ultrassecreta, secreta, reservada). Trocar a ordem ou os números é a pegadinha mais comum da banca. Alternativamente, o prazo pode ser vinculado à ocorrência de um evento, e não a uma data."
+                  "exp": "Certo. É a redação literal do art. 24, §1º — é a PRÓPRIA LEI que chama 25/15/5 de 'prazos máximos de restrição de acesso'. E a prorrogação? Ela está em OUTRO artigo (art. 35, §1º, III e §2º): é competência da CMRI, exclusiva da ultrassecreta, limitada a uma única renovação de até mais 25 anos (teto de 50). REGRA PRÁTICA: se o enunciado reproduz o art. 24, §1º, marque Certo; a prorrogação só entra na conta quando a questão falar expressamente em prorrogar, renovar ou citar a CMRI. Lembre ainda que o prazo pode ser vinculado à ocorrência de um evento, em vez de uma data (art. 24, §3º), e que, vencido o prazo, a informação se torna automaticamente pública (art. 24, §4º)."
                 },
                 {
                   "type": "ce",
-                  "tag": "Prorrogação do sigilo · art. 35, §2º",
+                  "tag": "Prorrogação do sigilo · art. 35, §1º, III e §2º",
                   "text": "O prazo de sigilo da informação classificada como secreta pode ser prorrogado uma única vez, enquanto perdurar o risco à segurança da sociedade e do Estado.",
                   "options": [
                     "Certo",
@@ -539,7 +559,7 @@ window.CONTENT = {
                     "titulares de autarquias, fundações, empresas públicas e sociedades de economia mista."
                   ],
                   "answer": 1,
-                  "exp": "Alternativa B. É o rol do art. 27, I. A competência para o grau ultrassecreto pode ser delegada a agente público que exerça função de direção máxima, vedada a subdelegação — por isso a alternativa C erra ao dizer que é vedada qualquer delegação. Os titulares citados na alternativa D podem classificar como secreta e reservada, não ultrassecreta."
+                  "exp": "Alternativa B. É o rol do art. 27, I. A competência para classificar como ultrassecreta e secreta pode ser delegada pela autoridade responsável a agente público, inclusive em missão no exterior, vedada a subdelegação (art. 27, §1º) — por isso a alternativa C erra ao dizer que é vedada qualquer delegação. Os titulares citados na alternativa D podem classificar como secreta e reservada, não ultrassecreta. Detalhe: a classificação como ultrassecreta feita pelos Comandantes das Forças e pelos Chefes de Missão precisa ser ratificada pelo respectivo Ministro de Estado (art. 27, §2º)."
                 },
                 {
                   "type": "mc",

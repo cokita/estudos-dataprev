@@ -36,7 +36,7 @@
         "Errado"
       ],
       "answer": 0,
-      "exp": "Certo. É a regra do art. 11: resposta imediata quando a informação estiver disponível; caso contrário, 20 dias + 10 de prorrogação (total máximo de 30 dias), com justificativa expressa e ciência ao requerente."
+      "exp": "Certo. É a regra do art. 11: resposta imediata quando a informação estiver disponível; caso contrário, 20 dias + 10 de prorrogação (total máximo de 30 dias). ATENÇÃO À PEGADINHA: a justificativa expressa é do ÓRGÃO, para poder prorrogar o prazo — não do requerente. O requerente apenas é cientificado (art. 11, §2º). Não confunda com o art. 10, §3º, que veda exigir do cidadão os motivos do pedido: quem nunca justifica é quem pede; quem justifica a prorrogação é a Administração. Pista no enunciado: se o requerente é 'cientificado', não é ele quem justifica."
     },
     {
       "type": "ce",
@@ -47,11 +47,11 @@
         "Errado"
       ],
       "answer": 0,
-      "exp": "Certo. Decore 25 / 15 / 5 (ultrassecreta, secreta, reservada). Trocar a ordem ou os números é a pegadinha mais comum da banca. Alternativamente, o prazo pode ser vinculado à ocorrência de um evento, e não a uma data."
+      "exp": "Certo. É a redação literal do art. 24, §1º — é a PRÓPRIA LEI que chama 25/15/5 de 'prazos máximos de restrição de acesso'. E a prorrogação? Ela está em OUTRO artigo (art. 35, §1º, III e §2º): é competência da CMRI, exclusiva da ultrassecreta, limitada a uma única renovação de até mais 25 anos (teto de 50). REGRA PRÁTICA: se o enunciado reproduz o art. 24, §1º, marque Certo; a prorrogação só entra na conta quando a questão falar expressamente em prorrogar, renovar ou citar a CMRI. Lembre ainda que o prazo pode ser vinculado à ocorrência de um evento, em vez de uma data (art. 24, §3º), e que, vencido o prazo, a informação se torna automaticamente pública (art. 24, §4º)."
     },
     {
       "type": "ce",
-      "tag": "Prorrogação do sigilo · art. 35, §2º",
+      "tag": "Prorrogação do sigilo · art. 35, §1º, III e §2º",
       "text": "O prazo de sigilo da informação classificada como secreta pode ser prorrogado uma única vez, enquanto perdurar o risco à segurança da sociedade e do Estado.",
       "options": [
         "Certo",
@@ -121,7 +121,7 @@
         "titulares de autarquias, fundações, empresas públicas e sociedades de economia mista."
       ],
       "answer": 1,
-      "exp": "Alternativa B. É o rol do art. 27, I. A competência para o grau ultrassecreto pode ser delegada a agente público que exerça função de direção máxima, vedada a subdelegação — por isso a alternativa C erra ao dizer que é vedada qualquer delegação. Os titulares citados na alternativa D podem classificar como secreta e reservada, não ultrassecreta."
+      "exp": "Alternativa B. É o rol do art. 27, I. A competência para classificar como ultrassecreta e secreta pode ser delegada pela autoridade responsável a agente público, inclusive em missão no exterior, vedada a subdelegação (art. 27, §1º) — por isso a alternativa C erra ao dizer que é vedada qualquer delegação. Os titulares citados na alternativa D podem classificar como secreta e reservada, não ultrassecreta. Detalhe: a classificação como ultrassecreta feita pelos Comandantes das Forças e pelos Chefes de Missão precisa ser ratificada pelo respectivo Ministro de Estado (art. 27, §2º)."
     },
     {
       "type": "mc",
