@@ -309,7 +309,7 @@ window.CONTENT = {
             },
             {
               "titulo": "Transparência, prazos e sigilo",
-              "html": "\n                <p><b>Transparência ativa</b> (divulgação espontânea, na internet) x <b>passiva</b> (resposta a pedido). O pedido <b>não exige justificativa</b> (é vedado exigir os motivos).</p>\n                <p><b>Prazo de resposta:</b> imediato; se não for possível, até <b>20 dias</b>, prorrogáveis por mais <b>10</b> (total 30) mediante justificativa expressa.</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Ultrassecreta</span> 25 anos (prorrogável 1x por até + 25)</div>\n                  <div class=\"def\"><span class=\"def-t\">Secreta</span> 15 anos</div>\n                  <div class=\"def\"><span class=\"def-t\">Reservada</span> 5 anos</div>\n                  <div class=\"def\"><span class=\"def-t\">Informações pessoais (intimidade/vida privada)</span> restritas por até 100 anos, independentemente de classificação</div>\n                </div>\n                <p><b>Decretos:</b> 7.724 regulamenta a LAI no Executivo federal; 7.845 trata de informação classificada e credenciamento de segurança (institui o NSC).</p>\n              "
+              "html": "\n                <p><b>Transparência ativa</b> (divulgação espontânea, na internet) x <b>passiva</b> (resposta a pedido). O pedido <b>não exige justificativa</b> (é vedado exigir os motivos).</p>\n                <p><b>Prazo de resposta:</b> imediato; se não for possível, até <b>20 dias</b>, prorrogáveis por mais <b>10</b> (total 30) mediante justificativa expressa.</p>\n                <p><b>Atenção: o sigilo é um ato da própria Administração, não do cidadão.</b> Uma autoridade classifica o documento como perigoso à segurança do Estado; o prazo abaixo é o tempo <b>máximo</b> que a informação fica escondida — vencido o prazo, ela vira pública automaticamente. Se você pedir acesso a algo classificado, o acesso é negado enquanto o sigilo durar (mas cabe recurso e pedido de desclassificação — ver seção seguinte).</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Ultrassecreta</span> até 25 anos (só ela prorroga: + 25, teto de 50)</div>\n                  <div class=\"def\"><span class=\"def-t\">Secreta</span> até 15 anos</div>\n                  <div class=\"def\"><span class=\"def-t\">Reservada</span> até 5 anos</div>\n                  <div class=\"def\"><span class=\"def-t\">Informações pessoais</span> caso à parte — NÃO são classificadas: ficam restritas por até 100 anos para proteger a intimidade/vida privada; quem libera é a própria pessoa (consentimento) ou a lei em hipóteses específicas</div>\n                </div>\n                <p><b>Decretos:</b> 7.724 regulamenta a LAI no Executivo federal; 7.845 trata de informação classificada e credenciamento de segurança (institui o NSC).</p>\n              "
             },
             {
               "titulo": "Procedimento, recursos e instâncias",
@@ -317,7 +317,7 @@ window.CONTENT = {
             },
             {
               "titulo": "Classificação, competência e desclassificação",
-              "html": "\n                <p>São classificáveis as informações <b>imprescindíveis à segurança da sociedade ou do Estado</b> (art. 23). A classificação deve usar o critério <b>menos restritivo</b> possível; o prazo pode ser por data ou por <b>evento</b> (ex.: até a conclusão de uma obra).</p>\n                <p><b>Competência (art. 27):</b> Ultrassecreta — Presidente, Vice, Ministros, Comandantes das Forças e Chefes de Missão Diplomática; Secreta — as anteriores + titulares de autarquias, fundações, empresas públicas e sociedades de economia mista; Reservada — as anteriores + funções de direção/chefia (DAS 101.5 ou superior).</p>\n                <div class=\"warn\"><b>Prorrogação:</b> só a <b>ultrassecreta</b> se prorroga — uma única vez, por até + 25 anos (teto de 50). Secreta e reservada NÃO se prorrogam.</div>\n                <p>A <b>CMRI</b> reavalia de ofício ou por provocação as classificações ultrassecretas e secretas e pode prorrogar o sigilo ultrassecreto. O cidadão pode pedir a reavaliação com vistas à desclassificação ou redução do prazo.</p>\n              "
+              "html": "\n                <p>São classificáveis as informações <b>imprescindíveis à segurança da sociedade ou do Estado</b> (art. 23). A classificação deve usar o critério <b>menos restritivo</b> possível; o prazo pode ser por data ou por <b>evento</b> (ex.: até a conclusão de uma obra).</p>\n                <p><b>Quem coloca o sigilo (art. 27):</b> Ultrassecreta — Presidente, Vice, Ministros, Comandantes das Forças e Chefes de Missão Diplomática; Secreta — as anteriores + titulares de autarquias, fundações, empresas públicas e sociedades de economia mista; Reservada — as anteriores + funções de direção/chefia (DAS 101.5 ou superior).</p>\n                <p><b>Pedi acesso e o documento é sigiloso — e agora?</b> O acesso é negado enquanto o sigilo durar, mas você não fica sem saída: pode <b>recorrer</b> (autoridade superior → CGU → CMRI) e pode <b>pedir a reavaliação</b>, com vistas à desclassificação ou à redução do prazo.</p>\n                <p><b>Quem derruba o sigilo (desclassifica):</b> a própria autoridade que classificou (ou uma superior), de ofício ou por provocação; e, no âmbito federal, a <b>CMRI</b>, que reavalia as classificações ultrassecretas e secretas — e é a única que pode prorrogar o sigilo ultrassecreto.</p>\n                <div class=\"warn\"><b>Prorrogação:</b> só a <b>ultrassecreta</b> se prorroga — uma única vez, por até + 25 anos (teto de 50). Secreta e reservada NÃO se prorrogam.</div>\n              "
             },
             {
               "titulo": "Responsabilidades e pegadinhas da FGV",
@@ -399,6 +399,21 @@ window.CONTENT = {
               "tema": "LAI",
               "pergunta": "O serviço de acesso à informação é gratuito?",
               "resposta": "Sim; só pode ser cobrado o custo dos serviços e materiais de reprodução, ressalvado quem declara situação de pobreza."
+            },
+            {
+              "tema": "LAI",
+              "pergunta": "Quem impõe o sigilo a uma informação — o cidadão que pede ou a Administração?",
+              "resposta": "A própria Administração. Uma autoridade (art. 27) classifica o documento como imprescindível à segurança do Estado/sociedade. O cidadão nunca pede sigilo; ele pede acesso."
+            },
+            {
+              "tema": "LAI",
+              "pergunta": "Pedi acesso a um documento classificado e foi negado. O que posso fazer?",
+              "resposta": "O acesso fica negado enquanto durar o sigilo, mas cabe recurso (autoridade superior → CGU → CMRI) e pedido de reavaliação, com vistas à desclassificação ou à redução do prazo."
+            },
+            {
+              "tema": "LAI",
+              "pergunta": "Quem pode desclassificar (derrubar) o sigilo de uma informação?",
+              "resposta": "A própria autoridade que classificou ou uma superior, de ofício ou por provocação; e, no federal, a CMRI, que reavalia ultrassecretas e secretas e é a única que pode prorrogar o sigilo ultrassecreto."
             }
           ],
           "simulados": []
