@@ -1,0 +1,33 @@
+name: Deploy para Firebase Hosting
+
+# Publica automaticamente sempre que houver push na branch main.
+# Também dá para rodar manualmente pela aba "Actions" do GitHub.
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# Se vários pushes chegarem juntos, cancela o deploy anterior em andamento.
+concurrency:
+  group: firebase-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar Firebase CLI
+        run: npm install -g firebase-tools@13
+
+      - name: Deploy (hosting + regras do Firestore)
+        run: firebase deploy --only hosting,firestore --project dataprev-ba87e --non-interactive
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
