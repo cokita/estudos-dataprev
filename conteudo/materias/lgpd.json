@@ -10,7 +10,7 @@
     },
     {
       "titulo": "Os personagens da LGPD — exemplo da Loja X",
-      "html": "\n                <p>Você compra no site da \"Loja X\" e informa nome, CPF e endereço. Cada personagem tem um papel:</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Titular = você</span> A pessoa de quem são os dados; a dona da informação.</div>\n                  <div class=\"def\"><span class=\"def-t\">Controlador = a Loja X</span> Quem decide por que e como usar seus dados. É o \"cérebro\" do tratamento e responde pelas decisões.</div>\n                  <div class=\"def\"><span class=\"def-t\">Operador = terceiro contratado</span> Empresa que só executa ordens do controlador (ex.: e-mail marketing, servidor de nuvem). Trata dados em nome do controlador, sem decidir nada sozinho.</div>\n                  <div class=\"def\"><span class=\"def-t\">Encarregado (DPO) = o contato de privacidade</span> Pessoa/setor indicado pela própria empresa para ser a ponte de comunicação. <b>Não é do governo.</b></div>\n                  <div class=\"def\"><span class=\"def-t\">ANPD = o governo</span> Órgão público federal que fiscaliza e pune quem descumpre a LGPD. Fala com a empresa através do encarregado.</div>\n                </div>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Controlador <b>decide</b> · Operador <b>executa</b> · Encarregado é a <b>ponte</b>. Detalhe de prova: controlador e operador são os \"agentes de tratamento\"; o encarregado NÃO é agente de tratamento.</div>\n              "
+      "html": "\n                <p>Você compra no site da \"Loja X\" e informa nome, CPF e endereço. Cada personagem tem um papel:</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Titular = você</span> A pessoa de quem são os dados; a dona da informação.</div>\n                  <div class=\"def\"><span class=\"def-t\">Controlador = a Loja X</span> Quem decide por que e como usar seus dados. É o \"cérebro\" do tratamento e responde pelas decisões.</div>\n                  <div class=\"def\"><span class=\"def-t\">Operador = terceiro contratado</span> Empresa que só executa ordens do controlador (ex.: e-mail marketing, servidor de nuvem). Trata dados em nome do controlador, sem decidir nada sozinho.</div>\n                  <div class=\"def\"><span class=\"def-t\">Encarregado (DPO) = o contato de privacidade</span> Pessoa/setor indicado pela própria empresa para ser a ponte de comunicação. <b>Não é do governo.</b></div>\n                  <div class=\"def\"><span class=\"def-t\">ANPD = o regulador</span> A Agência Nacional de Proteção de Dados, que fiscaliza e pune quem descumpre a LGPD. Fala com a empresa através do encarregado. <b>Cuidado:</b> NÃO é \"órgão\" — é autarquia de natureza especial (ver a seção sobre ANPD e CNPD).</div>\n                </div>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Controlador <b>decide</b> · Operador <b>executa</b> · Encarregado é a <b>ponte</b>. Detalhe de prova: controlador e operador são os \"agentes de tratamento\"; o encarregado NÃO é agente de tratamento.</div>\n              "
     },
     {
       "titulo": "Conceitos que a FGV adora",
@@ -25,8 +25,12 @@
       "html": "\n                <p><b>Princípios (art. 6º):</b> finalidade, adequação, necessidade, livre acesso, qualidade dos dados, transparência, segurança, prevenção, não discriminação, responsabilização e prestação de contas (além da boa-fé).</p>\n                <p><b>Direitos do titular (art. 18):</b> confirmação de tratamento, acesso, correção, anonimização/bloqueio/eliminação, portabilidade, eliminação dos dados tratados com consentimento, informação sobre compartilhamento e revogação do consentimento.</p>\n              "
     },
     {
-      "titulo": "Sanções (art. 52) e ANPD",
-      "html": "\n                <p><b>Multa simples:</b> até 2% do faturamento da empresa/grupo no Brasil, limitada a R$ 50 milhões por infração. Também há advertência, multa diária, publicização, bloqueio e eliminação dos dados.</p>\n                <p><b>ANPD:</b> autoridade que zela, implementa e fiscaliza a LGPD. Incidente de segurança relevante deve ser comunicado à ANPD e ao titular.</p>\n              "
+      "titulo": "Sanções administrativas (art. 52) — o que a FGV cobra nos parágrafos",
+      "html": "\n                <p><b>O rol de sanções:</b> advertência (I); <b>multa simples</b> (II) de até 2% do faturamento no Brasil no último exercício, excluídos tributos, <b>limitada a R$ 50 milhões por infração</b>; multa diária (III); publicização da infração (IV); bloqueio dos dados (V); eliminação dos dados (VI); suspensão parcial do funcionamento do banco de dados (X) e suspensão da atividade de tratamento (XI), ambas por até 6 meses prorrogáveis; e proibição parcial ou total das atividades de tratamento (XII).</p>\n                <div class=\"destaque\"><b>Só se aplica sanção com processo administrativo</b> que assegure contraditório, ampla defesa e direito de recurso. Não existe sanção sumária, nem para \"violador contumaz\".</div>\n                <p><b>§1º — critérios de dosimetria (a banca lista errado de propósito):</b> gravidade e natureza da infração, boa-fé do infrator, vantagem auferida, condição econômica, reincidência, grau do dano, cooperação, adoção reiterada de mecanismos internos de mitigação, política de boas práticas e governança, pronta adoção de medidas corretivas e proporcionalidade. <b>Nacionalidade do infrator NÃO é critério.</b></p>\n                <div class=\"warn\"><b>§3º — pegadinha de ouro:</b> a órgãos e entidades públicas só podem ser aplicadas as sanções dos incisos <b>I, IV, V, VI, X, XI e XII</b> — ou seja, <b>órgão público não leva multa</b> (nem simples nem diária) com base na LGPD.</div>\n                <p><b>§5º:</b> o produto das multas vai para o <b>Fundo de Defesa de Direitos Difusos</b> — nunca diretamente ao titular lesado. <b>§6º:</b> as sanções X, XI e XII só podem ser aplicadas depois de já imposta ao menos uma das sanções II a VI no mesmo caso. <b>§7º:</b> vazamentos individuais podem ser objeto de <b>conciliação direta</b> entre controlador e titular; não havendo acordo, aplicam-se as penalidades.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Art. 55-K:</b> a aplicação das sanções da LGPD compete <b>EXCLUSIVAMENTE à ANPD</b>, e suas competências prevalecem sobre as de outros órgãos no que toca à proteção de dados.</div>\n              "
+    },
+    {
+      "titulo": "ANPD e CNPD — o desenho institucional",
+      "html": "\n                <p>São <b>duas figuras diferentes</b> e a FGV adora trocá-las. Guarde a lógica: a <b>ANPD executa</b> (regula, fiscaliza, pune); o <b>CNPD aconselha</b> (propõe, sugere, estuda, dissemina). E, curiosamente, o CNPD <b>integra a estrutura da ANPD</b>.</p>\n                <h3>ANPD — Agência Nacional de Proteção de Dados</h3>\n                <div class=\"warn\"><b>ATUALIZAÇÃO IMPORTANTE — Lei nº 15.352, de 25/02/2026</b> (conversão da MP 1.317/2025): a ANPD deixou de ser \"<b>Autoridade</b>\" e passou a ser \"<b>Agência</b> Nacional de Proteção de Dados\". Pelo novo art. 55-A, é <b>autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública</b> (antes era vinculada à Presidência da República), com autonomia funcional, técnica, decisória, administrativa e financeira, patrimônio próprio e sede no DF — e foi <b>incluída no rol das agências reguladoras</b> da Lei nº 13.848/2019.</div>\n                <p><b>Linha do tempo da natureza jurídica</b> (é assim que a pegadinha nasce):</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">2019 (Lei 13.853)</span> órgão da administração pública federal, integrante da Presidência da República — natureza <b>transitória</b></div>\n                  <div class=\"def\"><span class=\"def-t\">2022 (Lei 14.460)</span> transformada em <b>autarquia de natureza especial</b>, vinculada à Presidência da República</div>\n                  <div class=\"def\"><span class=\"def-t\">2026 (Lei 15.352)</span> passa a ser <b>Agência</b>, autarquia de natureza especial vinculada ao <b>Ministério da Justiça e Segurança Pública</b></div>\n                </div>\n                <div class=\"destaque\">Se a alternativa disser que a ANPD é \"<b>órgão</b> da administração pública federal\", está <b>errada</b> — essa redação foi revogada em 2022.</div>\n                <p><b>Estrutura (art. 55-C):</b> Conselho Diretor (órgão máximo de direção), CNPD, Corregedoria, Ouvidoria, Procuradoria, Auditoria e unidades administrativas e especializadas.</p>\n                <p><b>Conselho Diretor (art. 55-D):</b> <b>5 diretores</b>, incluído o Diretor-Presidente, escolhidos e nomeados pelo <b>Presidente da República após aprovação do Senado Federal</b>; mandato de <b>4 anos</b>. Pelo <b>art. 55-E</b>, só perdem o cargo por <b>renúncia, condenação judicial transitada em julgado ou demissão por processo administrativo disciplinar</b>.</p>\n                <p><b>Competências (art. 55-J), em blocos:</b> zelar pela proteção de dados e pelos segredos comercial e industrial; elaborar diretrizes da Política Nacional; <b>fiscalizar e aplicar sanções</b>; apreciar petições de titular (após reclamação não resolvida pelo controlador); editar regulamentos e normas (precedidos de consulta e audiência públicas e de análise de impacto regulatório); realizar auditorias; celebrar compromisso com agentes de tratamento; e deliberar em caráter terminativo, na esfera administrativa, sobre a interpretação da Lei.</p>\n                <h3>CNPD — Conselho Nacional de Proteção de Dados Pessoais e da Privacidade</h3>\n                <p><b>Composição (art. 58-A): 23 representantes</b>, titulares e suplentes — 5 do Poder Executivo federal; 1 do Senado; 1 da Câmara; 1 do CNJ; 1 do CNMP; 1 do Comitê Gestor da Internet no Brasil; 3 da sociedade civil; 3 de instituições científicas, tecnológicas e de inovação; 3 de confederações sindicais do setor produtivo; 2 do setor empresarial de tratamento de dados; e 2 do setor laboral.</p>\n                <p>Os representantes da sociedade civil e demais entidades têm mandato de <b>2 anos, permitida 1 recondução</b>, e não podem ser membros do CGI.br. A participação é <b>prestação de serviço público relevante, NÃO remunerada</b>.</p>\n                <p><b>Competências (art. 58-B):</b> propor diretrizes estratégicas e subsídios para a Política Nacional e para a atuação da ANPD; elaborar relatórios anuais de avaliação; <b>sugerir ações a serem realizadas pela ANPD</b>; elaborar estudos, debates e audiências públicas; e <b>disseminar o conhecimento sobre proteção de dados à população</b>.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> O CNPD <b>não fiscaliza e não aplica sanção</b> — todos os seus verbos são consultivos: propor, elaborar, sugerir, disseminar. Quem pune é só a ANPD (art. 55-K).</div>\n                <div class=\"warn\"><b>Não confunda os números:</b> Conselho <b>Diretor</b> da ANPD = <b>5</b> diretores, mandato de <b>4</b> anos. <b>CNPD</b> = <b>23</b> representantes, mandato de <b>2</b> anos. E a garantia de só perder o cargo por renúncia/condenação/PAD é do <b>Conselho Diretor</b> (art. 55-E), não dos conselheiros do CNPD.</div>\n              "
     }
   ],
   "flashcards": [
@@ -107,8 +111,53 @@
     },
     {
       "tema": "LGPD",
-      "pergunta": "O que é a ANPD?",
-      "resposta": "Autoridade Nacional de Proteção de Dados — órgão responsável por zelar, implementar e fiscalizar o cumprimento da LGPD."
+      "pergunta": "O que é a ANPD e qual sua natureza jurídica hoje?",
+      "resposta": "Agência Nacional de Proteção de Dados: autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública, com autonomia funcional, técnica, decisória, administrativa e financeira (art. 55-A, com a redação da Lei nº 15.352/2026). ATENÇÃO: dizer que é 'órgão da administração pública federal' está errado — essa redação foi revogada em 2022."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Como evoluiu a natureza jurídica da ANPD?",
+      "resposta": "2019 (Lei 13.853): órgão da Presidência da República, de natureza transitória. 2022 (Lei 14.460): autarquia de natureza especial vinculada à Presidência. 2026 (Lei 15.352): passa a ser Agência, autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública, integrando o rol das agências reguladoras da Lei 13.848/2019."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Qual a composição do Conselho Diretor da ANPD e o mandato?",
+      "resposta": "5 diretores, incluído o Diretor-Presidente, escolhidos e nomeados pelo Presidente da República após aprovação do Senado Federal, com mandato de 4 anos (art. 55-D)."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Em que hipóteses os membros do Conselho Diretor da ANPD perdem o cargo?",
+      "resposta": "Somente por renúncia, condenação judicial transitada em julgado ou pena de demissão decorrente de processo administrativo disciplinar (art. 55-E). Essa garantia é do Conselho Diretor — não dos conselheiros do CNPD."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Como é composto o CNPD e como é a participação?",
+      "resposta": "23 representantes, titulares e suplentes (5 do Executivo federal; 1 Senado; 1 Câmara; 1 CNJ; 1 CNMP; 1 CGI.br; 3 sociedade civil; 3 instituições científicas e de inovação; 3 confederações sindicais do setor produtivo; 2 setor empresarial; 2 setor laboral). Mandato de 2 anos, permitida 1 recondução, e a participação é serviço público relevante NÃO remunerado (art. 58-A)."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Quais são as competências do CNPD (art. 58-B)?",
+      "resposta": "Propor diretrizes estratégicas e subsídios para a Política Nacional e para a atuação da ANPD; elaborar relatórios anuais de avaliação; sugerir ações a serem realizadas pela ANPD; elaborar estudos, debates e audiências públicas; e disseminar o conhecimento sobre proteção de dados à população. Todos os verbos são consultivos — o CNPD não fiscaliza nem aplica sanção."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Quem pode aplicar as sanções da LGPD?",
+      "resposta": "Exclusivamente a ANPD, cujas competências prevalecem sobre as correlatas de outros órgãos e entidades no que se refere à proteção de dados (art. 55-K)."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Órgão público pode levar multa com base na LGPD?",
+      "resposta": "Não. Pelo art. 52, §3º, a entidades e órgãos públicos só se aplicam as sanções dos incisos I, IV, V, VI, X, XI e XII — ficam de fora a multa simples (II) e a multa diária (III)."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Para onde vai o dinheiro das multas aplicadas pela ANPD?",
+      "resposta": "Para o Fundo de Defesa de Direitos Difusos (art. 52, §5º) — nunca diretamente para o titular lesado."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "O que a LGPD prevê para vazamentos individuais?",
+      "resposta": "Podem ser objeto de conciliação direta entre controlador e titular; não havendo acordo, o controlador fica sujeito às penalidades do art. 52 (art. 52, §7º)."
     },
     {
       "tema": "LGPD",
