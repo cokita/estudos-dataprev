@@ -432,6 +432,16 @@ window.CONTENT = {
             },
             {
               "tema": "LAI",
+              "pergunta": "A decisão que classifica uma informação como sigilosa é pública?",
+              "resposta": "Não. Ela é mantida no MESMO grau de sigilo da informação classificada (art. 28, parágrafo único) — afinal, contém o assunto, o fundamento, o prazo e a autoridade. O que é público (art. 30) é outra coisa: o rol dos documentos classificados em cada grau, o rol dos desclassificados nos últimos 12 meses e o relatório estatístico. Resumo: a EXISTÊNCIA do sigilo é transparente; o CONTEÚDO da decisão, não."
+            },
+            {
+              "tema": "LAI",
+              "pergunta": "O que cada órgão deve publicar anualmente sobre informações sigilosas (art. 30)?",
+              "resposta": "Rol das informações desclassificadas nos últimos 12 meses; rol de documentos classificados em cada grau de sigilo, com identificação para referência futura; e relatório estatístico com a quantidade de pedidos recebidos, atendidos e indeferidos."
+            },
+            {
+              "tema": "LAI",
               "pergunta": "Quem pode desclassificar (derrubar) o sigilo de uma informação?",
               "resposta": "A própria autoridade que classificou ou uma superior, de ofício ou por provocação; e, no federal, a CMRI, que reavalia ultrassecretas e secretas e é a única que pode prorrogar o sigilo ultrassecreto."
             }
@@ -723,7 +733,7 @@ window.CONTENT = {
                     "a lei permite a desclassificação, mas não a redução de prazo de informação classificada, devendo a reavaliação ser feita pela autoridade classificadora ou outra superior, mediante provocação ou de ofício."
                   ],
                   "answer": 3,
-                  "exp": "Gabarito oficial: D. É a literalidade do art. 21, parágrafo único, da LAI. Por que as outras erram: (A) os graus são ultrassecreta, secreta e reservada — e a classificação NÃO é livre: o art. 24, §5º impõe observar o interesse público e usar o critério menos restritivo possível; (B) a decisão de classificação é mantida no mesmo grau de sigilo da informação classificada (art. 28, parágrafo único), logo não é pública; (C) transcorrido o prazo ou consumado o evento, a informação torna-se AUTOMATICAMENTE de acesso público (art. 24, §4º), sem necessidade de procedimento ou decisão; (E) o art. 29 admite tanto a desclassificação QUANTO a redução do prazo de sigilo — o erro está no 'mas não a redução de prazo'."
+                  "exp": "Gabarito oficial: D. É a literalidade do art. 21, parágrafo único, da LAI. Por que as outras erram: (A) os graus são ultrassecreta, secreta e reservada — e a classificação NÃO é livre: o art. 24, §5º impõe observar o interesse público e usar o critério menos restritivo possível; (B) ARMADILHA MAIS FINA DA QUESTÃO: a decisão de classificação é mantida no mesmo grau de sigilo da informação classificada (art. 28, parágrafo único), logo não é pública. Faz sentido, porque essa decisão contém o assunto, o fundamento, o prazo e a autoridade (art. 28) — se fosse pública, entregaria justamente o que se quis esconder. Cuidado para não confundir: existe SIM publicidade em torno do sigilo, mas ela é outra — pelo art. 30, o órgão publica anualmente o rol dos documentos classificados em cada grau, o rol dos desclassificados nos últimos 12 meses e um relatório estatístico. Guarde assim: a EXISTÊNCIA do sigilo é transparente; o CONTEÚDO da decisão que o criou, não; (C) transcorrido o prazo ou consumado o evento, a informação torna-se AUTOMATICAMENTE de acesso público (art. 24, §4º), sem necessidade de procedimento ou decisão; (E) o art. 29 admite tanto a desclassificação QUANTO a redução do prazo de sigilo — o erro está no 'mas não a redução de prazo'."
                 }
               ]
             }

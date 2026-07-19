@@ -137,6 +137,16 @@
     },
     {
       "tema": "LAI",
+      "pergunta": "A decisão que classifica uma informação como sigilosa é pública?",
+      "resposta": "Não. Ela é mantida no MESMO grau de sigilo da informação classificada (art. 28, parágrafo único) — afinal, contém o assunto, o fundamento, o prazo e a autoridade. O que é público (art. 30) é outra coisa: o rol dos documentos classificados em cada grau, o rol dos desclassificados nos últimos 12 meses e o relatório estatístico. Resumo: a EXISTÊNCIA do sigilo é transparente; o CONTEÚDO da decisão, não."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "O que cada órgão deve publicar anualmente sobre informações sigilosas (art. 30)?",
+      "resposta": "Rol das informações desclassificadas nos últimos 12 meses; rol de documentos classificados em cada grau de sigilo, com identificação para referência futura; e relatório estatístico com a quantidade de pedidos recebidos, atendidos e indeferidos."
+    },
+    {
+      "tema": "LAI",
       "pergunta": "Quem pode desclassificar (derrubar) o sigilo de uma informação?",
       "resposta": "A própria autoridade que classificou ou uma superior, de ofício ou por provocação; e, no federal, a CMRI, que reavalia ultrassecretas e secretas e é a única que pode prorrogar o sigilo ultrassecreto."
     }
