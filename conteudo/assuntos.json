@@ -1,0 +1,14 @@
+[
+  {
+    "id": "legislacao",
+    "nome": "Legislação",
+    "icon": "ti-gavel",
+    "descricao": "Segurança da Informação e Proteção de Dados: LGPD, LAI, Marco Civil e Delitos Informáticos (recorte do edital DataPrev/FGV).",
+    "materias": [
+      "lgpd",
+      "lai",
+      "marco-civil",
+      "delitos-informaticos"
+    ]
+  }
+]

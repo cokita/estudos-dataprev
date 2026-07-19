@@ -1,0 +1,43 @@
+{
+  "id": "delitos-informaticos",
+  "nome": "Lei de Delitos Informáticos — Lei nº 12.737/2012",
+  "icon": "ti-lock-access",
+  "descricao": "A 'Lei Carolina Dieckmann'. Criou o crime de invasão de dispositivo informático (art. 154-A do CP).",
+  "resumo": [
+    {
+      "titulo": "De onde veio",
+      "html": "\n                <p>Surgiu após o vazamento de fotos íntimas da atriz Carolina Dieckmann (2012), quando se percebeu que não havia crime específico para punir a invasão de dispositivos e o roubo de dados. O art. 2º inseriu os arts. 154-A e 154-B no Código Penal (e alterou o 266 e o 298).</p>\n              "
+    },
+    {
+      "titulo": "O crime e a ação penal",
+      "html": "\n                <p><b>Art. 154-A (caput):</b> invadir dispositivo informático alheio, conectado ou não à rede, com o fim de obter, adulterar ou destruir dados sem autorização, ou instalar vulnerabilidades para obter vantagem ilícita. <b>Pena:</b> reclusão de 1 a 4 anos e multa (após a Lei 14.155/2021).</p>\n                <p><b>Qualificadora (§3º):</b> se resulta obtenção de comunicações privadas, segredos comerciais/industriais, informações sigilosas ou controle remoto não autorizado — reclusão de 2 a 5 anos e multa.</p>\n                <p><b>Ação penal (art. 154-B):</b> mediante representação, salvo se cometido contra a administração pública — aí é ação penal pública incondicionada.</p>\n              "
+    }
+  ],
+  "flashcards": [
+    {
+      "tema": "Delitos Informáticos",
+      "pergunta": "O que a Lei 12.737/2012 (art. 2º) fez no Código Penal?",
+      "resposta": "Inseriu os arts. 154-A e 154-B (e alterou o 266 e o 298), criando o crime de invasão de dispositivo informático. É a 'Lei Carolina Dieckmann'."
+    },
+    {
+      "tema": "Delitos Informáticos",
+      "pergunta": "Descreva o crime do art. 154-A.",
+      "resposta": "Invadir dispositivo informático alheio, conectado ou não à rede, com o fim de obter, adulterar ou destruir dados sem autorização, ou instalar vulnerabilidades para obter vantagem ilícita."
+    },
+    {
+      "tema": "Delitos Informáticos",
+      "pergunta": "Pena atual do caput do art. 154-A.",
+      "resposta": "Reclusão de 1 a 4 anos e multa (após a Lei 14.155/2021; antes era detenção de 3 meses a 1 ano)."
+    },
+    {
+      "tema": "Delitos Informáticos",
+      "pergunta": "Qualificadora do §3º do art. 154-A.",
+      "resposta": "Se resulta obtenção de comunicações eletrônicas privadas, segredos comerciais/industriais, informações sigilosas ou controle remoto não autorizado: reclusão de 2 a 5 anos e multa."
+    },
+    {
+      "tema": "Delitos Informáticos",
+      "pergunta": "Como se procede a ação penal (art. 154-B)?",
+      "resposta": "Mediante representação, salvo se o crime for cometido contra a administração pública — nesse caso, ação penal pública incondicionada."
+    }
+  ]
+}

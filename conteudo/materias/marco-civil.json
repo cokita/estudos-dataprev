@@ -1,0 +1,48 @@
+{
+  "id": "marco-civil",
+  "nome": "Marco Civil da Internet — Lei nº 12.965/2014",
+  "icon": "ti-world-www",
+  "descricao": "A 'constituição da internet' brasileira: princípios, direitos e deveres no uso da rede.",
+  "resumo": [
+    {
+      "titulo": "De onde veio",
+      "html": "\n                <p>É a \"constituição da internet\" brasileira (2014), criada para garantir direitos dos usuários e regras claras — neutralidade de rede, privacidade e liberdade de expressão — num ambiente que até então não tinha lei própria.</p>\n              "
+    },
+    {
+      "titulo": "Pontos que mais caem",
+      "html": "\n                <p><b>Neutralidade de rede (art. 9º):</b> tratar todos os pacotes de forma isonômica, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação.</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Registros de conexão</span> guarda por 1 ano (provedor de conexão, art. 13)</div>\n                  <div class=\"def\"><span class=\"def-t\">Registros de acesso a aplicações</span> guarda por 6 meses (provedor de aplicações, art. 15)</div>\n                </div>\n                <p><b>Responsabilidade (art. 19):</b> em regra, o provedor de aplicações só responde por conteúdo de terceiro se, após ordem judicial específica, não o remover.</p>\n                <div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Atenção:</b> o regime do art. 19 foi objeto de decisão do STF em 2025 — confira o entendimento mais recente antes da prova.</div>\n                <p><b>Direitos do usuário (art. 7º):</b> inviolabilidade da intimidade e vida privada; sigilo das comunicações (salvo ordem judicial); não suspensão da conexão salvo débito; informações claras nos contratos; não repasse de dados a terceiros sem consentimento.</p>\n              "
+    }
+  ],
+  "flashcards": [
+    {
+      "tema": "Marco Civil",
+      "pergunta": "O que é o Marco Civil da Internet?",
+      "resposta": "Lei 12.965/2014 — estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "O que é neutralidade de rede (art. 9º)?",
+      "resposta": "O responsável pela transmissão deve tratar de forma isonômica todos os pacotes de dados, sem distinção por conteúdo, origem, destino, serviço, terminal ou aplicação."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "Prazo de guarda dos registros de CONEXÃO.",
+      "resposta": "1 ano, sob sigilo, mantido pelo provedor de conexão (art. 13)."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "Prazo de guarda dos registros de ACESSO A APLICAÇÕES.",
+      "resposta": "6 meses, mantido pelo provedor de aplicações (art. 15)."
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "Quando o provedor de aplicações responde por conteúdo de terceiro (art. 19)?",
+      "resposta": "Em regra, só se, após ordem judicial específica, não remover o conteúdo. (Atenção: o art. 19 foi objeto de decisão do STF em 2025 — confira o entendimento atual.)"
+    },
+    {
+      "tema": "Marco Civil",
+      "pergunta": "Cite direitos do usuário (art. 7º).",
+      "resposta": "Inviolabilidade da intimidade e vida privada; sigilo das comunicações (salvo ordem judicial); não suspensão da conexão salvo débito; informações claras nos contratos; não repasse de dados a terceiros sem consentimento."
+    }
+  ]
+}

@@ -36,18 +36,16 @@ Pronto — abre o link, clica em **Entrar com Google** e faz o primeiro simulado
 
 ---
 
-## Como adicionar mais simulados
-Tudo vive em **`public/js/content.js`**. A estrutura é Assunto → Matéria → Simulado → Questões.
+## Como adicionar conteúdo (novo!)
+O conteúdo agora é modular, em `conteudo/`. Você (ou o Claude, em outra sessão) adiciona um **arquivo pequeno** e roda o build — sem mexer no `content.js`, que é gerado.
 
-Cada questão tem:
-- `type`: `"ce"` (certo/errado) ou `"mc"` (múltipla escolha)
-- `tag`: rótulo curto (ex.: `"Bases legais · art. 7º"`)
-- `text`: o enunciado
-- `options`: lista de alternativas (para `ce` use `["Certo","Errado"]`)
-- `answer`: o **índice** (posição, começando em 0) da alternativa correta
-- `exp`: o comentário do gabarito
+- Novo simulado: crie `conteudo/simulados/<id>.json` (com `materiaId`).
+- Nova matéria: crie `conteudo/materias/<id>.json` e some o id em `conteudo/assuntos.json`.
+- Depois: `node scripts/build-content.mjs` e faça o push.
 
-Depois de editar, é só rodar `firebase deploy` de novo. (Ou me peça no chat: eu monto as questões e te devolvo o `content.js` atualizado.)
+O passo a passo detalhado e os formatos estão em **CLAUDE.md** (na raiz) — é o guia que as sessões do Claude leem automaticamente.
+
+O deploy é **automático**: todo push na `main` dispara o GitHub Actions, que gera o `content.js` e publica no Firebase. Não precisa mais rodar `firebase deploy` na mão.
 
 ## Estrutura dos arquivos
 ```

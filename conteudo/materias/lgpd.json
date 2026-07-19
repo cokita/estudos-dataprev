@@ -1,0 +1,124 @@
+{
+  "id": "lgpd",
+  "nome": "LGPD — Lei nº 13.709/2018",
+  "icon": "ti-shield-lock",
+  "descricao": "Lei Geral de Proteção de Dados Pessoais. Protege liberdade e privacidade no tratamento de dados pessoais.",
+  "resumo": [
+    {
+      "titulo": "O que é e por que surgiu",
+      "html": "\n                <p><b>O que é.</b> A LGPD define como os dados pessoais — qualquer informação que identifique uma pessoa: nome, CPF, e-mail, telefone, localização, histórico de navegação, hábitos de compra — podem ser coletados, usados, guardados e compartilhados por empresas e órgãos públicos. Em uma frase: ela devolve ao cidadão o controle sobre as próprias informações e impõe regras a quem as utiliza.</p>\n                <p><b>Por que surgiu.</b> Com a internet e a economia digital, os dados pessoais viraram um ativo valioso (o \"novo petróleo\"). Empresas passaram a coletar e negociar informações em larga escala, muitas vezes sem o cidadão saber ou consentir. No Brasil, a proteção era esparsa (regras soltas no CDC, no Marco Civil etc.). Escândalos como o caso Cambridge Analytica (2018) escancararam a necessidade de regras claras.</p>\n                <p><b>De onde veio.</b> Foi fortemente inspirada no GDPR europeu (em vigor desde 2018). Isso também permite ao Brasil trocar dados com países que exigem nível equivalente de proteção.</p>\n                <p><b>Linha do tempo.</b> Sancionada em 2018, entrou em vigor em setembro de 2020, e as sanções passaram a valer em agosto de 2021.</p>\n                <p><b>O espírito da lei.</b> Equilibrar o direito à privacidade e o desenvolvimento econômico e tecnológico. A LGPD não proíbe usar dados — permite, desde que com base legal, finalidade definida, transparência e responsabilidade.</p>\n              "
+    },
+    {
+      "titulo": "Os personagens da LGPD — exemplo da Loja X",
+      "html": "\n                <p>Você compra no site da \"Loja X\" e informa nome, CPF e endereço. Cada personagem tem um papel:</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Titular = você</span> A pessoa de quem são os dados; a dona da informação.</div>\n                  <div class=\"def\"><span class=\"def-t\">Controlador = a Loja X</span> Quem decide por que e como usar seus dados. É o \"cérebro\" do tratamento e responde pelas decisões.</div>\n                  <div class=\"def\"><span class=\"def-t\">Operador = terceiro contratado</span> Empresa que só executa ordens do controlador (ex.: e-mail marketing, servidor de nuvem). Trata dados em nome do controlador, sem decidir nada sozinho.</div>\n                  <div class=\"def\"><span class=\"def-t\">Encarregado (DPO) = o contato de privacidade</span> Pessoa/setor indicado pela própria empresa para ser a ponte de comunicação. <b>Não é do governo.</b></div>\n                  <div class=\"def\"><span class=\"def-t\">ANPD = o governo</span> Órgão público federal que fiscaliza e pune quem descumpre a LGPD. Fala com a empresa através do encarregado.</div>\n                </div>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Controlador <b>decide</b> · Operador <b>executa</b> · Encarregado é a <b>ponte</b>. Detalhe de prova: controlador e operador são os \"agentes de tratamento\"; o encarregado NÃO é agente de tratamento.</div>\n              "
+    },
+    {
+      "titulo": "Conceitos que a FGV adora",
+      "html": "\n                <p><b>Dado pessoal sensível:</b> origem racial/étnica, convicção religiosa, opinião política, filiação sindical, saúde, vida sexual, dado genético ou biométrico.</p>\n                <p><b>Dado anonimizado</b> em regra não é dado pessoal — salvo se a anonimização puder ser revertida com esforços razoáveis.</p>\n                <p><b>A LGPD não se aplica a:</b> uso exclusivamente particular; fins jornalísticos, artísticos ou acadêmicos; segurança pública, defesa nacional e investigação/repressão penal.</p>\n              "
+    },
+    {
+      "titulo": "Bases legais (art. 7º) — 10 hipóteses",
+      "html": "\n                <p>O <b>consentimento é só UMA</b> delas. As outras nove: obrigação legal; políticas públicas; estudos por órgão de pesquisa; execução de contrato; exercício de direitos em processo; proteção da vida; tutela da saúde; legítimo interesse; proteção do crédito.</p>\n                <div class=\"destaque\"><b>Pegadinha clássica:</b> o \"legítimo interesse\" vale só para dados comuns (art. 7º). Dados <b>sensíveis</b> têm lista própria e mais restrita (art. 11) — e ali NÃO cabe legítimo interesse.</div>\n              "
+    },
+    {
+      "titulo": "Princípios (art. 6º) e direitos do titular (art. 18)",
+      "html": "\n                <p><b>Princípios (art. 6º):</b> finalidade, adequação, necessidade, livre acesso, qualidade dos dados, transparência, segurança, prevenção, não discriminação, responsabilização e prestação de contas (além da boa-fé).</p>\n                <p><b>Direitos do titular (art. 18):</b> confirmação de tratamento, acesso, correção, anonimização/bloqueio/eliminação, portabilidade, eliminação dos dados tratados com consentimento, informação sobre compartilhamento e revogação do consentimento.</p>\n              "
+    },
+    {
+      "titulo": "Sanções (art. 52) e ANPD",
+      "html": "\n                <p><b>Multa simples:</b> até 2% do faturamento da empresa/grupo no Brasil, limitada a R$ 50 milhões por infração. Também há advertência, multa diária, publicização, bloqueio e eliminação dos dados.</p>\n                <p><b>ANPD:</b> autoridade que zela, implementa e fiscaliza a LGPD. Incidente de segurança relevante deve ser comunicado à ANPD e ao titular.</p>\n              "
+    }
+  ],
+  "flashcards": [
+    {
+      "tema": "LGPD",
+      "pergunta": "O que é a LGPD, em uma frase?",
+      "resposta": "A lei que regula como dados pessoais podem ser coletados, usados, armazenados e compartilhados por empresas e órgãos públicos, devolvendo ao cidadão o controle sobre as próprias informações."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Por que a LGPD surgiu?",
+      "resposta": "Porque, na economia digital, dados pessoais viraram um ativo valioso e passaram a ser usados sem transparência; faltava no Brasil uma lei geral. Foi inspirada no GDPR europeu e impulsionada por casos como Cambridge Analytica (2018)."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "A LGPD se aplica a quê?",
+      "resposta": "A qualquer tratamento de dados pessoais, por pessoa natural ou jurídica, de direito público ou privado, em meio físico ou digital, para proteger os direitos de liberdade e privacidade."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Em que casos a LGPD NÃO se aplica?",
+      "resposta": "Fins exclusivamente particulares; fins jornalísticos, artísticos ou acadêmicos; e segurança pública, defesa nacional, segurança do Estado e investigação/repressão penal."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "O que é dado pessoal sensível?",
+      "resposta": "Dado sobre origem racial/étnica, convicção religiosa, opinião política, filiação sindical ou a organização religiosa/filosófica/política, saúde ou vida sexual, dado genético ou biométrico."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Diferença entre controlador e operador.",
+      "resposta": "Controlador toma as decisões sobre o tratamento; operador realiza o tratamento em nome do controlador."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Quem é o encarregado (DPO)?",
+      "resposta": "Pessoa indicada pelo controlador/operador para ser o canal de comunicação entre o controlador, os titulares e a ANPD."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "O encarregado (DPO) é órgão do governo?",
+      "resposta": "Não. É indicado pela própria empresa (controlador) e trabalha para ela. Quem é do governo é a ANPD, que fiscaliza."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Quem são os 'agentes de tratamento'?",
+      "resposta": "O controlador e o operador. O encarregado NÃO é agente de tratamento — ele apenas faz a comunicação."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "O consentimento é a única base legal para tratar dados?",
+      "resposta": "Não. Existem 10 hipóteses legais (art. 7º); o consentimento é apenas uma delas."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Cite 5 das 10 bases legais (art. 7º).",
+      "resposta": "Consentimento; obrigação legal; políticas públicas; execução de contrato; legítimo interesse. (Demais: estudos por órgão de pesquisa, exercício de direitos em processo, proteção da vida, tutela da saúde, proteção do crédito.)"
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Quais são os princípios da LGPD (art. 6º)?",
+      "resposta": "Finalidade, adequação, necessidade, livre acesso, qualidade dos dados, transparência, segurança, prevenção, não discriminação, responsabilização e prestação de contas (além da boa-fé)."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "O que exige o tratamento de dados de crianças e adolescentes?",
+      "resposta": "Consentimento específico e em destaque de pelo menos um dos pais ou responsável, sempre no melhor interesse da criança/adolescente."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Cite direitos do titular (art. 18).",
+      "resposta": "Confirmação de tratamento; acesso; correção; anonimização/bloqueio/eliminação; portabilidade; eliminação dos dados tratados com consentimento; informação sobre compartilhamento; e revogação do consentimento."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Qual a multa simples do art. 52?",
+      "resposta": "Até 2% do faturamento no Brasil no último exercício (excluídos tributos), limitada a R$ 50 milhões por infração."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "O que é a ANPD?",
+      "resposta": "Autoridade Nacional de Proteção de Dados — órgão responsável por zelar, implementar e fiscalizar o cumprimento da LGPD."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "O que fazer diante de incidente de segurança relevante?",
+      "resposta": "Comunicar à ANPD e ao titular a ocorrência do incidente que possa acarretar risco ou dano relevante."
+    },
+    {
+      "tema": "LGPD",
+      "pergunta": "Dado anonimizado é dado pessoal?",
+      "resposta": "Em regra, não — pois não permite identificar o titular. Exceção: se a anonimização puder ser revertida ou permitir reidentificação com esforços razoáveis."
+    }
+  ]
+}

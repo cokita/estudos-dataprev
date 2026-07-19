@@ -1,0 +1,109 @@
+{
+  "id": "lai",
+  "nome": "LAI — Lei nº 12.527/2011",
+  "icon": "ti-file-search",
+  "descricao": "Lei de Acesso à Informação. Regra de ouro: o acesso é a regra; o sigilo, a exceção.",
+  "resumo": [
+    {
+      "titulo": "De onde veio e o espírito da lei",
+      "html": "\n                <p>Nasceu para concretizar o direito constitucional de acesso à informação pública (art. 5º, XXXIII, da CF), obrigando o Estado a ser transparente com o cidadão sobre o que faz e como gasta.</p>\n                <p>Publicada em 18/11/2011, entrou em vigor após <b>vacatio legis de 180 dias</b>, em <b>16/05/2012</b>.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Regra de ouro: <b>acesso é a regra, sigilo é a exceção.</b></div>\n              "
+    },
+    {
+      "titulo": "A quem se aplica e conceitos-chave",
+      "html": "\n                <p><b>Abrangência (art. 1º e 2º):</b> todos os entes (União, Estados, DF, Municípios) e todos os Poderes; administração direta e indireta — incluindo autarquias, fundações, empresas públicas e sociedades de economia mista.</p>\n                <p><b>Entidades privadas sem fins lucrativos</b> que recebem recursos públicos também se sujeitam, mas <b>só quanto à parcela de recursos públicos recebidos</b>.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> A DataPrev é empresa pública federal — logo, está integralmente sujeita à LAI.</div>\n                <p><b>Conceitos do art. 4º (cobrados na literalidade):</b></p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Autenticidade</span> QUEM produziu/expediu/modificou a informação</div>\n                  <div class=\"def\"><span class=\"def-t\">Integridade</span> informação NÃO modificada (origem, trânsito, destino)</div>\n                  <div class=\"def\"><span class=\"def-t\">Primariedade</span> coletada na FONTE, com máximo detalhamento, sem modificação</div>\n                  <div class=\"def\"><span class=\"def-t\">Disponibilidade</span> pode ser conhecida e usada por quem é autorizado</div>\n                </div>\n              "
+    },
+    {
+      "titulo": "Transparência, prazos e sigilo",
+      "html": "\n                <p><b>Transparência ativa</b> (divulgação espontânea, na internet) x <b>passiva</b> (resposta a pedido). O pedido <b>não exige justificativa</b> (é vedado exigir os motivos).</p>\n                <p><b>Prazo de resposta:</b> imediato; se não for possível, até <b>20 dias</b>, prorrogáveis por mais <b>10</b> (total 30) mediante justificativa expressa.</p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Ultrassecreta</span> 25 anos (prorrogável 1x por até + 25)</div>\n                  <div class=\"def\"><span class=\"def-t\">Secreta</span> 15 anos</div>\n                  <div class=\"def\"><span class=\"def-t\">Reservada</span> 5 anos</div>\n                  <div class=\"def\"><span class=\"def-t\">Informações pessoais (intimidade/vida privada)</span> restritas por até 100 anos, independentemente de classificação</div>\n                </div>\n                <p><b>Decretos:</b> 7.724 regulamenta a LAI no Executivo federal; 7.845 trata de informação classificada e credenciamento de segurança (institui o NSC).</p>\n              "
+    },
+    {
+      "titulo": "Procedimento, recursos e instâncias",
+      "html": "\n                <p><b>SIC</b> (Serviço de Informação ao Cidadão) recebe os pedidos. O serviço é <b>gratuito</b>, salvo o custo de reprodução dos materiais.</p>\n                <p>Negado o acesso, cabe <b>recurso à autoridade hierarquicamente superior</b> (10 dias para recorrer; 5 dias para decidir). No âmbito federal, mantida a negativa, recurso à <b>CGU</b> (mesmos 10 → 5). Desprovido pela CGU, recurso à <b>CMRI</b> (Comissão Mista de Reavaliação de Informações).</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Macete <b>10 → 5</b>: recorre em 10 dias, decide em 5 dias.</div>\n                <div class=\"warn\"><b>Nunca podem ser negadas (art. 21):</b> informação necessária à tutela de direitos fundamentais e informações sobre condutas que impliquem violação de direitos humanos praticada por agentes públicos.</div>\n              "
+    },
+    {
+      "titulo": "Classificação, competência e desclassificação",
+      "html": "\n                <p>São classificáveis as informações <b>imprescindíveis à segurança da sociedade ou do Estado</b> (art. 23). A classificação deve usar o critério <b>menos restritivo</b> possível; o prazo pode ser por data ou por <b>evento</b> (ex.: até a conclusão de uma obra).</p>\n                <p><b>Competência (art. 27):</b> Ultrassecreta — Presidente, Vice, Ministros, Comandantes das Forças e Chefes de Missão Diplomática; Secreta — as anteriores + titulares de autarquias, fundações, empresas públicas e sociedades de economia mista; Reservada — as anteriores + funções de direção/chefia (DAS 101.5 ou superior).</p>\n                <div class=\"warn\"><b>Prorrogação:</b> só a <b>ultrassecreta</b> se prorroga — uma única vez, por até + 25 anos (teto de 50). Secreta e reservada NÃO se prorrogam.</div>\n                <p>A <b>CMRI</b> reavalia de ofício ou por provocação as classificações ultrassecretas e secretas e pode prorrogar o sigilo ultrassecreto. O cidadão pode pedir a reavaliação com vistas à desclassificação ou redução do prazo.</p>\n              "
+    },
+    {
+      "titulo": "Responsabilidades e pegadinhas da FGV",
+      "html": "\n                <p><b>Condutas ilícitas (art. 32):</b> recusar/retardar informação, fornecê-la incompleta ou incorreta de propósito, destruir ou ocultar documentos, impor sigilo para proveito próprio ou ocultar ilegalidade. São, no mínimo, infrações administrativas (puníveis com suspensão) e podem configurar improbidade.</p>\n                <p><b>Mais cobrado pela FGV:</b></p>\n                <div class=\"defs\">\n                  <div class=\"def\"><span class=\"def-t\">Motivação</span> é VEDADO exigir o motivo do pedido</div>\n                  <div class=\"def\"><span class=\"def-t\">Prazos de sigilo</span> 25 / 15 / 5 (trocar a ordem é a pegadinha clássica)</div>\n                  <div class=\"def\"><span class=\"def-t\">Pessoal ≠ sigilosa</span> pessoal = até 100 anos e independe de classificação</div>\n                  <div class=\"def\"><span class=\"def-t\">Municípios até 10 mil hab.</span> dispensados da divulgação obrigatória na internet, mas mantêm a transparência passiva</div>\n                </div>\n              "
+    }
+  ],
+  "flashcards": [
+    {
+      "tema": "LAI",
+      "pergunta": "Qual a regra geral da LAI?",
+      "resposta": "O acesso à informação é a regra e o sigilo é a exceção (publicidade como preceito geral)."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Diferença entre transparência ativa e passiva.",
+      "resposta": "Ativa: divulgação espontânea de informações de interesse coletivo, independentemente de pedido. Passiva: fornecimento em resposta a solicitação do cidadão."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "O pedido de acesso à informação precisa de justificativa?",
+      "resposta": "Não. É vedado exigir os motivos do pedido de acesso."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Prazo para resposta ao pedido de acesso.",
+      "resposta": "Imediato, se disponível; caso contrário, até 20 dias, prorrogáveis por mais 10 mediante justificativa."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Graus de sigilo e prazos de classificação.",
+      "resposta": "Ultrassecreta: 25 anos; Secreta: 15 anos; Reservada: 5 anos."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Por quanto tempo ficam restritas as informações pessoais (intimidade/vida privada)?",
+      "resposta": "Até 100 anos, independentemente de classificação."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "O que regulam os Decretos 7.724/2012 e 7.845/2012?",
+      "resposta": "O 7.724 regulamenta a LAI no Poder Executivo federal; o 7.845 trata do credenciamento de segurança e do tratamento de informação classificada (institui o NSC)."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "As entidades privadas sem fins lucrativos estão sujeitas à LAI?",
+      "resposta": "Sim, quando recebem recursos públicos — mas a obrigação se limita à parcela dos recursos públicos recebidos."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Diferencie autenticidade, integridade e primariedade (art. 4º).",
+      "resposta": "Autenticidade = quem produziu/expediu/modificou; Integridade = informação não modificada; Primariedade = coletada na fonte, com máximo detalhamento, sem modificação."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Quais os prazos de recurso na LAI (interpor e decidir)?",
+      "resposta": "10 dias para recorrer e 5 dias para decidir, tanto no recurso à autoridade superior quanto no recurso à CGU (macete 10 → 5)."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Qual órgão julga o recurso quando a CGU nega acesso alegando sigilo?",
+      "resposta": "A CMRI — Comissão Mista de Reavaliação de Informações."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Qual grau de sigilo pode ter o prazo prorrogado, e por quanto?",
+      "resposta": "Apenas a ultrassecreta, uma única vez, por até mais 25 anos (teto de 50). Secreta e reservada não se prorrogam."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Que informações nunca podem ser objeto de restrição de acesso (art. 21)?",
+      "resposta": "As necessárias à tutela de direitos fundamentais e as sobre condutas que impliquem violação de direitos humanos praticada por agentes públicos ou a mando de autoridades."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "Quem pode classificar uma informação como ultrassecreta?",
+      "resposta": "Presidente e Vice-Presidente da República, Ministros de Estado e equiparados, Comandantes das Forças Armadas e Chefes de Missões Diplomáticas e Consulares permanentes."
+    },
+    {
+      "tema": "LAI",
+      "pergunta": "O serviço de acesso à informação é gratuito?",
+      "resposta": "Sim; só pode ser cobrado o custo dos serviços e materiais de reprodução, ressalvado quem declara situação de pobreza."
+    }
+  ]
+}
