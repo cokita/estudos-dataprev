@@ -685,6 +685,102 @@ window.CONTENT = {
           "simulados": []
         }
       ]
+    },
+    {
+      "id": "banco-fgv",
+      "nome": "Banco de Questões FGV",
+      "icon": "ti-target-arrow",
+      "descricao": "Questões de provas reais aplicadas pela FGV, transcritas na íntegra, com gabarito oficial da banca e referência da prova de origem.",
+      "materias": [
+        {
+          "id": "fgv-lai",
+          "nome": "LAI — questões FGV",
+          "icon": "ti-file-search",
+          "descricao": "Questões de LAI extraídas de provas reais aplicadas pela FGV, com gabarito oficial e referência da prova.",
+          "resumo": [
+            {
+              "titulo": "Como usar este bloco",
+              "html": "\n                <p>As questões aqui são <b>reproduções literais de provas reais da FGV</b>, com o gabarito conferido contra o gabarito definitivo publicado pela banca. Cada questão traz, na etiqueta, a prova e o número original.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Use este bloco depois de estudar a teoria da matéria — aqui o objetivo é calibrar o <b>estilo</b> da banca, não aprender o conteúdo pela primeira vez.</div>\n                <p><b>O que observar no padrão FGV:</b> enunciados longos e contextualizados; alternativas que trocam uma única palavra do texto legal; e uso frequente de artigos correlatos (a resposta certa costuma ser a literalidade de um parágrafo específico).</p>\n              "
+            }
+          ],
+          "flashcards": [],
+          "simulados": [
+            {
+              "id": "fgv-lai-01",
+              "nome": "FGV · DataPrev 2024",
+              "descricao": "Questão de LAI da prova FGV para Analista de TI — Desenvolvimento de Software (DataPrev, Edital 01/2024, aplicada em 17/11/2024, Tipo 1). Gabarito definitivo da banca.",
+              "nivel": "Prova real",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q36",
+                  "text": "A Lei nº 12.527, de 18 de novembro de 2011, dispõe sobre as restrições de acesso à informação. Nesses termos, a lei traz diversos temas que permeiam a classificação da informação. Sobre esse assunto, é correto afirmar que",
+                  "options": [
+                    "as informações podem ser classificadas como ultrassigilosas, sigilosas ou reservadas, sendo certo que a decisão respectiva é discricionária, porquanto a lei não prevê balizas.",
+                    "a decisão de classificação de uma informação é pública e de acesso a qualquer interessado, independentemente de demonstração de interesse, embora classificada a informação.",
+                    "findo o prazo de classificação ou ocorrido o evento constituidor do termo final, para que o acesso se torne público são necessários procedimento próprio e decisão específica.",
+                    "a informação que verse sobre conduta que implique violação dos direitos humanos praticada por agentes públicos ou a mando de autoridades públicas não pode ser objeto de restrição de acesso.",
+                    "a lei permite a desclassificação, mas não a redução de prazo de informação classificada, devendo a reavaliação ser feita pela autoridade classificadora ou outra superior, mediante provocação ou de ofício."
+                  ],
+                  "answer": 3,
+                  "exp": "Gabarito oficial: D. É a literalidade do art. 21, parágrafo único, da LAI. Por que as outras erram: (A) os graus são ultrassecreta, secreta e reservada — e a classificação NÃO é livre: o art. 24, §5º impõe observar o interesse público e usar o critério menos restritivo possível; (B) a decisão de classificação é mantida no mesmo grau de sigilo da informação classificada (art. 28, parágrafo único), logo não é pública; (C) transcorrido o prazo ou consumado o evento, a informação torna-se AUTOMATICAMENTE de acesso público (art. 24, §4º), sem necessidade de procedimento ou decisão; (E) o art. 29 admite tanto a desclassificação QUANTO a redução do prazo de sigilo — o erro está no 'mas não a redução de prazo'."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fgv-lgpd",
+          "nome": "LGPD — questões FGV",
+          "icon": "ti-shield-lock",
+          "descricao": "Questões de LGPD extraídas de provas reais aplicadas pela FGV, com gabarito oficial e referência da prova.",
+          "resumo": [
+            {
+              "titulo": "Como usar este bloco",
+              "html": "\n                <p>As questões aqui são <b>reproduções literais de provas reais da FGV</b>, com o gabarito conferido contra o gabarito definitivo publicado pela banca. Cada questão traz, na etiqueta, a prova e o número original.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Repare que a FGV cobra muito os <b>parágrafos</b> da LGPD (art. 52, §§) e a arquitetura institucional (ANPD x CNPD) — não só os conceitos do art. 5º.</div>\n              "
+            }
+          ],
+          "flashcards": [],
+          "simulados": [
+            {
+              "id": "fgv-lgpd-01",
+              "nome": "FGV · DataPrev 2024",
+              "descricao": "Questões de LGPD da prova FGV para Analista de TI — Desenvolvimento de Software (DataPrev, Edital 01/2024, aplicada em 17/11/2024, Tipo 1). Gabarito definitivo da banca.",
+              "nivel": "Prova real",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q39",
+                  "text": "As sanções administrativas estão positivadas na Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais - LGPD), em capítulo intitulado de fiscalização. Com relação ao quadro legal sancionatório mencionado, é correto afirmar que",
+                  "options": [
+                    "é possível a aplicação de sanções sem a formalização de processo administrativo correspondente, em caso no qual se constate que o agente de tratamento de dados é violador contumaz da citada lei.",
+                    "a lei contempla expressamente diversos parâmetros e critérios a serem considerados na aplicação da sanção, como, por exemplo, a gravidade da infração, a boa fé e o fato de o infrator ter nacionalidade estrangeira.",
+                    "eventual aplicação da sanção de multa simples a órgão público deverá considerar a arrecadação tributária do ente federativo a que pertença e o orçamento afetado para o desenvolvimento de suas atividades.",
+                    "o produto da arrecadação das multas aplicadas pela Autoridade Nacional de Proteção de Dados, inscritas ou não em dívida ativa, será destinado diretamente às pessoas naturais cujo direito à proteção de dados foi violado.",
+                    "em caso de vazamento individual, a lei contempla a possibilidade de conciliação direta entre controlador e titular, estando aquele, na hipótese de inexistência de acordo, sujeito à aplicação das penalidades previstas no capítulo mencionado."
+                  ],
+                  "answer": 4,
+                  "exp": "Gabarito oficial: E. É a literalidade do art. 52, §7º da LGPD: os vazamentos individuais ou os acessos não autorizados poderão ser objeto de conciliação direta entre controlador e titular e, caso não haja acordo, o controlador estará sujeito às penalidades do artigo. Por que as outras erram: (A) o art. 52 exige processo administrativo que possibilite a ampla defesa — não há sanção sem processo; (B) a nacionalidade estrangeira do infrator NÃO é critério legal; os parâmetros do art. 52, §1º são gravidade e natureza da infração, boa-fé, vantagem auferida, condição econômica, reincidência, grau do dano, cooperação, adoção de política de boas práticas, entre outros; (C) a lei não prevê essa dosimetria com base em arrecadação tributária do ente ou orçamento afetado; (D) o produto da arrecadação das multas é destinado ao Fundo de Defesa de Direitos Difusos (art. 52, §5º), e não diretamente aos titulares lesados."
+                },
+                {
+                  "type": "mc",
+                  "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q40",
+                  "text": "A Lei nº 13.709, de 14 de agosto de 2018, trouxe ao ordenamento jurídico duas figuras jurídicas importantes no sistema de proteção de dados pessoais. Sobre o desenho legal da Autoridade Nacional de Proteção de Dados e o Conselho Nacional de Proteção de Dados Pessoais e da Privacidade, é correto afirmar que",
+                  "options": [
+                    "atualmente, Conselho Nacional de Proteção de Dados Pessoais e da Privacidade possui natureza de empresa pública federal e a Autoridade Nacional de Proteção de Dados é órgão da administração pública federal.",
+                    "o Conselho Diretor é composto de representantes, titulares e suplentes, da Câmara dos Deputados, do Comitê Gestor da Internet do Brasil, do Senado Federal, do Conselho Nacional de Justiça e do Conselho Nacional do Ministério Público.",
+                    "o Conselho Nacional de Proteção de Dados Pessoais e da Privacidade possui atribuição de sugerir ações a serem realizadas pela Autoridade Nacional de Proteção de Dados e disseminar o conhecimento sobre a proteção de dados pessoais e da privacidade à população.",
+                    "os membros do Conselho Nacional de Proteção de Dados Pessoais e da Privacidade somente perderão seus cargos em virtude de renúncia, condenação judicial transitada em julgado ou pena de demissão decorrente de processo administrativo disciplinar.",
+                    "a Autoridade Nacional de Proteção de Dados é uma das integrantes do Conselho Nacional de Proteção de Dados Pessoais e da Privacidade, figurando como conselheira presidente, na hipótese de nomeação pelo Presidente da República."
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito oficial: C. São atribuições do CNPD previstas no art. 58-B, III e V, da LGPD: sugerir ações a serem realizadas pela ANPD e disseminar o conhecimento sobre a proteção de dados pessoais e da privacidade à população. Por que as outras erram: (A) a ANPD não é mero órgão — é autarquia de natureza especial (transformação promovida pela Lei nº 14.460/2022) — e o CNPD não é empresa pública; (B) essa composição descrita é a do PRÓPRIO CNPD (art. 58-A), e não a do Conselho Diretor da ANPD, formado por 5 diretores (art. 55-D); (D) a garantia de só perder o cargo por renúncia, condenação transitada em julgado ou PAD é dos membros do CONSELHO DIRETOR DA ANPD (art. 55-D, §2º), não dos conselheiros do CNPD; (E) não há previsão legal de a ANPD integrar o CNPD como conselheira presidente."
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 };

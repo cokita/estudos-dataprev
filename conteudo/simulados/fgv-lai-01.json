@@ -1,0 +1,23 @@
+{
+  "id": "fgv-lai-01",
+  "materiaId": "fgv-lai",
+  "nome": "FGV · DataPrev 2024",
+  "descricao": "Questão de LAI da prova FGV para Analista de TI — Desenvolvimento de Software (DataPrev, Edital 01/2024, aplicada em 17/11/2024, Tipo 1). Gabarito definitivo da banca.",
+  "nivel": "Prova real",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q36",
+      "text": "A Lei nº 12.527, de 18 de novembro de 2011, dispõe sobre as restrições de acesso à informação. Nesses termos, a lei traz diversos temas que permeiam a classificação da informação. Sobre esse assunto, é correto afirmar que",
+      "options": [
+        "as informações podem ser classificadas como ultrassigilosas, sigilosas ou reservadas, sendo certo que a decisão respectiva é discricionária, porquanto a lei não prevê balizas.",
+        "a decisão de classificação de uma informação é pública e de acesso a qualquer interessado, independentemente de demonstração de interesse, embora classificada a informação.",
+        "findo o prazo de classificação ou ocorrido o evento constituidor do termo final, para que o acesso se torne público são necessários procedimento próprio e decisão específica.",
+        "a informação que verse sobre conduta que implique violação dos direitos humanos praticada por agentes públicos ou a mando de autoridades públicas não pode ser objeto de restrição de acesso.",
+        "a lei permite a desclassificação, mas não a redução de prazo de informação classificada, devendo a reavaliação ser feita pela autoridade classificadora ou outra superior, mediante provocação ou de ofício."
+      ],
+      "answer": 3,
+      "exp": "Gabarito oficial: D. É a literalidade do art. 21, parágrafo único, da LAI. Por que as outras erram: (A) os graus são ultrassecreta, secreta e reservada — e a classificação NÃO é livre: o art. 24, §5º impõe observar o interesse público e usar o critério menos restritivo possível; (B) a decisão de classificação é mantida no mesmo grau de sigilo da informação classificada (art. 28, parágrafo único), logo não é pública; (C) transcorrido o prazo ou consumado o evento, a informação torna-se AUTOMATICAMENTE de acesso público (art. 24, §4º), sem necessidade de procedimento ou decisão; (E) o art. 29 admite tanto a desclassificação QUANTO a redução do prazo de sigilo — o erro está no 'mas não a redução de prazo'."
+    }
+  ]
+}

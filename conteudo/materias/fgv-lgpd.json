@@ -1,0 +1,13 @@
+{
+  "id": "fgv-lgpd",
+  "nome": "LGPD — questões FGV",
+  "icon": "ti-shield-lock",
+  "descricao": "Questões de LGPD extraídas de provas reais aplicadas pela FGV, com gabarito oficial e referência da prova.",
+  "resumo": [
+    {
+      "titulo": "Como usar este bloco",
+      "html": "\n                <p>As questões aqui são <b>reproduções literais de provas reais da FGV</b>, com o gabarito conferido contra o gabarito definitivo publicado pela banca. Cada questão traz, na etiqueta, a prova e o número original.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Repare que a FGV cobra muito os <b>parágrafos</b> da LGPD (art. 52, §§) e a arquitetura institucional (ANPD x CNPD) — não só os conceitos do art. 5º.</div>\n              "
+    }
+  ],
+  "flashcards": []
+}

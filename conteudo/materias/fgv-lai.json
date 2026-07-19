@@ -1,0 +1,13 @@
+{
+  "id": "fgv-lai",
+  "nome": "LAI — questões FGV",
+  "icon": "ti-file-search",
+  "descricao": "Questões de LAI extraídas de provas reais aplicadas pela FGV, com gabarito oficial e referência da prova.",
+  "resumo": [
+    {
+      "titulo": "Como usar este bloco",
+      "html": "\n                <p>As questões aqui são <b>reproduções literais de provas reais da FGV</b>, com o gabarito conferido contra o gabarito definitivo publicado pela banca. Cada questão traz, na etiqueta, a prova e o número original.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Use este bloco depois de estudar a teoria da matéria — aqui o objetivo é calibrar o <b>estilo</b> da banca, não aprender o conteúdo pela primeira vez.</div>\n                <p><b>O que observar no padrão FGV:</b> enunciados longos e contextualizados; alternativas que trocam uma única palavra do texto legal; e uso frequente de artigos correlatos (a resposta certa costuma ser a literalidade de um parágrafo específico).</p>\n              "
+    }
+  ],
+  "flashcards": []
+}

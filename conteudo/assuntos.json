@@ -10,5 +10,15 @@
       "marco-civil",
       "delitos-informaticos"
     ]
+  },
+  {
+    "id": "banco-fgv",
+    "nome": "Banco de Questões FGV",
+    "icon": "ti-target-arrow",
+    "descricao": "Questões de provas reais aplicadas pela FGV, transcritas na íntegra, com gabarito oficial da banca e referência da prova de origem.",
+    "materias": [
+      "fgv-lai",
+      "fgv-lgpd"
+    ]
   }
 ]
