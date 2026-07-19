@@ -416,7 +416,160 @@ window.CONTENT = {
               "resposta": "A própria autoridade que classificou ou uma superior, de ofício ou por provocação; e, no federal, a CMRI, que reavalia ultrassecretas e secretas e é a única que pode prorrogar o sigilo ultrassecreto."
             }
           ],
-          "simulados": []
+          "simulados": [
+            {
+              "id": "lai-01",
+              "nome": "Fundamentos, prazos e sigilo",
+              "descricao": "Regra geral, abrangência, pedido de acesso, prazos, recursos e classificação da informação.",
+              "nivel": "Introdutório",
+              "questoes": [
+                {
+                  "type": "ce",
+                  "tag": "Regra geral · art. 3º, I",
+                  "text": "Na Lei de Acesso à Informação, o sigilo é o preceito geral da Administração Pública, e a publicidade, a exceção.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. É exatamente o inverso: a LAI adota a observância da publicidade como preceito geral e do sigilo como exceção (art. 3º, I). Sempre que a questão inverter essa relação, está errada."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Pedido de acesso · art. 10, §3º",
+                  "text": "O órgão público pode condicionar o atendimento do pedido à apresentação, pelo requerente, dos motivos determinantes da solicitação.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. São vedadas quaisquer exigências relativas aos motivos do pedido (art. 10, §3º). O cidadão não precisa justificar por que quer a informação — exigir justificativa é ilegal."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Prazos · art. 11",
+                  "text": "Não sendo possível conceder o acesso imediato, o órgão deve responder em até 20 dias, prazo prorrogável por mais 10 dias mediante justificativa expressa e cientificação do requerente.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. É a regra do art. 11: resposta imediata quando a informação estiver disponível; caso contrário, 20 dias + 10 de prorrogação (total máximo de 30 dias), com justificativa expressa e ciência ao requerente."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Classificação · art. 24, §1º",
+                  "text": "Os prazos máximos de restrição de acesso são de 25 anos para a informação ultrassecreta, 15 anos para a secreta e 5 anos para a reservada.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. Decore 25 / 15 / 5 (ultrassecreta, secreta, reservada). Trocar a ordem ou os números é a pegadinha mais comum da banca. Alternativamente, o prazo pode ser vinculado à ocorrência de um evento, e não a uma data."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Prorrogação do sigilo · art. 35, §2º",
+                  "text": "O prazo de sigilo da informação classificada como secreta pode ser prorrogado uma única vez, enquanto perdurar o risco à segurança da sociedade e do Estado.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. A prorrogação é exclusiva da informação ULTRASSECRETA, uma única vez, por até mais 25 anos (teto de 50), e é competência da CMRI. Secreta e reservada não se prorrogam."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Informação pessoal · art. 31, §1º, I",
+                  "text": "As informações pessoais relativas à intimidade, vida privada, honra e imagem terão acesso restrito pelo prazo máximo de 100 anos, independentemente de classificação de sigilo.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. Informação pessoal não se confunde com informação classificada: ela não passa pelo procedimento de classificação e sua restrição é de até 100 anos a contar da produção, para proteger a intimidade da pessoa — e não a segurança do Estado."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Abrangência · art. 2º",
+                  "text": "Uma associação privada sem fins lucrativos recebe recursos públicos por meio de termo de parceria com a União. A respeito da aplicação da LAI a essa entidade, é correto afirmar que a lei incide:",
+                  "options": [
+                    "sobre a integralidade das atividades da entidade, inclusive as custeadas com recursos próprios.",
+                    "apenas sobre a parcela dos recursos públicos recebidos.",
+                    "somente se a entidade for declarada de utilidade pública federal.",
+                    "não incide, por se tratar de pessoa jurídica de direito privado."
+                  ],
+                  "answer": 1,
+                  "exp": "Alternativa B. O art. 2º estende as obrigações da LAI às entidades privadas sem fins lucrativos que recebam recursos públicos, mas a publicidade se refere à parcela dos recursos públicos recebidos e à sua destinação — não às atividades custeadas com recursos próprios."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Recursos · art. 15",
+                  "text": "Negado o acesso à informação, o interessado pode interpor recurso à autoridade hierarquicamente superior à que proferiu a decisão. Os prazos para interpor o recurso e para a autoridade decidir são, respectivamente, de:",
+                  "options": [
+                    "10 dias e 5 dias.",
+                    "5 dias e 10 dias.",
+                    "15 dias e 10 dias.",
+                    "30 dias e 15 dias."
+                  ],
+                  "answer": 0,
+                  "exp": "Alternativa A. O recurso é interposto em 10 dias contados da ciência da decisão e apreciado em 5 dias pela autoridade superior (art. 15 e parágrafo único). Macete: 10 → 5. O mesmo par de prazos vale para o recurso à CGU (art. 16)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Restrições · art. 21",
+                  "text": "Assinale a informação que, nos termos da LAI, NÃO pode ser objeto de restrição de acesso:",
+                  "options": [
+                    "Informação cuja divulgação possa pôr em risco a defesa e a soberania nacionais.",
+                    "Informação referente a conduta que implique violação de direitos humanos praticada por agente público.",
+                    "Informação que possa comprometer atividades de inteligência em curso.",
+                    "Informação que ofereça risco à estabilidade financeira e monetária do País."
+                  ],
+                  "answer": 1,
+                  "exp": "Alternativa B. O art. 21, parágrafo único, é expresso: informações ou documentos sobre condutas que impliquem violação de direitos humanos praticada por agentes públicos ou a mando de autoridades públicas não poderão ser objeto de restrição de acesso. As demais alternativas são hipóteses típicas de classificação (art. 23)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Competência para classificar · art. 27, I",
+                  "text": "A competência para classificar uma informação no grau ULTRASSECRETO cabe a:",
+                  "options": [
+                    "qualquer servidor ocupante de cargo efetivo que detenha a informação.",
+                    "Presidente e Vice-Presidente da República, Ministros de Estado, Comandantes da Marinha, do Exército e da Aeronáutica e Chefes de Missões Diplomáticas e Consulares permanentes.",
+                    "exclusivamente ao Presidente da República, sendo vedada qualquer delegação.",
+                    "titulares de autarquias, fundações, empresas públicas e sociedades de economia mista."
+                  ],
+                  "answer": 1,
+                  "exp": "Alternativa B. É o rol do art. 27, I. A competência para o grau ultrassecreto pode ser delegada a agente público que exerça função de direção máxima, vedada a subdelegação — por isso a alternativa C erra ao dizer que é vedada qualquer delegação. Os titulares citados na alternativa D podem classificar como secreta e reservada, não ultrassecreta."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Desclassificação · arts. 29 e 35",
+                  "text": "A respeito da possibilidade de derrubar o sigilo de uma informação classificada no âmbito federal, é correto afirmar que a desclassificação pode ser feita:",
+                  "options": [
+                    "apenas pelo Poder Judiciário, mediante ação judicial proposta pelo interessado.",
+                    "pela autoridade que classificou a informação ou por autoridade superior, de ofício ou mediante provocação, e ainda pela CMRI.",
+                    "somente pelo requerente, mediante consentimento expresso do órgão detentor.",
+                    "exclusivamente pela Controladoria-Geral da União, após o decurso de metade do prazo de sigilo."
+                  ],
+                  "answer": 1,
+                  "exp": "Alternativa B. A classificação é reavaliada de ofício ou mediante provocação pela autoridade classificadora ou superior (art. 29), e a CMRI tem competência para rever a classificação de informações ultrassecretas e secretas, podendo desclassificá-las, reduzir o prazo ou prorrogar o sigilo ultrassecreto (art. 35). Não depende de decisão judicial."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Transparência ativa · art. 8º, §4º",
+                  "text": "Quanto à divulgação obrigatória de informações em sítios oficiais na internet, os municípios com população de até 10.000 habitantes:",
+                  "options": [
+                    "ficam dispensados da divulgação obrigatória na internet, mantidas as demais obrigações da lei, inclusive a transparência passiva.",
+                    "ficam integralmente dispensados do cumprimento da LAI.",
+                    "devem divulgar apenas as informações relativas a despesas com pessoal.",
+                    "não possuem qualquer dispensa, sujeitando-se às mesmas regras dos demais entes."
+                  ],
+                  "answer": 0,
+                  "exp": "Alternativa A. O art. 8º, §4º dispensa esses municípios da divulgação obrigatória na internet, mas eles continuam obrigados ao atendimento de pedidos (transparência passiva) e à divulgação em tempo real de informações de execução orçamentária e financeira, na forma da Lei de Responsabilidade Fiscal."
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "marco-civil",
