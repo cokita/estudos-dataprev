@@ -1,5 +1,14 @@
 [
   {
+    "id": "portugues",
+    "nome": "Língua Portuguesa",
+    "icon": "ti-language",
+    "descricao": "12 questões no Módulo I. Base gramatical e interpretação no estilo FGV: classes de palavras, coesão, pontuação, concordância, regência, crase e reescrita.",
+    "materias": [
+      "classes-palavras"
+    ]
+  },
+  {
     "id": "legislacao",
     "nome": "Legislação",
     "icon": "ti-gavel",

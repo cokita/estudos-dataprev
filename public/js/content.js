@@ -4,6 +4,328 @@
 window.CONTENT = {
   "assuntos": [
     {
+      "id": "portugues",
+      "nome": "Língua Portuguesa",
+      "icon": "ti-language",
+      "descricao": "12 questões no Módulo I. Base gramatical e interpretação no estilo FGV: classes de palavras, coesão, pontuação, concordância, regência, crase e reescrita.",
+      "materias": [
+        {
+          "id": "classes-palavras",
+          "nome": "Classes de palavras e morfossintaxe",
+          "icon": "ti-abc",
+          "descricao": "A base de tudo em Português: o que cada palavra é (classe) e o que ela faz na frase (função). Sem isso, crase, concordância e regência viram decoreba solta.",
+          "resumo": [
+            {
+              "titulo": "De onde veio: as partes do discurso",
+              "html": "\n<p>Por volta do <b>século II a.C.</b>, em Alexandria, <b>Dionísio Trácio</b> escreveu a primeira gramática do Ocidente. O problema dele era prático: ensinar grego a estrangeiros. A solução foi agrupar as palavras em <b>8 “partes do discurso”</b> — categorias de <i>comportamento</i>, não de significado.</p>\n<p>Roma copiou o sistema, retirou o <b>artigo</b> (o latim não tem) e acrescentou a <b>interjeição</b>. O português herdou tudo isso e fechou em <b>10 classes</b>.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Guarde a intenção original: classe de palavra é uma <b>etiqueta de comportamento</b>. Não é “o que a palavra significa”, é <b>“como ela se comporta na frase”</b>.</div>\n"
+            },
+            {
+              "titulo": "Morfossintaxe: toda palavra tem dois rótulos",
+              "html": "\n<p>Toda palavra carrega <b>dois rótulos ao mesmo tempo</b>:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Morfologia (classe)</span> o que a palavra é sozinha, no dicionário — substantivo, verbo, advérbio…</div>\n  <div class=\"def\"><span class=\"def-t\">Sintaxe (função)</span> o papel que ela exerce naquela frase — sujeito, objeto, adjunto…</div>\n</div>\n<p>Exemplo: <i>“Aquele candidato estuda bastante.”</i></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Aquele</span> classe: pronome demonstrativo · função: adjunto adnominal</div>\n  <div class=\"def\"><span class=\"def-t\">candidato</span> classe: substantivo · função: núcleo do sujeito</div>\n  <div class=\"def\"><span class=\"def-t\">estuda</span> classe: verbo · função: núcleo do predicado</div>\n  <div class=\"def\"><span class=\"def-t\">bastante</span> classe: advérbio · função: adjunto adverbial</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Analogia de dev: a <b>classe</b> é o <i>tipo</i> (String, int) e a <b>função</b> é o <i>papel na chamada</i> (parâmetro, retorno, chave). A diferença é que em português <b>até o tipo muda</b> conforme o contexto — e é aí que a FGV arma a pegadinha.</div>\n"
+            },
+            {
+              "titulo": "As 10 classes em 3 famílias",
+              "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Nominais (variáveis)</span> substantivo, artigo, adjetivo, numeral e pronome — giram em torno do substantivo e flexionam em gênero e número</div>\n  <div class=\"def\"><span class=\"def-t\">Verbo</span> a única classe que varia em tempo, modo e pessoa</div>\n  <div class=\"def\"><span class=\"def-t\">Invariáveis</span> advérbio, preposição, conjunção e interjeição — nunca mudam de forma</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Teste de família: se a palavra <b>tem plural ou feminino</b>, é nominal ou verbo. Se <b>nunca muda de forma</b>, é invariável.</div>\n"
+            },
+            {
+              "titulo": "Três testes que resolvem quase tudo",
+              "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Aceita artigo antes?</span> se cabe <i>o</i>, <i>a</i>, <i>um</i> na frente, é <b>substantivo</b> — “o <b>andar</b> do prédio”, “o <b>jantar</b> estava frio”</div>\n  <div class=\"def\"><span class=\"def-t\">2. Caracteriza um substantivo e concorda com ele?</span> é <b>adjetivo</b> — “relatório <b>claro</b>”, “questões <b>difíceis</b>”</div>\n  <div class=\"def\"><span class=\"def-t\">3. Modifica verbo, adjetivo ou outro advérbio e não flexiona?</span> é <b>advérbio</b> — “falou <b>claro</b>”, “<b>meio</b> nervosa”</div>\n</div>\n"
+            },
+            {
+              "titulo": "A pegadinha nº 1: a classe depende do contexto",
+              "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O jantar estava frio</span> substantivo (tem artigo antes)</div>\n  <div class=\"def\"><span class=\"def-t\">Vamos jantar cedo</span> verbo</div>\n  <div class=\"def\"><span class=\"def-t\">Ela está meio cansada</span> advérbio — <b>invariável</b>, nunca “meia cansada”</div>\n  <div class=\"def\"><span class=\"def-t\">Comprei meia dúzia</span> numeral — concorda com “dúzia”</div>\n  <div class=\"def\"><span class=\"def-t\">Ele chegou bastante tarde</span> advérbio (modifica “tarde”), invariável</div>\n  <div class=\"def\"><span class=\"def-t\">Havia bastantes motivos</span> pronome indefinido — acompanha substantivo e <b>flexiona</b></div>\n  <div class=\"def\"><span class=\"def-t\">Comprei um livro</span> artigo indefinido</div>\n  <div class=\"def\"><span class=\"def-t\">Comprei um, não dois</span> numeral</div>\n</div>\n<div class=\"warn\"><b>Erro clássico:</b> “Ela ficou <b>meia</b> irritada” está errado. Quando “meio” significa <i>um pouco</i>, é advérbio e não flexiona: “Ela ficou <b>meio</b> irritada”. Só concorda quando é numeral: “meia dúzia”, “meia hora”, “duas e meia”.</div>\n"
+            },
+            {
+              "titulo": "Por que isso destrava crase, concordância e regência",
+              "html": "\n<p>A FGV quase nunca pergunta “que classe é esta palavra?” de forma direta. Ela pergunta crase, concordância, regência e pontuação — e <b>todas essas regras são escritas em termos de classe</b>:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Crase</span> = <b>preposição</b> a + <b>artigo</b> a. Sem enxergar preposição e artigo, a regra não roda</div>\n  <div class=\"def\"><span class=\"def-t\">Concordância verbal</span> o verbo concorda com o <b>núcleo do sujeito</b>, e núcleo é sempre substantivo ou pronome (ou palavra substantivada)</div>\n  <div class=\"def\"><span class=\"def-t\">Regência</span> é a <b>preposição</b> que aquele verbo ou nome exige</div>\n  <div class=\"def\"><span class=\"def-t\">Colocação pronominal</span> as palavras atrativas que puxam próclise são definidas por classe: advérbio de negação, pronome relativo, conjunção subordinativa</div>\n</div>\n<div class=\"destaque\">Domine este módulo e os outros deixam de ser decoreba: viram aplicação de regra sobre uma base que você enxerga.</div>\n"
+            }
+          ],
+          "flashcards": [
+            {
+              "tema": "Origem",
+              "pergunta": "Quem criou o sistema de classes de palavras e por quê?",
+              "resposta": "Dionísio Trácio, século II a.C., em Alexandria. Criou as 8 'partes do discurso' para ensinar grego a estrangeiros — categorias de comportamento, não de significado."
+            },
+            {
+              "tema": "Origem",
+              "pergunta": "Por que o português tem 10 classes e o latim não tinha artigo?",
+              "resposta": "Roma herdou as 8 partes gregas, retirou o artigo (inexistente em latim) e acrescentou a interjeição. O português reincorporou o artigo e chegou a 10 classes."
+            },
+            {
+              "tema": "Morfossintaxe",
+              "pergunta": "Qual a diferença entre morfologia e sintaxe?",
+              "resposta": "Morfologia estuda a CLASSE (o que a palavra é sozinha, no dicionário). Sintaxe estuda a FUNÇÃO (o papel que ela exerce naquela frase específica)."
+            },
+            {
+              "tema": "Morfossintaxe",
+              "pergunta": "Toda palavra carrega quantos rótulos numa frase?",
+              "resposta": "Dois: a classe (morfologia) e a função sintática. Ex.: 'candidato' é substantivo (classe) e núcleo do sujeito (função)."
+            },
+            {
+              "tema": "Classes",
+              "pergunta": "Quais são as 10 classes de palavras?",
+              "resposta": "Substantivo, artigo, adjetivo, numeral, pronome, verbo, advérbio, preposição, conjunção e interjeição."
+            },
+            {
+              "tema": "Classes",
+              "pergunta": "Quais são as classes INVARIÁVEIS?",
+              "resposta": "Advérbio, preposição, conjunção e interjeição. Nunca flexionam em gênero ou número."
+            },
+            {
+              "tema": "Classes",
+              "pergunta": "Quais são as classes nominais (variáveis)?",
+              "resposta": "Substantivo, artigo, adjetivo, numeral e pronome — giram em torno do substantivo e flexionam em gênero e número."
+            },
+            {
+              "tema": "Classes",
+              "pergunta": "Qual é a única classe que varia em tempo, modo e pessoa?",
+              "resposta": "O verbo."
+            },
+            {
+              "tema": "Testes",
+              "pergunta": "Teste rápido para identificar um substantivo.",
+              "resposta": "Se cabe um artigo antes (o, a, um), é substantivo. Ex.: 'o andar do prédio', 'o jantar estava frio'."
+            },
+            {
+              "tema": "Testes",
+              "pergunta": "Teste rápido para diferenciar adjetivo de advérbio.",
+              "resposta": "Adjetivo caracteriza substantivo e concorda com ele ('relatório claro'). Advérbio modifica verbo, adjetivo ou outro advérbio e não flexiona ('falou claro')."
+            },
+            {
+              "tema": "Testes",
+              "pergunta": "Como saber se uma palavra é de classe invariável?",
+              "resposta": "Se ela nunca muda de forma (sem plural nem feminino), é invariável: advérbio, preposição, conjunção ou interjeição."
+            },
+            {
+              "tema": "Pegadinha",
+              "pergunta": "'Ela ficou meio nervosa' ou 'meia nervosa'?",
+              "resposta": "'Meio nervosa'. Quando significa 'um pouco', 'meio' é ADVÉRBIO e não flexiona. Só concorda quando é numeral: meia dúzia, meia hora, duas e meia."
+            },
+            {
+              "tema": "Pegadinha",
+              "pergunta": "Qual a classe de 'bastante' em 'Ele chegou bastante tarde' e em 'Havia bastantes motivos'?",
+              "resposta": "No primeiro é advérbio (modifica 'tarde', invariável). No segundo é pronome indefinido (acompanha substantivo e flexiona)."
+            },
+            {
+              "tema": "Pegadinha",
+              "pergunta": "Qual a classe de 'um' em 'Comprei um livro' e em 'Comprei um, não dois'?",
+              "resposta": "No primeiro é artigo indefinido. No segundo é numeral (opõe-se a 'dois')."
+            },
+            {
+              "tema": "Pegadinha",
+              "pergunta": "Qual a classe de 'jantar' em 'O jantar estava frio' e em 'Vamos jantar cedo'?",
+              "resposta": "No primeiro é substantivo (tem artigo antes). No segundo é verbo."
+            },
+            {
+              "tema": "Aplicação",
+              "pergunta": "Por que classes de palavras é pré-requisito para crase?",
+              "resposta": "Crase é a fusão da PREPOSIÇÃO 'a' com o ARTIGO 'a'. Sem identificar essas duas classes na frase, a regra não pode ser aplicada."
+            },
+            {
+              "tema": "Aplicação",
+              "pergunta": "Com o que o verbo concorda na concordância verbal?",
+              "resposta": "Com o núcleo do sujeito — que é sempre um substantivo, um pronome ou uma palavra substantivada."
+            },
+            {
+              "tema": "Aplicação",
+              "pergunta": "O que é regência, em termos de classe?",
+              "resposta": "É a preposição que um verbo ou um nome exige para se ligar ao seu complemento."
+            },
+            {
+              "tema": "Aplicação",
+              "pergunta": "Quais classes funcionam como palavras atrativas (puxam próclise)?",
+              "resposta": "Advérbio (sobretudo de negação), pronome relativo, pronome indefinido e conjunção subordinativa."
+            },
+            {
+              "tema": "Aplicação",
+              "pergunta": "Em 'Os dados do relatório mensal foram revisados', qual é o núcleo do sujeito?",
+              "resposta": "'dados'. Por isso o verbo vai para o plural ('foram'). 'relatório' está dentro do adjunto adnominal e não comanda a concordância."
+            }
+          ],
+          "simulados": [
+            {
+              "id": "classes-palavras-01",
+              "nome": "Classes de palavras — identificação e contexto",
+              "descricao": "Identificar a classe de uma palavra pelo contexto, distinguir classe de função e aplicar os três testes básicos.",
+              "nivel": "Introdutório",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Advérbio · pegadinha do 'meio'",
+                  "text": "Em “Ela ficou meio nervosa antes da prova”, a palavra destacada pertence à classe:",
+                  "options": [
+                    "numeral",
+                    "adjetivo",
+                    "advérbio",
+                    "substantivo"
+                  ],
+                  "answer": 2,
+                  "exp": "Advérbio. Aqui “meio” significa “um pouco” e modifica o adjetivo “nervosa” — logo é advérbio e é INVARIÁVEL. Por isso “meia nervosa” está errado. “Meio” só concorda quando é numeral: meia dúzia, meia hora, duas e meia."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Pronome indefinido · 'bastante'",
+                  "text": "Em “Havia bastantes candidatos na sala”, a palavra destacada pertence à classe:",
+                  "options": [
+                    "advérbio",
+                    "pronome indefinido",
+                    "adjetivo",
+                    "numeral"
+                  ],
+                  "answer": 1,
+                  "exp": "Pronome indefinido. Ele acompanha o substantivo “candidatos”, quantificando-o, e por isso FLEXIONA (bastantes). Quando “bastante” modifica verbo ou adjetivo, é advérbio e não flexiona: “Ele chegou bastante tarde”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Substantivo · teste do artigo",
+                  "text": "Em “O andar do prédio estava vazio”, a palavra destacada pertence à classe:",
+                  "options": [
+                    "verbo",
+                    "substantivo",
+                    "advérbio",
+                    "adjetivo"
+                  ],
+                  "answer": 1,
+                  "exp": "Substantivo. O teste é o artigo: há “O” imediatamente antes, o que substantiva a palavra. Em “Ele começou a andar devagar”, a mesma palavra seria verbo. A classe depende do contexto."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Preposição × artigo",
+                  "text": "Assinale a frase em que a palavra “a” funciona como PREPOSIÇÃO:",
+                  "options": [
+                    "A prova foi adiada.",
+                    "Entreguei a prova ao fiscal.",
+                    "Referiu-se a questões difíceis.",
+                    "A candidata chegou cedo."
+                  ],
+                  "answer": 2,
+                  "exp": "Em “Referiu-se a questões difíceis”, o “a” é exigido pela regência de “referir-se a” — é preposição. Nas demais, “a” antecede substantivo e o determina: é artigo definido. Distinguir os dois é o que torna possível resolver crase."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Conjunção",
+                  "text": "Em “Trabalhamos muito, mas o resultado foi fraco”, a palavra destacada pertence à classe:",
+                  "options": [
+                    "advérbio",
+                    "preposição",
+                    "conjunção",
+                    "pronome"
+                  ],
+                  "answer": 2,
+                  "exp": "Conjunção (coordenativa adversativa). Ela liga duas orações estabelecendo contraste. Conjunção é classe invariável — nunca flexiona."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Núcleo do sujeito",
+                  "text": "Em “Os dados do relatório mensal foram revisados”, o núcleo do sujeito é:",
+                  "options": [
+                    "dados",
+                    "relatório",
+                    "mensal",
+                    "revisados"
+                  ],
+                  "answer": 0,
+                  "exp": "“dados”. O sujeito é “Os dados do relatório mensal”, e seu núcleo é o substantivo “dados” — por isso o verbo vai para o plural (“foram”). “relatório” está dentro do adjunto adnominal e não comanda a concordância: é a armadilha clássica da FGV."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Morfossintaxe",
+                  "text": "A classe de uma palavra é fixa e independe do contexto em que ela aparece.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. A classe depende do uso: “jantar” é substantivo em “O jantar estava frio” e verbo em “Vamos jantar cedo”. Essa mobilidade é a principal fonte de pegadinha da banca."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Classes invariáveis",
+                  "text": "Advérbio, preposição, conjunção e interjeição são classes invariáveis.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. Nenhuma delas flexiona em gênero ou número. Esse é o teste rápido de família: se a palavra nunca muda de forma, está em um desses quatro grupos."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Pegadinha do 'meio'",
+                  "text": "Em “Ela chegou meia atrasada”, o emprego de “meia” está correto, pois concorda com o sujeito feminino.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. “Meio” aqui equivale a “um pouco”, modifica o adjetivo “atrasada” e é advérbio — portanto invariável. O correto é “meio atrasada”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Numeral × artigo",
+                  "text": "Em “Comprei um, não dois”, a palavra destacada pertence à classe:",
+                  "options": [
+                    "artigo indefinido",
+                    "numeral",
+                    "pronome indefinido",
+                    "substantivo"
+                  ],
+                  "answer": 1,
+                  "exp": "Numeral. A oposição com “dois” mostra que a palavra indica quantidade exata. Em “Comprei um livro”, a mesma palavra seria artigo indefinido, pois apenas introduz o substantivo de modo vago."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Adjetivo × advérbio",
+                  "text": "Na frase “O relatório é claro”, “claro” é adjetivo; já em “Ele falou claro”, “claro” é advérbio.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. No primeiro caso caracteriza o substantivo “relatório” e concorda com ele (relatórios claros). No segundo, modifica o verbo “falou” e fica invariável (eles falaram claro)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Pronome indefinido",
+                  "text": "Em “Todos os candidatos aprovados receberão o resultado”, a palavra destacada pertence à classe:",
+                  "options": [
+                    "artigo",
+                    "pronome indefinido",
+                    "numeral",
+                    "advérbio"
+                  ],
+                  "answer": 1,
+                  "exp": "Pronome indefinido. “Todos” refere-se ao substantivo “candidatos” de modo impreciso quanto à identidade e flexiona (todos / todas). Não é artigo: quem determina o substantivo aqui é “os”."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Morfologia × sintaxe",
+                  "text": "A morfologia estuda a função que a palavra exerce na frase, enquanto a sintaxe estuda a classe a que ela pertence.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. Está invertido. Morfologia estuda a CLASSE (o que a palavra é); sintaxe estuda a FUNÇÃO (o papel na frase). A junção das duas análises é a morfossintaxe."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Núcleo do sujeito",
+                  "text": "O núcleo do sujeito é sempre um substantivo, um pronome ou uma palavra substantivada.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. Por isso identificar substantivos e pronomes é pré-requisito para acertar concordância verbal: o verbo concorda com esse núcleo, e não com o termo mais próximo dele."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "legislacao",
       "nome": "Legislação",
       "icon": "ti-gavel",

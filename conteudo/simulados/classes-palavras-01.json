@@ -1,0 +1,179 @@
+{
+  "id": "classes-palavras-01",
+  "materiaId": "classes-palavras",
+  "nome": "Classes de palavras — identificação e contexto",
+  "descricao": "Identificar a classe de uma palavra pelo contexto, distinguir classe de função e aplicar os três testes básicos.",
+  "nivel": "Introdutório",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Advérbio · pegadinha do 'meio'",
+      "text": "Em “Ela ficou meio nervosa antes da prova”, a palavra destacada pertence à classe:",
+      "options": [
+        "numeral",
+        "adjetivo",
+        "advérbio",
+        "substantivo"
+      ],
+      "answer": 2,
+      "exp": "Advérbio. Aqui “meio” significa “um pouco” e modifica o adjetivo “nervosa” — logo é advérbio e é INVARIÁVEL. Por isso “meia nervosa” está errado. “Meio” só concorda quando é numeral: meia dúzia, meia hora, duas e meia."
+    },
+    {
+      "type": "mc",
+      "tag": "Pronome indefinido · 'bastante'",
+      "text": "Em “Havia bastantes candidatos na sala”, a palavra destacada pertence à classe:",
+      "options": [
+        "advérbio",
+        "pronome indefinido",
+        "adjetivo",
+        "numeral"
+      ],
+      "answer": 1,
+      "exp": "Pronome indefinido. Ele acompanha o substantivo “candidatos”, quantificando-o, e por isso FLEXIONA (bastantes). Quando “bastante” modifica verbo ou adjetivo, é advérbio e não flexiona: “Ele chegou bastante tarde”."
+    },
+    {
+      "type": "mc",
+      "tag": "Substantivo · teste do artigo",
+      "text": "Em “O andar do prédio estava vazio”, a palavra destacada pertence à classe:",
+      "options": [
+        "verbo",
+        "substantivo",
+        "advérbio",
+        "adjetivo"
+      ],
+      "answer": 1,
+      "exp": "Substantivo. O teste é o artigo: há “O” imediatamente antes, o que substantiva a palavra. Em “Ele começou a andar devagar”, a mesma palavra seria verbo. A classe depende do contexto."
+    },
+    {
+      "type": "mc",
+      "tag": "Preposição × artigo",
+      "text": "Assinale a frase em que a palavra “a” funciona como PREPOSIÇÃO:",
+      "options": [
+        "A prova foi adiada.",
+        "Entreguei a prova ao fiscal.",
+        "Referiu-se a questões difíceis.",
+        "A candidata chegou cedo."
+      ],
+      "answer": 2,
+      "exp": "Em “Referiu-se a questões difíceis”, o “a” é exigido pela regência de “referir-se a” — é preposição. Nas demais, “a” antecede substantivo e o determina: é artigo definido. Distinguir os dois é o que torna possível resolver crase."
+    },
+    {
+      "type": "mc",
+      "tag": "Conjunção",
+      "text": "Em “Trabalhamos muito, mas o resultado foi fraco”, a palavra destacada pertence à classe:",
+      "options": [
+        "advérbio",
+        "preposição",
+        "conjunção",
+        "pronome"
+      ],
+      "answer": 2,
+      "exp": "Conjunção (coordenativa adversativa). Ela liga duas orações estabelecendo contraste. Conjunção é classe invariável — nunca flexiona."
+    },
+    {
+      "type": "mc",
+      "tag": "Núcleo do sujeito",
+      "text": "Em “Os dados do relatório mensal foram revisados”, o núcleo do sujeito é:",
+      "options": [
+        "dados",
+        "relatório",
+        "mensal",
+        "revisados"
+      ],
+      "answer": 0,
+      "exp": "“dados”. O sujeito é “Os dados do relatório mensal”, e seu núcleo é o substantivo “dados” — por isso o verbo vai para o plural (“foram”). “relatório” está dentro do adjunto adnominal e não comanda a concordância: é a armadilha clássica da FGV."
+    },
+    {
+      "type": "ce",
+      "tag": "Morfossintaxe",
+      "text": "A classe de uma palavra é fixa e independe do contexto em que ela aparece.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 1,
+      "exp": "Errado. A classe depende do uso: “jantar” é substantivo em “O jantar estava frio” e verbo em “Vamos jantar cedo”. Essa mobilidade é a principal fonte de pegadinha da banca."
+    },
+    {
+      "type": "ce",
+      "tag": "Classes invariáveis",
+      "text": "Advérbio, preposição, conjunção e interjeição são classes invariáveis.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. Nenhuma delas flexiona em gênero ou número. Esse é o teste rápido de família: se a palavra nunca muda de forma, está em um desses quatro grupos."
+    },
+    {
+      "type": "ce",
+      "tag": "Pegadinha do 'meio'",
+      "text": "Em “Ela chegou meia atrasada”, o emprego de “meia” está correto, pois concorda com o sujeito feminino.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 1,
+      "exp": "Errado. “Meio” aqui equivale a “um pouco”, modifica o adjetivo “atrasada” e é advérbio — portanto invariável. O correto é “meio atrasada”."
+    },
+    {
+      "type": "mc",
+      "tag": "Numeral × artigo",
+      "text": "Em “Comprei um, não dois”, a palavra destacada pertence à classe:",
+      "options": [
+        "artigo indefinido",
+        "numeral",
+        "pronome indefinido",
+        "substantivo"
+      ],
+      "answer": 1,
+      "exp": "Numeral. A oposição com “dois” mostra que a palavra indica quantidade exata. Em “Comprei um livro”, a mesma palavra seria artigo indefinido, pois apenas introduz o substantivo de modo vago."
+    },
+    {
+      "type": "ce",
+      "tag": "Adjetivo × advérbio",
+      "text": "Na frase “O relatório é claro”, “claro” é adjetivo; já em “Ele falou claro”, “claro” é advérbio.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. No primeiro caso caracteriza o substantivo “relatório” e concorda com ele (relatórios claros). No segundo, modifica o verbo “falou” e fica invariável (eles falaram claro)."
+    },
+    {
+      "type": "mc",
+      "tag": "Pronome indefinido",
+      "text": "Em “Todos os candidatos aprovados receberão o resultado”, a palavra destacada pertence à classe:",
+      "options": [
+        "artigo",
+        "pronome indefinido",
+        "numeral",
+        "advérbio"
+      ],
+      "answer": 1,
+      "exp": "Pronome indefinido. “Todos” refere-se ao substantivo “candidatos” de modo impreciso quanto à identidade e flexiona (todos / todas). Não é artigo: quem determina o substantivo aqui é “os”."
+    },
+    {
+      "type": "ce",
+      "tag": "Morfologia × sintaxe",
+      "text": "A morfologia estuda a função que a palavra exerce na frase, enquanto a sintaxe estuda a classe a que ela pertence.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 1,
+      "exp": "Errado. Está invertido. Morfologia estuda a CLASSE (o que a palavra é); sintaxe estuda a FUNÇÃO (o papel na frase). A junção das duas análises é a morfossintaxe."
+    },
+    {
+      "type": "ce",
+      "tag": "Núcleo do sujeito",
+      "text": "O núcleo do sujeito é sempre um substantivo, um pronome ou uma palavra substantivada.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. Por isso identificar substantivos e pronomes é pré-requisito para acertar concordância verbal: o verbo concorda com esse núcleo, e não com o termo mais próximo dele."
+    }
+  ]
+}
