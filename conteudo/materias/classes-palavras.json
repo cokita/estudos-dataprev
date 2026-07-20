@@ -17,6 +17,46 @@
       "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Nominais (variáveis)</span> substantivo, artigo, adjetivo, numeral e pronome — giram em torno do substantivo e flexionam em gênero e número</div>\n  <div class=\"def\"><span class=\"def-t\">Verbo</span> a única classe que varia em tempo, modo e pessoa</div>\n  <div class=\"def\"><span class=\"def-t\">Invariáveis</span> advérbio, preposição, conjunção e interjeição — nunca mudam de forma</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Teste de família: se a palavra <b>tem plural ou feminino</b>, é nominal ou verbo. Se <b>nunca muda de forma</b>, é invariável.</div>\n"
     },
     {
+      "titulo": "1. Substantivo",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Classe que <b>nomeia</b>: seres, objetos, lugares, sentimentos, ideias, ações e qualidades tomadas como coisa. É o centro em torno do qual as outras classes nominais giram.</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Cabe um <b>artigo</b> na frente (<i>o, a, um</i>) e aceita plural. É a palavra que os adjetivos caracterizam e que funciona como <b>núcleo</b> do sujeito ou do objeto.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“A <b>coragem</b> da <b>candidata</b> impressionou o <b>fiscal</b>.”</i> — três substantivos, todos precedidos de artigo.</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Qualquer palavra <b>substantiva</b> quando ganha artigo: “o <b>jantar</b>”, “o <b>não</b> dela foi firme”, “os <b>porquês</b> da decisão”.</div>\n"
+    },
+    {
+      "titulo": "2. Artigo",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Palavra que <b>determina</b> o substantivo, indicando se ele é conhecido (definido: <i>o, a, os, as</i>) ou genérico (indefinido: <i>um, uma, uns, umas</i>).</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Vem <b>sempre antes</b> de um substantivo e <b>concorda</b> com ele em gênero e número. Se você conseguir tirar a palavra e a frase continuar de pé com sentido genérico, era artigo.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“<b>O</b> candidato leu <b>um</b> edital.”</i> — “o” aponta um candidato específico; “um” apresenta um edital qualquer.</div>\n</div>\n<div class=\"warn\"><b>Alta relevância para crase:</b> a crase só existe quando há preposição <i>a</i> + <b>artigo</b> <i>a</i>. É por isso que “a partir de” nunca tem crase: não há artigo ali.</div>\n"
+    },
+    {
+      "titulo": "3. Adjetivo",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Classe que <b>caracteriza</b> o substantivo, atribuindo-lhe qualidade, estado, aparência, origem ou defeito.</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> <b>Concorda</b> com o substantivo em gênero e número (edital extenso / provas extensas) e cabe no molde “<i>algo é muito ___</i>”. Vem antes ou depois do substantivo.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“Edital <b>extenso</b>, prova <b>difícil</b>, candidata <b>paraibana</b>.”</i></div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Locução adjetiva</b> = preposição + substantivo com valor de adjetivo: “relógio <b>de ouro</b>” (áureo), “amor <b>de mãe</b>” (materno). A FGV adora pedir o adjetivo equivalente.</div>\n"
+    },
+    {
+      "titulo": "4. Numeral",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Indica <b>quantidade exata</b>, ordem, múltiplo ou fração. Cardinal (dois), ordinal (segundo), multiplicativo (dobro), fracionário (metade).</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Pode ser <b>trocado por outro número</b> sem quebrar a frase. Diferente do pronome indefinido, ele é preciso: “vários” não é numeral, “três” é.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“Ficou em <b>segundo</b> lugar entre os <b>duzentos</b> inscritos.”</i></div>\n</div>\n<div class=\"warn\"><b>Pegadinha:</b> “Comprei <b>um</b> livro” = artigo indefinido (introduz vagamente). “Comprei <b>um</b>, não dois” = numeral (quantifica com precisão). O contraste com outro número é o sinal.</div>\n"
+    },
+    {
+      "titulo": "5. Pronome",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Palavra que <b>substitui ou acompanha</b> o substantivo, situando-o em relação às três pessoas do discurso.</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Aponta para alguém ou algo <b>sem nomear</b>. Se a palavra ocupa o lugar de um substantivo já dito (ou dispensa dizê-lo), é pronome.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“<b>Ele</b> entregou <b>seu</b> relatório <b>àquele</b> fiscal <b>que</b> chegou cedo.”</i></div>\n</div>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Pessoais</span> eu, tu, ele; me, te, se, lhe, o, a; mim, comigo</div>\n  <div class=\"def\"><span class=\"def-t\">Possessivos</span> meu, teu, seu, nosso, vosso</div>\n  <div class=\"def\"><span class=\"def-t\">Demonstrativos</span> este, esse, aquele, isto, isso, aquilo</div>\n  <div class=\"def\"><span class=\"def-t\">Indefinidos</span> algum, nenhum, todo, muito, pouco, vários, bastante, qualquer</div>\n  <div class=\"def\"><span class=\"def-t\">Interrogativos</span> que, quem, qual, quanto (em pergunta)</div>\n  <div class=\"def\"><span class=\"def-t\">Relativos</span> que, quem, onde, cujo, o qual — retomam um termo anterior</div>\n  <div class=\"def\"><span class=\"def-t\">De tratamento</span> você, senhor, Vossa Excelência</div>\n</div>\n<div class=\"destaque\">Os <b>relativos</b> e os <b>demonstrativos</b> são a espinha dorsal da <b>coesão por referenciação</b> — o tema que a FGV mais cobra em interpretação de texto.</div>\n"
+    },
+    {
+      "titulo": "6. Verbo",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Exprime <b>ação</b> (correr), <b>estado</b> (ser, estar, parecer) ou <b>fenômeno</b> (chover), sempre situando o fato no tempo.</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> É a <b>única classe que se conjuga</b>. Teste: tente pôr a palavra no molde “<i>eu ___, ele ___, ontem ele ___</i>”. Se ela mudar de forma, é verbo.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“Ela <b>estudou</b> muito, <b>está</b> cansada e ontem <b>choveu</b>.”</i></div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Verbos de <b>estado</b> (ser, estar, ficar, parecer, permanecer, continuar) são <b>de ligação</b>: não indicam ação, apenas ligam o sujeito a uma característica. Reconhecê-los é o que permite achar o predicativo do sujeito.</div>\n"
+    },
+    {
+      "titulo": "7. Advérbio",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Palavra <b>invariável</b> que modifica <b>verbo</b>, <b>adjetivo</b> ou <b>outro advérbio</b>, exprimindo uma circunstância.</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Responde a <b>onde, quando, como, quanto, por quê</b> — e <b>não flexiona</b>. Se a palavra parece adjetivo mas não concorda com ninguém, é advérbio.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“Chegou <b>cedo</b>, resolveu a questão <b>muito</b> rápido e saiu <b>bem</b> devagar.”</i></div>\n</div>\n<div class=\"warn\"><b>A pegadinha nº 1 da banca:</b> “Ela ficou <b>meio</b> nervosa” — advérbio, invariável. Nunca “meia nervosa”. Só concorda quando é numeral: meia dúzia, meia hora, duas e meia.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Advérbio é invariável, mas admite <b>grau</b>: cedo → cedinho; muito → muitíssimo. Isso não é flexão de gênero/número, então a regra continua valendo.</div>\n"
+    },
+    {
+      "titulo": "8. Preposição",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Palavra <b>invariável</b> que <b>liga</b> dois termos, criando entre eles uma relação de dependência (o segundo completa o primeiro).</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Fica <b>entre dois termos</b> e <b>não pode ser retirada</b> sem quebrar a frase. Vale decorar a lista fechada — ela é curta.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“Gosto <b>de</b> música.” / “Viagem <b>a</b> Recife.” / “Confio <b>em</b> você.”</i></div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Lista completa:</b> a, ante, após, até, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás. São só 17 — decore, porque regência e crase vivem delas.</div>\n"
+    },
+    {
+      "titulo": "9. Conjunção",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Palavra <b>invariável</b> que liga <b>orações</b> (ou termos de mesma função), estabelecendo a relação lógica entre elas.</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Se a palavra pode ser <b>trocada por outra conjunção do mesmo sentido</b> e está no meio de duas orações, é conjunção. Preposição liga <i>palavras</i>; conjunção liga <i>orações</i>.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“Estudou muito, <b>mas</b> não passou.” / “Não passou <b>porque</b> não treinou questões.”</i></div>\n</div>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Coordenativas</span> e, nem (aditiva) · mas, porém, contudo, todavia, entretanto (adversativa) · ou (alternativa) · logo, portanto, pois <i>posposto</i> (conclusiva) · pois <i>anteposto</i>, porque (explicativa)</div>\n  <div class=\"def\"><span class=\"def-t\">Subordinativas</span> que, se (integrantes) · porque, como, já que (causal) · embora, ainda que (concessiva) · se, caso (condicional) · quando, enquanto (temporal) · para que, a fim de que (final)</div>\n</div>\n<div class=\"warn\"><b>Confusão clássica:</b> <i>para</i> é preposição (“estudo <b>para</b> o concurso”); <i>para que</i> é conjunção final (“estudo <b>para que</b> eu passe” — introduz oração com verbo).</div>\n"
+    },
+    {
+      "titulo": "10. Interjeição",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Palavra ou expressão que exprime uma <b>emoção súbita</b> — surpresa, alívio, dor, alegria. Não se liga sintaticamente ao resto da frase.</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Vem <b>isolada</b>, normalmente com ponto de exclamação, e pode ser retirada sem afetar a estrutura da oração. É invariável.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“<b>Ufa!</b> Terminei.” / “<b>Puxa</b>, que prova difícil!”</i></div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> É a classe menos cobrada da prova — reconheça e siga adiante. Se aparecer, costuma ser em questão de pontuação (vocativo × interjeição).</div>\n"
+    },
+    {
       "titulo": "Três testes que resolvem quase tudo",
       "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Aceita artigo antes?</span> se cabe <i>o</i>, <i>a</i>, <i>um</i> na frente, é <b>substantivo</b> — “o <b>andar</b> do prédio”, “o <b>jantar</b> estava frio”</div>\n  <div class=\"def\"><span class=\"def-t\">2. Caracteriza um substantivo e concorda com ele?</span> é <b>adjetivo</b> — “relatório <b>claro</b>”, “questões <b>difíceis</b>”</div>\n  <div class=\"def\"><span class=\"def-t\">3. Modifica verbo, adjetivo ou outro advérbio e não flexiona?</span> é <b>advérbio</b> — “falou <b>claro</b>”, “<b>meio</b> nervosa”</div>\n</div>\n"
     },
@@ -129,6 +169,86 @@
       "tema": "Aplicação",
       "pergunta": "Em 'Os dados do relatório mensal foram revisados', qual é o núcleo do sujeito?",
       "resposta": "'dados'. Por isso o verbo vai para o plural ('foram'). 'relatório' está dentro do adjunto adnominal e não comanda a concordância."
+    },
+    {
+      "tema": "Substantivo",
+      "pergunta": "Como identificar um substantivo?",
+      "resposta": "Cabe artigo na frente (o, a, um) e aceita plural. É o núcleo do sujeito ou do objeto e é o que os adjetivos caracterizam."
+    },
+    {
+      "tema": "Artigo",
+      "pergunta": "Como identificar um artigo?",
+      "resposta": "Vem sempre antes de um substantivo e concorda com ele. Definidos: o, a, os, as. Indefinidos: um, uma, uns, umas. É o artigo que forma a crase junto com a preposição 'a'."
+    },
+    {
+      "tema": "Adjetivo",
+      "pergunta": "Como identificar um adjetivo?",
+      "resposta": "Caracteriza o substantivo e CONCORDA com ele em gênero e número. Cabe no molde 'algo é muito ___'."
+    },
+    {
+      "tema": "Adjetivo",
+      "pergunta": "O que é locução adjetiva?",
+      "resposta": "Preposição + substantivo com valor de adjetivo: 'de ouro' = áureo, 'de mãe' = materno, 'de cidade' = urbano."
+    },
+    {
+      "tema": "Numeral",
+      "pergunta": "Como diferenciar numeral de pronome indefinido?",
+      "resposta": "Numeral é preciso ('três', 'segundo'); pronome indefinido é vago ('vários', 'alguns'). Numeral pode ser trocado por outro número."
+    },
+    {
+      "tema": "Pronome",
+      "pergunta": "Quais são os sete tipos de pronome?",
+      "resposta": "Pessoais, possessivos, demonstrativos, indefinidos, interrogativos, relativos e de tratamento."
+    },
+    {
+      "tema": "Pronome",
+      "pergunta": "Quais pronomes sustentam a coesão por referenciação?",
+      "resposta": "Os relativos (que, quem, onde, cujo, o qual) e os demonstrativos (este, esse, aquele, isto, isso, aquilo) — tema campeão de incidência na FGV."
+    },
+    {
+      "tema": "Verbo",
+      "pergunta": "Qual o teste infalível para identificar um verbo?",
+      "resposta": "Tentar conjugar: 'eu ___, ele ___, ontem ele ___'. Se a palavra muda de forma, é verbo. É a única classe que se conjuga."
+    },
+    {
+      "tema": "Verbo",
+      "pergunta": "Quais são os principais verbos de ligação?",
+      "resposta": "Ser, estar, ficar, parecer, permanecer, continuar. Não indicam ação — ligam o sujeito a uma característica (predicativo do sujeito)."
+    },
+    {
+      "tema": "Advérbio",
+      "pergunta": "Como identificar um advérbio?",
+      "resposta": "Modifica verbo, adjetivo ou outro advérbio; responde onde, quando, como, quanto ou por quê; e NÃO flexiona. Se parece adjetivo mas não concorda com ninguém, é advérbio."
+    },
+    {
+      "tema": "Preposição",
+      "pergunta": "Quais são as 17 preposições essenciais?",
+      "resposta": "A, ante, após, até, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás."
+    },
+    {
+      "tema": "Preposição",
+      "pergunta": "Como identificar uma preposição?",
+      "resposta": "Fica entre dois termos, criando dependência do segundo em relação ao primeiro, e não pode ser retirada sem quebrar a frase."
+    },
+    {
+      "tema": "Conjunção",
+      "pergunta": "Qual a diferença prática entre preposição e conjunção?",
+      "resposta": "Preposição liga PALAVRAS ('estudo para o concurso'); conjunção liga ORAÇÕES, ou seja, traz outro verbo ('estudo para que eu passe')."
+    },
+    {
+      "tema": "Conjunção",
+      "pergunta": "Quais as principais conjunções adversativas?",
+      "resposta": "Mas, porém, contudo, todavia, entretanto, no entanto. Todas indicam contraste e são coordenativas."
+    },
+    {
+      "tema": "Conjunção",
+      "pergunta": "Como 'pois' muda de classificação conforme a posição?",
+      "resposta": "Anteposto ao verbo é explicativo ('Estude, pois a prova é difícil'); posposto ao verbo é conclusivo ('A prova é difícil; estude, pois')."
+    },
+    {
+      "tema": "Interjeição",
+      "pergunta": "Como identificar uma interjeição?",
+      "resposta": "Vem isolada, exprime emoção súbita, costuma ter ponto de exclamação e pode ser retirada sem afetar a estrutura da oração."
     }
   ]
 }
