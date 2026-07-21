@@ -28,6 +28,10 @@ window.CONTENT = {
               "html": "\n<p><b>Concordar</b>, em gramática, quer dizer <b>combinar na forma</b> — a palavra muda de terminação para bater com outra em <b>gênero</b> (masculino/feminino) e <b>número</b> (singular/plural). Nada a ver com “estar de acordo”: é acompanhar a forma.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Teste: se você mexe no gênero ou no número de uma palavra e a outra é <b>obrigada a mudar junto</b>, então a segunda <b>concorda com</b> a primeira.</div>\n<p><b>Com o adjetivo</b> (que sempre concorda com o substantivo):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">relatório claro → relatórios claros</span> virou plural → o adjetivo mudou junto</div>\n  <div class=\"def\"><span class=\"def-t\">relatório claro → nota clara</span> virou feminino → o adjetivo virou “clara”</div>\n</div>\n<p>Não existe “relatório clara” nem “notas claro” — soa quebrado justamente porque a concordância falhou.</p>\n<div class=\"warn\"><b>É isto que separa numeral de advérbio no “meio”:</b> em “<b>meia</b> dúzia / <b>meio</b> quilo” a palavra muda conforme o substantivo → <b>concorda</b> → numeral. Em “ela ficou <b>meio</b> nervosa / elas ficaram <b>meio</b> nervosas” ela não muda → <b>não concorda</b> → advérbio.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Regra de identificação: se a palavra é <b>forçada a mudar de forma</b> junto com outra, ela é da família <b>nominal</b> (adjetivo, artigo, numeral, pronome). Se fica <b>travada na mesma forma</b> aconteça o que acontecer, é <b>invariável</b> (advérbio, preposição, conjunção).</div>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> Analogia de dev: concordância é como <b>tipagem que precisa casar</b>. Se o “container” (substantivo) é feminino plural, o “conteúdo” (adjetivo) tem de ser feminino plural também — senão a gramática acusa erro, como um compilador.</div>\n<p>Esse conceito reaparece o tempo todo: <b>concordância nominal</b> (adjetivo/artigo com o substantivo), <b>concordância verbal</b> (verbo com o núcleo do sujeito) e até na <b>crase</b> (que depende de haver artigo concordando com o substantivo).</p>\n"
             },
             {
+              "titulo": "Sujeito e núcleo do sujeito",
+              "html": "\n<p>O <b>sujeito</b> é o termo sobre quem a frase declara algo — em geral quem pratica ou protagoniza a ação do verbo. Ele costuma ser um <b>grupo de palavras</b>, não uma só. O <b>núcleo</b> é a palavra <b>principal</b> desse grupo: a que carrega o sentido central e <b>comanda a concordância</b> do verbo. O resto (artigos, adjetivos, complementos) são acessórios pendurados nesse núcleo.</p>\n<p>Exemplo: <i>“<b>Os dados do relatório mensal</b> foram revisados.”</i></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Sujeito (grupo todo)</span> Os dados do relatório mensal</div>\n  <div class=\"def\"><span class=\"def-t\">Núcleo</span> dados</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Como achar o núcleo: pergunte <b>“o quê / quem”</b> antes do verbo e reduza o grupo à palavra que <b>não dá pra tirar</b>. “Foram revisados o quê? → dados.” Tira “Os” e “do relatório mensal” e a frase se sustenta (“Dados foram revisados”); tira “dados” e desmonta.</div>\n<p>O núcleo do sujeito é <b>sempre</b> um substantivo, um pronome ou uma palavra substantivada — por isso enxergar classes é pré-requisito para achá-lo.</p>\n<div class=\"warn\"><b>Pegadinha nº 1 da FGV:</b> o verbo concorda com o <b>núcleo</b>, não com a palavra mais próxima dele. Em “Os <b>dados</b> do relatório mensal <b>foram</b> revisados”, a banca gruda “relatório” (singular) no verbo para induzir você a escrever “foi”. Quem manda é <b>dados</b> → <b>foram</b>.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> Analogia de dev: o sujeito é um <b>objeto com vários campos</b>; o núcleo é a <b>chave primária</b>. Adjetivos e complementos são atributos secundários — o verbo só “olha” para a chave primária ao decidir entre singular e plural.</div>\n"
+            },
+            {
               "titulo": "As 10 classes em 3 famílias",
               "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Nominais (variáveis)</span> substantivo, artigo, adjetivo, numeral e pronome — giram em torno do substantivo e flexionam em gênero e número</div>\n  <div class=\"def\"><span class=\"def-t\">Verbo</span> a única classe que varia em tempo, modo e pessoa</div>\n  <div class=\"def\"><span class=\"def-t\">Invariáveis</span> advérbio, preposição, conjunção e interjeição — nunca mudam de forma</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Teste de família: se a palavra <b>tem plural ou feminino</b>, é nominal ou verbo. Se <b>nunca muda de forma</b>, é invariável.</div>\n"
             },
@@ -279,6 +283,26 @@ window.CONTENT = {
               "tema": "Concordância",
               "pergunta": "Como a concordância distingue numeral de advérbio no caso de “meio”?",
               "resposta": "'Meia dúzia / meio quilo' muda com o substantivo (concorda) = numeral. 'Meio nervosa / meio nervosas' não muda = advérbio."
+            },
+            {
+              "tema": "Sintaxe",
+              "pergunta": "O que é o sujeito de uma frase?",
+              "resposta": "O termo sobre quem se declara algo — em geral quem pratica ou protagoniza a ação do verbo. Costuma ser um grupo de palavras."
+            },
+            {
+              "tema": "Sintaxe",
+              "pergunta": "O que é o núcleo do sujeito?",
+              "resposta": "A palavra principal do grupo que forma o sujeito — a que carrega o sentido central e comanda a concordância do verbo. É sempre substantivo, pronome ou palavra substantivada."
+            },
+            {
+              "tema": "Sintaxe",
+              "pergunta": "Como identificar o núcleo do sujeito?",
+              "resposta": "Pergunte 'o quê / quem' antes do verbo e reduza o grupo à palavra que não pode ser retirada sem desmontar a frase."
+            },
+            {
+              "tema": "Sintaxe",
+              "pergunta": "Com o que o verbo concorda: com o núcleo do sujeito ou com a palavra mais próxima?",
+              "resposta": "Com o núcleo. Em 'Os dados do relatório mensal foram revisados', o verbo vai ao plural por causa de 'dados', não do 'relatório' que está mais perto."
             }
           ],
           "simulados": [
