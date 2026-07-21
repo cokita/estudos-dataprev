@@ -13,6 +13,10 @@
       "html": "\n<p>Toda palavra carrega <b>dois rótulos ao mesmo tempo</b>:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Morfologia (classe)</span> o que a palavra é sozinha, no dicionário — substantivo, verbo, advérbio…</div>\n  <div class=\"def\"><span class=\"def-t\">Sintaxe (função)</span> o papel que ela exerce naquela frase — sujeito, objeto, adjunto…</div>\n</div>\n<p>Exemplo: <i>“Aquele candidato estuda bastante.”</i></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Aquele</span> classe: pronome demonstrativo · função: adjunto adnominal</div>\n  <div class=\"def\"><span class=\"def-t\">candidato</span> classe: substantivo · função: núcleo do sujeito</div>\n  <div class=\"def\"><span class=\"def-t\">estuda</span> classe: verbo · função: núcleo do predicado</div>\n  <div class=\"def\"><span class=\"def-t\">bastante</span> classe: advérbio · função: adjunto adverbial</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Analogia de dev: a <b>classe</b> é o <i>tipo</i> (String, int) e a <b>função</b> é o <i>papel na chamada</i> (parâmetro, retorno, chave). A diferença é que em português <b>até o tipo muda</b> conforme o contexto — e é aí que a FGV arma a pegadinha.</div>\n"
     },
     {
+      "titulo": "O que significa “concordar”",
+      "html": "\n<p><b>Concordar</b>, em gramática, quer dizer <b>combinar na forma</b> — a palavra muda de terminação para bater com outra em <b>gênero</b> (masculino/feminino) e <b>número</b> (singular/plural). Nada a ver com “estar de acordo”: é acompanhar a forma.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Teste: se você mexe no gênero ou no número de uma palavra e a outra é <b>obrigada a mudar junto</b>, então a segunda <b>concorda com</b> a primeira.</div>\n<p><b>Com o adjetivo</b> (que sempre concorda com o substantivo):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">relatório claro → relatórios claros</span> virou plural → o adjetivo mudou junto</div>\n  <div class=\"def\"><span class=\"def-t\">relatório claro → nota clara</span> virou feminino → o adjetivo virou “clara”</div>\n</div>\n<p>Não existe “relatório clara” nem “notas claro” — soa quebrado justamente porque a concordância falhou.</p>\n<div class=\"warn\"><b>É isto que separa numeral de advérbio no “meio”:</b> em “<b>meia</b> dúzia / <b>meio</b> quilo” a palavra muda conforme o substantivo → <b>concorda</b> → numeral. Em “ela ficou <b>meio</b> nervosa / elas ficaram <b>meio</b> nervosas” ela não muda → <b>não concorda</b> → advérbio.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Regra de identificação: se a palavra é <b>forçada a mudar de forma</b> junto com outra, ela é da família <b>nominal</b> (adjetivo, artigo, numeral, pronome). Se fica <b>travada na mesma forma</b> aconteça o que acontecer, é <b>invariável</b> (advérbio, preposição, conjunção).</div>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> Analogia de dev: concordância é como <b>tipagem que precisa casar</b>. Se o “container” (substantivo) é feminino plural, o “conteúdo” (adjetivo) tem de ser feminino plural também — senão a gramática acusa erro, como um compilador.</div>\n<p>Esse conceito reaparece o tempo todo: <b>concordância nominal</b> (adjetivo/artigo com o substantivo), <b>concordância verbal</b> (verbo com o núcleo do sujeito) e até na <b>crase</b> (que depende de haver artigo concordando com o substantivo).</p>\n"
+    },
+    {
       "titulo": "As 10 classes em 3 famílias",
       "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Nominais (variáveis)</span> substantivo, artigo, adjetivo, numeral e pronome — giram em torno do substantivo e flexionam em gênero e número</div>\n  <div class=\"def\"><span class=\"def-t\">Verbo</span> a única classe que varia em tempo, modo e pessoa</div>\n  <div class=\"def\"><span class=\"def-t\">Invariáveis</span> advérbio, preposição, conjunção e interjeição — nunca mudam de forma</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Teste de família: se a palavra <b>tem plural ou feminino</b>, é nominal ou verbo. Se <b>nunca muda de forma</b>, é invariável.</div>\n"
     },
@@ -249,6 +253,21 @@
       "tema": "Interjeição",
       "pergunta": "Como identificar uma interjeição?",
       "resposta": "Vem isolada, exprime emoção súbita, costuma ter ponto de exclamação e pode ser retirada sem afetar a estrutura da oração."
+    },
+    {
+      "tema": "Concordância",
+      "pergunta": "O que significa “concordar” em gramática?",
+      "resposta": "Combinar na forma: a palavra muda de terminação para bater com outra em gênero (masc./fem.) e número (sing./plural). Não é “estar de acordo”."
+    },
+    {
+      "tema": "Concordância",
+      "pergunta": "Qual o teste para saber se uma palavra concorda com outra?",
+      "resposta": "Mudar o gênero ou o número de uma; se a outra for obrigada a mudar junto, ela concorda. Se ficar travada, não concorda (é invariável)."
+    },
+    {
+      "tema": "Concordância",
+      "pergunta": "Como a concordância distingue numeral de advérbio no caso de “meio”?",
+      "resposta": "'Meia dúzia / meio quilo' muda com o substantivo (concorda) = numeral. 'Meio nervosa / meio nervosas' não muda = advérbio."
     }
   ]
 }
