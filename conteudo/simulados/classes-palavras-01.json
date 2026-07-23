@@ -8,7 +8,7 @@
     {
       "type": "mc",
       "tag": "Advérbio · pegadinha do 'meio'",
-      "text": "Em “Ela ficou meio nervosa antes da prova”, a palavra destacada pertence à classe:",
+      "text": "Em “Ela ficou **meio** nervosa antes da prova”, a palavra destacada pertence à classe:",
       "options": [
         "numeral",
         "adjetivo",
@@ -21,7 +21,7 @@
     {
       "type": "mc",
       "tag": "Pronome indefinido · 'bastante'",
-      "text": "Em “Havia bastantes candidatos na sala”, a palavra destacada pertence à classe:",
+      "text": "Em “Havia **bastantes** candidatos na sala”, a palavra destacada pertence à classe:",
       "options": [
         "advérbio",
         "pronome indefinido",
@@ -34,7 +34,7 @@
     {
       "type": "mc",
       "tag": "Substantivo · teste do artigo",
-      "text": "Em “O andar do prédio estava vazio”, a palavra destacada pertence à classe:",
+      "text": "Em “O **andar** do prédio estava vazio”, a palavra destacada pertence à classe:",
       "options": [
         "verbo",
         "substantivo",
@@ -60,7 +60,7 @@
     {
       "type": "mc",
       "tag": "Conjunção",
-      "text": "Em “Trabalhamos muito, mas o resultado foi fraco”, a palavra destacada pertence à classe:",
+      "text": "Em “Trabalhamos muito, **mas** o resultado foi fraco”, a palavra destacada pertence à classe:",
       "options": [
         "advérbio",
         "preposição",
@@ -73,7 +73,7 @@
     {
       "type": "mc",
       "tag": "Núcleo do sujeito",
-      "text": "Em “Os dados do relatório mensal foram revisados”, o núcleo do sujeito é:",
+      "text": "Em “Os **dados** do relatório mensal foram revisados”, o núcleo do sujeito é:",
       "options": [
         "dados",
         "relatório",
@@ -119,7 +119,7 @@
     {
       "type": "mc",
       "tag": "Numeral × artigo",
-      "text": "Em “Comprei um, não dois”, a palavra destacada pertence à classe:",
+      "text": "Em “Comprei **um**, não dois”, a palavra destacada pertence à classe:",
       "options": [
         "artigo indefinido",
         "numeral",
@@ -143,7 +143,7 @@
     {
       "type": "mc",
       "tag": "Pronome indefinido",
-      "text": "Em “Todos os candidatos aprovados receberão o resultado”, a palavra destacada pertence à classe:",
+      "text": "Em “**Todos** os candidatos aprovados receberão o resultado”, a palavra destacada pertence à classe:",
       "options": [
         "artigo",
         "pronome indefinido",

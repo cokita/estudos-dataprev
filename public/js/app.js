@@ -27,6 +27,9 @@ window.App = (function () {
   function esc(str) {
     return String(str).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   }
+  function escHi(str) {
+    return esc(str).replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+  }
   function letter(i) { return String.fromCharCode(65 + i); }
   function fmtDate(iso) {
     if (!iso) return "";
@@ -405,7 +408,7 @@ window.App = (function () {
     return (
       '<div class="qcard" id="card-' + qi + '">' +
         '<span class="qtag">' + esc(tagLabel) + "</span>" +
-        '<p class="qtext">' + (qi + 1) + ". " + esc(q.text) + "</p>" +
+        '<p class="qtext">' + (qi + 1) + ". " + escHi(q.text) + "</p>" +
         '<div class="opts">' + opts + "</div>" +
         '<div class="feedback" id="fb-' + qi + '"></div>' +
       "</div>"
@@ -426,8 +429,8 @@ window.App = (function () {
     const fb = document.getElementById("fb-" + qi);
     fb.classList.add("show", ok ? "ok" : "bad");
     fb.innerHTML = ok
-      ? '<b><i class="ti ti-check"></i> Acertou.</b> ' + esc(q.exp)
-      : '<b><i class="ti ti-x"></i> ' + (chosen === null ? "Não respondida." : "Você marcou " + (q.type === "mc" ? letter(chosen) : (q.options[chosen] || "")) + ".") + " Correta em verde.</b> " + esc(q.exp);
+      ? '<b><i class="ti ti-check"></i> Acertou.</b> ' + escHi(q.exp)
+      : '<b><i class="ti ti-x"></i> ' + (chosen === null ? "Não respondida." : "Você marcou " + (q.type === "mc" ? letter(chosen) : (q.options[chosen] || "")) + ".") + " Correta em verde.</b> " + escHi(q.exp);
   }
 
   // ---------- revisar tentativa ----------

@@ -54,7 +54,7 @@
     },
     {
       "titulo": "8. Preposição",
-      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Palavra <b>invariável</b> que <b>liga</b> dois termos, criando entre eles uma relação de dependência (o segundo completa o primeiro).</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Fica <b>entre dois termos</b> e <b>não pode ser retirada</b> sem quebrar a frase. Vale decorar a lista fechada — ela é curta.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“Gosto <b>de</b> música.” / “Viagem <b>a</b> Recife.” / “Confio <b>em</b> você.”</i></div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Lista completa:</b> a, ante, após, até, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás. São só 17 — decore, porque regência e crase vivem delas.</div>\n"
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que é</span> Palavra <b>invariável</b> que <b>liga</b> dois termos, criando entre eles uma relação de dependência (o segundo completa o primeiro).</div>\n  <div class=\"def\"><span class=\"def-t\">Como identificar</span> Fica <b>entre dois termos</b> e <b>não pode ser retirada</b> sem quebrar a frase. Vale decorar a lista fechada — ela é curta.</div>\n  <div class=\"def\"><span class=\"def-t\">Exemplo</span> <i>“Gosto <b>de</b> música.” / “Viagem <b>a</b> Recife.” / “Confio <b>em</b> você.”</i></div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Lista completa:</b> a, ante, após, até, com, contra, de, desde, em, entre, para, perante, por, sem, sob, sobre, trás. São só 17 — decore, porque regência e crase vivem delas.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-music\"></i> <b>Macete das 4 batidas:</b> recite como um rap, batendo a mão em 4 tempos (4+4+4+5 = 17):<br><b>1)</b> a · ante · após · até<br><b>2)</b> com · contra · de · desde<br><b>3)</b> em · entre · para · perante<br><b>4)</b> por · sem · sob · sobre · trás<br>Os sons se puxam: <b>de→desde</b> e <b>sob→sobre</b> são “curta→esticada”; <b>em/entre</b> e <b>para/perante</b> rimam dentro da batida. Se contar menos de 17, faltou uma.</div>\n"
     },
     {
       "titulo": "9. Conjunção",
@@ -292,6 +292,11 @@
       "tema": "Sintaxe",
       "pergunta": "Com o que o verbo concorda: com o núcleo do sujeito ou com a palavra mais próxima?",
       "resposta": "Com o núcleo. Em 'Os dados do relatório mensal foram revisados', o verbo vai ao plural por causa de 'dados', não do 'relatório' que está mais perto."
+    },
+    {
+      "tema": "Preposição",
+      "pergunta": "Macete para decorar as 17 preposições.",
+      "resposta": "Recite em 4 batidas (4+4+4+5): (1) a/ante/após/até (2) com/contra/de/desde (3) em/entre/para/perante (4) por/sem/sob/sobre/trás."
     }
   ]
 }
