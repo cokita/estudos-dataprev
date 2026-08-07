@@ -54,6 +54,33 @@ for (const a of assuntos) {
   out.assuntos.push({ id: a.id, nome: a.nome, icon: a.icon || "", descricao: a.descricao || "", materias: mats });
 }
 
+// 4) mapa de estudos (opcional): conteudo/mapa.json
+let mapa = null;
+const mapaFile = dir("mapa.json");
+if (fs.existsSync(mapaFile)) {
+  mapa = readJSON(mapaFile);
+  const seenTop = new Set();
+  const PRIOS = ["alta", "media", "baixa"];
+  for (const mod of mapa.modulos || []) {
+    if (!mod.id || !mod.nome) warn(`mapa: módulo sem id ou nome`);
+    for (const d of mod.disciplinas || []) {
+      if (!d.id || !d.nome) warn(`mapa: disciplina sem id ou nome em ${mod.id}`);
+      if (d.assuntoId && !assuntos.some((a) => a.id === d.assuntoId)) warn(`mapa: disciplina ${d.id} referencia assunto inexistente: ${d.assuntoId}`);
+      if (!(d.topicos || []).length) warn(`mapa: disciplina ${d.id} sem tópicos`);
+      for (const t of d.topicos || []) {
+        if (!t.id) { warn(`mapa: tópico sem id em ${d.id}`); continue; }
+        if (seenTop.has(t.id)) warn(`mapa: tópico com id duplicado: ${t.id}`);
+        seenTop.add(t.id);
+        if (!t.nome || !t.oQueCai) warn(`mapa: tópico ${t.id} sem nome ou oQueCai`);
+        if (!PRIOS.includes(t.prioridade)) warn(`mapa: tópico ${t.id} com prioridade inválida (use alta|media|baixa)`);
+        if (typeof t.esforco !== "number" || t.esforco <= 0) warn(`mapa: tópico ${t.id} com esforco inválido`);
+        if (t.materiaId && !materias[t.materiaId]) warn(`mapa: tópico ${t.id} referencia matéria inexistente: ${t.materiaId}`);
+      }
+    }
+  }
+  out.mapa = mapa;
+}
+
 if (errors.length) {
   console.error("BUILD FALHOU:\n - " + errors.join("\n - "));
   process.exit(1);
@@ -66,3 +93,9 @@ const nSim = out.assuntos.reduce((n, a) => n + a.materias.reduce((k, m) => k + m
 const nQ = out.assuntos.reduce((n, a) => n + a.materias.reduce((k, m) => k + m.simulados.reduce((j, s) => j + s.questoes.length, 0), 0), 0);
 const nFc = out.assuntos.reduce((n, a) => n + a.materias.reduce((k, m) => k + m.flashcards.length, 0), 0);
 console.log(`OK: ${out.assuntos.length} assunto(s), ${out.assuntos.reduce((n,a)=>n+a.materias.length,0)} matéria(s), ${nSim} simulado(s), ${nQ} questão(ões), ${nFc} flashcard(s).`);
+if (mapa) {
+  const nDisc = (mapa.modulos || []).reduce((n, m) => n + (m.disciplinas || []).length, 0);
+  const nTop = (mapa.modulos || []).reduce((n, m) => n + (m.disciplinas || []).reduce((k, d) => k + (d.topicos || []).length, 0), 0);
+  const nSes = (mapa.modulos || []).reduce((n, m) => n + (m.disciplinas || []).reduce((k, d) => k + (d.topicos || []).reduce((j, t) => j + (t.esforco || 0), 0), 0), 0);
+  console.log(`Mapa: ${nDisc} disciplina(s), ${nTop} tópico(s), ~${nSes} sessão(ões) de estudo estimadas.`);
+}

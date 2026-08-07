@@ -12,6 +12,7 @@ Você quase sempre só **cria um arquivo novo** e roda o build. Não precisa ler
 - `conteudo/assuntos.json` — lista de assuntos e a ORDEM das matérias. Ex.: `[{ "id","nome","icon","descricao","materias":["lgpd","lai",...] }]`
 - `conteudo/materias/<id>.json` — teoria de uma matéria: `{ "id","nome","icon","descricao","resumo":[...],"flashcards":[...] }`
 - `conteudo/simulados/<id>.json` — UM simulado independente: `{ "id","materiaId","nome","descricao","nivel","questoes":[...] }`
+- `conteudo/mapa.json` — MAPA DE ESTUDOS: todos os tópicos do edital (Módulo I e II), com prioridade, esforço e o que a FGV cobra. Alimenta a tela `#/mapa`.
 
 O build junta tudo: cada simulado é anexado à matéria pelo `materiaId`.
 
@@ -46,6 +47,13 @@ Classes de estilo já prontas para usar no html: `destaque` (aviso/pegadinha), `
 1. Crie `conteudo/materias/<id>.json` com resumo e flashcards.
 2. Adicione o `<id>` ao array `materias` do assunto certo em `conteudo/assuntos.json` (na posição desejada).
 3. `node scripts/build-content.mjs` → publique.
+
+### Ligar um tópico do mapa a uma matéria recém-criada
+Quando criar uma matéria nova que cobre um tópico do mapa, adicione `"materiaId": "<id-da-materia>"` ao
+tópico correspondente em `conteudo/mapa.json` — assim o mapa passa a linkar direto para o material.
+Estrutura do mapa: `modulos[] → disciplinas[] → topicos[]`, com
+`{ "id","nome","prioridade":"alta|media|baixa","esforco":<horas>,"oQueCai","materiaId"? }`.
+O build valida ids duplicados, prioridade inválida e `materiaId`/`assuntoId` inexistentes.
 
 ### Adicionar/ajustar teoria ou flashcards de uma matéria
 Edite o arquivo `conteudo/materias/<id>.json` correspondente, rode o build e publique.

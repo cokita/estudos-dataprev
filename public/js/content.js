@@ -1437,5 +1437,1037 @@ window.CONTENT = {
         }
       ]
     }
-  ]
+  ],
+  "mapa": {
+    "atualizadoEm": "2026-08-07",
+    "prova": {
+      "banca": "FGV",
+      "edital": "001/2026",
+      "cargo": "Analista de TI — Perfil 3: Desenvolvimento de Software",
+      "local": "João Pessoa / PB",
+      "data": "11/10/2026",
+      "questoes": 70,
+      "pontosMax": 115,
+      "corte": 57.5,
+      "regra": "Mínimo de 57,5 pontos E não zerar nenhuma disciplina."
+    },
+    "legenda": {
+      "prioridade": {
+        "alta": "Muito cobrado e/ou você tende a ter lacuna — comece por aqui.",
+        "media": "Importante, mas de retorno menor ou já parcialmente dominado.",
+        "baixa": "Você provavelmente já domina — mantenha por questões, não por teoria."
+      },
+      "status": {
+        "nao-iniciado": "Ainda não estudei",
+        "estudando": "Estou estudando agora",
+        "revisar": "Estudei, mas preciso revisar",
+        "dominado": "Domino — só manter por questões"
+      },
+      "esforco": "Estimativa em sessões de ~1h (bloco de estudo)."
+    },
+    "modulos": [
+      {
+        "id": "modulo-1",
+        "nome": "Módulo I — Conhecimentos Gerais",
+        "resumo": "40 questões, peso 1 = 40 pontos. É aqui que você ganha classificação: as específicas já estão quase no teto.",
+        "questoes": 40,
+        "peso": 1,
+        "pontos": 40,
+        "disciplinas": [
+          {
+            "id": "d-portugues",
+            "nome": "Língua Portuguesa",
+            "icon": "ti-language",
+            "questoes": 12,
+            "pontos": 12,
+            "prioridade": "alta",
+            "assuntoId": "portugues",
+            "nota": "No simulado 2024 você fez 4/12. Maior volume de pontos do Módulo I e o que mais elimina candidato técnico. Ganho lento, mas obrigatório.",
+            "topicos": [
+              {
+                "id": "pt-interpretacao",
+                "nome": "Interpretação e compreensão de textos",
+                "prioridade": "alta",
+                "esforco": 4,
+                "oQueCai": "O maior bloco. FGV usa textos longos de opinião/jornalismo e pergunta tese, intenção do autor, inferência e o que NÃO se depreende do texto. Treine marcar a tese antes de olhar as alternativas."
+              },
+              {
+                "id": "pt-significacao",
+                "nome": "Significação das palavras (semântica)",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Sinonímia, antonímia, polissemia, conotação x denotação e substituição de palavra no contexto sem mudar o sentido. Aparece quase sempre colada à interpretação."
+              },
+              {
+                "id": "pt-coesao",
+                "nome": "Coesão e coerência: referenciação e conectores",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "A queridinha da FGV: a que termo o pronome/‘isso’/‘tal’ se refere, e qual a relação lógica do conectivo (concessão, oposição, causa, conclusão). Vale mais que decorar gramática."
+              },
+              {
+                "id": "pt-classes",
+                "nome": "Classes de palavras e morfossintaxe",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "O que cada palavra é (classe) e o que faz na frase (função). É a base de crase, concordância e regência — sem isso o resto vira decoreba.",
+                "materiaId": "classes-palavras"
+              },
+              {
+                "id": "pt-sintaxe",
+                "nome": "Termos da oração: sujeito, predicado, complementos",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Identificar sujeito, objeto direto/indireto, predicativo, adjunto e complemento nominal. Pré-requisito direto de concordância e regência."
+              },
+              {
+                "id": "pt-periodo",
+                "nome": "Coordenação e subordinação (período composto)",
+                "prioridade": "media",
+                "esforco": 3,
+                "oQueCai": "Classificar orações (substantivas, adjetivas, adverbiais) e reconhecer a relação de sentido. FGV cobra junto com pontuação e reescrita."
+              },
+              {
+                "id": "pt-pontuacao",
+                "nome": "Pontuação",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Vírgula em oração adjetiva explicativa x restritiva, aposto, adjunto deslocado, ponto e vírgula e dois-pontos. Erro clássico: vírgula entre sujeito e verbo."
+              },
+              {
+                "id": "pt-concordancia",
+                "nome": "Concordância verbal e nominal",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Sujeito composto e posposto, partícula ‘se’, verbos impessoais, ‘haver’ x ‘fazer’, expressões partitivas, ‘é proibido’, ‘anexo’, ‘bastante’. Muito cobrada."
+              },
+              {
+                "id": "pt-regencia",
+                "nome": "Regência verbal e nominal",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Verbos que mudam de sentido com a preposição (assistir, aspirar, visar, implicar, preferir, obedecer) e regência de nomes. Casa direto com crase."
+              },
+              {
+                "id": "pt-crase",
+                "nome": "Crase",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Casos obrigatórios, proibidos e facultativos; ‘à distância’, ‘à moda de’, pronomes, nomes de lugar. Item de altíssima frequência e fácil de blindar."
+              },
+              {
+                "id": "pt-colocacao",
+                "nome": "Colocação pronominal",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Próclise, mesóclise e ênclise: palavras atrativas, futuro, verbos no infinitivo e locuções. Poucas regras, retorno rápido."
+              },
+              {
+                "id": "pt-reescrita",
+                "nome": "Reescrita de frases e equivalência",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Reescrever mantendo sentido e correção: voz passiva/ativa, nominalização, troca de conectivo. É onde tudo o que você estudou é cobrado junto."
+              },
+              {
+                "id": "pt-ortografia",
+                "nome": "Ortografia e acentuação",
+                "prioridade": "baixa",
+                "esforco": 1,
+                "oQueCai": "Menos frequente na FGV, mas aparece em item de ‘erro de grafia’. Foque em acentuação de oxítonas/paroxítonas/proparoxítonas, hiatos e monossílabos."
+              }
+            ]
+          },
+          {
+            "id": "d-ingles",
+            "nome": "Língua Inglesa",
+            "icon": "ti-abc",
+            "questoes": 12,
+            "pontos": 12,
+            "prioridade": "media",
+            "nota": "Você fez 8/12 — é ponto forte. Não precisa de teoria pesada: mantenha com leitura técnica e questões para não perder o que já tem.",
+            "topicos": [
+              {
+                "id": "en-estrategias",
+                "nome": "Estratégias de leitura (skimming, scanning, main idea)",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "FGV pergunta ideia principal, propósito do autor e informação específica. Treine achar a resposta sem traduzir o texto inteiro."
+              },
+              {
+                "id": "en-inferencia",
+                "nome": "Inferência e vocabulário pelo contexto",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Itens do tipo ‘the word X in line N can be replaced by’. Deduzir sentido a partir do entorno é mais eficiente que decorar listas."
+              },
+              {
+                "id": "en-vocabtec",
+                "nome": "Vocabulário técnico de TI e falsos cognatos",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Textos costumam ser sobre tecnologia, dados, IA e segurança — seu campo. Cuidado com falsos cognatos (actually, eventually, comprehensive, library, policy)."
+              },
+              {
+                "id": "en-tempos",
+                "nome": "Tempos verbais e voz passiva",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Present/past perfect, continuous e passive voice — cobrados como ‘qual a forma correta’ ou ‘o que a frase indica’."
+              },
+              {
+                "id": "en-modais",
+                "nome": "Verbos modais",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Can/could, may/might, must/should/have to: grau de certeza, obrigação e recomendação. Muda o sentido da alternativa inteira."
+              },
+              {
+                "id": "en-conectivos",
+                "nome": "Conectivos e marcadores de discurso",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "However, therefore, although, whereas, moreover: identificar a relação lógica é o que resolve a questão."
+              },
+              {
+                "id": "en-referencia",
+                "nome": "Referência pronominal",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "‘It’, ‘they’, ‘this’, ‘which’ retomam o quê? Mesma lógica da coesão em Português."
+              },
+              {
+                "id": "en-relativas",
+                "nome": "Orações relativas e condicionais",
+                "prioridade": "baixa",
+                "esforco": 1,
+                "oQueCai": "Which/who/whose/that e os three conditionals. Aparece em item gramatical isolado."
+              },
+              {
+                "id": "en-wordform",
+                "nome": "Formação de palavras (prefixos e sufixos)",
+                "prioridade": "baixa",
+                "esforco": 1,
+                "oQueCai": "un-, dis-, -less, -ful, -ize, -ment: ajuda a inferir vocabulário desconhecido e resolve itens de completar lacuna."
+              }
+            ]
+          },
+          {
+            "id": "d-rlm",
+            "nome": "Raciocínio Lógico Matemático",
+            "icon": "ti-math-symbols",
+            "questoes": 5,
+            "pontos": 5,
+            "prioridade": "alta",
+            "nota": "Você fez 3/6. Conteúdo fechado e muito treinável — em poucas semanas dá para dobrar o acerto.",
+            "topicos": [
+              {
+                "id": "rl-proposicoes",
+                "nome": "Proposições e conectivos lógicos",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Base de tudo: negação, conjunção, disjunção (inclusiva e exclusiva), condicional e bicondicional. Sem isso nada mais funciona."
+              },
+              {
+                "id": "rl-tabelas",
+                "nome": "Tabelas-verdade",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Montar a tabela, classificar em tautologia/contradição/contingência. É o método bruto que salva quando a lógica trava."
+              },
+              {
+                "id": "rl-equivalencias",
+                "nome": "Equivalências e negações (De Morgan)",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Negar ‘se…então’, negar ‘e’/‘ou’, contrapositiva. É o item mais cobrado de RLM em qualquer banca — vale ouro nas 5 questões."
+              },
+              {
+                "id": "rl-argumentos",
+                "nome": "Argumentação: validade, dedução e inferência",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Validade de argumento, modus ponens/tollens, silogismos e analogias. FGV gosta de argumento em texto corrido."
+              },
+              {
+                "id": "rl-diagramas",
+                "nome": "Diagramas lógicos e quantificadores",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "‘Todo’, ‘algum’, ‘nenhum’ e suas negações, com diagramas de Venn. Pega candidato que responde pelo senso comum."
+              },
+              {
+                "id": "rl-primeira-ordem",
+                "nome": "Lógica de primeira ordem",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Quantificadores universal e existencial aplicados a predicados. Recorte explícito do edital, cobrança leve."
+              },
+              {
+                "id": "rl-aritmeticos",
+                "nome": "Problemas aritméticos",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Porcentagem, razão e proporção, regra de três, média, juros simples e problemas de raciocínio numérico. É o que mais cai dentro de ‘problemas’."
+              },
+              {
+                "id": "rl-geometricos",
+                "nome": "Problemas geométricos",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Áreas, perímetros, volumes e raciocínio espacial simples. Baixa frequência, mas está no edital."
+              },
+              {
+                "id": "rl-matriciais",
+                "nome": "Problemas matriciais e sequências",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Operações com matrizes, tabelas de dupla entrada, sequências numéricas e de figuras. Costuma ser questão de associação lógica."
+              }
+            ]
+          },
+          {
+            "id": "d-atualidades",
+            "nome": "Atualidades e Inteligência Artificial",
+            "icon": "ti-news",
+            "questoes": 6,
+            "pontos": 6,
+            "prioridade": "alta",
+            "nota": "Você fez 1/5 — o pior desempenho relativo. A parte de IA é terreno seu como dev; atualidades exige rotina de leitura, não estudo em bloco.",
+            "topicos": [
+              {
+                "id": "at-tecnologia",
+                "nome": "Atualidades: tecnologia e transformação digital",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Gov.br, identidade digital, Pix, computação em nuvem soberana, cabos submarinos, 5G/6G, data centers. A FGV liga o tema ao setor público."
+              },
+              {
+                "id": "at-seguranca",
+                "nome": "Atualidades: segurança pública e cibersegurança",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Vazamentos de dados, ataques a órgãos públicos, fraudes digitais, crime organizado. Faz ponte com a Legislação do Módulo I."
+              },
+              {
+                "id": "at-economia",
+                "nome": "Atualidades: economia",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Inflação, juros, arcabouço fiscal, reforma tributária, mercado de trabalho e previdência — o tema previdenciário é quase certo numa prova da DataPrev."
+              },
+              {
+                "id": "at-politica",
+                "nome": "Atualidades: política nacional",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Eleições 2026, principais pautas do Congresso e decisões do STF com repercussão. Fatos, não opinião."
+              },
+              {
+                "id": "at-internacional",
+                "nome": "Atualidades: relações internacionais",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Conflitos em curso, BRICS, G20, Mercosul, acordos comerciais e tarifas. Foque no que envolve o Brasil."
+              },
+              {
+                "id": "at-saude",
+                "nome": "Atualidades: saúde",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "SUS, campanhas de vacinação, arboviroses, saúde digital e telemedicina."
+              },
+              {
+                "id": "at-ambiente",
+                "nome": "Atualidades: meio ambiente e clima",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "COPs, metas climáticas, Amazônia, energia renovável, eventos extremos e transição energética."
+              },
+              {
+                "id": "ia-conceitos",
+                "nome": "IA: conceitos e fundamentos",
+                "prioridade": "baixa",
+                "esforco": 1,
+                "oQueCai": "IA simbólica x conexionista, IA fraca x forte, agentes, histórico. Terreno confortável para quem é da área — garanta o ponto fácil."
+              },
+              {
+                "id": "ia-ml",
+                "nome": "IA: aprendizado de máquina",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Supervisionado, não supervisionado e por reforço; treino/validação/teste; overfitting; métricas. Cobrado em nível conceitual."
+              },
+              {
+                "id": "ia-generativa",
+                "nome": "IA: modelos generativos e de linguagem (LLMs)",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Transformers, tokens, embeddings, prompt, RAG, fine-tuning, alucinação, multimodalidade. Tema quentíssimo em 2026."
+              },
+              {
+                "id": "ia-etica",
+                "nome": "IA: ética, viés e transparência",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Viés algorítmico, explicabilidade, discriminação, deepfakes, impacto no trabalho e responsabilização. A FGV adora esse recorte."
+              },
+              {
+                "id": "ia-governanca",
+                "nome": "IA: governança e regulação",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "PL 2.338/2023 no Brasil, AI Act europeu, níveis de risco, princípios da OCDE/UNESCO e ISO/IEC 42001."
+              },
+              {
+                "id": "ia-privacidade",
+                "nome": "IA: privacidade e proteção de dados",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Uso de dados pessoais em treinamento, base legal, anonimização, decisão automatizada e revisão (art. 20 da LGPD). Casa com Legislação."
+              }
+            ]
+          },
+          {
+            "id": "d-legislacao",
+            "nome": "Legislação — Segurança da Informação e Proteção de Dados",
+            "icon": "ti-gavel",
+            "questoes": 5,
+            "pontos": 5,
+            "prioridade": "alta",
+            "assuntoId": "legislacao",
+            "nota": "Você fez 1/5. Conteúdo curto, fechado e de literalidade — é o maior retorno por hora de toda a prova.",
+            "topicos": [
+              {
+                "id": "leg-lgpd",
+                "nome": "LGPD — Lei 13.709/2018 (caps. I, II, III, IV, VII, VIII e IX)",
+                "prioridade": "alta",
+                "esforco": 5,
+                "oQueCai": "Fundamentos, conceitos, bases legais (art. 7º e 11), dados sensíveis, direitos do titular, agentes de tratamento, poder público, segurança e boas práticas, ANPD e sanções. É a lei mais cobrada do bloco.",
+                "materiaId": "lgpd"
+              },
+              {
+                "id": "leg-lai",
+                "nome": "LAI — Lei 12.527/2011 (caps. I a V) + Dec. 7.724 e 7.845",
+                "prioridade": "alta",
+                "esforco": 4,
+                "oQueCai": "Publicidade como regra, transparência ativa e passiva, prazos de resposta e recurso, graus de sigilo (reservado/secreto/ultrassecreto) e suas autoridades classificadoras.",
+                "materiaId": "lai"
+              },
+              {
+                "id": "leg-marco-civil",
+                "nome": "Marco Civil da Internet — Lei 12.965/2014 (cap. II §I; cap. III §§I e II)",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Direitos e garantias do usuário, neutralidade de rede, guarda de registros de conexão (1 ano) e de acesso a aplicações (6 meses), e responsabilidade de provedores (art. 19 — confira o entendimento atual do STF).",
+                "materiaId": "marco-civil"
+              },
+              {
+                "id": "leg-delitos",
+                "nome": "Delitos Informáticos — Lei 12.737/2012, art. 2º",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Invasão de dispositivo informático (art. 154-A do CP): conduta, pena atual pela Lei 14.155/2021, qualificadoras, causas de aumento e ação penal.",
+                "materiaId": "delitos-informaticos"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "modulo-2",
+        "nome": "Módulo II — Conhecimentos Específicos (Perfil 3)",
+        "resumo": "30 questões, peso 2,5 = 75 pontos (65% da prova). Você fez 25/30 no simulado: o objetivo aqui é fechar as lacunas de largura, não reestudar código.",
+        "questoes": 30,
+        "peso": 2.5,
+        "pontos": 75,
+        "disciplinas": [
+          {
+            "id": "d-desenvolvimento",
+            "nome": "Desenvolvimento de Sistemas",
+            "icon": "ti-code",
+            "prioridade": "media",
+            "nota": "Sua área. O maior bloco do edital em extensão, mas o de menor ganho marginal — exceto UX/acessibilidade, métricas (Ponto de Função), requisitos e arquitetura distribuída, onde dev sênior costuma escorregar.",
+            "topicos": [
+              {
+                "id": "ds-java",
+                "nome": "Java 6+ e JavaEE/JakartaEE",
+                "prioridade": "baixa",
+                "esforco": 2,
+                "oQueCai": "Sintaxe, coleções, streams, concorrência e a stack Jakarta (Servlet, CDI, EJB, JAX-RS). Você domina — resolva questões e siga."
+              },
+              {
+                "id": "ds-jpa",
+                "nome": "JPA 2+ e Hibernate",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Anotações de mapeamento, ciclo de vida da entidade, tipos de relacionamento, lazy x eager, JPQL e cache. FGV cobra detalhe de anotação."
+              },
+              {
+                "id": "ds-spring",
+                "nome": "Spring, Spring Boot e Spring Cloud",
+                "prioridade": "baixa",
+                "esforco": 2,
+                "oQueCai": "Injeção de dependência, escopos, starters, autoconfiguração, perfis e os componentes do Cloud (config, discovery, gateway, circuit breaker)."
+              },
+              {
+                "id": "ds-jsf",
+                "nome": "JSF e PrimeFaces",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Ciclo de vida das 6 fases, managed beans, escopos e navegação. Tecnologia legada, mas está no edital e a DataPrev usa."
+              },
+              {
+                "id": "ds-js",
+                "nome": "JavaScript",
+                "prioridade": "baixa",
+                "esforco": 2,
+                "oQueCai": "ES6+, escopo, closures, promises/async, DOM e manipulação de eventos."
+              },
+              {
+                "id": "ds-frontend",
+                "nome": "Frontend web: HTML, CSS e Ajax",
+                "prioridade": "baixa",
+                "esforco": 2,
+                "oQueCai": "Semântica HTML5, box model, flex/grid, responsividade e requisições assíncronas (fetch/XHR)."
+              },
+              {
+                "id": "ds-spa",
+                "nome": "Frameworks SPA: Vue, Angular, React · SPA e PWA",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Componentes, estado, ciclo de vida, roteamento; o que caracteriza SPA e PWA (service worker, manifest, offline)."
+              },
+              {
+                "id": "ds-ux",
+                "nome": "UX, usabilidade, acessibilidade, arquitetura da informação, CMS e workflow",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Heurísticas de Nielsen, WCAG e eMAG, e-MAG do governo, wireframe x protótipo. Bloco que dev sênior costuma errar por não estudar."
+              },
+              {
+                "id": "ds-mobile",
+                "nome": "Desenvolvimento mobile (Android e iOS)",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Ciclo de vida de Activity/ViewController, nativo x híbrido x multiplataforma, publicação nas lojas."
+              },
+              {
+                "id": "ds-lowcode",
+                "nome": "Low-code e no-code",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Conceito, quando faz sentido, governança, riscos e citizen development. Item novo e conceitual — fácil de garantir."
+              },
+              {
+                "id": "ds-cleancode",
+                "nome": "Clean code e análise estática (SonarQube)",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Nomes, funções pequenas, SOLID, code smells, dívida técnica e as métricas do SonarQube (cobertura, duplicação, quality gate)."
+              },
+              {
+                "id": "ds-arquitetura",
+                "nome": "Arquitetura e design de software",
+                "prioridade": "media",
+                "esforco": 3,
+                "oQueCai": "Estilos arquiteturais (camadas, cliente-servidor, monolito x distribuído), atributos de qualidade e visões arquiteturais."
+              },
+              {
+                "id": "ds-hexagonal",
+                "nome": "Arquitetura hexagonal (ports & adapters)",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Domínio no centro, portas e adaptadores, inversão de dependência e comparação com clean architecture."
+              },
+              {
+                "id": "ds-microsservicos",
+                "nome": "Microsserviços: orquestração e API gateway",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Decomposição, comunicação síncrona x assíncrona, service discovery, API gateway, orquestração x coreografia, observabilidade e padrões (circuit breaker, sidecar)."
+              },
+              {
+                "id": "ds-containers",
+                "nome": "Containers e orquestração",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Docker (imagem, camada, registry), Kubernetes (pod, deployment, service, ingress) e diferença para virtualização."
+              },
+              {
+                "id": "ds-transacoes",
+                "nome": "Transações distribuídas",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Two-phase commit, padrão Saga, consistência eventual, idempotência e o teorema CAP aplicado a serviços."
+              },
+              {
+                "id": "ds-soa",
+                "nome": "SOA, interoperabilidade e web services",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Princípios de SOA, ESB, contrato de serviço, SOAP x REST e o padrão e-PING de interoperabilidade do governo."
+              },
+              {
+                "id": "ds-mensageria",
+                "nome": "Mensageria",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Fila x tópico, publish/subscribe, garantias de entrega, JMS, AMQP, RabbitMQ e Kafka."
+              },
+              {
+                "id": "ds-api",
+                "nome": "API REST, Swagger/OpenAPI e JSON",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Verbos HTTP, códigos de status, idempotência, HATEOAS, níveis de maturidade de Richardson, versionamento e documentação OpenAPI."
+              },
+              {
+                "id": "ds-xml",
+                "nome": "XML, XSLT e UDDI",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "XML bem-formado x válido, XSD, transformação com XSLT e o papel do UDDI no trio SOAP/WSDL/UDDI."
+              },
+              {
+                "id": "ds-oo",
+                "nome": "Orientação a objetos",
+                "prioridade": "baixa",
+                "esforco": 1,
+                "oQueCai": "Encapsulamento, herança, polimorfismo, abstração, composição x herança e coesão/acoplamento."
+              },
+              {
+                "id": "ds-servidores",
+                "nome": "Servidores de aplicação e servidores web",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Tomcat, JBoss/WildFly, WebSphere, Apache e Nginx: diferença entre container web e servidor de aplicação, proxy reverso e balanceamento."
+              },
+              {
+                "id": "ds-internet",
+                "nome": "Internet, intranet, extranet e portais",
+                "prioridade": "baixa",
+                "esforco": 1,
+                "oQueCai": "Conceitos básicos e o papel de um portal corporativo. Questão fácil que não pode escapar."
+              },
+              {
+                "id": "ds-https",
+                "nome": "HTTPS, SSL/TLS",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Handshake TLS, certificados digitais, cadeia de confiança, versões seguras, HSTS e ataques comuns. Faz ponte com Segurança."
+              },
+              {
+                "id": "ds-devops",
+                "nome": "DevOps e CI/CD",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Cultura DevOps, pipeline, integração e entrega contínua, infraestrutura como código, estratégias de deploy (blue-green, canário) e DevSecOps."
+              },
+              {
+                "id": "ds-git",
+                "nome": "Git e controle de versão",
+                "prioridade": "baixa",
+                "esforco": 1,
+                "oQueCai": "Comandos essenciais, branch, merge x rebase, pull request, conflitos e fluxos (GitFlow, trunk-based)."
+              },
+              {
+                "id": "ds-testes",
+                "nome": "Testes de software: unitário, integração, automatizado, TDD",
+                "prioridade": "media",
+                "esforco": 3,
+                "oQueCai": "Pirâmide de testes, JUnit, mocks, TDD (red-green-refactor), testes de usabilidade e ágeis, cobertura e ciclo de vida do teste."
+              },
+              {
+                "id": "ds-rpa",
+                "nome": "RPA — automação robótica de processos",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Conceito, tipos de bot (atendido/desatendido), quando usar RPA em vez de integração por API e riscos de governança."
+              },
+              {
+                "id": "ds-agil",
+                "nome": "Métodos ágeis: Scrum, Kanban e XP",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Manifesto ágil, papéis/eventos/artefatos do Scrum, WIP e fluxo no Kanban, práticas do XP (pair programming, refatoração, integração contínua)."
+              },
+              {
+                "id": "ds-metricas",
+                "nome": "Ponto de Função e Story Points",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "APF: tipos de função (ALI, AIE, EE, SE, CE), contagem, fator de ajuste; e a lógica relativa dos Story Points, planning poker e velocity. Muito cobrado e pouco estudado por dev."
+              },
+              {
+                "id": "ds-requisitos",
+                "nome": "Engenharia de Requisitos",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Classificação (funcional/não funcional), processo (elicitação, análise, especificação, validação, gerência), técnicas de elicitação, rastreabilidade e user stories."
+              },
+              {
+                "id": "ds-blockchain",
+                "nome": "Blockchain",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Bloco, hash encadeado, consenso (PoW/PoS), smart contracts, permissionada x pública e casos de uso no setor público."
+              },
+              {
+                "id": "ds-ia-dados",
+                "nome": "Conceitos de IA, Análise de Dados e Big Data",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "5 Vs, pipeline de dados, ciência de dados x análise, aprendizado de máquina aplicado e ferramentas do ecossistema (Hadoop, Spark)."
+              }
+            ]
+          },
+          {
+            "id": "d-seguranca",
+            "nome": "Segurança da Informação",
+            "icon": "ti-shield-lock",
+            "prioridade": "alta",
+            "nota": "Uma das três frentes de maior ganho para o seu perfil. Normas ISO e OWASP são decoreba estruturada — rende rápido.",
+            "topicos": [
+              {
+                "id": "si-politicas",
+                "nome": "Políticas e procedimentos de segurança da informação",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "PSI: estrutura, papéis e responsabilidades, normas e procedimentos derivados, conscientização e ciclo de revisão."
+              },
+              {
+                "id": "si-cid",
+                "nome": "Princípios: confidencialidade, integridade e disponibilidade",
+                "prioridade": "alta",
+                "esforco": 1,
+                "oQueCai": "A tríade CID mais autenticidade, não repúdio e legalidade. Base conceitual de todas as outras questões do bloco."
+              },
+              {
+                "id": "si-27001",
+                "nome": "ISO/IEC 27001:2022 — SGSI",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Estrutura da norma, ciclo PDCA, contexto e partes interessadas, declaração de aplicabilidade (SoA), auditoria e certificação; Anexo A com 93 controles."
+              },
+              {
+                "id": "si-27002",
+                "nome": "ISO/IEC 27002:2022 — controles",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Os 4 temas (organizacional, pessoas, físico, tecnológico), atributos dos controles e as principais mudanças em relação à versão 2013."
+              },
+              {
+                "id": "si-cripto",
+                "nome": "Mecanismos de segurança: criptografia, hash, assinatura e PKI",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Simétrica x assimétrica, AES/RSA, funções hash (SHA-2), assinatura e certificado digital, ICP-Brasil e infraestrutura de chaves públicas."
+              },
+              {
+                "id": "si-acesso",
+                "nome": "Controle de acesso e autenticação",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Identificação, autenticação e autorização; modelos DAC/MAC/RBAC/ABAC; privilégio mínimo, segregação de funções e MFA."
+              },
+              {
+                "id": "si-oauth",
+                "nome": "OAuth 2.0, OpenID Connect e SSO",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Papéis (resource owner, client, authorization server), fluxos (authorization code, client credentials), token x id_token, SAML e federação. Cai com frequência."
+              },
+              {
+                "id": "si-riscos",
+                "nome": "Gestão de riscos de segurança",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Ativo, ameaça, vulnerabilidade, impacto e probabilidade; identificação, análise, avaliação e tratamento (mitigar, transferir, aceitar, evitar); ISO 27005 e risco residual."
+              },
+              {
+                "id": "si-sdl",
+                "nome": "SDL — ciclo de desenvolvimento seguro",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Security by design, modelagem de ameaças (STRIDE), requisitos de segurança, revisão de código e gates ao longo do SDLC."
+              },
+              {
+                "id": "si-owasp",
+                "nome": "OWASP Top 10",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "As dez categorias, o que causa cada uma e como mitigar — em especial injeção, quebra de controle de acesso, falhas criptográficas e SSRF."
+              },
+              {
+                "id": "si-sast",
+                "nome": "Análise estática e dinâmica de código (SAST, DAST, SCA)",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "O que cada técnica encontra e em que fase do pipeline entra; falso positivo x falso negativo; IAST e análise de dependências."
+              }
+            ]
+          },
+          {
+            "id": "d-banco-dados",
+            "nome": "Banco de Dados",
+            "icon": "ti-database",
+            "prioridade": "alta",
+            "nota": "Você já usa BD no dia a dia, mas a FGV cobra teoria (normalização, dimensional, NoSQL, ACID) que a prática não ensina.",
+            "topicos": [
+              {
+                "id": "bd-modelagem",
+                "nome": "Modelagem conceitual, lógica e física",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "MER e DER (entidade, atributo, cardinalidade, generalização), transformação para o modelo relacional e decisões físicas. Base de todo o bloco."
+              },
+              {
+                "id": "bd-relacional",
+                "nome": "Modelo relacional e álgebra relacional",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Relação, tupla, domínio, chaves (primária, candidata, estrangeira) e operadores (seleção, projeção, junção)."
+              },
+              {
+                "id": "bd-normalizacao",
+                "nome": "Normalização",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "1FN a 3FN e Boyce-Codd, dependência funcional, anomalias e quando desnormalizar. Item clássico da FGV."
+              },
+              {
+                "id": "bd-integridade",
+                "nome": "Integridade referencial e restrições",
+                "prioridade": "alta",
+                "esforco": 1,
+                "oQueCai": "Chave estrangeira, ações on delete/update (cascade, restrict, set null), integridade de entidade e de domínio."
+              },
+              {
+                "id": "bd-sql",
+                "nome": "SQL: DDL, DML e consultas",
+                "prioridade": "alta",
+                "esforco": 4,
+                "oQueCai": "CREATE/ALTER/DROP, INSERT/UPDATE/DELETE, joins (inner, left, full), GROUP BY/HAVING, subconsultas, views e funções de janela. A FGV cobra leitura de código SQL."
+              },
+              {
+                "id": "bd-sgbd",
+                "nome": "SGBD: arquitetura, transações e desempenho",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Propriedades ACID, níveis de isolamento, bloqueios e deadlock, log e recuperação, índices (B-tree, hash) e plano de execução."
+              },
+              {
+                "id": "bd-dimensional",
+                "nome": "Modelagem dimensional e multidimensional",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Fato e dimensão, esquema estrela x floco de neve, granularidade, tabela fato agregada e dimensões degeneradas/lentamente mutáveis (SCD)."
+              },
+              {
+                "id": "bd-metadados",
+                "nome": "Metadados e dicionário de dados",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Metadado técnico, de negócio e operacional; catálogo de dados, linhagem e governança de dados."
+              },
+              {
+                "id": "bd-nosql",
+                "nome": "NoSQL",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Os quatro tipos (chave-valor, documento, colunar, grafo), teorema CAP, BASE x ACID e quando escolher cada um. Muito cobrado e pouco dominado."
+              },
+              {
+                "id": "bd-memoria",
+                "nome": "Bancos de dados em memória",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Redis, Memcached, SAP HANA: uso como cache, persistência opcional, TTL e trade-off de durabilidade."
+              },
+              {
+                "id": "bd-datalake",
+                "nome": "Data lakes e Big Data",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Data lake x data warehouse x lakehouse, zonas do lake, schema-on-read x schema-on-write e risco de data swamp."
+              },
+              {
+                "id": "bd-tipos-dados",
+                "nome": "Dados estruturados, semiestruturados e não estruturados",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Definições, exemplos e implicação no armazenamento e no processamento. Questão conceitual fácil."
+              },
+              {
+                "id": "bd-avaliacao",
+                "nome": "Avaliação e qualidade de modelos de dados",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Critérios de qualidade (completude, consistência, acurácia), revisão de modelo e adequação ao requisito."
+              },
+              {
+                "id": "bd-etl",
+                "nome": "Integração e ingestão de dados (ETL/ELT)",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "ETL x ELT, batch x streaming, CDC, staging, transferência de arquivos, qualidade e deduplicação na carga."
+              }
+            ]
+          },
+          {
+            "id": "d-bi",
+            "nome": "Inteligência de Negócios (BI)",
+            "icon": "ti-chart-histogram",
+            "prioridade": "alta",
+            "nota": "Conteúdo fechado, conceitual e provavelmente longe do seu dia a dia — alto retorno por hora.",
+            "topicos": [
+              {
+                "id": "bi-conceitos",
+                "nome": "BI: conceitos, técnicas e métodos",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "O que é BI, cadeia dado → informação → conhecimento → decisão, indicadores e KPIs, BI operacional x estratégico e self-service BI."
+              },
+              {
+                "id": "bi-ssd",
+                "nome": "Sistemas de suporte à decisão (SSD/DSS)",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "SSD, SIG/MIS, EIS e sistemas especialistas: para quem serve cada um e em que nível da organização. Questão conceitual recorrente."
+              },
+              {
+                "id": "bi-dw",
+                "nome": "Data warehouse: arquitetura e modelagem",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Características de Inmon (não volátil, integrado, orientado a assunto, histórico), Inmon x Kimball, data mart, ODS e staging area."
+              },
+              {
+                "id": "bi-etl",
+                "nome": "ETL no contexto de BI",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Extração, transformação e carga; carga incremental x full; tratamento de dimensões lentamente mutáveis; janela de carga e qualidade."
+              },
+              {
+                "id": "bi-olap",
+                "nome": "OLAP: cubos e operações",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "OLTP x OLAP, ROLAP/MOLAP/HOLAP e as operações drill-down, roll-up, slice, dice e pivot. Item quase certo na prova."
+              },
+              {
+                "id": "bi-mining",
+                "nome": "Data mining",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "CRISP-DM, tarefas (classificação, agrupamento, associação, regressão, detecção de anomalia) e algoritmos típicos (árvore, k-means, Apriori)."
+              },
+              {
+                "id": "bi-visualizacao",
+                "nome": "Visualização de dados",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Escolha do gráfico conforme o objetivo, dashboards, storytelling com dados e boas práticas/erros de visualização."
+              },
+              {
+                "id": "bi-fontes",
+                "nome": "Mapeamento e coleta de fontes de dados",
+                "prioridade": "media",
+                "esforco": 1,
+                "oQueCai": "Levantamento de fontes internas e externas, matriz barramento (bus matrix), profiling e documentação da origem."
+              },
+              {
+                "id": "bi-arquitetura",
+                "nome": "Arquitetura de BI",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Camadas de fonte, integração, armazenamento, apresentação e acesso; BI moderno com data lake, ELT e ferramentas de mercado."
+              }
+            ]
+          },
+          {
+            "id": "d-governanca",
+            "nome": "Gestão e Governança de TI",
+            "icon": "ti-sitemap",
+            "prioridade": "alta",
+            "nota": "ITIL, COBIT, PMBOK e BPMN: decoreba estruturada, muito cobrada e tipicamente negligenciada por quem vem do código. Frente de maior ganho.",
+            "topicos": [
+              {
+                "id": "gv-projetos",
+                "nome": "Gerenciamento de projetos: áreas de conhecimento",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "As áreas do PMBOK (escopo, cronograma, custos, qualidade, recursos, comunicações, riscos, aquisições, partes interessadas, integração) e seus principais artefatos."
+              },
+              {
+                "id": "gv-portfolio",
+                "nome": "Projeto, programa e portfólio",
+                "prioridade": "alta",
+                "esforco": 1,
+                "oQueCai": "O que distingue cada nível, escritório de projetos (PMO) e alinhamento estratégico. Questão conceitual fácil e frequente."
+              },
+              {
+                "id": "gv-processos",
+                "nome": "Processos e grupos de processos",
+                "prioridade": "media",
+                "esforco": 2,
+                "oQueCai": "Iniciação, planejamento, execução, monitoramento e controle, encerramento — e o que acontece em cada um."
+              },
+              {
+                "id": "gv-abordagens",
+                "nome": "Abordagens tradicional, híbrida e ágil",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Preditivo x adaptativo, quando usar cada um, modelos híbridos e o ciclo de vida do projeto."
+              },
+              {
+                "id": "gv-scrum",
+                "nome": "Scrum (Guia Scrum)",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "3 pilares, 5 valores, 3 responsabilidades, 5 eventos e 3 artefatos com seus compromissos. Estude pela literalidade do Guia — a FGV cobra assim."
+              },
+              {
+                "id": "gv-lean-kanban",
+                "nome": "Lean e Kanban",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Princípios lean, os 7 desperdícios, quadro Kanban, limite de WIP, lead time x cycle time e Lei de Little."
+              },
+              {
+                "id": "gv-riscos-proj",
+                "nome": "Gestão de riscos em projetos",
+                "prioridade": "alta",
+                "esforco": 2,
+                "oQueCai": "Identificação, análise qualitativa e quantitativa, matriz probabilidade x impacto, respostas a ameaças e oportunidades, e reservas."
+              },
+              {
+                "id": "gv-itil",
+                "nome": "ITIL v4",
+                "prioridade": "alta",
+                "esforco": 4,
+                "oQueCai": "Sistema de valor de serviço (SVS), cadeia de valor, 4 dimensões, 7 princípios orientadores e as práticas mais cobradas (incidente, problema, mudança, nível de serviço). Bloco de alto retorno."
+              },
+              {
+                "id": "gv-cobit",
+                "nome": "COBIT 2019",
+                "prioridade": "alta",
+                "esforco": 4,
+                "oQueCai": "Princípios do sistema de governança e do framework, os 40 objetivos em EDM/APO/BAI/DSS/MEA, componentes, fatores de design e níveis de capacidade."
+              },
+              {
+                "id": "gv-bpmn",
+                "nome": "BPMN e gestão de processos",
+                "prioridade": "alta",
+                "esforco": 3,
+                "oQueCai": "Elementos da notação (evento, atividade, gateway, pool, lane, fluxo de mensagem), BPM como ciclo (BPM CBOK) e modelagem AS-IS x TO-BE."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 };

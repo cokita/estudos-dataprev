@@ -24,6 +24,8 @@ completo já está em `CLAUDE.md` na raiz do repo — consulte lá se precisar d
   `{ "id","nome","icon","descricao","resumo":[{ "titulo","html" }],"flashcards":[{ "tema","pergunta","resposta" }] }`
   e adicione o `<id>` ao array `materias` do assunto certo em `conteudo/assuntos.json`.
 - Teoria/flashcards em matéria existente → edite `conteudo/materias/<id>.json`.
+- Mapa de estudos (tela `#/mapa`, panorama de todos os tópicos do edital) → `conteudo/mapa.json`.
+  Ao criar uma matéria que cobre um tópico do mapa, adicione `"materiaId"` no tópico correspondente.
 
 ## Formato da questão
 `{ "type":"ce"|"mc", "tag":"...", "text":"...", "options":[...], "answer": <índice 0..n>, "exp":"..." }`

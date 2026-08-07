@@ -107,8 +107,23 @@ window.App = (function () {
         "</a>"
       );
     }).join("");
+    let banner = "";
+    if (C.mapa) {
+      const todos = allTopicos();
+      const dom = todos.filter((t) => topStatus(t.id) === "dominado").length;
+      banner =
+        '<a class="fc-entry mp-entry" href="#/mapa">' +
+          '<div class="fc-entry-ic"><i class="ti ti-map-2"></i></div>' +
+          '<div class="fc-entry-body">' +
+            "<h3>Mapa de estudos</h3>" +
+            "<p>Todos os " + todos.length + " tópicos do edital, com prioridade e o que a FGV cobra em cada um · " + dom + " dominado" + (dom === 1 ? "" : "s") + "</p>" +
+          "</div>" +
+          '<span class="fc-entry-cta">Ver o todo <i class="ti ti-chevron-right"></i></span>' +
+        "</a>";
+    }
     $app().innerHTML =
       '<div class="page-head"><h1>Assuntos do edital</h1><p class="sub">Escolha um assunto para ver as matérias e simulados.</p></div>' +
+      banner +
       '<div class="grid">' + (cards || '<p class="empty">Nenhum assunto ainda.</p>') + "</div>";
   }
 
@@ -460,6 +475,155 @@ window.App = (function () {
     });
   }
 
+  // ---------- mapa de estudos ----------
+  const ST_ORDER = ["nao-iniciado", "estudando", "revisar", "dominado"];
+  const ST_INFO = {
+    "nao-iniciado": { label: "Não iniciado", icon: "ti-circle" },
+    "estudando":    { label: "Estudando",    icon: "ti-player-play" },
+    "revisar":      { label: "Revisar",      icon: "ti-refresh" },
+    "dominado":     { label: "Dominado",     icon: "ti-circle-check" }
+  };
+  const PRIO_LABEL = { alta: "Alta", media: "Média", baixa: "Baixa" };
+  let mapaProg = {};
+  let mapaFilter = { prio: "todas", status: "todos" };
+
+  function topStatus(tid) { return mapaProg[tid] || "nao-iniciado"; }
+  function allTopicos() {
+    const M = C.mapa;
+    if (!M) return [];
+    return (M.modulos || []).reduce((acc, mod) =>
+      acc.concat((mod.disciplinas || []).reduce((a2, d) => a2.concat(d.topicos || []), [])), []);
+  }
+  function discStats(d) {
+    const ts = d.topicos || [];
+    const dom = ts.filter((t) => topStatus(t.id) === "dominado").length;
+    const emCurso = ts.filter((t) => ["estudando", "revisar"].indexOf(topStatus(t.id)) >= 0).length;
+    const horas = ts.reduce((n, t) => n + (t.esforco || 0), 0);
+    const restam = ts.filter((t) => topStatus(t.id) !== "dominado").reduce((n, t) => n + (t.esforco || 0), 0);
+    return { total: ts.length, dom: dom, emCurso: emCurso, horas: horas, restam: restam, pct: ts.length ? Math.round((dom / ts.length) * 100) : 0 };
+  }
+  function passaFiltro(t) {
+    if (mapaFilter.prio !== "todas" && t.prioridade !== mapaFilter.prio) return false;
+    if (mapaFilter.status !== "todos" && topStatus(t.id) !== mapaFilter.status) return false;
+    return true;
+  }
+
+  function renderMapa() {
+    const M = C.mapa;
+    if (!M) return renderHome();
+    const todos = allTopicos();
+    const dom = todos.filter((t) => topStatus(t.id) === "dominado").length;
+    const restam = todos.filter((t) => topStatus(t.id) !== "dominado").reduce((n, t) => n + (t.esforco || 0), 0);
+    const pct = todos.length ? Math.round((dom / todos.length) * 100) : 0;
+
+    const chip = (grupo, valor, label) => {
+      const on = mapaFilter[grupo] === valor;
+      return '<button class="mp-chip' + (on ? " on" : "") + '" data-f="' + grupo + '" data-v="' + valor + '">' + esc(label) + "</button>";
+    };
+
+    const filtros =
+      '<div class="mp-filters">' +
+        '<div class="mp-fgroup"><span class="mp-flabel">Prioridade</span>' +
+          chip("prio", "todas", "Todas") + chip("prio", "alta", "Alta") + chip("prio", "media", "Média") + chip("prio", "baixa", "Baixa") +
+        "</div>" +
+        '<div class="mp-fgroup"><span class="mp-flabel">Status</span>' +
+          chip("status", "todos", "Todos") +
+          ST_ORDER.map((s) => chip("status", s, ST_INFO[s].label)).join("") +
+        "</div>" +
+      "</div>";
+
+    const p = M.prova || {};
+    const painel =
+      '<div class="mp-panel">' +
+        '<div class="mp-panel-main">' +
+          '<div class="mp-big">' + dom + "<span>/" + todos.length + "</span></div>" +
+          '<div class="mp-big-lb">tópicos dominados</div>' +
+          '<div class="fcs-bar"><div class="fcs-bar-fill" style="width:' + pct + '%"></div></div>' +
+        "</div>" +
+        '<div class="mp-panel-side">' +
+          '<div class="mp-kv"><span>Prova</span><b>' + esc(p.data || "—") + "</b></div>" +
+          '<div class="mp-kv"><span>Questões</span><b>' + esc(String(p.questoes || "—")) + " · " + esc(String(p.pontosMax || "—")) + " pts</b></div>" +
+          '<div class="mp-kv"><span>Corte</span><b>' + esc(String(p.corte || "—")) + " pts</b></div>" +
+          '<div class="mp-kv"><span>Falta estudar</span><b>~' + restam + " sessões</b></div>" +
+        "</div>" +
+      "</div>" +
+      (p.regra ? '<p class="mp-regra"><i class="ti ti-alert-triangle"></i> ' + esc(p.regra) + "</p>" : "");
+
+    const modulosHtml = (M.modulos || []).map((mod) => {
+      const discs = (mod.disciplinas || []).map((d) => {
+        const st = discStats(d);
+        const tops = (d.topicos || []).filter(passaFiltro);
+        const linhas = tops.map((t) => {
+          const s = topStatus(t.id);
+          const info = ST_INFO[s];
+          return (
+            '<div class="mp-top st-' + s + '">' +
+              '<button class="mp-st" data-top="' + esc(t.id) + '" title="' + esc(info.label) + ' — clique para mudar">' +
+                '<i class="ti ' + info.icon + '"></i>' +
+              "</button>" +
+              '<div class="mp-top-body">' +
+                '<div class="mp-top-head">' +
+                  '<span class="mp-top-nome">' + esc(t.nome) + "</span>" +
+                  '<span class="mp-prio p-' + esc(t.prioridade) + '">' + esc(PRIO_LABEL[t.prioridade] || t.prioridade) + "</span>" +
+                  '<span class="mp-esf"><i class="ti ti-clock"></i> ' + (t.esforco || 0) + "h</span>" +
+                "</div>" +
+                '<p class="mp-cai">' + esc(t.oQueCai || "") + "</p>" +
+                (t.materiaId ? '<a class="mp-link" href="#/m/' + esc(t.materiaId) + '"><i class="ti ti-book-2"></i> Abrir material no app</a>' : '<span class="mp-link off"><i class="ti ti-plus"></i> Sem material ainda</span>') +
+              "</div>" +
+            "</div>"
+          );
+        }).join("");
+
+        return (
+          '<section class="mp-disc">' +
+            '<header class="mp-disc-head">' +
+              '<div class="card-ic"><i class="ti ' + esc(d.icon || "ti-book") + '"></i></div>' +
+              '<div class="mp-disc-info">' +
+                "<h3>" + esc(d.nome) + '<span class="mp-prio p-' + esc(d.prioridade || "media") + '">' + esc(PRIO_LABEL[d.prioridade] || "") + "</span></h3>" +
+                '<div class="meta">' +
+                  (d.questoes ? d.questoes + " questões · " + d.pontos + " pts · " : "") +
+                  st.total + " tópicos · ~" + st.horas + "h · " + st.dom + " dominado" + (st.dom === 1 ? "" : "s") +
+                "</div>" +
+                '<div class="fcs-bar"><div class="fcs-bar-fill" style="width:' + st.pct + '%"></div></div>' +
+              "</div>" +
+              (d.assuntoId ? '<a class="btn-ghost mp-goto" href="#/a/' + esc(d.assuntoId) + '" title="Abrir no app"><i class="ti ti-external-link"></i></a>' : "") +
+            "</header>" +
+            (d.nota ? '<p class="mp-nota"><i class="ti ti-bulb"></i> ' + esc(d.nota) + "</p>" : "") +
+            (linhas || '<p class="empty">Nenhum tópico com esse filtro.</p>') +
+          "</section>"
+        );
+      }).join("");
+
+      return (
+        '<div class="mp-modulo">' +
+          '<div class="block-head"><h2><i class="ti ti-layout-list"></i> ' + esc(mod.nome) + "</h2>" +
+            '<span class="hint">' + esc(String(mod.questoes || "")) + " questões · peso " + esc(String(mod.peso || "")) + " · " + esc(String(mod.pontos || "")) + " pontos</span></div>" +
+          (mod.resumo ? '<p class="mp-resumo">' + esc(mod.resumo) + "</p>" : "") +
+          discs +
+        "</div>"
+      );
+    }).join("");
+
+    $app().innerHTML =
+      crumb([{ label: "Assuntos", href: "#/" }, { label: "Mapa de estudos" }]) +
+      '<div class="page-head"><h1>Mapa de estudos</h1><p class="sub">Tudo que o edital cobra, tópico a tópico. Clique no círculo à esquerda para marcar seu progresso: não iniciado → estudando → revisar → dominado.</p></div>' +
+      painel + filtros + modulosHtml;
+
+    $app().querySelectorAll(".mp-chip").forEach((b) => {
+      b.onclick = () => { mapaFilter[b.dataset.f] = b.dataset.v; renderMapa(); };
+    });
+    $app().querySelectorAll(".mp-st").forEach((b) => {
+      b.onclick = () => {
+        const tid = b.dataset.top;
+        const next = ST_ORDER[(ST_ORDER.indexOf(topStatus(tid)) + 1) % ST_ORDER.length];
+        mapaProg[tid] = next;
+        if (next === "nao-iniciado") delete mapaProg[tid];
+        renderMapa();
+        window.STORE.setMapaStatus(tid, next).catch((e) => console.error(e));
+      };
+    });
+  }
+
   // ---------- roteador ----------
   function route() {
     const h = (location.hash || "#/").replace(/^#/, "");
@@ -468,6 +632,7 @@ window.App = (function () {
     if (fcKeyHandler) { window.removeEventListener("keydown", fcKeyHandler); fcKeyHandler = null; }
     if (parts.length === 0) return renderHome();
     switch (parts[0]) {
+      case "mapa": return renderMapa();
       case "a": return renderAssunto(parts[1]);
       case "m": return renderMateria(parts[1]);
       case "fc": return renderFlashcards(parts[1]);
@@ -480,7 +645,11 @@ window.App = (function () {
 
   // ---------- dados ----------
   function refreshAttempts() {
-    return window.STORE.getAllAttempts().then((list) => { attempts = list || []; }).catch((e) => { console.error(e); attempts = []; });
+    return Promise.all([
+      window.STORE.getAllAttempts().then((list) => { attempts = list || []; }).catch((e) => { console.error(e); attempts = []; }),
+      (window.STORE.getMapaProgress ? window.STORE.getMapaProgress() : Promise.resolve({}))
+        .then((p) => { mapaProg = p || {}; }).catch((e) => { console.error(e); mapaProg = {}; })
+    ]);
   }
 
   // ---------- ciclo de vida ----------
