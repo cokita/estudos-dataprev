@@ -1,0 +1,93 @@
+{
+  "id": "fgv-rlm-01",
+  "materiaId": "fgv-rlm",
+  "nome": "FGV · DataPrev 2024 · RLM completo",
+  "descricao": "As 6 questões de Raciocínio Lógico Matemático da prova FGV para Analista de TI — Desenvolvimento de Software (DataPrev, Edital 01/2024, aplicada em 17/11/2024, Tipo 1 — Branca), questões 25 a 30. Gabarito definitivo da banca.",
+  "nivel": "Prova real",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q25",
+      "text": "Arnaldo e Bernaldo associaram-se em um determinado negócio. Arnaldo entrou com R$ 12.000,00 e Bernaldo com R$ 13.000,00. Se perderem R$ 50.000,00, caberá a Arnaldo o prejuízo de",
+      "options": [
+        "R$ 18.000,00",
+        "R$ 20.000,00",
+        "R$ 24.000,00",
+        "R$ 26.000,00",
+        "R$ 28.000,00"
+      ],
+      "answer": 2,
+      "exp": "Gabarito oficial: C. O prejuízo é dividido na mesma proporção do capital investido. Capital total: 12.000 + 13.000 = 25.000. A parte de Arnaldo é 12.000/25.000 = 12/25. Aplicando sobre o prejuízo: 50.000 × 12/25 = 24.000. Confira pela outra ponta: Bernaldo fica com 50.000 × 13/25 = 26.000, e 24.000 + 26.000 = 50.000. A opção D (26.000) é a parte do Bernaldo, plantada para quem troca os sócios."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q26",
+      "text": "Uma determinada escola adota o sistema de pesos por bimestre para o cálculo da média anual. O primeiro bimestre tem peso 1, o segundo, 2, o terceiro, 3, e o quarto, 4. Assim, para calcular a média anual, um estudante deve efetuar a soma de cada uma de suas notas bimestrais multiplicadas pelos seus respectivos pesos e dividir por 10. Para ser aprovado, um aluno precisa ter média anual, no mínimo, igual a 7,0. Arnaldo tirou notas 4,0; 6,0; 8,0; 8,0 nos 4 bimestres, não necessariamente nessa ordem. Para que Arnaldo seja aprovado, a sua menor nota deve ter sido tirada no",
+      "options": [
+        "1º bimestre, necessariamente",
+        "1º ou 2º bimestres, necessariamente",
+        "2º bimestre, necessariamente",
+        "3º bimestre, necessariamente",
+        "3º ou 4º bimestre, necessariamente"
+      ],
+      "answer": 1,
+      "exp": "Gabarito oficial: B. Média ≥ 7,0 com divisor 10 significa soma ponderada ≥ 70. A ideia é que a MENOR nota (4,0) precisa cair num peso pequeno. Testando onde colocar o 4,0: no peso 1 → dá para chegar a 70 e até 72 (4×1 + 8×2 + 6×3 + 8×4 = 70; ou 4×1 + 6×2 + 8×3 + 8×4 = 72). No peso 2 → o melhor arranjo dá exatamente 70 (6×1 + 4×2 + 8×3 + 8×4 = 70), ainda aprova. No peso 3 → o melhor arranjo chega só a 66. No peso 4 → no máximo 62. Logo, o 4,0 tem de estar no 1º ou no 2º bimestre. Atenção ao “necessariamente”: a questão pede onde a menor nota PODE ter caído para que a aprovação seja possível."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q27",
+      "text": "Dois sistemas monitoram a variação de temperatura dos servidores em um data center. Um sistema registra variações positivas (aquecimento) e o outro registra variações negativas (resfriamento). Certo dia, a soma dessas variações foi de 1 grau Celsius, indicando que o ambiente se manteve praticamente estável. No entanto, a soma dos quadrados dessas variações foi de 313, o que revela uma diferença significativa entre o maior valor positivo e o menor valor negativo registrados. A diferença entre esses valores é",
+      "options": [
+        "20",
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "answer": 1,
+      "exp": "Gabarito oficial: B. Chame os valores de x e y, com x + y = 1 e x² + y² = 313. Use a identidade (x − y)² = 2(x² + y²) − (x + y)² = 2×313 − 1² = 626 − 1 = 625. Logo x − y = 25. Truque que economiza tempo: não é preciso descobrir x e y separadamente (seriam 13 e −12). Sempre que o enunciado der a soma e a soma dos quadrados, essa identidade entrega a diferença direto."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q28",
+      "text": "A proposição logicamente equivalente à proposição “Se Cesar é fã de futebol então ele assiste a muitos jogos” é",
+      "options": [
+        "Cesar é fã de futebol e assiste a muitos jogos",
+        "Cesar gosta de futebol porque assiste a muitos jogos",
+        "Cesar gosta de assistir jogos por ser fã de futebol",
+        "Se Cesar não assiste a muitos jogos então ele não é fã de futebol",
+        "Se Cesar não é fã de futebol então ele não assiste a muitos jogos"
+      ],
+      "answer": 3,
+      "exp": "Gabarito oficial: D. É a CONTRAPOSITIVA: de p → q para ~q → ~p, invertendo a ordem e negando os dois lados. A opção E é a inversa (~p → ~q), a armadilha principal — parece a mesma ideia dita ao contrário, mas não é. A opção A é uma conjunção (nem equivale nem nega corretamente). B e C introduzem CAUSA (“porque”, “por ser”), e condicional lógico não afirma causa nenhuma, apenas que onde há p há q. Esta foi a única questão de lógica sentencial das seis de RLM da prova."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q29",
+      "text": "Numa certa região há alguns vilarejos de maneira que cada dupla de vilarejos possui uma única estrada que os conecta. (A prova traz uma figura com cinco vilarejos ligados dois a dois.) Considere que nessa região há inicialmente x vilarejos e que 2 novos vilarejos estejam se desenvolvendo. Por essa razão, 17 novas estradas estão sendo construídas. Nessas condições, o número x vale",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": 2,
+      "exp": "Gabarito oficial: C. Com n vilarejos ligados dois a dois, o número de estradas é a combinação C(n,2) = n(n−1)/2. As novas estradas são C(x+2,2) − C(x,2) = [(x+2)(x+1) − x(x−1)]/2 = (4x + 2)/2 = 2x + 1. Igualando: 2x + 1 = 17 → x = 8. Conferindo: com 8 vilarejos há 28 estradas; com 10, há 45; a diferença é 17. Atalho para a prova: acrescentar 2 pontos sempre gera 2x + 1 ligações novas."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV · DataPrev 2024 · ATI Desenv. de Software · Q30",
+      "text": "O preço de venda de certo item de consumo sofreu dois aumentos mensais consecutivos, sendo o primeiro de 30% e o segundo de 10%. Sobre a taxa média de aumento mensal nesse período, é correto afirmar que",
+      "options": [
+        "é maior que 19% e menor que 20%",
+        "é igual a 20%",
+        "é maior que 20% e menor que 21%",
+        "é igual a 21,5%",
+        "é igual a 43%"
+      ],
+      "answer": 0,
+      "exp": "Gabarito oficial: A. Aumentos sucessivos se MULTIPLICAM, não se somam: 1,30 × 1,10 = 1,43, isto é, 43% no período (por isso a opção E é o total, não a média). A taxa média mensal i é aquela que, aplicada duas vezes, dá o mesmo resultado: (1 + i)² = 1,43 → 1 + i = √1,43 ≈ 1,1958 → i ≈ 19,58%. Está entre 19% e 20%. A armadilha é a opção B: a média aritmética de 30% e 10% é 20%, e ela é sempre MAIOR que a média real (geométrica) — decore que a taxa média fica sempre um pouco abaixo da média aritmética."
+    }
+  ]
+}

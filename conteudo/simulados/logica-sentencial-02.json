@@ -1,0 +1,115 @@
+{
+  "id": "logica-sentencial-02",
+  "materiaId": "logica-sentencial",
+  "nome": "Aula 1 · Treino extra do condicional",
+  "descricao": "Oito questões novas focadas nos pontos que mais derrubam: manter o antecedente afirmado ao negar, não trocar os termos de lugar e separar contrapositiva (equivalente) de negação (contrária) e de inversa (armadilha).",
+  "nivel": "Treino",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Negação do condicional",
+      "text": "A negação de “Se o backup falhar, então o sistema envia e-mail ao administrador” é",
+      "options": [
+        "Se o backup não falhar, o sistema não envia e-mail ao administrador",
+        "O backup falhou e o sistema não enviou e-mail ao administrador",
+        "O backup não falhou e o sistema enviou e-mail ao administrador",
+        "Se o sistema não envia e-mail, então o backup não falhou",
+        "O backup falhou ou o sistema não enviou e-mail"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Negar p → q é afirmar p ∧ ~q — o antecedente permanece AFIRMADO e só o consequente é negado. Teste de conferência: existe cenário em que a original e a opção C sejam verdadeiras ao mesmo tempo? Sim (backup ok e e-mail enviado por outro motivo) — logo C não pode ser a negação. Já a opção D é a contrapositiva: diz o MESMO que a original, não o contrário."
+    },
+    {
+      "type": "mc",
+      "tag": "Contrapositiva",
+      "text": "A proposição equivalente a “Todo servidor da DataPrev possui matrícula funcional” é",
+      "options": [
+        "Quem possui matrícula funcional é servidor da DataPrev",
+        "Quem não é servidor da DataPrev não possui matrícula funcional",
+        "Quem não possui matrícula funcional não é servidor da DataPrev",
+        "Existe servidor da DataPrev sem matrícula funcional",
+        "Todo quem possui matrícula funcional é servidor público"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. “Todo A é B” é o condicional “se é servidor da DataPrev, então possui matrícula”. A equivalente é a contrapositiva ~q → ~p: inverte a ordem e nega os dois lados. A opção A é a recíproca e a B é a inversa — as duas erram juntas."
+    },
+    {
+      "type": "mc",
+      "tag": "Modus tollens",
+      "text": "Sabe-se que “Se chove, a rua fica molhada” é verdadeira e que a rua NÃO está molhada. Conclui-se que",
+      "options": [
+        "está chovendo",
+        "não está chovendo",
+        "nada se pode concluir",
+        "a rua secou rápido",
+        "a proposição inicial é falsa"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. O consequente falhou (~q), então o antecedente também tinha de ter falhado (~p). É o modus tollens, o único caminho válido “para trás”. Prova pelo absurdo: se estivesse chovendo com a rua seca, teríamos V → F e a premissa seria falsa."
+    },
+    {
+      "type": "mc",
+      "tag": "Falácia · afirmar o consequente",
+      "text": "Sabe-se que “Se chove, a rua fica molhada” é verdadeira e que a rua ESTÁ molhada. Conclui-se que",
+      "options": [
+        "está chovendo",
+        "não está chovendo",
+        "nada se pode concluir sobre a chuva",
+        "choveu há pouco tempo",
+        "a proposição inicial é falsa"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Armadilha de afirmar o consequente. A rua pode estar molhada por um caminhão-pipa, por uma mangueira ou por um cano estourado. O condicional é via de mão única: “se chove, molha” não autoriza “se molhou, choveu”."
+    },
+    {
+      "type": "mc",
+      "tag": "Recíproca e inversa",
+      "text": "Considere “Se o candidato zerar uma disciplina, então ele é eliminado”. A proposição que NÃO é equivalente a ela é",
+      "options": [
+        "Se o candidato não é eliminado, então ele não zerou nenhuma disciplina",
+        "Quem não foi eliminado não zerou disciplina alguma",
+        "Se o candidato é eliminado, então ele zerou uma disciplina",
+        "Não é possível zerar uma disciplina sem ser eliminado",
+        "Zerar uma disciplina é suficiente para ser eliminado"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Essa é a RECÍPROCA (q → p), e recíproca não equivale à original — o candidato pode ser eliminado por outros motivos, como não atingir os 57,5 pontos. As opções A e B são a contrapositiva escrita de dois jeitos, e D e E são reformulações da própria original."
+    },
+    {
+      "type": "ce",
+      "tag": "Valor lógico",
+      "text": "Sendo p verdadeira, q falsa e r falsa, a proposição (p → q) ∨ r é falsa.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. Resolva de dentro para fora, trocando as letras pelos valores antes de decidir: (p → q) = V → F = F. Substituindo: F ∨ F. O “ou” só é falso quando as duas partes são falsas — é o caso. Logo, a expressão é FALSA e a afirmação está correta."
+    },
+    {
+      "type": "mc",
+      "tag": "Contrapositiva com negação",
+      "text": "A contrapositiva de “Se Ana não estudar, então Ana não será aprovada” é",
+      "options": [
+        "Se Ana estudar, então Ana será aprovada",
+        "Se Ana for aprovada, então Ana estudou",
+        "Se Ana não for aprovada, então Ana não estudou",
+        "Ana não estudou e foi aprovada",
+        "Ana estudou ou não foi aprovada"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Aqui p = “Ana não estuda” e q = “Ana não é aprovada” — os dois já vêm negados. A contrapositiva ~q → ~p nega os dois de novo, e negar duas vezes volta ao original: ~q = “Ana é aprovada”, ~p = “Ana estudou”. Resultado: “Se Ana for aprovada, então Ana estudou”. A opção A é a inversa e não equivale."
+    },
+    {
+      "type": "ce",
+      "tag": "Validade de argumento",
+      "text": "O argumento a seguir é válido: “Se o alerta dispara, o time de plantão é acionado. O time de plantão não foi acionado. Logo, o alerta não disparou.”",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. É modus tollens em forma de argumento: da premissa p → q e do fato ~q conclui-se ~p. Compare com a versão INVÁLIDA, que a banca costuma oferecer no lugar: “o alerta não disparou, logo o time não foi acionado” — essa nega o antecedente e não conclui nada, pois o time pode ter sido acionado por outro motivo."
+    }
+  ]
+}

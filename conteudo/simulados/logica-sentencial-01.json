@@ -1,0 +1,257 @@
+{
+  "id": "logica-sentencial-01",
+  "materiaId": "logica-sentencial",
+  "nome": "Aula 1 · Proposições, conectivos e condicional",
+  "descricao": "Os exercícios trabalhados na aula, na ordem em que foram vistos: identificar proposições, traduzir para símbolos, calcular valor lógico e dominar o “se… então” (modus ponens, modus tollens, as duas falácias, contrapositiva e negação).",
+  "nivel": "Base",
+  "questoes": [
+    {
+      "type": "ce",
+      "tag": "Proposições",
+      "text": "A frase “Estude duas horas por dia” é uma proposição.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 1,
+      "exp": "Errado. É uma ORDEM, e ordem não pode ser julgada como verdadeira ou falsa — ninguém consegue dizer “isso é mentira”. Ficam de fora do conceito de proposição: ordens, perguntas, exclamações e sentenças abertas."
+    },
+    {
+      "type": "ce",
+      "tag": "Proposições",
+      "text": "A frase “y − 1 = 9” é uma proposição.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 1,
+      "exp": "Errado. É uma SENTENÇA ABERTA: enquanto o y for desconhecido, não dá para julgar se é V ou F. Se o enunciado dissesse quanto vale y, aí sim viraria proposição."
+    },
+    {
+      "type": "ce",
+      "tag": "Proposições",
+      "text": "A frase “Nenhum candidato foi aprovado” é uma proposição.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. Ser negativa não desqualifica. O teste é único: dá para dizer se é verdade ou mentira? Dá. Logo, é proposição (podendo ser falsa)."
+    },
+    {
+      "type": "mc",
+      "tag": "Tradução · disfarces do “e”",
+      "text": "Sendo p = “Ana estuda” e q = “Ana é aprovada”, a tradução de “Ana estuda, mas não é aprovada” é",
+      "options": [
+        "p ∧ q",
+        "p ∧ ~q",
+        "p ∨ ~q",
+        "~p ∧ q",
+        "p → ~q"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Fatie a frase: “Ana estuda” = p; “mas” = ∧ (mas, porém, contudo, embora e afins são todos “e”); “não é aprovada” = ~q. Resultado: p ∧ ~q. Conferência que evita o erro mais comum: conte os “nãos” do português e veja se a sua resposta tem a mesma quantidade de ~."
+    },
+    {
+      "type": "mc",
+      "tag": "Valor lógico",
+      "text": "Sendo p verdadeira e q falsa, o valor lógico de ~p ∧ q é",
+      "options": [
+        "Verdadeiro",
+        "Falso"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B (falso). Passo a passo, sempre trocando as letras pelos valores ANTES de decidir: ~p = o contrário de V = F. Substituindo: F ∧ F. A regra do “e” exige os dois verdadeiros, e aqui nenhum é. Logo, F. Cuidado: a expressão não é p, é ~p — o ~ age antes do ∧."
+    },
+    {
+      "type": "mc",
+      "tag": "Valor lógico",
+      "text": "Sendo p verdadeira e q falsa, o valor lógico de p ∨ q é",
+      "options": [
+        "Verdadeiro",
+        "Falso"
+      ],
+      "answer": 0,
+      "exp": "Gabarito: A. Substituindo: V ∨ F. O “ou” só é falso quando as DUAS partes são falsas; basta uma verdadeira para salvar a frase inteira."
+    },
+    {
+      "type": "mc",
+      "tag": "Modus ponens",
+      "text": "A proposição “Se Ana estuda, então Ana é aprovada” é verdadeira. Sabe-se que Ana estudou. Conclui-se que",
+      "options": [
+        "Ana foi aprovada",
+        "Ana não foi aprovada",
+        "Ana pode ou não ter sido aprovada",
+        "a proposição inicial é falsa",
+        "Ana estudou pouco"
+      ],
+      "answer": 0,
+      "exp": "Gabarito: A. A condição (antecedente) aconteceu, então a promessa foi acionada e o consequente TEM de ocorrer. Esse é o modus ponens — o único caminho válido “para frente”."
+    },
+    {
+      "type": "mc",
+      "tag": "Falácia · negar o antecedente",
+      "text": "A proposição “Se Ana estuda, então Ana é aprovada” é verdadeira. Sabe-se que Ana NÃO estudou. Sobre a aprovação, conclui-se que",
+      "options": [
+        "Ana não foi aprovada",
+        "Ana foi aprovada",
+        "nada se pode concluir",
+        "a proposição inicial é falsa",
+        "Ana foi reprovada por falta"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Armadilha de NEGAR O ANTECEDENTE. A frase só promete o que acontece QUANDO Ana estuda; ela não promete nada sobre o caso de Ana não estudar. Ana pode ter sido aprovada mesmo sem estudar (sorte, conhecimento prévio) e isso não desmente a frase — são as linhas (F,V) e (F,F), ambas verdadeiras. Em lógica, “não sei” é resposta certa."
+    },
+    {
+      "type": "mc",
+      "tag": "Condicional falso",
+      "text": "A proposição “Se eu passar no concurso, eu viajo” é FALSA. Então, necessariamente,",
+      "options": [
+        "eu não passei no concurso",
+        "eu passei no concurso e não viajei",
+        "eu não passei e não viajei",
+        "eu viajei sem passar no concurso",
+        "eu passei e viajei"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Só existe UM jeito de um condicional ser falso: V → F (antecedente verdadeiro, consequente falso). Se eu não tivesse passado, a promessa nem teria sido testada e a frase seria verdadeira — o que contraria o enunciado. Repare que um condicional falso é generoso: entrega os dois fatos com certeza."
+    },
+    {
+      "type": "mc",
+      "tag": "Valor lógico · condicional",
+      "text": "Sendo p verdadeira, q falsa e r verdadeira, a única proposição FALSA entre as opções é",
+      "options": [
+        "p → q",
+        "q → p",
+        "p → r",
+        "~p → q",
+        "q → r"
+      ],
+      "answer": 0,
+      "exp": "Gabarito: A. Substitua e procure o padrão V → F. (A) V → F = FALSA. (B) F → V = V. (C) V → V = V. (D) ~p vira F, então F → F = V. (E) F → V = V. Guarde o método: achou V → F, é falso; não achou, é verdadeiro."
+    },
+    {
+      "type": "mc",
+      "tag": "Modus tollens · “todo”",
+      "text": "É verdade que “Todo analista da DataPrev é servidor público”. Sabe-se que João não é servidor público. Conclui-se que",
+      "options": [
+        "João é analista da DataPrev",
+        "João não é analista da DataPrev",
+        "nada se pode concluir sobre João",
+        "João é servidor de outro órgão",
+        "João foi aprovado em outro concurso"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. “Todo A é B” é o condicional “se é analista, então é servidor”. Descobrimos que o CONSEQUENTE falhou (~q), e o caminho válido para trás conclui ~p — é o modus tollens. Prova pelo absurdo: se João fosse analista, teríamos V → F, que tornaria a premissa falsa, contrariando o enunciado. No diagrama de Venn: quem está fora do círculo grande está obrigatoriamente fora do círculo pequeno."
+    },
+    {
+      "type": "ce",
+      "tag": "Falácia · afirmar o consequente",
+      "text": "É verdade que “Todo analista da DataPrev é servidor público”. Sabe-se que Maria é servidora pública. Logo, Maria é analista da DataPrev.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 1,
+      "exp": "Errado. Armadilha de AFIRMAR O CONSEQUENTE. Saber que o q ocorreu não diz nada sobre o p. No Venn, Maria está dentro do círculo grande (servidores), mas esse círculo tem duas regiões: o miolo (analistas da DataPrev) e todo o resto (professores, médicos do SUS, auditores). O enunciado não diz em qual delas ela está. Atenção à precisão: servidora pública ela É — o que não se pode afirmar é que seja analista."
+    },
+    {
+      "type": "mc",
+      "tag": "Negação do condicional",
+      "text": "A negação de “Se Ana for aprovada, então Ana se muda para João Pessoa” é",
+      "options": [
+        "Se Ana não for aprovada, então Ana não se muda para João Pessoa",
+        "Se Ana não se muda para João Pessoa, então Ana não foi aprovada",
+        "Ana foi aprovada e não se mudou para João Pessoa",
+        "Ana não foi aprovada e se mudou para João Pessoa",
+        "Ana não foi aprovada ou se mudou para João Pessoa"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Negar p → q é afirmar p ∧ ~q: o antecedente fica DO JEITO QUE ESTAVA e só o consequente é negado — e a seta desaparece. As opções A e B ainda têm seta: A é a inversa e B é a contrapositiva (que, aliás, diz o MESMO que a original, e não o contrário)."
+    },
+    {
+      "type": "mc",
+      "tag": "Negação do condicional",
+      "text": "A proposição “Se o sistema falhar, então o alerta é disparado” é FALSA. Então",
+      "options": [
+        "o sistema não falhou",
+        "o alerta não foi disparado",
+        "o sistema falhou e o alerta não foi disparado",
+        "o sistema não falhou e o alerta foi disparado",
+        "o sistema falhou e o alerta foi disparado"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Condicional falso = p ∧ ~q. Duas armadilhas aqui: (1) a opção B está certa pela METADE e por isso é tentadora — mas a negação de um condicional sempre entrega DOIS fatos ligados por “e”; se a sua resposta tem um fato só, faltou pedaço. (2) A opção D inverte tudo: se o sistema não tivesse falhado, a promessa não teria sido testada e a frase seria VERDADEIRA. Confira sempre pelo mundo real: um monitoramento decepciona quando dá pau e ninguém é avisado."
+    },
+    {
+      "type": "mc",
+      "tag": "Tradução · “sempre que”",
+      "text": "Sendo p = “chove” e q = “levo guarda-chuva”, a tradução de “Sempre que chove, levo guarda-chuva” é",
+      "options": [
+        "p ∧ q",
+        "p ∨ q",
+        "p → q",
+        "q → p",
+        "~p → ~q"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. “Sempre que” é um dos disfarces do “se… então”, junto com “quando”, “toda vez que” e “todo A é B”. O disfarce muda a palavra, não a estrutura."
+    },
+    {
+      "type": "mc",
+      "tag": "Tradução",
+      "text": "Sendo p = “chove” e q = “levo guarda-chuva”, a tradução de “Choveu e eu não levei guarda-chuva” é",
+      "options": [
+        "p ∧ ~q",
+        "~p ∧ q",
+        "p → ~q",
+        "~(p ∧ q)",
+        "p ∨ ~q"
+      ],
+      "answer": 0,
+      "exp": "Gabarito: A. E repare: essa frase é exatamente a NEGAÇÃO de “sempre que chove, levo guarda-chuva” (p → q). Negar um condicional produz um “e”."
+    },
+    {
+      "type": "mc",
+      "tag": "Inversa",
+      "text": "Sendo p = “chove” e q = “levo guarda-chuva”, a tradução de “Se não chove, não levo guarda-chuva” é",
+      "options": [
+        "p → q",
+        "~q → ~p",
+        "~p → ~q",
+        "p ∧ ~q",
+        "~(p → q)"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Essa é a INVERSA de p → q — e atenção: ela NÃO significa o mesmo que “se chove, levo guarda-chuva”. A primeira promete sobre dias de chuva; a segunda promete sobre dias de sol. Eu posso levar guarda-chuva num dia seco por precaução: isso quebra a inversa e não quebra a original."
+    },
+    {
+      "type": "mc",
+      "tag": "Contrapositiva",
+      "text": "A contrapositiva de “Se Ana estuda, então Ana é aprovada” é",
+      "options": [
+        "Se Ana é aprovada, então Ana estuda",
+        "Se Ana não estuda, então Ana não é aprovada",
+        "Se Ana não é aprovada, então Ana não estuda",
+        "Ana estuda e não é aprovada",
+        "Ana não estuda ou é aprovada"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Contrapositiva = ~q → ~p: inverte a ordem E nega os dois lados, as duas mexidas juntas. A opção A é a recíproca e a B é a inversa — nenhuma das duas equivale à original (mas equivalem entre si)."
+    },
+    {
+      "type": "mc",
+      "tag": "Equivalência",
+      "text": "Qual proposição é equivalente a “Se o sistema falha, o alerta é disparado”?",
+      "options": [
+        "Se o alerta é disparado, o sistema falhou",
+        "Se o sistema não falha, o alerta não é disparado",
+        "Se o alerta não é disparado, o sistema não falhou",
+        "O sistema falha e o alerta não é disparado",
+        "O sistema não falha e o alerta é disparado"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C, a contrapositiva. A é a recíproca e B é a inversa — as duas armadilhas plantadas de propósito. D é a NEGAÇÃO (diz o contrário, não o mesmo). Olhe sempre o verbo do enunciado: “equivalente a” pede contrapositiva (com seta); “negação de” pede p ∧ ~q (com “e”)."
+    }
+  ]
+}

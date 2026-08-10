@@ -9,6 +9,15 @@
     ]
   },
   {
+    "id": "raciocinio-logico",
+    "nome": "Raciocínio Lógico",
+    "icon": "ti-math-symbols",
+    "descricao": "5 questões no Módulo I. Estruturas lógicas, argumentação, lógica sentencial (proposições, tabelas-verdade, equivalências e diagramas), lógica de 1ª ordem e problemas aritméticos, geométricos e matriciais.",
+    "materias": [
+      "logica-sentencial"
+    ]
+  },
+  {
     "id": "legislacao",
     "nome": "Legislação",
     "icon": "ti-gavel",
@@ -27,7 +36,8 @@
     "descricao": "Questões de provas reais aplicadas pela FGV, transcritas na íntegra, com gabarito oficial da banca e referência da prova de origem.",
     "materias": [
       "fgv-lai",
-      "fgv-lgpd"
+      "fgv-lgpd",
+      "fgv-rlm"
     ]
   }
 ]

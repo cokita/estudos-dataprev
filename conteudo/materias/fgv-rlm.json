@@ -1,0 +1,39 @@
+{
+  "id": "fgv-rlm",
+  "nome": "Raciocínio Lógico — questões FGV",
+  "icon": "ti-math-symbols",
+  "descricao": "Questões de Raciocínio Lógico Matemático extraídas de provas reais da FGV, transcritas na íntegra, com o gabarito definitivo da banca e a resolução comentada.",
+  "resumo": [
+    {
+      "titulo": "Como usar este bloco",
+      "html": "\n<p>As questões aqui são <b>reproduções literais de provas reais da FGV</b>, conferidas contra o gabarito definitivo publicado pela banca. A etiqueta de cada questão traz a prova e o número original.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Use este bloco <b>depois</b> da teoria. Aqui o objetivo é calibrar o <b>estilo</b> da banca: enunciado curto, uma armadilha bem plantada e alternativas próximas.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>O que a FGV cobrou em RLM na DataPrev 2024:</b> das 6 questões, <b>1 foi de lógica sentencial</b> (equivalência de condicional) e <b>5 foram de problemas aritméticos</b> — proporção, média ponderada, álgebra, contagem e porcentagem. Ou seja: a parte “matemática” do nome pesa mais do que parece. No edital de 2026 são 5 questões.</div>\n"
+    }
+  ],
+  "flashcards": [
+    {
+      "tema": "FGV · padrão",
+      "pergunta": "Qual foi a divisão real das 6 questões de RLM na prova FGV/DataPrev 2024?",
+      "resposta": "1 de lógica sentencial (equivalência de “se… então”) e 5 de problemas aritméticos: divisão proporcional, média ponderada, álgebra com soma e soma de quadrados, contagem de pares e porcentagem composta."
+    },
+    {
+      "tema": "Proporção",
+      "pergunta": "Como se divide um prejuízo entre sócios?",
+      "resposta": "Proporcionalmente ao capital investido. Some os capitais, ache a fração de cada um e aplique sobre o valor total. Ex.: 12.000 de 25.000 = 12/25 do prejuízo."
+    },
+    {
+      "tema": "Álgebra",
+      "pergunta": "Identidade útil quando o enunciado dá a soma e a soma dos quadrados de dois números",
+      "resposta": "(x − y)² = 2(x² + y²) − (x + y)². Ela entrega a diferença sem precisar descobrir os números."
+    },
+    {
+      "tema": "Porcentagem",
+      "pergunta": "Dois aumentos sucessivos de 30% e 10% equivalem a quanto de aumento total? E qual a taxa média mensal?",
+      "resposta": "Total: 1,30 × 1,10 = 1,43, ou seja, 43%. A taxa média NÃO é a média aritmética: é a raiz quadrada de 1,43 ≈ 1,1958, ou seja, cerca de 19,58% ao mês."
+    },
+    {
+      "tema": "Contagem",
+      "pergunta": "Quantas estradas ligam x vilarejos dois a dois?",
+      "resposta": "C(x,2) = x(x−1)/2. Acrescentando 2 vilarejos, o número de novas estradas é C(x+2,2) − C(x,2) = 2x + 1."
+    }
+  ]
+}

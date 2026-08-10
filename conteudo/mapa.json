@@ -226,28 +226,32 @@
               "nome": "Proposições e conectivos lógicos",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Base de tudo: negação, conjunção, disjunção (inclusiva e exclusiva), condicional e bicondicional. Sem isso nada mais funciona."
+              "oQueCai": "Base de tudo: negação, conjunção, disjunção (inclusiva e exclusiva), condicional e bicondicional. Sem isso nada mais funciona.",
+              "materiaId": "logica-sentencial"
             },
             {
               "id": "rl-tabelas",
               "nome": "Tabelas-verdade",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Montar a tabela, classificar em tautologia/contradição/contingência. É o método bruto que salva quando a lógica trava."
+              "oQueCai": "Montar a tabela, classificar em tautologia/contradição/contingência. É o método bruto que salva quando a lógica trava.",
+              "materiaId": "logica-sentencial"
             },
             {
               "id": "rl-equivalencias",
               "nome": "Equivalências e negações (De Morgan)",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Negar ‘se…então’, negar ‘e’/‘ou’, contrapositiva. É o item mais cobrado de RLM em qualquer banca — vale ouro nas 5 questões."
+              "oQueCai": "Negar ‘se…então’, negar ‘e’/‘ou’, contrapositiva. É o item mais cobrado de RLM em qualquer banca — vale ouro nas 5 questões.",
+              "materiaId": "logica-sentencial"
             },
             {
               "id": "rl-argumentos",
               "nome": "Argumentação: validade, dedução e inferência",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Validade de argumento, modus ponens/tollens, silogismos e analogias. FGV gosta de argumento em texto corrido."
+              "oQueCai": "Validade de argumento, modus ponens/tollens, silogismos e analogias. FGV gosta de argumento em texto corrido.",
+              "materiaId": "logica-sentencial"
             },
             {
               "id": "rl-diagramas",

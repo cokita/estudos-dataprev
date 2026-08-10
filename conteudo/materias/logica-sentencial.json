@@ -1,0 +1,179 @@
+{
+  "id": "logica-sentencial",
+  "nome": "Lógica sentencial: proposições, conectivos e o condicional",
+  "icon": "ti-logic-and",
+  "descricao": "A base do Raciocínio Lógico da FGV: o que é proposição, os conectivos, tabela-verdade e o “se… então” por inteiro — disfarces, contrapositiva, negação e as duas armadilhas clássicas.",
+  "resumo": [
+    {
+      "titulo": "De onde veio: lógica é julgar frases, não fazer contas",
+      "html": "\n<p>Por volta do <b>século IV a.C.</b>, <b>Aristóteles</b> percebeu algo que mudou tudo: certos raciocínios são corretos por causa da <b>forma</b>, não do assunto. “Todo A é B; C é A; logo C é B” funciona com qualquer A, B e C — sejam gregos, cachorros ou servidores da DataPrev.</p>\n<p>Em <b>1847</b>, <b>George Boole</b> traduziu essa ideia para álgebra: cada frase vira uma variável que só pode valer <b>1 (verdadeiro)</b> ou <b>0 (falso)</b>. É literalmente a base do <code>if</code> e do circuito digital.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> Vantagem de quem programa: você já faz isso todo dia em <code>if (a &amp;&amp; !b)</code>. Raciocínio lógico de concurso é a mesma máquina, com as frases escritas em português.</div>\n"
+    },
+    {
+      "titulo": "O que é uma proposição",
+      "html": "\n<p><b>Proposição é toda frase que dá para julgar como verdadeira ou falsa.</b> Esse é o teste inteiro: leia a frase e pergunte “dá para dizer se isso é verdade ou mentira?”.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">É proposição</span> “A DataPrev é uma empresa pública” · “2 + 2 = 5” (falsa, mas julgável) · “Nenhum candidato foi aprovado” (negativa, mas julgável)</div>\n  <div class=\"def\"><span class=\"def-t\">Não é proposição</span> <b>ordem</b> (“Estude duas horas por dia”) · <b>pergunta</b> (“Que horas são?”) · <b>exclamação</b> (“Que prova difícil!”) · <b>sentença aberta</b> (“y − 1 = 9”, porque o y é desconhecido)</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Decore o descarte: <b>ordem, pergunta, exclamação e frase com incógnita ficam de fora</b>. O resto é proposição.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Ser negativa não desqualifica: “Nenhum candidato foi aprovado” <b>é</b> proposição. Ela só pode ser falsa — e poder ser falsa é justamente o que define uma proposição.</div>\n"
+    },
+    {
+      "titulo": "Letras e valor lógico",
+      "html": "\n<p>Na prova as frases são compridas. Para não se perder, apelide cada uma com uma letra: <b>p, q, r, s</b>. É a mesma ideia de guardar um valor numa variável.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">p</span> “Ana estuda”</div>\n  <div class=\"def\"><span class=\"def-t\">q</span> “Ana é aprovada”</div>\n</div>\n<p>Toda proposição tem <b>um</b> valor lógico, nunca os dois: <b>V</b> (verdadeira) ou <b>F</b> (falsa). Não existe meio-termo.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Hábito que evita quase todo erro:</b> antes de responder qualquer questão, escreva no rascunho o que é p e o que é q, com as palavras do enunciado. Frase comprida com dois sujeitos diferentes é onde os termos se embolam.</div>\n"
+    },
+    {
+      "titulo": "Tabela-verdade: todos os cenários de uma vez",
+      "html": "\n<p>A prova quase nunca diz se p é verdadeira ou falsa. Então testamos <b>todos os cenários possíveis</b>. É só isso que uma tabela-verdade é: a lista de mundos possíveis.</p>\n<p>Com duas proposições existem 4 cenários: (V,V), (V,F), (F,V), (F,F). Cada linha é um mundo.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Número de linhas</span> <b>2ⁿ</b>, onde n é a quantidade de proposições simples diferentes. 2 frases → 4 linhas · 3 frases → 8 linhas · 4 frases → 16 linhas</div>\n  <div class=\"def\"><span class=\"def-t\">Precedência</span> primeiro <b>~</b>, depois <b>∧</b> e <b>∨</b>, depois <b>→</b>, por último <b>↔</b>. Parênteses mandam em tudo.</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> É a mesma conta de bits: cada proposição é um bit, e 2ⁿ é o número de combinações.</div>\n"
+    },
+    {
+      "titulo": "Os conectivos e suas regras",
+      "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">~p (negação)</span> inverte. Se p é V, ~p é F. <b>Negar duas vezes volta ao original</b> (“não é verdade que Ana não estuda” = “Ana estuda”), igual a <code>!!x</code>.</div>\n  <div class=\"def\"><span class=\"def-t\">p ∧ q (e)</span> só é <b>V</b> quando as <b>duas</b> são V. É o cadeado: falhou uma, falhou tudo.</div>\n  <div class=\"def\"><span class=\"def-t\">p ∨ q (ou)</span> só é <b>F</b> quando as <b>duas</b> são F. Basta uma verdadeira para salvar a frase.</div>\n  <div class=\"def\"><span class=\"def-t\">ou p ou q (ou exclusivo)</span> V quando os valores são <b>diferentes</b>; exige exatamente um dos dois.</div>\n  <div class=\"def\"><span class=\"def-t\">p → q (se… então)</span> só é <b>F</b> no caso <b>V → F</b>. Nos outros três, V.</div>\n  <div class=\"def\"><span class=\"def-t\">p ↔ q (se e somente se)</span> V quando os dois valores são <b>iguais</b>.</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Disfarces do “e”:</b> <i>mas, porém, contudo, todavia, entretanto, embora, ainda que, apesar de</i> — todos viram <b>∧</b>. A FGV troca a palavra só para ver se você percebe que a regra é a mesma. “Ana estuda, <b>mas</b> não é aprovada” = <b>p ∧ ~q</b>.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Conferência dos “nãos”:</b> conte quantos “não” a frase tem em português e confira se a sua tradução tem a mesma quantidade de <b>~</b>. Sumir com um “não” é o erro de tradução mais comum.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> O <b>ou</b> da lógica é <b>inclusivo</b> — aceita os dois ao mesmo tempo. Só vira exclusivo quando a frase abre com a estrutura “<b>ou</b>… <b>ou</b>…”.</div>\n"
+    },
+    {
+      "titulo": "O condicional é uma promessa",
+      "html": "\n<p>Em <b>p → q</b>, quem vem depois do “se” é o <b>antecedente</b> (a condição) e quem vem depois do “então” é o <b>consequente</b> (o resultado).</p>\n<p><b>A ideia central: um condicional é uma promessa. E a única forma de uma promessa ser falsa é prometer e não cumprir.</b></p>\n<p>Exemplo: “Se chover, então eu levo guarda-chuva”.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Choveu e levei (V,V)</span> cumpri → <b>V</b></div>\n  <div class=\"def\"><span class=\"def-t\">Choveu e não levei (V,F)</span> menti → <b>F</b> · única linha falsa da tabela</div>\n  <div class=\"def\"><span class=\"def-t\">Não choveu e levei (F,V)</span> exagero não é mentira → <b>V</b></div>\n  <div class=\"def\"><span class=\"def-t\">Não choveu e não levei (F,F)</span> promessa não testada → <b>V</b></div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Método rápido na prova: <b>procure o padrão V → F</b>. Achou, é falso. Não achou, é verdadeiro.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Quando o antecedente é <b>falso</b>, a promessa <b>não foi testada</b> — e frase não testada é <b>verdadeira</b>. É contraintuitivo e é exatamente onde a banca derruba candidato.</div>\n"
+    },
+    {
+      "titulo": "O condicional disfarçado",
+      "html": "\n<p>A FGV raramente escreve “se… então” com essas palavras. Todas as formas abaixo são <b>p → q</b>:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Se p, então q</span> Se chove, então levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">Quando p, q</span> Quando chove, levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">Sempre que p, q</span> Sempre que chove, levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">Toda vez que p, q</span> Toda vez que chove, levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">q, se p</span> Levo guarda-chuva, se chove</div>\n  <div class=\"def\"><span class=\"def-t\">Todo A é B</span> Todo analista da DataPrev é servidor público</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> A <b>ordem em que as partes aparecem não define quem é o p</b>. Quem define é a palavra <b>se</b>: o que estiver colado nela é sempre o antecedente, esteja no começo ou no fim da frase.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> “<b>Todo A é B</b>” vira “<b>se</b> é A, <b>então</b> é B”. No diagrama de Venn, é o círculo de A inteirinho dentro do círculo de B.</div>\n"
+    },
+    {
+      "titulo": "As quatro versões: recíproca, inversa e contrapositiva",
+      "html": "\n<p>Partindo de <b>p → q</b> dá para fabricar mais três frases. <b>Só uma</b> significa a mesma coisa:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Direta · p → q</span> Se chove, levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">Recíproca · q → p</span> Se levo guarda-chuva, então chove — <b>NÃO</b> equivale</div>\n  <div class=\"def\"><span class=\"def-t\">Inversa · ~p → ~q</span> Se não chove, não levo guarda-chuva — <b>NÃO</b> equivale</div>\n  <div class=\"def\"><span class=\"def-t\">Contrapositiva · ~q → ~p</span> Se não levo guarda-chuva, então não chove — <b>EQUIVALE</b></div>\n</div>\n<p>A contrapositiva é feita com <b>duas mexidas ao mesmo tempo</b>: inverte a ordem <b>e</b> nega os dois lados. Fazer só uma das duas coisas produz uma das armadilhas.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Recíproca e inversa são equivalentes <b>entre si</b> — as duas erradas erram juntas. Se as duas aparecerem como alternativas, nenhuma pode ser a resposta.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Condicional é <b>via de mão única</b>. “Se chove, levo guarda-chuva” não autoriza “se levo guarda-chuva, está chovendo” — posso estar levando por precaução.</div>\n"
+    },
+    {
+      "titulo": "Negar um condicional",
+      "html": "\n<p><b>Negar p → q é afirmar p ∧ ~q.</b> O antecedente fica <b>do jeito que estava</b>; só o consequente é negado. E a seta <b>desaparece</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Frase</span> Se o sistema falhar, então o alerta é disparado</div>\n  <div class=\"def\"><span class=\"def-t\">Negação</span> O sistema <b>falhou</b> e o alerta <b>não</b> foi disparado</div>\n</div>\n<p>Por que o p continua afirmado: para flagrar a promessa sendo quebrada, a <b>condição precisa ter acontecido</b>. Num dia em que o sistema nem falhou, não há como acusar ninguém de mentira.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>A negação vem sempre em par, ligado por “e”.</b> Se a sua resposta tem um fato só (“o alerta não foi disparado”), faltou metade — e a FGV oferece essa metade como alternativa.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Dois sinais visuais que separam tudo: <b>negação nunca tem seta</b> (vira “e”); <b>contrapositiva sempre tem seta</b> (com dois “nãos” e a ordem trocada).</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Teste infalível de negação:</b> a negação tem de ser <b>falsa</b> exatamente quando a original é <b>verdadeira</b>. Se você conseguir imaginar um cenário em que as duas são verdadeiras ao mesmo tempo, a sua “negação” está errada.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Olhe o verbo do enunciado: <b>“equivalente a” → contrapositiva</b> (com seta). <b>“negação de” ou “é falsa” → p ∧ ~q</b> (com “e”).</div>\n"
+    },
+    {
+      "titulo": "Os quatro raciocínios: dois válidos e duas armadilhas",
+      "html": "\n<p>Com a promessa <b>p → q</b> valendo, só existem quatro coisas que você pode descobrir:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Descobriu que p aconteceu</span> conclui <b>q</b> — <b>válido</b> (modus ponens)</div>\n  <div class=\"def\"><span class=\"def-t\">Descobriu que q NÃO aconteceu</span> conclui <b>~p</b> — <b>válido</b> (modus tollens)</div>\n  <div class=\"def\"><span class=\"def-t\">Descobriu que p NÃO aconteceu</span> <b>nada se conclui</b> — armadilha (negar o antecedente)</div>\n  <div class=\"def\"><span class=\"def-t\">Descobriu que q aconteceu</span> <b>nada se conclui</b> — armadilha (afirmar o consequente)</div>\n</div>\n<p>O desenho: você só conclui indo <b>para frente com a condição ligada</b>, ou <b>para trás com o resultado desligado</b>. Qualquer outro caminho é armadilha.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> No Venn: “Todo analista é servidor”. Quem está <b>fora</b> do círculo grande está obrigatoriamente fora do pequeno (<b>conclui</b>). Quem está <b>dentro</b> do grande pode estar no miolo ou não (<b>nada se conclui</b>).</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> “Não sei” é resposta certa em lógica. Nas duas armadilhas, a alternativa correta costuma ser “nada se pode concluir” — e o candidato erra porque quer que a frase diga mais do que ela diz.</div>\n"
+    },
+    {
+      "titulo": "Premissa é lei — e condicional não é causa",
+      "html": "\n<p>Duas confusões que travam quase todo mundo no começo:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">A premissa é lei</span> Se o enunciado apresenta uma frase, você a <b>aceita como verdadeira</b> e trabalha dentro desse mundo, mesmo que ela seja irrealista. “Se Ana estuda, então Ana é aprovada” é falsa no mundo real — mas, se a questão manda tratá-la como verdadeira, o caso “estudou e não passou” simplesmente não existe ali.</div>\n  <div class=\"def\"><span class=\"def-t\">Condicional é companhia, não causa</span> “Se A, então B” diz que onde há A há B. <b>Não</b> diz que B acontece <i>por causa</i> de A. “Se chove, o chão está molhado” tem como contrapositiva “se o chão não está molhado, não está chovendo” — e ninguém diria que o chão seco causou a ausência de chuva.</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Quando a conclusão parecer estranha, troque o exemplo por um obviamente verdadeiro: “Se é cachorro, então é mamífero” → “se não é mamífero, não é cachorro”. A mecânica é a mesma; o que incomodava era a qualidade da premissa.</div>\n"
+    }
+  ],
+  "flashcards": [
+    {
+      "tema": "Proposições",
+      "pergunta": "O que é uma proposição?",
+      "resposta": "Toda frase que dá para julgar como verdadeira ou falsa. Ficam de fora: ordens, perguntas, exclamações e sentenças abertas (com incógnita)."
+    },
+    {
+      "tema": "Proposições",
+      "pergunta": "“y − 1 = 9” é proposição?",
+      "resposta": "Não. É sentença aberta: enquanto o y for desconhecido, não dá para julgar se é V ou F."
+    },
+    {
+      "tema": "Proposições",
+      "pergunta": "“Nenhum candidato foi aprovado” é proposição?",
+      "resposta": "Sim. Ser negativa não desqualifica — dá para julgar como V ou F."
+    },
+    {
+      "tema": "Conectivos",
+      "pergunta": "Quando p ∧ q (e) é verdadeira?",
+      "resposta": "Só quando as duas são verdadeiras. Falhou uma, falhou tudo."
+    },
+    {
+      "tema": "Conectivos",
+      "pergunta": "Quando p ∨ q (ou) é falsa?",
+      "resposta": "Só quando as duas são falsas. Basta uma verdadeira para a frase toda ser verdadeira."
+    },
+    {
+      "tema": "Conectivos",
+      "pergunta": "Quais palavras equivalem ao “e” (∧) na prova?",
+      "resposta": "mas, porém, contudo, todavia, entretanto, embora, ainda que, apesar de."
+    },
+    {
+      "tema": "Conectivos",
+      "pergunta": "Como traduzir “Ana estuda, mas não é aprovada”?",
+      "resposta": "p ∧ ~q. “Mas” é ∧ e o “não” obriga o ~ no q."
+    },
+    {
+      "tema": "Tabela-verdade",
+      "pergunta": "Quantas linhas tem a tabela-verdade de uma expressão com n proposições simples?",
+      "resposta": "2ⁿ. Com 2 frases → 4 linhas; 3 → 8; 4 → 16."
+    },
+    {
+      "tema": "Tabela-verdade",
+      "pergunta": "Qual a ordem de precedência dos conectivos?",
+      "resposta": "~ primeiro; depois ∧ e ∨; depois →; por último ↔. Parênteses mandam em tudo."
+    },
+    {
+      "tema": "Condicional",
+      "pergunta": "Quando p → q é falsa?",
+      "resposta": "Somente no caso V → F: antecedente verdadeiro e consequente falso. Nos outros três casos é verdadeira."
+    },
+    {
+      "tema": "Condicional",
+      "pergunta": "Por que p → q é verdadeira quando p é falsa?",
+      "resposta": "Porque a promessa não foi testada. Sem a condição, não há como quebrar o compromisso — e promessa não quebrada é verdadeira."
+    },
+    {
+      "tema": "Condicional",
+      "pergunta": "Quais são os disfarces de “se… então”?",
+      "resposta": "quando, sempre que, toda vez que, “q, se p” e “todo A é B”."
+    },
+    {
+      "tema": "Condicional",
+      "pergunta": "Em “Levo guarda-chuva, se chove”, quem é o antecedente?",
+      "resposta": "“Chove”. Quem define o antecedente é a palavra “se”, não a ordem em que as partes aparecem."
+    },
+    {
+      "tema": "Equivalências",
+      "pergunta": "Qual é a contrapositiva de p → q?",
+      "resposta": "~q → ~p. Inverte a ordem E nega os dois lados. É a única das três variações que equivale à original."
+    },
+    {
+      "tema": "Equivalências",
+      "pergunta": "A recíproca (q → p) e a inversa (~p → ~q) equivalem à original?",
+      "resposta": "Não. Elas equivalem entre si, mas nenhuma das duas equivale a p → q."
+    },
+    {
+      "tema": "Equivalências",
+      "pergunta": "Qual a equivalente de “Todo analista da DataPrev é servidor público”?",
+      "resposta": "“Quem não é servidor público não é analista da DataPrev” (contrapositiva)."
+    },
+    {
+      "tema": "Negações",
+      "pergunta": "Qual é a negação de p → q?",
+      "resposta": "p ∧ ~q. O antecedente fica afirmado, o consequente é negado, e a seta desaparece."
+    },
+    {
+      "tema": "Negações",
+      "pergunta": "A frase “Se o sistema falhar, o alerta é disparado” é falsa. O que aconteceu?",
+      "resposta": "O sistema falhou E o alerta não foi disparado. Condicional falso entrega os dois fatos com certeza."
+    },
+    {
+      "tema": "Negações",
+      "pergunta": "Como testar se uma frase é mesmo a negação de outra?",
+      "resposta": "Se existe um cenário em que as duas são verdadeiras ao mesmo tempo, não é negação. A negação tem de ser falsa exatamente quando a original é verdadeira."
+    },
+    {
+      "tema": "Argumentação",
+      "pergunta": "O que é modus ponens?",
+      "resposta": "Sabendo que p → q é verdadeira e que p aconteceu, conclui-se q. É o único caminho válido “para frente”."
+    },
+    {
+      "tema": "Argumentação",
+      "pergunta": "O que é modus tollens?",
+      "resposta": "Sabendo que p → q é verdadeira e que q NÃO aconteceu, conclui-se ~p. É o caminho válido “para trás”, negando."
+    },
+    {
+      "tema": "Argumentação",
+      "pergunta": "Sei que p → q é verdadeira e que p NÃO aconteceu. O que concluo?",
+      "resposta": "Nada. É a falácia de negar o antecedente — a frase fica calada quando a condição não ocorre."
+    },
+    {
+      "tema": "Argumentação",
+      "pergunta": "Sei que p → q é verdadeira e que q aconteceu. O que concluo sobre p?",
+      "resposta": "Nada. É a falácia de afirmar o consequente."
+    },
+    {
+      "tema": "Método",
+      "pergunta": "Como não confundir os termos numa questão de condicional?",
+      "resposta": "Antes de responder, escreva no rascunho “p = …” e “q = …” com as palavras do enunciado, e só depois monte a resposta."
+    },
+    {
+      "tema": "Método",
+      "pergunta": "“Equivalente a” e “negação de” pedem a mesma coisa?",
+      "resposta": "Não. “Equivalente a” → contrapositiva (~q → ~p, com seta). “Negação de” ou “é falsa” → p ∧ ~q (com “e”, sem seta)."
+    }
+  ]
+}
