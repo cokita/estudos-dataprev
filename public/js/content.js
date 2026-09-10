@@ -548,6 +548,10 @@ window.CONTENT = {
             {
               "titulo": "Premissa é lei — e condicional não é causa",
               "html": "\n<p>Duas confusões que travam quase todo mundo no começo:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">A premissa é lei</span> Se o enunciado apresenta uma frase, você a <b>aceita como verdadeira</b> e trabalha dentro desse mundo, mesmo que ela seja irrealista. “Se Ana estuda, então Ana é aprovada” é falsa no mundo real — mas, se a questão manda tratá-la como verdadeira, o caso “estudou e não passou” simplesmente não existe ali.</div>\n  <div class=\"def\"><span class=\"def-t\">Condicional é companhia, não causa</span> “Se A, então B” diz que onde há A há B. <b>Não</b> diz que B acontece <i>por causa</i> de A. “Se chove, o chão está molhado” tem como contrapositiva “se o chão não está molhado, não está chovendo” — e ninguém diria que o chão seco causou a ausência de chuva.</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Quando a conclusão parecer estranha, troque o exemplo por um obviamente verdadeiro: “Se é cachorro, então é mamífero” → “se não é mamífero, não é cachorro”. A mecânica é a mesma; o que incomodava era a qualidade da premissa.</div>\n"
+            },
+            {
+              "titulo": "Tabela de negações e equivalências (com os apelidos)",
+              "html": "\n<p><b>Regra que unifica tudo:</b> em toda <b>negação</b>, o conectivo troca de time — o <b>e</b> vira <b>ou</b>, o <b>ou</b> vira <b>e</b>, e a <b>seta vira e</b>. Se você negou e o conectivo continuou o mesmo, errou.</p>\n<p><b>Negações</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">~(p ∧ q) = ~p ∨ ~q · NENE</span> nega as duas partes e o <b>E vira OU</b></div>\n  <div class=\"def\"><span class=\"def-t\">~(p ∨ q) = ~p ∧ ~q · NENE</span> nega as duas partes e o <b>OU vira E</b></div>\n  <div class=\"def\"><span class=\"def-t\">~(p → q) = p ∧ ~q · MANÉ</span> <b>MA</b>ntém a 1ª, <b>NE</b>ga a 2ª, a seta vira <b>E</b></div>\n  <div class=\"def\"><span class=\"def-t\">~(p ↔ q) = p ↔ ~q</span> nega <b>só um</b> dos lados</div>\n  <div class=\"def\"><span class=\"def-t\">~(~p) = p</span> negar duas vezes volta ao original</div>\n</div>\n<p><b>Equivalências</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">p → q = ~q → ~p · contrapositiva</span> inverte a ordem <b>e</b> nega os dois; a seta continua</div>\n  <div class=\"def\"><span class=\"def-t\">p → q = ~p ∨ q · NEMA</span> <b>NE</b>ga a 1ª, <b>MA</b>ntém a 2ª, a seta vira <b>OU</b></div>\n  <div class=\"def\"><span class=\"def-t\">p ↔ q = (p → q) ∧ (q → p)</span> bicondicional é ida <b>e</b> volta</div>\n  <div class=\"def\"><span class=\"def-t\">NÃO equivalem</span> recíproca (q → p) e inversa (~p → ~q) — as duas armadilhas</div>\n</div>\n<p><b>Quantificadores</b> — negar o exigente gera o folgado</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Todo A é B → Algum A NÃO é B</span> basta <b>um</b> contraexemplo para derrubar um “todo”</div>\n  <div class=\"def\"><span class=\"def-t\">Algum A é B → Nenhum A é B</span> para derrubar “algum”, tem de zerar todos</div>\n  <div class=\"def\"><span class=\"def-t\">Nenhum A é B → Algum A é B</span> basta <b>um</b> caso para derrubar um “nenhum”</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>MANÉ e NEMA são as mesmas sílabas invertidas</b> — é onde todo mundo troca. Leia o apelido da esquerda para a direita: ele diz o que acontece com a <b>1ª parte</b> e depois com a <b>2ª</b>. <b>MA-NÉ</b>: mantém, nega → é a <b>negação</b>, resultado com <b>E</b>. <b>NE-MA</b>: nega, mantém → é a <b>equivalência</b>, resultado com <b>OU</b>.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Conferidor de reserva: <b>negação vira “e”</b> (exigente: precisa dos dois fatos para acusar a mentira); <b>equivalência vira “ou”</b> (folgada: só reescreve a promessa).</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Teste universal de negação:</b> tente imaginar um cenário em que a frase original e a sua resposta sejam verdadeiras <b>ao mesmo tempo</b>. Se conseguir, a sua “negação” está errada.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> Por que a negação do condicional é MANÉ e não uma regra à parte: <code>p → q</code> equivale a <code>~p ∨ q</code> (NEMA); aplicando De Morgan, <code>~(~p ∨ q) = p ∧ ~q</code>. É De Morgan aplicado — não há nada novo para decorar.</div>\n"
             }
           ],
           "flashcards": [
@@ -675,6 +679,66 @@ window.CONTENT = {
               "tema": "Método",
               "pergunta": "“Equivalente a” e “negação de” pedem a mesma coisa?",
               "resposta": "Não. “Equivalente a” → contrapositiva (~q → ~p, com seta). “Negação de” ou “é falsa” → p ∧ ~q (com “e”, sem seta)."
+            },
+            {
+              "tema": "Mnemônicos",
+              "pergunta": "NENE — o que é?",
+              "resposta": "Negação de “e” e de “ou” (De Morgan): NEga as duas partes e troca o conectivo. ~(p ∧ q) = ~p ∨ ~q e ~(p ∨ q) = ~p ∧ ~q."
+            },
+            {
+              "tema": "Mnemônicos",
+              "pergunta": "MANÉ — o que é?",
+              "resposta": "Negação do condicional: MAntém o antecedente, NEga o consequente, e a seta vira “e”. ~(p → q) = p ∧ ~q."
+            },
+            {
+              "tema": "Mnemônicos",
+              "pergunta": "NEMA — o que é?",
+              "resposta": "Equivalência do condicional em disjunção: NEga o antecedente, MAntém o consequente, e a seta vira “ou”. p → q = ~p ∨ q."
+            },
+            {
+              "tema": "Mnemônicos",
+              "pergunta": "Como não trocar MANÉ com NEMA?",
+              "resposta": "Leia da esquerda para a direita: o apelido diz o que acontece com a 1ª parte e depois com a 2ª. MA-NÉ (mantém, nega) é a NEGAÇÃO e dá “e”. NE-MA (nega, mantém) é a EQUIVALÊNCIA e dá “ou”."
+            },
+            {
+              "tema": "Negações",
+              "pergunta": "Qual a regra que vale para toda negação?",
+              "resposta": "O conectivo troca de time: o “e” vira “ou”, o “ou” vira “e” e a seta vira “e”. Se você negou e o conectivo continuou igual, errou."
+            },
+            {
+              "tema": "Negações",
+              "pergunta": "Qual a negação de “O sistema é rápido ou é seguro”?",
+              "resposta": "“O sistema não é rápido e não é seguro”. Para derrubar um “ou”, é preciso derrubar as duas partes."
+            },
+            {
+              "tema": "Negações",
+              "pergunta": "Qual a negação de “Ana estuda e trabalha”?",
+              "resposta": "“Ana não estuda ou não trabalha”. Basta uma das duas falhar para desmentir um “e”."
+            },
+            {
+              "tema": "Negações",
+              "pergunta": "Qual a negação de p ↔ q?",
+              "resposta": "p ↔ ~q — nega só um dos lados. Equivale ao “ou exclusivo”."
+            },
+            {
+              "tema": "Quantificadores",
+              "pergunta": "Qual a negação de “Todo A é B”?",
+              "resposta": "“Algum A NÃO é B”. Não é “nenhum A é B” — basta um contraexemplo para derrubar um “todo”."
+            },
+            {
+              "tema": "Quantificadores",
+              "pergunta": "Qual a negação de “Algum A é B”? E de “Nenhum A é B”?",
+              "resposta": "A negação de “algum A é B” é “nenhum A é B”. A negação de “nenhum A é B” é “algum A é B”."
+            },
+            {
+              "tema": "Equivalências",
+              "pergunta": "Como transformar p → q num “ou”?",
+              "resposta": "Negue o antecedente e mantenha o consequente: ~p ∨ q (NEMA). “Se chove, levo guarda-chuva” = “ou não chove, ou levo guarda-chuva”."
+            },
+            {
+              "tema": "Equivalências",
+              "pergunta": "Como escrever p ↔ q com condicionais?",
+              "resposta": "(p → q) ∧ (q → p) — a bicondicional é ida E volta."
             }
           ],
           "simulados": [
