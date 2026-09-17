@@ -1,0 +1,176 @@
+{
+  "id": "crase-01",
+  "materiaId": "crase",
+  "nome": "Crase — fundamentos e casos clássicos",
+  "descricao": "A regra-mãe, os três testes e a lista de obrigatórios, proibidos e facultativos.",
+  "nivel": "Introdutório",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Conceito · crase × acento grave",
+      "text": "Em gramática, dá-se o nome de CRASE:",
+      "options": [
+        "ao acento grave colocado sobre a vogal “a”;",
+        "à fusão de duas vogais idênticas, geralmente a preposição “a” com o artigo “a”;",
+        "à preposição exigida pela regência de certos verbos;",
+        "ao artigo definido feminino quando antecede substantivo determinado."
+      ],
+      "answer": 1,
+      "exp": "Crase é o FENÔMENO da fusão (do grego krâsis, “mistura”). O acento grave é apenas o SINAL que a indica na escrita — por isso o edital fala em “emprego do sinal indicativo de crase”, e não em “acento de crase”."
+    },
+    {
+      "type": "mc",
+      "tag": "Regra-mãe · os dois ingredientes",
+      "text": "Assinale a frase em que o sinal indicativo de crase foi empregado corretamente:",
+      "options": [
+        "Entreguei o relatório à diretora.",
+        "Cheguei à Brasília na terça-feira.",
+        "Todos começaram à trabalhar mais cedo.",
+        "Refiro-me à uma proposta antiga."
+      ],
+      "answer": 0,
+      "exp": "Em (a) há os dois ingredientes: “entregar algo A alguém” (preposição) + “a diretora” (artigo). Teste: “entreguei ao diretor”. Em (b), Brasília não admite artigo (volto DE Brasília). Em (c), não há crase antes de verbo. Em (d), “uma” é artigo indefinido e não se funde com a preposição."
+    },
+    {
+      "type": "mc",
+      "tag": "Teste do masculino · regência de “assistir”",
+      "text": "Aplicando o teste do masculino à lacuna de “Assisti __ peça ontem”, conclui-se que:",
+      "options": [
+        "o correto é “Assisti a peça”, pois “assistir” é sempre transitivo direto;",
+        "o correto é “Assisti à peça”, pois “assistir”, no sentido de ver, exige a preposição “a”;",
+        "o correto é “Assisti há peça”, forma que indica tempo decorrido;",
+        "as duas primeiras formas são igualmente aceitáveis."
+      ],
+      "answer": 1,
+      "exp": "“Assisti AO filme” → logo, “assisti À peça”. No sentido de ver/presenciar, assistir é transitivo INDIRETO. Só é transitivo direto no sentido de prestar assistência (“o médico assistiu a vítima”) ou de caber/pertencer (“não lhe assiste esse direito”)."
+    },
+    {
+      "type": "mc",
+      "tag": "Crase diante de masculino · “à moda de”",
+      "text": "Assinale a única frase em que o sinal indicativo de crase é obrigatório, apesar de a palavra seguinte ser MASCULINA:",
+      "options": [
+        "Ele redigiu o texto à computador.",
+        "Vestiu-se à Luís XV para a festa.",
+        "Fomos à pé até a esquina.",
+        "Ela trabalha à noite e dorme à tarde."
+      ],
+      "answer": 1,
+      "exp": "“À Luís XV” = “à MODA DE Luís XV”: o artigo feminino concorda com a palavra elíptica “moda”. É o único caso de crase diante de masculino. Em (a) e (c) não há crase (“a computador”, “a pé”). Em (d) a crase existe, mas as palavras são femininas — não atende ao enunciado."
+    },
+    {
+      "type": "ce",
+      "tag": "Proibido · antes de verbo",
+      "text": "Na frase “À partir de amanhã, o sistema ficará indisponível”, o sinal indicativo de crase está corretamente empregado.",
+      "options": ["Certo", "Errado"],
+      "answer": 1,
+      "exp": "Errado. “Partir” é verbo, e verbo não admite artigo — sem artigo, não há fusão. Escreve-se sempre “a partir de”. Mesma lógica de “a fim de”."
+    },
+    {
+      "type": "mc",
+      "tag": "Horas",
+      "text": "Assinale a opção INCORRETA quanto ao emprego da crase na indicação de horas:",
+      "options": [
+        "A prova começa às 13h.",
+        "As inscrições serão aceitas a partir das 13h.",
+        "Ele chegou por volta das 14h.",
+        "O expediente vai de às 8h às 17h."
+      ],
+      "answer": 3,
+      "exp": "Na correlação “de… a…”, o primeiro termo não recebe artigo: escreve-se “das 8h às 17h” ou “de 8h a 17h”, nunca “de às”. Horas determinadas pedem crase (às 13h), e as demais opções estão corretas."
+    },
+    {
+      "type": "mc",
+      "tag": "Proibidos · masculino, pronome e numeral",
+      "text": "Assinale a frase CORRETA quanto ao emprego do sinal indicativo de crase:",
+      "options": [
+        "Pagou o carro à prazo.",
+        "Pagou o carro à vista.",
+        "Entregou o relatório à ela.",
+        "Ficou à cinco metros do portão."
+      ],
+      "answer": 1,
+      "exp": "“Vista” é feminino e forma locução adverbial → à vista. “Prazo” é masculino → a prazo, sem crase. Em (c), pronome pessoal não admite artigo (“a ela”). Em (d), numeral sem artigo também não gera crase (“a cinco metros”)."
+    },
+    {
+      "type": "mc",
+      "tag": "Pronomes de tratamento",
+      "text": "Assinale a frase em que o uso do sinal indicativo de crase está correto:",
+      "options": [
+        "Refiro-me à Vossa Senhoria com o devido respeito.",
+        "Dirigiu-se à senhora com o devido respeito.",
+        "Entreguei o documento à ela em mãos.",
+        "Cheguei à esta conclusão ontem à noite."
+      ],
+      "answer": 1,
+      "exp": "Pronomes de tratamento iniciados por “Vossa/Sua” não admitem artigo → sem crase. Já “senhora”, “senhorita”, “dona” e “madame” admitem → “à senhora”. Pronome pessoal (“ela”) e demonstrativo (“esta”) também não admitem artigo."
+    },
+    {
+      "type": "mc",
+      "tag": "Nomes de lugar · teste do “volto de/da”",
+      "text": "“Vou __ Bahia e depois __ Portugal.” Aplicando o teste “volto DA / volto DE”, as lacunas devem ser preenchidas, respectivamente, por:",
+      "options": ["a – a", "à – a", "a – à", "à – à"],
+      "answer": 1,
+      "exp": "“Volto DA Bahia” → o nome admite artigo → “Vou À Bahia”. “Volto DE Portugal” → não admite artigo → “Vou A Portugal”. Se houver determinação, o artigo aparece: “Vou à Portugal de Saramago”."
+    },
+    {
+      "type": "mc",
+      "tag": "Demonstrativos · àquele/àquela",
+      "text": "Assinale a frase em que a crase com o pronome demonstrativo está corretamente indicada:",
+      "options": [
+        "Obedeça aquele regulamento sem discutir.",
+        "Referiu-se àquela norma já revogada.",
+        "Comprei àquele livro na feira de domingo.",
+        "Vi àquela cena por acaso."
+      ],
+      "answer": 1,
+      "exp": "Quem se refere, refere-se A algo: a + aquela = àquela. Em (a) falta a crase — “obedecer” também é transitivo indireto e exigiria “àquele regulamento”. Em (c) e (d), “comprar” e “ver” são transitivos diretos: sem preposição, não há crase."
+    },
+    {
+      "type": "ce",
+      "tag": "Proibido · palavras repetidas",
+      "text": "Em “Analisaram os contratos um à um e discutiram tudo cara à cara”, o sinal indicativo de crase está corretamente empregado.",
+      "options": ["Certo", "Errado"],
+      "answer": 1,
+      "exp": "Errado. Expressões formadas pela repetição da mesma palavra não admitem artigo — o “a” é apenas preposição: um a um, cara a cara, dia a dia, gota a gota, frente a frente."
+    },
+    {
+      "type": "mc",
+      "tag": "Facultativo",
+      "text": "O emprego do sinal indicativo de crase é FACULTATIVO em:",
+      "options": [
+        "Entreguei o convite à Maria.",
+        "Fomos à praia no domingo.",
+        "Atendemos ao público às segundas-feiras.",
+        "Ele agiu à revelia da chefia."
+      ],
+      "answer": 0,
+      "exp": "Diante de nome próprio feminino de PESSOA a crase é facultativa (a/à Maria) — assim como diante de possessivo feminino singular (a/à minha irmã) e depois de “até” (até a/até à porta). Nas demais opções há locução adverbial ou hora determinada: crase obrigatória."
+    },
+    {
+      "type": "mc",
+      "tag": "Locuções",
+      "text": "Assinale a opção em que TODAS as expressões exigem o sinal indicativo de crase:",
+      "options": [
+        "à noite – à toa – à medida que",
+        "à noite – a pé – à medida que",
+        "à vista – a prazo – à custa de",
+        "às pressas – a partir de – à beira de"
+      ],
+      "answer": 0,
+      "exp": "Em (a) há uma locução adverbial, outra adverbial e uma conjuntiva — todas femininas, todas com crase obrigatória. Nas demais aparece pelo menos uma expressão masculina (“a pé”, “a prazo”) ou formada com verbo (“a partir de”)."
+    },
+    {
+      "type": "mc",
+      "tag": "Armadilhas · casa, terra, nome de cidade",
+      "text": "Assinale a frase em que a crase é OBRIGATÓRIA:",
+      "options": [
+        "Voltei a casa depois do expediente.",
+        "Voltei à casa de meus pais no fim de semana.",
+        "Os marinheiros desceram a terra ao amanhecer.",
+        "Chegamos a Roma de madrugada."
+      ],
+      "answer": 1,
+      "exp": "“Casa” e “terra” só recebem crase quando vêm DETERMINADAS. “Voltei a casa” (= ao meu lar) não tem determinante; “à casa de meus pais” tem. “Terra” oposta a “bordo” dispensa artigo. “Roma” não admite artigo (volto DE Roma)."
+    }
+  ]
+}

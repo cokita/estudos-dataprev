@@ -490,6 +490,564 @@ window.CONTENT = {
               ]
             }
           ]
+        },
+        {
+          "id": "crase",
+          "nome": "Crase",
+          "icon": "ti-grave",
+          "descricao": "Uma regra só, três testes e uma lista curta de exceções. É o tópico de Português com a melhor relação entre esforço e ponto garantido na FGV.",
+          "resumo": [
+            {
+              "titulo": "Crase não é acento",
+              "html": "\n<p>A palavra vem do grego <b>krâsis</b>, “mistura, fusão”. Os gregos usavam o termo para o encontro de duas vogais que se fundiam numa só. É exatamente isso que acontece em português.</p>\n<p><b>Crase é o fenômeno</b> — a fusão de duas vogais idênticas. O <b>acento grave (à)</b> é apenas o <i>sinal</i> que registra essa fusão na escrita.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Por isso o edital não diz “acento de crase”: diz <b>“emprego do sinal indicativo de crase”</b>. Numa prova da FGV, uma alternativa que chame o acento grave de “crase” pode estar sendo testada justamente aí.</div>\n<p>E quais são as duas vogais que se fundem? Quase sempre a <b>preposição <i>a</i></b> e o <b>artigo definido feminino <i>a</i></b>.</p>"
+            },
+            {
+              "titulo": "A regra-mãe: só existe uma",
+              "html": "\n<p>Tudo em crase se resume a esta soma:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">preposição a</span> quem a exige é o termo <b>anterior</b> (um verbo, um nome ou uma locução)</div>\n  <div class=\"def\"><span class=\"def-t\">+ artigo a(s)</span> quem o admite é a palavra <b>posterior</b> (feminina e determinada)</div>\n  <div class=\"def\"><span class=\"def-t\">= à(s)</span> a crase</div>\n</div>\n<p>Se faltar <b>qualquer um dos dois</b>, não há crase. Nenhuma exceção real quebra essa conta — as “exceções” da lista clássica são apenas casos em que um dos dois ingredientes não existe.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Analogia de dev: crase é um <b>join</b>. Se um dos dois lados vier vazio, o resultado é vazio. A maior parte dos erros de crase é gente acentuando um lado só.</div>\n<p>Exemplo desmontado — <i>“Entreguei o relatório à diretora.”</i></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">preposição</span> entregar algo <b>a</b> alguém — a regência do verbo exige o <i>a</i></div>\n  <div class=\"def\"><span class=\"def-t\">artigo</span> <b>a</b> diretora — substantivo feminino determinado</div>\n  <div class=\"def\"><span class=\"def-t\">resultado</span> a + a = <b>à</b> diretora</div>\n</div>"
+            },
+            {
+              "titulo": "Teste 1 — troque por uma palavra masculina",
+              "html": "\n<p>É o teste mais rápido e o mais seguro. Substitua a palavra feminina por um equivalente masculino e leia em voz alta:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">deu “ao”</span> há crase</div>\n  <div class=\"def\"><span class=\"def-t\">deu “o”</span> só artigo, sem preposição — <b>não</b> há crase</div>\n  <div class=\"def\"><span class=\"def-t\">deu “a” (sozinho)</span> só preposição, sem artigo — <b>não</b> há crase</div>\n</div>\n<p>Na prática:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Assisti __ peça</span> assisti <b>ao</b> filme → <b>à</b> peça</div>\n  <div class=\"def\"><span class=\"def-t\">Vi __ peça</span> vi <b>o</b> filme → <b>a</b> peça</div>\n  <div class=\"def\"><span class=\"def-t\">Refiro-me __ questões difíceis</span> refiro-me <b>a</b> problemas difíceis → <b>a</b> questões</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> O teste funciona porque o masculino <b>separa visualmente</b> o que em feminino está fundido: <i>ao</i> = a + o. Se o masculino não junta, o feminino também não junta.</div>"
+            },
+            {
+              "titulo": "Teste 2 — “volto DA” ou “volto DE”?",
+              "html": "\n<p>Serve para nomes de lugar, onde o teste do masculino não ajuda (cidades e países não têm par masculino).</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Volto DA</span> o nome admite artigo → <b>Vou à</b></div>\n  <div class=\"def\"><span class=\"def-t\">Volto DE</span> o nome não admite artigo → <b>Vou a</b></div>\n</div>\n<p>Volto <b>da</b> Bahia → Vou <b>à</b> Bahia. Volto <b>de</b> Portugal → Vou <b>a</b> Portugal. Volto <b>de</b> São Paulo → Vou <b>a</b> São Paulo.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Mas basta <b>determinar</b> o nome para o artigo aparecer: <i>Vou <b>à</b> São Paulo dos anos 1950</i>; <i>Refiro-me <b>à</b> Portugal de Saramago</i>. Um adjunto que especifica o lugar traz o artigo junto — a FGV adora esse par.</div>"
+            },
+            {
+              "titulo": "Teste 3 — o algoritmo de três perguntas",
+              "html": "\n<p>Quando bater dúvida numa questão, rode esta sequência. Ela decide qualquer caso:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Há preposição?</span> o termo anterior exige <i>a</i>? (regência do verbo ou do nome, ou uma locução). Se <b>não</b> → sem crase, pare aqui.</div>\n  <div class=\"def\"><span class=\"def-t\">2. Há artigo?</span> a palavra seguinte é <b>feminina</b> e admite <i>a(s)</i>? Se <b>não</b> → sem crase.</div>\n  <div class=\"def\"><span class=\"def-t\">3. Confirme</span> troque pelo masculino. Deu <i>ao/aos</i>? Então é <b>à/às</b>.</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Note a ordem: a <b>preposição vem primeiro</b>. Por isso regência e crase são o mesmo assunto — quem não sabe que “obedecer” pede <i>a</i> não tem como decidir a crase de “obedecer às normas”.</div>"
+            },
+            {
+              "titulo": "Casos OBRIGATÓRIOS",
+              "html": "\n<p>Cinco blocos. Cobrem quase toda questão de prova.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Locuções adverbiais femininas</span> à noite, à tarde, à vontade, às pressas, às escondidas, à toa, à vista, à mão, à força, às vezes, à risca, à beça</div>\n  <div class=\"def\"><span class=\"def-t\">2. Locuções prepositivas femininas</span> à frente de, à beira de, à custa de, à espera de, à procura de, à mercê de, em frente à, junto à</div>\n  <div class=\"def\"><span class=\"def-t\">3. Locuções conjuntivas femininas</span> à medida que, à proporção que</div>\n  <div class=\"def\"><span class=\"def-t\">4. Horas determinadas</span> às 8h, à uma da tarde, às 15h30 — <i>mas</i> “a que horas?”, “daqui a uma hora”</div>\n  <div class=\"def\"><span class=\"def-t\">5. “À moda de” / “à maneira de”</span> mesmo diante de palavra masculina: vestiu-se <b>à</b> Luís XV; escreve <b>à</b> Machado de Assis; bife <b>à</b> milanesa</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> O bloco 5 é a <b>única crase diante de masculino</b> que existe. Ela se justifica pela elipse de “moda”: o artigo feminino concorda com a palavra oculta, não com o nome que aparece.</div>"
+            },
+            {
+              "titulo": "Casos PROIBIDOS",
+              "html": "\n<p>Aqui falta o artigo, ou falta a preposição, ou faltam os dois.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Palavra masculina</span> a pé, a prazo, a lápis, a cavalo, a bordo, a critério de, a pedido de <i>(salvo “à moda de”)</i></div>\n  <div class=\"def\"><span class=\"def-t\">Verbo</span> a partir de, a fim de, começou a chover, passou a estudar — verbo não aceita artigo</div>\n  <div class=\"def\"><span class=\"def-t\">Artigo indefinido</span> a uma conclusão, a uma amiga</div>\n  <div class=\"def\"><span class=\"def-t\">Pronomes pessoais</span> a ela, a mim, a ti, a você, a Vossa Senhoria</div>\n  <div class=\"def\"><span class=\"def-t\">Demonstrativos esta/essa</span> a esta hora, a essa altura <i>(mas: àquela hora)</i></div>\n  <div class=\"def\"><span class=\"def-t\">Palavras repetidas</span> um a um, cara a cara, dia a dia, gota a gota, frente a frente</div>\n  <div class=\"def\"><span class=\"def-t\">Plural genérico</span> refiro-me a questões difíceis, submeto-me a ordens absurdas — “a” singular não cobre plural</div>\n  <div class=\"def\"><span class=\"def-t\">Palavra sem artigo</span> a Vossa Excelência, a Roma, a Portugal, a Brasília</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> O par mais cobrado da lista: <b>“à vista”</b> (feminino, com crase) × <b>“a prazo”</b> (masculino, sem crase). Vêm juntos na mesma alternativa com frequência.</div>"
+            },
+            {
+              "titulo": "Casos FACULTATIVOS",
+              "html": "\n<p>Três, e só três. Em qualquer deles, marcar ou não marcar está correto — e a FGV às vezes cobra exatamente o reconhecimento da facultatividade.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Nome próprio feminino de pessoa</span> Entreguei o convite <b>a</b> Maria / <b>à</b> Maria</div>\n  <div class=\"def\"><span class=\"def-t\">2. Pronome possessivo feminino singular</span> Referiu-se <b>a</b> minha irmã / <b>à</b> minha irmã</div>\n  <div class=\"def\"><span class=\"def-t\">3. Depois de “até”</span> Foi <b>até a</b> porta / <b>até à</b> porta</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Cuidado com o item 2: a facultatividade vale para o <b>singular</b>. No plural, o possessivo exige que o artigo apareça ou não junto com ele — <i>“Referiu-se às minhas irmãs”</i> é a forma corrente.</div>"
+            },
+            {
+              "titulo": "Casa, terra, distância — as três armadilhas",
+              "html": "\n<p>Estas três palavras têm uma regra própria: <b>só recebem crase quando vêm determinadas</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">casa</span> = o próprio lar, sem determinante → <i>Voltei <b>a</b> casa.</i> · determinada → <i>Voltei <b>à</b> casa de meus pais.</i></div>\n  <div class=\"def\"><span class=\"def-t\">terra</span> = oposto de “bordo” → <i>Os marinheiros desceram <b>a</b> terra.</i> · planeta ou lugar determinado → <i>Voltou <b>à</b> Terra.</i> / <i>Chegou <b>à</b> terra de seus avós.</i></div>\n  <div class=\"def\"><span class=\"def-t\">distância</span> sem especificação → <i>Acompanhou tudo <b>a</b> distância.</i> · especificada → <i>Parou <b>à</b> distância de dois metros.</i></div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Sobre “ensino a distância”: dicionários modernos já registram também “à distância” sem especificação. Em prova de concurso, porém, siga a <b>regra da determinação</b> — é ela que a banca cobra.</div>"
+            },
+            {
+              "titulo": "Àquele, àquela, àquilo",
+              "html": "\n<p>O <i>a</i> preposicional também se funde com o <b>a</b> inicial dos demonstrativos <b>aquele, aquela, aquilo</b> — e aí o sinal é obrigatório.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">verbo exige “a”</span> Refiro-me <b>àquele</b> processo · Obedeça <b>àquela</b> norma · Assisti <b>àquilo</b> perplexo</div>\n  <div class=\"def\"><span class=\"def-t\">verbo não exige</span> Vi <b>aquele</b> filme · Comprei <b>aquele</b> livro · Li <b>aquilo</b> ontem</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Teste do masculino não serve aqui (o pronome já é masculino). Use o teste da <b>troca por “a este”</b>: se couber “a este processo”, cabe “àquele processo”.</div>\n<p>Vale também para o relativo <b>a qual / as quais</b>, quando há preposição: <i>a empresa <b>à qual</b> me referi</i> (teste: o processo <b>ao qual</b> me referi).</p>"
+            },
+            {
+              "titulo": "Regência vem antes — a pegadinha nº 1 da FGV",
+              "html": "\n<p>A banca raramente pergunta crase “pura”. Ela esconde a questão de crase dentro de uma questão de <b>regência</b>: se você errar o verbo, erra o acento por consequência.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">assistir</span> = ver → <b>indireto</b>: assisti <b>à</b> sessão · = prestar assistência → <b>direto</b>: o médico assistiu <b>a</b> vítima</div>\n  <div class=\"def\"><span class=\"def-t\">visar</span> = almejar → <b>indireto</b>: visamos <b>à</b> aprovação · = mirar / pôr visto → <b>direto</b>: visou o alvo, visou o cheque</div>\n  <div class=\"def\"><span class=\"def-t\">aspirar</span> = desejar → <b>indireto</b>: aspira <b>ao</b> cargo · = sorver → <b>direto</b>: aspirou o ar</div>\n  <div class=\"def\"><span class=\"def-t\">obedecer / desobedecer</span> sempre <b>indireto</b>: obedeça <b>às</b> normas</div>\n  <div class=\"def\"><span class=\"def-t\">preferir</span> prefere-se X <b>a</b> Y — nunca “do que”: prefiro o método antigo <b>ao</b> novo</div>\n  <div class=\"def\"><span class=\"def-t\">implicar</span> = acarretar → <b>direto</b>, sem “em”: a decisão implicou <b>mudanças</b></div>\n  <div class=\"def\"><span class=\"def-t\">chegar / ir</span> pedem <b>a</b>, não “em”: cheguei <b>à</b> repartição</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Nomes também regem: <i>obediência <b>à</b> lei</i>, <i>referência <b>à</b> norma</i>, <i>respeito <b>à</b> decisão</i>, <i>acesso <b>à</b> informação</i>. Regência nominal cai tanto quanto a verbal.</div>"
+            },
+            {
+              "titulo": "O plural e o sentido: a questão que separa candidato",
+              "html": "\n<p>Diante de palavra no plural, a crase depende do <b>sentido</b>, porque depende do artigo.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">sem artigo (genérico)</span> <i>Não me refiro <b>a</b> pessoas mal-intencionadas.</i> — pessoas em geral</div>\n  <div class=\"def\"><span class=\"def-t\">com artigo (determinado)</span> <i>Não me refiro <b>às</b> pessoas mal-intencionadas.</i> — aquelas, já identificadas</div>\n</div>\n<p>As duas frases estão <b>corretas</b>. Elas simplesmente dizem coisas diferentes. Quando a FGV apresenta esse par, a resposta quase nunca é “uma está errada”.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> O que é sempre <b>errado</b> é o artigo singular com substantivo plural: <i>“à normas”</i>, <i>“à ordens”</i>. Se a palavra está no plural e há artigo, o sinal é <b>às</b>.</div>"
+            },
+            {
+              "titulo": "Checklist de 60 segundos",
+              "html": "\n<p>Para rodar na prova, na ordem:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1</span> A palavra seguinte é <b>masculina</b>? Sem crase — a menos que caiba “à moda de”.</div>\n  <div class=\"def\"><span class=\"def-t\">2</span> A palavra seguinte é <b>verbo</b>, <b>pronome pessoal</b> ou <b>“uma”</b>? Sem crase.</div>\n  <div class=\"def\"><span class=\"def-t\">3</span> É <b>palavra repetida</b> (um a um, dia a dia)? Sem crase.</div>\n  <div class=\"def\"><span class=\"def-t\">4</span> É <b>locução feminina</b> (à noite, à medida que, à espera de) ou <b>hora determinada</b>? Crase obrigatória.</div>\n  <div class=\"def\"><span class=\"def-t\">5</span> É <b>nome de pessoa</b>, <b>possessivo singular</b> ou vem depois de <b>até</b>? Facultativa — as duas formas estão certas.</div>\n  <div class=\"def\"><span class=\"def-t\">6</span> Nos demais casos: <b>troque pelo masculino</b>. Deu “ao”, é “à”.</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Se sobrar tempo numa questão de crase, releia o <b>verbo</b> da frase, não o acento. O erro plantado pela banca costuma estar na regência.</div>"
+            }
+          ],
+          "flashcards": [
+            {
+              "tema": "Conceito",
+              "pergunta": "Qual a diferença entre “crase” e “acento grave”?",
+              "resposta": "Crase é o FENÔMENO: a fusão de duas vogais idênticas (preposição a + artigo a). O acento grave (à) é apenas o SINAL que registra essa fusão. Por isso o edital fala em “sinal indicativo de crase”."
+            },
+            {
+              "tema": "Regra-mãe",
+              "pergunta": "Quais são os dois ingredientes obrigatórios da crase?",
+              "resposta": "Preposição “a” (exigida pelo termo ANTERIOR) + artigo definido feminino “a(s)” (admitido pela palavra POSTERIOR). Faltando qualquer um dos dois, não há crase."
+            },
+            {
+              "tema": "Teste",
+              "pergunta": "Como funciona o teste do masculino?",
+              "resposta": "Troque a palavra feminina por um masculino equivalente. Deu “ao” → há crase. Deu só “o” (artigo) ou só “a” (preposição) → não há crase."
+            },
+            {
+              "tema": "Teste",
+              "pergunta": "Qual o teste para nomes de lugar?",
+              "resposta": "“Volto DA” → o nome admite artigo → “Vou À”. “Volto DE” → não admite → “Vou A”. Ex.: volto da Bahia → vou à Bahia; volto de Portugal → vou a Portugal."
+            },
+            {
+              "tema": "Lugar",
+              "pergunta": "“Vou a São Paulo” ou “Vou à São Paulo”?",
+              "resposta": "“Vou a São Paulo” — volto DE São Paulo, logo não há artigo. Mas com determinação o artigo aparece: “Vou à São Paulo dos anos 1950”."
+            },
+            {
+              "tema": "Obrigatório",
+              "pergunta": "Cite quatro locuções adverbiais femininas que exigem crase.",
+              "resposta": "À noite, às pressas, à vontade, à vista, à toa, à mão, às escondidas, à força, às vezes, à risca."
+            },
+            {
+              "tema": "Obrigatório",
+              "pergunta": "Quais locuções conjuntivas levam crase?",
+              "resposta": "À medida que e à proporção que. Ambas são femininas e indicam progressão simultânea."
+            },
+            {
+              "tema": "Obrigatório",
+              "pergunta": "Quando há crase diante de palavra MASCULINA?",
+              "resposta": "Só no caso de “à moda de” / “à maneira de” com a palavra “moda” elíptica: vestiu-se à Luís XV, escreve à Machado de Assis, bife à milanesa."
+            },
+            {
+              "tema": "Horas",
+              "pergunta": "Quando a indicação de horas leva crase?",
+              "resposta": "Quando a hora é determinada: às 8h, à uma da tarde, às 15h30. Não leva em “a que horas?”, “daqui a uma hora”, “de 8h a 17h”."
+            },
+            {
+              "tema": "Proibido",
+              "pergunta": "Por que “a partir de” nunca leva crase?",
+              "resposta": "Porque “partir” é verbo, e verbo não admite artigo. Sem artigo, não há fusão. Mesma lógica de “a fim de”."
+            },
+            {
+              "tema": "Proibido",
+              "pergunta": "“À vista” ou “a vista”? E “à prazo” ou “a prazo”?",
+              "resposta": "À vista (vista é feminino, locução adverbial → crase) e a prazo (prazo é masculino → sem crase). É o par mais cobrado em prova."
+            },
+            {
+              "tema": "Proibido",
+              "pergunta": "Há crase diante de pronome pessoal?",
+              "resposta": "Não: a ela, a mim, a você, a Vossa Senhoria. Pronome pessoal e pronome de tratamento com “Vossa/Sua” não admitem artigo."
+            },
+            {
+              "tema": "Proibido",
+              "pergunta": "E diante de “senhora”, “dona”, “senhorita”?",
+              "resposta": "Aí HÁ crase, porque essas palavras admitem artigo: dirigiu-se à senhora, entregou à dona Maria, referiu-se à senhorita."
+            },
+            {
+              "tema": "Proibido",
+              "pergunta": "Por que “um a um” e “cara a cara” não levam crase?",
+              "resposta": "Expressões formadas pela repetição da mesma palavra não admitem artigo — o “a” ali é só preposição. Também: dia a dia, gota a gota, frente a frente."
+            },
+            {
+              "tema": "Facultativo",
+              "pergunta": "Quais são os três casos de crase facultativa?",
+              "resposta": "1) Nome próprio feminino de pessoa (a/à Maria); 2) pronome possessivo feminino singular (a/à minha irmã); 3) depois de “até” (até a/até à porta)."
+            },
+            {
+              "tema": "Armadilha",
+              "pergunta": "Quando “casa” leva crase?",
+              "resposta": "Só quando vem determinada. “Voltei a casa” (meu lar, sem determinante) × “Voltei à casa de meus pais” (determinada)."
+            },
+            {
+              "tema": "Armadilha",
+              "pergunta": "Quando “terra” leva crase?",
+              "resposta": "Sem crase quando é o oposto de “bordo” (os marinheiros desceram a terra). Com crase quando é o planeta ou vem determinada (voltou à Terra; chegou à terra de seus avós)."
+            },
+            {
+              "tema": "Armadilha",
+              "pergunta": "“A distância” ou “à distância”?",
+              "resposta": "Sem especificação, “a distância” (acompanhou tudo a distância). Especificada, crase obrigatória: “à distância de dois metros”. Em prova, siga a regra da determinação."
+            },
+            {
+              "tema": "Demonstrativos",
+              "pergunta": "Quando se escreve “àquele / àquela / àquilo”?",
+              "resposta": "Quando o termo anterior exige a preposição “a”: refiro-me àquele processo, obedeça àquela norma. Sem preposição, fica “aquele”: vi aquele filme, comprei aquele livro."
+            },
+            {
+              "tema": "Relativo",
+              "pergunta": "“A empresa a qual me referi” está correto?",
+              "resposta": "Não — “referir-se” exige preposição, que se funde com o artigo: “a empresa À QUAL me referi”. Teste: “o processo AO QUAL me referi”."
+            },
+            {
+              "tema": "Regência",
+              "pergunta": "Qual a regência de “assistir”?",
+              "resposta": "No sentido de ver/presenciar, é transitivo indireto: assisti À sessão. No sentido de prestar assistência, é transitivo direto: o médico assistiu A vítima (sem crase)."
+            },
+            {
+              "tema": "Regência",
+              "pergunta": "Qual a regência de “visar” e “aspirar”?",
+              "resposta": "No sentido de almejar/desejar, ambos são transitivos indiretos: visamos À aprovação, aspira AO cargo. No sentido concreto, são diretos: visou o cheque, aspirou o ar."
+            },
+            {
+              "tema": "Regência",
+              "pergunta": "“Implicar em mudanças” está correto?",
+              "resposta": "Não. No sentido de acarretar, “implicar” é transitivo DIRETO: a decisão implicou mudanças. Sem preposição, não há crase possível."
+            },
+            {
+              "tema": "Regência",
+              "pergunta": "Como se usa “preferir”?",
+              "resposta": "Prefere-se X A Y — nunca “do que”: prefiro o método antigo AO novo, prefiro a teoria À prática."
+            },
+            {
+              "tema": "Plural",
+              "pergunta": "“Refiro-me a pessoas” e “refiro-me às pessoas”: qual está errada?",
+              "resposta": "Nenhuma. Sem artigo, o sentido é genérico; com artigo, o referente é determinado. O que é sempre errado é “à pessoas” — artigo singular com substantivo plural."
+            },
+            {
+              "tema": "Pegadinha",
+              "pergunta": "Por que “a pedido de” e “a critério de” não levam crase?",
+              "resposta": "Porque “pedido” e “critério” são substantivos masculinos — não há artigo feminino a fundir. Mesma lógica de “a bordo de”, “a lápis”, “a cavalo”."
+            },
+            {
+              "tema": "Estratégia",
+              "pergunta": "Numa questão de crase da FGV, o que reler primeiro?",
+              "resposta": "O VERBO (ou o nome) que vem antes. O erro plantado pela banca quase sempre está na regência, não no acento — sem preposição, o acento é impossível."
+            }
+          ],
+          "simulados": [
+            {
+              "id": "crase-01",
+              "nome": "Crase — fundamentos e casos clássicos",
+              "descricao": "A regra-mãe, os três testes e a lista de obrigatórios, proibidos e facultativos.",
+              "nivel": "Introdutório",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Conceito · crase × acento grave",
+                  "text": "Em gramática, dá-se o nome de CRASE:",
+                  "options": [
+                    "ao acento grave colocado sobre a vogal “a”;",
+                    "à fusão de duas vogais idênticas, geralmente a preposição “a” com o artigo “a”;",
+                    "à preposição exigida pela regência de certos verbos;",
+                    "ao artigo definido feminino quando antecede substantivo determinado."
+                  ],
+                  "answer": 1,
+                  "exp": "Crase é o FENÔMENO da fusão (do grego krâsis, “mistura”). O acento grave é apenas o SINAL que a indica na escrita — por isso o edital fala em “emprego do sinal indicativo de crase”, e não em “acento de crase”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Regra-mãe · os dois ingredientes",
+                  "text": "Assinale a frase em que o sinal indicativo de crase foi empregado corretamente:",
+                  "options": [
+                    "Entreguei o relatório à diretora.",
+                    "Cheguei à Brasília na terça-feira.",
+                    "Todos começaram à trabalhar mais cedo.",
+                    "Refiro-me à uma proposta antiga."
+                  ],
+                  "answer": 0,
+                  "exp": "Em (a) há os dois ingredientes: “entregar algo A alguém” (preposição) + “a diretora” (artigo). Teste: “entreguei ao diretor”. Em (b), Brasília não admite artigo (volto DE Brasília). Em (c), não há crase antes de verbo. Em (d), “uma” é artigo indefinido e não se funde com a preposição."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Teste do masculino · regência de “assistir”",
+                  "text": "Aplicando o teste do masculino à lacuna de “Assisti __ peça ontem”, conclui-se que:",
+                  "options": [
+                    "o correto é “Assisti a peça”, pois “assistir” é sempre transitivo direto;",
+                    "o correto é “Assisti à peça”, pois “assistir”, no sentido de ver, exige a preposição “a”;",
+                    "o correto é “Assisti há peça”, forma que indica tempo decorrido;",
+                    "as duas primeiras formas são igualmente aceitáveis."
+                  ],
+                  "answer": 1,
+                  "exp": "“Assisti AO filme” → logo, “assisti À peça”. No sentido de ver/presenciar, assistir é transitivo INDIRETO. Só é transitivo direto no sentido de prestar assistência (“o médico assistiu a vítima”) ou de caber/pertencer (“não lhe assiste esse direito”)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Crase diante de masculino · “à moda de”",
+                  "text": "Assinale a única frase em que o sinal indicativo de crase é obrigatório, apesar de a palavra seguinte ser MASCULINA:",
+                  "options": [
+                    "Ele redigiu o texto à computador.",
+                    "Vestiu-se à Luís XV para a festa.",
+                    "Fomos à pé até a esquina.",
+                    "Ela trabalha à noite e dorme à tarde."
+                  ],
+                  "answer": 1,
+                  "exp": "“À Luís XV” = “à MODA DE Luís XV”: o artigo feminino concorda com a palavra elíptica “moda”. É o único caso de crase diante de masculino. Em (a) e (c) não há crase (“a computador”, “a pé”). Em (d) a crase existe, mas as palavras são femininas — não atende ao enunciado."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Proibido · antes de verbo",
+                  "text": "Na frase “À partir de amanhã, o sistema ficará indisponível”, o sinal indicativo de crase está corretamente empregado.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. “Partir” é verbo, e verbo não admite artigo — sem artigo, não há fusão. Escreve-se sempre “a partir de”. Mesma lógica de “a fim de”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Horas",
+                  "text": "Assinale a opção INCORRETA quanto ao emprego da crase na indicação de horas:",
+                  "options": [
+                    "A prova começa às 13h.",
+                    "As inscrições serão aceitas a partir das 13h.",
+                    "Ele chegou por volta das 14h.",
+                    "O expediente vai de às 8h às 17h."
+                  ],
+                  "answer": 3,
+                  "exp": "Na correlação “de… a…”, o primeiro termo não recebe artigo: escreve-se “das 8h às 17h” ou “de 8h a 17h”, nunca “de às”. Horas determinadas pedem crase (às 13h), e as demais opções estão corretas."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Proibidos · masculino, pronome e numeral",
+                  "text": "Assinale a frase CORRETA quanto ao emprego do sinal indicativo de crase:",
+                  "options": [
+                    "Pagou o carro à prazo.",
+                    "Pagou o carro à vista.",
+                    "Entregou o relatório à ela.",
+                    "Ficou à cinco metros do portão."
+                  ],
+                  "answer": 1,
+                  "exp": "“Vista” é feminino e forma locução adverbial → à vista. “Prazo” é masculino → a prazo, sem crase. Em (c), pronome pessoal não admite artigo (“a ela”). Em (d), numeral sem artigo também não gera crase (“a cinco metros”)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Pronomes de tratamento",
+                  "text": "Assinale a frase em que o uso do sinal indicativo de crase está correto:",
+                  "options": [
+                    "Refiro-me à Vossa Senhoria com o devido respeito.",
+                    "Dirigiu-se à senhora com o devido respeito.",
+                    "Entreguei o documento à ela em mãos.",
+                    "Cheguei à esta conclusão ontem à noite."
+                  ],
+                  "answer": 1,
+                  "exp": "Pronomes de tratamento iniciados por “Vossa/Sua” não admitem artigo → sem crase. Já “senhora”, “senhorita”, “dona” e “madame” admitem → “à senhora”. Pronome pessoal (“ela”) e demonstrativo (“esta”) também não admitem artigo."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Nomes de lugar · teste do “volto de/da”",
+                  "text": "“Vou __ Bahia e depois __ Portugal.” Aplicando o teste “volto DA / volto DE”, as lacunas devem ser preenchidas, respectivamente, por:",
+                  "options": [
+                    "a – a",
+                    "à – a",
+                    "a – à",
+                    "à – à"
+                  ],
+                  "answer": 1,
+                  "exp": "“Volto DA Bahia” → o nome admite artigo → “Vou À Bahia”. “Volto DE Portugal” → não admite artigo → “Vou A Portugal”. Se houver determinação, o artigo aparece: “Vou à Portugal de Saramago”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Demonstrativos · àquele/àquela",
+                  "text": "Assinale a frase em que a crase com o pronome demonstrativo está corretamente indicada:",
+                  "options": [
+                    "Obedeça aquele regulamento sem discutir.",
+                    "Referiu-se àquela norma já revogada.",
+                    "Comprei àquele livro na feira de domingo.",
+                    "Vi àquela cena por acaso."
+                  ],
+                  "answer": 1,
+                  "exp": "Quem se refere, refere-se A algo: a + aquela = àquela. Em (a) falta a crase — “obedecer” também é transitivo indireto e exigiria “àquele regulamento”. Em (c) e (d), “comprar” e “ver” são transitivos diretos: sem preposição, não há crase."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Proibido · palavras repetidas",
+                  "text": "Em “Analisaram os contratos um à um e discutiram tudo cara à cara”, o sinal indicativo de crase está corretamente empregado.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. Expressões formadas pela repetição da mesma palavra não admitem artigo — o “a” é apenas preposição: um a um, cara a cara, dia a dia, gota a gota, frente a frente."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Facultativo",
+                  "text": "O emprego do sinal indicativo de crase é FACULTATIVO em:",
+                  "options": [
+                    "Entreguei o convite à Maria.",
+                    "Fomos à praia no domingo.",
+                    "Atendemos ao público às segundas-feiras.",
+                    "Ele agiu à revelia da chefia."
+                  ],
+                  "answer": 0,
+                  "exp": "Diante de nome próprio feminino de PESSOA a crase é facultativa (a/à Maria) — assim como diante de possessivo feminino singular (a/à minha irmã) e depois de “até” (até a/até à porta). Nas demais opções há locução adverbial ou hora determinada: crase obrigatória."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Locuções",
+                  "text": "Assinale a opção em que TODAS as expressões exigem o sinal indicativo de crase:",
+                  "options": [
+                    "à noite – à toa – à medida que",
+                    "à noite – a pé – à medida que",
+                    "à vista – a prazo – à custa de",
+                    "às pressas – a partir de – à beira de"
+                  ],
+                  "answer": 0,
+                  "exp": "Em (a) há uma locução adverbial, outra adverbial e uma conjuntiva — todas femininas, todas com crase obrigatória. Nas demais aparece pelo menos uma expressão masculina (“a pé”, “a prazo”) ou formada com verbo (“a partir de”)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Armadilhas · casa, terra, nome de cidade",
+                  "text": "Assinale a frase em que a crase é OBRIGATÓRIA:",
+                  "options": [
+                    "Voltei a casa depois do expediente.",
+                    "Voltei à casa de meus pais no fim de semana.",
+                    "Os marinheiros desceram a terra ao amanhecer.",
+                    "Chegamos a Roma de madrugada."
+                  ],
+                  "answer": 1,
+                  "exp": "“Casa” e “terra” só recebem crase quando vêm DETERMINADAS. “Voltei a casa” (= ao meu lar) não tem determinante; “à casa de meus pais” tem. “Terra” oposta a “bordo” dispensa artigo. “Roma” não admite artigo (volto DE Roma)."
+                }
+              ]
+            },
+            {
+              "id": "crase-02",
+              "nome": "Crase — nível FGV",
+              "descricao": "Crase escondida dentro de regência, reescrita e sequências de lacunas, no formato de cinco alternativas da banca.",
+              "nivel": "Nível prova",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Identificação do erro",
+                  "text": "Assinale a opção em que o sinal indicativo de crase está INCORRETAMENTE empregado.",
+                  "options": [
+                    "A reunião foi adiada devido à greve dos servidores.",
+                    "O candidato respondeu à todas as questões da prova.",
+                    "Encaminhei o processo à Procuradoria na sexta-feira.",
+                    "Ele se opôs à decisão do colegiado.",
+                    "Estamos à espera de novas instruções."
+                  ],
+                  "answer": 1,
+                  "exp": "Não se usa artigo antes do pronome indefinido “todas”: escreve-se “a todas as questões”. Nas demais, os dois ingredientes existem: “devido a” + “a greve”; “encaminhar a” + “a Procuradoria”; “opor-se a” + “a decisão”; e “à espera de” é locução prepositiva feminina."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Regência verbal · a origem da crase",
+                  "text": "Assinale a opção em que o emprego da crase decorre corretamente da regência do verbo.",
+                  "options": [
+                    "Aspiramos à uma vida melhor.",
+                    "Visamos à ampliação do atendimento.",
+                    "O médico assistiu à vítima até a chegada do socorro.",
+                    "Preferimos o método antigo à o novo.",
+                    "A medida implicou à uma série de mudanças."
+                  ],
+                  "answer": 1,
+                  "exp": "“Visar”, no sentido de ter por objetivo, é transitivo indireto: visamos À ampliação. Em (a), artigo indefinido não admite crase (“a uma vida”). Em (c), “assistir” como prestar assistência é transitivo direto (“assistiu a vítima”). Em (d), o correto é “ao novo”. Em (e), “implicar” = acarretar é transitivo direto (“implicou uma série de mudanças”)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Regência + crase · “obedecer”",
+                  "text": "Sobre a frase “O relatório obedeceu as normas internas”, é correto afirmar que:",
+                  "options": [
+                    "está correta, pois “obedecer” é transitivo direto;",
+                    "há erro de regência e de crase: o correto é “obedeceu às normas internas”;",
+                    "há erro apenas de concordância verbal;",
+                    "o sinal indicativo de crase seria facultativo nesse contexto;",
+                    "o sinal indicativo de crase é proibido, porque “normas” está no plural."
+                  ],
+                  "answer": 1,
+                  "exp": "“Obedecer” é transitivo indireto: obedece-se A algo. Com o artigo exigido por “as normas internas”, a preposição funde-se com ele → “às normas”. O plural não impede a crase: impede apenas quando não há artigo (“não obedeço a normas impostas”)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Plural · artigo e sentido",
+                  "text": "Considere: (I) “Não me refiro a pessoas mal-intencionadas.” e (II) “Não me refiro às pessoas mal-intencionadas.” A relação entre as duas frases é a seguinte:",
+                  "options": [
+                    "a primeira está errada, pois “referir-se” exige sempre a crase;",
+                    "ambas estão corretas: em (I) fala-se de pessoas em sentido genérico; em (II), de um grupo já determinado;",
+                    "ambas são equivalentes, pois o plural torna a crase facultativa;",
+                    "a segunda está errada, pois não há crase diante de palavra no plural;",
+                    "a diferença é apenas de registro: a segunda é mais formal."
+                  ],
+                  "answer": 1,
+                  "exp": "A preposição “a” é exigida nos dois casos — quem varia é o ARTIGO. Sem ele, o sentido é genérico; com ele, o referente é definido. Por isso, diante de plural, a crase depende do sentido. O que nunca se admite é artigo singular com substantivo plural (“à pessoas”)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Armadilha · a/à distância",
+                  "text": "Assinale a opção em que a expressão “a distância” deveria receber o sinal indicativo de crase.",
+                  "options": [
+                    "Ele acompanhou o julgamento a distância.",
+                    "Ele parou a distância de dois metros do balcão.",
+                    "O curso é oferecido a distância.",
+                    "Manteve os curiosos a distância.",
+                    "Ficou a distância, observando tudo em silêncio."
+                  ],
+                  "answer": 1,
+                  "exp": "Sem especificação, “a distância” dispensa a crase. Quando a distância vem ESPECIFICADA (“de dois metros”), o artigo aparece e a crase passa a ser obrigatória: “à distância de dois metros”. Observação: dicionários modernos já registram “à distância” mesmo sem especificação, mas em prova siga a regra da determinação."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Facultativo · depois de “até”",
+                  "text": "Em “Acompanhou o processo até __ decisão final”, o preenchimento da lacuna:",
+                  "options": [
+                    "admite tanto “a” quanto “à”, pois depois de “até” a crase é facultativa;",
+                    "exige “à”, por se tratar de locução adverbial feminina;",
+                    "exige “a”, porque “até” já é preposição e dispensa outra;",
+                    "exige “à”, porque “decisão” está determinada por “final”;",
+                    "exige “a”, porque “até” nunca admite artigo depois de si."
+                  ],
+                  "answer": 0,
+                  "exp": "“Até” pode funcionar sozinho como preposição ou vir reforçado pela preposição “a” (até a / até à). Por isso a crase é facultativa. Os outros dois casos facultativos são o nome próprio feminino de pessoa e o pronome possessivo feminino singular."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Pronome relativo · à qual",
+                  "text": "Assinale a frase correta:",
+                  "options": [
+                    "A empresa a qual me referi encerrou as atividades.",
+                    "A empresa à qual me referi encerrou as atividades.",
+                    "A empresa que me referi encerrou as atividades.",
+                    "A empresa cuja me referi encerrou as atividades.",
+                    "A empresa aonde me referi encerrou as atividades."
+                  ],
+                  "answer": 1,
+                  "exp": "“Referir-se A” exige a preposição, que se funde com o artigo do relativo “a qual” → “à qual”. O teste do masculino confirma: “o processo AO QUAL me referi”. As demais formas rompem a regência do verbo."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Crase por elipse",
+                  "text": "Em “Ela dança à Isadora Duncan”, o sinal indicativo de crase justifica-se pela elipse da palavra “moda”.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. É a crase por elipse: “à [moda de] Isadora Duncan”. É o mecanismo que permite a crase até diante de palavra masculina — “escrever à Machado de Assis”, “bife à Osvaldo Aranha”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Sequência de lacunas",
+                  "text": "“O documento foi entregue __ diretoria __ 15h, __ pedido da presidência.” As lacunas devem ser preenchidas, na ordem, por:",
+                  "options": [
+                    "a – as – a",
+                    "à – às – a",
+                    "à – às – à",
+                    "a – às – a",
+                    "à – as – à"
+                  ],
+                  "answer": 1,
+                  "exp": "“Entregar A” + “a diretoria” → à. Hora determinada → às 15h. Terceira lacuna é a pegadinha: “pedido” é substantivo MASCULINO, logo “a pedido da presidência”, sem crase — como em “a critério de” e “a bordo de”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Nome de cidade determinado",
+                  "text": "Assinale a opção em que a crase está corretamente empregada diante de nome de lugar.",
+                  "options": [
+                    "Chegamos à São Paulo na sexta-feira.",
+                    "Voltaremos à Belo Horizonte amanhã.",
+                    "Referiu-se à São Paulo dos anos 1950.",
+                    "Iremos à Salvador de carro.",
+                    "Fomos à Recife visitar a família."
+                  ],
+                  "answer": 2,
+                  "exp": "Nomes de cidade em geral não admitem artigo (volto DE São Paulo → vou A São Paulo). Mas, quando o nome vem DETERMINADO por um modificador, o artigo aparece: “à São Paulo dos anos 1950”. Recife é masculino (volto DO Recife), logo “ao Recife”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Reescrita · determinação do complemento",
+                  "text": "Partindo de “Nunca me submeti a ordens absurdas”, a reescrita que determina o complemento SEM quebrar a correção é:",
+                  "options": [
+                    "Nunca me submeti a as ordens absurdas daquele chefe.",
+                    "Nunca me submeti às ordens absurdas daquele chefe.",
+                    "Nunca me submeti à ordens absurdas daquele chefe.",
+                    "Nunca me submeti as ordens absurdas daquele chefe.",
+                    "Nunca me submeti a ordens absurdas daquele chefe, sendo a crase facultativa."
+                  ],
+                  "answer": 1,
+                  "exp": "“Submeter-se A” exige a preposição; ao determinar o complemento (“daquele chefe”), entra o artigo “as” → a + as = às. A forma “à ordens” é impossível (artigo singular com substantivo plural), e “as ordens” perde a preposição exigida pelo verbo."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Locuções × palavra repetida",
+                  "text": "Assinale a opção que completa corretamente, quanto à crase, as expressões “Saímos ___”, “Ele chegou ___” (= no período da tarde) e “Ficaram ___ com o chefe”.",
+                  "options": [
+                    "às pressas – a tarde – frente a frente",
+                    "às pressas – à tarde – frente a frente",
+                    "as pressas – à tarde – frente à frente",
+                    "às pressas – à tarde – frente à frente",
+                    "as pressas – a tarde – frente a frente"
+                  ],
+                  "answer": 1,
+                  "exp": "“Às pressas” e “à tarde” são locuções adverbiais femininas → crase obrigatória. “Frente a frente” repete a mesma palavra e não admite artigo → sem crase. Atenção ao par “chegou à tarde” (no período da tarde) × “chegou a tarde” (aí “a tarde” é o sujeito de “chegar”)."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2309,7 +2867,8 @@ window.CONTENT = {
                 "nome": "Crase",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "Casos obrigatórios, proibidos e facultativos; ‘à distância’, ‘à moda de’, pronomes, nomes de lugar. Item de altíssima frequência e fácil de blindar."
+                "oQueCai": "Casos obrigatórios, proibidos e facultativos; ‘à distância’, ‘à moda de’, pronomes, nomes de lugar. Item de altíssima frequência e fácil de blindar.",
+                "materiaId": "crase"
               },
               {
                 "id": "pt-colocacao",

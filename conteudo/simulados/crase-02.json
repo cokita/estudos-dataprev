@@ -1,0 +1,174 @@
+{
+  "id": "crase-02",
+  "materiaId": "crase",
+  "nome": "Crase — nível FGV",
+  "descricao": "Crase escondida dentro de regência, reescrita e sequências de lacunas, no formato de cinco alternativas da banca.",
+  "nivel": "Nível prova",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Identificação do erro",
+      "text": "Assinale a opção em que o sinal indicativo de crase está INCORRETAMENTE empregado.",
+      "options": [
+        "A reunião foi adiada devido à greve dos servidores.",
+        "O candidato respondeu à todas as questões da prova.",
+        "Encaminhei o processo à Procuradoria na sexta-feira.",
+        "Ele se opôs à decisão do colegiado.",
+        "Estamos à espera de novas instruções."
+      ],
+      "answer": 1,
+      "exp": "Não se usa artigo antes do pronome indefinido “todas”: escreve-se “a todas as questões”. Nas demais, os dois ingredientes existem: “devido a” + “a greve”; “encaminhar a” + “a Procuradoria”; “opor-se a” + “a decisão”; e “à espera de” é locução prepositiva feminina."
+    },
+    {
+      "type": "mc",
+      "tag": "Regência verbal · a origem da crase",
+      "text": "Assinale a opção em que o emprego da crase decorre corretamente da regência do verbo.",
+      "options": [
+        "Aspiramos à uma vida melhor.",
+        "Visamos à ampliação do atendimento.",
+        "O médico assistiu à vítima até a chegada do socorro.",
+        "Preferimos o método antigo à o novo.",
+        "A medida implicou à uma série de mudanças."
+      ],
+      "answer": 1,
+      "exp": "“Visar”, no sentido de ter por objetivo, é transitivo indireto: visamos À ampliação. Em (a), artigo indefinido não admite crase (“a uma vida”). Em (c), “assistir” como prestar assistência é transitivo direto (“assistiu a vítima”). Em (d), o correto é “ao novo”. Em (e), “implicar” = acarretar é transitivo direto (“implicou uma série de mudanças”)."
+    },
+    {
+      "type": "mc",
+      "tag": "Regência + crase · “obedecer”",
+      "text": "Sobre a frase “O relatório obedeceu as normas internas”, é correto afirmar que:",
+      "options": [
+        "está correta, pois “obedecer” é transitivo direto;",
+        "há erro de regência e de crase: o correto é “obedeceu às normas internas”;",
+        "há erro apenas de concordância verbal;",
+        "o sinal indicativo de crase seria facultativo nesse contexto;",
+        "o sinal indicativo de crase é proibido, porque “normas” está no plural."
+      ],
+      "answer": 1,
+      "exp": "“Obedecer” é transitivo indireto: obedece-se A algo. Com o artigo exigido por “as normas internas”, a preposição funde-se com ele → “às normas”. O plural não impede a crase: impede apenas quando não há artigo (“não obedeço a normas impostas”)."
+    },
+    {
+      "type": "mc",
+      "tag": "Plural · artigo e sentido",
+      "text": "Considere: (I) “Não me refiro a pessoas mal-intencionadas.” e (II) “Não me refiro às pessoas mal-intencionadas.” A relação entre as duas frases é a seguinte:",
+      "options": [
+        "a primeira está errada, pois “referir-se” exige sempre a crase;",
+        "ambas estão corretas: em (I) fala-se de pessoas em sentido genérico; em (II), de um grupo já determinado;",
+        "ambas são equivalentes, pois o plural torna a crase facultativa;",
+        "a segunda está errada, pois não há crase diante de palavra no plural;",
+        "a diferença é apenas de registro: a segunda é mais formal."
+      ],
+      "answer": 1,
+      "exp": "A preposição “a” é exigida nos dois casos — quem varia é o ARTIGO. Sem ele, o sentido é genérico; com ele, o referente é definido. Por isso, diante de plural, a crase depende do sentido. O que nunca se admite é artigo singular com substantivo plural (“à pessoas”)."
+    },
+    {
+      "type": "mc",
+      "tag": "Armadilha · a/à distância",
+      "text": "Assinale a opção em que a expressão “a distância” deveria receber o sinal indicativo de crase.",
+      "options": [
+        "Ele acompanhou o julgamento a distância.",
+        "Ele parou a distância de dois metros do balcão.",
+        "O curso é oferecido a distância.",
+        "Manteve os curiosos a distância.",
+        "Ficou a distância, observando tudo em silêncio."
+      ],
+      "answer": 1,
+      "exp": "Sem especificação, “a distância” dispensa a crase. Quando a distância vem ESPECIFICADA (“de dois metros”), o artigo aparece e a crase passa a ser obrigatória: “à distância de dois metros”. Observação: dicionários modernos já registram “à distância” mesmo sem especificação, mas em prova siga a regra da determinação."
+    },
+    {
+      "type": "mc",
+      "tag": "Facultativo · depois de “até”",
+      "text": "Em “Acompanhou o processo até __ decisão final”, o preenchimento da lacuna:",
+      "options": [
+        "admite tanto “a” quanto “à”, pois depois de “até” a crase é facultativa;",
+        "exige “à”, por se tratar de locução adverbial feminina;",
+        "exige “a”, porque “até” já é preposição e dispensa outra;",
+        "exige “à”, porque “decisão” está determinada por “final”;",
+        "exige “a”, porque “até” nunca admite artigo depois de si."
+      ],
+      "answer": 0,
+      "exp": "“Até” pode funcionar sozinho como preposição ou vir reforçado pela preposição “a” (até a / até à). Por isso a crase é facultativa. Os outros dois casos facultativos são o nome próprio feminino de pessoa e o pronome possessivo feminino singular."
+    },
+    {
+      "type": "mc",
+      "tag": "Pronome relativo · à qual",
+      "text": "Assinale a frase correta:",
+      "options": [
+        "A empresa a qual me referi encerrou as atividades.",
+        "A empresa à qual me referi encerrou as atividades.",
+        "A empresa que me referi encerrou as atividades.",
+        "A empresa cuja me referi encerrou as atividades.",
+        "A empresa aonde me referi encerrou as atividades."
+      ],
+      "answer": 1,
+      "exp": "“Referir-se A” exige a preposição, que se funde com o artigo do relativo “a qual” → “à qual”. O teste do masculino confirma: “o processo AO QUAL me referi”. As demais formas rompem a regência do verbo."
+    },
+    {
+      "type": "ce",
+      "tag": "Crase por elipse",
+      "text": "Em “Ela dança à Isadora Duncan”, o sinal indicativo de crase justifica-se pela elipse da palavra “moda”.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. É a crase por elipse: “à [moda de] Isadora Duncan”. É o mecanismo que permite a crase até diante de palavra masculina — “escrever à Machado de Assis”, “bife à Osvaldo Aranha”."
+    },
+    {
+      "type": "mc",
+      "tag": "Sequência de lacunas",
+      "text": "“O documento foi entregue __ diretoria __ 15h, __ pedido da presidência.” As lacunas devem ser preenchidas, na ordem, por:",
+      "options": [
+        "a – as – a",
+        "à – às – a",
+        "à – às – à",
+        "a – às – a",
+        "à – as – à"
+      ],
+      "answer": 1,
+      "exp": "“Entregar A” + “a diretoria” → à. Hora determinada → às 15h. Terceira lacuna é a pegadinha: “pedido” é substantivo MASCULINO, logo “a pedido da presidência”, sem crase — como em “a critério de” e “a bordo de”."
+    },
+    {
+      "type": "mc",
+      "tag": "Nome de cidade determinado",
+      "text": "Assinale a opção em que a crase está corretamente empregada diante de nome de lugar.",
+      "options": [
+        "Chegamos à São Paulo na sexta-feira.",
+        "Voltaremos à Belo Horizonte amanhã.",
+        "Referiu-se à São Paulo dos anos 1950.",
+        "Iremos à Salvador de carro.",
+        "Fomos à Recife visitar a família."
+      ],
+      "answer": 2,
+      "exp": "Nomes de cidade em geral não admitem artigo (volto DE São Paulo → vou A São Paulo). Mas, quando o nome vem DETERMINADO por um modificador, o artigo aparece: “à São Paulo dos anos 1950”. Recife é masculino (volto DO Recife), logo “ao Recife”."
+    },
+    {
+      "type": "mc",
+      "tag": "Reescrita · determinação do complemento",
+      "text": "Partindo de “Nunca me submeti a ordens absurdas”, a reescrita que determina o complemento SEM quebrar a correção é:",
+      "options": [
+        "Nunca me submeti a as ordens absurdas daquele chefe.",
+        "Nunca me submeti às ordens absurdas daquele chefe.",
+        "Nunca me submeti à ordens absurdas daquele chefe.",
+        "Nunca me submeti as ordens absurdas daquele chefe.",
+        "Nunca me submeti a ordens absurdas daquele chefe, sendo a crase facultativa."
+      ],
+      "answer": 1,
+      "exp": "“Submeter-se A” exige a preposição; ao determinar o complemento (“daquele chefe”), entra o artigo “as” → a + as = às. A forma “à ordens” é impossível (artigo singular com substantivo plural), e “as ordens” perde a preposição exigida pelo verbo."
+    },
+    {
+      "type": "mc",
+      "tag": "Locuções × palavra repetida",
+      "text": "Assinale a opção que completa corretamente, quanto à crase, as expressões “Saímos ___”, “Ele chegou ___” (= no período da tarde) e “Ficaram ___ com o chefe”.",
+      "options": [
+        "às pressas – a tarde – frente a frente",
+        "às pressas – à tarde – frente a frente",
+        "as pressas – à tarde – frente à frente",
+        "às pressas – à tarde – frente à frente",
+        "as pressas – a tarde – frente a frente"
+      ],
+      "answer": 1,
+      "exp": "“Às pressas” e “à tarde” são locuções adverbiais femininas → crase obrigatória. “Frente a frente” repete a mesma palavra e não admite artigo → sem crase. Atenção ao par “chegou à tarde” (no período da tarde) × “chegou a tarde” (aí “a tarde” é o sujeito de “chegar”)."
+    }
+  ]
+}

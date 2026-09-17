@@ -113,7 +113,8 @@
               "nome": "Crase",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Casos obrigatórios, proibidos e facultativos; ‘à distância’, ‘à moda de’, pronomes, nomes de lugar. Item de altíssima frequência e fácil de blindar."
+              "oQueCai": "Casos obrigatórios, proibidos e facultativos; ‘à distância’, ‘à moda de’, pronomes, nomes de lugar. Item de altíssima frequência e fácil de blindar.",
+              "materiaId": "crase"
             },
             {
               "id": "pt-colocacao",
