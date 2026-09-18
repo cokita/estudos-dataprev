@@ -1850,6 +1850,10 @@ window.CONTENT = {
               "html": "\n<p>A FGV raramente escreve “se… então” com essas palavras. Todas as formas abaixo são <b>p → q</b>:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Se p, então q</span> Se chove, então levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">Quando p, q</span> Quando chove, levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">Sempre que p, q</span> Sempre que chove, levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">Toda vez que p, q</span> Toda vez que chove, levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">q, se p</span> Levo guarda-chuva, se chove</div>\n  <div class=\"def\"><span class=\"def-t\">Todo A é B</span> Todo analista da DataPrev é servidor público</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> A <b>ordem em que as partes aparecem não define quem é o p</b>. Quem define é a palavra <b>se</b>: o que estiver colado nela é sempre o antecedente, esteja no começo ou no fim da frase.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> “<b>Todo A é B</b>” vira “<b>se</b> é A, <b>então</b> é B”. No diagrama de Venn, é o círculo de A inteirinho dentro do círculo de B.</div>\n"
             },
             {
+              "titulo": "Suficiente, necessário e o “somente se”",
+              "html": "<p>Todo condicional <b>p → q</b> diz duas coisas ao mesmo tempo, com nomes que a FGV cobra direto:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">p é suficiente para q</span> <b>basta</b> p acontecer para garantir q. O antecedente é a condição suficiente.</div>\n  <div class=\"def\"><span class=\"def-t\">q é necessário para p</span> <b>sem</b> q, p não pode ocorrer. O consequente é a condição necessária.</div>\n</div>\n<p>Exemplo: “Se é analista da DataPrev, então é servidor público”. Ser analista <b>basta</b> para ser servidor (suficiente). Ser servidor é <b>indispensável</b> para ser analista (necessário) — mas não basta, há outros servidores.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>A armadilha do “somente se”:</b> o que vem depois de <i>somente se</i> é a condição <b>necessária</b> — e condição necessária é o <b>consequente</b>. “Serei aprovada <b>somente se</b> estudar” = <b>aprovada → estudou</b>. A banca oferece o inverso (estudou → aprovada) como distrator, e ele diz outra coisa: estudar não garante aprovação.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>“se” sozinho puxa o antecedente; “somente se” puxa o consequente.</b> “a <b>se</b> b” = b → a · “a <b>somente se</b> b” = a → b</div>\n<p><b>Tabela de traduções — decore esta lista, ela resolve questão sozinha:</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Se p, então q · p implica q · q, se p</span> p → q</div>\n  <div class=\"def\"><span class=\"def-t\">p somente se q · p só se q</span> p → q</div>\n  <div class=\"def\"><span class=\"def-t\">Quando p, q · Sempre que p, q · Caso p, q</span> p → q</div>\n  <div class=\"def\"><span class=\"def-t\">Todo p é q</span> p → q</div>\n  <div class=\"def\"><span class=\"def-t\">p é suficiente para q</span> p → q</div>\n  <div class=\"def\"><span class=\"def-t\">q é necessário para p</span> p → q</div>\n  <div class=\"def\"><span class=\"def-t\">p, a menos que q · p, exceto se q · p, salvo se q</span> ~q → p</div>\n  <div class=\"def\"><span class=\"def-t\">p é necessário e suficiente para q</span> p ↔ q</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>“A menos que” = “se não”.</b> “Vou à praia, <b>a menos que</b> chova” = “se <b>não</b> chover, vou à praia” (~q → p). O erro comum é traduzir como se fosse “se chover”.</div>"
+            },
+            {
               "titulo": "As quatro versões: recíproca, inversa e contrapositiva",
               "html": "\n<p>Partindo de <b>p → q</b> dá para fabricar mais três frases. <b>Só uma</b> significa a mesma coisa:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Direta · p → q</span> Se chove, levo guarda-chuva</div>\n  <div class=\"def\"><span class=\"def-t\">Recíproca · q → p</span> Se levo guarda-chuva, então chove — <b>NÃO</b> equivale</div>\n  <div class=\"def\"><span class=\"def-t\">Inversa · ~p → ~q</span> Se não chove, não levo guarda-chuva — <b>NÃO</b> equivale</div>\n  <div class=\"def\"><span class=\"def-t\">Contrapositiva · ~q → ~p</span> Se não levo guarda-chuva, então não chove — <b>EQUIVALE</b></div>\n</div>\n<p>A contrapositiva é feita com <b>duas mexidas ao mesmo tempo</b>: inverte a ordem <b>e</b> nega os dois lados. Fazer só uma das duas coisas produz uma das armadilhas.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Recíproca e inversa são equivalentes <b>entre si</b> — as duas erradas erram juntas. Se as duas aparecerem como alternativas, nenhuma pode ser a resposta.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Condicional é <b>via de mão única</b>. “Se chove, levo guarda-chuva” não autoriza “se levo guarda-chuva, está chovendo” — posso estar levando por precaução.</div>\n"
             },
@@ -1868,6 +1872,10 @@ window.CONTENT = {
             {
               "titulo": "Tabela de negações e equivalências (com os apelidos)",
               "html": "\n<p><b>Regra que unifica tudo:</b> em toda <b>negação</b>, o conectivo troca de time — o <b>e</b> vira <b>ou</b>, o <b>ou</b> vira <b>e</b>, e a <b>seta vira e</b>. Se você negou e o conectivo continuou o mesmo, errou.</p>\n<p><b>Negações</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">~(p ∧ q) = ~p ∨ ~q · NENE</span> nega as duas partes e o <b>E vira OU</b></div>\n  <div class=\"def\"><span class=\"def-t\">~(p ∨ q) = ~p ∧ ~q · NENE</span> nega as duas partes e o <b>OU vira E</b></div>\n  <div class=\"def\"><span class=\"def-t\">~(p → q) = p ∧ ~q · MANÉ</span> <b>MA</b>ntém a 1ª, <b>NE</b>ga a 2ª, a seta vira <b>E</b></div>\n  <div class=\"def\"><span class=\"def-t\">~(p ↔ q) = p ↔ ~q</span> nega <b>só um</b> dos lados</div>\n  <div class=\"def\"><span class=\"def-t\">~(~p) = p</span> negar duas vezes volta ao original</div>\n</div>\n<p><b>Equivalências</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">p → q = ~q → ~p · contrapositiva</span> inverte a ordem <b>e</b> nega os dois; a seta continua</div>\n  <div class=\"def\"><span class=\"def-t\">p → q = ~p ∨ q · NEMA</span> <b>NE</b>ga a 1ª, <b>MA</b>ntém a 2ª, a seta vira <b>OU</b></div>\n  <div class=\"def\"><span class=\"def-t\">p ↔ q = (p → q) ∧ (q → p)</span> bicondicional é ida <b>e</b> volta</div>\n  <div class=\"def\"><span class=\"def-t\">NÃO equivalem</span> recíproca (q → p) e inversa (~p → ~q) — as duas armadilhas</div>\n</div>\n<p><b>Quantificadores</b> — negar o exigente gera o folgado</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Todo A é B → Algum A NÃO é B</span> basta <b>um</b> contraexemplo para derrubar um “todo”</div>\n  <div class=\"def\"><span class=\"def-t\">Algum A é B → Nenhum A é B</span> para derrubar “algum”, tem de zerar todos</div>\n  <div class=\"def\"><span class=\"def-t\">Nenhum A é B → Algum A é B</span> basta <b>um</b> caso para derrubar um “nenhum”</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>MANÉ e NEMA são as mesmas sílabas invertidas</b> — é onde todo mundo troca. Leia o apelido da esquerda para a direita: ele diz o que acontece com a <b>1ª parte</b> e depois com a <b>2ª</b>. <b>MA-NÉ</b>: mantém, nega → é a <b>negação</b>, resultado com <b>E</b>. <b>NE-MA</b>: nega, mantém → é a <b>equivalência</b>, resultado com <b>OU</b>.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Conferidor de reserva: <b>negação vira “e”</b> (exigente: precisa dos dois fatos para acusar a mentira); <b>equivalência vira “ou”</b> (folgada: só reescreve a promessa).</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Teste universal de negação:</b> tente imaginar um cenário em que a frase original e a sua resposta sejam verdadeiras <b>ao mesmo tempo</b>. Se conseguir, a sua “negação” está errada.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> Por que a negação do condicional é MANÉ e não uma regra à parte: <code>p → q</code> equivale a <code>~p ∨ q</code> (NEMA); aplicando De Morgan, <code>~(~p ∨ q) = p ∧ ~q</code>. É De Morgan aplicado — não há nada novo para decorar.</div>\n"
+            },
+            {
+              "titulo": "Método do valor forçado: valorar sem montar a tabela",
+              "html": "<p>Na prova você tem cerca de 4 minutos por questão de RL. Montar 8 linhas é luxo caro. Quando o enunciado <b>dá o valor da proposição composta</b>, comece pelo conectivo que só admite <b>uma</b> possibilidade — daí tudo se determina sozinho.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Condicional FALSA</span> só existe um caso: antecedente <b>V</b> e consequente <b>F</b>.</div>\n  <div class=\"def\"><span class=\"def-t\">Conjunção (e) VERDADEIRA</span> as duas partes são <b>V</b>.</div>\n  <div class=\"def\"><span class=\"def-t\">Disjunção (ou) FALSA</span> as duas partes são <b>F</b>.</div>\n</div>\n<p><b>Exemplo resolvido.</b> Sabe-se que <b>(p ∧ q) → (r ∨ s)</b> é <b>falsa</b>. Quais são os valores?</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Condicional falsa</span> antecedente V, consequente F</div>\n  <div class=\"def\"><span class=\"def-t\">2. p ∧ q = V</span> conjunção só é V com as duas V → <b>p = V, q = V</b></div>\n  <div class=\"def\"><span class=\"def-t\">3. r ∨ s = F</span> disjunção só é F com as duas F → <b>r = F, s = F</b></div>\n</div>\n<p>Três passos, nenhuma tabela, os quatro valores determinados. É o formato mais comum de questão de valoração da FGV.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Pense como teste unitário: o enunciado te deu o <b>resultado esperado</b> e você está descobrindo qual é a <b>única entrada</b> que produz aquele resultado.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> O caminho inverso <b>não</b> força nada: condicional <b>verdadeira</b>, disjunção <b>verdadeira</b> e conjunção <b>falsa</b> admitem três linhas cada uma. Nesses casos, teste as alternativas em vez de tentar deduzir.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Depois de achar os valores, cuidado ao conferir as alternativas: <b>F ↔ F é VERDADEIRO</b>. O bicondicional só pergunta se os dois lados são <b>iguais</b>, não se são verdadeiros.</div>"
             }
           ],
           "flashcards": [
@@ -2055,6 +2063,36 @@ window.CONTENT = {
               "tema": "Equivalências",
               "pergunta": "Como escrever p ↔ q com condicionais?",
               "resposta": "(p → q) ∧ (q → p) — a bicondicional é ida E volta."
+            },
+            {
+              "tema": "Condicional",
+              "pergunta": "Em p → q, quem é a condição suficiente e quem é a necessária?",
+              "resposta": "p (antecedente) é suficiente para q; q (consequente) é necessário para p. Basta p para garantir q; sem q, p não ocorre."
+            },
+            {
+              "tema": "Condicional",
+              "pergunta": "Como se traduz “p somente se q”?",
+              "resposta": "p → q. O que vem depois de “somente se” é a condição necessária, e condição necessária é o consequente. Cuidado: “p se q” é o contrário (q → p)."
+            },
+            {
+              "tema": "Condicional",
+              "pergunta": "Como se traduz “p, a menos que q”?",
+              "resposta": "~q → p. “A menos que” equivale a “se não”: “vou à praia, a menos que chova” = “se não chover, vou à praia”."
+            },
+            {
+              "tema": "Valoração",
+              "pergunta": "Se uma condicional é FALSA, o que se conclui sobre as partes?",
+              "resposta": "Antecedente V e consequente F — é a única linha falsa da condicional, então tudo fica determinado."
+            },
+            {
+              "tema": "Valoração",
+              "pergunta": "Se uma conjunção é verdadeira e se uma disjunção é falsa, o que se conclui?",
+              "resposta": "Conjunção V → as duas partes são V. Disjunção F → as duas partes são F. São os outros dois casos que “forçam” valor."
+            },
+            {
+              "tema": "Conectivos",
+              "pergunta": "Qual o valor de F ↔ F?",
+              "resposta": "Verdadeiro. O bicondicional é V sempre que os dois lados têm o MESMO valor — inclusive quando os dois são falsos."
             }
           ],
           "simulados": [
@@ -2425,6 +2463,98 @@ window.CONTENT = {
                   ],
                   "answer": 0,
                   "exp": "Certo. É modus tollens em forma de argumento: da premissa p → q e do fato ~q conclui-se ~p. Compare com a versão INVÁLIDA, que a banca costuma oferecer no lugar: “o alerta não disparou, logo o time não foi acionado” — essa nega o antecedente e não conclui nada, pois o time pode ter sido acionado por outro motivo."
+                }
+              ]
+            },
+            {
+              "id": "logica-sentencial-03",
+              "nome": "Aula 2 · Tabela-verdade, traduções e valoração",
+              "descricao": "Seis questões no padrão FGV sobre a base da lógica sentencial: tradução do português (o “mas” e o “somente se”), valoração com valores dados, tautologia, método do valor forçado e ordem de precedência dos conectivos.",
+              "nivel": "Treino",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Tradução · disfarces do “e”",
+                  "text": "Considere p: “O sistema está atualizado” e q: “Houve falhas no atendimento”. A frase “O sistema está atualizado, mas houve falhas no atendimento” é corretamente representada por",
+                  "options": [
+                    "p → q",
+                    "p ∧ q",
+                    "p ∨ q",
+                    "p ↔ q",
+                    "~p ∧ q"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. “Mas” é adversativa no Português, mas em lógica é CONJUNÇÃO: a frase afirma as duas coisas ao mesmo tempo. Vale para toda a família — mas, porém, contudo, todavia, entretanto, embora, ainda que, apesar de: todos viram ∧. A opção E acrescenta uma negação que não existe na frase (“o sistema NÃO está atualizado”)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Valoração",
+                  "text": "Sabendo que p é verdadeira, q é falsa e r é verdadeira, assinale a proposição composta que é FALSA.",
+                  "options": [
+                    "(p ∧ ~q) → r",
+                    "(q ∨ r) ↔ p",
+                    "~(p → q)",
+                    "(p ↔ q) ∨ ~r",
+                    "~q → (p ∨ r)"
+                  ],
+                  "answer": 3,
+                  "exp": "Gabarito: D. Substituindo p=V, q=F, r=V: (A) (V ∧ V) → V = V → V = V. (B) (F ∨ V) ↔ V = V ↔ V = V. (C) ~(V → F) = ~F = V. (D) (V ↔ F) ∨ ~V = F ∨ F = F ← resposta. (E) ~F → (V ∨ V) = V → V = V. O tropeço típico é em C: quem calcula V → F como verdadeiro marca C. Lembre que V → F é o ÚNICO caso falso da condicional."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Tautologia",
+                  "text": "A proposição composta (p → q) ∨ (q → p) é",
+                  "options": [
+                    "uma contradição",
+                    "uma tautologia",
+                    "uma contingência, verdadeira apenas quando p e q são verdadeiras",
+                    "uma contingência, falsa apenas quando p é verdadeira e q é falsa",
+                    "equivalente a p ∧ q"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. Nas quatro linhas o resultado é V: (V,V) V∨V · (V,F) F∨V · (F,V) V∨F · (F,F) V∨V. A razão é intuitiva: uma condicional só falha no padrão V → F, e p e q não podem estar nesse padrão nos DOIS sentidos ao mesmo tempo. Logo pelo menos uma das condicionais é sempre verdadeira — e basta uma para a disjunção ser V."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Tradução · somente se",
+                  "text": "Considere a: “O candidato será aprovado” e b: “O candidato acerta 60% da prova”. A frase “O candidato será aprovado somente se acertar 60% da prova” é representada por",
+                  "options": [
+                    "b → a",
+                    "a → b",
+                    "a ∧ b",
+                    "a ↔ b",
+                    "~a → b"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. “Somente se” introduz a condição NECESSÁRIA, e a condição necessária ocupa o consequente: a → b (se foi aprovado, então acertou 60%). A opção A é o distrator principal e diz outra coisa — que acertar 60% GARANTE a aprovação, o que a frase não afirma (num concurso concorrido, 60% pode não bastar). Guarde o par: “a se b” = b → a · “a somente se b” = a → b."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Valor forçado",
+                  "text": "Sabe-se que a proposição (p ∧ q) → (r ∨ s) é FALSA. Nessas condições, é VERDADEIRA a proposição",
+                  "options": [
+                    "p → r",
+                    "q ∧ s",
+                    "~r → ~p",
+                    "s ∨ ~q",
+                    "r ↔ s"
+                  ],
+                  "answer": 4,
+                  "exp": "Gabarito: E. Condicional falsa → antecedente V e consequente F. Então p ∧ q = V force p=V e q=V; r ∨ s = F força r=F e s=F. Conferindo: (A) V → F = F. (B) V ∧ F = F. (C) ~F → ~V = V → F = F. (D) F ∨ F = F. (E) F ↔ F = V ← resposta. A E é descartada por quem esquece que bicondicional com os DOIS lados falsos é verdadeiro: ele só pergunta se os valores são iguais."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Tabela-verdade · precedência",
+                  "text": "Uma proposição composta é formada pelas proposições simples p, q, r e s. O número de linhas da tabela-verdade dessa proposição e o conectivo que deve ser resolvido POR ÚLTIMO em ~p ∨ q → r ∧ s são, respectivamente,",
+                  "options": [
+                    "8 e ∨",
+                    "8 e →",
+                    "16 e ∧",
+                    "16 e →",
+                    "16 e ~"
+                  ],
+                  "answer": 3,
+                  "exp": "Gabarito: D. Linhas: 4 proposições simples distintas → 2⁴ = 16. Último conectivo: pela precedência (~, depois ∧ e ∨, depois →, por último ↔), resolve-se ~p, depois ~p ∨ q, depois r ∧ s e, por fim, a CONDICIONAL — que é o conectivo principal. Com parênteses explícitos: ((~p) ∨ q) → (r ∧ s). Quem marca C confundiu “o que aparece por último escrito” com “o que se resolve por último”."
                 }
               ]
             }

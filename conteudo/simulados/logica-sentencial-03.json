@@ -1,0 +1,93 @@
+{
+  "id": "logica-sentencial-03",
+  "materiaId": "logica-sentencial",
+  "nome": "Aula 2 · Tabela-verdade, traduções e valoração",
+  "descricao": "Seis questões no padrão FGV sobre a base da lógica sentencial: tradução do português (o “mas” e o “somente se”), valoração com valores dados, tautologia, método do valor forçado e ordem de precedência dos conectivos.",
+  "nivel": "Treino",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Tradução · disfarces do “e”",
+      "text": "Considere p: “O sistema está atualizado” e q: “Houve falhas no atendimento”. A frase “O sistema está atualizado, mas houve falhas no atendimento” é corretamente representada por",
+      "options": [
+        "p → q",
+        "p ∧ q",
+        "p ∨ q",
+        "p ↔ q",
+        "~p ∧ q"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. “Mas” é adversativa no Português, mas em lógica é CONJUNÇÃO: a frase afirma as duas coisas ao mesmo tempo. Vale para toda a família — mas, porém, contudo, todavia, entretanto, embora, ainda que, apesar de: todos viram ∧. A opção E acrescenta uma negação que não existe na frase (“o sistema NÃO está atualizado”)."
+    },
+    {
+      "type": "mc",
+      "tag": "Valoração",
+      "text": "Sabendo que p é verdadeira, q é falsa e r é verdadeira, assinale a proposição composta que é FALSA.",
+      "options": [
+        "(p ∧ ~q) → r",
+        "(q ∨ r) ↔ p",
+        "~(p → q)",
+        "(p ↔ q) ∨ ~r",
+        "~q → (p ∨ r)"
+      ],
+      "answer": 3,
+      "exp": "Gabarito: D. Substituindo p=V, q=F, r=V: (A) (V ∧ V) → V = V → V = V. (B) (F ∨ V) ↔ V = V ↔ V = V. (C) ~(V → F) = ~F = V. (D) (V ↔ F) ∨ ~V = F ∨ F = F ← resposta. (E) ~F → (V ∨ V) = V → V = V. O tropeço típico é em C: quem calcula V → F como verdadeiro marca C. Lembre que V → F é o ÚNICO caso falso da condicional."
+    },
+    {
+      "type": "mc",
+      "tag": "Tautologia",
+      "text": "A proposição composta (p → q) ∨ (q → p) é",
+      "options": [
+        "uma contradição",
+        "uma tautologia",
+        "uma contingência, verdadeira apenas quando p e q são verdadeiras",
+        "uma contingência, falsa apenas quando p é verdadeira e q é falsa",
+        "equivalente a p ∧ q"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Nas quatro linhas o resultado é V: (V,V) V∨V · (V,F) F∨V · (F,V) V∨F · (F,F) V∨V. A razão é intuitiva: uma condicional só falha no padrão V → F, e p e q não podem estar nesse padrão nos DOIS sentidos ao mesmo tempo. Logo pelo menos uma das condicionais é sempre verdadeira — e basta uma para a disjunção ser V."
+    },
+    {
+      "type": "mc",
+      "tag": "Tradução · somente se",
+      "text": "Considere a: “O candidato será aprovado” e b: “O candidato acerta 60% da prova”. A frase “O candidato será aprovado somente se acertar 60% da prova” é representada por",
+      "options": [
+        "b → a",
+        "a → b",
+        "a ∧ b",
+        "a ↔ b",
+        "~a → b"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. “Somente se” introduz a condição NECESSÁRIA, e a condição necessária ocupa o consequente: a → b (se foi aprovado, então acertou 60%). A opção A é o distrator principal e diz outra coisa — que acertar 60% GARANTE a aprovação, o que a frase não afirma (num concurso concorrido, 60% pode não bastar). Guarde o par: “a se b” = b → a · “a somente se b” = a → b."
+    },
+    {
+      "type": "mc",
+      "tag": "Valor forçado",
+      "text": "Sabe-se que a proposição (p ∧ q) → (r ∨ s) é FALSA. Nessas condições, é VERDADEIRA a proposição",
+      "options": [
+        "p → r",
+        "q ∧ s",
+        "~r → ~p",
+        "s ∨ ~q",
+        "r ↔ s"
+      ],
+      "answer": 4,
+      "exp": "Gabarito: E. Condicional falsa → antecedente V e consequente F. Então p ∧ q = V force p=V e q=V; r ∨ s = F força r=F e s=F. Conferindo: (A) V → F = F. (B) V ∧ F = F. (C) ~F → ~V = V → F = F. (D) F ∨ F = F. (E) F ↔ F = V ← resposta. A E é descartada por quem esquece que bicondicional com os DOIS lados falsos é verdadeiro: ele só pergunta se os valores são iguais."
+    },
+    {
+      "type": "mc",
+      "tag": "Tabela-verdade · precedência",
+      "text": "Uma proposição composta é formada pelas proposições simples p, q, r e s. O número de linhas da tabela-verdade dessa proposição e o conectivo que deve ser resolvido POR ÚLTIMO em ~p ∨ q → r ∧ s são, respectivamente,",
+      "options": [
+        "8 e ∨",
+        "8 e →",
+        "16 e ∧",
+        "16 e →",
+        "16 e ~"
+      ],
+      "answer": 3,
+      "exp": "Gabarito: D. Linhas: 4 proposições simples distintas → 2⁴ = 16. Último conectivo: pela precedência (~, depois ∧ e ∨, depois →, por último ↔), resolve-se ~p, depois ~p ∨ q, depois r ∧ s e, por fim, a CONDICIONAL — que é o conectivo principal. Com parênteses explícitos: ((~p) ∨ q) → (r ∧ s). Quem marca C confundiu “o que aparece por último escrito” com “o que se resolve por último”."
+    }
+  ]
+}
