@@ -17,7 +17,8 @@
     "icon": "ti-math-symbols",
     "descricao": "5 questões no Módulo I. Estruturas lógicas, argumentação, lógica sentencial (proposições, tabelas-verdade, equivalências e diagramas), lógica de 1ª ordem e problemas aritméticos, geométricos e matriciais.",
     "materias": [
-      "logica-sentencial"
+      "logica-sentencial",
+      "diagramas-quantificadores"
     ]
   },
   {

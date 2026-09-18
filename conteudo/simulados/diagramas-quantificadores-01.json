@@ -1,0 +1,93 @@
+{
+  "id": "diagramas-quantificadores-01",
+  "materiaId": "diagramas-quantificadores",
+  "nome": "Aula 1 · Negações, diagramas e validade",
+  "descricao": "Seis questões no padrão FGV sobre negação de quantificadores, conclusões que decorrem (e as que não decorrem) de premissas com todo/algum, tradução para ∀/∃ e identificação de modus tollens.",
+  "nivel": "Treino",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Negação de “todo”",
+      "text": "A negação da proposição “Todos os servidores da DataPrev usam crachá” é",
+      "options": [
+        "Nenhum servidor da DataPrev usa crachá",
+        "Todos os servidores da DataPrev não usam crachá",
+        "Pelo menos um servidor da DataPrev não usa crachá",
+        "Nenhum servidor da DataPrev deixa de usar crachá",
+        "Alguns servidores da DataPrev usam crachá"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. A negação de “todo A é B” é “algum A não é B”, e “pelo menos um” é sinônimo exato de “algum”: para derrubar um “todos” basta UM contraexemplo. A opção A é o distrator principal — “nenhum usa crachá” é muito mais forte do que o necessário: num cenário com 99 usando e 1 sem crachá, a original é falsa e a A também, e negação tem que ser V exatamente quando a original é F. A B diz o mesmo que a A com outras palavras, a D reforça a original e a E convive com ela."
+    },
+    {
+      "type": "mc",
+      "tag": "Diagramas · o que decorre",
+      "text": "Considere verdadeiras as afirmações: I. Todo programador conhece lógica. II. Algum programador trabalha na DataPrev. Conclui-se corretamente que",
+      "options": [
+        "Todos os que trabalham na DataPrev conhecem lógica",
+        "Alguém que trabalha na DataPrev conhece lógica",
+        "Todo o que conhece lógica é programador",
+        "Algum programador não conhece lógica",
+        "Nenhum programador deixa de trabalhar na DataPrev"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Desenhe: o círculo dos programadores fica DENTRO do círculo de quem conhece lógica (premissa I); a premissa II põe um X na interseção programador/DataPrev. Esse X está necessariamente dentro do círculo da lógica — logo existe alguém da DataPrev que conhece lógica. As erradas concluem demais: A exigiria que todo o pessoal da DataPrev fosse programador (pode haver um contador lá); C é a recíproca da premissa I; D contradiz a I; E inventa informação."
+    },
+    {
+      "type": "mc",
+      "tag": "Diagramas · o que NÃO decorre",
+      "text": "São verdadeiras as premissas “Todo analista é servidor” e “Algum servidor é gestor”. Assinale a afirmativa que NÃO pode ser deduzida dessas premissas.",
+      "options": [
+        "Algum analista é gestor",
+        "Algum servidor é analista ou não há analistas",
+        "Pode existir gestor que não é analista",
+        "Todo analista é servidor",
+        "Existe pelo menos um gestor que é servidor"
+      ],
+      "answer": 0,
+      "exp": "Gabarito: A. “Todo analista é servidor” põe analistas DENTRO de servidores; “algum servidor é gestor” põe um X na interseção servidor/gestor — e esse X pode cair na parte de servidor que está FORA de analistas. Contraexemplo: a DataPrev pode ter gestores vindos da área administrativa, nenhum deles analista. As demais decorrem: D é a própria premissa, E é a premissa II reescrita, C é uma possibilidade que o diagrama admite e B é reformulação inofensiva. Guarde o padrão: “todo A é B” + “algum B é C” NUNCA conclui nada sobre A."
+    },
+    {
+      "type": "mc",
+      "tag": "Negação de “algum”",
+      "text": "A negação da proposição “Algum candidato foi eliminado” é",
+      "options": [
+        "Algum candidato não foi eliminado",
+        "Todos os candidatos foram eliminados",
+        "Nem todos os candidatos foram eliminados",
+        "Nenhum candidato foi eliminado",
+        "Poucos candidatos foram eliminados"
+      ],
+      "answer": 3,
+      "exp": "Gabarito: D. A negação de “algum A é B” é “nenhum A é B”: para derrubar um “existe pelo menos um” é preciso varrer o conjunto inteiro e não achar nenhum. A opção A é a armadilha — “algum não foi eliminado” pode ser verdadeira JUNTO com a original (alguns eliminados, outros não), e duas proposições que convivem nunca são negação uma da outra. Esse é o teste de conferência para qualquer questão de negação."
+    },
+    {
+      "type": "mc",
+      "tag": "Lógica de 1ª ordem",
+      "text": "Considere C(x): “x é candidato” e A(x): “x foi aprovado”. A proposição “Algum candidato não foi aprovado” é corretamente representada por",
+      "options": [
+        "∀x (C(x) → ~A(x))",
+        "∃x (C(x) → ~A(x))",
+        "∃x (C(x) ∧ ~A(x))",
+        "~∃x (C(x) ∧ A(x))",
+        "∀x (C(x) ∧ ~A(x))"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. “Algum” afirma existência (∃), e “é candidato E não foi aprovado” são duas coisas na mesma pessoa (∧). A opção B é o distrator clássico: com → dentro do ∃, bastaria existir alguém que NÃO é candidato para a fórmula ficar verdadeira (antecedente falso), ou seja, ela não diz nada sobre candidatos. Guarde: ∀ anda com →, ∃ anda com ∧. As opções A e D afirmam que nenhum candidato foi aprovado, bem mais forte que a original."
+    },
+    {
+      "type": "mc",
+      "tag": "Validade · modus tollens",
+      "text": "Um argumento tem as premissas “Se o sistema falha, o alerta é disparado” e “O alerta não foi disparado”, e a conclusão “O sistema não falhou”. Sobre esse argumento, é correto afirmar que",
+      "options": [
+        "é inválido, pois comete a falácia de negar o antecedente",
+        "é inválido, pois comete a falácia de afirmar o consequente",
+        "é válido, por modus ponens",
+        "é válido, por modus tollens",
+        "é válido apenas se as premissas forem de fato verdadeiras"
+      ],
+      "answer": 3,
+      "exp": "Gabarito: D. A estrutura é p → q, ~q, portanto ~p: negar o consequente e concluir a negação do antecedente — modus tollens, válido. A opção A descreveria outro argumento (“o sistema não falhou, logo o alerta não disparou”). A opção E é a pegadinha conceitual: validade NÃO depende da verdade das premissas, só da estrutura — um argumento válido continua válido com premissas falsas."
+    }
+  ]
+}

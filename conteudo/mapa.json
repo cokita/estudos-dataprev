@@ -261,14 +261,16 @@
               "nome": "Diagramas lógicos e quantificadores",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "‘Todo’, ‘algum’, ‘nenhum’ e suas negações, com diagramas de Venn. Pega candidato que responde pelo senso comum."
+              "oQueCai": "‘Todo’, ‘algum’, ‘nenhum’ e suas negações, com diagramas de Venn. Pega candidato que responde pelo senso comum.",
+              "materiaId": "diagramas-quantificadores"
             },
             {
               "id": "rl-primeira-ordem",
               "nome": "Lógica de primeira ordem",
               "prioridade": "media",
               "esforco": 1,
-              "oQueCai": "Quantificadores universal e existencial aplicados a predicados. Recorte explícito do edital, cobrança leve."
+              "oQueCai": "Quantificadores universal e existencial aplicados a predicados. Recorte explícito do edital, cobrança leve.",
+              "materiaId": "diagramas-quantificadores"
             },
             {
               "id": "rl-aritmeticos",

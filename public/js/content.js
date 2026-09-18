@@ -2559,6 +2559,231 @@ window.CONTENT = {
               ]
             }
           ]
+        },
+        {
+          "id": "diagramas-quantificadores",
+          "nome": "Argumentação, diagramas lógicos e quantificadores",
+          "icon": "ti-circles-relation",
+          "descricao": "A segunda metade do Raciocínio Lógico: o que torna um argumento válido, todo/algum/nenhum, diagramas de conjuntos, negação de quantificadores e a notação ∀/∃ da lógica de primeira ordem.",
+          "resumo": [
+            {
+              "titulo": "Por que os conectivos não bastam",
+              "html": "<p>Olhe este raciocínio: <i>“Todo analista da DataPrev é servidor público. João é analista da DataPrev. Logo, João é servidor público.”</i> Qualquer pessoa vê que está certo — mas tente representá-lo com o que você já sabe.</p>\n<p>Chamando as três frases de p, q e r, sobra <b>(p ∧ q) → r</b>, que <b>não é tautologia</b>. O raciocínio se perdeu: as frases viraram blocos isolados e a ligação entre elas — a palavra <i>analista</i>, que aparece em duas — sumiu.</p>\n<p>A saída é abrir a frase e olhar seus componentes: de <b>quem</b> se fala e <b>o que</b> se diz dele. Isso é a <b>lógica de primeira ordem</b> (ou de predicados), e a ferramenta para resolvê-la na prova é o <b>diagrama lógico</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Predicado</span> a característica atribuída: “é servidor público”, “conhece lógica”. Escreve-se <b>S(x)</b> — “x é servidor público”.</div>\n  <div class=\"def\"><span class=\"def-t\">Quantificador</span> a palavra que diz de <b>quantos</b> se fala: todo, algum, nenhum, existe, pelo menos um.</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> É a diferença entre tratar a lista inteira como um valor e iterar sobre os elementos: a lógica sentencial vê <code>lista</code>; a de primeira ordem vê <code>lista.every(...)</code> e <code>lista.some(...)</code>.</div>"
+            },
+            {
+              "titulo": "Argumento: premissas, conclusão e o que é validade",
+              "html": "<p><b>Argumento</b> é um conjunto de proposições em que algumas (as <b>premissas</b>) são apresentadas como razão para aceitar outra (a <b>conclusão</b>).</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Anunciam a CONCLUSÃO</span> logo, portanto, então, assim, conclui-se que, segue-se que, por isso</div>\n  <div class=\"def\"><span class=\"def-t\">Anunciam PREMISSA</span> pois, porque, já que, visto que, dado que, uma vez que</div>\n</div>\n<p>Na prova, ache primeiro a conclusão; o resto é premissa.</p>\n<p><b>A definição que decide as questões:</b> um argumento é <b>válido</b> quando é <b>impossível</b> que as premissas sejam verdadeiras e a conclusão falsa.</p>\n<p>Repare no que a definição <b>não</b> exige: que as premissas sejam verdadeiras de fato. Validade é propriedade da <b>estrutura</b>, não do conteúdo.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Premissas F, conclusão F</span> <i>“Todo peixe voa; baleia é peixe; logo baleia voa.”</i> Tudo falso — e o argumento é <b>válido</b>. A forma está correta.</div>\n  <div class=\"def\"><span class=\"def-t\">Premissas V, conclusão V</span> <i>“Todo servidor recebe salário; Ana recebe salário; logo Ana é servidora.”</i> Conclusão até pode ser verdadeira — e o argumento é <b>inválido</b>: Ana pode trabalhar na iniciativa privada.</div>\n</div>\n<p>O único caso impossível num argumento válido é <b>premissas V com conclusão F</b> — exatamente o padrão V → F da condicional.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Premissa é lei.</b> Por mais absurda que seja (“todos os gatos são advogados”), na resolução ela vale como verdade absoluta. A banca usa premissas absurdas de propósito, para separar quem raciocina de quem responde pelo senso comum.</div>"
+            },
+            {
+              "titulo": "Dedução, indução e analogia",
+              "html": "<p>O edital cita os três nomes na linha “analogias, inferências, deduções e conclusões”.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Dedução (geral → particular)</span> conclusão <b>garantida</b> pelas premissas. <i>Todo servidor tem matrícula; João é servidor; logo João tem matrícula.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Indução (particular → geral)</span> conclusão apenas <b>provável</b>. <i>Os 30 servidores que vi têm matrícula; logo todo servidor tem.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Analogia (particular → particular)</span> conclusão apenas <b>provável</b>. <i>A prova da DataPrev será como a do BNDES, pois a banca é a mesma.</i></div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Só a <b>dedução</b> produz argumento válido no sentido estrito. Indução e analogia dão conclusões plausíveis, nunca garantidas — e a FGV às vezes pede exatamente que você identifique isso.</div>"
+            },
+            {
+              "titulo": "Os padrões de argumento com “se… então”",
+              "html": "<p>Revisão do que você já viu em lógica sentencial, agora para reconhecer dentro de um texto. Base: <i>“Se chove, a rua fica molhada”</i> (p → q).</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Modus ponens · p → q, p ⊢ q</span> <b>VÁLIDO</b> — choveu, logo a rua está molhada</div>\n  <div class=\"def\"><span class=\"def-t\">Modus tollens · p → q, ~q ⊢ ~p</span> <b>VÁLIDO</b> — a rua não está molhada, logo não choveu</div>\n  <div class=\"def\"><span class=\"def-t\">Negar o antecedente · p → q, ~p ⊢ ~q</span> <b>FALÁCIA</b> — não choveu, mas pode ter passado um caminhão-pipa</div>\n  <div class=\"def\"><span class=\"def-t\">Afirmar o consequente · p → q, q ⊢ p</span> <b>FALÁCIA</b> — rua molhada não prova chuva</div>\n  <div class=\"def\"><span class=\"def-t\">Silogismo hipotético · p → q, q → r ⊢ p → r</span> <b>VÁLIDO</b> — encadeamento</div>\n  <div class=\"def\"><span class=\"def-t\">Silogismo disjuntivo · p ∨ q, ~p ⊢ q</span> <b>VÁLIDO</b> — ou é A ou é B; não é A; logo é B</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Com a condicional dá para caminhar <b>para a frente afirmando</b> (ponens) ou <b>para trás negando</b> (tollens). As outras duas combinações são armadilhas.</div>"
+            },
+            {
+              "titulo": "Todo, algum, nenhum: as quatro formas",
+              "html": "<p>Frase categórica = <b>quantificador + sujeito + verbo de ligação + predicado</b>. Existem quatro formas, e a prova gira em torno delas.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Todo A é B (universal afirmativa)</span> <i>Todo analista é servidor.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Nenhum A é B (universal negativa)</span> <i>Nenhum analista é estagiário.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Algum A é B (particular afirmativa)</span> <i>Algum analista é gestor.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Algum A não é B (particular negativa)</span> <i>Algum analista não é gestor.</i></div>\n</div>\n<p><b>Universal</b> fala de todos; <b>particular</b> fala de pelo menos um.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>“Algum” = pelo menos um — e NÃO exclui “todos”.</b> Se os 100 candidatos foram aprovados, “algum candidato foi aprovado” é <b>verdadeira</b>. No português do dia a dia “alguns” sugere “nem todos”; em lógica, não sugere nada disso. Sinônimos: existe, há, pelo menos um, alguns, certo(s).</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>“Todo A é B” não diz nada sobre quem não é A.</b> Podem existir servidores que não são analistas. É a mesma lógica do condicional: A → B não é B → A.</div>"
+            },
+            {
+              "titulo": "Diagramas: como desenhar cada frase",
+              "html": "<p>Cada conjunto vira um círculo, e a posição dos círculos traduz a frase. Depois é só <b>olhar o desenho</b>.</p>\n<p><b>Todo A é B</b> — A dentro de B.</p><svg viewBox=\"0 0 200 100\" style=\"width:100%;max-width:320px;height:auto;display:block;margin:10px auto\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\">\n<circle cx=\"100\" cy=\"50\" r=\"44\"/><circle cx=\"90\" cy=\"50\" r=\"22\"/>\n<text x=\"90\" y=\"54\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" fill=\"currentColor\">A</text>\n<text x=\"150\" y=\"54\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" fill=\"currentColor\">B</text></svg>\n<p><b>Nenhum A é B</b> — círculos separados, sem ponto em comum.</p><svg viewBox=\"0 0 200 100\" style=\"width:100%;max-width:320px;height:auto;display:block;margin:10px auto\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\">\n<circle cx=\"58\" cy=\"50\" r=\"32\"/><circle cx=\"142\" cy=\"50\" r=\"32\"/>\n<text x=\"58\" y=\"55\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" fill=\"currentColor\">A</text>\n<text x=\"142\" y=\"55\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" fill=\"currentColor\">B</text></svg>\n<p><b>Algum A é B</b> — círculos cruzados, com um <b>X</b> na parte comum.</p><svg viewBox=\"0 0 200 100\" style=\"width:100%;max-width:320px;height:auto;display:block;margin:10px auto\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\">\n<circle cx=\"72\" cy=\"50\" r=\"36\"/><circle cx=\"128\" cy=\"50\" r=\"36\"/>\n<text x=\"48\" y=\"55\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" fill=\"currentColor\">A</text>\n<text x=\"152\" y=\"55\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" fill=\"currentColor\">B</text>\n<text x=\"100\" y=\"56\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" stroke=\"none\" fill=\"currentColor\">X</text></svg>\n<p><b>Algum A não é B</b> — o <b>X</b> na parte de A que fica fora de B.</p><svg viewBox=\"0 0 200 100\" style=\"width:100%;max-width:320px;height:auto;display:block;margin:10px auto\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\">\n<circle cx=\"72\" cy=\"50\" r=\"36\"/><circle cx=\"128\" cy=\"50\" r=\"36\"/>\n<text x=\"55\" y=\"34\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" fill=\"currentColor\">A</text>\n<text x=\"152\" y=\"55\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" fill=\"currentColor\">B</text>\n<text x=\"52\" y=\"60\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" stroke=\"none\" fill=\"currentColor\">X</text></svg>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>O X é o detalhe que resolve a questão.</b> “Todo” e “nenhum” desenham <b>fronteiras</b>; “algum” afirma <b>existência</b>, e existência se marca com um X. Sem o X você esquece que aquela região tem que ter gente dentro.</div>"
+            },
+            {
+              "titulo": "O método do contraexemplo e as combinações clássicas",
+              "html": "<p><b>Uma conclusão só é válida se for verdadeira em TODOS os desenhos possíveis das premissas.</b> Se você conseguir desenhar <b>um único</b> cenário em que as premissas valem e a conclusão falha, o argumento é inválido. Esse cenário é o <b>contraexemplo</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1</span> Desenhe as premissas.</div>\n  <div class=\"def\"><span class=\"def-t\">2</span> Pergunte: <b>“dá para desenhar de outro jeito?”</b> — quase sempre dá, e é aí que a banca ganha.</div>\n  <div class=\"def\"><span class=\"def-t\">3</span> Teste a conclusão em cada desenho. Falhou em algum, não decorre.</div>\n</div>\n<p><b>Os resultados que vale decorar:</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Todo A é B + Todo B é C ⊢ Todo A é C</span> <b>VÁLIDO</b></div>\n  <div class=\"def\"><span class=\"def-t\">Todo A é B + Nenhum B é C ⊢ Nenhum A é C</span> <b>VÁLIDO</b></div>\n  <div class=\"def\"><span class=\"def-t\">Todo A é B + Algum A é C ⊢ Algum B é C</span> <b>VÁLIDO</b></div>\n  <div class=\"def\"><span class=\"def-t\">Algum A é B + Todo B é C ⊢ Algum A é C</span> <b>VÁLIDO</b></div>\n  <div class=\"def\"><span class=\"def-t\">Todo A é B + Algum B é C ⊢ Algum A é C</span> <b>INVÁLIDO</b> — o C pode estar na parte de B que sobra fora de A</div>\n  <div class=\"def\"><span class=\"def-t\">Algum A é B + Algum B é C ⊢ Algum A é C</span> <b>INVÁLIDO</b> — podem ser dois grupos diferentes de B</div>\n  <div class=\"def\"><span class=\"def-t\">Todo A é B ⊢ Todo B é A</span> <b>INVÁLIDO</b> — é a recíproca</div>\n  <div class=\"def\"><span class=\"def-t\">Nenhum A é B ⊢ Nenhum B é A</span> <b>VÁLIDO</b> — “nenhum” é a única que funciona nos dois sentidos</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>O contraexemplo que vale ouro:</b> <i>“Algum médico é professor. Algum professor é português. Logo algum médico é português?”</i> <b>Não.</b> Os professores-médicos podem ser todos brasileiros, e os professores-portugueses podem não ser médicos. São dois grupos diferentes de professores.</div>"
+            },
+            {
+              "titulo": "Negação dos quantificadores",
+              "html": "<p>Negar uma frase com quantificador <b>não é</b> trocar o verbo por “não”. A regra é mecânica, com duas trocas: <b>troque o quantificador (universal ↔ particular) e inverta a afirmação (afirmativo ↔ negativo)</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">~(Todo A é B)</span> = <b>Algum A não é B</b> · errado: ~~nenhum A é B~~</div>\n  <div class=\"def\"><span class=\"def-t\">~(Algum A é B)</span> = <b>Nenhum A é B</b> · errado: ~~algum A não é B~~</div>\n  <div class=\"def\"><span class=\"def-t\">~(Nenhum A é B)</span> = <b>Algum A é B</b> · errado: ~~todo A é B~~</div>\n  <div class=\"def\"><span class=\"def-t\">~(Algum A não é B)</span> = <b>Todo A é B</b></div>\n</div>\n<p><b>Por que “nenhum” não nega “todo”:</b> para <i>“todos os candidatos foram aprovados”</i> ser falsa, basta <b>um</b> reprovado — não é preciso que todos reprovem.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Derrubar um “todo” exige <b>um</b> contraexemplo; derrubar um “algum” exige <b>varrer o conjunto inteiro</b>. Por isso a negação de “todo” é fraquinha (algum) e a de “algum” é forte (nenhum).</div>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> É idêntico ao JavaScript: <code>!arr.every(f)</code> equivale a <code>arr.some(x =&gt; !f(x))</code>.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Teste de conferência de qualquer negação:</b> se as duas frases puderem ser verdadeiras ao mesmo tempo, uma <b>não</b> é a negação da outra. “Algum foi eliminado” e “algum não foi eliminado” convivem — logo não são negação uma da outra.</div>"
+            },
+            {
+              "titulo": "Lógica de primeira ordem: ∀ e ∃",
+              "html": "<p>O edital cobra o item, e a FGV costuma pedir a <b>tradução</b> entre frase e fórmula. São dois símbolos: <b>∀</b> (“para todo x”) e <b>∃</b> (“existe x tal que”).</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Todo A é B</span> ∀x (A(x) <b>→</b> B(x))</div>\n  <div class=\"def\"><span class=\"def-t\">Algum A é B</span> ∃x (A(x) <b>∧</b> B(x))</div>\n  <div class=\"def\"><span class=\"def-t\">Nenhum A é B</span> ∀x (A(x) <b>→</b> ~B(x))</div>\n  <div class=\"def\"><span class=\"def-t\">Algum A não é B</span> ∃x (A(x) <b>∧</b> ~B(x))</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>∀ anda com → · ∃ anda com ∧.</b> Nunca se misturam.</div>\n<p><b>Por quê:</b> “todo analista é servidor” não afirma que existe analista — afirma uma <b>regra</b> (se for analista, então é servidor), e regra é condicional. Já “algum analista é servidor” afirma que <b>existe alguém</b> que é as duas coisas ao mesmo tempo, e duas coisas ao mesmo tempo é conjunção.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Se você escrever “algum” com →, a fórmula fica verdadeira de graça: bastaria existir alguém que <b>não</b> é analista para satisfazê-la (antecedente falso). Por isso <b>∃x (A(x) → B(x))</b> é sempre distrator errado.</div>\n<p><b>Negação em notação</b> — é a regra das duas trocas, com símbolos:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">~∀x P(x)</span> = ∃x ~P(x) · “nem todo x é P” = “existe x que não é P”</div>\n  <div class=\"def\"><span class=\"def-t\">~∃x P(x)</span> = ∀x ~P(x) · “não existe x que é P” = “todo x não é P”</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> O <b>~</b> entra e o quantificador <b>vira o outro</b>.</div>"
+            }
+          ],
+          "flashcards": [
+            {
+              "tema": "Argumentação",
+              "pergunta": "Quando um argumento é válido?",
+              "resposta": "Quando é impossível ter premissas verdadeiras e conclusão falsa. Validade é da estrutura, não do conteúdo — premissas falsas podem formar argumento válido."
+            },
+            {
+              "tema": "Argumentação",
+              "pergunta": "Um argumento com premissas falsas pode ser válido?",
+              "resposta": "Pode. “Todo peixe voa; baleia é peixe; logo baleia voa” é válido. O único caso impossível num argumento válido é premissas V com conclusão F."
+            },
+            {
+              "tema": "Argumentação",
+              "pergunta": "Qual a diferença entre dedução, indução e analogia?",
+              "resposta": "Dedução vai do geral ao particular e garante a conclusão. Indução vai do particular ao geral e só a torna provável. Analogia vai de particular a particular, também só provável."
+            },
+            {
+              "tema": "Argumentação",
+              "pergunta": "Quais são os dois padrões VÁLIDOS com condicional e as duas falácias?",
+              "resposta": "Válidos: modus ponens (p→q, p ⊢ q) e modus tollens (p→q, ~q ⊢ ~p). Falácias: negar o antecedente (p→q, ~p ⊢ ~q) e afirmar o consequente (p→q, q ⊢ p)."
+            },
+            {
+              "tema": "Quantificadores",
+              "pergunta": "“Algum” exclui “todos”?",
+              "resposta": "Não. Algum = pelo menos um, podendo ser todos. Se os 100 candidatos foram aprovados, “algum candidato foi aprovado” é verdadeira."
+            },
+            {
+              "tema": "Quantificadores",
+              "pergunta": "Qual a negação de “Todo A é B”?",
+              "resposta": "“Algum A não é B” (pelo menos um). NÃO é “nenhum A é B” — para derrubar um “todo” basta um contraexemplo."
+            },
+            {
+              "tema": "Quantificadores",
+              "pergunta": "Qual a negação de “Algum A é B”?",
+              "resposta": "“Nenhum A é B”. Para derrubar um “existe pelo menos um” é preciso varrer o conjunto inteiro."
+            },
+            {
+              "tema": "Quantificadores",
+              "pergunta": "Qual a regra geral para negar quantificador?",
+              "resposta": "Troque o quantificador (universal ↔ particular) e inverta a afirmação (afirmativo ↔ negativo)."
+            },
+            {
+              "tema": "Quantificadores",
+              "pergunta": "Como saber se uma frase é mesmo a negação de outra?",
+              "resposta": "Se as duas puderem ser verdadeiras ao mesmo tempo, uma não é a negação da outra. A negação tem que ser V exatamente quando a original é F."
+            },
+            {
+              "tema": "Diagramas",
+              "pergunta": "Como se desenha cada uma das quatro formas categóricas?",
+              "resposta": "Todo A é B: A dentro de B. Nenhum A é B: círculos separados. Algum A é B: círculos cruzados com X na interseção. Algum A não é B: X na parte de A fora de B."
+            },
+            {
+              "tema": "Diagramas",
+              "pergunta": "Quando uma conclusão é válida no método dos diagramas?",
+              "resposta": "Quando vale em TODOS os desenhos possíveis das premissas. Se existe um desenho em que as premissas valem e a conclusão falha (contraexemplo), o argumento é inválido."
+            },
+            {
+              "tema": "Diagramas",
+              "pergunta": "“Todo A é B” + “Algum B é C” permite concluir “algum A é C”?",
+              "resposta": "Não. O C pode estar na parte de B que sobra fora de A. É a combinação mais cobrada da banca."
+            },
+            {
+              "tema": "Diagramas",
+              "pergunta": "“Algum A é B” + “Algum B é C” permite concluir “algum A é C”?",
+              "resposta": "Não. Podem ser dois grupos diferentes de B. Contraexemplo: algum médico é professor, algum professor é português, e nenhum médico é português."
+            },
+            {
+              "tema": "Diagramas",
+              "pergunta": "Qual a única forma categórica que pode ser invertida?",
+              "resposta": "“Nenhum A é B” equivale a “nenhum B é A”. “Todo A é B” NÃO equivale a “todo B é A” (isso é a recíproca)."
+            },
+            {
+              "tema": "1ª ordem",
+              "pergunta": "Como se escrevem “Todo A é B” e “Algum A é B” em lógica de primeira ordem?",
+              "resposta": "∀x (A(x) → B(x)) e ∃x (A(x) ∧ B(x)). ∀ anda com →, ∃ anda com ∧ — nunca se misturam."
+            },
+            {
+              "tema": "1ª ordem",
+              "pergunta": "Por que “algum” não pode ser escrito com →?",
+              "resposta": "Porque ∃x (A(x) → B(x)) fica verdadeira de graça: basta existir alguém que não é A (antecedente falso). Ela não diz nada sobre os A."
+            },
+            {
+              "tema": "1ª ordem",
+              "pergunta": "Como negar ∀x P(x) e ∃x P(x)?",
+              "resposta": "~∀x P(x) = ∃x ~P(x); ~∃x P(x) = ∀x ~P(x). O ~ entra e o quantificador vira o outro."
+            }
+          ],
+          "simulados": [
+            {
+              "id": "diagramas-quantificadores-01",
+              "nome": "Aula 1 · Negações, diagramas e validade",
+              "descricao": "Seis questões no padrão FGV sobre negação de quantificadores, conclusões que decorrem (e as que não decorrem) de premissas com todo/algum, tradução para ∀/∃ e identificação de modus tollens.",
+              "nivel": "Treino",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Negação de “todo”",
+                  "text": "A negação da proposição “Todos os servidores da DataPrev usam crachá” é",
+                  "options": [
+                    "Nenhum servidor da DataPrev usa crachá",
+                    "Todos os servidores da DataPrev não usam crachá",
+                    "Pelo menos um servidor da DataPrev não usa crachá",
+                    "Nenhum servidor da DataPrev deixa de usar crachá",
+                    "Alguns servidores da DataPrev usam crachá"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. A negação de “todo A é B” é “algum A não é B”, e “pelo menos um” é sinônimo exato de “algum”: para derrubar um “todos” basta UM contraexemplo. A opção A é o distrator principal — “nenhum usa crachá” é muito mais forte do que o necessário: num cenário com 99 usando e 1 sem crachá, a original é falsa e a A também, e negação tem que ser V exatamente quando a original é F. A B diz o mesmo que a A com outras palavras, a D reforça a original e a E convive com ela."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Diagramas · o que decorre",
+                  "text": "Considere verdadeiras as afirmações: I. Todo programador conhece lógica. II. Algum programador trabalha na DataPrev. Conclui-se corretamente que",
+                  "options": [
+                    "Todos os que trabalham na DataPrev conhecem lógica",
+                    "Alguém que trabalha na DataPrev conhece lógica",
+                    "Todo o que conhece lógica é programador",
+                    "Algum programador não conhece lógica",
+                    "Nenhum programador deixa de trabalhar na DataPrev"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. Desenhe: o círculo dos programadores fica DENTRO do círculo de quem conhece lógica (premissa I); a premissa II põe um X na interseção programador/DataPrev. Esse X está necessariamente dentro do círculo da lógica — logo existe alguém da DataPrev que conhece lógica. As erradas concluem demais: A exigiria que todo o pessoal da DataPrev fosse programador (pode haver um contador lá); C é a recíproca da premissa I; D contradiz a I; E inventa informação."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Diagramas · o que NÃO decorre",
+                  "text": "São verdadeiras as premissas “Todo analista é servidor” e “Algum servidor é gestor”. Assinale a afirmativa que NÃO pode ser deduzida dessas premissas.",
+                  "options": [
+                    "Algum analista é gestor",
+                    "Algum servidor é analista ou não há analistas",
+                    "Pode existir gestor que não é analista",
+                    "Todo analista é servidor",
+                    "Existe pelo menos um gestor que é servidor"
+                  ],
+                  "answer": 0,
+                  "exp": "Gabarito: A. “Todo analista é servidor” põe analistas DENTRO de servidores; “algum servidor é gestor” põe um X na interseção servidor/gestor — e esse X pode cair na parte de servidor que está FORA de analistas. Contraexemplo: a DataPrev pode ter gestores vindos da área administrativa, nenhum deles analista. As demais decorrem: D é a própria premissa, E é a premissa II reescrita, C é uma possibilidade que o diagrama admite e B é reformulação inofensiva. Guarde o padrão: “todo A é B” + “algum B é C” NUNCA conclui nada sobre A."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Negação de “algum”",
+                  "text": "A negação da proposição “Algum candidato foi eliminado” é",
+                  "options": [
+                    "Algum candidato não foi eliminado",
+                    "Todos os candidatos foram eliminados",
+                    "Nem todos os candidatos foram eliminados",
+                    "Nenhum candidato foi eliminado",
+                    "Poucos candidatos foram eliminados"
+                  ],
+                  "answer": 3,
+                  "exp": "Gabarito: D. A negação de “algum A é B” é “nenhum A é B”: para derrubar um “existe pelo menos um” é preciso varrer o conjunto inteiro e não achar nenhum. A opção A é a armadilha — “algum não foi eliminado” pode ser verdadeira JUNTO com a original (alguns eliminados, outros não), e duas proposições que convivem nunca são negação uma da outra. Esse é o teste de conferência para qualquer questão de negação."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Lógica de 1ª ordem",
+                  "text": "Considere C(x): “x é candidato” e A(x): “x foi aprovado”. A proposição “Algum candidato não foi aprovado” é corretamente representada por",
+                  "options": [
+                    "∀x (C(x) → ~A(x))",
+                    "∃x (C(x) → ~A(x))",
+                    "∃x (C(x) ∧ ~A(x))",
+                    "~∃x (C(x) ∧ A(x))",
+                    "∀x (C(x) ∧ ~A(x))"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. “Algum” afirma existência (∃), e “é candidato E não foi aprovado” são duas coisas na mesma pessoa (∧). A opção B é o distrator clássico: com → dentro do ∃, bastaria existir alguém que NÃO é candidato para a fórmula ficar verdadeira (antecedente falso), ou seja, ela não diz nada sobre candidatos. Guarde: ∀ anda com →, ∃ anda com ∧. As opções A e D afirmam que nenhum candidato foi aprovado, bem mais forte que a original."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Validade · modus tollens",
+                  "text": "Um argumento tem as premissas “Se o sistema falha, o alerta é disparado” e “O alerta não foi disparado”, e a conclusão “O sistema não falhou”. Sobre esse argumento, é correto afirmar que",
+                  "options": [
+                    "é inválido, pois comete a falácia de negar o antecedente",
+                    "é inválido, pois comete a falácia de afirmar o consequente",
+                    "é válido, por modus ponens",
+                    "é válido, por modus tollens",
+                    "é válido apenas se as premissas forem de fato verdadeiras"
+                  ],
+                  "answer": 3,
+                  "exp": "Gabarito: D. A estrutura é p → q, ~q, portanto ~p: negar o consequente e concluir a negação do antecedente — modus tollens, válido. A opção A descreveria outro argumento (“o sistema não falhou, logo o alerta não disparou”). A opção E é a pegadinha conceitual: validade NÃO depende da verdade das premissas, só da estrutura — um argumento válido continua válido com premissas falsas."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3903,14 +4128,16 @@ window.CONTENT = {
                 "nome": "Diagramas lógicos e quantificadores",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "‘Todo’, ‘algum’, ‘nenhum’ e suas negações, com diagramas de Venn. Pega candidato que responde pelo senso comum."
+                "oQueCai": "‘Todo’, ‘algum’, ‘nenhum’ e suas negações, com diagramas de Venn. Pega candidato que responde pelo senso comum.",
+                "materiaId": "diagramas-quantificadores"
               },
               {
                 "id": "rl-primeira-ordem",
                 "nome": "Lógica de primeira ordem",
                 "prioridade": "media",
                 "esforco": 1,
-                "oQueCai": "Quantificadores universal e existencial aplicados a predicados. Recorte explícito do edital, cobrança leve."
+                "oQueCai": "Quantificadores universal e existencial aplicados a predicados. Recorte explícito do edital, cobrança leve.",
+                "materiaId": "diagramas-quantificadores"
               },
               {
                 "id": "rl-aritmeticos",
