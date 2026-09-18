@@ -1,0 +1,190 @@
+{
+  "id": "termos-oracao-01",
+  "materiaId": "termos-oracao",
+  "nome": "Termos da oração — do sujeito ao complemento nominal",
+  "descricao": "Morfologia x sintaxe, tipos de sujeito e predicado, objetos, adjuntos e o par adjunto adnominal x complemento nominal.",
+  "nivel": "Introdutório",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Conceito · morfologia x sintaxe",
+      "text": "A diferença entre morfologia e sintaxe está em que:",
+      "options": [
+        "a morfologia estuda a função da palavra na frase, e a sintaxe, a classe a que ela pertence;",
+        "a morfologia estuda a classe da palavra, e a sintaxe, a função que ela exerce na frase;",
+        "ambas estudam a função da palavra, diferindo apenas quanto ao nível de análise;",
+        "a morfologia se aplica apenas a substantivos e verbos, e a sintaxe, às demais classes."
+      ],
+      "answer": 1,
+      "exp": "Morfologia = o que a palavra É (classe: substantivo, verbo, adjetivo…). Sintaxe = o que ela FAZ naquela frase (função: sujeito, objeto, adjunto…). A classe é fixa; a função muda conforme a frase — “casa” é sempre substantivo, mas é sujeito em “A casa é grande” e objeto direto em “Comprei a casa”."
+    },
+    {
+      "type": "mc",
+      "tag": "Termos · objeto direto",
+      "text": "Em “Comprei a casa”, o termo “a casa” exerce a função sintática de:",
+      "options": [
+        "sujeito;",
+        "objeto direto;",
+        "predicativo do sujeito;",
+        "complemento nominal;",
+        "adjunto adverbial."
+      ],
+      "answer": 1,
+      "exp": "A pergunta do sujeito é feita ANTES do verbo (“quem comprou?” = eu, sujeito oculto). Depois do verbo a resposta é objeto: comprei o quê? a casa. Sem preposição → objeto direto."
+    },
+    {
+      "type": "mc",
+      "tag": "Período · contagem de orações",
+      "text": "O período “Estudei porque quero passar” é formado por:",
+      "options": [
+        "uma oração;",
+        "duas orações;",
+        "três orações;",
+        "quatro orações."
+      ],
+      "answer": 2,
+      "exp": "A régua é contar verbos: estudei, quero, passar → três verbos, três orações. Atenção: “quero passar” aqui não é locução verbal (querer não é auxiliar de tempo/modo), então conta como dois verbos."
+    },
+    {
+      "type": "ce",
+      "tag": "Sujeito · verbo haver",
+      "text": "Em “Havia muitos candidatos na sala”, o termo “muitos candidatos” exerce a função de sujeito da oração.",
+      "options": ["Certo", "Errado"],
+      "answer": 1,
+      "exp": "Errado. “Haver” no sentido de existir é impessoal: a oração NÃO tem sujeito, e “muitos candidatos” é objeto direto. É exatamente por isso que o verbo fica no singular — “Havia muitos candidatos”, nunca “Haviam”."
+    },
+    {
+      "type": "mc",
+      "tag": "Sujeito · indeterminado",
+      "text": "Assinale a opção em que o sujeito é INDETERMINADO:",
+      "options": [
+        "Chove muito em João Pessoa.",
+        "Precisa-se de servidores qualificados.",
+        "Faz dois anos que estudo para o concurso.",
+        "Há vagas para o cargo de analista.",
+        "Os candidatos chegaram cedo."
+      ],
+      "answer": 1,
+      "exp": "Sujeito indeterminado existe, mas não se identifica. Aqui a marca é o verbo na 3ª pessoa do singular + SE, com o complemento preposicionado (“de servidores”). Nas opções A, C e D a oração é SEM SUJEITO (fenômeno da natureza, “fazer” de tempo e “haver” = existir); em E o sujeito é simples."
+    },
+    {
+      "type": "mc",
+      "tag": "Predicado · tipos",
+      "text": "Em “O candidato chegou cansado”, o predicado classifica-se como:",
+      "options": [
+        "verbal;",
+        "nominal;",
+        "verbo-nominal;",
+        "verbal, com adjunto adverbial de modo."
+      ],
+      "answer": 2,
+      "exp": "Há duas informações: a ação (chegou) e o estado do sujeito (cansado, predicativo do sujeito). Predicado com verbo de ação + predicativo = verbo-nominal. Se fosse só “O candidato chegou”, seria verbal; se fosse “O candidato está cansado”, nominal."
+    },
+    {
+      "type": "mc",
+      "tag": "Predicativo · do objeto",
+      "text": "Em “Considero a prova difícil”, o termo “difícil” exerce a função de:",
+      "options": [
+        "adjunto adnominal;",
+        "predicativo do sujeito;",
+        "predicativo do objeto;",
+        "complemento nominal;",
+        "objeto direto."
+      ],
+      "answer": 2,
+      "exp": "A qualidade recai sobre “a prova”, que é objeto direto de “considero” → predicativo do objeto. Não é adjunto adnominal porque não está colado ao substantivo caracterizando-o (“a prova difícil”), e sim atribuído através do verbo."
+    },
+    {
+      "type": "mc",
+      "tag": "Termos · objeto indireto",
+      "text": "Em “Obedeço às normas do edital”, o termo “às normas” classifica-se como:",
+      "options": [
+        "objeto direto;",
+        "objeto indireto;",
+        "complemento nominal;",
+        "adjunto adverbial;",
+        "agente da passiva."
+      ],
+      "answer": 1,
+      "exp": "Quem completa um VERBO é objeto; com preposição obrigatória, objeto indireto. A preposição vem da regência de “obedecer”, que é verbo transitivo indireto (obedecer A alguma coisa). Teste do pronome: “obedeço-lhes” → objeto indireto."
+    },
+    {
+      "type": "mc",
+      "tag": "Termos · complemento nominal",
+      "text": "Em “Ela é favorável à proposta”, o termo “à proposta” exerce a função de:",
+      "options": [
+        "objeto indireto;",
+        "adjunto adnominal;",
+        "complemento nominal;",
+        "adjunto adverbial;",
+        "predicativo do sujeito."
+      ],
+      "answer": 2,
+      "exp": "Quem pede a preposição é o ADJETIVO “favorável”, não um verbo — logo, complemento nominal, e não objeto indireto. Vale o atalho: termo ligado a adjetivo ou advérbio é sempre complemento nominal, porque adjunto adnominal só existe junto de substantivo."
+    },
+    {
+      "type": "mc",
+      "tag": "AA x CN · agente e paciente",
+      "text": "Em “O respeito dos servidores às normas foi elogiado pelo diretor”, os termos destacados “dos servidores”, “às normas” e “pelo diretor” classificam-se, respectivamente, como:",
+      "options": [
+        "adjunto adnominal, complemento nominal e agente da passiva;",
+        "complemento nominal, adjunto adnominal e agente da passiva;",
+        "adjunto adnominal, objeto indireto e adjunto adverbial;",
+        "complemento nominal, complemento nominal e agente da passiva;",
+        "adjunto adnominal, complemento nominal e adjunto adverbial."
+      ],
+      "answer": 0,
+      "exp": "Transforme em verbo: “os servidores respeitam” → praticam → adjunto adnominal; “as normas são respeitadas” → sofrem → complemento nominal. “Pelo diretor” vem depois de SER + particípio (foi elogiado) → agente da passiva. Objeto indireto está fora porque o termo completa um NOME, não um verbo."
+    },
+    {
+      "type": "mc",
+      "tag": "AA x CN · teste do verbo",
+      "text": "Em “o combate ao crime” e “o combate da polícia”, os termos preposicionados classificam-se, respectivamente, como:",
+      "options": [
+        "complemento nominal e adjunto adnominal;",
+        "adjunto adnominal e complemento nominal;",
+        "objeto indireto e agente da passiva;",
+        "complemento nominal e complemento nominal;",
+        "adjunto adnominal e adjunto adnominal."
+      ],
+      "answer": 0,
+      "exp": "“Combate-se o crime” → o crime sofre a ação → paciente → complemento nominal. “A polícia combate” → pratica a ação → agente → adjunto adnominal. Mesmo substantivo, mesma preposição, classificações opostas: o que decide é quem faz e quem sofre."
+    },
+    {
+      "type": "mc",
+      "tag": "Voz passiva · agente",
+      "text": "Em “O edital foi publicado pela FGV”, o termo “pela FGV” classifica-se como:",
+      "options": [
+        "adjunto adverbial de meio;",
+        "agente da passiva;",
+        "objeto indireto;",
+        "complemento nominal;",
+        "adjunto adnominal."
+      ],
+      "answer": 1,
+      "exp": "A estrutura SER + particípio (foi publicado) marca a voz passiva, e quem pratica a ação aparece com “por/pela” → agente da passiva. Teste definitivo: ao passar para a voz ativa, ele vira o sujeito — “A FGV publicou o edital”."
+    },
+    {
+      "type": "ce",
+      "tag": "Vocativo",
+      "text": "Em “Candidatos, leiam o edital”, o termo “Candidatos” exerce a função de sujeito da oração.",
+      "options": ["Certo", "Errado"],
+      "answer": 1,
+      "exp": "Errado. “Candidatos” é VOCATIVO: chama o interlocutor e não pertence à estrutura da oração. O sujeito é oculto (vocês), revelado pela desinência de “leiam”. O vocativo é o único termo que fica de fora da análise sintática da oração."
+    },
+    {
+      "type": "mc",
+      "tag": "Aposto",
+      "text": "Em “A FGV, banca do concurso, divulgou o edital”, o termo “banca do concurso” classifica-se como:",
+      "options": [
+        "vocativo;",
+        "aposto;",
+        "predicativo do sujeito;",
+        "adjunto adnominal;",
+        "complemento nominal."
+      ],
+      "answer": 1,
+      "exp": "O termo explica “A FGV” e pode substituí-lo na frase (“A banca do concurso divulgou o edital”) → aposto explicativo. Não é vocativo, que chama alguém de fora da frase e não substitui nenhum termo; nem predicativo, que dependeria de um verbo para atribuir a característica."
+    }
+  ]
+}

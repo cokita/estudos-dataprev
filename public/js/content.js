@@ -492,6 +492,722 @@ window.CONTENT = {
           ]
         },
         {
+          "id": "termos-oracao",
+          "nome": "Termos da oração: sujeito, predicado e complementos",
+          "icon": "ti-sitemap",
+          "descricao": "Do zero: a diferença entre o que a palavra É e o que ela FAZ na frase. Sujeito, predicado, objetos, complemento nominal, adjuntos e apostos — com o teste que separa adjunto adnominal de complemento nominal, que é onde a FGV pega quase todo mundo.",
+          "resumo": [
+            {
+              "titulo": "Antes de tudo: as duas identidades de cada palavra",
+              "html": "\n<p>Toda palavra dentro de uma frase tem <b>duas identidades ao mesmo tempo</b>, e confundir as duas é o que faz análise sintática parecer difícil.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que ela É</span> a classe de palavra: substantivo, adjetivo, verbo, pronome… Isso é <b>morfologia</b>.</div>\n  <div class=\"def\"><span class=\"def-t\">O que ela FAZ ali</span> a função dentro daquela frase: sujeito, objeto, adjunto… Isso é <b>sintaxe</b>.</div>\n</div>\n<p><b>Morfossintaxe</b> é justamente olhar as duas juntas. Veja a mesma palavra em duas frases:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">A <b>casa</b> é grande</span> “casa” é substantivo (o que é) e <b>sujeito</b> (o que faz)</div>\n  <div class=\"def\"><span class=\"def-t\">Comprei a <b>casa</b></span> continua substantivo, mas agora é <b>objeto direto</b></div>\n</div>\n<p class=\"mnemonic\">Classe é fixa, função depende da frase. A classe é a profissão da pessoa (ela é médica); a função é o papel dela naquela reunião (ela é a presidente da mesa).</p>\n<p>Por que isso importa para a prova: <b>crase, concordância e regência são regras escritas em cima de funções</b>. “O verbo concorda com o sujeito”, “o adjetivo concorda com o substantivo a que se refere”, “crase é preposição + artigo”. Se você não identifica sujeito, objeto e adjunto, essas regras viram decoreba solta.</p>"
+            },
+            {
+              "titulo": "A régua de tudo: o que é uma oração",
+              "html": "\n<p><b>Oração é todo enunciado que tem verbo.</b> Um verbo, uma oração. Dois verbos, duas orações. Simples assim — e é a ferramenta mais útil que existe em análise sintática.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Estudei.</span> 1 verbo → 1 oração → <b>período simples</b></div>\n  <div class=\"def\"><span class=\"def-t\">Estudei porque quero passar.</span> 3 verbos (estudei, quero, passar) → 3 orações → <b>período composto</b></div>\n</div>\n<p>Locuções verbais contam como <b>um</b> verbo só: <i>vou estudar</i>, <i>tenho estudado</i>, <i>preciso estudar</i> — são um bloco, uma oração.</p>\n<p class=\"destaque\">Sempre comece contando verbos. Antes de classificar qualquer coisa, saiba quantas orações existem na frase — muita questão da FGV se resolve só com isso.</p>"
+            },
+            {
+              "titulo": "Sujeito: como achar e os cinco tipos",
+              "html": "\n<p><b>Sujeito</b> é o termo com o qual o verbo concorda. Para achar, pergunte <b>“quem?”</b> ou <b>“o quê?”</b> <i>antes</i> do verbo — nunca depois, porque depois vira objeto.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Os candidatos fizeram a prova.</span> Quem fez? <i>Os candidatos</i> → sujeito. Fez o quê? <i>a prova</i> → objeto.</div>\n</div>\n<p>O <b>núcleo</b> do sujeito é a palavra principal dele, normalmente um substantivo ou pronome: em <i>os novos candidatos aprovados</i>, o núcleo é <i>candidatos</i>. É com o núcleo que o verbo concorda.</p>\n<p>São cinco tipos, e os quatro últimos são exatamente onde a banca arma as pegadinhas:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Simples</span> um só núcleo — <i><b>A prova</b> será em outubro.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Composto</span> dois ou mais núcleos — <i><b>A prova e o resultado</b> foram adiados.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Oculto (desinencial)</span> não aparece escrito, mas a terminação do verbo revela — <i><b>Estudamos</b> muito.</i> (= nós)</div>\n  <div class=\"def\"><span class=\"def-t\">Indeterminado</span> existe alguém, mas não se diz quem — <i><b>Roubaram</b> meu celular.</i> (verbo na 3ª pessoa do plural sem referente) ou <i>Precisa-<b>se</b> de servidores.</i> (verbo + SE, com preposição)</div>\n  <div class=\"def\"><span class=\"def-t\">Inexistente (oração sem sujeito)</span> não há sujeito nenhum — <i><b>Há</b> vagas.</i> / <i><b>Chove</b> muito.</i> / <i><b>Faz</b> dois anos.</i></div>\n</div>\n<p class=\"destaque\"><b>A pegadinha campeã:</b> em <i>Havia muitos candidatos</i>, “muitos candidatos” <b>não é sujeito</b> — é objeto direto. O verbo <i>haver</i> no sentido de <i>existir</i> não tem sujeito, e por isso fica sempre no singular: <i>Havia muitos candidatos</i>, nunca “Haviam”. O mesmo vale para <i>fazer</i> de tempo: <i>Faz dois anos</i>, nunca “Fazem dois anos”.</p>"
+            },
+            {
+              "titulo": "Predicado: os três tipos",
+              "html": "\n<p><b>Predicado</b> é tudo o que se declara sobre o sujeito — na prática, o verbo e o que vem com ele. O que muda entre os três tipos é <b>onde está a informação principal</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Verbal</span> o núcleo é um verbo de ação: <i>O candidato <b>chegou</b> cedo.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Nominal</span> o núcleo é um NOME, ligado por verbo de ligação: <i>O candidato <b>está cansado</b>.</i> A informação está em “cansado”, não em “está”.</div>\n  <div class=\"def\"><span class=\"def-t\">Verbo-nominal</span> tem os dois — ação e característica: <i>O candidato <b>chegou cansado</b>.</i></div>\n</div>\n<p>Os <b>verbos de ligação</b> são poucos e vale reconhecê-los de cara: <i>ser, estar, parecer, ficar, permanecer, continuar, tornar-se, andar</i> (no sentido de estado). Eles não indicam ação — só ligam o sujeito a uma característica.</p>\n<p class=\"mnemonic\">Teste rápido: se você puder trocar o verbo por “ser” sem perder o sentido geral, ele é de ligação. <i>Ele anda triste</i> → <i>Ele está triste</i> → ligação. <i>Ele anda pela praia</i> → “está pela praia” não fecha → verbo de ação.</p>"
+            },
+            {
+              "titulo": "Predicativo: do sujeito e do objeto",
+              "html": "\n<p><b>Predicativo</b> é o termo que atribui uma qualidade ou estado <i>através do verbo</i>. Não confunda com adjetivo: adjetivo é a classe, predicativo é a função.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Predicativo do sujeito</span> a qualidade recai sobre o sujeito — <i>A prova parece <b>difícil</b>.</i> / <i>Os candidatos chegaram <b>nervosos</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Predicativo do objeto</span> a qualidade recai sobre o objeto — <i>Considero a prova <b>difícil</b>.</i> (difícil é “a prova”, que é objeto direto)</div>\n</div>\n<p>Como separar do adjunto adnominal, que também é uma qualidade: o <b>adjunto adnominal cola no substantivo</b> (<i>a prova <b>difícil</b> começou</i>), enquanto o <b>predicativo depende do verbo</b> (<i>a prova está <b>difícil</b></i>). Tire o verbo e o predicativo perde o apoio.</p>"
+            },
+            {
+              "titulo": "Termos integrantes: objeto direto e objeto indireto",
+              "html": "\n<p>Chamam-se “integrantes” porque <b>integram</b> — completam — o sentido de uma palavra que sozinha fica pela metade. <i>Comprei</i> pede resposta: comprei o quê?</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Objeto direto</span> completa o verbo <b>sem preposição</b> — <i>Li <b>o edital</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Objeto indireto</span> completa o verbo <b>com preposição obrigatória</b> — <i>Preciso <b>do edital</b>.</i> / <i>Obedeço <b>às normas</b>.</i></div>\n</div>\n<p>Repare que quem manda na preposição é o verbo — isso é exatamente a <b>regência verbal</b>. <i>Assistir</i> no sentido de ver pede “a” (<i>assisti <b>ao</b> filme</i>); <i>obedecer</i> pede “a”; <i>gostar</i> pede “de”. Por isso os dois assuntos andam juntos.</p>\n<p class=\"mnemonic\">Teste do pronome: se dá para trocar por <b>o / a / os / as</b>, é objeto direto (<i>Li o edital → Li-<b>o</b></i>). Se dá para trocar por <b>lhe / lhes</b>, é objeto indireto (<i>Obedeço às normas → Obedeço-<b>lhes</b></i>).</p>"
+            },
+            {
+              "titulo": "Complemento nominal: quando quem pede é um nome",
+              "html": "\n<p>Verbo não é a única palavra que fica pela metade. <b>Nomes</b> também pedem complemento — e aí o termo se chama <b>complemento nominal</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Completa um substantivo</span> <i>Tenho necessidade <b>de descanso</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Completa um adjetivo</span> <i>Ela é favorável <b>à proposta</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Completa um advérbio</span> <i>Agiu favoravelmente <b>ao servidor</b>.</i></div>\n</div>\n<p>Duas marcas sempre presentes: vem <b>com preposição</b> e o termo é o <b>alvo</b> (quem sofre) da ideia expressa pelo nome.</p>\n<p class=\"destaque\">Guarde este atalho, porque resolve metade das questões: <b>se o termo se liga a um adjetivo ou a um advérbio, é sempre complemento nominal</b> — adjunto adnominal só existe junto de substantivo.</p>"
+            },
+            {
+              "titulo": "Agente da passiva",
+              "html": "\n<p>Na voz passiva, o sujeito <i>sofre</i> a ação em vez de praticá-la. Quem pratica aparece introduzido por <b>por</b> (ou, mais raro, <b>de</b>) e se chama <b>agente da passiva</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Voz ativa</span> <i>A FGV publicou o edital.</i> — “A FGV” é sujeito e pratica.</div>\n  <div class=\"def\"><span class=\"def-t\">Voz passiva</span> <i>O edital foi publicado <b>pela FGV</b>.</i> — “O edital” é sujeito e sofre; “pela FGV” é agente da passiva.</div>\n</div>\n<p>Como reconhecer de longe: <b>verbo SER + particípio</b> (foi publicado, será analisado, é assinado) e, logo depois, um termo com <i>por / pelo / pela</i>.</p>\n<p class=\"mnemonic\">O agente da passiva é o único termo preposicionado que vira SUJEITO quando você passa a frase para a voz ativa. Esse é o teste definitivo.</p>"
+            },
+            {
+              "titulo": "Termos acessórios: adjuntos, aposto e vocativo",
+              "html": "\n<p>São “acessórios” porque acrescentam informação sem serem exigidos por ninguém — dá para tirar e a frase continua de pé.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Adjunto adnominal</span> acompanha um <b>substantivo</b>, caracterizando-o. Pode ser artigo, adjetivo, pronome, numeral ou locução com preposição: <i><b>O meu segundo</b> filho <b>caçula</b></i> — os quatro são adjuntos adnominais de “filho”.</div>\n  <div class=\"def\"><span class=\"def-t\">Adjunto adverbial</span> indica circunstância (tempo, lugar, modo, causa, intensidade, finalidade) e se liga ao <b>verbo</b>: <i>A prova será <b>em outubro</b>, <b>em João Pessoa</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Aposto</span> explica ou especifica outro termo, normalmente entre vírgulas: <i>A FGV, <b>banca do concurso</b>, divulgou o edital.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Vocativo</span> chama o interlocutor e NÃO pertence à estrutura da oração: <i><b>Candidatos</b>, leiam o edital.</i></div>\n</div>\n<p class=\"destaque\">Aposto x vocativo é questão fácil que muita gente erra: o <b>aposto</b> se refere a um termo da frase e pode ser trocado por ele (<i>a banca do concurso divulgou</i>); o <b>vocativo</b> chama alguém de fora da frase e não pode substituir nada.</p>"
+            },
+            {
+              "titulo": "O teste que decide: adjunto adnominal x complemento nominal",
+              "html": "\n<p>Esta é <b>a</b> distinção do assunto. Os dois vêm depois de um substantivo, os dois vêm com preposição, e a diferença é só uma: <b>quem faz e quem sofre a ação</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">a leitura <b>do edital</b></span> transforme em verbo: <i>o edital é lido</i> → o edital SOFRE → paciente → <b>complemento nominal</b></div>\n  <div class=\"def\"><span class=\"def-t\">a leitura <b>do candidato</b></span> transforme em verbo: <i>o candidato lê</i> → o candidato PRATICA → agente → <b>adjunto adnominal</b></div>\n</div>\n<p>O procedimento, passo a passo, para usar na prova:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. A que palavra o termo se liga?</span> Se for adjetivo ou advérbio → complemento nominal, acabou. Se for substantivo, siga.</div>\n  <div class=\"def\"><span class=\"def-t\">2. Esse substantivo é abstrato, derivado de verbo?</span> (<i>leitura, combate, respeito, construção, análise</i>) Se não for, quase sempre é adjunto adnominal (posse, qualidade, origem).</div>\n  <div class=\"def\"><span class=\"def-t\">3. Transforme em oração com verbo.</span> O termo virou quem pratica → adjunto adnominal. Virou quem sofre → complemento nominal.</div>\n</div>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">o combate <b>ao crime</b></span> combate-se o crime → sofre → complemento nominal</div>\n  <div class=\"def\"><span class=\"def-t\">o combate <b>da polícia</b></span> a polícia combate → pratica → adjunto adnominal</div>\n  <div class=\"def\"><span class=\"def-t\">a casa <b>do vizinho</b></span> ninguém “casa” nada; é posse → adjunto adnominal</div>\n</div>\n<p class=\"destaque\">Quando os dois aparecem na mesma frase, é sinal claro de que a questão está testando exatamente isto: <i>O respeito <b>dos servidores</b> <b>às normas</b></i> — os servidores respeitam (agente, adjunto adnominal), as normas são respeitadas (paciente, complemento nominal).</p>"
+            },
+            {
+              "titulo": "Como a FGV pergunta isso",
+              "html": "\n<p>Os formatos se repetem. Reconhecer o formato já adianta meia questão:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">“O termo sublinhado exerce a função de…”</span> pede a função sintática. Faça os testes; não responda pela classe da palavra.</div>\n  <div class=\"def\"><span class=\"def-t\">“Os termos X e Y têm, respectivamente, as funções de…”</span> quase sempre é o par adjunto adnominal x complemento nominal.</div>\n  <div class=\"def\"><span class=\"def-t\">“Assinale a frase em que o sujeito é indeterminado / a oração não tem sujeito”</span> procure <i>haver</i> = existir, <i>fazer</i> de tempo, fenômeno da natureza, verbo na 3ª pessoa do plural sem referente e o SE com preposição.</div>\n  <div class=\"def\"><span class=\"def-t\">“A palavra destacada classifica-se morfologicamente como… e sintaticamente como…”</span> é a morfossintaxe pura: duas respostas na mesma alternativa, e basta uma estar errada para a opção cair.</div>\n</div>\n<p class=\"mnemonic\">Ordem de ataque em qualquer questão de sintaxe: 1) conte os verbos; 2) ache o sujeito perguntando “quem?” antes do verbo; 3) veja se o que sobrou completa um VERBO (objeto) ou um NOME (complemento nominal); 4) o resto é adjunto, aposto ou vocativo.</p>"
+            }
+          ],
+          "flashcards": [
+            {
+              "tema": "Base",
+              "pergunta": "Qual a diferença entre morfologia e sintaxe?",
+              "resposta": "Morfologia é o que a palavra É (a classe: substantivo, verbo, adjetivo…). Sintaxe é o que ela FAZ naquela frase (a função: sujeito, objeto, adjunto…). Morfossintaxe é olhar as duas juntas."
+            },
+            {
+              "tema": "Base",
+              "pergunta": "Como se conta o número de orações de um período?",
+              "resposta": "Contando verbos: um verbo, uma oração. Locução verbal (vou estudar, tenho estudado) conta como um verbo só."
+            },
+            {
+              "tema": "Sujeito",
+              "pergunta": "Qual a pergunta certa para achar o sujeito?",
+              "resposta": "“Quem?” ou “o quê?” ANTES do verbo. Depois do verbo a resposta é objeto, não sujeito."
+            },
+            {
+              "tema": "Sujeito",
+              "pergunta": "Quais são os cinco tipos de sujeito?",
+              "resposta": "Simples, composto, oculto (desinencial), indeterminado e inexistente (oração sem sujeito)."
+            },
+            {
+              "tema": "Sujeito",
+              "pergunta": "Em “Havia muitos candidatos”, qual a função de “muitos candidatos”?",
+              "resposta": "Objeto direto. “Haver” no sentido de existir não tem sujeito, então fica sempre no singular: “Havia”, nunca “Haviam”."
+            },
+            {
+              "tema": "Sujeito",
+              "pergunta": "Quais são as duas formas clássicas de sujeito indeterminado?",
+              "resposta": "Verbo na 3ª pessoa do plural sem referente (“Roubaram meu celular”) e verbo na 3ª do singular + SE com preposição (“Precisa-se de servidores”)."
+            },
+            {
+              "tema": "Predicado",
+              "pergunta": "Quais são os três tipos de predicado?",
+              "resposta": "Verbal (núcleo é verbo de ação), nominal (núcleo é um nome, com verbo de ligação) e verbo-nominal (tem os dois)."
+            },
+            {
+              "tema": "Predicado",
+              "pergunta": "Cite os verbos de ligação mais cobrados.",
+              "resposta": "Ser, estar, parecer, ficar, permanecer, continuar, tornar-se e andar (no sentido de estado)."
+            },
+            {
+              "tema": "Predicado",
+              "pergunta": "Como distinguir predicativo de adjunto adnominal?",
+              "resposta": "O adjunto adnominal cola no substantivo (“a prova difícil começou”); o predicativo depende do verbo (“a prova está difícil”). Tire o verbo e o predicativo perde o apoio."
+            },
+            {
+              "tema": "Complementos",
+              "pergunta": "Qual a diferença entre objeto direto e objeto indireto?",
+              "resposta": "O direto completa o verbo sem preposição (“Li o edital”); o indireto completa com preposição obrigatória, exigida pela regência (“Obedeço às normas”)."
+            },
+            {
+              "tema": "Complementos",
+              "pergunta": "Qual o teste do pronome para separar OD de OI?",
+              "resposta": "Se cabe o/a/os/as, é objeto direto (Li-o). Se cabe lhe/lhes, é objeto indireto (Obedeço-lhes)."
+            },
+            {
+              "tema": "Complementos",
+              "pergunta": "O que é complemento nominal?",
+              "resposta": "O termo preposicionado que completa um NOME — substantivo, adjetivo ou advérbio — e é o alvo (paciente) da ideia desse nome. Ex.: “necessidade de descanso”, “favorável à proposta”."
+            },
+            {
+              "tema": "Complementos",
+              "pergunta": "Qual o atalho que resolve metade dos casos de complemento nominal?",
+              "resposta": "Se o termo se liga a um ADJETIVO ou a um ADVÉRBIO, é sempre complemento nominal — adjunto adnominal só existe junto de substantivo."
+            },
+            {
+              "tema": "Complementos",
+              "pergunta": "Como identificar o agente da passiva?",
+              "resposta": "Verbo SER + particípio (foi publicado) seguido de termo com por/pelo/pela. Teste: ao passar para a voz ativa, ele vira o sujeito."
+            },
+            {
+              "tema": "Acessórios",
+              "pergunta": "O que pode ser adjunto adnominal?",
+              "resposta": "Artigo, adjetivo, pronome, numeral e locução adjetiva — tudo que acompanha e caracteriza um substantivo. Ex.: “O meu segundo filho caçula”."
+            },
+            {
+              "tema": "Acessórios",
+              "pergunta": "Qual a diferença entre aposto e vocativo?",
+              "resposta": "O aposto se refere a um termo da frase e pode substituí-lo (“A FGV, banca do concurso, divulgou”). O vocativo chama alguém e não pertence à estrutura da oração (“Candidatos, leiam o edital”)."
+            },
+            {
+              "tema": "AA x CN",
+              "pergunta": "Qual é o teste que separa adjunto adnominal de complemento nominal?",
+              "resposta": "Transformar em oração com verbo: se o termo PRATICA a ação, é adjunto adnominal (agente); se SOFRE, é complemento nominal (paciente)."
+            },
+            {
+              "tema": "AA x CN",
+              "pergunta": "Classifique: “a leitura do edital” e “a leitura do candidato”.",
+              "resposta": "“do edital” é complemento nominal (o edital é lido — paciente). “do candidato” é adjunto adnominal (o candidato lê — agente)."
+            },
+            {
+              "tema": "AA x CN",
+              "pergunta": "Classifique “dos servidores” e “às normas” em “O respeito dos servidores às normas”.",
+              "resposta": "“dos servidores” é adjunto adnominal (eles respeitam); “às normas” é complemento nominal (elas são respeitadas)."
+            },
+            {
+              "tema": "Prova",
+              "pergunta": "Qual a ordem de ataque numa questão de sintaxe?",
+              "resposta": "1) conte os verbos; 2) ache o sujeito perguntando “quem?” antes do verbo; 3) veja se o termo completa um VERBO (objeto) ou um NOME (complemento nominal); 4) o resto é adjunto, aposto ou vocativo."
+            }
+          ],
+          "simulados": [
+            {
+              "id": "termos-oracao-01",
+              "nome": "Termos da oração — do sujeito ao complemento nominal",
+              "descricao": "Morfologia x sintaxe, tipos de sujeito e predicado, objetos, adjuntos e o par adjunto adnominal x complemento nominal.",
+              "nivel": "Introdutório",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Conceito · morfologia x sintaxe",
+                  "text": "A diferença entre morfologia e sintaxe está em que:",
+                  "options": [
+                    "a morfologia estuda a função da palavra na frase, e a sintaxe, a classe a que ela pertence;",
+                    "a morfologia estuda a classe da palavra, e a sintaxe, a função que ela exerce na frase;",
+                    "ambas estudam a função da palavra, diferindo apenas quanto ao nível de análise;",
+                    "a morfologia se aplica apenas a substantivos e verbos, e a sintaxe, às demais classes."
+                  ],
+                  "answer": 1,
+                  "exp": "Morfologia = o que a palavra É (classe: substantivo, verbo, adjetivo…). Sintaxe = o que ela FAZ naquela frase (função: sujeito, objeto, adjunto…). A classe é fixa; a função muda conforme a frase — “casa” é sempre substantivo, mas é sujeito em “A casa é grande” e objeto direto em “Comprei a casa”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Termos · objeto direto",
+                  "text": "Em “Comprei a casa”, o termo “a casa” exerce a função sintática de:",
+                  "options": [
+                    "sujeito;",
+                    "objeto direto;",
+                    "predicativo do sujeito;",
+                    "complemento nominal;",
+                    "adjunto adverbial."
+                  ],
+                  "answer": 1,
+                  "exp": "A pergunta do sujeito é feita ANTES do verbo (“quem comprou?” = eu, sujeito oculto). Depois do verbo a resposta é objeto: comprei o quê? a casa. Sem preposição → objeto direto."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Período · contagem de orações",
+                  "text": "O período “Estudei porque quero passar” é formado por:",
+                  "options": [
+                    "uma oração;",
+                    "duas orações;",
+                    "três orações;",
+                    "quatro orações."
+                  ],
+                  "answer": 2,
+                  "exp": "A régua é contar verbos: estudei, quero, passar → três verbos, três orações. Atenção: “quero passar” aqui não é locução verbal (querer não é auxiliar de tempo/modo), então conta como dois verbos."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Sujeito · verbo haver",
+                  "text": "Em “Havia muitos candidatos na sala”, o termo “muitos candidatos” exerce a função de sujeito da oração.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. “Haver” no sentido de existir é impessoal: a oração NÃO tem sujeito, e “muitos candidatos” é objeto direto. É exatamente por isso que o verbo fica no singular — “Havia muitos candidatos”, nunca “Haviam”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Sujeito · indeterminado",
+                  "text": "Assinale a opção em que o sujeito é INDETERMINADO:",
+                  "options": [
+                    "Chove muito em João Pessoa.",
+                    "Precisa-se de servidores qualificados.",
+                    "Faz dois anos que estudo para o concurso.",
+                    "Há vagas para o cargo de analista.",
+                    "Os candidatos chegaram cedo."
+                  ],
+                  "answer": 1,
+                  "exp": "Sujeito indeterminado existe, mas não se identifica. Aqui a marca é o verbo na 3ª pessoa do singular + SE, com o complemento preposicionado (“de servidores”). Nas opções A, C e D a oração é SEM SUJEITO (fenômeno da natureza, “fazer” de tempo e “haver” = existir); em E o sujeito é simples."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Predicado · tipos",
+                  "text": "Em “O candidato chegou cansado”, o predicado classifica-se como:",
+                  "options": [
+                    "verbal;",
+                    "nominal;",
+                    "verbo-nominal;",
+                    "verbal, com adjunto adverbial de modo."
+                  ],
+                  "answer": 2,
+                  "exp": "Há duas informações: a ação (chegou) e o estado do sujeito (cansado, predicativo do sujeito). Predicado com verbo de ação + predicativo = verbo-nominal. Se fosse só “O candidato chegou”, seria verbal; se fosse “O candidato está cansado”, nominal."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Predicativo · do objeto",
+                  "text": "Em “Considero a prova difícil”, o termo “difícil” exerce a função de:",
+                  "options": [
+                    "adjunto adnominal;",
+                    "predicativo do sujeito;",
+                    "predicativo do objeto;",
+                    "complemento nominal;",
+                    "objeto direto."
+                  ],
+                  "answer": 2,
+                  "exp": "A qualidade recai sobre “a prova”, que é objeto direto de “considero” → predicativo do objeto. Não é adjunto adnominal porque não está colado ao substantivo caracterizando-o (“a prova difícil”), e sim atribuído através do verbo."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Termos · objeto indireto",
+                  "text": "Em “Obedeço às normas do edital”, o termo “às normas” classifica-se como:",
+                  "options": [
+                    "objeto direto;",
+                    "objeto indireto;",
+                    "complemento nominal;",
+                    "adjunto adverbial;",
+                    "agente da passiva."
+                  ],
+                  "answer": 1,
+                  "exp": "Quem completa um VERBO é objeto; com preposição obrigatória, objeto indireto. A preposição vem da regência de “obedecer”, que é verbo transitivo indireto (obedecer A alguma coisa). Teste do pronome: “obedeço-lhes” → objeto indireto."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Termos · complemento nominal",
+                  "text": "Em “Ela é favorável à proposta”, o termo “à proposta” exerce a função de:",
+                  "options": [
+                    "objeto indireto;",
+                    "adjunto adnominal;",
+                    "complemento nominal;",
+                    "adjunto adverbial;",
+                    "predicativo do sujeito."
+                  ],
+                  "answer": 2,
+                  "exp": "Quem pede a preposição é o ADJETIVO “favorável”, não um verbo — logo, complemento nominal, e não objeto indireto. Vale o atalho: termo ligado a adjetivo ou advérbio é sempre complemento nominal, porque adjunto adnominal só existe junto de substantivo."
+                },
+                {
+                  "type": "mc",
+                  "tag": "AA x CN · agente e paciente",
+                  "text": "Em “O respeito dos servidores às normas foi elogiado pelo diretor”, os termos destacados “dos servidores”, “às normas” e “pelo diretor” classificam-se, respectivamente, como:",
+                  "options": [
+                    "adjunto adnominal, complemento nominal e agente da passiva;",
+                    "complemento nominal, adjunto adnominal e agente da passiva;",
+                    "adjunto adnominal, objeto indireto e adjunto adverbial;",
+                    "complemento nominal, complemento nominal e agente da passiva;",
+                    "adjunto adnominal, complemento nominal e adjunto adverbial."
+                  ],
+                  "answer": 0,
+                  "exp": "Transforme em verbo: “os servidores respeitam” → praticam → adjunto adnominal; “as normas são respeitadas” → sofrem → complemento nominal. “Pelo diretor” vem depois de SER + particípio (foi elogiado) → agente da passiva. Objeto indireto está fora porque o termo completa um NOME, não um verbo."
+                },
+                {
+                  "type": "mc",
+                  "tag": "AA x CN · teste do verbo",
+                  "text": "Em “o combate ao crime” e “o combate da polícia”, os termos preposicionados classificam-se, respectivamente, como:",
+                  "options": [
+                    "complemento nominal e adjunto adnominal;",
+                    "adjunto adnominal e complemento nominal;",
+                    "objeto indireto e agente da passiva;",
+                    "complemento nominal e complemento nominal;",
+                    "adjunto adnominal e adjunto adnominal."
+                  ],
+                  "answer": 0,
+                  "exp": "“Combate-se o crime” → o crime sofre a ação → paciente → complemento nominal. “A polícia combate” → pratica a ação → agente → adjunto adnominal. Mesmo substantivo, mesma preposição, classificações opostas: o que decide é quem faz e quem sofre."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Voz passiva · agente",
+                  "text": "Em “O edital foi publicado pela FGV”, o termo “pela FGV” classifica-se como:",
+                  "options": [
+                    "adjunto adverbial de meio;",
+                    "agente da passiva;",
+                    "objeto indireto;",
+                    "complemento nominal;",
+                    "adjunto adnominal."
+                  ],
+                  "answer": 1,
+                  "exp": "A estrutura SER + particípio (foi publicado) marca a voz passiva, e quem pratica a ação aparece com “por/pela” → agente da passiva. Teste definitivo: ao passar para a voz ativa, ele vira o sujeito — “A FGV publicou o edital”."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Vocativo",
+                  "text": "Em “Candidatos, leiam o edital”, o termo “Candidatos” exerce a função de sujeito da oração.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. “Candidatos” é VOCATIVO: chama o interlocutor e não pertence à estrutura da oração. O sujeito é oculto (vocês), revelado pela desinência de “leiam”. O vocativo é o único termo que fica de fora da análise sintática da oração."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Aposto",
+                  "text": "Em “A FGV, banca do concurso, divulgou o edital”, o termo “banca do concurso” classifica-se como:",
+                  "options": [
+                    "vocativo;",
+                    "aposto;",
+                    "predicativo do sujeito;",
+                    "adjunto adnominal;",
+                    "complemento nominal."
+                  ],
+                  "answer": 1,
+                  "exp": "O termo explica “A FGV” e pode substituí-lo na frase (“A banca do concurso divulgou o edital”) → aposto explicativo. Não é vocativo, que chama alguém de fora da frase e não substitui nenhum termo; nem predicativo, que dependeria de um verbo para atribuir a característica."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "periodo-composto",
+          "nome": "Período composto: coordenação e subordinação",
+          "icon": "ti-git-branch",
+          "descricao": "Do zero: como as orações se ligam. Coordenadas (as cinco sindéticas), substantivas com o truque do “isso”, adjetivas restritivas x explicativas e as nove adverbiais — mais as cinco caras do “que”, que é a pegadinha preferida da FGV.",
+          "resumo": [
+            {
+              "titulo": "Ponto de partida: período simples e período composto",
+              "html": "\n<p>Antes de classificar qualquer coisa, a régua de sempre: <b>oração é enunciado com verbo</b>. Um verbo, uma oração.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Período simples</span> uma única oração — <i>A prova será em outubro.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Período composto</span> duas ou mais orações — <i>Estudei porque quero passar.</i> (3 verbos → 3 orações)</div>\n</div>\n<p>Quando o período é composto, as orações se ligam de <b>dois jeitos possíveis</b>, e o assunto inteiro se resume a saber qual dos dois:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Coordenação</span> orações <b>independentes</b>, lado a lado. Cada uma tem sentido próprio e nenhuma é termo da outra.</div>\n  <div class=\"def\"><span class=\"def-t\">Subordinação</span> uma oração é <b>termo sintático</b> da outra. Ela exerce, dentro do período, a função de sujeito, objeto, adjunto, adjetivo…</div>\n</div>\n<p class=\"mnemonic\">Coordenação é sociedade entre iguais; subordinação é empresa com chefe e funcionário — o funcionário é <i>parte</i> da estrutura do chefe.</p>\n<p>Como decidir na prática: tente <b>ler a segunda oração sozinha</b>. Se ela faz sentido por si (<i>não passei</i>), é coordenada. Se ela fica pendurada, esperando a outra (<i>que você estude</i>), é subordinada.</p>"
+            },
+            {
+              "titulo": "Coordenadas: assindéticas e sindéticas",
+              "html": "\n<p>“Síndeto” é o nome grego da conjunção. Daí saem os dois grupos:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Assindética</span> sem conjunção, só vírgula — <i>Cheguei, sentei, comecei a prova.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Sindética</span> com conjunção coordenativa — <i>Cheguei <b>e</b> comecei a prova.</i></div>\n</div>\n<p>Note que a primeira oração de um período coordenado nunca é classificada: só as que vêm ligadas recebem nome. Em <i>Estudei, mas não passei</i>, temos a oração inicial (principal do ponto de vista prático) e uma <b>coordenada sindética adversativa</b>.</p>"
+            },
+            {
+              "titulo": "As cinco coordenadas sindéticas",
+              "html": "\n<p>São cinco relações de sentido, e a conjunção entrega qual é.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Aditiva — soma</span> <i>e, nem, não só… mas também, bem como</i> — <i>Estudei <b>e</b> descansei.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Adversativa — oposição</span> <i>mas, porém, contudo, todavia, entretanto, no entanto</i> — <i>Estudei, <b>mas</b> não passei.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Alternativa — escolha</span> <i>ou, ou… ou, ora… ora, quer… quer, seja… seja</i> — <i><b>Ou</b> estudo <b>ou</b> durmo.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Conclusiva — conclusão</span> <i>logo, portanto, por isso, assim, pois</i> (depois do verbo) — <i>Estudei muito; <b>portanto</b>, passei.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Explicativa — justificativa</span> <i>porque, pois</i> (antes do verbo)<i>, que, porquanto</i> — <i>Estude, <b>pois</b> a prova é amanhã.</i></div>\n</div>\n<p class=\"destaque\"><b>A pegadinha do “pois”:</b> antes do verbo é <b>explicativa</b> (<i>Não saia, <b>pois</b> está chovendo</i>); deslocado para depois do verbo, entre vírgulas, é <b>conclusiva</b> (<i>Está chovendo; não saia, <b>pois</b></i>). A mesma palavra, duas classificações — e a posição é o único sinal.</p>\n<p class=\"mnemonic\">Para gravar a ordem: <b>A</b>ditiva, <b>A</b>dversativa, <b>A</b>lternativa, <b>C</b>onclusiva, <b>E</b>xplicativa. Três “A” e depois “CE”.</p>"
+            },
+            {
+              "titulo": "Subordinadas substantivas e o truque do “isso”",
+              "html": "\n<p>Subordinada <b>substantiva</b> é a oração que faz o papel de um substantivo dentro do período. São introduzidas pelas <b>conjunções integrantes que e se</b>.</p>\n<div class=\"destaque\"><b>O truque do “isso”:</b> substitua a oração inteira por <b>isso</b>. Se couber, ela é substantiva — e a função que “isso” exerce <i>é</i> a classificação da oração.</div>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">É necessário <b>que você estude</b></span> → <i>É necessário <b>isso</b></i> → “isso” é sujeito → <b>subjetiva</b></div>\n  <div class=\"def\"><span class=\"def-t\">Quero <b>que você estude</b></span> → <i>Quero <b>isso</b></i> → “isso” é objeto direto → <b>objetiva direta</b></div>\n</div>\n<p>As seis possíveis, que são as seis funções de um substantivo:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Subjetiva</span> faz de sujeito — <i>Convém <b>que você leia o edital</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Objetiva direta</span> faz de objeto direto — <i>Sei <b>que a prova é difícil</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Objetiva indireta</span> faz de objeto indireto (verbo com preposição) — <i>Preciso de <b>que me ajudem</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Completiva nominal</span> completa um NOME (preposição vem do nome) — <i>Tenho certeza de <b>que passarei</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Predicativa</span> vem depois de verbo de ligação — <i>Meu desejo é <b>que eu passe</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Apositiva</span> funciona como aposto, quase sempre após dois-pontos — <i>Só quero uma coisa: <b>que a prova seja justa</b>.</i></div>\n</div>\n<p class=\"mnemonic\">Sempre que o período começar com <b>é + adjetivo</b> (é necessário, é preciso, é claro, é indispensável) ou com <b>convém, importa, consta, parece</b>, a oração seguinte é <b>subjetiva</b>. Esse padrão sozinho já resolve muita questão.</p>"
+            },
+            {
+              "titulo": "Subordinadas adjetivas: o pronome relativo",
+              "html": "\n<p>Subordinada <b>adjetiva</b> é a oração que faz o papel de um adjetivo: caracteriza um substantivo anterior, chamado <b>antecedente</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Candidatos <b>que estudam</b> passam.</span> equivale a <i>Candidatos <b>estudiosos</b> passam.</i></div>\n</div>\n<p>Elas são introduzidas por <b>pronome relativo</b>: <i>que, quem, o qual, cujo, onde, quanto</i>. O pronome relativo tem duas marcas: retoma um termo anterior e, ao mesmo tempo, exerce uma função dentro da própria oração.</p>\n<p>Duas espécies — e a diferença é só a vírgula, mas ela muda o sentido da frase:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Restritiva (sem vírgula)</span> delimita um subgrupo — <i>Os candidatos <b>que estudaram</b> passaram.</i> → só uma parte passou.</div>\n  <div class=\"def\"><span class=\"def-t\">Explicativa (entre vírgulas)</span> acrescenta informação sobre a totalidade — <i>Os candidatos, <b>que estudaram</b>, passaram.</i> → todos estudaram e todos passaram.</div>\n</div>\n<p class=\"destaque\">É por isso que a FGV cobra pontuação e sintaxe na mesma questão: a vírgula não é enfeite, é informação. Quando o antecedente é <b>único no mundo</b> (a LGPD, o Brasil, minha mãe), a adjetiva só pode ser explicativa — não há de quem distingui-lo.</p>"
+            },
+            {
+              "titulo": "Subordinadas adverbiais: as nove",
+              "html": "\n<p>Subordinada <b>adverbial</b> é a oração que faz o papel de um advérbio: indica uma circunstância em relação à oração principal. São nove, e cada uma tem conjunções típicas.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Causal — causa</span> <i>porque, como</i> (no início)<i>, já que, visto que, uma vez que</i> — <i><b>Como choveu</b>, cheguei atrasada.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Consecutiva — consequência</span> <i>que</i> (depois de tão, tanto, tal)<i>, de modo que</i> — <i>Estudou <b>tanto que adoeceu</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Comparativa — comparação</span> <i>como, do que, assim como</i> — <i>Estuda <b>como quem tem sede</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Condicional — condição</span> <i>se, caso, desde que, contanto que, salvo se</i> — <i><b>Se você estudar</b>, passará.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Concessiva — quebra de expectativa</span> <i>embora, ainda que, mesmo que, conquanto, apesar de</i> — <i><b>Embora tenha estudado</b>, não passei.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Conformativa — conformidade</span> <i>conforme, segundo, como, consoante</i> — <i><b>Conforme prevê o edital</b>, a prova é em outubro.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Final — finalidade</span> <i>para que, a fim de que, que</i> — <i>Estudo <b>para que eu passe</b>.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Proporcional — proporção</span> <i>à medida que, ao passo que, quanto mais… mais</i> — <i><b>À medida que estudava</b>, ficava mais confiante.</i></div>\n  <div class=\"def\"><span class=\"def-t\">Temporal — tempo</span> <i>quando, enquanto, assim que, logo que, antes que, depois que</i> — <i><b>Quando a prova acabar</b>, descanso.</i></div>\n</div>\n<p class=\"mnemonic\">A FGV raramente pede o nome puro: ela costuma pedir a <b>troca do conectivo sem alterar o sentido</b>. Então o que interessa é saber agrupar: embora / ainda que / mesmo que / conquanto são todas concessivas; se / caso / desde que são condicionais; conforme / segundo / consoante são conformativas.</p>"
+            },
+            {
+              "titulo": "A confusão mais comum: causal x explicativa",
+              "html": "\n<p>As duas usam <i>porque</i>, mas uma é <b>subordinada</b> e a outra é <b>coordenada</b> — classificação completamente diferente.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Causal (subordinada adverbial)</span> a primeira oração é <b>efeito real</b> da segunda: <i>A rua está molhada <b>porque choveu</b>.</i> — chover molhou a rua de fato.</div>\n  <div class=\"def\"><span class=\"def-t\">Explicativa (coordenada sindética)</span> a segunda justifica uma <b>suposição, conselho ou ordem</b> da primeira: <i>Choveu, <b>porque</b> a rua está molhada.</i> — a rua molhada é a minha PROVA de que choveu, não a causa da chuva.</div>\n</div>\n<p class=\"destaque\">Regra prática infalível: se a primeira oração estiver no <b>imperativo</b> (<i>Estude, pois…</i> / <i>Corra, que…</i> / <i>Não saia, porque…</i>), é <b>explicativa</b>. Sempre. Ordem não tem causa — tem justificativa.</p>"
+            },
+            {
+              "titulo": "Orações reduzidas",
+              "html": "\n<p>Quando a subordinada <b>não</b> vem introduzida por conjunção e o verbo está numa <b>forma nominal</b> — infinitivo (-ar, -er, -ir), gerúndio (-ndo) ou particípio (-ado, -ido) — ela é chamada de <b>reduzida</b>.</p>\n<p>Classificar é simples: <b>desdobre</b> a oração, devolvendo a conjunção e o verbo conjugado. A classificação da forma desenvolvida é a mesma da reduzida.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\"><b>Ao chegar</b> em casa, estudei.</span> reduzida de infinitivo → <i>Quando cheguei</i> → adverbial <b>temporal</b></div>\n  <div class=\"def\"><span class=\"def-t\"><b>Estudando</b> muito, você passa.</span> reduzida de gerúndio → <i>Se estudar muito</i> → adverbial <b>condicional</b></div>\n  <div class=\"def\"><span class=\"def-t\"><b>Terminada</b> a prova, saí.</span> reduzida de particípio → <i>Depois que a prova terminou</i> → adverbial <b>temporal</b></div>\n  <div class=\"def\"><span class=\"def-t\">É preciso <b>estudar</b>.</span> reduzida de infinitivo → <i>que se estude</i> → substantiva <b>subjetiva</b></div>\n</div>\n<p class=\"mnemonic\">Reduzida também existe em substantiva e adjetiva, não só adverbial. O nome completo junta os dois dados: “oração subordinada adverbial temporal reduzida de infinitivo”.</p>"
+            },
+            {
+              "titulo": "As cinco caras do “que”",
+              "html": "\n<p>A FGV vive dessa palavra, porque ela pode ser cinco coisas — às vezes duas delas na mesma frase.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Pronome relativo</span> tem <b>antecedente</b> e aceita a troca por <i>o qual / a qual</i>: <i>O edital <b>que</b> li é longo.</i> → introduz oração <b>adjetiva</b>.</div>\n  <div class=\"def\"><span class=\"def-t\">2. Conjunção integrante</span> NÃO tem antecedente; a oração inteira cabe em “isso”: <i>Sei <b>que</b> o edital é longo</i> → <i>Sei isso</i> → introduz oração <b>substantiva</b>.</div>\n  <div class=\"def\"><span class=\"def-t\">3. Conjunção consecutiva</span> vem depois de <i>tão, tanto, tamanho, tal</i>: <i>É <b>tão</b> longo <b>que</b> cansa.</i></div>\n  <div class=\"def\"><span class=\"def-t\">4. Conjunção explicativa ou causal</span> equivale a <i>porque</i>: <i>Corra, <b>que</b> está atrasada.</i></div>\n  <div class=\"def\"><span class=\"def-t\">5. Partícula expletiva (de realce)</span> pode ser <b>apagada</b> sem prejuízo, quase sempre em “é que”: <i>Nós <b>é que</b> estudamos</i> → <i>Nós estudamos.</i></div>\n</div>\n<div class=\"destaque\"><b>O teste que resolve quase tudo:</b> troque por <i>o qual</i>. Se couber → pronome relativo (oração adjetiva). Se não couber, tente trocar a oração inteira por <i>isso</i> → conjunção integrante (oração substantiva).</div>\n<p>Exemplo com as duas na mesma frase: <i>Os técnicos <b>que</b> a empresa contratou concluíram <b>que</b> o prazo era insuficiente.</i> O primeiro tem antecedente (“os técnicos”) → relativo, adjetiva restritiva. O segundo cabe em “isso” (<i>concluíram isso</i>) → integrante, substantiva objetiva direta.</p>"
+            },
+            {
+              "titulo": "Roteiro de classificação para a prova",
+              "html": "\n<p>Um caminho fixo, na ordem, para não travar:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Conte os verbos</span> saiba quantas orações existem antes de qualquer coisa.</div>\n  <div class=\"def\"><span class=\"def-t\">2. A oração faz sentido sozinha?</span> Sim → coordenada, e a conjunção diz o tipo. Não → subordinada, siga.</div>\n  <div class=\"def\"><span class=\"def-t\">3. Cabe “isso” no lugar dela?</span> Sim → substantiva; a função de “isso” dá o nome.</div>\n  <div class=\"def\"><span class=\"def-t\">4. Tem antecedente e cabe “o qual”?</span> Sim → adjetiva; a vírgula diz se é restritiva ou explicativa.</div>\n  <div class=\"def\"><span class=\"def-t\">5. Sobrou circunstância?</span> É adverbial; a conjunção diz qual das nove.</div>\n</div>\n<p class=\"mnemonic\">Três testes cobrem o assunto inteiro: <b>“isso”</b> para substantiva, <b>“o qual”</b> para adjetiva e <b>o sentido da conjunção</b> para adverbial e coordenada.</p>"
+            }
+          ],
+          "flashcards": [
+            {
+              "tema": "Base",
+              "pergunta": "Qual a diferença de fundo entre coordenação e subordinação?",
+              "resposta": "Na coordenação as orações são independentes — cada uma tem sentido próprio. Na subordinação, uma oração é termo sintático da outra: exerce função de sujeito, objeto, adjunto ou adjetivo dentro do período."
+            },
+            {
+              "tema": "Base",
+              "pergunta": "Qual o teste rápido para saber se a oração é coordenada?",
+              "resposta": "Leia a segunda oração sozinha. Se faz sentido por si (“não passei”), é coordenada. Se fica pendurada esperando a outra (“que você estude”), é subordinada."
+            },
+            {
+              "tema": "Coordenadas",
+              "pergunta": "Qual a diferença entre coordenada assindética e sindética?",
+              "resposta": "Assindética não tem conjunção, só vírgula (“Cheguei, sentei, comecei”). Sindética vem com conjunção coordenativa (“Cheguei e comecei”)."
+            },
+            {
+              "tema": "Coordenadas",
+              "pergunta": "Quais são as cinco coordenadas sindéticas?",
+              "resposta": "Aditiva (e, nem), adversativa (mas, porém, contudo), alternativa (ou, ora…ora), conclusiva (logo, portanto, por isso) e explicativa (porque, pois, que)."
+            },
+            {
+              "tema": "Coordenadas",
+              "pergunta": "Como classificar o “pois”?",
+              "resposta": "Antes do verbo é explicativa (“Não saia, pois está chovendo”). Deslocado para depois do verbo, entre vírgulas, é conclusiva (“Está chovendo; não saia, pois”)."
+            },
+            {
+              "tema": "Substantivas",
+              "pergunta": "Qual é o truque do “isso”?",
+              "resposta": "Substituir a oração inteira por “isso”. Se couber, a oração é substantiva — e a função que “isso” exerce é a classificação dela."
+            },
+            {
+              "tema": "Substantivas",
+              "pergunta": "Quais são as seis subordinadas substantivas?",
+              "resposta": "Subjetiva, objetiva direta, objetiva indireta, completiva nominal, predicativa e apositiva — as seis funções que um substantivo pode exercer."
+            },
+            {
+              "tema": "Substantivas",
+              "pergunta": "Que estrutura indica quase sempre uma oração subjetiva?",
+              "resposta": "Período iniciado por “é + adjetivo” (é necessário, é preciso, é indispensável) ou por convém, importa, consta, parece. A oração seguinte é subjetiva."
+            },
+            {
+              "tema": "Substantivas",
+              "pergunta": "Quais são as conjunções integrantes?",
+              "resposta": "“Que” e “se”. Elas introduzem orações substantivas e, diferentemente do pronome relativo, não têm antecedente nem função dentro da própria oração."
+            },
+            {
+              "tema": "Adjetivas",
+              "pergunta": "O que introduz uma oração subordinada adjetiva?",
+              "resposta": "Um pronome relativo: que, quem, o qual, cujo, onde, quanto. Ele retoma um antecedente e exerce função dentro da própria oração."
+            },
+            {
+              "tema": "Adjetivas",
+              "pergunta": "Qual a diferença entre adjetiva restritiva e explicativa?",
+              "resposta": "A restritiva vem sem vírgula e delimita um subgrupo (“Os candidatos que estudaram passaram” — só uma parte). A explicativa vem entre vírgulas e fala da totalidade (“Os candidatos, que estudaram, passaram” — todos)."
+            },
+            {
+              "tema": "Adjetivas",
+              "pergunta": "Quando a adjetiva só pode ser explicativa?",
+              "resposta": "Quando o antecedente é único no mundo (a LGPD, o Brasil, minha mãe) — não há de quem distingui-lo, então a informação só pode acrescentar."
+            },
+            {
+              "tema": "Adverbiais",
+              "pergunta": "Quais são as nove subordinadas adverbiais?",
+              "resposta": "Causal, consecutiva, comparativa, condicional, concessiva, conformativa, final, proporcional e temporal."
+            },
+            {
+              "tema": "Adverbiais",
+              "pergunta": "Quais conjunções são concessivas?",
+              "resposta": "Embora, ainda que, mesmo que, conquanto, apesar de (que), se bem que. Todas marcam quebra de expectativa e são intercambiáveis entre si."
+            },
+            {
+              "tema": "Adverbiais",
+              "pergunta": "Quais conjunções são conformativas?",
+              "resposta": "Conforme, segundo, consoante e “como” no sentido de conformidade — indicam que algo ocorre de acordo com o que foi dito."
+            },
+            {
+              "tema": "Adverbiais",
+              "pergunta": "“À medida que” e “ao passo que” indicam que relação?",
+              "resposta": "Proporção (oração subordinada adverbial proporcional): duas coisas variando juntas."
+            },
+            {
+              "tema": "Causal x explicativa",
+              "pergunta": "Como distinguir causal de explicativa?",
+              "resposta": "Na causal (subordinada), a primeira oração é efeito real da segunda: “A rua está molhada porque choveu”. Na explicativa (coordenada), a segunda justifica uma suposição ou ordem: “Choveu, porque a rua está molhada”."
+            },
+            {
+              "tema": "Causal x explicativa",
+              "pergunta": "Qual a regra prática infalível para identificar a explicativa?",
+              "resposta": "Se a primeira oração está no imperativo (“Estude, pois…”, “Corra, que…”), é explicativa. Sempre — ordem não tem causa, tem justificativa."
+            },
+            {
+              "tema": "Reduzidas",
+              "pergunta": "O que é uma oração reduzida?",
+              "resposta": "A subordinada que não vem com conjunção e tem o verbo em forma nominal: infinitivo, gerúndio ou particípio. Para classificar, desdobre-a devolvendo a conjunção."
+            },
+            {
+              "tema": "Reduzidas",
+              "pergunta": "Classifique: “Estudando muito, você passa.”",
+              "resposta": "Reduzida de gerúndio. Desdobrando: “Se estudar muito” → oração subordinada adverbial condicional reduzida de gerúndio."
+            },
+            {
+              "tema": "O “que”",
+              "pergunta": "Quais são as cinco funções possíveis do “que”?",
+              "resposta": "Pronome relativo (adjetiva), conjunção integrante (substantiva), conjunção consecutiva (após tão/tanto/tal), conjunção explicativa ou causal (= porque) e partícula expletiva de realce (é que)."
+            },
+            {
+              "tema": "O “que”",
+              "pergunta": "Qual o teste para separar pronome relativo de conjunção integrante?",
+              "resposta": "Troque por “o qual”: se couber, é pronome relativo e a oração é adjetiva. Se não couber, troque a oração inteira por “isso”: cabendo, é conjunção integrante e a oração é substantiva."
+            },
+            {
+              "tema": "Prova",
+              "pergunta": "Qual o roteiro de classificação do período composto?",
+              "resposta": "1) conte os verbos; 2) a oração faz sentido sozinha? → coordenada; 3) cabe “isso”? → substantiva; 4) tem antecedente e cabe “o qual”? → adjetiva; 5) sobrou circunstância? → adverbial."
+            }
+          ],
+          "simulados": [
+            {
+              "id": "periodo-composto-01",
+              "nome": "Período composto — coordenação e subordinação",
+              "descricao": "Classificar orações coordenadas, substantivas, adjetivas e adverbiais, com as pegadinhas do “pois”, do “porque” e do “que”.",
+              "nivel": "Introdutório",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Coordenadas · adversativa",
+                  "text": "Em “Estudei, mas não passei”, a oração “mas não passei” classifica-se como:",
+                  "options": [
+                    "coordenada sindética aditiva;",
+                    "coordenada sindética adversativa;",
+                    "subordinada adverbial concessiva;",
+                    "coordenada assindética;",
+                    "subordinada adverbial condicional."
+                  ],
+                  "answer": 1,
+                  "exp": "“Mas” marca oposição entre duas orações independentes — cada uma faz sentido sozinha. Cuidado com a concessiva (embora, ainda que): ela também quebra expectativa, mas é SUBORDINADA e vem em oração dependente, o que não é o caso aqui."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Coordenadas · explicativa",
+                  "text": "Em “Estude com atenção, pois a prova exigirá interpretação”, a oração destacada classifica-se como:",
+                  "options": [
+                    "coordenada sindética conclusiva;",
+                    "coordenada sindética explicativa;",
+                    "subordinada adverbial causal;",
+                    "subordinada adverbial final;",
+                    "subordinada substantiva objetiva direta."
+                  ],
+                  "answer": 1,
+                  "exp": "Dois sinais decisivos: a primeira oração está no IMPERATIVO (“Estude”) e a segunda justifica o conselho — não é causa real de nada. Ordem ou conselho seguido de pois/porque é sempre explicativa, nunca causal. A conclusiva exigiria “pois” depois do verbo."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Coordenadas · o “pois” deslocado",
+                  "text": "Em “Está chovendo; não saia, pois”, o conectivo “pois” tem valor conclusivo.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. A posição é o único sinal: “pois” ANTES do verbo é explicativo (“Não saia, pois está chovendo”); deslocado para DEPOIS do verbo, entre vírgulas, passa a ser conclusivo, equivalendo a “portanto”."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Substantivas · subjetiva",
+                  "text": "Em “É indispensável que os candidatos confiram os dados da inscrição”, a oração “que os candidatos confiram os dados da inscrição” exerce a função de:",
+                  "options": [
+                    "objeto direto;",
+                    "complemento nominal;",
+                    "sujeito;",
+                    "aposto;",
+                    "predicativo do sujeito."
+                  ],
+                  "answer": 2,
+                  "exp": "Truque do “isso”: “É indispensável ISSO”. “Isso” é o sujeito de “é indispensável” → oração subordinada substantiva SUBJETIVA. Padrão que resolve várias questões: período iniciado por “é + adjetivo” (é necessário, é preciso, é claro) ou por convém, importa, consta pede oração subjetiva."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Substantivas · objetiva direta",
+                  "text": "Em “Quero que você estude todos os dias”, a oração destacada classifica-se como subordinada substantiva:",
+                  "options": [
+                    "subjetiva;",
+                    "objetiva direta;",
+                    "completiva nominal;",
+                    "predicativa;",
+                    "apositiva."
+                  ],
+                  "answer": 1,
+                  "exp": "“Quero ISSO” — “isso” é objeto direto de “quero”, verbo transitivo direto, sem preposição. Logo, substantiva objetiva direta. A função que “isso” exerce é sempre a classificação da oração."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Substantivas · completiva nominal",
+                  "text": "Em “Tenho certeza de que passarei”, a oração destacada classifica-se como subordinada substantiva:",
+                  "options": [
+                    "objetiva indireta;",
+                    "subjetiva;",
+                    "completiva nominal;",
+                    "apositiva;",
+                    "predicativa."
+                  ],
+                  "answer": 2,
+                  "exp": "A preposição “de” é exigida pelo NOME “certeza” (certeza DE algo), não pelo verbo “ter” — por isso é completiva nominal, e não objetiva indireta. É o mesmo raciocínio de complemento nominal x objeto indireto, agora em forma de oração."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Adjetivas · restritiva x explicativa",
+                  "text": "Assinale a opção em que a oração adjetiva é EXPLICATIVA:",
+                  "options": [
+                    "Os servidores que trabalham no setor receberam o treinamento.",
+                    "A lei que regula a proteção de dados entrou em vigor em 2020.",
+                    "A LGPD, que regula a proteção de dados, entrou em vigor em 2020.",
+                    "Os candidatos que não comparecerem serão eliminados.",
+                    "O documento que você enviou está incompleto."
+                  ],
+                  "answer": 2,
+                  "exp": "É a única com a oração entre vírgulas — a marca da adjetiva explicativa — e faz sentido semanticamente: a LGPD é única, não há outra da qual precise ser distinguida, então a informação só acrescenta. Nas demais a oração restringe: só os servidores daquele setor, só aquela lei, só quem faltar, só aquele documento."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Adjetivas · efeito da vírgula",
+                  "text": "Em “Os candidatos, que estudaram, passaram”, entende-se que todos os candidatos estudaram.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. Entre vírgulas, a adjetiva é explicativa e fala da totalidade: todos estudaram e todos passaram. Sem as vírgulas (“Os candidatos que estudaram passaram”), a oração seria restritiva e delimitaria um subgrupo — só os que estudaram passaram. A vírgula não é enfeite: é informação."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Adverbiais · concessiva",
+                  "text": "Em “Embora o sistema estivesse atualizado, houve falhas no atendimento”, a substituição de “Embora” que preserva a relação lógica é:",
+                  "options": [
+                    "Porque;",
+                    "Ainda que;",
+                    "Portanto;",
+                    "À medida que;",
+                    "Conforme."
+                  ],
+                  "answer": 1,
+                  "exp": "“Embora” é concessiva: marca quebra de expectativa — esperava-se que, com o sistema atualizado, não houvesse falhas. O único equivalente concessivo é “ainda que” (assim como mesmo que, conquanto, se bem que). As demais são causal, conclusiva, proporcional e conformativa."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Adverbiais · consecutiva",
+                  "text": "Em “Estudou tanto que adoeceu”, a oração “que adoeceu” classifica-se como subordinada adverbial:",
+                  "options": [
+                    "causal;",
+                    "consecutiva;",
+                    "comparativa;",
+                    "final;",
+                    "conformativa."
+                  ],
+                  "answer": 1,
+                  "exp": "O “que” precedido de tão, tanto, tal ou tamanho indica CONSEQUÊNCIA de uma intensidade → oração consecutiva. O sinal está na palavra intensificadora antes do “que”: sem o “tanto”, a classificação mudaria."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Adverbiais · proporcional",
+                  "text": "Em “À medida que estudava, ficava mais confiante”, a oração destacada classifica-se como subordinada adverbial:",
+                  "options": [
+                    "temporal;",
+                    "proporcional;",
+                    "condicional;",
+                    "conformativa;",
+                    "causal."
+                  ],
+                  "answer": 1,
+                  "exp": "“À medida que” e “ao passo que” indicam duas coisas variando JUNTAS — proporção. Há um componente de tempo, mas o que a locução marca é a simultaneidade proporcional, não o momento. Pegadinha frequente: “à medida que” (proporção) x “na medida em que” (causa)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Reduzidas · particípio",
+                  "text": "Em “Terminada a prova, saí da sala”, a oração “Terminada a prova” classifica-se como:",
+                  "options": [
+                    "subordinada adverbial causal reduzida de particípio;",
+                    "subordinada adverbial temporal reduzida de particípio;",
+                    "subordinada adjetiva reduzida de particípio;",
+                    "subordinada substantiva subjetiva reduzida de infinitivo;",
+                    "coordenada assindética."
+                  ],
+                  "answer": 1,
+                  "exp": "Reduzida é a subordinada sem conjunção e com verbo em forma nominal — aqui, particípio. Para classificar, desdobre: “Depois que a prova terminou, saí da sala” → adverbial temporal. O nome completo junta os dois dados: adverbial temporal reduzida de particípio."
+                },
+                {
+                  "type": "mc",
+                  "tag": "O “que” · relativo x integrante",
+                  "text": "Em “Os técnicos que a empresa contratou concluíram que o prazo era insuficiente”, sobre as duas ocorrências de “que” é correto afirmar que:",
+                  "options": [
+                    "ambas são conjunções integrantes e introduzem orações substantivas;",
+                    "ambas são pronomes relativos e introduzem orações adjetivas;",
+                    "a primeira é pronome relativo e a segunda, conjunção integrante;",
+                    "a primeira é conjunção integrante e a segunda, pronome relativo;",
+                    "a primeira é partícula expletiva e a segunda, pronome relativo."
+                  ],
+                  "answer": 2,
+                  "exp": "O primeiro “que” tem antecedente (“Os técnicos”) e aceita a troca por “os quais” → pronome relativo, oração adjetiva restritiva. O segundo não tem antecedente e a oração cabe em “isso” (“concluíram isso”) → conjunção integrante, oração substantiva objetiva direta. Mesmo vocábulo, duas classificações, na mesma frase."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Causal x explicativa",
+                  "text": "Assinale a opção em que a oração introduzida por “porque” é EXPLICATIVA (coordenada), e não causal:",
+                  "options": [
+                    "A rua está molhada porque choveu.",
+                    "Não saia agora, porque está chovendo.",
+                    "Cheguei atrasada porque perdi o ônibus.",
+                    "O sistema caiu porque houve sobrecarga.",
+                    "Ele foi eliminado porque zerou uma disciplina."
+                  ],
+                  "answer": 1,
+                  "exp": "A primeira oração está no imperativo (“Não saia”) — e ordem não tem causa, tem justificativa: a chuva justifica o conselho, não o provoca. Nas demais, a segunda oração é a causa real do fato enunciado na primeira → subordinada adverbial causal."
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "crase",
           "nome": "Crase",
           "icon": "ti-grave",
@@ -2874,14 +3590,16 @@ window.CONTENT = {
                 "nome": "Termos da oração: sujeito, predicado, complementos",
                 "prioridade": "alta",
                 "esforco": 3,
-                "oQueCai": "Identificar sujeito, objeto direto/indireto, predicativo, adjunto e complemento nominal. Pré-requisito direto de concordância e regência."
+                "oQueCai": "Identificar sujeito, objeto direto/indireto, predicativo, adjunto e complemento nominal. Pré-requisito direto de concordância e regência.",
+                "materiaId": "termos-oracao"
               },
               {
                 "id": "pt-periodo",
                 "nome": "Coordenação e subordinação (período composto)",
                 "prioridade": "media",
                 "esforco": 3,
-                "oQueCai": "Classificar orações (substantivas, adjetivas, adverbiais) e reconhecer a relação de sentido. FGV cobra junto com pontuação e reescrita."
+                "oQueCai": "Classificar orações (substantivas, adjetivas, adverbiais) e reconhecer a relação de sentido. FGV cobra junto com pontuação e reescrita.",
+                "materiaId": "periodo-composto"
               },
               {
                 "id": "pt-pontuacao",

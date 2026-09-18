@@ -78,14 +78,16 @@
               "nome": "Termos da oração: sujeito, predicado, complementos",
               "prioridade": "alta",
               "esforco": 3,
-              "oQueCai": "Identificar sujeito, objeto direto/indireto, predicativo, adjunto e complemento nominal. Pré-requisito direto de concordância e regência."
+              "oQueCai": "Identificar sujeito, objeto direto/indireto, predicativo, adjunto e complemento nominal. Pré-requisito direto de concordância e regência.",
+              "materiaId": "termos-oracao"
             },
             {
               "id": "pt-periodo",
               "nome": "Coordenação e subordinação (período composto)",
               "prioridade": "media",
               "esforco": 3,
-              "oQueCai": "Classificar orações (substantivas, adjetivas, adverbiais) e reconhecer a relação de sentido. FGV cobra junto com pontuação e reescrita."
+              "oQueCai": "Classificar orações (substantivas, adjetivas, adverbiais) e reconhecer a relação de sentido. FGV cobra junto com pontuação e reescrita.",
+              "materiaId": "periodo-composto"
             },
             {
               "id": "pt-pontuacao",

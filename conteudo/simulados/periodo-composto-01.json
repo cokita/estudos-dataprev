@@ -1,0 +1,193 @@
+{
+  "id": "periodo-composto-01",
+  "materiaId": "periodo-composto",
+  "nome": "Período composto — coordenação e subordinação",
+  "descricao": "Classificar orações coordenadas, substantivas, adjetivas e adverbiais, com as pegadinhas do “pois”, do “porque” e do “que”.",
+  "nivel": "Introdutório",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Coordenadas · adversativa",
+      "text": "Em “Estudei, mas não passei”, a oração “mas não passei” classifica-se como:",
+      "options": [
+        "coordenada sindética aditiva;",
+        "coordenada sindética adversativa;",
+        "subordinada adverbial concessiva;",
+        "coordenada assindética;",
+        "subordinada adverbial condicional."
+      ],
+      "answer": 1,
+      "exp": "“Mas” marca oposição entre duas orações independentes — cada uma faz sentido sozinha. Cuidado com a concessiva (embora, ainda que): ela também quebra expectativa, mas é SUBORDINADA e vem em oração dependente, o que não é o caso aqui."
+    },
+    {
+      "type": "mc",
+      "tag": "Coordenadas · explicativa",
+      "text": "Em “Estude com atenção, pois a prova exigirá interpretação”, a oração destacada classifica-se como:",
+      "options": [
+        "coordenada sindética conclusiva;",
+        "coordenada sindética explicativa;",
+        "subordinada adverbial causal;",
+        "subordinada adverbial final;",
+        "subordinada substantiva objetiva direta."
+      ],
+      "answer": 1,
+      "exp": "Dois sinais decisivos: a primeira oração está no IMPERATIVO (“Estude”) e a segunda justifica o conselho — não é causa real de nada. Ordem ou conselho seguido de pois/porque é sempre explicativa, nunca causal. A conclusiva exigiria “pois” depois do verbo."
+    },
+    {
+      "type": "ce",
+      "tag": "Coordenadas · o “pois” deslocado",
+      "text": "Em “Está chovendo; não saia, pois”, o conectivo “pois” tem valor conclusivo.",
+      "options": ["Certo", "Errado"],
+      "answer": 0,
+      "exp": "Certo. A posição é o único sinal: “pois” ANTES do verbo é explicativo (“Não saia, pois está chovendo”); deslocado para DEPOIS do verbo, entre vírgulas, passa a ser conclusivo, equivalendo a “portanto”."
+    },
+    {
+      "type": "mc",
+      "tag": "Substantivas · subjetiva",
+      "text": "Em “É indispensável que os candidatos confiram os dados da inscrição”, a oração “que os candidatos confiram os dados da inscrição” exerce a função de:",
+      "options": [
+        "objeto direto;",
+        "complemento nominal;",
+        "sujeito;",
+        "aposto;",
+        "predicativo do sujeito."
+      ],
+      "answer": 2,
+      "exp": "Truque do “isso”: “É indispensável ISSO”. “Isso” é o sujeito de “é indispensável” → oração subordinada substantiva SUBJETIVA. Padrão que resolve várias questões: período iniciado por “é + adjetivo” (é necessário, é preciso, é claro) ou por convém, importa, consta pede oração subjetiva."
+    },
+    {
+      "type": "mc",
+      "tag": "Substantivas · objetiva direta",
+      "text": "Em “Quero que você estude todos os dias”, a oração destacada classifica-se como subordinada substantiva:",
+      "options": [
+        "subjetiva;",
+        "objetiva direta;",
+        "completiva nominal;",
+        "predicativa;",
+        "apositiva."
+      ],
+      "answer": 1,
+      "exp": "“Quero ISSO” — “isso” é objeto direto de “quero”, verbo transitivo direto, sem preposição. Logo, substantiva objetiva direta. A função que “isso” exerce é sempre a classificação da oração."
+    },
+    {
+      "type": "mc",
+      "tag": "Substantivas · completiva nominal",
+      "text": "Em “Tenho certeza de que passarei”, a oração destacada classifica-se como subordinada substantiva:",
+      "options": [
+        "objetiva indireta;",
+        "subjetiva;",
+        "completiva nominal;",
+        "apositiva;",
+        "predicativa."
+      ],
+      "answer": 2,
+      "exp": "A preposição “de” é exigida pelo NOME “certeza” (certeza DE algo), não pelo verbo “ter” — por isso é completiva nominal, e não objetiva indireta. É o mesmo raciocínio de complemento nominal x objeto indireto, agora em forma de oração."
+    },
+    {
+      "type": "mc",
+      "tag": "Adjetivas · restritiva x explicativa",
+      "text": "Assinale a opção em que a oração adjetiva é EXPLICATIVA:",
+      "options": [
+        "Os servidores que trabalham no setor receberam o treinamento.",
+        "A lei que regula a proteção de dados entrou em vigor em 2020.",
+        "A LGPD, que regula a proteção de dados, entrou em vigor em 2020.",
+        "Os candidatos que não comparecerem serão eliminados.",
+        "O documento que você enviou está incompleto."
+      ],
+      "answer": 2,
+      "exp": "É a única com a oração entre vírgulas — a marca da adjetiva explicativa — e faz sentido semanticamente: a LGPD é única, não há outra da qual precise ser distinguida, então a informação só acrescenta. Nas demais a oração restringe: só os servidores daquele setor, só aquela lei, só quem faltar, só aquele documento."
+    },
+    {
+      "type": "ce",
+      "tag": "Adjetivas · efeito da vírgula",
+      "text": "Em “Os candidatos, que estudaram, passaram”, entende-se que todos os candidatos estudaram.",
+      "options": ["Certo", "Errado"],
+      "answer": 0,
+      "exp": "Certo. Entre vírgulas, a adjetiva é explicativa e fala da totalidade: todos estudaram e todos passaram. Sem as vírgulas (“Os candidatos que estudaram passaram”), a oração seria restritiva e delimitaria um subgrupo — só os que estudaram passaram. A vírgula não é enfeite: é informação."
+    },
+    {
+      "type": "mc",
+      "tag": "Adverbiais · concessiva",
+      "text": "Em “Embora o sistema estivesse atualizado, houve falhas no atendimento”, a substituição de “Embora” que preserva a relação lógica é:",
+      "options": [
+        "Porque;",
+        "Ainda que;",
+        "Portanto;",
+        "À medida que;",
+        "Conforme."
+      ],
+      "answer": 1,
+      "exp": "“Embora” é concessiva: marca quebra de expectativa — esperava-se que, com o sistema atualizado, não houvesse falhas. O único equivalente concessivo é “ainda que” (assim como mesmo que, conquanto, se bem que). As demais são causal, conclusiva, proporcional e conformativa."
+    },
+    {
+      "type": "mc",
+      "tag": "Adverbiais · consecutiva",
+      "text": "Em “Estudou tanto que adoeceu”, a oração “que adoeceu” classifica-se como subordinada adverbial:",
+      "options": [
+        "causal;",
+        "consecutiva;",
+        "comparativa;",
+        "final;",
+        "conformativa."
+      ],
+      "answer": 1,
+      "exp": "O “que” precedido de tão, tanto, tal ou tamanho indica CONSEQUÊNCIA de uma intensidade → oração consecutiva. O sinal está na palavra intensificadora antes do “que”: sem o “tanto”, a classificação mudaria."
+    },
+    {
+      "type": "mc",
+      "tag": "Adverbiais · proporcional",
+      "text": "Em “À medida que estudava, ficava mais confiante”, a oração destacada classifica-se como subordinada adverbial:",
+      "options": [
+        "temporal;",
+        "proporcional;",
+        "condicional;",
+        "conformativa;",
+        "causal."
+      ],
+      "answer": 1,
+      "exp": "“À medida que” e “ao passo que” indicam duas coisas variando JUNTAS — proporção. Há um componente de tempo, mas o que a locução marca é a simultaneidade proporcional, não o momento. Pegadinha frequente: “à medida que” (proporção) x “na medida em que” (causa)."
+    },
+    {
+      "type": "mc",
+      "tag": "Reduzidas · particípio",
+      "text": "Em “Terminada a prova, saí da sala”, a oração “Terminada a prova” classifica-se como:",
+      "options": [
+        "subordinada adverbial causal reduzida de particípio;",
+        "subordinada adverbial temporal reduzida de particípio;",
+        "subordinada adjetiva reduzida de particípio;",
+        "subordinada substantiva subjetiva reduzida de infinitivo;",
+        "coordenada assindética."
+      ],
+      "answer": 1,
+      "exp": "Reduzida é a subordinada sem conjunção e com verbo em forma nominal — aqui, particípio. Para classificar, desdobre: “Depois que a prova terminou, saí da sala” → adverbial temporal. O nome completo junta os dois dados: adverbial temporal reduzida de particípio."
+    },
+    {
+      "type": "mc",
+      "tag": "O “que” · relativo x integrante",
+      "text": "Em “Os técnicos que a empresa contratou concluíram que o prazo era insuficiente”, sobre as duas ocorrências de “que” é correto afirmar que:",
+      "options": [
+        "ambas são conjunções integrantes e introduzem orações substantivas;",
+        "ambas são pronomes relativos e introduzem orações adjetivas;",
+        "a primeira é pronome relativo e a segunda, conjunção integrante;",
+        "a primeira é conjunção integrante e a segunda, pronome relativo;",
+        "a primeira é partícula expletiva e a segunda, pronome relativo."
+      ],
+      "answer": 2,
+      "exp": "O primeiro “que” tem antecedente (“Os técnicos”) e aceita a troca por “os quais” → pronome relativo, oração adjetiva restritiva. O segundo não tem antecedente e a oração cabe em “isso” (“concluíram isso”) → conjunção integrante, oração substantiva objetiva direta. Mesmo vocábulo, duas classificações, na mesma frase."
+    },
+    {
+      "type": "mc",
+      "tag": "Causal x explicativa",
+      "text": "Assinale a opção em que a oração introduzida por “porque” é EXPLICATIVA (coordenada), e não causal:",
+      "options": [
+        "A rua está molhada porque choveu.",
+        "Não saia agora, porque está chovendo.",
+        "Cheguei atrasada porque perdi o ônibus.",
+        "O sistema caiu porque houve sobrecarga.",
+        "Ele foi eliminado porque zerou uma disciplina."
+      ],
+      "answer": 1,
+      "exp": "A primeira oração está no imperativo (“Não saia”) — e ordem não tem causa, tem justificativa: a chuva justifica o conselho, não o provoca. Nas demais, a segunda oração é a causa real do fato enunciado na primeira → subordinada adverbial causal."
+    }
+  ]
+}
