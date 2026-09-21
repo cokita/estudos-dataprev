@@ -277,7 +277,8 @@
               "nome": "Problemas aritméticos",
               "prioridade": "alta",
               "esforco": 3,
-              "oQueCai": "Porcentagem, razão e proporção, regra de três, média, juros simples e problemas de raciocínio numérico. É o que mais cai dentro de ‘problemas’."
+              "oQueCai": "Porcentagem, razão e proporção, regra de três, média, juros simples e problemas de raciocínio numérico. É o que mais cai dentro de ‘problemas’.",
+              "materiaId": "problemas-aritmeticos"
             },
             {
               "id": "rl-geometricos",

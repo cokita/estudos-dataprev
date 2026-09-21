@@ -2980,6 +2980,336 @@ window.CONTENT = {
               ]
             }
           ]
+        },
+        {
+          "id": "problemas-aritmeticos",
+          "nome": "Aritmética de prova: porcentagem, proporção, médias e juros",
+          "icon": "ti-percentage",
+          "descricao": "O bloco de “problemas” do Raciocínio Lógico da FGV — e, olhando a prova de 2024, o mais rentável da disciplina: divisão proporcional, o fator multiplicativo da porcentagem, variações sucessivas e taxa média, regra de três, médias ponderadas, juros e os truques de cálculo sem calculadora.",
+          "resumo": [
+            {
+              "titulo": "Antes de estudar: o que a banca cobrou de fato",
+              "html": "<p>Nas <b>6 questões de Raciocínio Lógico Matemático da prova real</b> (FGV, DataPrev 2024, Analista de TI · Desenvolvimento de Software, questões 25 a 30):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Q25 · divisão proporcional</span> prejuízo repartido na proporção do capital investido</div>\n  <div class=\"def\"><span class=\"def-t\">Q26 · média ponderada</span> pesos 1, 2, 3, 4 e soma mínima para aprovação</div>\n  <div class=\"def\"><span class=\"def-t\">Q27 · identidade algébrica</span> soma e soma dos quadrados → diferença</div>\n  <div class=\"def\"><span class=\"def-t\">Q28 · lógica sentencial</span> equivalente de um “se… então” (contrapositiva)</div>\n  <div class=\"def\"><span class=\"def-t\">Q29 · contagem de pares</span> estradas ligando vilarejos dois a dois</div>\n  <div class=\"def\"><span class=\"def-t\">Q30 · percentuais sucessivos</span> dois aumentos e a <i>taxa média</i> mensal</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Cinco das seis eram problema numérico. Uma era lógica.</b> Uma amostra de um ano não é lei e a banca pode mudar a mão em 2026 — mas quando o histórico e o edital apontam para o mesmo lado, este bloco é o mais rentável de Raciocínio Lógico, não o rodapé dele.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Duas condições da prova que mudam como se estuda isto: <b>não há calculadora</b> (toda conta fecha na mão — por isso a seção de cálculo mental é matéria, não enfeite) e são <b>5 questões em ~20 minutos</b> (o caminho curto vale mais que o caminho certo e longo).</div>"
+            },
+            {
+              "titulo": "Razão, proporção e divisão proporcional",
+              "html": "<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Razão</span> a divisão de um número pelo outro: a razão entre 12 e 25 é 12/25 — “quanto um representa do outro”</div>\n  <div class=\"def\"><span class=\"def-t\">Proporção</span> a igualdade entre duas razões: a/b = c/d</div>\n  <div class=\"def\"><span class=\"def-t\">Propriedade fundamental</span> o produto dos meios é igual ao produto dos extremos: a·d = b·c. É a multiplicação em cruz — e é disso que a regra de três é feita</div>\n</div>\n<p><b>Divisão proporcional</b> — o modelo da questão 25: <i>dois sócios entraram com R$ 12.000 e R$ 13.000 e perderam R$ 50.000; quanto cabe ao primeiro?</i> Três passos que servem para qualquer questão do tipo:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Some as partes</span> 12.000 + 13.000 = 25.000 — esse é o “todo” da proporção</div>\n  <div class=\"def\"><span class=\"def-t\">2. Escreva a fração de quem você quer</span> 12.000/25.000 = 12/25</div>\n  <div class=\"def\"><span class=\"def-t\">3. Aplique sobre o valor a repartir</span> 50.000 × 12/25 = 24.000</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Confira sempre pela outra ponta:</b> o outro sócio fica com 13/25 × 50.000 = 26.000, e 24.000 + 26.000 = 50.000. Cinco segundos que pegam o erro nº 1 do assunto — a <b>fração invertida</b>. A banca oferece o valor do outro sócio (26.000) e a divisão ao meio (25.000) como alternativas.</div>\n<p><b>Inversamente proporcional:</b> repartir R$ 60.000 em partes inversamente proporcionais a 2 e 3 é usar <b>1/2 e 1/3</b> como pesos. Soma dos pesos 5/6; primeira parte 60.000 × (1/2)/(5/6) = <b>36.000</b>; segunda, <b>24.000</b>. Quem tinha o número menor ficou com a parte maior — é o que “inversamente” quer dizer.</p>"
+            },
+            {
+              "titulo": "Porcentagem: o fator multiplicativo resolve quase tudo",
+              "html": "<p><i>Por cento</i> = por cem: 30% = 30/100 = 0,30. E <b>“de” significa multiplicar</b>: 30% de 80 = 0,30 × 80 = 24.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Porcentagem comuta:</b> 30% de 80 = 80% de 30. Quando a conta estiver feia, troque os dois de lugar — 18% de 50 é chato, <b>50% de 18 = 9</b> é instantâneo.</div>\n<p>Em vez de calcular a parte e depois somar, trabalhe com <b>um número só</b>, o fator:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">aumento de x%</span> × (1 + x/100) — aumento de 20% é × 1,20</div>\n  <div class=\"def\"><span class=\"def-t\">desconto de x%</span> × (1 − x/100) — desconto de 35% é × 0,65</div>\n  <div class=\"def\"><span class=\"def-t\">aumento de 100%</span> × 2 (dobrou)</div>\n</div>\n<p><b>Variação percentual</b> — o “de quanto aumentou?”:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">(final − inicial) / INICIAL</span> o denominador é sempre o valor inicial</div>\n  <div class=\"def\"><span class=\"def-t\">40 → 50</span> +10/40 = <b>+25%</b></div>\n  <div class=\"def\"><span class=\"def-t\">50 → 40</span> −10/50 = <b>−20%</b></div>\n</div>\n<p>Mesma diferença absoluta, percentuais diferentes — porque a base é outra.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Ponto percentual não é por cento.</b> Se a taxa de aprovação sobe de 20% para 25%, ela subiu <b>5 pontos percentuais</b> (a subtração) <b>ou 25 por cento</b> (porque 5 é 25% de 20) — nunca as duas coisas. “p.p.” no enunciado é subtração; “%” é a fórmula da variação.</div>"
+            },
+            {
+              "titulo": "Variações sucessivas e como desfazê-las",
+              "html": "<p><b>Fatores se MULTIPLICAM, taxas não se somam.</b> Dois aumentos consecutivos de 30% e 10% não dão 40%: dão <code>1,30 × 1,10 = 1,43</code> → <b>43%</b>. O segundo aumento incide sobre o valor <b>já aumentado</b> — os 10% do segundo mês são 10% de 130, não de 100.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Aumento e desconto de mesma taxa nunca se cancelam.</b> +20% seguido de −20% dá <code>1,20 × 0,80 = 0,96</code>: o preço final é <b>4% menor</b> que o inicial, porque o desconto incidiu sobre um valor maior. E a ordem não importa — a multiplicação é comutativa.</div>\n<p><b>Desfazer uma variação</b> exige o fator <b>inverso</b>, não a mesma taxa:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">desconto de 10% (×0,9)</span> para voltar: +11,1% (1/0,9)</div>\n  <div class=\"def\"><span class=\"def-t\">desconto de 20% (×0,8)</span> para voltar: <b>+25%</b> (1/0,8)</div>\n  <div class=\"def\"><span class=\"def-t\">desconto de 25% (×0,75)</span> para voltar: +33,3%</div>\n  <div class=\"def\"><span class=\"def-t\">desconto de 50% (×0,5)</span> para voltar: <b>+100%</b></div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> A intuição que resolve qualquer caso: <b>descer 50% é perder metade; subir de volta é dobrar</b>. Descida e subida nunca têm a mesma taxa, porque a base mudou.</div>"
+            },
+            {
+              "titulo": "Taxa média de variação (a questão 30)",
+              "html": "<p>Taxa média <b>não</b> é a média das taxas, nem a taxa do período dividida pelos meses. É a taxa que, <b>aplicada em todos os períodos, dá o mesmo resultado final</b>:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">(1 + i)ⁿ = fator total</span> logo i = ⁿ√(fator total) − 1 — é a <b>média geométrica</b> dos fatores</div>\n  <div class=\"def\"><span class=\"def-t\">+30% e +10%</span> (1+i)² = 1,43 → i ≈ 19,58% (e <b>não</b> 20%)</div>\n  <div class=\"def\"><span class=\"def-t\">+21% em dois meses</span> (1+i)² = 1,21 → i = <b>10%</b> (e não 10,5%)</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>A regra que economiza a raiz:</b> a taxa média é <b>sempre MENOR</b> que a média aritmética das taxas (só empata se as taxas forem iguais). Na questão 30, sabendo que a média aritmética era 20%, a resposta tinha de ficar <b>um pouco abaixo de 20%</b> — isso já eliminava quatro das cinco alternativas, sem nenhuma conta.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Raiz quadrada sem calculadora:</b> procure o quadrado conhecido mais próximo. Para √1,43, sei que 1,2² = 1,44 — quase o mesmo número. Logo a raiz é um tiquinho abaixo de 1,2, e a taxa fica um pouco abaixo de 20%. Mais precisão que isso a alternativa não exige.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> As outras duas armadilhas da mesma questão: <b>43%</b> (que é o total do período, não a média) e <b>21,5%</b> (média de 30 e 10 feita errado).</div>"
+            },
+            {
+              "titulo": "Regra de três e o atalho da produtividade unitária",
+              "html": "<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Direta</span> as duas grandezas sobem juntas → multiplica em <b>cruz</b>. 3 servidores fazem 150 lotes; 5 fazem x → 3x = 750 → x = 250</div>\n  <div class=\"def\"><span class=\"def-t\">Inversa</span> uma sobe e a outra desce → multiplica em <b>linha</b>. 4 servidores levam 6h; 3 servidores levam x → 4 × 6 = 3x → x = 8h</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Como decidir sem decorar:</b> pergunte “se eu aumentar esta, a outra sobe ou desce?”. Sobe → direta. Desce → inversa. Preço e quantidade: direta. Trabalhadores e tempo, velocidade e tempo: inversa.</div>\n<p><b>Composta:</b> com três ou mais grandezas, não monte tabela — calcule a <b>produtividade unitária</b>. É mais rápido e não há como inverter grandeza. <i>4 servidores processam 600 lotes em 3 horas; quanto tempo 5 servidores levam para 1.000 lotes?</i></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. um servidor em uma hora</span> 600 ÷ (4 × 3) = 50 lotes</div>\n  <div class=\"def\"><span class=\"def-t\">2. cinco servidores em uma hora</span> 5 × 50 = 250 lotes</div>\n  <div class=\"def\"><span class=\"def-t\">3. tempo para 1.000</span> 1.000 ÷ 250 = <b>4 horas</b></div>\n</div>\n<p>Três divisões, nenhuma proporção montada. Use sempre que o problema falar de gente ou máquinas produzindo alguma coisa em algum tempo.</p>"
+            },
+            {
+              "titulo": "Médias e a armadilha da média de médias",
+              "html": "<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Aritmética</span> soma ÷ quantidade</div>\n  <div class=\"def\"><span class=\"def-t\">Ponderada</span> Σ(valor × peso) ÷ Σpesos. Notas 6, 7, 8 com pesos 1, 2, 3 → (6 + 14 + 24)/6 ≈ 7,33 — puxa para o valor de maior peso</div>\n  <div class=\"def\"><span class=\"def-t\">Geométrica</span> raiz n-ésima do produto; na prática aparece só como <b>taxa média de variação</b></div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Atalho da ponderada:</b> quando os pesos somam 10, “média ≥ 7,0” vira <b>soma ponderada ≥ 70</b>. Trabalhe com a soma, não com a média — números inteiros são muito mais rápidos de testar, e era exatamente o que a questão 26 pedia.</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>Média de médias só vale com grupos do mesmo tamanho.</b> Equipe A com 10 pessoas e média 6, equipe B com 40 pessoas e média 8 <b>não</b> dá 7: dá (10×6 + 40×8)/50 = 380/50 = <b>7,6</b>. Sempre que os grupos tiverem tamanhos diferentes, volte aos <b>totais</b>: some tudo e divida pelo total de elementos.</div>"
+            },
+            {
+              "titulo": "Juros simples e compostos",
+              "html": "<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Simples · J = C · i · t</span> os juros incidem sempre sobre o capital inicial — crescimento linear. Montante: M = C(1 + i·t)</div>\n  <div class=\"def\"><span class=\"def-t\">Composto · M = C(1 + i)^t</span> os juros incidem sobre o montante acumulado — é o fator multiplicativo repetido</div>\n</div>\n<p>R$ 4.000 a 1,5% ao mês por 8 meses: no <b>simples</b>, J = 4.000 × 0,015 × 8 = <b>480</b> (montante 4.480). No <b>composto</b>, 4.000 × 1,015⁸ ≈ 4.506 — cerca de R$ 26 a mais.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>As duas pegadinhas valem mais que as fórmulas.</b> 1) <b>Taxa em decimal:</b> 1,5% é 0,015, não 1,5 — errar aqui dá um resultado 100 vezes maior, e esse valor está entre as alternativas. 2) <b>Taxa e tempo na mesma unidade:</b> no juro simples, dividir a taxa anual por 12 é correto; no composto, <b>não</b> é (12% ao ano não é 1% ao mês composto).</div>"
+            },
+            {
+              "titulo": "Raciocínio numérico: identidades e contagem de pares",
+              "html": "<p>Duas das seis questões de 2024 (a 27 e a 29) não eram porcentagem nem média — eram truques que se aprendem em cinco minutos.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">(a + b)² = a² + 2ab + b²</span> se o enunciado deu a <b>soma</b> e a <b>soma dos quadrados</b>, ele deu o <b>produto</b></div>\n  <div class=\"def\"><span class=\"def-t\">(a − b)² = 2(a² + b²) − (a + b)²</span> e deu também a <b>diferença</b></div>\n  <div class=\"def\"><span class=\"def-t\">C(n,2) = n(n−1)/2</span> ligações quando <b>cada par</b> se liga uma vez</div>\n</div>\n<p>Soma 10 e soma dos quadrados 58 → 100 = 58 + 2ab → <b>ab = 21</b>. E a versão da questão 27: x + y = 1 e x² + y² = 313 → (x − y)² = 626 − 1 = 625 → <b>x − y = 25</b>, sem precisar descobrir que x e y são 13 e −12.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> A contagem de pares vem disfarçada de estradas entre cidades, apertos de mão numa reunião, partidas de turno único, cabos entre servidores. 45 cumprimentos → n(n−1) = 90 → <b>n = 10</b>. Não monte equação de segundo grau: procure <b>dois inteiros consecutivos cujo produto seja o dobro do total</b>.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> A questão 29 pedia o <b>acréscimo</b>: entrando 2 novos elementos, as ligações novas são C(x+2,2) − C(x,2) = <b>2x + 1</b>. Com 17 novas estradas, 2x + 1 = 17 → x = 8.</div>"
+            },
+            {
+              "titulo": "Calcular sem calculadora",
+              "html": "<p>Não é dica de autoajuda: metade dos erros de aritmética em prova é conta errada, não conceito errado. Tudo se monta a partir de dois valores.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">10%</span> vírgula uma casa para a esquerda — 10% de 340 = 34</div>\n  <div class=\"def\"><span class=\"def-t\">1%</span> duas casas — 1% de 340 = 3,4</div>\n  <div class=\"def\"><span class=\"def-t\">5% · 15% · 30% · 2%</span> metade de 10% · 10%+5% · 10%×3 · 1%×2</div>\n</div>\n<p>35% de 240 = 24×3 = 72, mais 12 (os 5%) = <b>84</b>.</p>\n<p><b>Porcentagens que são divisões</b> — transformam multiplicação em divisão simples:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">50% ÷2 · 25% ÷4 · 20% ÷5</span> </div>\n  <div class=\"def\"><span class=\"def-t\">12,5% ÷8 · 33,3% ÷3 · 10% ÷10</span> </div>\n  <div class=\"def\"><span class=\"def-t\">75% ÷4 e ×3 · 40% ÷5 e ×2</span> </div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Estime antes de calcular e olhe as alternativas.</b> Muita questão da FGV se resolve por ordem de grandeza: se você já sabe que a resposta fica “um pouco abaixo de 20%”, as outras quatro alternativas morreram. Conta exata só quando sobrarem duas.</div>"
+            }
+          ],
+          "flashcards": [
+            {
+              "tema": "Porcentagem",
+              "pergunta": "Qual o fator multiplicativo de um aumento de x% e de um desconto de x%?",
+              "resposta": "Aumento: × (1 + x/100). Desconto: × (1 − x/100). Trabalhar com o fator dispensa calcular a parte e somar depois — e é o que permite encadear variações."
+            },
+            {
+              "tema": "Porcentagem",
+              "pergunta": "Dois aumentos consecutivos de 30% e 10% dão quanto no período?",
+              "resposta": "43%, não 40%: os fatores se MULTIPLICAM (1,30 × 1,10 = 1,43). O segundo aumento incide sobre o valor já aumentado — os 10% são de 130, não de 100."
+            },
+            {
+              "tema": "Porcentagem",
+              "pergunta": "Um aumento de 20% seguido de um desconto de 20% volta ao preço original?",
+              "resposta": "Não. 1,20 × 0,80 = 0,96 → o preço final é 4% MENOR. Aumento e desconto de mesma taxa sempre terminam abaixo do valor inicial, e a ordem não muda nada."
+            },
+            {
+              "tema": "Porcentagem",
+              "pergunta": "Depois de um desconto de 20%, de quanto deve ser o aumento para voltar ao preço original?",
+              "resposta": "25%, porque é preciso o fator inverso: 1/0,80 = 1,25. Testando com 100: 100 → 80 → 80 × 1,25 = 100. Descer 50% exige dobrar (+100%) para voltar."
+            },
+            {
+              "tema": "Porcentagem",
+              "pergunta": "Qual a fórmula da variação percentual, e onde se erra?",
+              "resposta": "(final − inicial) / INICIAL. O denominador é sempre o valor inicial: de 40 para 50 é +25%, mas de 50 para 40 é −20%. Mesma diferença absoluta, percentuais diferentes."
+            },
+            {
+              "tema": "Porcentagem",
+              "pergunta": "A taxa subiu de 20% para 25%. Subiu 5% ou 25%?",
+              "resposta": "Subiu 5 PONTOS PERCENTUAIS (a subtração) ou 25 POR CENTO (porque 5 é 25% de 20). “p.p.” no enunciado é subtração; “%” é a fórmula da variação. Nunca as duas coisas ao mesmo tempo."
+            },
+            {
+              "tema": "Porcentagem",
+              "pergunta": "Por que 30% de 80 é igual a 80% de 30?",
+              "resposta": "Porque “de” é multiplicação, e a multiplicação comuta: 0,3 × 80 = 0,8 × 30 = 24. Serve de atalho — 18% de 50 é chato, 50% de 18 = 9 é instantâneo."
+            },
+            {
+              "tema": "Taxa média",
+              "pergunta": "O que é a taxa média de variação, e como se calcula?",
+              "resposta": "É a taxa que, aplicada em todos os períodos, dá o mesmo resultado final: (1 + i)ⁿ = fator total, logo i = ⁿ√(fator total) − 1. É média GEOMÉTRICA dos fatores, não aritmética das taxas."
+            },
+            {
+              "tema": "Taxa média",
+              "pergunta": "Os acessos cresceram 21% em dois meses. Qual a taxa média mensal?",
+              "resposta": "10%: (1 + i)² = 1,21 → 1 + i = 1,1. Não é 10,5% (21 ÷ 2) — confira: 1,105² = 1,221, que daria 22,1%."
+            },
+            {
+              "tema": "Taxa média",
+              "pergunta": "Qual a regra que dispensa calcular a raiz numa questão de taxa média?",
+              "resposta": "A taxa média é SEMPRE MENOR que a média aritmética das taxas (empata só se as taxas forem iguais). Com taxas de 30% e 10%, a resposta fica um pouco abaixo de 20% — o que já elimina quase todas as alternativas."
+            },
+            {
+              "tema": "Proporção",
+              "pergunta": "Como resolver uma divisão proporcional em três passos?",
+              "resposta": "1) Some as partes (o “todo”). 2) Escreva a fração de quem você quer. 3) Aplique sobre o valor a repartir. Com 12.000 e 13.000 de um prejuízo de 50.000: 12/25 × 50.000 = 24.000."
+            },
+            {
+              "tema": "Proporção",
+              "pergunta": "Qual a conferência obrigatória numa divisão proporcional?",
+              "resposta": "Calcular a outra parte e somar: tem de dar o total. Pega o erro nº 1 do assunto, a fração invertida — e a banca oferece justamente a parte do outro como alternativa."
+            },
+            {
+              "tema": "Proporção",
+              "pergunta": "Como repartir em partes INVERSAMENTE proporcionais a 2 e 3?",
+              "resposta": "Use 1/2 e 1/3 como pesos (inverta os números e trate como direta). De 60.000: 36.000 e 24.000 — quem tinha o número menor fica com a parte maior."
+            },
+            {
+              "tema": "Regra de três",
+              "pergunta": "Como saber se a regra de três é direta ou inversa?",
+              "resposta": "Pergunte “se eu aumentar esta, a outra sobe ou desce?”. Sobe → direta (multiplica em cruz). Desce → inversa (multiplica em linha). Trabalhadores × tempo e velocidade × tempo são inversas."
+            },
+            {
+              "tema": "Regra de três",
+              "pergunta": "Qual o atalho para regra de três composta?",
+              "resposta": "Produtividade unitária: descubra quanto UM faz em UMA unidade de tempo, multiplique pela nova quantidade e divida o trabalho novo por isso. 600 lotes ÷ (4×3) = 50; 5 × 50 = 250; 1.000 ÷ 250 = 4 horas."
+            },
+            {
+              "tema": "Médias",
+              "pergunta": "Como se calcula a média ponderada?",
+              "resposta": "Σ(valor × peso) ÷ Σpesos. O resultado puxa para o valor de maior peso — por isso, numa avaliação com pesos 1, 2, 3, 4, onde cai a nota baixa muda tudo."
+            },
+            {
+              "tema": "Médias",
+              "pergunta": "Qual o atalho quando os pesos somam 10 e a média exigida é 7,0?",
+              "resposta": "Trabalhar com a SOMA ponderada ≥ 70 em vez da média. Números inteiros, sem fração — era exatamente o que a questão 26 da prova de 2024 pedia."
+            },
+            {
+              "tema": "Médias",
+              "pergunta": "Equipe A: 10 pessoas, média 6. Equipe B: 40 pessoas, média 8. Qual a média geral?",
+              "resposta": "7,6, não 7. Grupos de tamanhos diferentes exigem ponderar pelo número de elementos: (10×6 + 40×8)/50 = 380/50. Média de médias só vale com grupos iguais — volte sempre aos totais."
+            },
+            {
+              "tema": "Juros",
+              "pergunta": "Quais as fórmulas de juros simples e compostos?",
+              "resposta": "Simples: J = C·i·t e M = C(1 + i·t) — incidem sempre sobre o capital inicial. Compostos: M = C(1 + i)^t — incidem sobre o montante acumulado."
+            },
+            {
+              "tema": "Juros",
+              "pergunta": "Quais as duas pegadinhas de unidade em juros?",
+              "resposta": "1) A taxa entra em DECIMAL: 1,5% é 0,015, não 1,5 (errar dá resultado 100× maior, e ele está entre as alternativas). 2) Taxa e tempo na MESMA unidade — e dividir a taxa anual por 12 só vale no juro simples."
+            },
+            {
+              "tema": "Raciocínio numérico",
+              "pergunta": "O enunciado dá a soma de dois números e a soma dos seus quadrados. O que ele deu de graça?",
+              "resposta": "O produto — e a diferença. De (a+b)² = a² + 2ab + b²: com soma 10 e quadrados 58, 100 = 58 + 2ab → ab = 21. E (a−b)² = 2(a²+b²) − (a+b)². Não resolva o sistema."
+            },
+            {
+              "tema": "Raciocínio numérico",
+              "pergunta": "Quantas ligações existem quando cada par de elementos se liga uma vez?",
+              "resposta": "C(n,2) = n(n−1)/2. Vem disfarçada de estradas entre cidades, apertos de mão, partidas de turno único, cabos entre servidores. 45 cumprimentos → n(n−1) = 90 → n = 10."
+            },
+            {
+              "tema": "Raciocínio numérico",
+              "pergunta": "Entrando 2 novos elementos num grupo de x ligados dois a dois, quantas ligações novas surgem?",
+              "resposta": "2x + 1, porque C(x+2,2) − C(x,2) = (4x+2)/2. Era a questão 29 de 2024: 17 novas estradas → 2x + 1 = 17 → x = 8."
+            },
+            {
+              "tema": "Cálculo mental",
+              "pergunta": "Como montar qualquer porcentagem a partir de 10% e 1%?",
+              "resposta": "10% = vírgula uma casa à esquerda; 1% = duas casas. Daí: 5% é metade de 10%, 15% = 10% + 5%, 30% = 10% × 3, 2% = 1% × 2. Ex.: 35% de 240 = 72 + 12 = 84."
+            },
+            {
+              "tema": "Cálculo mental",
+              "pergunta": "Quais porcentagens é melhor tratar como divisão?",
+              "resposta": "50% = ÷2 · 25% = ÷4 · 20% = ÷5 · 12,5% = ÷8 · 33,3% = ÷3 · 10% = ÷10 · 75% = ÷4 e ×3 · 40% = ÷5 e ×2."
+            },
+            {
+              "tema": "Método",
+              "pergunta": "Qual a ordem de trabalho numa questão de aritmética sem calculadora?",
+              "resposta": "Estimar primeiro e olhar as alternativas: muita questão da FGV se resolve por ordem de grandeza. Conta exata só quando sobrarem duas alternativas. São 5 questões em ~20 minutos — o caminho curto vale mais que o caminho certo e longo."
+            }
+          ],
+          "simulados": [
+            {
+              "id": "problemas-aritmeticos-01",
+              "nome": "Aula 1 · Porcentagem, proporção, médias e juros",
+              "descricao": "Dez questões no padrão FGV sobre divisão proporcional, variações percentuais sucessivas, taxa média de crescimento, regra de três composta, média ponderada, média de médias, juros simples e os dois truques de raciocínio numérico que a banca usou em 2024.",
+              "nivel": "Treino",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Divisão proporcional",
+                  "text": "Dois sócios investiram R$ 15.000,00 e R$ 25.000,00 em um negócio. Ao fim do exercício, o lucro de R$ 32.000,00 foi dividido em partes diretamente proporcionais ao capital investido. O sócio que investiu menos recebeu",
+                  "options": [
+                    "R$ 10.000,00",
+                    "R$ 12.000,00",
+                    "R$ 13.500,00",
+                    "R$ 16.000,00",
+                    "R$ 20.000,00"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. Capital total: 15.000 + 25.000 = 40.000. A fração de quem investiu menos é 15/40 = 3/8, e 32.000 × 3/8 = 12.000. Conferindo pela outra ponta: o outro sócio fica com 5/8 → 20.000, e 12.000 + 20.000 = 32.000, fecha. A opção E é justamente a parte do OUTRO sócio — é o que se marca ao inverter a fração, e a banca sempre a oferece. A D é a metade do lucro, de quem dividiu igualmente ignorando a proporção."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Variações sucessivas",
+                  "text": "O preço de um equipamento sofreu um aumento de 20% e, no mês seguinte, um desconto de 20%. Em relação ao preço inicial, o preço final é",
+                  "options": [
+                    "igual",
+                    "4% menor",
+                    "4% maior",
+                    "2% menor",
+                    "5% menor"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. Os fatores se multiplicam: 1,20 × 0,80 = 0,96, ou seja, o preço final é 96% do inicial — 4% MENOR. A opção A é a resposta intuitiva e errada: o desconto de 20% incidiu sobre um valor já aumentado, maior que o original, então tirou mais do que o aumento havia posto. Guarde a regra: aumento e desconto de mesma taxa sempre terminam ABAIXO do valor inicial, e a ordem das operações não muda nada porque a multiplicação é comutativa."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Desfazer uma variação",
+                  "text": "Após conceder um desconto de 20% sobre o preço de tabela, uma empresa decide voltar ao preço original. O aumento que deve ser aplicado sobre o preço com desconto é de",
+                  "options": [
+                    "20%",
+                    "22%",
+                    "25%",
+                    "30%",
+                    "80%"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. O desconto multiplicou por 0,80; para desfazer é preciso o fator INVERSO: 1/0,80 = 1,25, isto é, aumento de 25%. A opção A é a armadilha — subir 20% sobre um valor menor não recupera o que se perdeu: 100 → 80 → 80 × 1,20 = 96, e não 100; já 80 × 1,25 = 100. A intuição que resolve qualquer caso: descer 50% é perder metade, e para voltar é preciso DOBRAR (+100%). Descida e subida nunca têm a mesma taxa, porque a base mudou."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Taxa média de crescimento",
+                  "text": "O número de acessos a um sistema cresceu 21% ao longo de dois meses. Supondo que o crescimento mensal tenha sido o mesmo nos dois meses, essa taxa mensal foi de",
+                  "options": [
+                    "10%",
+                    "10,5%",
+                    "11%",
+                    "21%",
+                    "42%"
+                  ],
+                  "answer": 0,
+                  "exp": "Gabarito: A. Taxa média não é a taxa do período dividida pelo número de meses: é a taxa que, aplicada duas vezes, dá o mesmo resultado. (1 + i)² = 1,21 → 1 + i = 1,1 → i = 10%. A opção B é o distrator principal (21 ÷ 2 = 10,5%), que ignora que no segundo mês o crescimento incide sobre o valor já crescido — confira: 1,105² = 1,221, ou 22,1%, e não 21%. A D repete a taxa do período e a E a dobra. Atalho: a taxa média é SEMPRE menor que a média aritmética das taxas, então já se sabia que a resposta ficaria abaixo de 10,5%."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Regra de três composta",
+                  "text": "Quatro servidores processam 600 lotes de dados em 3 horas. Mantido o mesmo desempenho por servidor, o tempo necessário para que 5 servidores processem 1.000 lotes é de",
+                  "options": [
+                    "3 horas",
+                    "3 horas e 30 minutos",
+                    "4 horas",
+                    "4 horas e 30 minutos",
+                    "5 horas"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. Pela produtividade unitária, sem montar regra de três: um servidor faz 600 ÷ (4 × 3) = 50 lotes por hora; cinco servidores fazem 250 por hora; 1.000 ÷ 250 = 4 horas. A opção E é de quem tratou servidores e tempo como grandezas diretas em algum passo. Note que o trabalho cresceu 66,7% (de 600 para 1.000) e a equipe só 25% (de 4 para 5), então o tempo TINHA de subir — o que já elimina a A de saída."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Média ponderada",
+                  "text": "Em uma avaliação, a nota final é a média ponderada de três provas, com pesos 2, 3 e 5, respectivamente. Um candidato obteve 6,0 na primeira e 7,0 na segunda. A menor nota que ele precisa obter na terceira prova para alcançar nota final 7,0 é",
+                  "options": [
+                    "7,0",
+                    "7,2",
+                    "7,4",
+                    "7,5",
+                    "8,0"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. Os pesos somam 2 + 3 + 5 = 10, então nota final 7,0 equivale a soma ponderada 70: 6×2 + 7×3 + 5x ≥ 70 → 12 + 21 + 5x ≥ 70 → 5x ≥ 37 → x ≥ 7,4. A opção A é o erro de quem calcula a média simples das notas em vez da ponderada. Repare no atalho: trabalhar com a SOMA (70) em vez da média (7,0) deixa a conta em números inteiros — é o mesmo movimento que a questão 26 da prova real exigia."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Média de médias",
+                  "text": "Em um mutirão de atendimento, a equipe A tem 10 atendentes, que resolveram em média 6 chamados cada, e a equipe B tem 40 atendentes, que resolveram em média 8 chamados cada. A média de chamados resolvidos por atendente, considerando as duas equipes, é",
+                  "options": [
+                    "7,0",
+                    "7,2",
+                    "7,5",
+                    "7,6",
+                    "8,0"
+                  ],
+                  "answer": 3,
+                  "exp": "Gabarito: D. As equipes têm tamanhos diferentes, então a média geral é ponderada pelo número de atendentes — e o caminho seguro é voltar aos totais: 10 × 6 = 60 chamados, 40 × 8 = 320, total 380 em 50 atendentes → 380/50 = 7,6. A opção A é a média das médias, que só valeria se as duas equipes tivessem o MESMO número de pessoas. Como a equipe maior é justamente a de melhor desempenho, o resultado tinha de ficar perto de 8, não no meio do caminho."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Juros simples",
+                  "text": "Um capital de R$ 4.000,00 foi aplicado a juros simples, à taxa de 1,5% ao mês, durante 8 meses. Os juros produzidos nesse período foram de",
+                  "options": [
+                    "R$ 400,00",
+                    "R$ 450,00",
+                    "R$ 480,00",
+                    "R$ 520,00",
+                    "R$ 600,00"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. J = C · i · t = 4.000 × 0,015 × 8 = 480. Duas fontes de erro que a banca explora: a taxa entra em DECIMAL (1,5% = 0,015, não 1,5) e o tempo precisa estar na mesma unidade da taxa — aqui ambos estão em meses, sem conversão. Se a questão pedisse o montante, seria 4.000 + 480 = 4.480."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Contagem de pares",
+                  "text": "Em uma reunião, cada participante cumprimentou cada um dos demais exatamente uma vez, totalizando 45 cumprimentos. O número de participantes da reunião era",
+                  "options": [
+                    "9",
+                    "10",
+                    "12",
+                    "15",
+                    "45"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. Cada par se cumprimenta uma vez, então o total é C(n,2) = n(n−1)/2 = 45 → n(n−1) = 90. Em vez de montar equação de segundo grau, procure dois inteiros consecutivos cujo produto seja 90: 10 × 9. Logo n = 10. A opção E confunde o número de cumprimentos com o de participantes. Reconheça o padrão — estradas entre cidades, apertos de mão, partidas de turno único, cabos entre servidores: é sempre n(n−1)/2, e foi assim que a FGV montou a questão 29 de 2024."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Identidade algébrica",
+                  "text": "A soma de dois números é 10 e a soma de seus quadrados é 58. O produto desses dois números é",
+                  "options": [
+                    "16",
+                    "18",
+                    "21",
+                    "24",
+                    "42"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. Pela identidade (a + b)² = a² + 2ab + b²: 10² = 58 + 2ab → 100 − 58 = 2ab → ab = 21. A opção E é 100 − 58 sem dividir por 2, o esquecimento mais comum. Não é preciso descobrir os números (são 3 e 7): quando o enunciado dá a soma e a soma dos quadrados, ele já deu o produto — tentar resolver o sistema completo só gasta tempo. Foi o mecanismo da questão 27 de 2024, lá com a diferença: (x − y)² = 2(x² + y²) − (x + y)²."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4340,7 +4670,8 @@ window.CONTENT = {
                 "nome": "Problemas aritméticos",
                 "prioridade": "alta",
                 "esforco": 3,
-                "oQueCai": "Porcentagem, razão e proporção, regra de três, média, juros simples e problemas de raciocínio numérico. É o que mais cai dentro de ‘problemas’."
+                "oQueCai": "Porcentagem, razão e proporção, regra de três, média, juros simples e problemas de raciocínio numérico. É o que mais cai dentro de ‘problemas’.",
+                "materiaId": "problemas-aritmeticos"
               },
               {
                 "id": "rl-geometricos",

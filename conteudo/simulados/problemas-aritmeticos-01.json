@@ -1,0 +1,149 @@
+{
+  "id": "problemas-aritmeticos-01",
+  "materiaId": "problemas-aritmeticos",
+  "nome": "Aula 1 · Porcentagem, proporção, médias e juros",
+  "descricao": "Dez questões no padrão FGV sobre divisão proporcional, variações percentuais sucessivas, taxa média de crescimento, regra de três composta, média ponderada, média de médias, juros simples e os dois truques de raciocínio numérico que a banca usou em 2024.",
+  "nivel": "Treino",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Divisão proporcional",
+      "text": "Dois sócios investiram R$ 15.000,00 e R$ 25.000,00 em um negócio. Ao fim do exercício, o lucro de R$ 32.000,00 foi dividido em partes diretamente proporcionais ao capital investido. O sócio que investiu menos recebeu",
+      "options": [
+        "R$ 10.000,00",
+        "R$ 12.000,00",
+        "R$ 13.500,00",
+        "R$ 16.000,00",
+        "R$ 20.000,00"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Capital total: 15.000 + 25.000 = 40.000. A fração de quem investiu menos é 15/40 = 3/8, e 32.000 × 3/8 = 12.000. Conferindo pela outra ponta: o outro sócio fica com 5/8 → 20.000, e 12.000 + 20.000 = 32.000, fecha. A opção E é justamente a parte do OUTRO sócio — é o que se marca ao inverter a fração, e a banca sempre a oferece. A D é a metade do lucro, de quem dividiu igualmente ignorando a proporção."
+    },
+    {
+      "type": "mc",
+      "tag": "Variações sucessivas",
+      "text": "O preço de um equipamento sofreu um aumento de 20% e, no mês seguinte, um desconto de 20%. Em relação ao preço inicial, o preço final é",
+      "options": [
+        "igual",
+        "4% menor",
+        "4% maior",
+        "2% menor",
+        "5% menor"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Os fatores se multiplicam: 1,20 × 0,80 = 0,96, ou seja, o preço final é 96% do inicial — 4% MENOR. A opção A é a resposta intuitiva e errada: o desconto de 20% incidiu sobre um valor já aumentado, maior que o original, então tirou mais do que o aumento havia posto. Guarde a regra: aumento e desconto de mesma taxa sempre terminam ABAIXO do valor inicial, e a ordem das operações não muda nada porque a multiplicação é comutativa."
+    },
+    {
+      "type": "mc",
+      "tag": "Desfazer uma variação",
+      "text": "Após conceder um desconto de 20% sobre o preço de tabela, uma empresa decide voltar ao preço original. O aumento que deve ser aplicado sobre o preço com desconto é de",
+      "options": [
+        "20%",
+        "22%",
+        "25%",
+        "30%",
+        "80%"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. O desconto multiplicou por 0,80; para desfazer é preciso o fator INVERSO: 1/0,80 = 1,25, isto é, aumento de 25%. A opção A é a armadilha — subir 20% sobre um valor menor não recupera o que se perdeu: 100 → 80 → 80 × 1,20 = 96, e não 100; já 80 × 1,25 = 100. A intuição que resolve qualquer caso: descer 50% é perder metade, e para voltar é preciso DOBRAR (+100%). Descida e subida nunca têm a mesma taxa, porque a base mudou."
+    },
+    {
+      "type": "mc",
+      "tag": "Taxa média de crescimento",
+      "text": "O número de acessos a um sistema cresceu 21% ao longo de dois meses. Supondo que o crescimento mensal tenha sido o mesmo nos dois meses, essa taxa mensal foi de",
+      "options": [
+        "10%",
+        "10,5%",
+        "11%",
+        "21%",
+        "42%"
+      ],
+      "answer": 0,
+      "exp": "Gabarito: A. Taxa média não é a taxa do período dividida pelo número de meses: é a taxa que, aplicada duas vezes, dá o mesmo resultado. (1 + i)² = 1,21 → 1 + i = 1,1 → i = 10%. A opção B é o distrator principal (21 ÷ 2 = 10,5%), que ignora que no segundo mês o crescimento incide sobre o valor já crescido — confira: 1,105² = 1,221, ou 22,1%, e não 21%. A D repete a taxa do período e a E a dobra. Atalho: a taxa média é SEMPRE menor que a média aritmética das taxas, então já se sabia que a resposta ficaria abaixo de 10,5%."
+    },
+    {
+      "type": "mc",
+      "tag": "Regra de três composta",
+      "text": "Quatro servidores processam 600 lotes de dados em 3 horas. Mantido o mesmo desempenho por servidor, o tempo necessário para que 5 servidores processem 1.000 lotes é de",
+      "options": [
+        "3 horas",
+        "3 horas e 30 minutos",
+        "4 horas",
+        "4 horas e 30 minutos",
+        "5 horas"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Pela produtividade unitária, sem montar regra de três: um servidor faz 600 ÷ (4 × 3) = 50 lotes por hora; cinco servidores fazem 250 por hora; 1.000 ÷ 250 = 4 horas. A opção E é de quem tratou servidores e tempo como grandezas diretas em algum passo. Note que o trabalho cresceu 66,7% (de 600 para 1.000) e a equipe só 25% (de 4 para 5), então o tempo TINHA de subir — o que já elimina a A de saída."
+    },
+    {
+      "type": "mc",
+      "tag": "Média ponderada",
+      "text": "Em uma avaliação, a nota final é a média ponderada de três provas, com pesos 2, 3 e 5, respectivamente. Um candidato obteve 6,0 na primeira e 7,0 na segunda. A menor nota que ele precisa obter na terceira prova para alcançar nota final 7,0 é",
+      "options": [
+        "7,0",
+        "7,2",
+        "7,4",
+        "7,5",
+        "8,0"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Os pesos somam 2 + 3 + 5 = 10, então nota final 7,0 equivale a soma ponderada 70: 6×2 + 7×3 + 5x ≥ 70 → 12 + 21 + 5x ≥ 70 → 5x ≥ 37 → x ≥ 7,4. A opção A é o erro de quem calcula a média simples das notas em vez da ponderada. Repare no atalho: trabalhar com a SOMA (70) em vez da média (7,0) deixa a conta em números inteiros — é o mesmo movimento que a questão 26 da prova real exigia."
+    },
+    {
+      "type": "mc",
+      "tag": "Média de médias",
+      "text": "Em um mutirão de atendimento, a equipe A tem 10 atendentes, que resolveram em média 6 chamados cada, e a equipe B tem 40 atendentes, que resolveram em média 8 chamados cada. A média de chamados resolvidos por atendente, considerando as duas equipes, é",
+      "options": [
+        "7,0",
+        "7,2",
+        "7,5",
+        "7,6",
+        "8,0"
+      ],
+      "answer": 3,
+      "exp": "Gabarito: D. As equipes têm tamanhos diferentes, então a média geral é ponderada pelo número de atendentes — e o caminho seguro é voltar aos totais: 10 × 6 = 60 chamados, 40 × 8 = 320, total 380 em 50 atendentes → 380/50 = 7,6. A opção A é a média das médias, que só valeria se as duas equipes tivessem o MESMO número de pessoas. Como a equipe maior é justamente a de melhor desempenho, o resultado tinha de ficar perto de 8, não no meio do caminho."
+    },
+    {
+      "type": "mc",
+      "tag": "Juros simples",
+      "text": "Um capital de R$ 4.000,00 foi aplicado a juros simples, à taxa de 1,5% ao mês, durante 8 meses. Os juros produzidos nesse período foram de",
+      "options": [
+        "R$ 400,00",
+        "R$ 450,00",
+        "R$ 480,00",
+        "R$ 520,00",
+        "R$ 600,00"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. J = C · i · t = 4.000 × 0,015 × 8 = 480. Duas fontes de erro que a banca explora: a taxa entra em DECIMAL (1,5% = 0,015, não 1,5) e o tempo precisa estar na mesma unidade da taxa — aqui ambos estão em meses, sem conversão. Se a questão pedisse o montante, seria 4.000 + 480 = 4.480."
+    },
+    {
+      "type": "mc",
+      "tag": "Contagem de pares",
+      "text": "Em uma reunião, cada participante cumprimentou cada um dos demais exatamente uma vez, totalizando 45 cumprimentos. O número de participantes da reunião era",
+      "options": [
+        "9",
+        "10",
+        "12",
+        "15",
+        "45"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Cada par se cumprimenta uma vez, então o total é C(n,2) = n(n−1)/2 = 45 → n(n−1) = 90. Em vez de montar equação de segundo grau, procure dois inteiros consecutivos cujo produto seja 90: 10 × 9. Logo n = 10. A opção E confunde o número de cumprimentos com o de participantes. Reconheça o padrão — estradas entre cidades, apertos de mão, partidas de turno único, cabos entre servidores: é sempre n(n−1)/2, e foi assim que a FGV montou a questão 29 de 2024."
+    },
+    {
+      "type": "mc",
+      "tag": "Identidade algébrica",
+      "text": "A soma de dois números é 10 e a soma de seus quadrados é 58. O produto desses dois números é",
+      "options": [
+        "16",
+        "18",
+        "21",
+        "24",
+        "42"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Pela identidade (a + b)² = a² + 2ab + b²: 10² = 58 + 2ab → 100 − 58 = 2ab → ab = 21. A opção E é 100 − 58 sem dividir por 2, o esquecimento mais comum. Não é preciso descobrir os números (são 3 e 7): quando o enunciado dá a soma e a soma dos quadrados, ele já deu o produto — tentar resolver o sistema completo só gasta tempo. Foi o mecanismo da questão 27 de 2024, lá com a diferença: (x − y)² = 2(x² + y²) − (x + y)²."
+    }
+  ]
+}
