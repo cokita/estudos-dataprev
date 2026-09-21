@@ -1819,7 +1819,7 @@ window.CONTENT = {
           "id": "logica-sentencial",
           "nome": "Lógica sentencial: proposições, conectivos e o condicional",
           "icon": "ti-logic-and",
-          "descricao": "A base do Raciocínio Lógico da FGV: o que é proposição, os conectivos, tabela-verdade e o “se… então” por inteiro — disfarces, contrapositiva, negação e as duas armadilhas clássicas.",
+          "descricao": "A base do Raciocínio Lógico da FGV: o que é proposição, os conectivos, tabela-verdade e o “se… então” por inteiro — disfarces, contrapositiva, negação e as duas armadilhas clássicas. Inclui as equivalências e negações cobradas em prova: De Morgan, forma disjuntiva, bicondicional e ou-exclusivo, exportação.",
           "resumo": [
             {
               "titulo": "De onde veio: lógica é julgar frases, não fazer contas",
@@ -1862,12 +1862,28 @@ window.CONTENT = {
               "html": "\n<p><b>Negar p → q é afirmar p ∧ ~q.</b> O antecedente fica <b>do jeito que estava</b>; só o consequente é negado. E a seta <b>desaparece</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Frase</span> Se o sistema falhar, então o alerta é disparado</div>\n  <div class=\"def\"><span class=\"def-t\">Negação</span> O sistema <b>falhou</b> e o alerta <b>não</b> foi disparado</div>\n</div>\n<p>Por que o p continua afirmado: para flagrar a promessa sendo quebrada, a <b>condição precisa ter acontecido</b>. Num dia em que o sistema nem falhou, não há como acusar ninguém de mentira.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>A negação vem sempre em par, ligado por “e”.</b> Se a sua resposta tem um fato só (“o alerta não foi disparado”), faltou metade — e a FGV oferece essa metade como alternativa.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Dois sinais visuais que separam tudo: <b>negação nunca tem seta</b> (vira “e”); <b>contrapositiva sempre tem seta</b> (com dois “nãos” e a ordem trocada).</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Teste infalível de negação:</b> a negação tem de ser <b>falsa</b> exatamente quando a original é <b>verdadeira</b>. Se você conseguir imaginar um cenário em que as duas são verdadeiras ao mesmo tempo, a sua “negação” está errada.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Olhe o verbo do enunciado: <b>“equivalente a” → contrapositiva</b> (com seta). <b>“negação de” ou “é falsa” → p ∧ ~q</b> (com “e”).</div>\n"
             },
             {
+              "titulo": "De Morgan por dentro: por que o E vira OU",
+              "html": "<p>A regra você já tem (<b>NENE</b>): nega as duas partes e troca o conectivo. Falta o <b>porquê</b> — e é ele que impede o erro na hora da prova.</p>\n<p>Pegue <i>“Ana estuda lógica <b>e</b> português”</i>. Para essa frase ser <b>falsa</b>, o que basta? Basta <b>uma</b> das duas falhar. Se ela não estudou lógica, a frase já caiu; se não estudou português, já caiu. Não é preciso que as duas falhem. Por isso a negação é <i>“não estuda lógica <b>ou</b> não estuda português”</i>.</p>\n<p>Agora <i>“Ana estuda lógica <b>ou</b> português”</i>. Aqui uma falha não derruba nada: se ela estudou pelo menos uma, a frase resiste. É preciso derrubar as <b>duas</b> — e a negação vira <i>“não estuda lógica <b>e</b> não estuda português”</i>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">~(p ∧ q) = ~p ∨ ~q</span> o <b>e</b> é uma <b>corrente</b>: arrebenta num elo só</div>\n  <div class=\"def\"><span class=\"def-t\">~(p ∨ q) = ~p ∧ ~q</span> o <b>ou</b> é um <b>feixe de cordas</b>: só cai cortando todas</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>O erro clássico é negar o “e” com “e”.</b> “Ana não estuda lógica e não estuda português” exige que ela abandone as duas matérias — muito mais forte do que negar a frase. Confira pelo teste da convivência: se Ana estuda lógica e não estuda português, a original é <b>falsa</b> e essa “negação” também é <b>falsa</b>. Duas falsas juntas nunca são negação uma da outra.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Na prova o <b>“ou” é inclusivo</b> por padrão (admite que os dois aconteçam). O exclusivo só aparece quando a frase diz <i>“ou… ou…, mas não ambos”</i> — e aí a regra é outra: <code>~(p ⊻ q) = p ↔ q</code>.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> É a mesma identidade que você usa sem pensar no código: <code>!(a &amp;&amp; b) === !a || !b</code> e <code>!(a || b) === !a &amp;&amp; !b</code>.</div>"
+            },
+            {
+              "titulo": "Quando o antecedente já é negativo",
+              "html": "<p>A regra do MANÉ manda <b>manter a primeira parte do jeito que ela está</b> — e é aqui que quase todo mundo escorrega, porque o antecedente às vezes já vem com um “não”.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Frase</span> Se <b>não</b> houver greve, a prova será aplicada no domingo</div>\n  <div class=\"def\"><span class=\"def-t\">Negação</span> <b>Não</b> houve greve <b>e</b> a prova <b>não</b> foi aplicada no domingo</div>\n  <div class=\"def\"><span class=\"def-t\">Errado</span> <i>Houve</i> greve e a prova não foi aplicada — isso negou o antecedente, que é justamente o que não se faz</div>\n</div>\n<p>Se a frase confundir, escreva em letras antes de negar: chamando <code>g</code> de “houve greve” e <code>d</code> de “prova no domingo”, a original é <code>~g → d</code> e a negação é <code>~g ∧ ~d</code>. Com os símbolos na frente dos olhos, o “não” do antecedente para de atrapalhar.</p>\n<p><b>O catálogo de distratores</b> que a banca oferece para <i>“Se chove, a rua fica molhada”</i>:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Chove e a rua não fica molhada</span> ✅ é a <b>negação</b> (p ∧ ~q)</div>\n  <div class=\"def\"><span class=\"def-t\">Se chove, a rua não fica molhada</span> ❌ negou só o consequente — e continua condicional</div>\n  <div class=\"def\"><span class=\"def-t\">Se não chove, a rua não fica molhada</span> ❌ é a inversa</div>\n  <div class=\"def\"><span class=\"def-t\">Não chove ou a rua fica molhada</span> ❌ é a <b>equivalente</b> (NEMA), não a negação</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>O último é o mais traiçoeiro:</b> quem estudou equivalência reconhece a forma e marca por reflexo. A FGV usa o mesmo par de proposições nas duas perguntas — por isso o primeiro passo é sempre circular o verbo do enunciado: <b>equivalente</b> ou <b>negação</b>?</div>"
+            },
+            {
               "titulo": "Os quatro raciocínios: dois válidos e duas armadilhas",
               "html": "\n<p>Com a promessa <b>p → q</b> valendo, só existem quatro coisas que você pode descobrir:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Descobriu que p aconteceu</span> conclui <b>q</b> — <b>válido</b> (modus ponens)</div>\n  <div class=\"def\"><span class=\"def-t\">Descobriu que q NÃO aconteceu</span> conclui <b>~p</b> — <b>válido</b> (modus tollens)</div>\n  <div class=\"def\"><span class=\"def-t\">Descobriu que p NÃO aconteceu</span> <b>nada se conclui</b> — armadilha (negar o antecedente)</div>\n  <div class=\"def\"><span class=\"def-t\">Descobriu que q aconteceu</span> <b>nada se conclui</b> — armadilha (afirmar o consequente)</div>\n</div>\n<p>O desenho: você só conclui indo <b>para frente com a condição ligada</b>, ou <b>para trás com o resultado desligado</b>. Qualquer outro caminho é armadilha.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> No Venn: “Todo analista é servidor”. Quem está <b>fora</b> do círculo grande está obrigatoriamente fora do pequeno (<b>conclui</b>). Quem está <b>dentro</b> do grande pode estar no miolo ou não (<b>nada se conclui</b>).</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> “Não sei” é resposta certa em lógica. Nas duas armadilhas, a alternativa correta costuma ser “nada se pode concluir” — e o candidato erra porque quer que a frase diga mais do que ela diz.</div>\n"
             },
             {
               "titulo": "Premissa é lei — e condicional não é causa",
               "html": "\n<p>Duas confusões que travam quase todo mundo no começo:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">A premissa é lei</span> Se o enunciado apresenta uma frase, você a <b>aceita como verdadeira</b> e trabalha dentro desse mundo, mesmo que ela seja irrealista. “Se Ana estuda, então Ana é aprovada” é falsa no mundo real — mas, se a questão manda tratá-la como verdadeira, o caso “estudou e não passou” simplesmente não existe ali.</div>\n  <div class=\"def\"><span class=\"def-t\">Condicional é companhia, não causa</span> “Se A, então B” diz que onde há A há B. <b>Não</b> diz que B acontece <i>por causa</i> de A. “Se chove, o chão está molhado” tem como contrapositiva “se o chão não está molhado, não está chovendo” — e ninguém diria que o chão seco causou a ausência de chuva.</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Quando a conclusão parecer estranha, troque o exemplo por um obviamente verdadeiro: “Se é cachorro, então é mamífero” → “se não é mamífero, não é cachorro”. A mecânica é a mesma; o que incomodava era a qualidade da premissa.</div>\n"
+            },
+            {
+              "titulo": "Bicondicional e ou-exclusivo: negar os dois lados não nega nada",
+              "html": "<p>O bicondicional <code>p ↔ q</code> pergunta uma coisa só: <b>os dois lados têm o mesmo valor?</b> Tudo nesse grupo sai daí.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">p ↔ q = (p → q) ∧ (q → p)</span> ida <b>e</b> volta</div>\n  <div class=\"def\"><span class=\"def-t\">p ↔ q = (p ∧ q) ∨ (~p ∧ ~q)</span> ou os dois valem, ou nenhum vale — sem setas</div>\n  <div class=\"def\"><span class=\"def-t\">~(p ↔ q) = p ⊻ q</span> negar é dizer que eles <b>diferem</b> — é o ou-exclusivo</div>\n  <div class=\"def\"><span class=\"def-t\">~(p ↔ q) = (p ∧ ~q) ∨ (~p ∧ q)</span> a mesma coisa escrita por extenso</div>\n  <div class=\"def\"><span class=\"def-t\">~(p ↔ q) = p ↔ ~q = ~p ↔ q</span> negar <b>um</b> lado já inverte tudo</div>\n  <div class=\"def\"><span class=\"def-t\">~(p ⊻ q) = p ↔ q</span> o caminho de volta</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>A pegadinha do grupo:</b> <code>~p ↔ ~q</code> é <b>equivalente</b> a <code>p ↔ q</code>, não a negação dela. “Os dois são falsos juntos” continua sendo um caso de “os dois têm o mesmo valor”. É a única família de conectivos em que negar tudo não muda nada — para negar de verdade, negue <b>só um</b> lado.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Na alternativa, <i>“A é aprovada se e somente se B é suficiente”</i> tem como negação <i>“A é aprovada e B não é suficiente, <b>ou</b> B é suficiente e A não é aprovada”</i>. Se a alternativa mantém o “se e somente se” com os dois lados negados, ela está repetindo a frase original com outras palavras.</div>"
+            },
+            {
+              "titulo": "Exportação e as equivalências de apoio",
+              "html": "<p>Uma última família, de reconhecimento — você não precisa decorar, precisa não se assustar quando ela aparecer na alternativa.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Exportação · (p ∧ q) → r = p → (q → r)</span> duas condições exigidas juntas = uma condição dentro da outra</div>\n  <div class=\"def\"><span class=\"def-t\">Dupla negação · ~(~p) = p</span> “não é verdade que não…” é afirmação</div>\n  <div class=\"def\"><span class=\"def-t\">Distributiva · p ∧ (q ∨ r) = (p ∧ q) ∨ (p ∧ r)</span> o <b>e</b> distribui sobre o <b>ou</b></div>\n  <div class=\"def\"><span class=\"def-t\">Distributiva · p ∨ (q ∧ r) = (p ∨ q) ∧ (p ∨ r)</span> e o <b>ou</b> sobre o <b>e</b></div>\n  <div class=\"def\"><span class=\"def-t\">Absorção · p ∨ (p ∧ q) = p</span> o termo solto manda (idem p ∧ (p ∨ q) = p)</div>\n</div>\n<p>A exportação é a única com cara de pegadinha e já foi cobrada: <i>“Se o usuário está autenticado <b>e</b> tem permissão, o acesso é liberado”</i> equivale a <i>“Se o usuário está autenticado, então: se tem permissão, o acesso é liberado”</i>. Em código, é a diferença entre um <code>if (a &amp;&amp; b)</code> e dois <code>if</code> aninhados — mesma regra.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> <b>A condicional não comuta nem associa:</b> <code>p → q</code> não é <code>q → p</code>, e <code>(p → q) → r</code> <b>não</b> é <code>p → (q → r)</code>. No “e” e no “ou” os parênteses podem andar; na seta, não.</div>"
             },
             {
               "titulo": "Tabela de negações e equivalências (com os apelidos)",
@@ -2093,6 +2109,66 @@ window.CONTENT = {
               "tema": "Conectivos",
               "pergunta": "Qual o valor de F ↔ F?",
               "resposta": "Verdadeiro. O bicondicional é V sempre que os dois lados têm o MESMO valor — inclusive quando os dois são falsos."
+            },
+            {
+              "tema": "Negações",
+              "pergunta": "Qual a negação de “Se não houver greve, a prova será aplicada no domingo”?",
+              "resposta": "“Não houve greve E a prova não foi aplicada no domingo.” O antecedente é mantido como está — inclusive quando já é negativo. Negar o antecedente (“houve greve e…”) é o erro mais comum do assunto."
+            },
+            {
+              "tema": "Equivalências",
+              "pergunta": "~p ↔ ~q é a negação de p ↔ q ou é equivalente a ela?",
+              "resposta": "É EQUIVALENTE. Negar os dois lados mantém a igualdade — “os dois falsos” continua sendo “os dois com o mesmo valor”. Para negar, negue só UM lado: ~(p ↔ q) = p ↔ ~q."
+            },
+            {
+              "tema": "Equivalências",
+              "pergunta": "Como escrever p ↔ q sem usar nenhuma seta?",
+              "resposta": "(p ∧ q) ∨ (~p ∧ ~q) — ou os dois valem, ou nenhum vale. E a negação é o ou-exclusivo: (p ∧ ~q) ∨ (~p ∧ q)."
+            },
+            {
+              "tema": "Equivalências",
+              "pergunta": "Qual a relação entre o bicondicional e o ou-exclusivo?",
+              "resposta": "São negação um do outro: ~(p ↔ q) = p ⊻ q e ~(p ⊻ q) = p ↔ q. O bicondicional diz “iguais”; o exclusivo diz “diferentes”."
+            },
+            {
+              "tema": "Equivalências",
+              "pergunta": "O que diz a lei da exportação?",
+              "resposta": "(p ∧ q) → r = p → (q → r). Duas condições exigidas juntas equivalem a uma condição dentro da outra — o mesmo que trocar um if (a && b) por dois if aninhados."
+            },
+            {
+              "tema": "Equivalências",
+              "pergunta": "(p → q) → r equivale a p → (q → r)?",
+              "resposta": "NÃO. A condicional não associa nem comuta: só a exportação (com ∧ no antecedente) vale. Nos parênteses da seta, posição muda tudo."
+            },
+            {
+              "tema": "Equivalências",
+              "pergunta": "Como transformar “p ou q” numa condicional?",
+              "resposta": "p ∨ q = ~p → q (e também ~q → p). Uma disjunção é sempre “se um dos dois falhar, o outro tem que valer”. É o NEMA lido de trás para a frente."
+            },
+            {
+              "tema": "Negações",
+              "pergunta": "Por que a negação de “Ana estuda lógica e português” não é “não estuda lógica e não estuda português”?",
+              "resposta": "Porque essa é forte demais: para a original cair basta UMA das duas falhar. Teste — se Ana estuda lógica e não estuda português, a original é F e essa “negação” também é F; duas falsas juntas não são negação uma da outra."
+            },
+            {
+              "tema": "Método",
+              "pergunta": "Duas alternativas parecem candidatas. Como decidir sem montar a tabela inteira?",
+              "resposta": "Teste UMA linha: invente um cenário (p = V, q = F, por exemplo) e calcule as duas. Se derem valores diferentes, já dá para descartar uma. Tabela completa só quando a linha única não separar."
+            },
+            {
+              "tema": "Método",
+              "pergunta": "Qual o atalho para questão de negação?",
+              "resposta": "Ache uma linha em que a proposição original é VERDADEIRA e teste as alternativas nessa linha: a negação é a única que dá FALSO ali. Resolve em segundos, sem tabela."
+            },
+            {
+              "tema": "Método",
+              "pergunta": "O que significa, em termos de tabela, dizer que duas proposições são equivalentes?",
+              "resposta": "Que têm a mesma coluna final, linha por linha — e, equivalentemente, que p ↔ q é uma TAUTOLOGIA. Se existir uma única linha em que discordam, não são equivalentes: é nessa linha que a banca monta o distrator."
+            },
+            {
+              "tema": "Mnemônicos",
+              "pergunta": "Que imagem ajuda a lembrar De Morgan?",
+              "resposta": "O “e” é uma CORRENTE: arrebenta num elo só, então basta negar uma parte (vira “ou”). O “ou” é um FEIXE de cordas: só cai cortando todas, então é preciso negar as duas (vira “e”)."
             }
           ],
           "simulados": [
@@ -2555,6 +2631,126 @@ window.CONTENT = {
                   ],
                   "answer": 3,
                   "exp": "Gabarito: D. Linhas: 4 proposições simples distintas → 2⁴ = 16. Último conectivo: pela precedência (~, depois ∧ e ∨, depois →, por último ↔), resolve-se ~p, depois ~p ∨ q, depois r ∧ s e, por fim, a CONDICIONAL — que é o conectivo principal. Com parênteses explícitos: ((~p) ∨ q) → (r ∧ s). Quem marca C confundiu “o que aparece por último escrito” com “o que se resolve por último”."
+                }
+              ]
+            },
+            {
+              "id": "logica-sentencial-04",
+              "nome": "Aula 3 · Equivalências e negações (De Morgan)",
+              "descricao": "Oito questões no padrão FGV sobre negar o “e” e o “ou”, as três faces da condicional (contrapositiva, recíproca e inversa), a negação do condicional com antecedente negativo, bicondicional e exportação.",
+              "nivel": "Treino",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Negação do condicional",
+                  "text": "A negação da proposição “Se o candidato faltar à prova, ele será eliminado” é",
+                  "options": [
+                    "Se o candidato faltar à prova, ele não será eliminado",
+                    "Se o candidato não faltar à prova, ele não será eliminado",
+                    "O candidato não faltará à prova ou será eliminado",
+                    "O candidato faltará à prova e não será eliminado",
+                    "O candidato não faltará à prova e não será eliminado"
+                  ],
+                  "answer": 3,
+                  "exp": "Gabarito: D. A frase é p → q e ~(p → q) = p ∧ ~q — MANÉ: mantém o antecedente, nega o consequente, a seta vira “e”. As erradas são o catálogo completo do assunto: A é p → ~q (negou só o consequente e continuou condicional — a negação de uma condicional NUNCA é condicional); B é a inversa; C é ~p ∨ q, que é a EQUIVALENTE da original (NEMA) — se você marcou esta, leu “negação” e respondeu “equivalente”, que é exatamente o par que a banca usa nas duas perguntas; E aplicou De Morgan onde não cabia."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Contrapositiva",
+                  "text": "Assinale a proposição logicamente equivalente a “Se o sistema está fora do ar, então o alerta foi enviado”.",
+                  "options": [
+                    "Se o alerta foi enviado, então o sistema está fora do ar",
+                    "Se o sistema não está fora do ar, então o alerta não foi enviado",
+                    "Se o alerta não foi enviado, então o sistema não está fora do ar",
+                    "O sistema está fora do ar e o alerta foi enviado",
+                    "Se o alerta não foi enviado, então o sistema está fora do ar"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. É a contrapositiva: inverteu a ordem E negou os dois lados — a única das quatro faces que equivale. A é a recíproca (o alerta pode ter sido enviado por um teste de rotina) e B é a inversa. Repare que recíproca e inversa são contrapositivas uma da outra, ou seja, equivalentes ENTRE SI: quando esse par aparece nas alternativas, pode descartar as duas de saída, porque duas alternativas equivalentes não podem ser ambas a resposta. A D troca a condicional por conjunção, afirmando que os dois fatos ocorreram. A E inverteu a ordem mas negou só um lado."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Negação do “e” · De Morgan",
+                  "text": "A negação da proposição “Ana estuda lógica e português” é",
+                  "options": [
+                    "Ana não estuda lógica e não estuda português",
+                    "Ana não estuda lógica ou não estuda português",
+                    "Ana estuda lógica ou português",
+                    "Se Ana estuda lógica, então não estuda português",
+                    "Ana não estuda lógica nem português"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. De Morgan (NENE): negou o “e”, virou “ou”, com as duas partes negadas. Para a original cair basta UMA das duas atividades não acontecer. A opção A é o erro clássico — exige que ela abandone as duas matérias, condição muito mais forte do que negar a frase; pelo teste da convivência, se Ana estuda lógica e não estuda português, a original é F e a A também é F, e duas falsas juntas nunca são negação uma da outra. A E diz o mesmo que a A (“nem” = “e não”). A C convive com a original. A D é p → ~q, que nem chega a negá-la."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Negação do “ou” · De Morgan",
+                  "text": "Considere a proposição “O edital será retificado ou o prazo será prorrogado”. Sua negação é",
+                  "options": [
+                    "O edital não será retificado ou o prazo não será prorrogado",
+                    "O edital será retificado e o prazo não será prorrogado",
+                    "O edital não será retificado e o prazo não será prorrogado",
+                    "Se o edital não for retificado, o prazo será prorrogado",
+                    "O edital será retificado ou o prazo não será prorrogado"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. De Morgan do “ou”: o conectivo vira “e” e as duas partes são negadas. Uma disjunção é um feixe de cordas — só cai quando TODAS as parcelas caem. A opção A aplicou a regra na direção errada (é o que se faz com o “e”). A D é ~p → q, que é EQUIVALENTE à original, não a negação — de novo o par equivalente/negação na mesma questão. B e E negam apenas uma das parcelas."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Equivalência · dupla negação",
+                  "text": "A proposição ~(p ∧ ~q) é logicamente equivalente a",
+                  "options": [
+                    "p ∧ q",
+                    "~p ∧ q",
+                    "p → q",
+                    "q → p",
+                    "p ∨ ~q"
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito: C. Duas aplicações em sequência: ~(p ∧ ~q) = ~p ∨ ~(~q) por De Morgan, = ~p ∨ q pela dupla negação, = p → q pelo NEMA lido de volta. Conferindo por linha: p ∧ ~q só é V quando p = V e q = F, logo ~(p ∧ ~q) só é F nessa linha — exatamente a única linha em que p → q é falsa. Repare que p ∧ ~q é a negação da condicional, e aqui ele aparece negado: negar a negação devolve a original. A opção E é o distrator de quem esqueceu de negar o antecedente na volta."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Negação do bicondicional",
+                  "text": "A negação da proposição “A proposta é aprovada se e somente se o orçamento é suficiente” é",
+                  "options": [
+                    "Se a proposta é aprovada, então o orçamento é suficiente",
+                    "A proposta é aprovada e o orçamento não é suficiente, ou o orçamento é suficiente e a proposta não é aprovada",
+                    "A proposta não é aprovada se e somente se o orçamento não é suficiente",
+                    "A proposta não é aprovada e o orçamento não é suficiente",
+                    "Se o orçamento é suficiente, então a proposta é aprovada"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. Negar um bicondicional é afirmar que os dois lados DIFEREM — o ou-exclusivo, que escrito por extenso é (p ∧ ~q) ∨ (~p ∧ q). A opção C é o distrator principal: ~p ↔ ~q é EQUIVALENTE a p ↔ q, não a negação dela, porque “os dois falsos” continua sendo “os dois com o mesmo valor”; para negar é preciso negar só UM lado (p ↔ ~q também seria resposta correta). A e E são as duas metades da bicondicional original — cada uma é implicada por ela e nenhuma a nega. A D descreve um cenário que SATISFAZ a original."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Exportação",
+                  "text": "A proposição “Se o usuário está autenticado e possui permissão, então o acesso é liberado” é logicamente equivalente a",
+                  "options": [
+                    "Se o usuário está autenticado, então, se possui permissão, o acesso é liberado",
+                    "Se o usuário está autenticado ou possui permissão, então o acesso é liberado",
+                    "Se o acesso é liberado, então o usuário está autenticado e possui permissão",
+                    "O usuário está autenticado e possui permissão e o acesso é liberado",
+                    "Se o usuário não está autenticado, então o acesso não é liberado"
+                  ],
+                  "answer": 0,
+                  "exp": "Gabarito: A. É a exportação: (p ∧ q) → r = p → (q → r). Duas condições exigidas juntas equivalem a uma condição dentro da outra — dois if aninhados em vez de um &&. A opção B trocou ∧ por ∨ no antecedente e enfraqueceu a exigência: passaria a liberar acesso para quem apenas está autenticado. A C é a recíproca, a E é a inversa e a D transformou a regra em afirmação de fato."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Negação com antecedente negativo",
+                  "text": "A negação da proposição “Se não houver greve, a prova será aplicada no domingo” é",
+                  "options": [
+                    "Houve greve e a prova não foi aplicada no domingo",
+                    "Não houve greve e a prova não foi aplicada no domingo",
+                    "Se houver greve, a prova não será aplicada no domingo",
+                    "Houve greve ou a prova foi aplicada no domingo",
+                    "Se não houver greve, a prova não será aplicada no domingo"
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito: B. A regra manda manter o antecedente EXATAMENTE como está — e aqui ele já é negativo (“não houver greve”). Em símbolos, com g = “houve greve” e d = “prova no domingo”, a original é ~g → d e a negação é ~g ∧ ~d. A opção A é a que a maioria marca: negou o antecedente por reflexo, só porque ele já vinha com “não”. C e E continuam condicionais, e a negação de uma condicional nunca é condicional. A D não tem relação com a negação pedida."
                 }
               ]
             }

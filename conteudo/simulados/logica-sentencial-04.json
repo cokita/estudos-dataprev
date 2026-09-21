@@ -1,0 +1,121 @@
+{
+  "id": "logica-sentencial-04",
+  "materiaId": "logica-sentencial",
+  "nome": "Aula 3 · Equivalências e negações (De Morgan)",
+  "descricao": "Oito questões no padrão FGV sobre negar o “e” e o “ou”, as três faces da condicional (contrapositiva, recíproca e inversa), a negação do condicional com antecedente negativo, bicondicional e exportação.",
+  "nivel": "Treino",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Negação do condicional",
+      "text": "A negação da proposição “Se o candidato faltar à prova, ele será eliminado” é",
+      "options": [
+        "Se o candidato faltar à prova, ele não será eliminado",
+        "Se o candidato não faltar à prova, ele não será eliminado",
+        "O candidato não faltará à prova ou será eliminado",
+        "O candidato faltará à prova e não será eliminado",
+        "O candidato não faltará à prova e não será eliminado"
+      ],
+      "answer": 3,
+      "exp": "Gabarito: D. A frase é p → q e ~(p → q) = p ∧ ~q — MANÉ: mantém o antecedente, nega o consequente, a seta vira “e”. As erradas são o catálogo completo do assunto: A é p → ~q (negou só o consequente e continuou condicional — a negação de uma condicional NUNCA é condicional); B é a inversa; C é ~p ∨ q, que é a EQUIVALENTE da original (NEMA) — se você marcou esta, leu “negação” e respondeu “equivalente”, que é exatamente o par que a banca usa nas duas perguntas; E aplicou De Morgan onde não cabia."
+    },
+    {
+      "type": "mc",
+      "tag": "Contrapositiva",
+      "text": "Assinale a proposição logicamente equivalente a “Se o sistema está fora do ar, então o alerta foi enviado”.",
+      "options": [
+        "Se o alerta foi enviado, então o sistema está fora do ar",
+        "Se o sistema não está fora do ar, então o alerta não foi enviado",
+        "Se o alerta não foi enviado, então o sistema não está fora do ar",
+        "O sistema está fora do ar e o alerta foi enviado",
+        "Se o alerta não foi enviado, então o sistema está fora do ar"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. É a contrapositiva: inverteu a ordem E negou os dois lados — a única das quatro faces que equivale. A é a recíproca (o alerta pode ter sido enviado por um teste de rotina) e B é a inversa. Repare que recíproca e inversa são contrapositivas uma da outra, ou seja, equivalentes ENTRE SI: quando esse par aparece nas alternativas, pode descartar as duas de saída, porque duas alternativas equivalentes não podem ser ambas a resposta. A D troca a condicional por conjunção, afirmando que os dois fatos ocorreram. A E inverteu a ordem mas negou só um lado."
+    },
+    {
+      "type": "mc",
+      "tag": "Negação do “e” · De Morgan",
+      "text": "A negação da proposição “Ana estuda lógica e português” é",
+      "options": [
+        "Ana não estuda lógica e não estuda português",
+        "Ana não estuda lógica ou não estuda português",
+        "Ana estuda lógica ou português",
+        "Se Ana estuda lógica, então não estuda português",
+        "Ana não estuda lógica nem português"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. De Morgan (NENE): negou o “e”, virou “ou”, com as duas partes negadas. Para a original cair basta UMA das duas atividades não acontecer. A opção A é o erro clássico — exige que ela abandone as duas matérias, condição muito mais forte do que negar a frase; pelo teste da convivência, se Ana estuda lógica e não estuda português, a original é F e a A também é F, e duas falsas juntas nunca são negação uma da outra. A E diz o mesmo que a A (“nem” = “e não”). A C convive com a original. A D é p → ~q, que nem chega a negá-la."
+    },
+    {
+      "type": "mc",
+      "tag": "Negação do “ou” · De Morgan",
+      "text": "Considere a proposição “O edital será retificado ou o prazo será prorrogado”. Sua negação é",
+      "options": [
+        "O edital não será retificado ou o prazo não será prorrogado",
+        "O edital será retificado e o prazo não será prorrogado",
+        "O edital não será retificado e o prazo não será prorrogado",
+        "Se o edital não for retificado, o prazo será prorrogado",
+        "O edital será retificado ou o prazo não será prorrogado"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. De Morgan do “ou”: o conectivo vira “e” e as duas partes são negadas. Uma disjunção é um feixe de cordas — só cai quando TODAS as parcelas caem. A opção A aplicou a regra na direção errada (é o que se faz com o “e”). A D é ~p → q, que é EQUIVALENTE à original, não a negação — de novo o par equivalente/negação na mesma questão. B e E negam apenas uma das parcelas."
+    },
+    {
+      "type": "mc",
+      "tag": "Equivalência · dupla negação",
+      "text": "A proposição ~(p ∧ ~q) é logicamente equivalente a",
+      "options": [
+        "p ∧ q",
+        "~p ∧ q",
+        "p → q",
+        "q → p",
+        "p ∨ ~q"
+      ],
+      "answer": 2,
+      "exp": "Gabarito: C. Duas aplicações em sequência: ~(p ∧ ~q) = ~p ∨ ~(~q) por De Morgan, = ~p ∨ q pela dupla negação, = p → q pelo NEMA lido de volta. Conferindo por linha: p ∧ ~q só é V quando p = V e q = F, logo ~(p ∧ ~q) só é F nessa linha — exatamente a única linha em que p → q é falsa. Repare que p ∧ ~q é a negação da condicional, e aqui ele aparece negado: negar a negação devolve a original. A opção E é o distrator de quem esqueceu de negar o antecedente na volta."
+    },
+    {
+      "type": "mc",
+      "tag": "Negação do bicondicional",
+      "text": "A negação da proposição “A proposta é aprovada se e somente se o orçamento é suficiente” é",
+      "options": [
+        "Se a proposta é aprovada, então o orçamento é suficiente",
+        "A proposta é aprovada e o orçamento não é suficiente, ou o orçamento é suficiente e a proposta não é aprovada",
+        "A proposta não é aprovada se e somente se o orçamento não é suficiente",
+        "A proposta não é aprovada e o orçamento não é suficiente",
+        "Se o orçamento é suficiente, então a proposta é aprovada"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. Negar um bicondicional é afirmar que os dois lados DIFEREM — o ou-exclusivo, que escrito por extenso é (p ∧ ~q) ∨ (~p ∧ q). A opção C é o distrator principal: ~p ↔ ~q é EQUIVALENTE a p ↔ q, não a negação dela, porque “os dois falsos” continua sendo “os dois com o mesmo valor”; para negar é preciso negar só UM lado (p ↔ ~q também seria resposta correta). A e E são as duas metades da bicondicional original — cada uma é implicada por ela e nenhuma a nega. A D descreve um cenário que SATISFAZ a original."
+    },
+    {
+      "type": "mc",
+      "tag": "Exportação",
+      "text": "A proposição “Se o usuário está autenticado e possui permissão, então o acesso é liberado” é logicamente equivalente a",
+      "options": [
+        "Se o usuário está autenticado, então, se possui permissão, o acesso é liberado",
+        "Se o usuário está autenticado ou possui permissão, então o acesso é liberado",
+        "Se o acesso é liberado, então o usuário está autenticado e possui permissão",
+        "O usuário está autenticado e possui permissão e o acesso é liberado",
+        "Se o usuário não está autenticado, então o acesso não é liberado"
+      ],
+      "answer": 0,
+      "exp": "Gabarito: A. É a exportação: (p ∧ q) → r = p → (q → r). Duas condições exigidas juntas equivalem a uma condição dentro da outra — dois if aninhados em vez de um &&. A opção B trocou ∧ por ∨ no antecedente e enfraqueceu a exigência: passaria a liberar acesso para quem apenas está autenticado. A C é a recíproca, a E é a inversa e a D transformou a regra em afirmação de fato."
+    },
+    {
+      "type": "mc",
+      "tag": "Negação com antecedente negativo",
+      "text": "A negação da proposição “Se não houver greve, a prova será aplicada no domingo” é",
+      "options": [
+        "Houve greve e a prova não foi aplicada no domingo",
+        "Não houve greve e a prova não foi aplicada no domingo",
+        "Se houver greve, a prova não será aplicada no domingo",
+        "Houve greve ou a prova foi aplicada no domingo",
+        "Se não houver greve, a prova não será aplicada no domingo"
+      ],
+      "answer": 1,
+      "exp": "Gabarito: B. A regra manda manter o antecedente EXATAMENTE como está — e aqui ele já é negativo (“não houver greve”). Em símbolos, com g = “houve greve” e d = “prova no domingo”, a original é ~g → d e a negação é ~g ∧ ~d. A opção A é a que a maioria marca: negou o antecedente por reflexo, só porque ele já vinha com “não”. C e E continuam condicionais, e a negação de uma condicional nunca é condicional. A D não tem relação com a negação pedida."
+    }
+  ]
+}
