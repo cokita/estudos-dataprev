@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crase sem Medo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#eef0f3; --paper:#ffffff; --ink:#15171c; --muted:#5b606b; --line:#d9dce2;
+  --red:#e0283a; --red-soft:#fde8ea;
+  --green:#1b9a4b; --green-soft:#e6f6ec;
+  --blue:#1f66d1; --blue-soft:#e6effc;
+  --orange:#dd6a12; --orange-soft:#fdf0e4;
+  --purple:#7a3cc4; --purple-soft:#f1e9fb;
+  --pink:#d6307a; --shadow:0 2px 0 rgba(20,22,28,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --pink:#ff6aa8; --shadow:none;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --pink:#ff6aa8; --shadow:none;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 "Nunito",system-ui,sans-serif;padding-inline:16px;padding-block:28px 60px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header.intro{text-align:center;display:flex;flex-direction:column;gap:6px}
+header.intro h1{font:700 clamp(28px,5vw,42px)/1.05 "Oswald",sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0;text-wrap:balance}
+header.intro p{margin:0 auto;color:var(--muted);max-width:60ch}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+.legend span{font:600 13px "Oswald",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;color:#fff}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.9em}
+
+/* map card */
+.map{background:var(--paper);border-radius:14px;padding:22px clamp(14px,3vw,28px) 26px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow)}
+.banner{align-self:center;border:4px solid var(--red);border-radius:10px;padding:6px 18px;position:relative;text-align:center;max-width:100%}
+.banner::after{content:"";position:absolute;left:50%;bottom:-13px;transform:translateX(-50%);border:9px solid transparent;border-top-color:var(--red);border-bottom:0}
+.banner h2{margin:0;font:700 clamp(20px,3.6vw,30px)/1.1 "Oswald",sans-serif;text-transform:uppercase;text-wrap:balance}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;margin-top:6px}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;align-items:center;gap:10px}
+.big{width:100%;border:3px solid var(--c);border-radius:14px;padding:6px;background:var(--c)}
+.big div{background:var(--paper);border-radius:9px;text-align:center;padding:12px 8px;font:700 clamp(26px,5vw,40px)/1.05 "Oswald",sans-serif;text-transform:uppercase}
+.big small{display:block;font:500 15px "JetBrains Mono",monospace;color:var(--muted);text-transform:none;margin-top:6px}
+.arrow{width:28px;height:34px;color:var(--c)}
+.pill{border:3px solid var(--red);border-radius:8px;padding:3px 16px;font:700 17px "Oswald",sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.pill.eq{border-color:var(--ink)}
+.result{width:100%;border:2px solid var(--c);border-radius:12px;overflow:hidden;background:var(--paper)}
+.result .head{background:var(--soft);padding:10px 12px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.result .head b{color:var(--c);font-weight:800}
+.result .head .f{font:500 14px "JetBrains Mono",monospace;color:var(--muted)}
+.result .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:10px;text-align:center}
+.lbl{font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ex{margin:0}
+.k{color:var(--c);font-weight:800}
+.no{color:var(--red);font-weight:800}
+.tip{border-top:1px dashed var(--line);padding-top:10px;font-size:14.5px;color:var(--muted)}
+.tip strong{color:var(--ink)}
+.rule{align-self:center;background:var(--soft,var(--red-soft));border-radius:10px;padding:10px 16px;text-align:center;max-width:60ch;font-weight:700}
+.trap{border:2px dashed var(--red);border-radius:12px;padding:12px 14px;background:var(--red-soft);display:flex;flex-direction:column;gap:6px}
+.trap .lbl{color:var(--red)}
+.trap p{margin:0}
+.x{color:var(--red);font-weight:800}
+.ok{color:var(--green);font-weight:800}
+
+.c-green{--c:var(--green);--soft:var(--green-soft)}
+.c-blue{--c:var(--blue);--soft:var(--blue-soft)}
+.c-orange{--c:var(--orange);--soft:var(--orange-soft)}
+.c-purple{--c:var(--purple);--soft:var(--purple-soft)}
+.c-red{--c:var(--red);--soft:var(--red-soft)}
+.single{max-width:420px;width:100%;margin:0 auto}
+
+/* summary table */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:800}
+tr.grp td{background:var(--bg);font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+footer{text-align:center;color:var(--muted);font-size:14px}
+</style>
+
+<style>
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 20px;margin-top:6px}
+@media (max-width:760px){.trio{grid-template-columns:1fr}}
+.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;text-align:left}
+.list li{padding-left:18px;position:relative}
+.list li::before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--c)}
+.eqn{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 14px;font:700 clamp(22px,4.2vw,34px)/1 "Oswald",sans-serif}
+.eqn .t{border:3px solid var(--c);border-radius:10px;padding:8px 14px;display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--soft)}
+.eqn .t small{font:600 12px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.eqn .op{color:var(--muted)}
+.c-ink{--c:var(--ink);--soft:var(--bg)}
+</style>
+<style>
+body{margin:0}
+.back{max-width:980px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.back a{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line);border-radius:9px;padding:6px 12px;background:var(--paper)}
+.back a:hover{color:var(--ink)}
+.back a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+<nav class="back"><a href="/#/m/crase">← Voltar para Crase</a><a href="/#/">Estudos DataPrev</a></nav>
+<div class="wrap">
+
+<header class="intro">
+  <h1>Crase sem medo</h1>
+  <p>Mapas no mesmo formato dos de lógica. Uma cor por situação: <b style="color:var(--green)">verde</b> quando a crase é obrigatória, <b style="color:var(--red)">vermelho</b> quando é proibida, <b style="color:var(--blue)">azul</b> quando é opcional e <b style="color:var(--purple)">roxo</b> para as palavras que mudam de acordo com o contexto.</p>
+  <div class="legend">
+    <span style="background:var(--green)">Sempre</span>
+    <span style="background:var(--red)">Nunca</span>
+    <span style="background:var(--blue)">Tanto faz</span>
+    <span style="background:var(--purple)">Depende</span>
+  </div>
+</header>
+
+<!-- MAPA 1 -->
+<section class="map">
+  <div class="banner"><h2>O que é a crase</h2></div>
+  <div class="eqn" style="margin-top:8px">
+    <div class="t c-orange">a<small>preposição</small></div>
+    <span class="op">+</span>
+    <div class="t c-purple">a<small>artigo feminino</small></div>
+    <span class="op">=</span>
+    <div class="t c-green">à<small>crase</small></div>
+  </div>
+  <p style="margin:0 auto;max-width:62ch;text-align:center;color:var(--muted)">Crase não é um acento. É o nome da <b style="color:var(--ink)">fusão de dois “a”</b> numa só letra. O acento grave (`) só marca que a fusão aconteceu.</p>
+  <div class="pair">
+    <div class="col c-orange">
+      <div class="big"><div>Quem pede o “a”?<small>a palavra que vem antes</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Preposição</div>
+      <div class="result">
+        <div class="head"><span>Verbo ou nome que <b>exige “a”</b></span><span class="f">quem vai, vai A algum lugar</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><b>ir a</b>, chegar a, voltar a</li>
+            <li><b>referir-se a</b>, obedecer a, assistir a (ver)</li>
+            <li><b>obediência a</b>, favorável a, contrário a</li>
+          </ul>
+          <div class="tip">Se a palavra de antes <strong>não pede</strong> “a”, não tem crase. <em>“Conheço a cidade”</em>: quem conhece, conhece algo, sem preposição.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>Quem aceita o “a”?<small>a palavra que vem depois</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Artigo</div>
+      <div class="result">
+        <div class="head"><span>Palavra <b>feminina</b> que aceita “a”</span><span class="f">a casa · a prova · a Bahia</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>substantivo feminino: <b>a</b> reunião</li>
+            <li>lugar que usa artigo: <b>a</b> Bahia, <b>a</b> França</li>
+          </ul>
+          <div class="tip">Palavra masculina, verbo e a maioria dos pronomes <strong>não aceitam</strong> o artigo “a”. Por isso não levam crase.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rule" style="background:var(--green-soft)">Regra-mãe: só tem crase quando <u>a palavra de antes pede</u> “a” <b>e</b> <u>a palavra de depois aceita</u> “a”. Faltou um dos dois, não tem crase.</div>
+</section>
+
+<!-- MAPA 2 -->
+<section class="map">
+  <div class="banner"><h2>Os dois testes que resolvem quase tudo</h2></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Troca pelo masculino<small>palavras comuns</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Se virar “AO”</div>
+      <div class="result">
+        <div class="head"><span><b>AO</b> → tem crase</span><span class="f">a / o → não tem</span></div>
+        <div class="body">
+          <p class="ex">Fui <span class="k">à</span> reunião → Fui <span class="k">ao</span> encontro. <span class="ok">✓ crase</span></p>
+          <p class="ex">Conheço <span class="no">a</span> diretora → Conheço <span class="no">o</span> diretor. <span class="x">✗ sem crase</span></p>
+          <div class="tip">Troque só a palavra feminina por uma masculina parecida. O resto da frase fica igual.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>Vou a · Volto da<small>nomes de lugar</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Se voltar “DA”</div>
+      <div class="result">
+        <div class="head"><span>Volto <b>DA</b> → tem crase</span><span class="f">volto DE → não tem</span></div>
+        <div class="body">
+          <p class="ex">Volto <span class="k">da</span> Bahia → Vou <span class="k">à</span> Bahia. <span class="ok">✓</span></p>
+          <p class="ex">Volto <span class="no">de</span> Recife → Vou <span class="no">a</span> Recife. <span class="x">✗</span></p>
+          <div class="tip">Rima para decorar: <strong>“Se volto da, crase há. Se volto de, crase pra quê?”</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Cuidado</span>
+    <p>Cidade com característica leva crase: <em>“Vou <b>à</b> Recife antiga”</em> (volto <b>da</b> Recife antiga). O adjetivo faz o lugar aceitar artigo.</p>
+  </div>
+</section>
+
+<!-- MAPA 3 -->
+<section class="map">
+  <div class="banner"><h2>Crase obrigatória</h2></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Horas exatas</b></span><span class="f">às 14h · à uma hora</span></div>
+        <div class="body">
+          <p class="ex">A prova começa <span class="k">às</span> 13h.</p>
+          <div class="tip">Teste: <em>“ao meio-dia”</em> pede “ao”, então <em>“às 13h”</em> leva crase. Com <em>desde, para, após</em> não tem: <em>desde as 8h</em>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Locuções femininas</b></span><span class="f">expressões fixas com palavra feminina</span></div>
+        <div class="body">
+          <p class="ex"><span class="k">às</span> vezes · <span class="k">à</span> noite · <span class="k">às</span> pressas · <span class="k">à</span> vontade · <span class="k">à</span> medida que · <span class="k">à</span> procura de · <span class="k">à</span> custa de</p>
+          <div class="tip">São expressões que funcionam como uma palavra só (indicam tempo, modo, lugar).</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>“À moda de”</b> escondido</span><span class="f">vale até antes de masculino</span></div>
+        <div class="body">
+          <p class="ex">Bife <span class="k">à</span> milanesa · gol <span class="k">à</span> Pelé · sapato <span class="k">à</span> Luís XV</p>
+          <div class="tip">Dá para ler “à moda de/à maneira de”. É a única vez que aparece crase antes de palavra masculina.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Aquele · aquela · aquilo</b></span><span class="f">a + aquele = àquele</span></div>
+        <div class="body">
+          <p class="ex">Refiro-me <span class="k">àquele</span> edital. Assisti <span class="k">àquilo</span>.</p>
+          <div class="tip">Só quando a palavra de antes pede “a”. <em>“Vi aquele edital”</em>: quem vê, vê algo, sem crase.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rule" style="background:var(--green-soft)">Também: <em>“a lei <b>à qual</b> me referi”</em>. Teste com masculino: <em>“o decreto <b>ao qual</b> me referi”</em>.</div>
+</section>
+
+<!-- MAPA 4 -->
+<section class="map">
+  <div class="banner"><h2>Crase proibida</h2></div>
+  <div class="pair">
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Antes de masculino</b></span><span class="f">não aceita artigo “a”</span></div>
+        <div class="body">
+          <p class="ex">Andar <span class="no">a</span> cavalo · pagar <span class="no">a</span> prazo · fui <span class="no">a</span> pé</p>
+          <div class="tip">Exceção: “à moda de” escondido (bife à milanesa).</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Antes de verbo</b></span><span class="f">verbo nunca tem artigo</span></div>
+        <div class="body">
+          <p class="ex"><span class="no">a</span> partir de hoje · começou <span class="no">a</span> chover · está disposta <span class="no">a</span> estudar</p>
+          <div class="tip">“A partir de” é o erro mais cobrado dessa lista.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Antes da maioria dos pronomes</b></span><span class="f">ela, você, alguém, esta, Vossa Senhoria</span></div>
+        <div class="body">
+          <p class="ex">Entreguei <span class="no">a</span> ela · <span class="no">a</span> alguém · <span class="no">a</span> esta banca · <span class="no">a</span> Vossa Excelência</p>
+          <div class="tip">Exceções que aceitam: <strong>senhora, senhorita, dona</strong> (<em>à senhora</em>) e os de “aquele”, “qual” e possessivos.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>“a” sozinho + plural</b></span><span class="f">o “a” não concorda: é só preposição</span></div>
+        <div class="body">
+          <p class="ex">Falou <span class="no">a</span> pessoas estranhas · Não dou ouvidos <span class="no">a</span> fofocas</p>
+          <div class="tip">Se fosse artigo, seria “as”. Com “às” no plural, aí sim: <em>falou <span class="k">às</span> pessoas</em>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Palavras repetidas</b></span><span class="f">cara a cara</span></div>
+        <div class="body">
+          <p class="ex">Frente <span class="no">a</span> frente · gota <span class="no">a</span> gota · ponta <span class="no">a</span> ponta</p>
+          <div class="tip">Entre palavras iguais o “a” é só preposição.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Depois de outra preposição</b></span><span class="f">perante, após, desde, para, com, entre</span></div>
+        <div class="body">
+          <p class="ex">Compareceu <span class="no">perante a</span> banca · <span class="no">após a</span> prova</p>
+          <div class="tip">Já tem preposição, não cabe outra. Exceção: <strong>até</strong> (ver mapa seguinte). Também não há crase antes de “uma” artigo: <em>fui a uma festa</em>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA 5 -->
+<section class="map">
+  <div class="banner"><h2>Crase facultativa (tanto faz)</h2></div>
+  <div class="trio">
+    <div class="col c-blue">
+      <div class="big"><div>Possessivo<small>minha, sua, nossa…</small></div></div>
+      <div class="result">
+        <div class="head"><span><b>à</b> minha = <b>a</b> minha</span><span class="f">só no singular</span></div>
+        <div class="body">
+          <p class="ex">Obedeço <span class="k">à</span> minha mãe. / Obedeço <span class="k">a</span> minha mãe.</p>
+          <div class="tip">No plural a regra volta ao normal: <em>às minhas irmãs</em> (com “as”) ou <em>a minhas irmãs</em>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>Nome de mulher<small>nome próprio de pessoa</small></div></div>
+      <div class="result">
+        <div class="head"><span><b>à</b> Maria = <b>a</b> Maria</span><span class="f">depende de usar artigo</span></div>
+        <div class="body">
+          <p class="ex">Entreguei o livro <span class="k">à</span> Carla. / … <span class="k">a</span> Carla.</p>
+          <div class="tip">Com personalidade histórica não há artigo, então não há crase: <em>refiro-me a Cecília Meireles</em>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>Depois de “até”<small>até a / até à</small></div></div>
+      <div class="result">
+        <div class="head"><span><b>até à</b> = <b>até a</b></span><span class="f">se a palavra aceitar artigo</span></div>
+        <div class="body">
+          <p class="ex">Caminhei até <span class="k">à</span> praia. / Caminhei até <span class="k">a</span> praia.</p>
+          <div class="tip">Única preposição que admite crase depois dela. <em>Até as 18h</em> ou <em>até às 18h</em>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Na prova</span>
+    <p>Em caso facultativo, a banca costuma perguntar se a retirada ou a inclusão do acento <b>mantém a correção</b>. A resposta é sim.</p>
+  </div>
+</section>
+
+<!-- MAPA 6 -->
+<section class="map">
+  <div class="banner"><h2>Casa · Terra · Distância</h2></div>
+  <p style="margin:0 auto;max-width:62ch;text-align:center;color:var(--muted)">Três palavras que só levam crase quando vêm <b style="color:var(--ink)">especificadas</b> (com uma informação a mais). Sozinhas, não.</p>
+  <div class="trio">
+    <div class="col c-purple">
+      <div class="big"><div>Casa<small>= o próprio lar</small></div></div>
+      <div class="result">
+        <div class="head"><span><span class="x">sem</span> sozinha · <span class="ok">com</span> especificada</span></div>
+        <div class="body">
+          <p class="ex">Voltei <span class="no">a</span> casa cedo.</p>
+          <p class="ex">Voltei <span class="k">à</span> casa <b>dos meus pais</b>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>Terra<small>= chão firme</small></div></div>
+      <div class="result">
+        <div class="head"><span><span class="x">sem</span> sozinha · <span class="ok">com</span> especificada</span></div>
+        <div class="body">
+          <p class="ex">Os marinheiros desceram <span class="no">a</span> terra.</p>
+          <p class="ex">Voltou <span class="k">à</span> terra <b>natal</b>. Voltou <span class="k">à</span> Terra (planeta).</p>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>Distância<small>sem medida</small></div></div>
+      <div class="result">
+        <div class="head"><span><span class="x">sem</span> sozinha · <span class="ok">com</span> medida</span></div>
+        <div class="body">
+          <p class="ex">Ensino <span class="no">a</span> distância.</p>
+          <p class="ex">Ficou <span class="k">à</span> distância <b>de 50 metros</b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Resumo do mapa</span>
+    <p>Pergunte: a palavra veio com um “complemento” (dos meus pais, natal, de 50 metros)? <b>Sim → à</b>. <b>Não → a</b>.</p>
+  </div>
+</section>
+
+<!-- RESUMO -->
+<section class="map">
+  <div class="banner"><h2>Cola rápida</h2></div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Situação</th><th>Crase?</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="3">Testes</td></tr>
+        <tr><td>Troca pelo masculino vira “ao”</td><td class="ok">Sim</td><td>Fui à reunião (ao encontro)</td></tr>
+        <tr><td>Volto “da” lugar</td><td class="ok">Sim</td><td>Vou à Bahia</td></tr>
+        <tr><td>Volto “de” lugar</td><td class="x">Não</td><td>Vou a Recife</td></tr>
+        <tr class="grp"><td colspan="3">Sempre</td></tr>
+        <tr><td style="color:var(--green)">Hora exata</td><td class="ok">Sim</td><td>às 14h · à uma hora</td></tr>
+        <tr><td style="color:var(--green)">Locução feminina</td><td class="ok">Sim</td><td>às vezes · à noite · à medida que</td></tr>
+        <tr><td style="color:var(--green)">“À moda de”</td><td class="ok">Sim</td><td>bife à milanesa</td></tr>
+        <tr><td style="color:var(--green)">a + aquele / a qual</td><td class="ok">Sim</td><td>refiro-me àquele · à qual</td></tr>
+        <tr class="grp"><td colspan="3">Nunca</td></tr>
+        <tr><td style="color:var(--red)">Masculino · verbo</td><td class="x">Não</td><td>a pé · a partir de</td></tr>
+        <tr><td style="color:var(--red)">Pronomes (ela, você, esta, V. Sa.)</td><td class="x">Não</td><td>a ela · a Vossa Senhoria</td></tr>
+        <tr><td style="color:var(--red)">“a” + plural</td><td class="x">Não</td><td>a pessoas</td></tr>
+        <tr><td style="color:var(--red)">Palavras repetidas</td><td class="x">Não</td><td>cara a cara</td></tr>
+        <tr><td style="color:var(--red)">Depois de preposição (menos “até”)</td><td class="x">Não</td><td>perante a banca</td></tr>
+        <tr class="grp"><td colspan="3">Tanto faz</td></tr>
+        <tr><td style="color:var(--blue)">Possessivo feminino singular</td><td>Opcional</td><td>à/a minha mãe</td></tr>
+        <tr><td style="color:var(--blue)">Nome de mulher</td><td>Opcional</td><td>à/a Carla</td></tr>
+        <tr><td style="color:var(--blue)">Depois de “até”</td><td>Opcional</td><td>até à/a praia</td></tr>
+        <tr class="grp"><td colspan="3">Depende</td></tr>
+        <tr><td style="color:var(--purple)">Casa · terra · distância</td><td>Só especificada</td><td>a casa · à casa dos pais</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>Concurso DATAPREV 2026 · Língua Portuguesa · Crase.</footer>
+</div>
+
+</body>
+</html>

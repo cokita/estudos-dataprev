@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapas de Equivalência e Negação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#eef0f3; --paper:#ffffff; --ink:#15171c; --muted:#5b606b; --line:#d9dce2;
+  --red:#e0283a; --red-soft:#fde8ea;
+  --green:#1b9a4b; --green-soft:#e6f6ec;
+  --blue:#1f66d1; --blue-soft:#e6effc;
+  --orange:#dd6a12; --orange-soft:#fdf0e4;
+  --purple:#7a3cc4; --purple-soft:#f1e9fb;
+  --pink:#d6307a; --shadow:0 2px 0 rgba(20,22,28,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --pink:#ff6aa8; --shadow:none;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --pink:#ff6aa8; --shadow:none;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 "Nunito",system-ui,sans-serif;padding-inline:16px;padding-block:28px 60px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header.intro{text-align:center;display:flex;flex-direction:column;gap:6px}
+header.intro h1{font:700 clamp(28px,5vw,42px)/1.05 "Oswald",sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0;text-wrap:balance}
+header.intro p{margin:0 auto;color:var(--muted);max-width:60ch}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+.legend span{font:600 13px "Oswald",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;color:#fff}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.9em}
+
+/* map card */
+.map{background:var(--paper);border-radius:14px;padding:22px clamp(14px,3vw,28px) 26px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow)}
+.banner{align-self:center;border:4px solid var(--red);border-radius:10px;padding:6px 18px;position:relative;text-align:center;max-width:100%}
+.banner::after{content:"";position:absolute;left:50%;bottom:-13px;transform:translateX(-50%);border:9px solid transparent;border-top-color:var(--red);border-bottom:0}
+.banner h2{margin:0;font:700 clamp(20px,3.6vw,30px)/1.1 "Oswald",sans-serif;text-transform:uppercase;text-wrap:balance}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;margin-top:6px}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;align-items:center;gap:10px}
+.big{width:100%;border:3px solid var(--c);border-radius:14px;padding:6px;background:var(--c)}
+.big div{background:var(--paper);border-radius:9px;text-align:center;padding:12px 8px;font:700 clamp(26px,5vw,40px)/1.05 "Oswald",sans-serif;text-transform:uppercase}
+.big small{display:block;font:500 15px "JetBrains Mono",monospace;color:var(--muted);text-transform:none;margin-top:6px}
+.arrow{width:28px;height:34px;color:var(--c)}
+.pill{border:3px solid var(--red);border-radius:8px;padding:3px 16px;font:700 17px "Oswald",sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.pill.eq{border-color:var(--ink)}
+.result{width:100%;border:2px solid var(--c);border-radius:12px;overflow:hidden;background:var(--paper)}
+.result .head{background:var(--soft);padding:10px 12px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.result .head b{color:var(--c);font-weight:800}
+.result .head .f{font:500 14px "JetBrains Mono",monospace;color:var(--muted)}
+.result .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:10px;text-align:center}
+.lbl{font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ex{margin:0}
+.k{color:var(--c);font-weight:800}
+.no{color:var(--red);font-weight:800}
+.tip{border-top:1px dashed var(--line);padding-top:10px;font-size:14.5px;color:var(--muted)}
+.tip strong{color:var(--ink)}
+.rule{align-self:center;background:var(--soft,var(--red-soft));border-radius:10px;padding:10px 16px;text-align:center;max-width:60ch;font-weight:700}
+.trap{border:2px dashed var(--red);border-radius:12px;padding:12px 14px;background:var(--red-soft);display:flex;flex-direction:column;gap:6px}
+.trap .lbl{color:var(--red)}
+.trap p{margin:0}
+.x{color:var(--red);font-weight:800}
+.ok{color:var(--green);font-weight:800}
+
+.c-green{--c:var(--green);--soft:var(--green-soft)}
+.c-blue{--c:var(--blue);--soft:var(--blue-soft)}
+.c-orange{--c:var(--orange);--soft:var(--orange-soft)}
+.c-purple{--c:var(--purple);--soft:var(--purple-soft)}
+.c-red{--c:var(--red);--soft:var(--red-soft)}
+.single{max-width:420px;width:100%;margin:0 auto}
+
+/* summary table */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:800}
+tr.grp td{background:var(--bg);font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+footer{text-align:center;color:var(--muted);font-size:14px}
+</style>
+<style>
+body{margin:0}
+.back{max-width:980px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.back a{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line);border-radius:9px;padding:6px 12px;background:var(--paper)}
+.back a:hover{color:var(--ink)}
+.back a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+<nav class="back"><a href="/#/m/logica-sentencial">← Voltar para Lógica Sentencial</a><a href="/#/">Estudos DataPrev</a></nav>
+<div class="wrap">
+
+<header class="intro">
+  <h1>Negação e equivalência lógica</h1>
+  <p>Mapas no mesmo formato do de quantificadores. Uma cor por conectivo, para a memória visual ajudar na hora da prova.</p>
+  <div class="legend">
+    <span style="background:var(--green)">E</span>
+    <span style="background:var(--blue)">OU</span>
+    <span style="background:var(--orange)">Se… então</span>
+    <span style="background:var(--purple)">Se e somente se</span>
+  </div>
+</header>
+
+<!-- MAPA 1 -->
+<section class="map">
+  <div class="banner"><h2>Negação de “E” e “OU” <span style="color:var(--muted);font-weight:500">(De Morgan)</span></h2></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>… E …<small>p ∧ q</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill">Negação</div>
+      <div class="result">
+        <div class="head"><span><b>NÃO</b> … <b>OU NÃO</b> …</span><span class="f">~p ∨ ~q</span></div>
+        <div class="body">
+          <span class="lbl">Exemplo</span>
+          <p class="ex">Ana estuda lógica <span class="k">e</span> português.</p>
+          <p class="ex">Ana <span class="no">não</span> estuda lógica <span class="k">ou</span> <span class="no">não</span> estuda português.</p>
+          <div class="tip"><strong>“E” é corrente:</strong> arrebenta num elo só. Basta uma parte falhar.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>… OU …<small>p ∨ q</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill">Negação</div>
+      <div class="result">
+        <div class="head"><span><b>NÃO</b> … <b>E NÃO</b> …</span><span class="f">~p ∧ ~q &nbsp;·&nbsp; “nem… nem…”</span></div>
+        <div class="body">
+          <span class="lbl">Exemplo</span>
+          <p class="ex">O edital é retificado <span class="k">ou</span> o prazo é prorrogado.</p>
+          <p class="ex">O edital <span class="no">não</span> é retificado <span class="k">e</span> o prazo <span class="no">não</span> é prorrogado.</p>
+          <div class="tip"><strong>“Ou” é feixe de cordas:</strong> só cai cortando todas. As duas partes têm de falhar.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rule c-red">Regra única: nega as duas partes <u>e</u> troca o conectivo (E ↔ OU).</div>
+</section>
+
+<!-- MAPA 2 -->
+<section class="map">
+  <div class="banner"><h2>Negação de “Se… então” e “Se e somente se”</h2></div>
+  <div class="pair">
+    <div class="col c-orange">
+      <div class="big"><div>Se …, então …<small>p → q</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill">Negação</div>
+      <div class="result">
+        <div class="head"><span>… <b>E NÃO</b> …</span><span class="f">p ∧ ~q</span></div>
+        <div class="body">
+          <span class="lbl">Mantém a 1ª · nega a 2ª · liga com “e”</span>
+          <p class="ex"><span class="k">Se</span> o candidato falta, é eliminado.</p>
+          <p class="ex">O candidato falta <span class="k">e</span> <span class="no">não</span> é eliminado.</p>
+          <div class="tip"><strong>Nunca começa com “se”.</strong> E se a 1ª parte já tem “não”, ela continua com “não”: <em>“Se não houver greve, há prova”</em> → <em>“Não houve greve e não houve prova.”</em></div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>… se e somente se …<small>p ↔ q</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill">Negação</div>
+      <div class="result">
+        <div class="head"><span><b>OU</b> … <b>OU</b> …, <b>MAS NÃO AMBOS</b></span><span class="f">p ⊻ q &nbsp;≡&nbsp; p ↔ ~q</span></div>
+        <div class="body">
+          <span class="lbl">Exemplo</span>
+          <p class="ex">Viajo <span class="k">se e somente se</span> tiro férias.</p>
+          <p class="ex"><span class="k">Ou</span> viajo <span class="k">ou</span> tiro férias, mas não ambos.</p>
+          <p class="ex">Viajo <span class="k">se e somente se</span> <span class="no">não</span> tiro férias.</p>
+          <div class="tip"><strong>Nega só UM lado.</strong> Negar os dois (~p ↔ ~q) dá uma frase <em>equivalente</em>, não a negação.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA 3 -->
+<section class="map">
+  <div class="banner"><h2>Equivalências de “Se… então”</h2></div>
+  <div class="col c-orange single">
+    <div class="big"><div>Se p, então q<small>Se chove, a rua molha.</small></div></div>
+  </div>
+  <div class="pair">
+    <div class="col c-orange">
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Equivale a</div>
+      <div class="result">
+        <div class="head"><span><b>SE NÃO</b> q, <b>ENTÃO NÃO</b> p</span><span class="f">~q → ~p · contrapositiva</span></div>
+        <div class="body">
+          <span class="lbl">Inverte a ordem E nega os dois</span>
+          <p class="ex"><span class="k">Se</span> a rua <span class="no">não</span> molha, <span class="no">não</span> choveu.</p>
+          <div class="tip">Faça as <strong>duas</strong> operações. Só uma delas dá frase errada (veja abaixo).</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Equivale a</div>
+      <div class="result">
+        <div class="head"><span><b>NÃO</b> p <b>OU</b> q</span><span class="f">~p ∨ q</span></div>
+        <div class="body">
+          <span class="lbl">Nega a 1ª · troca “se” por “ou”</span>
+          <p class="ex"><span class="no">Não</span> chove <span class="k">ou</span> a rua molha.</p>
+          <div class="tip">Procurou um “se” e só achou “ou”? Confira: <strong>1ª negada, 2ª mantida.</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Não equivalem (armadilhas da FGV)</span>
+    <p><span class="x">✗ Recíproca</span> · só inverteu: <em>“Se a rua molha, choveu.”</em> <span class="mono">q → p</span></p>
+    <p><span class="x">✗ Inversa</span> · só negou: <em>“Se não chove, a rua não molha.”</em> <span class="mono">~p → ~q</span></p>
+    <p style="color:var(--muted);font-size:14.5px">Pode ter passado o caminhão-pipa: a rua molha sem chuva. Se as duas aparecem juntas nas alternativas, descarte as duas.</p>
+  </div>
+</section>
+
+<!-- MAPA 4 -->
+<section class="map">
+  <div class="banner"><h2>Equivalente × Negação: a mesma frase</h2></div>
+  <div class="col c-orange single">
+    <div class="big"><div>Se chove, a rua molha<small>p → q</small></div></div>
+  </div>
+  <div class="pair">
+    <div class="col c-green">
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Equivalente</div>
+      <div class="result">
+        <div class="head"><span><b>Diz a mesma coisa</b></span><span class="f">~p ∨ q &nbsp;·&nbsp; ~q → ~p</span></div>
+        <div class="body">
+          <p class="ex"><span class="no">Não</span> chove <span class="k">ou</span> a rua molha.</p>
+          <p class="ex"><span class="k">Se</span> a rua não molha, não choveu.</p>
+          <div class="tip">Mesma tabela-verdade, linha por linha.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill">Negação</div>
+      <div class="result">
+        <div class="head"><span><b>Diz o contrário exato</b></span><span class="f">p ∧ ~q</span></div>
+        <div class="body">
+          <p class="ex">Chove <span class="k">e</span> a rua <span class="no">não</span> molha.</p>
+          <div class="tip">Tabela invertida: quando uma é V, a outra é F.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Antes de olhar as alternativas</span>
+    <p>1. Circule no enunciado: pediu <strong>equivalente</strong> ou <strong>negação</strong>? A banca usa as mesmas alternativas nas duas perguntas.</p>
+    <p>2. <strong>Teste da convivência:</strong> se as duas frases podem ser verdadeiras ao mesmo tempo, uma <em>não</em> é a negação da outra.</p>
+  </div>
+</section>
+
+<!-- MAPA 5 -->
+<section class="map">
+  <div class="banner"><h2>Outras equivalências que caem</h2></div>
+  <div class="pair">
+    <div class="col c-blue">
+      <div class="big"><div>… OU …<small>p ∨ q</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Equivale a</div>
+      <div class="result">
+        <div class="head"><span><b>SE NÃO</b> …, <b>ENTÃO</b> …</span><span class="f">~p → q</span></div>
+        <div class="body">
+          <p class="ex">Estudo <span class="k">ou</span> reprovo.</p>
+          <p class="ex"><span class="k">Se</span> <span class="no">não</span> estudo, reprovo.</p>
+          <div class="tip">Se um lado falha, o outro tem que valer.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>… se e somente se …<small>p ↔ q</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Equivale a</div>
+      <div class="result">
+        <div class="head"><span><b>SE</b> p <b>ENTÃO</b> q, <b>E SE</b> q <b>ENTÃO</b> p</span><span class="f">(p → q) ∧ (q → p) &nbsp;·&nbsp; ~p ↔ ~q</span></div>
+        <div class="body">
+          <p class="ex">Viajo <span class="k">se e somente se</span> tiro férias.</p>
+          <p class="ex"><span class="no">Não</span> viajo <span class="k">se e somente se</span> <span class="no">não</span> tiro férias.</p>
+          <div class="tip">É uma condicional de mão dupla. Negar <strong>os dois</strong> lados mantém a frase.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rule c-orange" style="background:var(--orange-soft)">Exportação: <em>“Se autenticado <span class="k">e</span> com permissão, acessa”</em> ≡ <em>“Se autenticado, então: se tem permissão, acessa.”</em> <span class="mono" style="color:var(--muted)">(p ∧ q) → r ≡ p → (q → r)</span></div>
+</section>
+
+<!-- RESUMO -->
+<section class="map">
+  <div class="banner"><h2>Cola rápida</h2></div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Frase</th><th>Negação</th><th>Equivalente</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="3">Conectivos</td></tr>
+        <tr><td style="color:var(--green)">p e q</td><td>não p <b>ou</b> não q</td><td>q e p</td></tr>
+        <tr><td style="color:var(--blue)">p ou q</td><td>não p <b>e</b> não q</td><td>se não p, então q</td></tr>
+        <tr><td style="color:var(--orange)">se p, então q</td><td>p <b>e</b> não q</td><td>se não q, então não p · não p ou q</td></tr>
+        <tr><td style="color:var(--purple)">p se e somente se q</td><td>ou p ou q, mas não ambos · p sse não q</td><td>não p sse não q</td></tr>
+        <tr><td>não (não p)</td><td>não p</td><td>p</td></tr>
+        <tr class="grp"><td colspan="3">Quantificadores (do seu mapa)</td></tr>
+        <tr><td>Todo A é B</td><td>Algum A <b>não</b> é B</td><td>Nenhum A é não-B</td></tr>
+        <tr><td>Nenhum A é B</td><td>Algum A é B</td><td>Todo A é não-B</td></tr>
+        <tr><td>Algum A é B</td><td>Nenhum A é B</td><td>Algum B é A</td></tr>
+        <tr><td>Algum A não é B</td><td>Todo A é B</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>Concurso DATAPREV 2026 · Raciocínio Lógico · resume a aula “Equivalências e negações”.</footer>
+</div>
+
+</body>
+</html>

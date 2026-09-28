@@ -5,6 +5,10 @@
   "descricao": "A base do Raciocínio Lógico da FGV: o que é proposição, os conectivos, tabela-verdade e o “se… então” por inteiro — disfarces, contrapositiva, negação e as duas armadilhas clássicas. Inclui as equivalências e negações cobradas em prova: De Morgan, forma disjuntiva, bicondicional e ou-exclusivo, exportação.",
   "resumo": [
     {
+      "titulo": "Mapa mental — revisão visual",
+      "html": "<a class=\"mapa-link\" href=\"/mapas/logica.html\"><span class=\"mapa-link-ic\"><i class=\"ti ti-sitemap\"></i></span><span class=\"mapa-link-body\"><b>Abrir os mapas mentais</b><span>6 mapas coloridos: negação do E e do OU (De Morgan), negação do se…então e do se e somente se, equivalências da condicional, equivalente × negação e a cola rápida.</span></span><i class=\"ti ti-arrow-right mapa-link-go\"></i></a><p>Use os mapas para revisar depois de ler a teoria abaixo, e na véspera da prova.</p>"
+    },
+    {
       "titulo": "De onde veio: lógica é julgar frases, não fazer contas",
       "html": "\n<p>Por volta do <b>século IV a.C.</b>, <b>Aristóteles</b> percebeu algo que mudou tudo: certos raciocínios são corretos por causa da <b>forma</b>, não do assunto. “Todo A é B; C é A; logo C é B” funciona com qualquer A, B e C — sejam gregos, cachorros ou servidores da DataPrev.</p>\n<p>Em <b>1847</b>, <b>George Boole</b> traduziu essa ideia para álgebra: cada frase vira uma variável que só pode valer <b>1 (verdadeiro)</b> ou <b>0 (falso)</b>. É literalmente a base do <code>if</code> e do circuito digital.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-code\"></i> Vantagem de quem programa: você já faz isso todo dia em <code>if (a &amp;&amp; !b)</code>. Raciocínio lógico de concurso é a mesma máquina, com as frases escritas em português.</div>\n"
     },
