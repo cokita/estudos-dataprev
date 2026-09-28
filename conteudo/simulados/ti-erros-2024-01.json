@@ -1,0 +1,107 @@
+{
+  "id": "ti-erros-2024-01",
+  "materiaId": "ti-erros-2024",
+  "nome": "Refazer: as 7 questões originais da FGV 2024",
+  "descricao": "As questões 46, 47, 60, 62, 63, 64 e 67 da prova DataPrev 2024 (ATI – Desenvolvimento de Software, Tipo 1), transcritas na íntegra, com o gabarito oficial.",
+  "nivel": "Prova real",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "FGV 2024 · Q46 · SSL/TLS",
+      "text": "Em um ambiente corporativo, uma empresa de e-commerce precisa garantir a segurança das transações realizadas por seus clientes através de seu site. Para isso, o site utiliza o protocolo HTTPS, que combina o protocolo HTTP com uma camada adicional de segurança. Assinale a opção que apresenta a diferença entre os protocolos SSL e TLS no contexto de sua aplicação em comunicações seguras via HTTPS.",
+      "options": [
+        "O SSL é mais seguro que o TLS, pois utiliza um algoritmo de criptografia mais avançado.",
+        "O TLS substitui o SSL, corrigindo vulnerabilidades encontradas nas versões anteriores do SSL e implementando melhorias de segurança.",
+        "O TLS e o SSL são intercambiáveis, pois ambos oferecem o mesmo nível de segurança, com a única diferença sendo a compatibilidade de alguns navegadores.",
+        "O HTTPS só funciona com o protocolo SSL, pois foi o primeiro protocolo desenvolvido para essa finalidade.",
+        "O SSL e o TLS são usados conjuntamente para garantir um nível de segurança adicional em transações bancárias, sendo o SSL utilizado para a autenticação e o TLS para a criptografia dos dados."
+      ],
+      "answer": 1,
+      "exp": "Gabarito oficial: B. O TLS é o sucessor do SSL; todas as versões do SSL são obsoletas. A inverte a segurança; C diz que são equivalentes; D prende o HTTPS ao SSL; E inventa uma divisão de tarefas — cada protocolo faz autenticação e cifragem sozinho, e eles não trabalham juntos."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV 2024 · Q47 · Métricas",
+      "text": "Em projetos de desenvolvimento de software, a escolha da técnica de mensuração de tamanho e esforço é essencial para a gestão eficiente e o planejamento adequado das atividades. Nesse contexto, é correto afirmar que",
+      "options": [
+        "o Ponto de Função oferece uma mensuração objetiva e independente do time de desenvolvimento.",
+        "os Story Points permitem uma melhor padronização de estimativas entre diferentes projetos e times.",
+        "o Ponto de Função é mais flexível, já que leva em conta o contexto subjetivo do time ao estimar o esforço.",
+        "os Story Points são mais adequados para contratos formais de desenvolvimento, como projetos com escopo fechado e orçamentos rígidos.",
+        "o Ponto de Função permite uma mensuração rápida, já que a estimativa é feita com base no esforço percebido pelo time."
+      ],
+      "answer": 0,
+      "exp": "Gabarito oficial: A. PF mede tamanho funcional pela visão do usuário, com regras padronizadas (IFPUG), sem depender do time. As outras trocam o sujeito: padronização entre times e contrato formal são virtudes do PF (B, D); subjetividade e rapidez pelo esforço percebido são do Story Point (C, E)."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV 2024 · Q60 · SSD",
+      "text": "Os Sistemas de Suporte à Decisão (SSDs) contribuem para gestores na tomada de decisões, utilizando dados, análises e algoritmos sofisticados. Eles auxiliam a enfrentar diferentes tipos de problemas, desde os muito bem definidos até os que exigem uma certa intuição e julgamento humano. Assinale a opção que representa corretamente a capacidade dos SSDs de lidar com diferentes tipos de problemas e decisões:",
+      "options": [
+        "Os SSDs são adequados apenas para problemas estruturados, com procedimentos claramente definidos e automatizáveis.",
+        "Os SSDs são ideais para problemas não estruturados, em que a intuição e o julgamento humano são fundamentais.",
+        "Os SSDs são mais eficazes em problemas semiestruturados, combinando elementos estruturados e não estruturados.",
+        "Os SSDs podem ser aplicados a problemas estruturados, semiestruturados e não estruturados, oferecendo flexibilidade para apoiar decisões em diversos contextos.",
+        "Os SSDs são limitados a problemas específicos de uma única área funcional e não se aplicam a outros setores empresariais."
+      ],
+      "answer": 3,
+      "exp": "Gabarito oficial: D. O próprio enunciado afirma que os SSDs apoiam 'desde os problemas muito bem definidos até os que exigem intuição' — a alternativa que repete essa amplitude é a certa. A, B, C e E restringem ('apenas', 'ideais para', 'mais eficazes', 'limitados a')."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV 2024 · Q62 · Controle de acesso",
+      "text": "As políticas de controle de acesso em sistemas computacionais são fundamentais para garantir a segurança e a integridade dos dados, regulando quem pode acessar, modificar ou interagir com recursos específicos. A política de controle de acesso cujo procedimento baseia-se na comparação de rótulos de segurança com autorizações que indicam quais entidades do sistema têm direito a acessar determinados recursos é a de controle de acesso",
+      "options": [
+        "discricionário.",
+        "mandatório.",
+        "por entrada confiável.",
+        "por papéis.",
+        "por privilégio mínimo."
+      ],
+      "answer": 1,
+      "exp": "Gabarito oficial: B. Rótulo de segurança x habilitação é a assinatura do MAC (mandatório). Discricionário = o dono decide; por papéis = RBAC; privilégio mínimo é princípio, não modelo; 'entrada confiável' não existe como modelo."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV 2024 · Q63 · OWASP",
+      "text": "A OWASP Top 10 é uma lista amplamente reconhecida das vulnerabilidades mais críticas em aplicações web. Em sua versão OWASP Top 10:2021, identificamos como uma categoria de vulnerabilidade",
+      "options": [
+        "a falsificação de solicitação do lado do servidor.",
+        "a proteção da cadeia de suprimentos de software.",
+        "a proteção do ambiente de engenharia.",
+        "o treinamento operacional.",
+        "o uso de recursos de linguagens e frameworks."
+      ],
+      "answer": 0,
+      "exp": "Gabarito oficial: A. SSRF é a A10:2021. As demais não são categorias de falha (são práticas/processos). Cuidado: 'cadeia de suprimentos' virou categoria só na versão 2025 (A03:2025)."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV 2024 · Q64 · X.800",
+      "text": "A arquitetura de segurança X.800 para o modelo OSI define mecanismos de segurança próprios, que podem ser incorporados a uma camada de protocolo específica com o objetivo de oferecer serviços de segurança OSI, ou mecanismos de segurança disseminados, que não são específicos de uma camada ou serviço. Assinale a opção que indica um mecanismo de segurança específico.",
+      "options": [
+        "Detecção de evento.",
+        "Funcionalidade confiável.",
+        "Preenchimento de tráfego.",
+        "Rótulo de segurança.",
+        "Trilha de auditoria de segurança."
+      ],
+      "answer": 2,
+      "exp": "Gabarito oficial: C. Os pervasivos são funcionalidade confiável, rótulo de segurança, detecção de evento, trilha de auditoria e recuperação de segurança ('o fiscal Confia, Rotula, Detecta, Trilha e Recupera'). Preenchimento de tráfego é específico: insere bits para frustrar análise de tráfego."
+    },
+    {
+      "type": "mc",
+      "tag": "FGV 2024 · Q67 · ETL/ELT",
+      "text": "Sobre as técnicas de integração e ingestão de dados ETL (Extract, Transform, Load) e ELT (Extract, Load, Transform), assinale a opção incorreta.",
+      "options": [
+        "Em ETL, os dados são transformados antes de serem carregados no sistema de destino.",
+        "ETL é mais adequado para sistemas de data warehouse tradicionais, onde a transformação de dados ocorre antes do carregamento.",
+        "ELT aproveita a capacidade de processamento do sistema de destino, transformando os dados após o carregamento.",
+        "ELT é mais eficiente em cenários onde o volume de dados é pequeno e o processamento pode ser feito fora do sistema de destino.",
+        "ETL pode ser mais lento em comparação ao ELT quando o sistema de destino tem alta capacidade de processamento."
+      ],
+      "answer": 3,
+      "exp": "Gabarito oficial: D (é a incorreta). O ELT brilha em volume GRANDE e transforma DENTRO do destino. A D descreve o ETL com os sinais trocados. As outras quatro estão corretas."
+    }
+  ]
+}

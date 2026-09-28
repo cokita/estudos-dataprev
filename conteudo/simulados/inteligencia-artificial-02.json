@@ -1,0 +1,168 @@
+{
+  "id": "inteligencia-artificial-02",
+  "materiaId": "inteligencia-artificial",
+  "nome": "Ética, regulação e privacidade",
+  "descricao": "Doze questões sobre viés, explicabilidade, PL 2.338/2023, TSE 2026, AI Act, ISO 42001, art. 20 da LGPD e a nova ANPD.",
+  "nivel": "Treino",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "Ética",
+      "text": "Um sistema de seleção de currículos, treinado com as contratações dos últimos dez anos de uma empresa que historicamente contratou poucas mulheres para cargos técnicos, passou a pontuar pior as candidatas. Esse fenômeno é denominado",
+      "options": [
+        "alucinação.",
+        "overfitting.",
+        "viés algorítmico, originado nos dados de treinamento.",
+        "falha de explicabilidade.",
+        "ataque adversarial."
+      ],
+      "answer": 2,
+      "exp": "C. O modelo aprendeu o padrão histórico discriminatório presente nos dados. A IA não é neutra: reproduz o que os dados carregam."
+    },
+    {
+      "type": "mc",
+      "tag": "Ética",
+      "text": "Sobre explicabilidade em sistemas de IA, assinale a afirmativa correta.",
+      "options": [
+        "Redes neurais profundas são naturalmente transparentes, pois cada peso tem significado claro.",
+        "Explicabilidade é a capacidade de esclarecer por que o sistema chegou a determinada decisão, sendo especialmente relevante quando a decisão afeta direitos.",
+        "Explicabilidade só importa em sistemas de IA simbólica.",
+        "Sistemas explicáveis dispensam supervisão humana.",
+        "A LGPD proíbe qualquer decisão automatizada que não seja plenamente explicável."
+      ],
+      "answer": 1,
+      "exp": "B. Redes profundas são 'caixas-pretas' (A errada). A LGPD garante informação sobre critérios e revisão, não proíbe decisões automatizadas (E errada)."
+    },
+    {
+      "type": "mc",
+      "tag": "Regulação BR",
+      "text": "Sobre o PL nº 2.338/2023, que trata do uso da inteligência artificial no Brasil, é correto afirmar, considerando a situação em setembro de 2026, que",
+      "options": [
+        "foi sancionado em 2025 e está plenamente em vigor.",
+        "foi aprovado pelo Senado e aguarda deliberação da Câmara dos Deputados, adotando abordagem baseada em riscos.",
+        "cria a ANPD, até então inexistente, para fiscalizar sistemas de IA.",
+        "proíbe totalmente o uso de IA pelo poder público.",
+        "adota modelo sem classificação de riscos, com as mesmas obrigações para todos os sistemas."
+      ],
+      "answer": 1,
+      "exp": "B. Aprovado pelo Senado em 10/12/2024, está na Câmara sem votação. A ANPD já existe desde a LGPD; o PL a coloca como coordenadora do SIA."
+    },
+    {
+      "type": "mc",
+      "tag": "Regulação BR",
+      "text": "No texto do PL nº 2.338/2023 aprovado pelo Senado, a utilização, pelo poder público, de sistema que avalia e classifica pessoas com base em seu comportamento social para definir o acesso a bens, serviços e políticas públicas de forma ilegítima é considerada de",
+      "options": [
+        "risco mínimo.",
+        "risco limitado, bastando informar o cidadão.",
+        "alto risco, permitida mediante avaliação de impacto.",
+        "risco excessivo, sendo vedada.",
+        "risco médio, dependente de autorização judicial."
+      ],
+      "answer": 3,
+      "exp": "D. O 'social scoring' pelo poder público está na lista de risco excessivo (proibido) — assim como no AI Act europeu, onde é risco inaceitável."
+    },
+    {
+      "type": "mc",
+      "tag": "Regulação BR",
+      "text": "De acordo com as regras do TSE para as eleições de 2026, é correto afirmar que",
+      "options": [
+        "o uso de IA em propaganda eleitoral está totalmente proibido.",
+        "conteúdos sintéticos gerados ou alterados por IA devem ser rotulados, e é vedada a divulgação de conteúdo sintético novo nas 72 horas anteriores à votação até 24 horas depois.",
+        "deepfakes são permitidos desde que favoreçam o próprio candidato.",
+        "a rotulagem de conteúdo sintético é facultativa.",
+        "a única sanção possível é a multa."
+      ],
+      "answer": 1,
+      "exp": "B. Res. TSE 23.755/2026: rotulagem obrigatória, proibição de deepfake para prejudicar ou favorecer, janela de 72h antes a 24h depois, e sanções que vão até cassação do registro ou mandato."
+    },
+    {
+      "type": "mc",
+      "tag": "Regulação UE",
+      "text": "O AI Act europeu classifica os sistemas de IA em níveis de risco. Um chatbot de atendimento ao público, que apenas precisa informar ao usuário que ele está interagindo com uma máquina, enquadra-se no nível de risco",
+      "options": [
+        "inaceitável.",
+        "alto.",
+        "limitado.",
+        "mínimo.",
+        "sistêmico."
+      ],
+      "answer": 2,
+      "exp": "C. Risco limitado = obrigações de transparência (avisar que é IA, rotular deepfake). Ordem: inaceitável, alto, limitado, mínimo — 'Proíbe, Controla, Avisa, Libera'."
+    },
+    {
+      "type": "ce",
+      "tag": "Regulação UE",
+      "text": "Julgue: sistemas de IA usados para avaliar o direito de pessoas a benefícios e serviços públicos essenciais são classificados como de alto risco no AI Act, sujeitos a obrigações como supervisão humana e gestão de riscos.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. Acesso a benefícios públicos está entre as áreas de alto risco (Anexo III). As obrigações de alto risco foram adiadas pelo Digital Omnibus para 2/12/2027, mas a classificação permanece."
+    },
+    {
+      "type": "mc",
+      "tag": "Normas",
+      "text": "A norma internacional que especifica requisitos para estabelecer, implementar, manter e melhorar continuamente um sistema de gestão de inteligência artificial em uma organização é a",
+      "options": [
+        "ISO/IEC 27001.",
+        "ISO/IEC 27002.",
+        "ISO/IEC 42001.",
+        "ISO 9001.",
+        "ISO/IEC 20926."
+      ],
+      "answer": 2,
+      "exp": "C. ISO/IEC 42001:2023 — sistema de gestão de IA. 27001 é gestão de segurança da informação; 27002, controles de segurança; 20926 é a norma da APF (IFPUG)."
+    },
+    {
+      "type": "mc",
+      "tag": "LGPD e IA",
+      "text": "Um segurado teve um pedido negado por um sistema que decide de forma totalmente automatizada. À luz do art. 20 da LGPD, ele tem direito a",
+      "options": [
+        "solicitar a revisão da decisão e obter informações claras sobre os critérios e procedimentos utilizados, observados os segredos comercial e industrial.",
+        "exigir, obrigatoriamente, que a revisão seja feita por uma pessoa natural.",
+        "obter o código-fonte completo do sistema.",
+        "anular automaticamente a decisão, por ser vedado o tratamento automatizado.",
+        "nenhum direito específico, pois a LGPD não trata de decisões automatizadas."
+      ],
+      "answer": 0,
+      "exp": "A. O art. 20 garante revisão e informação sobre critérios. A exigência de revisão por pessoa natural foi retirada em 2019 (B errada). O segredo comercial protege o código (C errada)."
+    },
+    {
+      "type": "ce",
+      "tag": "LGPD e IA",
+      "text": "Julgue: o princípio da não discriminação, previsto no art. 6º da LGPD, veda o tratamento de dados para fins discriminatórios ilícitos ou abusivos e serve de fundamento contra o viés algorítmico em sistemas de IA.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. Art. 6º, IX. Enquanto não há lei de IA, é na LGPD que se ancora o combate ao viés em decisões baseadas em dados pessoais."
+    },
+    {
+      "type": "mc",
+      "tag": "Atualidades",
+      "text": "Em 2026, a Autoridade Nacional de Proteção de Dados passou por mudança institucional relevante. Assinale a alternativa correta.",
+      "options": [
+        "Foi extinta, e suas funções foram transferidas ao TSE.",
+        "Foi transformada em Agência Nacional de Proteção de Dados, com status de agência reguladora e competência também sobre o ECA Digital.",
+        "Passou a ser subordinada ao Ministério da Fazenda, sem autonomia.",
+        "Foi incorporada à estrutura da DataPrev.",
+        "Tornou-se órgão do Poder Judiciário."
+      ],
+      "answer": 1,
+      "exp": "B. A MP 1.317/2025, aprovada em fevereiro de 2026, transformou a ANPD em Agência Nacional de Proteção de Dados, com mais autonomia e novos cargos, e atribuição de fiscalizar o ECA Digital (Lei 15.211/2025)."
+    },
+    {
+      "type": "ce",
+      "tag": "Atualidades",
+      "text": "Julgue: o Plano Brasileiro de Inteligência Artificial (PBIA 2024–2028), intitulado 'IA para o Bem de Todos', é uma lei federal que regula os níveis de risco dos sistemas de IA.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 1,
+      "exp": "Errado. O PBIA é um plano de investimentos e política pública (cerca de R$ 23 bilhões), não uma lei. Quem regula riscos é a proposta do PL 2.338/2023, ainda não aprovada."
+    }
+  ]
+}

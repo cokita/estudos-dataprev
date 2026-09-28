@@ -35,6 +35,24 @@
     ]
   },
   {
+    "id": "atualidades-ia",
+    "nome": "Atualidades e IA",
+    "icon": "ti-brain",
+    "descricao": "6 questões no Módulo I. Inteligência Artificial (conceitos, riscos, regulação e privacidade) e atualidades ligadas à tecnologia e ao setor público.",
+    "materias": [
+      "inteligencia-artificial"
+    ]
+  },
+  {
+    "id": "especificas",
+    "nome": "Conhecimentos Específicos (TI)",
+    "icon": "ti-code",
+    "descricao": "30 questões com peso 2,5 no Módulo II. Começa pela revisão dos erros da prova FGV 2024.",
+    "materias": [
+      "ti-erros-2024"
+    ]
+  },
+  {
     "id": "banco-fgv",
     "nome": "Banco de Questões FGV",
     "icon": "ti-target-arrow",

@@ -359,42 +359,48 @@
               "nome": "IA: conceitos e fundamentos",
               "prioridade": "baixa",
               "esforco": 1,
-              "oQueCai": "IA simbólica x conexionista, IA fraca x forte, agentes, histórico. Terreno confortável para quem é da área — garanta o ponto fácil."
+              "oQueCai": "IA simbólica x conexionista, IA fraca x forte, agentes, histórico. Terreno confortável para quem é da área — garanta o ponto fácil.",
+              "materiaId": "inteligencia-artificial"
             },
             {
               "id": "ia-ml",
               "nome": "IA: aprendizado de máquina",
               "prioridade": "media",
               "esforco": 2,
-              "oQueCai": "Supervisionado, não supervisionado e por reforço; treino/validação/teste; overfitting; métricas. Cobrado em nível conceitual."
+              "oQueCai": "Supervisionado, não supervisionado e por reforço; treino/validação/teste; overfitting; métricas. Cobrado em nível conceitual.",
+              "materiaId": "inteligencia-artificial"
             },
             {
               "id": "ia-generativa",
               "nome": "IA: modelos generativos e de linguagem (LLMs)",
               "prioridade": "media",
               "esforco": 2,
-              "oQueCai": "Transformers, tokens, embeddings, prompt, RAG, fine-tuning, alucinação, multimodalidade. Tema quentíssimo em 2026."
+              "oQueCai": "Transformers, tokens, embeddings, prompt, RAG, fine-tuning, alucinação, multimodalidade. Tema quentíssimo em 2026.",
+              "materiaId": "inteligencia-artificial"
             },
             {
               "id": "ia-etica",
               "nome": "IA: ética, viés e transparência",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Viés algorítmico, explicabilidade, discriminação, deepfakes, impacto no trabalho e responsabilização. A FGV adora esse recorte."
+              "oQueCai": "Viés algorítmico, explicabilidade, discriminação, deepfakes, impacto no trabalho e responsabilização. A FGV adora esse recorte.",
+              "materiaId": "inteligencia-artificial"
             },
             {
               "id": "ia-governanca",
               "nome": "IA: governança e regulação",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "PL 2.338/2023 no Brasil, AI Act europeu, níveis de risco, princípios da OCDE/UNESCO e ISO/IEC 42001."
+              "oQueCai": "PL 2.338/2023 no Brasil, AI Act europeu, níveis de risco, princípios da OCDE/UNESCO e ISO/IEC 42001.",
+              "materiaId": "inteligencia-artificial"
             },
             {
               "id": "ia-privacidade",
               "nome": "IA: privacidade e proteção de dados",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Uso de dados pessoais em treinamento, base legal, anonimização, decisão automatizada e revisão (art. 20 da LGPD). Casa com Legislação."
+              "oQueCai": "Uso de dados pessoais em treinamento, base legal, anonimização, decisão automatizada e revisão (art. 20 da LGPD). Casa com Legislação.",
+              "materiaId": "inteligencia-artificial"
             }
           ]
         },
@@ -625,7 +631,8 @@
               "nome": "HTTPS, SSL/TLS",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Handshake TLS, certificados digitais, cadeia de confiança, versões seguras, HSTS e ataques comuns. Faz ponte com Segurança."
+              "oQueCai": "Handshake TLS, certificados digitais, cadeia de confiança, versões seguras, HSTS e ataques comuns. Faz ponte com Segurança.",
+              "materiaId": "ti-erros-2024"
             },
             {
               "id": "ds-devops",
@@ -667,7 +674,8 @@
               "nome": "Ponto de Função e Story Points",
               "prioridade": "alta",
               "esforco": 3,
-              "oQueCai": "APF: tipos de função (ALI, AIE, EE, SE, CE), contagem, fator de ajuste; e a lógica relativa dos Story Points, planning poker e velocity. Muito cobrado e pouco estudado por dev."
+              "oQueCai": "APF: tipos de função (ALI, AIE, EE, SE, CE), contagem, fator de ajuste; e a lógica relativa dos Story Points, planning poker e velocity. Muito cobrado e pouco estudado por dev.",
+              "materiaId": "ti-erros-2024"
             },
             {
               "id": "ds-requisitos",
@@ -688,7 +696,8 @@
               "nome": "Conceitos de IA, Análise de Dados e Big Data",
               "prioridade": "media",
               "esforco": 2,
-              "oQueCai": "5 Vs, pipeline de dados, ciência de dados x análise, aprendizado de máquina aplicado e ferramentas do ecossistema (Hadoop, Spark)."
+              "oQueCai": "5 Vs, pipeline de dados, ciência de dados x análise, aprendizado de máquina aplicado e ferramentas do ecossistema (Hadoop, Spark).",
+              "materiaId": "inteligencia-artificial"
             }
           ]
         },
@@ -739,7 +748,8 @@
               "nome": "Controle de acesso e autenticação",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Identificação, autenticação e autorização; modelos DAC/MAC/RBAC/ABAC; privilégio mínimo, segregação de funções e MFA."
+              "oQueCai": "Identificação, autenticação e autorização; modelos DAC/MAC/RBAC/ABAC; privilégio mínimo, segregação de funções e MFA.",
+              "materiaId": "ti-erros-2024"
             },
             {
               "id": "si-oauth",
@@ -767,7 +777,8 @@
               "nome": "OWASP Top 10",
               "prioridade": "alta",
               "esforco": 3,
-              "oQueCai": "As dez categorias, o que causa cada uma e como mitigar — em especial injeção, quebra de controle de acesso, falhas criptográficas e SSRF."
+              "oQueCai": "As dez categorias, o que causa cada uma e como mitigar — em especial injeção, quebra de controle de acesso, falhas criptográficas e SSRF.",
+              "materiaId": "ti-erros-2024"
             },
             {
               "id": "si-sast",
@@ -881,7 +892,8 @@
               "nome": "Integração e ingestão de dados (ETL/ELT)",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "ETL x ELT, batch x streaming, CDC, staging, transferência de arquivos, qualidade e deduplicação na carga."
+              "oQueCai": "ETL x ELT, batch x streaming, CDC, staging, transferência de arquivos, qualidade e deduplicação na carga.",
+              "materiaId": "ti-erros-2024"
             }
           ]
         },
@@ -904,7 +916,8 @@
               "nome": "Sistemas de suporte à decisão (SSD/DSS)",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "SSD, SIG/MIS, EIS e sistemas especialistas: para quem serve cada um e em que nível da organização. Questão conceitual recorrente."
+              "oQueCai": "SSD, SIG/MIS, EIS e sistemas especialistas: para quem serve cada um e em que nível da organização. Questão conceitual recorrente.",
+              "materiaId": "ti-erros-2024"
             },
             {
               "id": "bi-dw",
@@ -918,7 +931,8 @@
               "nome": "ETL no contexto de BI",
               "prioridade": "alta",
               "esforco": 2,
-              "oQueCai": "Extração, transformação e carga; carga incremental x full; tratamento de dimensões lentamente mutáveis; janela de carga e qualidade."
+              "oQueCai": "Extração, transformação e carga; carga incremental x full; tratamento de dimensões lentamente mutáveis; janela de carga e qualidade.",
+              "materiaId": "ti-erros-2024"
             },
             {
               "id": "bi-olap",

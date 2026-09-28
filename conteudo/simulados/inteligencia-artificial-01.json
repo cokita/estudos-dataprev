@@ -1,0 +1,168 @@
+{
+  "id": "inteligencia-artificial-01",
+  "materiaId": "inteligencia-artificial",
+  "nome": "Fundamentos: ML, deep learning e IA generativa",
+  "descricao": "A Q58 original da FGV 2024 e mais onze questões sobre o mapa IA → ML → deep learning, tipos de aprendizado, overfitting, métricas, Transformer, RAG e alucinação.",
+  "nivel": "Treino",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "FGV 2024 · Q58 · Conceitos",
+      "text": "A Inteligência Artificial (IA) é uma área da ciência da computação que visa desenvolver sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana. O conceito que está mais diretamente relacionado ao desenvolvimento de sistemas que aprendem com os dados e melhoram seu desempenho ao longo do tempo é o de",
+      "options": [
+        "Algoritmo Genético.",
+        "Redes Neurais Artificiais.",
+        "Lógica Booleana.",
+        "Busca Heurística.",
+        "Programação Linear."
+      ],
+      "answer": 1,
+      "exp": "Gabarito oficial: B. 'Aprender com dados e melhorar com o tempo' é aprendizado de máquina, e redes neurais são a técnica de ML entre as opções. Algoritmo genético e busca heurística são técnicas de busca/otimização; lógica booleana é base da IA simbólica; programação linear é otimização matemática."
+    },
+    {
+      "type": "mc",
+      "tag": "Conceitos",
+      "text": "Um sistema de concessão de benefícios aplica 200 regras do tipo 'se-então', escritas por especialistas a partir da legislação, sem nenhuma etapa de treinamento com dados. Esse sistema",
+      "options": [
+        "é aprendizado de máquina supervisionado, pois as regras funcionam como rótulos.",
+        "não pode ser considerado IA, pois não utiliza redes neurais.",
+        "é um exemplo de IA simbólica, como os sistemas especialistas, mas não de aprendizado de máquina.",
+        "é um exemplo de IA forte, por reproduzir o raciocínio de especialistas humanos.",
+        "é um modelo de deep learning com poucas camadas."
+      ],
+      "answer": 2,
+      "exp": "C. Regras escritas por humanos = IA simbólica (sistema especialista). É IA, mas não é ML, porque não aprende com dados. IA forte (D) não existe hoje."
+    },
+    {
+      "type": "mc",
+      "tag": "ML",
+      "text": "Uma equipe dispõe de um histórico de 50 mil requerimentos já analisados, cada um marcado como 'deferido' ou 'indeferido', e quer um modelo que preveja o resultado de novos requerimentos. Trata-se de uma tarefa de",
+      "options": [
+        "aprendizado não supervisionado do tipo agrupamento.",
+        "aprendizado supervisionado do tipo classificação.",
+        "aprendizado por reforço.",
+        "aprendizado supervisionado do tipo regressão.",
+        "regras de associação."
+      ],
+      "answer": 1,
+      "exp": "B. Há rótulo (deferido/indeferido) → supervisionado; a saída é uma categoria → classificação. Regressão (D) seria prever um número."
+    },
+    {
+      "type": "mc",
+      "tag": "ML",
+      "text": "Um banco quer dividir seus clientes em grupos com comportamentos de consumo semelhantes, sem saber de antemão quantos ou quais grupos existem. A técnica adequada é",
+      "options": [
+        "regressão linear.",
+        "classificação com árvore de decisão.",
+        "agrupamento (clustering), como o k-means.",
+        "aprendizado por reforço.",
+        "k-NN."
+      ],
+      "answer": 2,
+      "exp": "C. Sem rótulos, procurando grupos → não supervisionado, agrupamento. Não confunda k-means (agrupa) com k-NN (classifica, supervisionado)."
+    },
+    {
+      "type": "mc",
+      "tag": "ML",
+      "text": "Um modelo apresentou 99% de acerto nos dados de treinamento e apenas 62% em dados novos. Esse comportamento caracteriza",
+      "options": [
+        "underfitting, pois o modelo é simples demais.",
+        "overfitting, pois o modelo memorizou o treino e não generaliza.",
+        "alucinação, típica de modelos de linguagem.",
+        "viés de seleção, necessariamente.",
+        "um modelo adequado, já que a acurácia de treino é alta."
+      ],
+      "answer": 1,
+      "exp": "B. Ótimo no treino e ruim no novo = sobreajuste. Underfitting vai mal até no treino."
+    },
+    {
+      "type": "mc",
+      "tag": "ML · Métricas",
+      "text": "Um detector de fraudes analisou 1.000 pedidos, dos quais 50 eram fraudes. Ele apontou 40 pedidos como fraudulentos, dos quais 30 eram realmente fraudes. A precisão e o recall do modelo são, respectivamente,",
+      "options": [
+        "75% e 60%.",
+        "60% e 75%.",
+        "97% e 75%.",
+        "75% e 97%.",
+        "30% e 50%."
+      ],
+      "answer": 0,
+      "exp": "A. Precisão = acertos entre os apontados = 30/40 = 75%. Recall = fraudes encontradas entre as reais = 30/50 = 60%. (A acurácia seria (30 + 940)/1000 = 97% — alta, mas engana.)"
+    },
+    {
+      "type": "mc",
+      "tag": "Deep learning",
+      "text": "A arquitetura baseada no mecanismo de atenção, que permite processar sequências em paralelo e é a base dos grandes modelos de linguagem atuais, é a",
+      "options": [
+        "rede convolucional (CNN).",
+        "rede recorrente (RNN).",
+        "rede adversarial generativa (GAN).",
+        "Transformer.",
+        "árvore de decisão."
+      ],
+      "answer": 3,
+      "exp": "D. Transformer (2017), baseado em atenção. CNN é para imagem; RNN processa sequência em ordem, sem paralelismo; GAN gera conteúdo com duas redes competindo."
+    },
+    {
+      "type": "mc",
+      "tag": "Generativa",
+      "text": "Um órgão público quer que um assistente baseado em LLM responda dúvidas dos cidadãos sempre com base nas normas vigentes, que mudam com frequência, sem precisar retreinar o modelo. A técnica mais adequada é",
+      "options": [
+        "aumentar a temperatura do modelo.",
+        "fine-tuning semanal com as normas novas.",
+        "RAG (geração aumentada por recuperação), buscando os trechos das normas a cada pergunta.",
+        "reduzir a janela de contexto.",
+        "usar aprendizado não supervisionado."
+      ],
+      "answer": 2,
+      "exp": "C. RAG injeta documentos atualizados na hora da pergunta, sem alterar os pesos, e reduz alucinação. Fine-tuning (B) é caro e não é o jeito certo de manter fatos atualizados."
+    },
+    {
+      "type": "mc",
+      "tag": "Generativa",
+      "text": "Em modelos de linguagem, 'alucinação' é o fenômeno em que o modelo",
+      "options": [
+        "se recusa a responder perguntas fora do seu domínio.",
+        "produz resposta fluente e convincente, porém factualmente incorreta ou inventada.",
+        "repete literalmente trechos dos dados de treinamento.",
+        "excede a janela de contexto e trava.",
+        "reproduz preconceitos presentes nos dados de treino."
+      ],
+      "answer": 1,
+      "exp": "B. Alucinação é inventar com confiança (ex.: citar lei inexistente). E descreve viés, não alucinação."
+    },
+    {
+      "type": "ce",
+      "tag": "Generativa",
+      "text": "Julgue: em um LLM, os embeddings são representações vetoriais de textos, construídas de modo que textos com significados semelhantes fiquem próximos no espaço vetorial.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 0,
+      "exp": "Certo. É a definição de embedding, base da busca semântica usada no RAG."
+    },
+    {
+      "type": "ce",
+      "tag": "Generativa",
+      "text": "Julgue: aumentar a temperatura de um LLM torna suas respostas mais determinísticas e previsíveis.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 1,
+      "exp": "Errado. Temperatura alta aumenta a aleatoriedade; para respostas previsíveis, usa-se temperatura baixa."
+    },
+    {
+      "type": "ce",
+      "tag": "Conceitos",
+      "text": "Julgue: os grandes modelos de linguagem atuais, como os usados em assistentes conversacionais, são exemplos de IA forte (geral), por conseguirem executar tarefas variadas.",
+      "options": [
+        "Certo",
+        "Errado"
+      ],
+      "answer": 1,
+      "exp": "Errado. Toda IA existente é fraca/estreita. Versatilidade não é o mesmo que inteligência geral comparável à humana (AGI), que segue hipotética."
+    }
+  ]
+}

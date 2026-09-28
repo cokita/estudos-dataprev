@@ -4210,6 +4210,1068 @@ window.CONTENT = {
       ]
     },
     {
+      "id": "atualidades-ia",
+      "nome": "Atualidades e IA",
+      "icon": "ti-brain",
+      "descricao": "6 questões no Módulo I. Inteligência Artificial (conceitos, riscos, regulação e privacidade) e atualidades ligadas à tecnologia e ao setor público.",
+      "materias": [
+        {
+          "id": "inteligencia-artificial",
+          "nome": "Inteligência Artificial — conceitos, riscos e regulação",
+          "icon": "ti-brain",
+          "descricao": "Tudo de IA que a FGV pode cobrar em Atualidades e IA e nas específicas: o mapa IA → ML → deep learning → generativa, tipos de aprendizado, métricas, arquiteturas, vocabulário dos LLMs (token, RAG, alucinação), ética e viés, PL 2.338, AI Act, TSE 2026 e LGPD/ANPD.",
+          "resumo": [
+            {
+              "titulo": "Como a IA cai nesta prova",
+              "html": "\n<p>Em 2026 a disciplina do Módulo I mudou de nome: <b>Atualidades e Inteligência Artificial</b>, com <b>6 questões</b>. Além disso, IA está no conteúdo de específicas (em 2024 caiu a Q58, sobre redes neurais, que valeu 2,5 pontos).</p>\n<p>Pelo estilo da FGV e pelo edital, a cobrança tende a vir em três camadas:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Conceitos</span> o que é IA, aprendizado de máquina, deep learning, IA generativa, LLM — nível de definição, sem matemática</div>\n  <div class=\"def\"><span class=\"def-t\">2. Riscos e ética</span> viés, alucinação, explicabilidade, deepfake, impacto no trabalho e no meio ambiente</div>\n  <div class=\"def\"><span class=\"def-t\">3. Regulação e dados</span> PL 2.338/2023 (Brasil), AI Act (União Europeia), LGPD aplicada à IA, regras do TSE para as eleições de 2026</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Para quem é da área, a camada 1 é ponto garantido. Os pontos que você ainda não tem estão nas camadas 2 e 3 — que se parecem muito com Legislação: nomes, níveis de risco, datas.</div>\n"
+            },
+            {
+              "titulo": "O que é IA — o mapa das camadas",
+              "html": "\n<p><b>Inteligência Artificial</b> é a área da computação que cria sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana: reconhecer imagens e voz, entender e gerar texto, decidir, planejar, recomendar.</p>\n<p>Os termos que a banca mistura são, na verdade, <b>caixas dentro de caixas</b>:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">IA</span> a caixa maior — qualquer técnica que imite comportamento inteligente, inclusive regras escritas à mão</div>\n  <div class=\"def\"><span class=\"def-t\">Aprendizado de máquina (ML)</span> dentro da IA — sistemas que <b>aprendem padrões a partir de dados</b> e melhoram com a experiência, em vez de serem programados regra a regra</div>\n  <div class=\"def\"><span class=\"def-t\">Aprendizado profundo (deep learning)</span> dentro do ML — usa <b>redes neurais com muitas camadas</b>; é o que fez a IA dar o salto em imagem, voz e texto</div>\n  <div class=\"def\"><span class=\"def-t\">IA generativa / LLMs</span> dentro do deep learning — modelos que <b>criam conteúdo novo</b> (texto, imagem, áudio, código). ChatGPT, Claude e Gemini são LLMs</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Toda IA generativa é deep learning; todo deep learning é ML; todo ML é IA. <b>A volta não vale</b>: um sistema de regras \"se-então\" é IA, mas não é ML.</div>\n<p><b>Duas grandes escolas:</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">IA simbólica</span> conhecimento escrito como regras e lógica por humanos. Ex.: <b>sistemas especialistas</b> (base de conhecimento + motor de inferência). Explicável, mas não aprende sozinha</div>\n  <div class=\"def\"><span class=\"def-t\">IA conexionista</span> aprende com dados, por meio de redes neurais. Poderosa, mas pouco explicável (\"caixa-preta\")</div>\n</div>\n<p><b>Quanto ao alcance:</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">IA fraca / estreita</span> resolve tarefas específicas. <b>Toda IA que existe hoje é desse tipo</b>, inclusive os LLMs</div>\n  <div class=\"def\"><span class=\"def-t\">IA forte / geral (AGI)</span> hipotética: inteligência comparável à humana em qualquer tarefa. Ainda não existe</div>\n</div>\n<p><b>Linha do tempo mínima:</b> 1950, Turing propõe o \"jogo da imitação\" (<b>Teste de Turing</b>: a máquina é inteligente se o humano não a distingue de uma pessoa numa conversa) · 1956, conferência de Dartmouth cria o termo \"inteligência artificial\" · anos 70 e 80, \"invernos da IA\" (cortes de verba) · 2012, deep learning vence em reconhecimento de imagens · 2017, arquitetura <b>Transformer</b> · 2022, ChatGPT populariza a IA generativa.</p>\n"
+            },
+            {
+              "titulo": "Aprendizado de máquina: os três jeitos de aprender",
+              "html": "\n<p>A pergunta que separa os tipos é: <b>o que o algoritmo recebe para aprender?</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Supervisionado</span> recebe exemplos <b>com a resposta certa (rótulo)</b>. Aprende a relação entrada → resposta. Ex.: milhares de pedidos de benefício marcados como \"fraude\" ou \"legítimo\"</div>\n  <div class=\"def\"><span class=\"def-t\">Não supervisionado</span> recebe dados <b>sem rótulo</b> e procura estrutura sozinho. Ex.: agrupar segurados por perfil sem dizer quais grupos existem</div>\n  <div class=\"def\"><span class=\"def-t\">Por reforço</span> um <b>agente</b> age num <b>ambiente</b> e recebe <b>recompensa ou punição</b>; aprende por tentativa e erro. Ex.: IA que joga xadrez, robôs, ajuste de LLMs com feedback humano (RLHF)</div>\n</div>\n<p><b>Tarefas típicas de cada um</b> (é assim que a FGV pergunta):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Classificação</span> supervisionado — prever uma <b>categoria</b> (fraude/não fraude, spam/não spam)</div>\n  <div class=\"def\"><span class=\"def-t\">Regressão</span> supervisionado — prever um <b>número</b> (valor de um imóvel, tempo de espera na fila)</div>\n  <div class=\"def\"><span class=\"def-t\">Agrupamento (clustering)</span> não supervisionado — formar grupos parecidos (k-means)</div>\n  <div class=\"def\"><span class=\"def-t\">Associação</span> não supervisionado — \"quem compra X compra Y\" (Apriori)</div>\n  <div class=\"def\"><span class=\"def-t\">Redução de dimensionalidade</span> não supervisionado — resumir muitas variáveis em poucas (PCA)</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Supervisionado tem professor</b> (o gabarito vem junto). <b>Não supervisionado estuda sozinho</b> (só os dados). <b>Reforço aprende como adestramento</b> (petisco ou bronca).</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Pegadinha comum: \"regressão\" <b>não</b> é não supervisionada, e \"agrupamento\" <b>não</b> usa rótulos. Classificação e regressão = supervisionado. Agrupamento e associação = não supervisionado.</div>\n<p>Os LLMs usam um quarto tipo no pré-treinamento: <b>autossupervisionado</b> — o próprio texto fornece o rótulo (esconde-se a próxima palavra e o modelo tenta adivinhá-la).</p>\n"
+            },
+            {
+              "titulo": "Treinar, validar, testar — e medir se o modelo presta",
+              "html": "\n<p>Os dados são divididos em três partes: <b>treino</b> (o modelo aprende), <b>validação</b> (ajustar configurações e escolher o melhor modelo) e <b>teste</b> (a prova final, com dados que o modelo nunca viu).</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Overfitting (sobreajuste)</span> o modelo <b>decorou</b> o treino: vai muito bem nele e mal em dados novos. Como o aluno que decorou as respostas do simulado e trava na prova</div>\n  <div class=\"def\"><span class=\"def-t\">Underfitting (subajuste)</span> o modelo é simples demais e vai mal <b>até no treino</b></div>\n  <div class=\"def\"><span class=\"def-t\">Generalização</span> o objetivo: ir bem em dados que não viu</div>\n</div>\n<p><b>Métricas de classificação — com um exemplo.</b> Um modelo analisa 100 pedidos de benefício; 10 são fraude de verdade. O modelo marcou 8 como fraude, e 6 desses eram fraude mesmo.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">VP = 6</span> verdadeiros positivos (acusou e era fraude)</div>\n  <div class=\"def\"><span class=\"def-t\">FP = 2</span> falsos positivos (acusou um inocente)</div>\n  <div class=\"def\"><span class=\"def-t\">FN = 4</span> falsos negativos (deixou passar fraude)</div>\n  <div class=\"def\"><span class=\"def-t\">VN = 88</span> verdadeiros negativos</div>\n</div>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Acurácia</span> acertos / total = (6 + 88) / 100 = <b>94%</b></div>\n  <div class=\"def\"><span class=\"def-t\">Precisão</span> dos que acusei, quantos eram mesmo? 6 / 8 = <b>75%</b></div>\n  <div class=\"def\"><span class=\"def-t\">Recall (sensibilidade)</span> das fraudes reais, quantas peguei? 6 / 10 = <b>60%</b></div>\n  <div class=\"def\"><span class=\"def-t\">F1</span> média harmônica de precisão e recall — equilibra as duas</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> A lição que cai: com classes desbalanceadas (poucas fraudes), <b>acurácia alta engana</b>. Um modelo que dissesse \"nunca é fraude\" teria 90% de acurácia e recall zero. A tabela VP/FP/FN/VN chama-se <b>matriz de confusão</b>.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>Precisão</b> olha para <b>o que eu apontei</b>. <b>Recall</b> olha para <b>o que existia de verdade</b>. Quando o custo de deixar passar é alto (doença, fraude), priorize recall.</div>\n"
+            },
+            {
+              "titulo": "Algoritmos e redes neurais (Q58 de 2024)",
+              "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Árvore de decisão</span> sequência de perguntas \"sim/não\" até uma resposta. Fácil de explicar</div>\n  <div class=\"def\"><span class=\"def-t\">Regressão linear / logística</span> linear prevê número; logística, apesar do nome, <b>classifica</b> (dá uma probabilidade)</div>\n  <div class=\"def\"><span class=\"def-t\">k-NN</span> classifica pelo que são os k vizinhos mais parecidos (supervisionado)</div>\n  <div class=\"def\"><span class=\"def-t\">k-means</span> forma k grupos em torno de centros (não supervisionado). Não confundir com k-NN</div>\n  <div class=\"def\"><span class=\"def-t\">Rede neural artificial</span> camadas de \"neurônios\" que somam entradas multiplicadas por <b>pesos</b> e passam por uma <b>função de ativação</b>. Aprende ajustando os pesos para reduzir o erro (<b>backpropagation</b> + gradiente descendente)</div>\n</div>\n<p><b>Técnicas de IA que não são \"aprender com dados\"</b> — é aqui que a Q58 armou os distratores:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Algoritmo genético</span> técnica de <b>otimização/busca</b> inspirada na evolução: população de soluções, seleção, cruzamento e mutação</div>\n  <div class=\"def\"><span class=\"def-t\">Busca heurística</span> explora caminhos usando uma estimativa de \"quão perto do objetivo\" (ex.: A*). Busca, não aprendizado</div>\n  <div class=\"def\"><span class=\"def-t\">Lógica booleana</span> verdadeiro/falso — base da IA simbólica</div>\n  <div class=\"def\"><span class=\"def-t\">Programação linear</span> otimização matemática com restrições; nem é IA propriamente</div>\n</div>\n<p><b>Q58 (você acertou):</b> \"o conceito mais diretamente relacionado a sistemas que <b>aprendem com os dados e melhoram seu desempenho</b>\" → <b>(B) Redes Neurais Artificiais</b>. A frase \"aprende com dados e melhora com o tempo\" é a definição de aprendizado de máquina — procure na alternativa a técnica de ML.</p>\n"
+            },
+            {
+              "titulo": "Deep learning: as arquiteturas que têm nome",
+              "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">CNN — rede convolucional</span> especializada em <b>imagens</b>: detecta bordas, formas, objetos. Reconhecimento facial, leitura de documentos, laudos de imagem</div>\n  <div class=\"def\"><span class=\"def-t\">RNN / LSTM — rede recorrente</span> processa <b>sequências</b> em ordem, com memória do passado (texto, séries temporais). Foi superada pelos Transformers em linguagem</div>\n  <div class=\"def\"><span class=\"def-t\">Transformer</span> arquitetura de 2017 (\"Attention Is All You Need\") baseada no mecanismo de <b>atenção</b>: cada palavra \"olha\" para todas as outras e pesa quais importam. Processa em paralelo. É a base de todos os LLMs (o \"T\" do GPT)</div>\n  <div class=\"def\"><span class=\"def-t\">GAN — rede adversarial generativa</span> duas redes competem: uma gera, a outra tenta detectar o falso. Origem dos primeiros <b>deepfakes</b></div>\n  <div class=\"def\"><span class=\"def-t\">Modelos de difusão</span> geram imagens partindo de ruído e \"limpando\" aos poucos. Base dos geradores de imagem atuais</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> <b>C</b>NN = <b>C</b>âmera (imagem) · <b>R</b>NN = <b>R</b>ecordar a sequência · <b>T</b>ransformer = a<b>T</b>enção · <b>G</b>AN = <b>G</b>erador contra detetive.</div>\n"
+            },
+            {
+              "titulo": "IA generativa e LLMs — o vocabulário",
+              "html": "\n<p>Um <b>LLM</b> (<i>Large Language Model</i>, grande modelo de linguagem) é um Transformer treinado com volumes enormes de texto para uma tarefa simples: <b>prever o próximo pedaço de texto</b>. Da escala dessa tarefa surgem habilidades de resumir, traduzir, programar e raciocinar.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Token</span> o pedaço de texto que o modelo processa (parte de palavra, palavra ou sinal). Custo e limite são medidos em tokens</div>\n  <div class=\"def\"><span class=\"def-t\">Janela de contexto</span> quantos tokens o modelo consegue considerar de uma vez (pergunta + documentos + resposta)</div>\n  <div class=\"def\"><span class=\"def-t\">Embedding</span> representação de um texto como vetor de números, de modo que textos de sentido parecido fiquem próximos. Base da busca semântica</div>\n  <div class=\"def\"><span class=\"def-t\">Parâmetros</span> os pesos da rede — o que o modelo \"aprendeu\". Bilhões deles</div>\n  <div class=\"def\"><span class=\"def-t\">Pré-treinamento</span> a fase cara: aprender a língua e o mundo com trilhões de tokens</div>\n  <div class=\"def\"><span class=\"def-t\">Fine-tuning (ajuste fino)</span> treinar mais um pouco, com dados específicos, para especializar o modelo</div>\n  <div class=\"def\"><span class=\"def-t\">RLHF</span> aprendizado por reforço com feedback humano: pessoas avaliam respostas e o modelo aprende a preferir as melhores</div>\n  <div class=\"def\"><span class=\"def-t\">Prompt</span> a instrução dada ao modelo. <b>Zero-shot</b> = sem exemplos; <b>few-shot</b> = com alguns exemplos; <b>cadeia de pensamento</b> = pedir o raciocínio passo a passo</div>\n  <div class=\"def\"><span class=\"def-t\">Temperatura</span> grau de aleatoriedade: baixa = respostas previsíveis; alta = mais criativas e mais arriscadas</div>\n  <div class=\"def\"><span class=\"def-t\">Alucinação</span> resposta <b>fluente e convincente, porém falsa</b> (inventar uma lei, um artigo, uma citação). Acontece porque o modelo gera o texto provável, não o verificado</div>\n  <div class=\"def\"><span class=\"def-t\">RAG</span> <i>Retrieval-Augmented Generation</i>: antes de responder, o sistema <b>busca documentos relevantes</b> (ex.: a base normativa do INSS) e entrega ao modelo junto com a pergunta. Reduz alucinação e dá respostas atualizadas <b>sem retreinar</b></div>\n  <div class=\"def\"><span class=\"def-t\">Agente</span> sistema em que o modelo planeja e <b>executa ações</b> usando ferramentas (buscar, rodar código, preencher sistemas), em vários passos</div>\n  <div class=\"def\"><span class=\"def-t\">Multimodal</span> entende e/ou gera mais de um tipo de dado: texto, imagem, áudio, vídeo</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Par que a banca adora: <b>RAG x fine-tuning</b>. RAG traz conhecimento <b>externo e atualizável na hora da pergunta</b>, sem mexer nos pesos. Fine-tuning <b>altera os pesos</b> para mudar comportamento/estilo. Para \"responder com base nas normas vigentes do órgão\", a resposta é RAG.</div>\n"
+            },
+            {
+              "titulo": "Riscos e ética da IA",
+              "html": "\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Viés algorítmico</span> o modelo reproduz ou amplia discriminações presentes nos <b>dados de treino</b> ou nas escolhas do projeto. Ex.: sistema de crédito que penaliza um CEP de periferia; reconhecimento facial que erra mais em pessoas negras. O algoritmo \"não tem opinião\": aprende o padrão histórico</div>\n  <div class=\"def\"><span class=\"def-t\">Explicabilidade (XAI)</span> capacidade de explicar <b>por que</b> o sistema decidiu. Redes profundas são \"caixas-pretas\"; decisões que afetam direitos exigem explicação</div>\n  <div class=\"def\"><span class=\"def-t\">Transparência</span> informar que há IA envolvida, como funciona e com que dados</div>\n  <div class=\"def\"><span class=\"def-t\">Supervisão humana</span> um humano capaz de revisar, corrigir ou interromper o sistema (<i>human in the loop</i>)</div>\n  <div class=\"def\"><span class=\"def-t\">Responsabilização (accountability)</span> alguém responde pelos danos — não dá para culpar \"o algoritmo\"</div>\n  <div class=\"def\"><span class=\"def-t\">Deepfake</span> áudio, vídeo ou imagem sintéticos que imitam uma pessoa real. Riscos: golpes, desinformação eleitoral, pornografia não consentida</div>\n  <div class=\"def\"><span class=\"def-t\">Privacidade</span> dados pessoais usados no treino, vazamento de dados via prompt, inferência de dados sensíveis</div>\n  <div class=\"def\"><span class=\"def-t\">Direitos autorais</span> uso de obras protegidas para treinar modelos e autoria do que a IA gera</div>\n  <div class=\"def\"><span class=\"def-t\">Trabalho</span> automação de tarefas, requalificação profissional</div>\n  <div class=\"def\"><span class=\"def-t\">Meio ambiente</span> consumo de energia e água dos data centers que treinam e rodam os modelos (a FGV já cobrou o impacto ambiental dos data centers na Q32 de 2024)</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Alternativa \"a IA é neutra/objetiva porque é matemática\" é <b>sempre errada</b> na FGV. A banca cobra que o viés vem dos dados e das escolhas humanas.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Os princípios repetidos em todo documento (OCDE, UNESCO, PL 2.338, AI Act) cabem em <b>\"TEJ-SPR\"</b>: <b>T</b>ransparência, <b>E</b>xplicabilidade, <b>J</b>ustiça/não discriminação, <b>S</b>upervisão humana, <b>P</b>rivacidade, <b>R</b>esponsabilização.</div>\n"
+            },
+            {
+              "titulo": "Regulação no Brasil: PL 2.338, PBIA e eleições 2026",
+              "html": "\n<p><b>PL 2.338/2023 — o \"Marco Legal da IA\".</b> Proposto pelo senador Rodrigo Pacheco, foi <b>aprovado pelo Senado em 10/12/2024</b> e está na <b>Câmara</b> desde março de 2025, numa comissão especial com relatoria do deputado Aguinaldo Ribeiro (PP-PB). Até setembro de 2026 <b>ainda não foi votado</b> — a votação ficou para depois das eleições de outubro. Ou seja: <b>o Brasil ainda não tem lei geral de IA</b>.</p>\n<p>O que o texto do Senado prevê (é o que a banca pode cobrar):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Abordagem baseada em risco</span> quanto maior o risco para direitos, mais obrigações. O fornecedor faz uma <b>avaliação preliminar</b> para classificar o sistema</div>\n  <div class=\"def\"><span class=\"def-t\">Risco excessivo (proibido)</span> ex.: manipulação subliminar que cause dano; explorar vulnerabilidades de grupos; o poder público classificar pessoas pelo comportamento social para acesso a serviços (<i>social scoring</i>); prever crimes a partir de traços de personalidade; armas autônomas sem controle humano; material de abuso infantil; identificação biométrica em tempo real em espaços públicos (com exceções, como busca de desaparecidos)</div>\n  <div class=\"def\"><span class=\"def-t\">Alto risco</span> permitido, mas com obrigações (documentação, testes de viés, supervisão humana, <b>avaliação de impacto algorítmico</b>). Ex.: recrutamento, crédito, educação, acesso a serviços públicos essenciais, saúde, veículos autônomos</div>\n  <div class=\"def\"><span class=\"def-t\">Direitos das pessoas</span> ser informada da interação com IA, pedir explicação, contestar e solicitar revisão humana de decisões de alto risco, não ser discriminada</div>\n  <div class=\"def\"><span class=\"def-t\">Governança</span> cria o <b>SIA — Sistema Nacional de Regulação e Governança de IA</b>, coordenado pela <b>ANPD</b></div>\n  <div class=\"def\"><span class=\"def-t\">Outros pontos</span> remuneração de direitos autorais pelo uso de obras no treino; ambiente regulatório experimental (<i>sandbox</i>); sanções que chegam a R$ 50 milhões ou 2% do faturamento por infração</div>\n</div>\n<p><b>PBIA — Plano Brasileiro de Inteligência Artificial 2024–2028</b>, \"IA para o Bem de Todos\": lançado em 2024 pelo governo federal, prevê cerca de <b>R$ 23 bilhões</b> em infraestrutura (inclusive supercomputação), formação, aplicação na administração pública e apoio a empresas. É política pública, <b>não é lei</b>.</p>\n<p><b>Eleições 2026 — TSE.</b> A Resolução nº 23.755/2026 atualizou as regras de propaganda (Res. 23.610/2019):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Rotulagem</span> conteúdo sintético criado ou alterado por IA deve ser <b>identificado de forma destacada</b></div>\n  <div class=\"def\"><span class=\"def-t\">Deepfake</span> proibido usar para prejudicar ou favorecer candidatura</div>\n  <div class=\"def\"><span class=\"def-t\">Janela crítica</span> nenhum conteúdo sintético novo pode ser publicado, compartilhado ou impulsionado de <b>72 horas antes até 24 horas depois</b> da votação</div>\n  <div class=\"def\"><span class=\"def-t\">Punição</span> remoção do conteúdo, multa e até <b>cassação do registro ou do mandato</b></div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Pegadinha provável: alternativa dizendo que \"o Brasil já possui lei geral de IA em vigor\" ou que \"a ANPD foi criada pelo PL 2.338\". Falsas: o PL não foi aprovado pela Câmara, e a ANPD já existe desde a LGPD.</div>\n"
+            },
+            {
+              "titulo": "Regulação internacional: AI Act, OCDE, UNESCO e ISO 42001",
+              "html": "\n<p><b>AI Act — Regulamento (UE) 2024/1689.</b> Primeira lei abrangente de IA do mundo; entrou em vigor em <b>1º/8/2024</b> e vale por etapas. Foi a inspiração do PL 2.338. Classifica por <b>quatro níveis de risco</b>:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Inaceitável</span> <b>proibido</b> desde 2/2/2025: <i>social scoring</i>, manipulação, reconhecimento de emoções no trabalho e na escola, coleta indiscriminada de imagens faciais, biometria em tempo real em espaço público (salvo exceções)</div>\n  <div class=\"def\"><span class=\"def-t\">Alto</span> permitido com obrigações pesadas (gestão de risco, qualidade dos dados, documentação, supervisão humana). Ex.: emprego, educação, crédito, <b>acesso a benefícios públicos</b>, justiça, infraestrutura crítica</div>\n  <div class=\"def\"><span class=\"def-t\">Limitado (transparência)</span> basta informar: avisar que se fala com um chatbot, rotular deepfakes. Regras em vigor desde 2/8/2026</div>\n  <div class=\"def\"><span class=\"def-t\">Mínimo</span> sem obrigações específicas: filtro de spam, IA de jogos</div>\n</div>\n<p>Modelos de IA de propósito geral (os grandes LLMs) têm obrigações próprias desde 2/8/2025. Em maio de 2026, o pacote <b>Digital Omnibus</b> adiou as obrigações de alto risco: para <b>2/12/2027</b> (sistemas do Anexo III) e 2/8/2028 (IA embutida em produtos regulados). Multas: até € 35 milhões ou 7% do faturamento mundial.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Pirâmide de risco do AI Act, de cima para baixo: <b>\"Proíbe, Controla, Avisa, Libera\"</b> — inaceitável, alto, limitado, mínimo.</div>\n<p><b>Outros marcos:</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Princípios da OCDE (2019, atualizados em 2024)</span> primeiro padrão intergovernamental; o Brasil aderiu. Crescimento inclusivo, direitos humanos, transparência, robustez e segurança, responsabilização</div>\n  <div class=\"def\"><span class=\"def-t\">Recomendação da UNESCO sobre Ética da IA (2021)</span> primeiro padrão global de ética em IA, adotado pelos países-membros; enfatiza direitos humanos, diversidade e meio ambiente</div>\n  <div class=\"def\"><span class=\"def-t\">ISO/IEC 42001:2023</span> norma de <b>sistema de gestão de IA</b> (AIMS) — certificável, no mesmo molde da ISO 27001 (ciclo PDCA). Ligue: 27001 = gestão de segurança da informação; 42001 = gestão de IA</div>\n  <div class=\"def\"><span class=\"def-t\">NIST AI RMF (EUA, 2023)</span> guia voluntário de gestão de riscos de IA: governar, mapear, medir e gerenciar</div>\n</div>\n"
+            },
+            {
+              "titulo": "IA, LGPD e a ANPD",
+              "html": "\n<p>Enquanto não há lei de IA, quem regula o uso de dados pessoais em IA no Brasil é a <b>LGPD</b>, fiscalizada pela ANPD.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Art. 20 — decisões automatizadas</span> o titular pode pedir <b>revisão</b> de decisões tomadas <b>unicamente</b> com base em tratamento automatizado que afetem seus interesses (perfil pessoal, profissional, de consumo, de crédito). O controlador deve informar <b>critérios e procedimentos</b> da decisão, respeitados os segredos comercial e industrial</div>\n  <div class=\"def\"><span class=\"def-t\">Pegadinha do art. 20</span> a LGPD <b>não exige</b> que a revisão seja feita por pessoa natural — a exigência de revisão humana foi retirada em 2019 (Lei 13.853). Revisão humana obrigatória é proposta do PL 2.338 para sistemas de alto risco</div>\n  <div class=\"def\"><span class=\"def-t\">Base legal</span> treinar IA com dados pessoais exige base legal (art. 7º; para dados sensíveis, art. 11). O legítimo interesse exige teste de proporcionalidade e transparência</div>\n  <div class=\"def\"><span class=\"def-t\">Princípios (art. 6º)</span> finalidade, necessidade (mínimo de dados), transparência e <b>não discriminação</b> — este último é o fundamento legal contra o viés algorítmico</div>\n  <div class=\"def\"><span class=\"def-t\">Anonimização</span> dado anonimizado não é dado pessoal — salvo se a anonimização puder ser revertida (art. 12)</div>\n</div>\n<p><b>ANPD em 2024–2026:</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Caso Meta (jul/2024)</span> a ANPD suspendeu cautelarmente a nova política da Meta de usar dados de brasileiros para treinar IA — primeiro grande caso de IA na autoridade</div>\n  <div class=\"def\"><span class=\"def-t\">Virou agência</span> a MP 1.317/2025, aprovada pelo Congresso em fevereiro de 2026, transformou a Autoridade Nacional em <b>Agência Nacional de Proteção de Dados</b> (a sigla continua ANPD), autarquia com autonomia reforçada, novos cargos de especialista e a missão de fiscalizar também o <b>ECA Digital</b> (Lei 15.211/2025, proteção de crianças e adolescentes no ambiente digital)</div>\n  <div class=\"def\"><span class=\"def-t\">No PL 2.338</span> a ANPD seria a coordenadora do SIA, a futura regulação de IA</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Recorte DataPrev: a empresa processa dados de benefícios do INSS e usa automação na concessão. Qualquer questão que junte \"decisão automatizada + benefício\" puxa o <b>art. 20 da LGPD</b> (revisão e explicação) e, no AI Act, o nível <b>alto risco</b>.</div>\n"
+            }
+          ],
+          "flashcards": [
+            {
+              "tema": "Conceitos",
+              "pergunta": "Qual a relação entre IA, machine learning, deep learning e IA generativa?",
+              "resposta": "Caixas dentro de caixas: IA ⊃ ML (aprende com dados) ⊃ deep learning (redes neurais profundas) ⊃ IA generativa/LLMs. Um sistema de regras é IA mas não é ML."
+            },
+            {
+              "tema": "Conceitos",
+              "pergunta": "IA simbólica x conexionista?",
+              "resposta": "Simbólica: regras e lógica escritas por humanos (sistemas especialistas), explicável. Conexionista: aprende com dados via redes neurais, pouco explicável."
+            },
+            {
+              "tema": "Conceitos",
+              "pergunta": "IA fraca x IA forte?",
+              "resposta": "Fraca/estreita: tarefas específicas — toda IA atual, inclusive LLMs. Forte/geral (AGI): inteligência humana em qualquer tarefa — hipotética."
+            },
+            {
+              "tema": "Conceitos",
+              "pergunta": "O que é o Teste de Turing?",
+              "resposta": "Proposto por Alan Turing (1950): a máquina é considerada inteligente se um humano, conversando às cegas, não consegue distingui-la de uma pessoa."
+            },
+            {
+              "tema": "ML",
+              "pergunta": "Supervisionado, não supervisionado e por reforço — o que cada um recebe?",
+              "resposta": "Supervisionado: dados com rótulo (resposta certa). Não supervisionado: dados sem rótulo. Reforço: recompensas/punições de um ambiente."
+            },
+            {
+              "tema": "ML",
+              "pergunta": "Classificação e regressão são de que tipo de aprendizado? E agrupamento?",
+              "resposta": "Classificação (categoria) e regressão (número) são supervisionadas. Agrupamento e associação são não supervisionados."
+            },
+            {
+              "tema": "ML",
+              "pergunta": "O que é overfitting?",
+              "resposta": "Sobreajuste: o modelo decora o treino, vai bem nele e mal em dados novos (não generaliza)."
+            },
+            {
+              "tema": "ML",
+              "pergunta": "Para que servem os conjuntos de treino, validação e teste?",
+              "resposta": "Treino: aprender. Validação: ajustar configurações e escolher o modelo. Teste: avaliação final com dados nunca vistos."
+            },
+            {
+              "tema": "ML",
+              "pergunta": "Precisão x recall?",
+              "resposta": "Precisão: dos que o modelo apontou como positivos, quantos eram. Recall: dos positivos reais, quantos o modelo encontrou."
+            },
+            {
+              "tema": "ML",
+              "pergunta": "Por que acurácia alta pode enganar?",
+              "resposta": "Com classes desbalanceadas: se 90% não é fraude, um modelo que diz 'nunca é fraude' tem 90% de acurácia e recall zero."
+            },
+            {
+              "tema": "ML",
+              "pergunta": "k-NN x k-means?",
+              "resposta": "k-NN classifica pelos vizinhos mais próximos (supervisionado). k-means forma k grupos (não supervisionado)."
+            },
+            {
+              "tema": "ML",
+              "pergunta": "Algoritmo genético é aprendizado com dados?",
+              "resposta": "Não. É técnica de otimização/busca inspirada na evolução (seleção, cruzamento, mutação)."
+            },
+            {
+              "tema": "Deep learning",
+              "pergunta": "Para que serve cada arquitetura: CNN, RNN, Transformer, GAN?",
+              "resposta": "CNN: imagens. RNN/LSTM: sequências. Transformer: linguagem, via mecanismo de atenção (base dos LLMs). GAN: gerar conteúdo com duas redes competindo (deepfakes)."
+            },
+            {
+              "tema": "Deep learning",
+              "pergunta": "Qual o mecanismo central do Transformer?",
+              "resposta": "A atenção (self-attention): cada token pondera a relevância de todos os outros; permite processamento em paralelo. Artigo de 2017."
+            },
+            {
+              "tema": "Generativa",
+              "pergunta": "O que é um LLM e qual sua tarefa básica de treino?",
+              "resposta": "Grande modelo de linguagem baseado em Transformer, treinado para prever o próximo token em enormes volumes de texto."
+            },
+            {
+              "tema": "Generativa",
+              "pergunta": "O que é token e janela de contexto?",
+              "resposta": "Token: pedaço de texto processado pelo modelo. Janela de contexto: quantidade de tokens que o modelo considera de uma vez."
+            },
+            {
+              "tema": "Generativa",
+              "pergunta": "O que é embedding?",
+              "resposta": "Vetor numérico que representa um texto de forma que sentidos parecidos fiquem próximos; base da busca semântica e do RAG."
+            },
+            {
+              "tema": "Generativa",
+              "pergunta": "O que é alucinação?",
+              "resposta": "Resposta fluente e convincente, porém falsa ou inventada. Ocorre porque o modelo gera o texto provável, não o verificado."
+            },
+            {
+              "tema": "Generativa",
+              "pergunta": "RAG x fine-tuning?",
+              "resposta": "RAG busca documentos externos na hora da pergunta, sem alterar pesos (bom para conhecimento atualizado). Fine-tuning retreina e altera os pesos (bom para especializar comportamento)."
+            },
+            {
+              "tema": "Generativa",
+              "pergunta": "O que é RLHF?",
+              "resposta": "Aprendizado por reforço com feedback humano: avaliadores classificam respostas e o modelo aprende a preferir as melhores."
+            },
+            {
+              "tema": "Generativa",
+              "pergunta": "Zero-shot x few-shot?",
+              "resposta": "Zero-shot: pedir a tarefa sem exemplos. Few-shot: incluir alguns exemplos no prompt."
+            },
+            {
+              "tema": "Generativa",
+              "pergunta": "O que é temperatura num LLM?",
+              "resposta": "Parâmetro de aleatoriedade: baixa gera respostas mais previsíveis; alta, mais variadas e arriscadas."
+            },
+            {
+              "tema": "Ética",
+              "pergunta": "De onde vem o viés algorítmico?",
+              "resposta": "Dos dados de treino (padrões históricos de discriminação) e das escolhas humanas no projeto. A IA não é neutra por ser matemática."
+            },
+            {
+              "tema": "Ética",
+              "pergunta": "O que é explicabilidade (XAI)?",
+              "resposta": "Capacidade de explicar por que o sistema tomou uma decisão; crítica em decisões que afetam direitos. Redes profundas são 'caixas-pretas'."
+            },
+            {
+              "tema": "Ética",
+              "pergunta": "Quais os princípios que se repetem nas normas de IA?",
+              "resposta": "Transparência, explicabilidade, justiça/não discriminação, supervisão humana, privacidade e responsabilização (TEJ-SPR)."
+            },
+            {
+              "tema": "Regulação BR",
+              "pergunta": "Qual a situação do PL 2.338/2023 em set/2026?",
+              "resposta": "Aprovado no Senado em 10/12/2024; na Câmara (comissão especial, relator Aguinaldo Ribeiro) sem votação — adiada para depois das eleições. O Brasil não tem lei geral de IA."
+            },
+            {
+              "tema": "Regulação BR",
+              "pergunta": "Que níveis de risco o PL 2.338 prevê?",
+              "resposta": "Risco excessivo (proibido) e alto risco (permitido com obrigações, como avaliação de impacto algorítmico). Classificação inicia com avaliação preliminar."
+            },
+            {
+              "tema": "Regulação BR",
+              "pergunta": "O que é o SIA no PL 2.338?",
+              "resposta": "Sistema Nacional de Regulação e Governança de IA, coordenado pela ANPD."
+            },
+            {
+              "tema": "Regulação BR",
+              "pergunta": "O que é o PBIA?",
+              "resposta": "Plano Brasileiro de IA 2024–2028, 'IA para o Bem de Todos', com cerca de R$ 23 bilhões em investimentos. É política pública, não lei."
+            },
+            {
+              "tema": "Regulação BR",
+              "pergunta": "Regras do TSE para IA nas eleições de 2026?",
+              "resposta": "Res. 23.755/2026: rotular conteúdo sintético; proibir deepfake para prejudicar/favorecer candidatura; nada de conteúdo sintético novo de 72h antes a 24h depois da votação; punição até cassação."
+            },
+            {
+              "tema": "Regulação UE",
+              "pergunta": "Quais os 4 níveis de risco do AI Act?",
+              "resposta": "Inaceitável (proibido), alto (obrigações pesadas), limitado (transparência) e mínimo (livre). 'Proíbe, Controla, Avisa, Libera'."
+            },
+            {
+              "tema": "Regulação UE",
+              "pergunta": "Datas-chave do AI Act?",
+              "resposta": "Em vigor em 1/8/2024; proibições desde 2/2/2025; modelos de propósito geral desde 2/8/2025; transparência 2/8/2026; alto risco adiado para 2/12/2027 (Digital Omnibus)."
+            },
+            {
+              "tema": "Normas",
+              "pergunta": "O que é a ISO/IEC 42001?",
+              "resposta": "Norma (2023) de sistema de gestão de IA, certificável, no molde da ISO 27001 (PDCA)."
+            },
+            {
+              "tema": "LGPD e IA",
+              "pergunta": "O que garante o art. 20 da LGPD?",
+              "resposta": "Direito de pedir revisão de decisões tomadas unicamente por tratamento automatizado que afetem interesses do titular, e de receber informações sobre critérios e procedimentos (respeitado o segredo comercial)."
+            },
+            {
+              "tema": "LGPD e IA",
+              "pergunta": "A LGPD exige revisão humana das decisões automatizadas?",
+              "resposta": "Não. A exigência de revisão por pessoa natural foi retirada em 2019 (Lei 13.853)."
+            },
+            {
+              "tema": "LGPD e IA",
+              "pergunta": "O que mudou na ANPD em 2026?",
+              "resposta": "A MP 1.317/2025, aprovada em fev/2026, transformou-a em Agência Nacional de Proteção de Dados (autarquia com mais autonomia), também responsável pelo ECA Digital (Lei 15.211/2025)."
+            }
+          ],
+          "simulados": [
+            {
+              "id": "inteligencia-artificial-01",
+              "nome": "Fundamentos: ML, deep learning e IA generativa",
+              "descricao": "A Q58 original da FGV 2024 e mais onze questões sobre o mapa IA → ML → deep learning, tipos de aprendizado, overfitting, métricas, Transformer, RAG e alucinação.",
+              "nivel": "Treino",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "FGV 2024 · Q58 · Conceitos",
+                  "text": "A Inteligência Artificial (IA) é uma área da ciência da computação que visa desenvolver sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana. O conceito que está mais diretamente relacionado ao desenvolvimento de sistemas que aprendem com os dados e melhoram seu desempenho ao longo do tempo é o de",
+                  "options": [
+                    "Algoritmo Genético.",
+                    "Redes Neurais Artificiais.",
+                    "Lógica Booleana.",
+                    "Busca Heurística.",
+                    "Programação Linear."
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito oficial: B. 'Aprender com dados e melhorar com o tempo' é aprendizado de máquina, e redes neurais são a técnica de ML entre as opções. Algoritmo genético e busca heurística são técnicas de busca/otimização; lógica booleana é base da IA simbólica; programação linear é otimização matemática."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Conceitos",
+                  "text": "Um sistema de concessão de benefícios aplica 200 regras do tipo 'se-então', escritas por especialistas a partir da legislação, sem nenhuma etapa de treinamento com dados. Esse sistema",
+                  "options": [
+                    "é aprendizado de máquina supervisionado, pois as regras funcionam como rótulos.",
+                    "não pode ser considerado IA, pois não utiliza redes neurais.",
+                    "é um exemplo de IA simbólica, como os sistemas especialistas, mas não de aprendizado de máquina.",
+                    "é um exemplo de IA forte, por reproduzir o raciocínio de especialistas humanos.",
+                    "é um modelo de deep learning com poucas camadas."
+                  ],
+                  "answer": 2,
+                  "exp": "C. Regras escritas por humanos = IA simbólica (sistema especialista). É IA, mas não é ML, porque não aprende com dados. IA forte (D) não existe hoje."
+                },
+                {
+                  "type": "mc",
+                  "tag": "ML",
+                  "text": "Uma equipe dispõe de um histórico de 50 mil requerimentos já analisados, cada um marcado como 'deferido' ou 'indeferido', e quer um modelo que preveja o resultado de novos requerimentos. Trata-se de uma tarefa de",
+                  "options": [
+                    "aprendizado não supervisionado do tipo agrupamento.",
+                    "aprendizado supervisionado do tipo classificação.",
+                    "aprendizado por reforço.",
+                    "aprendizado supervisionado do tipo regressão.",
+                    "regras de associação."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Há rótulo (deferido/indeferido) → supervisionado; a saída é uma categoria → classificação. Regressão (D) seria prever um número."
+                },
+                {
+                  "type": "mc",
+                  "tag": "ML",
+                  "text": "Um banco quer dividir seus clientes em grupos com comportamentos de consumo semelhantes, sem saber de antemão quantos ou quais grupos existem. A técnica adequada é",
+                  "options": [
+                    "regressão linear.",
+                    "classificação com árvore de decisão.",
+                    "agrupamento (clustering), como o k-means.",
+                    "aprendizado por reforço.",
+                    "k-NN."
+                  ],
+                  "answer": 2,
+                  "exp": "C. Sem rótulos, procurando grupos → não supervisionado, agrupamento. Não confunda k-means (agrupa) com k-NN (classifica, supervisionado)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "ML",
+                  "text": "Um modelo apresentou 99% de acerto nos dados de treinamento e apenas 62% em dados novos. Esse comportamento caracteriza",
+                  "options": [
+                    "underfitting, pois o modelo é simples demais.",
+                    "overfitting, pois o modelo memorizou o treino e não generaliza.",
+                    "alucinação, típica de modelos de linguagem.",
+                    "viés de seleção, necessariamente.",
+                    "um modelo adequado, já que a acurácia de treino é alta."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Ótimo no treino e ruim no novo = sobreajuste. Underfitting vai mal até no treino."
+                },
+                {
+                  "type": "mc",
+                  "tag": "ML · Métricas",
+                  "text": "Um detector de fraudes analisou 1.000 pedidos, dos quais 50 eram fraudes. Ele apontou 40 pedidos como fraudulentos, dos quais 30 eram realmente fraudes. A precisão e o recall do modelo são, respectivamente,",
+                  "options": [
+                    "75% e 60%.",
+                    "60% e 75%.",
+                    "97% e 75%.",
+                    "75% e 97%.",
+                    "30% e 50%."
+                  ],
+                  "answer": 0,
+                  "exp": "A. Precisão = acertos entre os apontados = 30/40 = 75%. Recall = fraudes encontradas entre as reais = 30/50 = 60%. (A acurácia seria (30 + 940)/1000 = 97% — alta, mas engana.)"
+                },
+                {
+                  "type": "mc",
+                  "tag": "Deep learning",
+                  "text": "A arquitetura baseada no mecanismo de atenção, que permite processar sequências em paralelo e é a base dos grandes modelos de linguagem atuais, é a",
+                  "options": [
+                    "rede convolucional (CNN).",
+                    "rede recorrente (RNN).",
+                    "rede adversarial generativa (GAN).",
+                    "Transformer.",
+                    "árvore de decisão."
+                  ],
+                  "answer": 3,
+                  "exp": "D. Transformer (2017), baseado em atenção. CNN é para imagem; RNN processa sequência em ordem, sem paralelismo; GAN gera conteúdo com duas redes competindo."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Generativa",
+                  "text": "Um órgão público quer que um assistente baseado em LLM responda dúvidas dos cidadãos sempre com base nas normas vigentes, que mudam com frequência, sem precisar retreinar o modelo. A técnica mais adequada é",
+                  "options": [
+                    "aumentar a temperatura do modelo.",
+                    "fine-tuning semanal com as normas novas.",
+                    "RAG (geração aumentada por recuperação), buscando os trechos das normas a cada pergunta.",
+                    "reduzir a janela de contexto.",
+                    "usar aprendizado não supervisionado."
+                  ],
+                  "answer": 2,
+                  "exp": "C. RAG injeta documentos atualizados na hora da pergunta, sem alterar os pesos, e reduz alucinação. Fine-tuning (B) é caro e não é o jeito certo de manter fatos atualizados."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Generativa",
+                  "text": "Em modelos de linguagem, 'alucinação' é o fenômeno em que o modelo",
+                  "options": [
+                    "se recusa a responder perguntas fora do seu domínio.",
+                    "produz resposta fluente e convincente, porém factualmente incorreta ou inventada.",
+                    "repete literalmente trechos dos dados de treinamento.",
+                    "excede a janela de contexto e trava.",
+                    "reproduz preconceitos presentes nos dados de treino."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Alucinação é inventar com confiança (ex.: citar lei inexistente). E descreve viés, não alucinação."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Generativa",
+                  "text": "Julgue: em um LLM, os embeddings são representações vetoriais de textos, construídas de modo que textos com significados semelhantes fiquem próximos no espaço vetorial.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. É a definição de embedding, base da busca semântica usada no RAG."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Generativa",
+                  "text": "Julgue: aumentar a temperatura de um LLM torna suas respostas mais determinísticas e previsíveis.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. Temperatura alta aumenta a aleatoriedade; para respostas previsíveis, usa-se temperatura baixa."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Conceitos",
+                  "text": "Julgue: os grandes modelos de linguagem atuais, como os usados em assistentes conversacionais, são exemplos de IA forte (geral), por conseguirem executar tarefas variadas.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. Toda IA existente é fraca/estreita. Versatilidade não é o mesmo que inteligência geral comparável à humana (AGI), que segue hipotética."
+                }
+              ]
+            },
+            {
+              "id": "inteligencia-artificial-02",
+              "nome": "Ética, regulação e privacidade",
+              "descricao": "Doze questões sobre viés, explicabilidade, PL 2.338/2023, TSE 2026, AI Act, ISO 42001, art. 20 da LGPD e a nova ANPD.",
+              "nivel": "Treino",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "Ética",
+                  "text": "Um sistema de seleção de currículos, treinado com as contratações dos últimos dez anos de uma empresa que historicamente contratou poucas mulheres para cargos técnicos, passou a pontuar pior as candidatas. Esse fenômeno é denominado",
+                  "options": [
+                    "alucinação.",
+                    "overfitting.",
+                    "viés algorítmico, originado nos dados de treinamento.",
+                    "falha de explicabilidade.",
+                    "ataque adversarial."
+                  ],
+                  "answer": 2,
+                  "exp": "C. O modelo aprendeu o padrão histórico discriminatório presente nos dados. A IA não é neutra: reproduz o que os dados carregam."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Ética",
+                  "text": "Sobre explicabilidade em sistemas de IA, assinale a afirmativa correta.",
+                  "options": [
+                    "Redes neurais profundas são naturalmente transparentes, pois cada peso tem significado claro.",
+                    "Explicabilidade é a capacidade de esclarecer por que o sistema chegou a determinada decisão, sendo especialmente relevante quando a decisão afeta direitos.",
+                    "Explicabilidade só importa em sistemas de IA simbólica.",
+                    "Sistemas explicáveis dispensam supervisão humana.",
+                    "A LGPD proíbe qualquer decisão automatizada que não seja plenamente explicável."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Redes profundas são 'caixas-pretas' (A errada). A LGPD garante informação sobre critérios e revisão, não proíbe decisões automatizadas (E errada)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Regulação BR",
+                  "text": "Sobre o PL nº 2.338/2023, que trata do uso da inteligência artificial no Brasil, é correto afirmar, considerando a situação em setembro de 2026, que",
+                  "options": [
+                    "foi sancionado em 2025 e está plenamente em vigor.",
+                    "foi aprovado pelo Senado e aguarda deliberação da Câmara dos Deputados, adotando abordagem baseada em riscos.",
+                    "cria a ANPD, até então inexistente, para fiscalizar sistemas de IA.",
+                    "proíbe totalmente o uso de IA pelo poder público.",
+                    "adota modelo sem classificação de riscos, com as mesmas obrigações para todos os sistemas."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Aprovado pelo Senado em 10/12/2024, está na Câmara sem votação. A ANPD já existe desde a LGPD; o PL a coloca como coordenadora do SIA."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Regulação BR",
+                  "text": "No texto do PL nº 2.338/2023 aprovado pelo Senado, a utilização, pelo poder público, de sistema que avalia e classifica pessoas com base em seu comportamento social para definir o acesso a bens, serviços e políticas públicas de forma ilegítima é considerada de",
+                  "options": [
+                    "risco mínimo.",
+                    "risco limitado, bastando informar o cidadão.",
+                    "alto risco, permitida mediante avaliação de impacto.",
+                    "risco excessivo, sendo vedada.",
+                    "risco médio, dependente de autorização judicial."
+                  ],
+                  "answer": 3,
+                  "exp": "D. O 'social scoring' pelo poder público está na lista de risco excessivo (proibido) — assim como no AI Act europeu, onde é risco inaceitável."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Regulação BR",
+                  "text": "De acordo com as regras do TSE para as eleições de 2026, é correto afirmar que",
+                  "options": [
+                    "o uso de IA em propaganda eleitoral está totalmente proibido.",
+                    "conteúdos sintéticos gerados ou alterados por IA devem ser rotulados, e é vedada a divulgação de conteúdo sintético novo nas 72 horas anteriores à votação até 24 horas depois.",
+                    "deepfakes são permitidos desde que favoreçam o próprio candidato.",
+                    "a rotulagem de conteúdo sintético é facultativa.",
+                    "a única sanção possível é a multa."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Res. TSE 23.755/2026: rotulagem obrigatória, proibição de deepfake para prejudicar ou favorecer, janela de 72h antes a 24h depois, e sanções que vão até cassação do registro ou mandato."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Regulação UE",
+                  "text": "O AI Act europeu classifica os sistemas de IA em níveis de risco. Um chatbot de atendimento ao público, que apenas precisa informar ao usuário que ele está interagindo com uma máquina, enquadra-se no nível de risco",
+                  "options": [
+                    "inaceitável.",
+                    "alto.",
+                    "limitado.",
+                    "mínimo.",
+                    "sistêmico."
+                  ],
+                  "answer": 2,
+                  "exp": "C. Risco limitado = obrigações de transparência (avisar que é IA, rotular deepfake). Ordem: inaceitável, alto, limitado, mínimo — 'Proíbe, Controla, Avisa, Libera'."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Regulação UE",
+                  "text": "Julgue: sistemas de IA usados para avaliar o direito de pessoas a benefícios e serviços públicos essenciais são classificados como de alto risco no AI Act, sujeitos a obrigações como supervisão humana e gestão de riscos.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. Acesso a benefícios públicos está entre as áreas de alto risco (Anexo III). As obrigações de alto risco foram adiadas pelo Digital Omnibus para 2/12/2027, mas a classificação permanece."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Normas",
+                  "text": "A norma internacional que especifica requisitos para estabelecer, implementar, manter e melhorar continuamente um sistema de gestão de inteligência artificial em uma organização é a",
+                  "options": [
+                    "ISO/IEC 27001.",
+                    "ISO/IEC 27002.",
+                    "ISO/IEC 42001.",
+                    "ISO 9001.",
+                    "ISO/IEC 20926."
+                  ],
+                  "answer": 2,
+                  "exp": "C. ISO/IEC 42001:2023 — sistema de gestão de IA. 27001 é gestão de segurança da informação; 27002, controles de segurança; 20926 é a norma da APF (IFPUG)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "LGPD e IA",
+                  "text": "Um segurado teve um pedido negado por um sistema que decide de forma totalmente automatizada. À luz do art. 20 da LGPD, ele tem direito a",
+                  "options": [
+                    "solicitar a revisão da decisão e obter informações claras sobre os critérios e procedimentos utilizados, observados os segredos comercial e industrial.",
+                    "exigir, obrigatoriamente, que a revisão seja feita por uma pessoa natural.",
+                    "obter o código-fonte completo do sistema.",
+                    "anular automaticamente a decisão, por ser vedado o tratamento automatizado.",
+                    "nenhum direito específico, pois a LGPD não trata de decisões automatizadas."
+                  ],
+                  "answer": 0,
+                  "exp": "A. O art. 20 garante revisão e informação sobre critérios. A exigência de revisão por pessoa natural foi retirada em 2019 (B errada). O segredo comercial protege o código (C errada)."
+                },
+                {
+                  "type": "ce",
+                  "tag": "LGPD e IA",
+                  "text": "Julgue: o princípio da não discriminação, previsto no art. 6º da LGPD, veda o tratamento de dados para fins discriminatórios ilícitos ou abusivos e serve de fundamento contra o viés algorítmico em sistemas de IA.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 0,
+                  "exp": "Certo. Art. 6º, IX. Enquanto não há lei de IA, é na LGPD que se ancora o combate ao viés em decisões baseadas em dados pessoais."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Atualidades",
+                  "text": "Em 2026, a Autoridade Nacional de Proteção de Dados passou por mudança institucional relevante. Assinale a alternativa correta.",
+                  "options": [
+                    "Foi extinta, e suas funções foram transferidas ao TSE.",
+                    "Foi transformada em Agência Nacional de Proteção de Dados, com status de agência reguladora e competência também sobre o ECA Digital.",
+                    "Passou a ser subordinada ao Ministério da Fazenda, sem autonomia.",
+                    "Foi incorporada à estrutura da DataPrev.",
+                    "Tornou-se órgão do Poder Judiciário."
+                  ],
+                  "answer": 1,
+                  "exp": "B. A MP 1.317/2025, aprovada em fevereiro de 2026, transformou a ANPD em Agência Nacional de Proteção de Dados, com mais autonomia e novos cargos, e atribuição de fiscalizar o ECA Digital (Lei 15.211/2025)."
+                },
+                {
+                  "type": "ce",
+                  "tag": "Atualidades",
+                  "text": "Julgue: o Plano Brasileiro de Inteligência Artificial (PBIA 2024–2028), intitulado 'IA para o Bem de Todos', é uma lei federal que regula os níveis de risco dos sistemas de IA.",
+                  "options": [
+                    "Certo",
+                    "Errado"
+                  ],
+                  "answer": 1,
+                  "exp": "Errado. O PBIA é um plano de investimentos e política pública (cerca de R$ 23 bilhões), não uma lei. Quem regula riscos é a proposta do PL 2.338/2023, ainda não aprovada."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "especificas",
+      "nome": "Conhecimentos Específicos (TI)",
+      "icon": "ti-code",
+      "descricao": "30 questões com peso 2,5 no Módulo II. Começa pela revisão dos erros da prova FGV 2024.",
+      "materias": [
+        {
+          "id": "ti-erros-2024",
+          "nome": "TI — Revisão dos meus erros na prova FGV 2024",
+          "icon": "ti-target",
+          "descricao": "As 7 questões de específicas que você errou ou chutou na prova DataPrev 2024 (46, 47, 60, 62, 63, 64 e 67), explicadas do zero: SSL/TLS, Ponto de Função x Story Points, modelos de controle de acesso, X.800, ETL x ELT, Sistemas de Suporte à Decisão e OWASP Top 10 (2021 e 2025).",
+          "resumo": [
+            {
+              "titulo": "Diagnóstico: onde você perdeu os pontos",
+              "html": "\n<p>Na prova FGV 2024 você fez <b>25 de 30</b> nas específicas. Os 5 erros e as 2 marcadas por eliminação têm um ponto em comum: <b>nenhum é de programação</b>. São todos de teoria de segurança, de métricas e de dados/BI — o que um dev não usa no dia a dia e, por isso, não lembra na hora.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Q46 · errou</span> diferença entre SSL e TLS no HTTPS → gabarito <b>B</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q47 · errou</span> Ponto de Função x Story Points → gabarito <b>A</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q62 · errou</span> controle de acesso por rótulos de segurança → gabarito <b>B (mandatório)</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q64 · errou</span> mecanismo de segurança <i>específico</i> na X.800 → gabarito <b>C (preenchimento de tráfego)</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q67 · errou</span> a INCORRETA sobre ETL x ELT → gabarito <b>D</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q60 · chute</span> SSD e tipos de problema → gabarito <b>D</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q63 · chute</span> categoria do OWASP Top 10:2021 → gabarito <b>A (SSRF)</b></div>\n</div>\n<p>Cada seção abaixo começa do zero, explica os termos e termina com a <b>autópsia da questão</b>: por que a certa é certa e como a FGV montou as erradas. No fim, o simulado 01 traz as 7 questões originais para você refazer e o 02 traz questões novas nos mesmos temas.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Peso: cada questão de específica vale <b>2,5 pontos</b>. Recuperar só 3 destes 7 temas = +7,5 pontos — mais do que você ganharia subindo Legislação de 1 para 5.</div>\n"
+            },
+            {
+              "titulo": "HTTPS, SSL e TLS — do zero (Q46)",
+              "html": "\n<p><b>O problema.</b> O HTTP manda tudo em texto puro: quem estiver no meio do caminho (o Wi-Fi do café, um roteador invadido) lê e altera a senha, o número do cartão, tudo. O <b>HTTPS</b> é o mesmo HTTP, só que passando por dentro de um \"túnel\" cifrado. Quem cria esse túnel é um protocolo da camada de segurança: primeiro foi o <b>SSL</b>, hoje é o <b>TLS</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">SSL</span> <i>Secure Sockets Layer</i>. Criado pela Netscape nos anos 90 (versões 2.0 e 3.0). Todas as versões têm falhas graves conhecidas e estão <b>proibidas/obsoletas</b> (o SSL 3.0 caiu de vez com o ataque POODLE, em 2014)</div>\n  <div class=\"def\"><span class=\"def-t\">TLS</span> <i>Transport Layer Security</i>. É o <b>sucessor</b> do SSL, padronizado pela IETF: TLS 1.0 (1999), 1.1, <b>1.2 (2008)</b> e <b>1.3 (2018)</b>. Hoje só 1.2 e 1.3 são aceitos como seguros</div>\n  <div class=\"def\"><span class=\"def-t\">\"Certificado SSL\"</span> é só o nome comercial que ficou. O certificado que você compra hoje é usado pelo <b>TLS</b>; ninguém mais negocia SSL de verdade</div>\n</div>\n<p><b>Como o túnel é montado (handshake).</b> A ideia central é combinar os dois tipos de criptografia:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Olá</span> o navegador diz quais versões e algoritmos aceita; o servidor escolhe e manda seu <b>certificado digital</b></div>\n  <div class=\"def\"><span class=\"def-t\">2. Confiança</span> o navegador confere se o certificado foi assinado por uma Autoridade Certificadora em que ele confia (cadeia de confiança) e se é daquele domínio</div>\n  <div class=\"def\"><span class=\"def-t\">3. Chave de sessão</span> usando criptografia <b>assimétrica</b> (par de chaves pública/privada, ou troca Diffie-Hellman), os dois combinam uma chave secreta sem nunca enviá-la</div>\n  <div class=\"def\"><span class=\"def-t\">4. Dados</span> daí em diante tudo vai cifrado com criptografia <b>simétrica</b> (AES, ChaCha20), que é muito mais rápida</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Assimétrica <b>apresenta e combina</b>; simétrica <b>carrega</b> os dados. É a mesma lógica de ligar para alguém para combinar a senha do cofre e depois usar a senha.</div>\n<p><b>O que o TLS 1.3 mudou</b> (cai como \"melhoria\"): handshake mais curto (1 ida e volta, e 0-RTT na reconexão), retirou algoritmos fracos, e tornou obrigatório o <b>sigilo futuro</b> (<i>forward secrecy</i>) — se a chave privada do servidor vazar amanhã, o tráfego gravado hoje continua ilegível.</p>\n<p><b>Autópsia da Q46.</b> Certa: <b>(B) o TLS substitui o SSL, corrigindo vulnerabilidades e implementando melhorias</b>. As erradas:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">(A)</span> inverte: o SSL é o <b>menos</b> seguro</div>\n  <div class=\"def\"><span class=\"def-t\">(C)</span> \"intercambiáveis, mesmo nível de segurança\" — não; um é obsoleto</div>\n  <div class=\"def\"><span class=\"def-t\">(D)</span> \"HTTPS só funciona com SSL\" — hoje funciona praticamente só com TLS</div>\n  <div class=\"def\"><span class=\"def-t\">(E)</span> inventa uma divisão de tarefas (SSL autentica, TLS cifra). Os dois nunca trabalham juntos; cada um faz autenticação <b>e</b> cifragem sozinho</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Regra FGV para comparar tecnologias \"velha x nova\": a resposta quase sempre é <b>\"a nova substitui/evolui a antiga\"</b>. Alternativas com \"são equivalentes\", \"são usadas em conjunto\" ou \"a antiga é melhor\" costumam ser as armadilhas.</div>\n"
+            },
+            {
+              "titulo": "Ponto de Função x Story Points (Q47)",
+              "html": "\n<p><b>Por que medir tamanho de software?</b> Para estimar prazo e custo e, no setor público, para <b>pagar o fornecedor</b>. Existem dois mundos: medir o software pelo que ele <i>entrega</i> (Ponto de Função) ou estimar o <i>esforço</i> que o time sente (Story Points).</p>\n<p><b>Análise de Pontos de Função (APF)</b> — método da <b>IFPUG</b> (padronizado como ISO/IEC 20926). Mede o <b>tamanho funcional</b>: o que o sistema faz <b>do ponto de vista do usuário</b>, sem olhar linguagem, tecnologia ou quem vai programar. Por isso é <b>objetiva, padronizada e comparável</b> entre projetos e empresas — e é a base dos contratos de software do governo (o Roteiro de Métricas do SISP).</p>\n<p>A contagem olha para dois tipos de função:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">ALI</span> <b>Arquivo Lógico Interno</b> — grupo de dados que o próprio sistema mantém (ex.: cadastro de segurados que o sistema grava)</div>\n  <div class=\"def\"><span class=\"def-t\">AIE</span> <b>Arquivo de Interface Externa</b> — dados que o sistema só <b>lê</b>, mantidos por outro sistema (ex.: tabela de CEP dos Correios)</div>\n  <div class=\"def\"><span class=\"def-t\">EE</span> <b>Entrada Externa</b> — processo que recebe dados de fora e altera um ALI (ex.: incluir segurado)</div>\n  <div class=\"def\"><span class=\"def-t\">SE</span> <b>Saída Externa</b> — manda dados para fora <b>com cálculo/derivação</b> (ex.: relatório com totais)</div>\n  <div class=\"def\"><span class=\"def-t\">CE</span> <b>Consulta Externa</b> — manda dados para fora <b>sem cálculo</b>, só recupera (ex.: ver dados de um segurado)</div>\n</div>\n<p>Cada função recebe complexidade baixa/média/alta e vira pontos (ALI simples = 7, AIE simples = 5, EE simples = 3, SE simples = 4, CE simples = 3). A soma é o <b>PF não ajustado</b>; o antigo fator de ajuste (0,65 a 1,35) hoje é opcional.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Dados: <b>ALI</b> = meu arquivo (eu mantenho), <b>AIE</b> = arquivo do vizinho (só leio). Transações: <b>EE</b> entra; <b>SE</b> sai <b>calculando</b>; <b>CE</b> sai <b>só consultando</b>.</div>\n<p><b>Story Points</b> — técnica ágil. É uma medida <b>relativa</b> de esforço + complexidade + incerteza de uma história, estimada pelo próprio time comparando histórias entre si (\"esta é o dobro daquela\"). Usa a sequência de Fibonacci (1, 2, 3, 5, 8, 13…) e o <b>Planning Poker</b>. A soma de pontos entregues por sprint é a <b>velocidade</b> (<i>velocity</i>).</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Ponto de Função</span> objetivo · padronizado (manual IFPUG) · independente do time e da tecnologia · comparável entre projetos · bom para <b>contrato formal e escopo fechado</b> · contagem mais demorada</div>\n  <div class=\"def\"><span class=\"def-t\">Story Points</span> subjetivo/relativo · vale só dentro <b>daquele</b> time · <b>não</b> se compara entre times · rápido · bom para planejamento de sprint e escopo que muda</div>\n</div>\n<p><b>Autópsia da Q47.</b> Certa: <b>(A) o Ponto de Função oferece mensuração objetiva e independente do time</b>. Repare que as quatro erradas são a mesma frase com o sujeito trocado:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">(B)</span> padronização entre times é virtude do <b>PF</b>, não do SP</div>\n  <div class=\"def\"><span class=\"def-t\">(C)</span> \"contexto subjetivo do time\" é característica do <b>SP</b></div>\n  <div class=\"def\"><span class=\"def-t\">(D)</span> contrato formal e escopo fechado combinam com <b>PF</b></div>\n  <div class=\"def\"><span class=\"def-t\">(E)</span> \"rápida, pelo esforço percebido pelo time\" descreve o <b>SP</b></div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Técnica de troca de sujeito: quando a questão compara A x B, monte mentalmente duas colunas de características e confira se cada alternativa pôs a característica <b>na coluna certa</b>. É o distrator mais usado pela FGV em questões comparativas.</div>\n"
+            },
+            {
+              "titulo": "Modelos de controle de acesso: DAC, MAC, RBAC e ABAC (Q62)",
+              "html": "\n<p><b>Primeiro, três palavras que a banca usa em sequência:</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Identificação</span> dizer quem você é (o login)</div>\n  <div class=\"def\"><span class=\"def-t\">Autenticação</span> provar que é você (senha, token, biometria — MFA é usar mais de um fator)</div>\n  <div class=\"def\"><span class=\"def-t\">Autorização</span> decidir o que você <b>pode</b> fazer depois de entrar. É aqui que entram os modelos abaixo</div>\n</div>\n<p>Os modelos de controle de acesso são jeitos diferentes de responder \"quem decide quem acessa o quê\":</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">DAC — discricionário</span> quem decide é o <b>dono do recurso</b>, a seu critério (\"discrição\"). Ex.: você compartilha uma pasta do Google Drive com quem quiser. Implementado com listas de controle de acesso (ACL). Flexível, mas fraco: o dono pode repassar para qualquer um</div>\n  <div class=\"def\"><span class=\"def-t\">MAC — mandatório (obrigatório)</span> quem decide é o <b>sistema/política central</b>, e o dono não pode mudar. Cada <b>objeto</b> recebe um <b>rótulo de segurança</b> (reservado, secreto, ultrassecreto) e cada <b>sujeito</b> recebe uma <b>habilitação</b> (<i>clearance</i>). O acesso é liberado comparando rótulo x habilitação. Típico de ambiente militar e governamental</div>\n  <div class=\"def\"><span class=\"def-t\">RBAC — baseado em papéis</span> a permissão é dada ao <b>papel/função</b> (analista, gerente, auditor), e a pessoa herda as permissões do papel que ocupa. É o modelo das empresas</div>\n  <div class=\"def\"><span class=\"def-t\">ABAC — baseado em atributos</span> a regra combina <b>atributos</b> do usuário, do recurso e do contexto (horário, local, dispositivo). Ex.: \"gerente pode aprovar, só em horário comercial e da rede interna\"</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Palavra-gatilho no enunciado → modelo: <b>\"rótulo / classificação / habilitação / nível de sigilo\"</b> → MAC · <b>\"dono / proprietário / a critério\"</b> → DAC · <b>\"papel / função / cargo\"</b> → RBAC · <b>\"atributos / contexto / condições\"</b> → ABAC.</div>\n<p><b>Bell-LaPadula</b> é o modelo clássico de MAC para <b>confidencialidade</b>: \"não lê para cima, não escreve para baixo\" (quem é \"secreto\" não lê \"ultrassecreto\" e não copia segredo para um documento \"reservado\"). O <b>Biba</b> é o espelho para <b>integridade</b>: não lê para baixo, não escreve para cima.</p>\n<p><b>Autópsia da Q62.</b> O enunciado diz \"comparação de <b>rótulos de segurança</b> com autorizações\" → <b>(B) mandatório</b>. Distratores: (A) discricionário é o dono decidindo; (D) papéis é RBAC; (E) <b>privilégio mínimo</b> não é modelo, é um <b>princípio</b> (dar só o necessário) que vale para qualquer modelo; (C) \"entrada confiável\" não existe como modelo.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> \"Rótulo de segurança\" aparece duas vezes nesta aula: aqui (é o coração do MAC) e na X.800 (lá é um mecanismo <b>pervasivo</b>). Mesmo conceito, perguntas diferentes.</div>\n"
+            },
+            {
+              "titulo": "Arquitetura de segurança X.800: serviços e mecanismos (Q64)",
+              "html": "\n<p><b>O que é.</b> A X.800 é uma recomendação da ITU-T (1991) que organiza a segurança do modelo OSI em três peças. É cobrada pelo livro do Stallings, e a FGV copia a classificação dele.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Ataque</span> a ação contra a segurança. <b>Passivo</b>: só escuta (vazamento de conteúdo, análise de tráfego). <b>Ativo</b>: altera algo (disfarce, repetição, modificação de mensagem, negação de serviço)</div>\n  <div class=\"def\"><span class=\"def-t\">Serviço</span> <b>o que</b> se quer garantir. São 5: autenticação, controle de acesso, confidencialidade, integridade e irretratabilidade (não repúdio)</div>\n  <div class=\"def\"><span class=\"def-t\">Mecanismo</span> <b>como</b> se garante. Dividido em <b>específicos</b> e <b>pervasivos</b></div>\n</div>\n<p><b>Mecanismos específicos</b> — podem ser colocados numa camada de protocolo específica e agem diretamente sobre os dados/comunicação. São 8:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Cifragem</span> transformar os dados em ilegíveis (criptografia)</div>\n  <div class=\"def\"><span class=\"def-t\">Assinatura digital</span> provar origem e integridade</div>\n  <div class=\"def\"><span class=\"def-t\">Controle de acesso</span> impor direitos de acesso</div>\n  <div class=\"def\"><span class=\"def-t\">Integridade de dados</span> detectar alteração (hash, MAC)</div>\n  <div class=\"def\"><span class=\"def-t\">Troca de autenticação</span> provar identidade por troca de informações</div>\n  <div class=\"def\"><span class=\"def-t\">Preenchimento de tráfego</span> inserir bits \"falsos\" nas lacunas do fluxo para frustrar a <b>análise de tráfego</b> (o atacante não consegue saber quando e quanto você está transmitindo)</div>\n  <div class=\"def\"><span class=\"def-t\">Controle de roteamento</span> escolher rotas fisicamente seguras</div>\n  <div class=\"def\"><span class=\"def-t\">Notarização</span> um terceiro confiável atesta a troca</div>\n</div>\n<p><b>Mecanismos pervasivos</b> — não pertencem a camada nenhuma; ficam \"espalhados\" pelo sistema, vigiando e administrando. São 5:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Funcionalidade confiável</span> o que é considerado correto segundo a política</div>\n  <div class=\"def\"><span class=\"def-t\">Rótulo de segurança</span> marca que indica o nível de segurança de um recurso</div>\n  <div class=\"def\"><span class=\"def-t\">Detecção de evento</span> perceber eventos relevantes para a segurança</div>\n  <div class=\"def\"><span class=\"def-t\">Trilha de auditoria</span> registro para revisão posterior</div>\n  <div class=\"def\"><span class=\"def-t\">Recuperação de segurança</span> tratar eventos e restaurar o estado seguro</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Os <b>pervasivos</b> são o \"fiscal\" que está em todo lugar: <b>\"O fiscal Confia, Rotula, Detecta, Trilha e Recupera.\"</b> Se a alternativa não está nessa frase, ela é <b>específica</b>. Outro teste rápido: específico <b>mexe no dado</b> (cifra, assina, preenche, roteia); pervasivo <b>observa e administra</b>.</div>\n<p><b>Autópsia da Q64.</b> Pedia um mecanismo <b>específico</b>. A, B, D e E são quatro dos cinco pervasivos (detecção de evento, funcionalidade confiável, rótulo de segurança, trilha de auditoria). Só sobra <b>(C) preenchimento de tráfego</b>.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Pegadinha provável: \"controle de acesso\" é, ao mesmo tempo, um <b>serviço</b> e um <b>mecanismo específico</b> da X.800. Se a questão perguntar \"qual é serviço\", ele serve; se perguntar \"qual é mecanismo pervasivo\", ele não serve.</div>\n"
+            },
+            {
+              "titulo": "ETL x ELT: integração e ingestão de dados (Q67)",
+              "html": "\n<p><b>O problema.</b> Os dados da empresa estão espalhados em sistemas transacionais (folha, benefícios, cadastro), planilhas, APIs. Para analisar, é preciso <b>juntar tudo num lugar só</b> — um <b>data warehouse</b> (DW, armazém de dados organizado para consulta) ou um <b>data lake</b> (repositório de dados brutos de qualquer formato). O caminho até lá tem três passos:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">E — Extract</span> extrair dos sistemas de origem</div>\n  <div class=\"def\"><span class=\"def-t\">T — Transform</span> limpar, padronizar (datas, CPFs, códigos), deduplicar, cruzar e agregar</div>\n  <div class=\"def\"><span class=\"def-t\">L — Load</span> carregar no destino</div>\n</div>\n<p>A diferença entre ETL e ELT é <b>só a ordem</b> — e, por causa dela, <b>onde</b> a transformação roda:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">ETL</span> transforma <b>antes</b> de carregar, num servidor/ferramenta intermediária (<b>staging area</b>). Chega no DW só dado limpo. É o modelo do DW tradicional (on-premise), com esquema definido antes (<i>schema-on-write</i>). Fica lento quando o volume é enorme, porque o gargalo é o servidor intermediário</div>\n  <div class=\"def\"><span class=\"def-t\">ELT</span> carrega o dado <b>bruto</b> primeiro e transforma <b>dentro do destino</b>, usando o poder de processamento dele. Nasceu com DW em nuvem e data lakes (BigQuery, Snowflake, Databricks), que escalam fácil. Ideal para <b>grandes volumes</b> e para guardar o bruto e decidir depois (<i>schema-on-read</i>)</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Onde está o <b>T</b>, está o trabalho pesado. <b>ETL</b>: o T vem no meio → roda <b>fora</b> do destino. <b>ELT</b>: o T vem no fim → roda <b>dentro</b> do destino, que precisa ser potente → combina com <b>volume grande</b>.</div>\n<p>Termos vizinhos que caem junto: <b>carga full</b> (recarrega tudo) x <b>incremental</b> (só o que mudou); <b>CDC</b> (<i>Change Data Capture</i>, captura as mudanças na origem, geralmente lendo o log do banco); <b>batch</b> (em lotes, de tempos em tempos) x <b>streaming</b> (contínuo, quase em tempo real, ex.: Kafka).</p>\n<p><b>Autópsia da Q67.</b> Pedia a <b>INCORRETA</b>. A, B, C e E estão certas. A <b>(D)</b> diz que o ELT é mais eficiente \"onde o volume é pequeno e o processamento pode ser feito <b>fora</b> do sistema de destino\" — é a descrição do <b>ETL</b> com o sinal trocado duas vezes. ELT brilha em volume <b>grande</b>, processando <b>dentro</b> do destino.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Duas lições de prova: (1) sublinhe <b>INCORRETA</b> no enunciado — errar o comando é o erro mais barato de evitar; (2) numa questão de \"incorreta\" com 4 alternativas muito parecidas e verdadeiras, procure a que <b>contradiz o conceito central</b> (aqui: onde roda a transformação).</div>\n"
+            },
+            {
+              "titulo": "Sistemas de Suporte à Decisão e tipos de problema (Q60)",
+              "html": "\n<p><b>Tipos de decisão</b> (classificação de Herbert Simon, usada por todo livro de Sistemas de Informação):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Estruturada</span> repetitiva, com regra clara e procedimento definido — dá para automatizar. Ex.: calcular a folha, reabastecer estoque abaixo do mínimo</div>\n  <div class=\"def\"><span class=\"def-t\">Semiestruturada</span> parte tem regra, parte exige julgamento. Ex.: definir o orçamento de um setor, conceder um crédito fora do padrão</div>\n  <div class=\"def\"><span class=\"def-t\">Não estruturada</span> nova, sem procedimento, depende de intuição e julgamento. Ex.: entrar ou não num novo mercado</div>\n</div>\n<p><b>Os sistemas e o nível que atendem</b> (costuma cair como associação):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">SPT / TPS</span> Sistema de Processamento de Transações — nível <b>operacional</b>, registra o dia a dia (vendas, pagamentos). Base de dados de todos os outros</div>\n  <div class=\"def\"><span class=\"def-t\">SIG / MIS</span> Sistema de Informações Gerenciais — nível <b>tático</b>, relatórios periódicos e resumidos para decisões estruturadas</div>\n  <div class=\"def\"><span class=\"def-t\">SSD / SAD / DSS</span> Sistema de Suporte (Apoio) à Decisão — interativo, com <b>modelos</b> e simulações (\"e se…?\"). Foco clássico em decisões <b>semiestruturadas</b></div>\n  <div class=\"def\"><span class=\"def-t\">SAE / EIS</span> Sistema de Apoio ao Executivo — nível <b>estratégico</b>, painéis com indicadores e dados externos, para decisões não estruturadas</div>\n  <div class=\"def\"><span class=\"def-t\">Sistema especialista</span> IA simbólica: base de conhecimento + motor de inferência imitando um especialista humano</div>\n</div>\n<p><b>Autópsia da Q60 (gabarito D).</b> A literatura diz que o SSD é \"especialmente útil\" em problemas semiestruturados, por isso a (C) atrai. Mas a FGV marcou a <b>(D)</b>: SSDs podem ser aplicados a problemas estruturados, semiestruturados e não estruturados. O motivo está <b>no próprio enunciado</b>: \"eles auxiliam a enfrentar diferentes tipos de problemas, <b>desde os muito bem definidos até os que exigem intuição e julgamento humano</b>\". A banca escreveu a resposta no texto-base.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Regra de ouro FGV em questão conceitual com duas alternativas plausíveis: <b>releia o enunciado</b>. Quando ele afirma algo (\"desde X até Y\"), a alternativa que repete essa afirmação é a certa; a que restringe (\"apenas\", \"mais eficaz em\", \"limitado a\") é a armadilha. (A), (B) e (E) usam \"apenas\", \"ideais para\" e \"limitados a\".</div>\n"
+            },
+            {
+              "titulo": "OWASP Top 10: as listas de 2021 e 2025 (Q63)",
+              "html": "\n<p><b>O que é.</b> A OWASP (<i>Open Worldwide Application Security Project</i>) é uma fundação aberta que publica, a cada 3–4 anos, as 10 categorias de risco mais críticas em aplicações web. Categoria é um <b>tipo de falha no software</b> — não é boa prática, nem treinamento, nem processo. Esse é o filtro que resolveu a Q63.</p>\n<p><b>OWASP Top 10:2021</b> (a cobrada em 2024):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">A01</span> Quebra de controle de acesso — usuário acessa o que não devia (trocar o id na URL e ver o dado de outro)</div>\n  <div class=\"def\"><span class=\"def-t\">A02</span> Falhas criptográficas — dado sensível sem cifra, algoritmo fraco, senha sem hash</div>\n  <div class=\"def\"><span class=\"def-t\">A03</span> Injeção — SQL injection, XSS (o XSS foi incorporado aqui em 2021)</div>\n  <div class=\"def\"><span class=\"def-t\">A04</span> Design inseguro — falha de projeto, não de código (nova em 2021)</div>\n  <div class=\"def\"><span class=\"def-t\">A05</span> Configuração incorreta de segurança — senha padrão, erro detalhado exposto, porta aberta</div>\n  <div class=\"def\"><span class=\"def-t\">A06</span> Componentes vulneráveis e desatualizados — biblioteca com CVE conhecida</div>\n  <div class=\"def\"><span class=\"def-t\">A07</span> Falhas de identificação e autenticação</div>\n  <div class=\"def\"><span class=\"def-t\">A08</span> Falhas de integridade de software e dados — atualização sem assinatura, pipeline CI/CD comprometido, desserialização insegura</div>\n  <div class=\"def\"><span class=\"def-t\">A09</span> Falhas de registro e monitoramento de segurança — não logar, não alertar</div>\n  <div class=\"def\"><span class=\"def-t\">A10</span> <b>SSRF — falsificação de solicitação do lado do servidor</b> — o atacante faz o servidor chamar uma URL escolhida por ele (ex.: serviços internos da nuvem)</div>\n</div>\n<p><b>OWASP Top 10:2025</b> (lançada no fim de 2025 — pode aparecer na prova de 2026, já que o edital não fixa versão). Mudanças principais:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Entrou A03</span> <b>Falhas na cadeia de suprimentos de software</b> — amplia o antigo \"componentes vulneráveis\"</div>\n  <div class=\"def\"><span class=\"def-t\">Entrou A10</span> <b>Tratamento inadequado de condições excepcionais</b> — erros e exceções mal tratados</div>\n  <div class=\"def\"><span class=\"def-t\">Subiu</span> Configuração incorreta foi para <b>A02</b></div>\n  <div class=\"def\"><span class=\"def-t\">Saiu</span> SSRF deixou de ser categoria própria e foi absorvida pela quebra de controle de acesso (<b>A01</b>, que continua em 1º)</div>\n</div>\n<p>Ordem de 2025: A01 Quebra de controle de acesso · A02 Configuração incorreta · A03 Cadeia de suprimentos · A04 Falhas criptográficas · A05 Injeção · A06 Design inseguro · A07 Falhas de autenticação · A08 Integridade de software e dados · A09 Registro e alerta · A10 Condições excepcionais.</p>\n<p><b>Autópsia da Q63 (gabarito A).</b> Perguntava a versão <b>2021</b>: SSRF é a A10:2021. As outras são processos ou práticas, não categorias de falha: \"proteção do ambiente de engenharia\", \"treinamento operacional\", \"uso de recursos de linguagens\". A (B) \"cadeia de suprimentos\" é uma armadilha interessante: em 2021 ela <b>não</b> era categoria (só em 2025).</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Em 2026, leia o enunciado procurando o <b>ano da versão</b>. Se disser 2021, SSRF é categoria e cadeia de suprimentos não. Se disser 2025, é o contrário.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> As três que nunca saem do topo: <b>acesso, criptografia, injeção</b>. Se você só lembrar três, lembre destas.</div>\n"
+            }
+          ],
+          "flashcards": [
+            {
+              "tema": "SSL/TLS",
+              "pergunta": "Qual a relação entre SSL e TLS?",
+              "resposta": "O TLS é o sucessor do SSL (padronizado pela IETF). Todas as versões do SSL são obsoletas e inseguras; o TLS corrigiu as vulnerabilidades. Hoje só TLS 1.2 e 1.3 são aceitos."
+            },
+            {
+              "tema": "SSL/TLS",
+              "pergunta": "No HTTPS, que tipo de criptografia protege os dados trafegados após o handshake?",
+              "resposta": "Simétrica (ex.: AES). A assimétrica é usada só no início, para autenticar o servidor (certificado) e combinar a chave de sessão."
+            },
+            {
+              "tema": "SSL/TLS",
+              "pergunta": "O que é sigilo futuro (forward secrecy)?",
+              "resposta": "Garantia de que, se a chave privada do servidor vazar no futuro, as sessões gravadas no passado continuam ilegíveis. É obrigatório no TLS 1.3."
+            },
+            {
+              "tema": "SSL/TLS",
+              "pergunta": "O que o navegador confere no certificado do servidor?",
+              "resposta": "Se foi assinado por uma Autoridade Certificadora confiável (cadeia de confiança), se está no prazo e se pertence ao domínio acessado."
+            },
+            {
+              "tema": "Métricas",
+              "pergunta": "Ponto de Função mede o quê, e de que ponto de vista?",
+              "resposta": "O tamanho funcional do software, do ponto de vista do usuário — independente de linguagem, tecnologia e time."
+            },
+            {
+              "tema": "Métricas",
+              "pergunta": "Quais as 5 funções da APF e como se dividem?",
+              "resposta": "Dados: ALI (mantido pelo sistema) e AIE (só lido, mantido por outro). Transações: EE (entrada), SE (saída com cálculo) e CE (consulta, sem cálculo)."
+            },
+            {
+              "tema": "Métricas",
+              "pergunta": "Diferença entre Saída Externa (SE) e Consulta Externa (CE)?",
+              "resposta": "A SE envia dados para fora com cálculo, derivação ou totalização; a CE só recupera e mostra, sem cálculo."
+            },
+            {
+              "tema": "Métricas",
+              "pergunta": "Story Points podem ser comparados entre times diferentes?",
+              "resposta": "Não. São relativos à escala de cada time. Quem permite comparar projetos e times é o Ponto de Função."
+            },
+            {
+              "tema": "Métricas",
+              "pergunta": "Qual técnica combina com contrato de escopo fechado e pagamento ao fornecedor?",
+              "resposta": "Ponto de Função (objetivo e auditável; base do Roteiro de Métricas do SISP no governo)."
+            },
+            {
+              "tema": "Métricas",
+              "pergunta": "O que é velocity no ágil?",
+              "resposta": "A quantidade de story points que o time entrega por sprint; usada para prever quantas sprints faltam."
+            },
+            {
+              "tema": "Controle de acesso",
+              "pergunta": "Qual modelo usa rótulos de segurança comparados com habilitações?",
+              "resposta": "MAC — controle de acesso mandatório (obrigatório). A política central decide; o dono não pode alterar."
+            },
+            {
+              "tema": "Controle de acesso",
+              "pergunta": "No DAC, quem decide o acesso?",
+              "resposta": "O dono do recurso, a seu critério (discricionário). Ex.: compartilhar uma pasta com quem quiser; implementado com ACLs."
+            },
+            {
+              "tema": "Controle de acesso",
+              "pergunta": "RBAC x ABAC?",
+              "resposta": "RBAC dá permissões a papéis/funções. ABAC decide por atributos do usuário, do recurso e do contexto (horário, local, dispositivo)."
+            },
+            {
+              "tema": "Controle de acesso",
+              "pergunta": "Privilégio mínimo é um modelo de controle de acesso?",
+              "resposta": "Não. É um princípio (dar apenas o acesso necessário para a tarefa), aplicável a qualquer modelo."
+            },
+            {
+              "tema": "Controle de acesso",
+              "pergunta": "Resuma Bell-LaPadula e Biba.",
+              "resposta": "Bell-LaPadula (confidencialidade): não lê para cima, não escreve para baixo. Biba (integridade): não lê para baixo, não escreve para cima."
+            },
+            {
+              "tema": "X.800",
+              "pergunta": "Quais os 5 serviços de segurança da X.800?",
+              "resposta": "Autenticação, controle de acesso, confidencialidade, integridade e irretratabilidade (não repúdio)."
+            },
+            {
+              "tema": "X.800",
+              "pergunta": "Quais os 5 mecanismos pervasivos da X.800?",
+              "resposta": "Funcionalidade confiável, rótulo de segurança, detecção de evento, trilha de auditoria de segurança e recuperação de segurança. ('O fiscal Confia, Rotula, Detecta, Trilha e Recupera.')"
+            },
+            {
+              "tema": "X.800",
+              "pergunta": "Cite os 8 mecanismos específicos da X.800.",
+              "resposta": "Cifragem, assinatura digital, controle de acesso, integridade de dados, troca de autenticação, preenchimento de tráfego, controle de roteamento e notarização."
+            },
+            {
+              "tema": "X.800",
+              "pergunta": "Para que serve o preenchimento de tráfego?",
+              "resposta": "Inserir bits nas lacunas do fluxo de dados para frustrar a análise de tráfego (ataque passivo). É mecanismo específico."
+            },
+            {
+              "tema": "X.800",
+              "pergunta": "Ataque passivo x ativo?",
+              "resposta": "Passivo só observa (vazamento de conteúdo, análise de tráfego) — difícil de detectar, previne-se. Ativo altera algo (disfarce, repetição, modificação, negação de serviço) — detecta-se e recupera-se."
+            },
+            {
+              "tema": "ETL/ELT",
+              "pergunta": "Diferença essencial entre ETL e ELT?",
+              "resposta": "A ordem e o local da transformação: no ETL transforma antes de carregar, fora do destino (staging); no ELT carrega o bruto e transforma dentro do destino."
+            },
+            {
+              "tema": "ETL/ELT",
+              "pergunta": "Quando o ELT é mais vantajoso?",
+              "resposta": "Com grandes volumes e destino com alta capacidade de processamento (DW em nuvem, data lake/lakehouse)."
+            },
+            {
+              "tema": "ETL/ELT",
+              "pergunta": "O que é CDC?",
+              "resposta": "Change Data Capture: captura só as mudanças feitas na origem (geralmente pelo log do banco), permitindo carga incremental."
+            },
+            {
+              "tema": "ETL/ELT",
+              "pergunta": "Schema-on-write x schema-on-read?",
+              "resposta": "On-write: o esquema é definido antes de gravar (DW tradicional, ETL). On-read: grava bruto e aplica o esquema na leitura (data lake, ELT)."
+            },
+            {
+              "tema": "BI/SSD",
+              "pergunta": "Quais os três tipos de decisão e exemplos?",
+              "resposta": "Estruturada (regra clara, automatizável: folha), semiestruturada (parte regra, parte julgamento: orçamento) e não estruturada (nova, intuição: novo mercado)."
+            },
+            {
+              "tema": "BI/SSD",
+              "pergunta": "Qual sistema atende cada nível: operacional, tático, estratégico?",
+              "resposta": "Operacional: SPT/TPS. Tático: SIG/MIS (e SSD). Estratégico: SAE/EIS."
+            },
+            {
+              "tema": "BI/SSD",
+              "pergunta": "Qual a lição da Q60 da FGV 2024?",
+              "resposta": "O enunciado afirmava que SSDs apoiam de problemas bem definidos até os que exigem intuição; a certa foi a que repetia isso (estruturados, semi e não estruturados)."
+            },
+            {
+              "tema": "OWASP",
+              "pergunta": "Qual categoria era A10 no OWASP Top 10:2021?",
+              "resposta": "SSRF — Server-Side Request Forgery (falsificação de solicitação do lado do servidor)."
+            },
+            {
+              "tema": "OWASP",
+              "pergunta": "Quais categorias novas entraram no OWASP Top 10:2025?",
+              "resposta": "A03 Falhas na cadeia de suprimentos de software e A10 Tratamento inadequado de condições excepcionais. SSRF foi absorvido pela A01."
+            },
+            {
+              "tema": "OWASP",
+              "pergunta": "Qual categoria está em 1º lugar em 2021 e em 2025?",
+              "resposta": "Quebra de controle de acesso (Broken Access Control)."
+            }
+          ],
+          "simulados": [
+            {
+              "id": "ti-erros-2024-01",
+              "nome": "Refazer: as 7 questões originais da FGV 2024",
+              "descricao": "As questões 46, 47, 60, 62, 63, 64 e 67 da prova DataPrev 2024 (ATI – Desenvolvimento de Software, Tipo 1), transcritas na íntegra, com o gabarito oficial.",
+              "nivel": "Prova real",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "FGV 2024 · Q46 · SSL/TLS",
+                  "text": "Em um ambiente corporativo, uma empresa de e-commerce precisa garantir a segurança das transações realizadas por seus clientes através de seu site. Para isso, o site utiliza o protocolo HTTPS, que combina o protocolo HTTP com uma camada adicional de segurança. Assinale a opção que apresenta a diferença entre os protocolos SSL e TLS no contexto de sua aplicação em comunicações seguras via HTTPS.",
+                  "options": [
+                    "O SSL é mais seguro que o TLS, pois utiliza um algoritmo de criptografia mais avançado.",
+                    "O TLS substitui o SSL, corrigindo vulnerabilidades encontradas nas versões anteriores do SSL e implementando melhorias de segurança.",
+                    "O TLS e o SSL são intercambiáveis, pois ambos oferecem o mesmo nível de segurança, com a única diferença sendo a compatibilidade de alguns navegadores.",
+                    "O HTTPS só funciona com o protocolo SSL, pois foi o primeiro protocolo desenvolvido para essa finalidade.",
+                    "O SSL e o TLS são usados conjuntamente para garantir um nível de segurança adicional em transações bancárias, sendo o SSL utilizado para a autenticação e o TLS para a criptografia dos dados."
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito oficial: B. O TLS é o sucessor do SSL; todas as versões do SSL são obsoletas. A inverte a segurança; C diz que são equivalentes; D prende o HTTPS ao SSL; E inventa uma divisão de tarefas — cada protocolo faz autenticação e cifragem sozinho, e eles não trabalham juntos."
+                },
+                {
+                  "type": "mc",
+                  "tag": "FGV 2024 · Q47 · Métricas",
+                  "text": "Em projetos de desenvolvimento de software, a escolha da técnica de mensuração de tamanho e esforço é essencial para a gestão eficiente e o planejamento adequado das atividades. Nesse contexto, é correto afirmar que",
+                  "options": [
+                    "o Ponto de Função oferece uma mensuração objetiva e independente do time de desenvolvimento.",
+                    "os Story Points permitem uma melhor padronização de estimativas entre diferentes projetos e times.",
+                    "o Ponto de Função é mais flexível, já que leva em conta o contexto subjetivo do time ao estimar o esforço.",
+                    "os Story Points são mais adequados para contratos formais de desenvolvimento, como projetos com escopo fechado e orçamentos rígidos.",
+                    "o Ponto de Função permite uma mensuração rápida, já que a estimativa é feita com base no esforço percebido pelo time."
+                  ],
+                  "answer": 0,
+                  "exp": "Gabarito oficial: A. PF mede tamanho funcional pela visão do usuário, com regras padronizadas (IFPUG), sem depender do time. As outras trocam o sujeito: padronização entre times e contrato formal são virtudes do PF (B, D); subjetividade e rapidez pelo esforço percebido são do Story Point (C, E)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "FGV 2024 · Q60 · SSD",
+                  "text": "Os Sistemas de Suporte à Decisão (SSDs) contribuem para gestores na tomada de decisões, utilizando dados, análises e algoritmos sofisticados. Eles auxiliam a enfrentar diferentes tipos de problemas, desde os muito bem definidos até os que exigem uma certa intuição e julgamento humano. Assinale a opção que representa corretamente a capacidade dos SSDs de lidar com diferentes tipos de problemas e decisões:",
+                  "options": [
+                    "Os SSDs são adequados apenas para problemas estruturados, com procedimentos claramente definidos e automatizáveis.",
+                    "Os SSDs são ideais para problemas não estruturados, em que a intuição e o julgamento humano são fundamentais.",
+                    "Os SSDs são mais eficazes em problemas semiestruturados, combinando elementos estruturados e não estruturados.",
+                    "Os SSDs podem ser aplicados a problemas estruturados, semiestruturados e não estruturados, oferecendo flexibilidade para apoiar decisões em diversos contextos.",
+                    "Os SSDs são limitados a problemas específicos de uma única área funcional e não se aplicam a outros setores empresariais."
+                  ],
+                  "answer": 3,
+                  "exp": "Gabarito oficial: D. O próprio enunciado afirma que os SSDs apoiam 'desde os problemas muito bem definidos até os que exigem intuição' — a alternativa que repete essa amplitude é a certa. A, B, C e E restringem ('apenas', 'ideais para', 'mais eficazes', 'limitados a')."
+                },
+                {
+                  "type": "mc",
+                  "tag": "FGV 2024 · Q62 · Controle de acesso",
+                  "text": "As políticas de controle de acesso em sistemas computacionais são fundamentais para garantir a segurança e a integridade dos dados, regulando quem pode acessar, modificar ou interagir com recursos específicos. A política de controle de acesso cujo procedimento baseia-se na comparação de rótulos de segurança com autorizações que indicam quais entidades do sistema têm direito a acessar determinados recursos é a de controle de acesso",
+                  "options": [
+                    "discricionário.",
+                    "mandatório.",
+                    "por entrada confiável.",
+                    "por papéis.",
+                    "por privilégio mínimo."
+                  ],
+                  "answer": 1,
+                  "exp": "Gabarito oficial: B. Rótulo de segurança x habilitação é a assinatura do MAC (mandatório). Discricionário = o dono decide; por papéis = RBAC; privilégio mínimo é princípio, não modelo; 'entrada confiável' não existe como modelo."
+                },
+                {
+                  "type": "mc",
+                  "tag": "FGV 2024 · Q63 · OWASP",
+                  "text": "A OWASP Top 10 é uma lista amplamente reconhecida das vulnerabilidades mais críticas em aplicações web. Em sua versão OWASP Top 10:2021, identificamos como uma categoria de vulnerabilidade",
+                  "options": [
+                    "a falsificação de solicitação do lado do servidor.",
+                    "a proteção da cadeia de suprimentos de software.",
+                    "a proteção do ambiente de engenharia.",
+                    "o treinamento operacional.",
+                    "o uso de recursos de linguagens e frameworks."
+                  ],
+                  "answer": 0,
+                  "exp": "Gabarito oficial: A. SSRF é a A10:2021. As demais não são categorias de falha (são práticas/processos). Cuidado: 'cadeia de suprimentos' virou categoria só na versão 2025 (A03:2025)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "FGV 2024 · Q64 · X.800",
+                  "text": "A arquitetura de segurança X.800 para o modelo OSI define mecanismos de segurança próprios, que podem ser incorporados a uma camada de protocolo específica com o objetivo de oferecer serviços de segurança OSI, ou mecanismos de segurança disseminados, que não são específicos de uma camada ou serviço. Assinale a opção que indica um mecanismo de segurança específico.",
+                  "options": [
+                    "Detecção de evento.",
+                    "Funcionalidade confiável.",
+                    "Preenchimento de tráfego.",
+                    "Rótulo de segurança.",
+                    "Trilha de auditoria de segurança."
+                  ],
+                  "answer": 2,
+                  "exp": "Gabarito oficial: C. Os pervasivos são funcionalidade confiável, rótulo de segurança, detecção de evento, trilha de auditoria e recuperação de segurança ('o fiscal Confia, Rotula, Detecta, Trilha e Recupera'). Preenchimento de tráfego é específico: insere bits para frustrar análise de tráfego."
+                },
+                {
+                  "type": "mc",
+                  "tag": "FGV 2024 · Q67 · ETL/ELT",
+                  "text": "Sobre as técnicas de integração e ingestão de dados ETL (Extract, Transform, Load) e ELT (Extract, Load, Transform), assinale a opção incorreta.",
+                  "options": [
+                    "Em ETL, os dados são transformados antes de serem carregados no sistema de destino.",
+                    "ETL é mais adequado para sistemas de data warehouse tradicionais, onde a transformação de dados ocorre antes do carregamento.",
+                    "ELT aproveita a capacidade de processamento do sistema de destino, transformando os dados após o carregamento.",
+                    "ELT é mais eficiente em cenários onde o volume de dados é pequeno e o processamento pode ser feito fora do sistema de destino.",
+                    "ETL pode ser mais lento em comparação ao ELT quando o sistema de destino tem alta capacidade de processamento."
+                  ],
+                  "answer": 3,
+                  "exp": "Gabarito oficial: D (é a incorreta). O ELT brilha em volume GRANDE e transforma DENTRO do destino. A D descreve o ETL com os sinais trocados. As outras quatro estão corretas."
+                }
+              ]
+            },
+            {
+              "id": "ti-erros-2024-02",
+              "nome": "Treino: SSL/TLS, métricas, acesso, X.800, ETL e OWASP",
+              "descricao": "Doze questões novas no padrão FGV, cobrindo os mesmos pontos em que você errou — com os distratores típicos da banca.",
+              "nivel": "Treino",
+              "questoes": [
+                {
+                  "type": "mc",
+                  "tag": "SSL/TLS",
+                  "text": "Durante o estabelecimento de uma sessão HTTPS com TLS, a criptografia assimétrica é utilizada principalmente para",
+                  "options": [
+                    "cifrar todo o conteúdo das páginas trafegadas, por ser mais rápida que a simétrica.",
+                    "autenticar o servidor e permitir que as partes combinem uma chave de sessão, que será usada com criptografia simétrica na troca de dados.",
+                    "comprimir os dados antes do envio, reduzindo o consumo de banda.",
+                    "substituir o certificado digital, dispensando Autoridades Certificadoras.",
+                    "garantir que o SSL 3.0 continue compatível com navegadores antigos."
+                  ],
+                  "answer": 1,
+                  "exp": "B. A assimétrica apresenta (certificado) e combina a chave; a simétrica, mais rápida, carrega os dados. A inverte a velocidade; C, D e E não são funções do handshake."
+                },
+                {
+                  "type": "mc",
+                  "tag": "SSL/TLS",
+                  "text": "Uma auditoria recomendou desabilitar SSL 3.0, TLS 1.0 e TLS 1.1 nos servidores web de um órgão, mantendo apenas versões mais recentes. A recomendação é",
+                  "options": [
+                    "inadequada, pois o SSL 3.0 é mais robusto que qualquer versão do TLS.",
+                    "inadequada, pois o HTTPS depende do SSL 3.0 para validar certificados.",
+                    "adequada, pois essas versões têm vulnerabilidades conhecidas; devem permanecer TLS 1.2 e TLS 1.3.",
+                    "adequada apenas se o site não usar certificado digital.",
+                    "indiferente, pois todas as versões de SSL e TLS oferecem o mesmo nível de segurança."
+                  ],
+                  "answer": 2,
+                  "exp": "C. Versões antigas foram descontinuadas por falhas (POODLE, BEAST etc.). O padrão atual é TLS 1.2 e 1.3."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Métricas · APF",
+                  "text": "Um sistema de benefícios mantém o cadastro de segurados e apenas consulta, sem alterar, a tabela de municípios mantida pelo IBGE. Na Análise de Pontos de Função, essas duas estruturas são classificadas, respectivamente, como",
+                  "options": [
+                    "EE e SE.",
+                    "AIE e ALI.",
+                    "ALI e CE.",
+                    "ALI e AIE.",
+                    "CE e AIE."
+                  ],
+                  "answer": 3,
+                  "exp": "D. Dado mantido pelo próprio sistema = ALI; dado de outro sistema, só lido = AIE. EE, SE e CE são funções de transação, não de dados."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Métricas · APF",
+                  "text": "Uma funcionalidade gera o extrato anual de contribuições de um segurado, com cálculo do total recolhido e da média mensal. Na APF, ela é classificada como",
+                  "options": [
+                    "Entrada Externa, pois recebe o CPF do segurado.",
+                    "Consulta Externa, pois apenas recupera dados.",
+                    "Saída Externa, pois envia dados para fora com cálculo/derivação.",
+                    "Arquivo Lógico Interno, pois lê o cadastro.",
+                    "Arquivo de Interface Externa, pois gera um documento."
+                  ],
+                  "answer": 2,
+                  "exp": "C. Saiu dado com cálculo (total, média) → SE. Se só exibisse os lançamentos, sem cálculo, seria CE. Receber um filtro não torna o processo uma EE (EE altera um ALI)."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Métricas · Story Points",
+                  "text": "Dois times ágeis de uma empresa informam velocidades de 30 e 60 story points por sprint. Com base nisso, é correto afirmar que",
+                  "options": [
+                    "o segundo time é duas vezes mais produtivo que o primeiro.",
+                    "os números não permitem comparar produtividade entre os times, pois story points são uma medida relativa à escala de cada equipe.",
+                    "o primeiro time deve adotar a escala do segundo para padronizar os contratos.",
+                    "a empresa pode converter story points em pontos de função multiplicando por uma constante fixa.",
+                    "story points medem o tamanho funcional pela visão do usuário, como os pontos de função."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Story points são relativos e internos ao time; 60 de um time pode valer o mesmo que 30 do outro. Comparação entre times é papel do Ponto de Função."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Controle de acesso",
+                  "text": "Em um sistema, cada usuário recebe permissões de acordo com a função que exerce — atendente, supervisor ou auditor —, e ao mudar de função passa a ter automaticamente as permissões da nova. Trata-se do modelo",
+                  "options": [
+                    "DAC.",
+                    "MAC.",
+                    "RBAC.",
+                    "Bell-LaPadula.",
+                    "de privilégio mínimo."
+                  ],
+                  "answer": 2,
+                  "exp": "C. Permissões ligadas a papéis = RBAC. DAC seria o dono decidindo; MAC, rótulos x habilitações; Bell-LaPadula é um modelo de MAC; privilégio mínimo é princípio."
+                },
+                {
+                  "type": "mc",
+                  "tag": "Controle de acesso",
+                  "text": "Sobre o modelo de controle de acesso discricionário (DAC), assinale a afirmativa correta.",
+                  "options": [
+                    "O acesso é determinado pela comparação entre o rótulo do objeto e a habilitação do sujeito.",
+                    "O proprietário do recurso define, a seu critério, quem pode acessá-lo, geralmente por listas de controle de acesso (ACL).",
+                    "O usuário não consegue repassar permissões a terceiros.",
+                    "É o modelo típico de ambientes militares com classificação de sigilo.",
+                    "Decide o acesso com base em atributos de contexto, como horário e localização."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Discricionário = critério do dono. A e D descrevem o MAC; E descreve o ABAC; C é falsa — no DAC o dono pode repassar."
+                },
+                {
+                  "type": "mc",
+                  "tag": "X.800",
+                  "text": "Segundo a recomendação X.800, é um mecanismo de segurança pervasivo:",
+                  "options": [
+                    "a cifragem.",
+                    "a assinatura digital.",
+                    "a notarização.",
+                    "o controle de roteamento.",
+                    "a recuperação de segurança."
+                  ],
+                  "answer": 4,
+                  "exp": "E. Pervasivos: funcionalidade confiável, rótulo de segurança, detecção de evento, trilha de auditoria e recuperação de segurança. As demais são mecanismos específicos."
+                },
+                {
+                  "type": "mc",
+                  "tag": "X.800",
+                  "text": "Um atacante não consegue decifrar as mensagens de uma rede, mas observa a frequência e o tamanho dos pacotes trocados entre dois órgãos para deduzir quando ocorrem negociações. O ataque e o mecanismo específico da X.800 mais indicado para frustrá-lo são, respectivamente,",
+                  "options": [
+                    "ataque ativo de modificação e assinatura digital.",
+                    "ataque passivo de análise de tráfego e preenchimento de tráfego.",
+                    "ataque ativo de repetição e notarização.",
+                    "ataque passivo de vazamento de conteúdo e trilha de auditoria.",
+                    "negação de serviço e controle de roteamento."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Só observar padrões, sem ler conteúdo, é análise de tráfego (passivo). O preenchimento de tráfego insere dados falsos para mascarar o padrão."
+                },
+                {
+                  "type": "mc",
+                  "tag": "ETL/ELT",
+                  "text": "Um órgão migrou seu data warehouse para uma plataforma em nuvem com grande capacidade de processamento e passou a receber terabytes diários de dados brutos de várias fontes, preservando-os para análises futuras. A abordagem de integração mais adequada é",
+                  "options": [
+                    "ETL, pois a transformação deve ocorrer em servidor intermediário antes da carga.",
+                    "ELT, carregando os dados brutos e transformando-os dentro da plataforma de destino.",
+                    "ETL, pois o ELT só funciona com volumes pequenos.",
+                    "carga manual por planilhas, para garantir qualidade.",
+                    "ELT, pois ele dispensa qualquer etapa de transformação."
+                  ],
+                  "answer": 1,
+                  "exp": "B. Grande volume + destino potente + guardar o bruto = ELT. E é falsa: o ELT transforma, só que depois de carregar."
+                },
+                {
+                  "type": "mc",
+                  "tag": "ETL/ELT",
+                  "text": "Em um processo de carga de data warehouse, a técnica que identifica e captura apenas as inserções, alterações e exclusões ocorridas na origem desde a última carga, geralmente lendo o log de transações, é conhecida como",
+                  "options": [
+                    "CDC (Change Data Capture).",
+                    "carga full.",
+                    "staging area.",
+                    "OLAP.",
+                    "schema-on-read."
+                  ],
+                  "answer": 0,
+                  "exp": "A. CDC permite carga incremental. Carga full recarrega tudo; staging é a área intermediária do ETL."
+                },
+                {
+                  "type": "mc",
+                  "tag": "OWASP",
+                  "text": "Uma aplicação permite que o usuário informe uma URL para importar uma imagem. Um atacante informa o endereço de um serviço interno da nuvem, e o servidor da aplicação faz a requisição e devolve dados sigilosos. No OWASP Top 10:2021, essa falha corresponde a",
+                  "options": [
+                    "injeção de SQL.",
+                    "falhas criptográficas.",
+                    "design inseguro.",
+                    "falhas de registro e monitoramento.",
+                    "SSRF — falsificação de solicitação do lado do servidor."
+                  ],
+                  "answer": 4,
+                  "exp": "E. O servidor foi induzido a fazer uma requisição escolhida pelo atacante: SSRF (A10:2021). Na versão 2025, esse tipo de falha foi incorporado à A01 (quebra de controle de acesso)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "banco-fgv",
       "nome": "Banco de Questões FGV",
       "icon": "ti-target-arrow",
@@ -4800,42 +5862,48 @@ window.CONTENT = {
                 "nome": "IA: conceitos e fundamentos",
                 "prioridade": "baixa",
                 "esforco": 1,
-                "oQueCai": "IA simbólica x conexionista, IA fraca x forte, agentes, histórico. Terreno confortável para quem é da área — garanta o ponto fácil."
+                "oQueCai": "IA simbólica x conexionista, IA fraca x forte, agentes, histórico. Terreno confortável para quem é da área — garanta o ponto fácil.",
+                "materiaId": "inteligencia-artificial"
               },
               {
                 "id": "ia-ml",
                 "nome": "IA: aprendizado de máquina",
                 "prioridade": "media",
                 "esforco": 2,
-                "oQueCai": "Supervisionado, não supervisionado e por reforço; treino/validação/teste; overfitting; métricas. Cobrado em nível conceitual."
+                "oQueCai": "Supervisionado, não supervisionado e por reforço; treino/validação/teste; overfitting; métricas. Cobrado em nível conceitual.",
+                "materiaId": "inteligencia-artificial"
               },
               {
                 "id": "ia-generativa",
                 "nome": "IA: modelos generativos e de linguagem (LLMs)",
                 "prioridade": "media",
                 "esforco": 2,
-                "oQueCai": "Transformers, tokens, embeddings, prompt, RAG, fine-tuning, alucinação, multimodalidade. Tema quentíssimo em 2026."
+                "oQueCai": "Transformers, tokens, embeddings, prompt, RAG, fine-tuning, alucinação, multimodalidade. Tema quentíssimo em 2026.",
+                "materiaId": "inteligencia-artificial"
               },
               {
                 "id": "ia-etica",
                 "nome": "IA: ética, viés e transparência",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "Viés algorítmico, explicabilidade, discriminação, deepfakes, impacto no trabalho e responsabilização. A FGV adora esse recorte."
+                "oQueCai": "Viés algorítmico, explicabilidade, discriminação, deepfakes, impacto no trabalho e responsabilização. A FGV adora esse recorte.",
+                "materiaId": "inteligencia-artificial"
               },
               {
                 "id": "ia-governanca",
                 "nome": "IA: governança e regulação",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "PL 2.338/2023 no Brasil, AI Act europeu, níveis de risco, princípios da OCDE/UNESCO e ISO/IEC 42001."
+                "oQueCai": "PL 2.338/2023 no Brasil, AI Act europeu, níveis de risco, princípios da OCDE/UNESCO e ISO/IEC 42001.",
+                "materiaId": "inteligencia-artificial"
               },
               {
                 "id": "ia-privacidade",
                 "nome": "IA: privacidade e proteção de dados",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "Uso de dados pessoais em treinamento, base legal, anonimização, decisão automatizada e revisão (art. 20 da LGPD). Casa com Legislação."
+                "oQueCai": "Uso de dados pessoais em treinamento, base legal, anonimização, decisão automatizada e revisão (art. 20 da LGPD). Casa com Legislação.",
+                "materiaId": "inteligencia-artificial"
               }
             ]
           },
@@ -5066,7 +6134,8 @@ window.CONTENT = {
                 "nome": "HTTPS, SSL/TLS",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "Handshake TLS, certificados digitais, cadeia de confiança, versões seguras, HSTS e ataques comuns. Faz ponte com Segurança."
+                "oQueCai": "Handshake TLS, certificados digitais, cadeia de confiança, versões seguras, HSTS e ataques comuns. Faz ponte com Segurança.",
+                "materiaId": "ti-erros-2024"
               },
               {
                 "id": "ds-devops",
@@ -5108,7 +6177,8 @@ window.CONTENT = {
                 "nome": "Ponto de Função e Story Points",
                 "prioridade": "alta",
                 "esforco": 3,
-                "oQueCai": "APF: tipos de função (ALI, AIE, EE, SE, CE), contagem, fator de ajuste; e a lógica relativa dos Story Points, planning poker e velocity. Muito cobrado e pouco estudado por dev."
+                "oQueCai": "APF: tipos de função (ALI, AIE, EE, SE, CE), contagem, fator de ajuste; e a lógica relativa dos Story Points, planning poker e velocity. Muito cobrado e pouco estudado por dev.",
+                "materiaId": "ti-erros-2024"
               },
               {
                 "id": "ds-requisitos",
@@ -5129,7 +6199,8 @@ window.CONTENT = {
                 "nome": "Conceitos de IA, Análise de Dados e Big Data",
                 "prioridade": "media",
                 "esforco": 2,
-                "oQueCai": "5 Vs, pipeline de dados, ciência de dados x análise, aprendizado de máquina aplicado e ferramentas do ecossistema (Hadoop, Spark)."
+                "oQueCai": "5 Vs, pipeline de dados, ciência de dados x análise, aprendizado de máquina aplicado e ferramentas do ecossistema (Hadoop, Spark).",
+                "materiaId": "inteligencia-artificial"
               }
             ]
           },
@@ -5180,7 +6251,8 @@ window.CONTENT = {
                 "nome": "Controle de acesso e autenticação",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "Identificação, autenticação e autorização; modelos DAC/MAC/RBAC/ABAC; privilégio mínimo, segregação de funções e MFA."
+                "oQueCai": "Identificação, autenticação e autorização; modelos DAC/MAC/RBAC/ABAC; privilégio mínimo, segregação de funções e MFA.",
+                "materiaId": "ti-erros-2024"
               },
               {
                 "id": "si-oauth",
@@ -5208,7 +6280,8 @@ window.CONTENT = {
                 "nome": "OWASP Top 10",
                 "prioridade": "alta",
                 "esforco": 3,
-                "oQueCai": "As dez categorias, o que causa cada uma e como mitigar — em especial injeção, quebra de controle de acesso, falhas criptográficas e SSRF."
+                "oQueCai": "As dez categorias, o que causa cada uma e como mitigar — em especial injeção, quebra de controle de acesso, falhas criptográficas e SSRF.",
+                "materiaId": "ti-erros-2024"
               },
               {
                 "id": "si-sast",
@@ -5322,7 +6395,8 @@ window.CONTENT = {
                 "nome": "Integração e ingestão de dados (ETL/ELT)",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "ETL x ELT, batch x streaming, CDC, staging, transferência de arquivos, qualidade e deduplicação na carga."
+                "oQueCai": "ETL x ELT, batch x streaming, CDC, staging, transferência de arquivos, qualidade e deduplicação na carga.",
+                "materiaId": "ti-erros-2024"
               }
             ]
           },
@@ -5345,7 +6419,8 @@ window.CONTENT = {
                 "nome": "Sistemas de suporte à decisão (SSD/DSS)",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "SSD, SIG/MIS, EIS e sistemas especialistas: para quem serve cada um e em que nível da organização. Questão conceitual recorrente."
+                "oQueCai": "SSD, SIG/MIS, EIS e sistemas especialistas: para quem serve cada um e em que nível da organização. Questão conceitual recorrente.",
+                "materiaId": "ti-erros-2024"
               },
               {
                 "id": "bi-dw",
@@ -5359,7 +6434,8 @@ window.CONTENT = {
                 "nome": "ETL no contexto de BI",
                 "prioridade": "alta",
                 "esforco": 2,
-                "oQueCai": "Extração, transformação e carga; carga incremental x full; tratamento de dimensões lentamente mutáveis; janela de carga e qualidade."
+                "oQueCai": "Extração, transformação e carga; carga incremental x full; tratamento de dimensões lentamente mutáveis; janela de carga e qualidade.",
+                "materiaId": "ti-erros-2024"
               },
               {
                 "id": "bi-olap",

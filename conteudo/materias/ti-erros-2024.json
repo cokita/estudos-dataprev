@@ -1,0 +1,192 @@
+{
+  "id": "ti-erros-2024",
+  "nome": "TI — Revisão dos meus erros na prova FGV 2024",
+  "icon": "ti-target",
+  "descricao": "As 7 questões de específicas que você errou ou chutou na prova DataPrev 2024 (46, 47, 60, 62, 63, 64 e 67), explicadas do zero: SSL/TLS, Ponto de Função x Story Points, modelos de controle de acesso, X.800, ETL x ELT, Sistemas de Suporte à Decisão e OWASP Top 10 (2021 e 2025).",
+  "resumo": [
+    {
+      "titulo": "Diagnóstico: onde você perdeu os pontos",
+      "html": "\n<p>Na prova FGV 2024 você fez <b>25 de 30</b> nas específicas. Os 5 erros e as 2 marcadas por eliminação têm um ponto em comum: <b>nenhum é de programação</b>. São todos de teoria de segurança, de métricas e de dados/BI — o que um dev não usa no dia a dia e, por isso, não lembra na hora.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Q46 · errou</span> diferença entre SSL e TLS no HTTPS → gabarito <b>B</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q47 · errou</span> Ponto de Função x Story Points → gabarito <b>A</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q62 · errou</span> controle de acesso por rótulos de segurança → gabarito <b>B (mandatório)</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q64 · errou</span> mecanismo de segurança <i>específico</i> na X.800 → gabarito <b>C (preenchimento de tráfego)</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q67 · errou</span> a INCORRETA sobre ETL x ELT → gabarito <b>D</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q60 · chute</span> SSD e tipos de problema → gabarito <b>D</b></div>\n  <div class=\"def\"><span class=\"def-t\">Q63 · chute</span> categoria do OWASP Top 10:2021 → gabarito <b>A (SSRF)</b></div>\n</div>\n<p>Cada seção abaixo começa do zero, explica os termos e termina com a <b>autópsia da questão</b>: por que a certa é certa e como a FGV montou as erradas. No fim, o simulado 01 traz as 7 questões originais para você refazer e o 02 traz questões novas nos mesmos temas.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Peso: cada questão de específica vale <b>2,5 pontos</b>. Recuperar só 3 destes 7 temas = +7,5 pontos — mais do que você ganharia subindo Legislação de 1 para 5.</div>\n"
+    },
+    {
+      "titulo": "HTTPS, SSL e TLS — do zero (Q46)",
+      "html": "\n<p><b>O problema.</b> O HTTP manda tudo em texto puro: quem estiver no meio do caminho (o Wi-Fi do café, um roteador invadido) lê e altera a senha, o número do cartão, tudo. O <b>HTTPS</b> é o mesmo HTTP, só que passando por dentro de um \"túnel\" cifrado. Quem cria esse túnel é um protocolo da camada de segurança: primeiro foi o <b>SSL</b>, hoje é o <b>TLS</b>.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">SSL</span> <i>Secure Sockets Layer</i>. Criado pela Netscape nos anos 90 (versões 2.0 e 3.0). Todas as versões têm falhas graves conhecidas e estão <b>proibidas/obsoletas</b> (o SSL 3.0 caiu de vez com o ataque POODLE, em 2014)</div>\n  <div class=\"def\"><span class=\"def-t\">TLS</span> <i>Transport Layer Security</i>. É o <b>sucessor</b> do SSL, padronizado pela IETF: TLS 1.0 (1999), 1.1, <b>1.2 (2008)</b> e <b>1.3 (2018)</b>. Hoje só 1.2 e 1.3 são aceitos como seguros</div>\n  <div class=\"def\"><span class=\"def-t\">\"Certificado SSL\"</span> é só o nome comercial que ficou. O certificado que você compra hoje é usado pelo <b>TLS</b>; ninguém mais negocia SSL de verdade</div>\n</div>\n<p><b>Como o túnel é montado (handshake).</b> A ideia central é combinar os dois tipos de criptografia:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">1. Olá</span> o navegador diz quais versões e algoritmos aceita; o servidor escolhe e manda seu <b>certificado digital</b></div>\n  <div class=\"def\"><span class=\"def-t\">2. Confiança</span> o navegador confere se o certificado foi assinado por uma Autoridade Certificadora em que ele confia (cadeia de confiança) e se é daquele domínio</div>\n  <div class=\"def\"><span class=\"def-t\">3. Chave de sessão</span> usando criptografia <b>assimétrica</b> (par de chaves pública/privada, ou troca Diffie-Hellman), os dois combinam uma chave secreta sem nunca enviá-la</div>\n  <div class=\"def\"><span class=\"def-t\">4. Dados</span> daí em diante tudo vai cifrado com criptografia <b>simétrica</b> (AES, ChaCha20), que é muito mais rápida</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Assimétrica <b>apresenta e combina</b>; simétrica <b>carrega</b> os dados. É a mesma lógica de ligar para alguém para combinar a senha do cofre e depois usar a senha.</div>\n<p><b>O que o TLS 1.3 mudou</b> (cai como \"melhoria\"): handshake mais curto (1 ida e volta, e 0-RTT na reconexão), retirou algoritmos fracos, e tornou obrigatório o <b>sigilo futuro</b> (<i>forward secrecy</i>) — se a chave privada do servidor vazar amanhã, o tráfego gravado hoje continua ilegível.</p>\n<p><b>Autópsia da Q46.</b> Certa: <b>(B) o TLS substitui o SSL, corrigindo vulnerabilidades e implementando melhorias</b>. As erradas:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">(A)</span> inverte: o SSL é o <b>menos</b> seguro</div>\n  <div class=\"def\"><span class=\"def-t\">(C)</span> \"intercambiáveis, mesmo nível de segurança\" — não; um é obsoleto</div>\n  <div class=\"def\"><span class=\"def-t\">(D)</span> \"HTTPS só funciona com SSL\" — hoje funciona praticamente só com TLS</div>\n  <div class=\"def\"><span class=\"def-t\">(E)</span> inventa uma divisão de tarefas (SSL autentica, TLS cifra). Os dois nunca trabalham juntos; cada um faz autenticação <b>e</b> cifragem sozinho</div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Regra FGV para comparar tecnologias \"velha x nova\": a resposta quase sempre é <b>\"a nova substitui/evolui a antiga\"</b>. Alternativas com \"são equivalentes\", \"são usadas em conjunto\" ou \"a antiga é melhor\" costumam ser as armadilhas.</div>\n"
+    },
+    {
+      "titulo": "Ponto de Função x Story Points (Q47)",
+      "html": "\n<p><b>Por que medir tamanho de software?</b> Para estimar prazo e custo e, no setor público, para <b>pagar o fornecedor</b>. Existem dois mundos: medir o software pelo que ele <i>entrega</i> (Ponto de Função) ou estimar o <i>esforço</i> que o time sente (Story Points).</p>\n<p><b>Análise de Pontos de Função (APF)</b> — método da <b>IFPUG</b> (padronizado como ISO/IEC 20926). Mede o <b>tamanho funcional</b>: o que o sistema faz <b>do ponto de vista do usuário</b>, sem olhar linguagem, tecnologia ou quem vai programar. Por isso é <b>objetiva, padronizada e comparável</b> entre projetos e empresas — e é a base dos contratos de software do governo (o Roteiro de Métricas do SISP).</p>\n<p>A contagem olha para dois tipos de função:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">ALI</span> <b>Arquivo Lógico Interno</b> — grupo de dados que o próprio sistema mantém (ex.: cadastro de segurados que o sistema grava)</div>\n  <div class=\"def\"><span class=\"def-t\">AIE</span> <b>Arquivo de Interface Externa</b> — dados que o sistema só <b>lê</b>, mantidos por outro sistema (ex.: tabela de CEP dos Correios)</div>\n  <div class=\"def\"><span class=\"def-t\">EE</span> <b>Entrada Externa</b> — processo que recebe dados de fora e altera um ALI (ex.: incluir segurado)</div>\n  <div class=\"def\"><span class=\"def-t\">SE</span> <b>Saída Externa</b> — manda dados para fora <b>com cálculo/derivação</b> (ex.: relatório com totais)</div>\n  <div class=\"def\"><span class=\"def-t\">CE</span> <b>Consulta Externa</b> — manda dados para fora <b>sem cálculo</b>, só recupera (ex.: ver dados de um segurado)</div>\n</div>\n<p>Cada função recebe complexidade baixa/média/alta e vira pontos (ALI simples = 7, AIE simples = 5, EE simples = 3, SE simples = 4, CE simples = 3). A soma é o <b>PF não ajustado</b>; o antigo fator de ajuste (0,65 a 1,35) hoje é opcional.</p>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Dados: <b>ALI</b> = meu arquivo (eu mantenho), <b>AIE</b> = arquivo do vizinho (só leio). Transações: <b>EE</b> entra; <b>SE</b> sai <b>calculando</b>; <b>CE</b> sai <b>só consultando</b>.</div>\n<p><b>Story Points</b> — técnica ágil. É uma medida <b>relativa</b> de esforço + complexidade + incerteza de uma história, estimada pelo próprio time comparando histórias entre si (\"esta é o dobro daquela\"). Usa a sequência de Fibonacci (1, 2, 3, 5, 8, 13…) e o <b>Planning Poker</b>. A soma de pontos entregues por sprint é a <b>velocidade</b> (<i>velocity</i>).</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Ponto de Função</span> objetivo · padronizado (manual IFPUG) · independente do time e da tecnologia · comparável entre projetos · bom para <b>contrato formal e escopo fechado</b> · contagem mais demorada</div>\n  <div class=\"def\"><span class=\"def-t\">Story Points</span> subjetivo/relativo · vale só dentro <b>daquele</b> time · <b>não</b> se compara entre times · rápido · bom para planejamento de sprint e escopo que muda</div>\n</div>\n<p><b>Autópsia da Q47.</b> Certa: <b>(A) o Ponto de Função oferece mensuração objetiva e independente do time</b>. Repare que as quatro erradas são a mesma frase com o sujeito trocado:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">(B)</span> padronização entre times é virtude do <b>PF</b>, não do SP</div>\n  <div class=\"def\"><span class=\"def-t\">(C)</span> \"contexto subjetivo do time\" é característica do <b>SP</b></div>\n  <div class=\"def\"><span class=\"def-t\">(D)</span> contrato formal e escopo fechado combinam com <b>PF</b></div>\n  <div class=\"def\"><span class=\"def-t\">(E)</span> \"rápida, pelo esforço percebido pelo time\" descreve o <b>SP</b></div>\n</div>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Técnica de troca de sujeito: quando a questão compara A x B, monte mentalmente duas colunas de características e confira se cada alternativa pôs a característica <b>na coluna certa</b>. É o distrator mais usado pela FGV em questões comparativas.</div>\n"
+    },
+    {
+      "titulo": "Modelos de controle de acesso: DAC, MAC, RBAC e ABAC (Q62)",
+      "html": "\n<p><b>Primeiro, três palavras que a banca usa em sequência:</b></p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Identificação</span> dizer quem você é (o login)</div>\n  <div class=\"def\"><span class=\"def-t\">Autenticação</span> provar que é você (senha, token, biometria — MFA é usar mais de um fator)</div>\n  <div class=\"def\"><span class=\"def-t\">Autorização</span> decidir o que você <b>pode</b> fazer depois de entrar. É aqui que entram os modelos abaixo</div>\n</div>\n<p>Os modelos de controle de acesso são jeitos diferentes de responder \"quem decide quem acessa o quê\":</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">DAC — discricionário</span> quem decide é o <b>dono do recurso</b>, a seu critério (\"discrição\"). Ex.: você compartilha uma pasta do Google Drive com quem quiser. Implementado com listas de controle de acesso (ACL). Flexível, mas fraco: o dono pode repassar para qualquer um</div>\n  <div class=\"def\"><span class=\"def-t\">MAC — mandatório (obrigatório)</span> quem decide é o <b>sistema/política central</b>, e o dono não pode mudar. Cada <b>objeto</b> recebe um <b>rótulo de segurança</b> (reservado, secreto, ultrassecreto) e cada <b>sujeito</b> recebe uma <b>habilitação</b> (<i>clearance</i>). O acesso é liberado comparando rótulo x habilitação. Típico de ambiente militar e governamental</div>\n  <div class=\"def\"><span class=\"def-t\">RBAC — baseado em papéis</span> a permissão é dada ao <b>papel/função</b> (analista, gerente, auditor), e a pessoa herda as permissões do papel que ocupa. É o modelo das empresas</div>\n  <div class=\"def\"><span class=\"def-t\">ABAC — baseado em atributos</span> a regra combina <b>atributos</b> do usuário, do recurso e do contexto (horário, local, dispositivo). Ex.: \"gerente pode aprovar, só em horário comercial e da rede interna\"</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Palavra-gatilho no enunciado → modelo: <b>\"rótulo / classificação / habilitação / nível de sigilo\"</b> → MAC · <b>\"dono / proprietário / a critério\"</b> → DAC · <b>\"papel / função / cargo\"</b> → RBAC · <b>\"atributos / contexto / condições\"</b> → ABAC.</div>\n<p><b>Bell-LaPadula</b> é o modelo clássico de MAC para <b>confidencialidade</b>: \"não lê para cima, não escreve para baixo\" (quem é \"secreto\" não lê \"ultrassecreto\" e não copia segredo para um documento \"reservado\"). O <b>Biba</b> é o espelho para <b>integridade</b>: não lê para baixo, não escreve para cima.</p>\n<p><b>Autópsia da Q62.</b> O enunciado diz \"comparação de <b>rótulos de segurança</b> com autorizações\" → <b>(B) mandatório</b>. Distratores: (A) discricionário é o dono decidindo; (D) papéis é RBAC; (E) <b>privilégio mínimo</b> não é modelo, é um <b>princípio</b> (dar só o necessário) que vale para qualquer modelo; (C) \"entrada confiável\" não existe como modelo.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> \"Rótulo de segurança\" aparece duas vezes nesta aula: aqui (é o coração do MAC) e na X.800 (lá é um mecanismo <b>pervasivo</b>). Mesmo conceito, perguntas diferentes.</div>\n"
+    },
+    {
+      "titulo": "Arquitetura de segurança X.800: serviços e mecanismos (Q64)",
+      "html": "\n<p><b>O que é.</b> A X.800 é uma recomendação da ITU-T (1991) que organiza a segurança do modelo OSI em três peças. É cobrada pelo livro do Stallings, e a FGV copia a classificação dele.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Ataque</span> a ação contra a segurança. <b>Passivo</b>: só escuta (vazamento de conteúdo, análise de tráfego). <b>Ativo</b>: altera algo (disfarce, repetição, modificação de mensagem, negação de serviço)</div>\n  <div class=\"def\"><span class=\"def-t\">Serviço</span> <b>o que</b> se quer garantir. São 5: autenticação, controle de acesso, confidencialidade, integridade e irretratabilidade (não repúdio)</div>\n  <div class=\"def\"><span class=\"def-t\">Mecanismo</span> <b>como</b> se garante. Dividido em <b>específicos</b> e <b>pervasivos</b></div>\n</div>\n<p><b>Mecanismos específicos</b> — podem ser colocados numa camada de protocolo específica e agem diretamente sobre os dados/comunicação. São 8:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Cifragem</span> transformar os dados em ilegíveis (criptografia)</div>\n  <div class=\"def\"><span class=\"def-t\">Assinatura digital</span> provar origem e integridade</div>\n  <div class=\"def\"><span class=\"def-t\">Controle de acesso</span> impor direitos de acesso</div>\n  <div class=\"def\"><span class=\"def-t\">Integridade de dados</span> detectar alteração (hash, MAC)</div>\n  <div class=\"def\"><span class=\"def-t\">Troca de autenticação</span> provar identidade por troca de informações</div>\n  <div class=\"def\"><span class=\"def-t\">Preenchimento de tráfego</span> inserir bits \"falsos\" nas lacunas do fluxo para frustrar a <b>análise de tráfego</b> (o atacante não consegue saber quando e quanto você está transmitindo)</div>\n  <div class=\"def\"><span class=\"def-t\">Controle de roteamento</span> escolher rotas fisicamente seguras</div>\n  <div class=\"def\"><span class=\"def-t\">Notarização</span> um terceiro confiável atesta a troca</div>\n</div>\n<p><b>Mecanismos pervasivos</b> — não pertencem a camada nenhuma; ficam \"espalhados\" pelo sistema, vigiando e administrando. São 5:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Funcionalidade confiável</span> o que é considerado correto segundo a política</div>\n  <div class=\"def\"><span class=\"def-t\">Rótulo de segurança</span> marca que indica o nível de segurança de um recurso</div>\n  <div class=\"def\"><span class=\"def-t\">Detecção de evento</span> perceber eventos relevantes para a segurança</div>\n  <div class=\"def\"><span class=\"def-t\">Trilha de auditoria</span> registro para revisão posterior</div>\n  <div class=\"def\"><span class=\"def-t\">Recuperação de segurança</span> tratar eventos e restaurar o estado seguro</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Os <b>pervasivos</b> são o \"fiscal\" que está em todo lugar: <b>\"O fiscal Confia, Rotula, Detecta, Trilha e Recupera.\"</b> Se a alternativa não está nessa frase, ela é <b>específica</b>. Outro teste rápido: específico <b>mexe no dado</b> (cifra, assina, preenche, roteia); pervasivo <b>observa e administra</b>.</div>\n<p><b>Autópsia da Q64.</b> Pedia um mecanismo <b>específico</b>. A, B, D e E são quatro dos cinco pervasivos (detecção de evento, funcionalidade confiável, rótulo de segurança, trilha de auditoria). Só sobra <b>(C) preenchimento de tráfego</b>.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Pegadinha provável: \"controle de acesso\" é, ao mesmo tempo, um <b>serviço</b> e um <b>mecanismo específico</b> da X.800. Se a questão perguntar \"qual é serviço\", ele serve; se perguntar \"qual é mecanismo pervasivo\", ele não serve.</div>\n"
+    },
+    {
+      "titulo": "ETL x ELT: integração e ingestão de dados (Q67)",
+      "html": "\n<p><b>O problema.</b> Os dados da empresa estão espalhados em sistemas transacionais (folha, benefícios, cadastro), planilhas, APIs. Para analisar, é preciso <b>juntar tudo num lugar só</b> — um <b>data warehouse</b> (DW, armazém de dados organizado para consulta) ou um <b>data lake</b> (repositório de dados brutos de qualquer formato). O caminho até lá tem três passos:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">E — Extract</span> extrair dos sistemas de origem</div>\n  <div class=\"def\"><span class=\"def-t\">T — Transform</span> limpar, padronizar (datas, CPFs, códigos), deduplicar, cruzar e agregar</div>\n  <div class=\"def\"><span class=\"def-t\">L — Load</span> carregar no destino</div>\n</div>\n<p>A diferença entre ETL e ELT é <b>só a ordem</b> — e, por causa dela, <b>onde</b> a transformação roda:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">ETL</span> transforma <b>antes</b> de carregar, num servidor/ferramenta intermediária (<b>staging area</b>). Chega no DW só dado limpo. É o modelo do DW tradicional (on-premise), com esquema definido antes (<i>schema-on-write</i>). Fica lento quando o volume é enorme, porque o gargalo é o servidor intermediário</div>\n  <div class=\"def\"><span class=\"def-t\">ELT</span> carrega o dado <b>bruto</b> primeiro e transforma <b>dentro do destino</b>, usando o poder de processamento dele. Nasceu com DW em nuvem e data lakes (BigQuery, Snowflake, Databricks), que escalam fácil. Ideal para <b>grandes volumes</b> e para guardar o bruto e decidir depois (<i>schema-on-read</i>)</div>\n</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Onde está o <b>T</b>, está o trabalho pesado. <b>ETL</b>: o T vem no meio → roda <b>fora</b> do destino. <b>ELT</b>: o T vem no fim → roda <b>dentro</b> do destino, que precisa ser potente → combina com <b>volume grande</b>.</div>\n<p>Termos vizinhos que caem junto: <b>carga full</b> (recarrega tudo) x <b>incremental</b> (só o que mudou); <b>CDC</b> (<i>Change Data Capture</i>, captura as mudanças na origem, geralmente lendo o log do banco); <b>batch</b> (em lotes, de tempos em tempos) x <b>streaming</b> (contínuo, quase em tempo real, ex.: Kafka).</p>\n<p><b>Autópsia da Q67.</b> Pedia a <b>INCORRETA</b>. A, B, C e E estão certas. A <b>(D)</b> diz que o ELT é mais eficiente \"onde o volume é pequeno e o processamento pode ser feito <b>fora</b> do sistema de destino\" — é a descrição do <b>ETL</b> com o sinal trocado duas vezes. ELT brilha em volume <b>grande</b>, processando <b>dentro</b> do destino.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Duas lições de prova: (1) sublinhe <b>INCORRETA</b> no enunciado — errar o comando é o erro mais barato de evitar; (2) numa questão de \"incorreta\" com 4 alternativas muito parecidas e verdadeiras, procure a que <b>contradiz o conceito central</b> (aqui: onde roda a transformação).</div>\n"
+    },
+    {
+      "titulo": "Sistemas de Suporte à Decisão e tipos de problema (Q60)",
+      "html": "\n<p><b>Tipos de decisão</b> (classificação de Herbert Simon, usada por todo livro de Sistemas de Informação):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Estruturada</span> repetitiva, com regra clara e procedimento definido — dá para automatizar. Ex.: calcular a folha, reabastecer estoque abaixo do mínimo</div>\n  <div class=\"def\"><span class=\"def-t\">Semiestruturada</span> parte tem regra, parte exige julgamento. Ex.: definir o orçamento de um setor, conceder um crédito fora do padrão</div>\n  <div class=\"def\"><span class=\"def-t\">Não estruturada</span> nova, sem procedimento, depende de intuição e julgamento. Ex.: entrar ou não num novo mercado</div>\n</div>\n<p><b>Os sistemas e o nível que atendem</b> (costuma cair como associação):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">SPT / TPS</span> Sistema de Processamento de Transações — nível <b>operacional</b>, registra o dia a dia (vendas, pagamentos). Base de dados de todos os outros</div>\n  <div class=\"def\"><span class=\"def-t\">SIG / MIS</span> Sistema de Informações Gerenciais — nível <b>tático</b>, relatórios periódicos e resumidos para decisões estruturadas</div>\n  <div class=\"def\"><span class=\"def-t\">SSD / SAD / DSS</span> Sistema de Suporte (Apoio) à Decisão — interativo, com <b>modelos</b> e simulações (\"e se…?\"). Foco clássico em decisões <b>semiestruturadas</b></div>\n  <div class=\"def\"><span class=\"def-t\">SAE / EIS</span> Sistema de Apoio ao Executivo — nível <b>estratégico</b>, painéis com indicadores e dados externos, para decisões não estruturadas</div>\n  <div class=\"def\"><span class=\"def-t\">Sistema especialista</span> IA simbólica: base de conhecimento + motor de inferência imitando um especialista humano</div>\n</div>\n<p><b>Autópsia da Q60 (gabarito D).</b> A literatura diz que o SSD é \"especialmente útil\" em problemas semiestruturados, por isso a (C) atrai. Mas a FGV marcou a <b>(D)</b>: SSDs podem ser aplicados a problemas estruturados, semiestruturados e não estruturados. O motivo está <b>no próprio enunciado</b>: \"eles auxiliam a enfrentar diferentes tipos de problemas, <b>desde os muito bem definidos até os que exigem intuição e julgamento humano</b>\". A banca escreveu a resposta no texto-base.</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Regra de ouro FGV em questão conceitual com duas alternativas plausíveis: <b>releia o enunciado</b>. Quando ele afirma algo (\"desde X até Y\"), a alternativa que repete essa afirmação é a certa; a que restringe (\"apenas\", \"mais eficaz em\", \"limitado a\") é a armadilha. (A), (B) e (E) usam \"apenas\", \"ideais para\" e \"limitados a\".</div>\n"
+    },
+    {
+      "titulo": "OWASP Top 10: as listas de 2021 e 2025 (Q63)",
+      "html": "\n<p><b>O que é.</b> A OWASP (<i>Open Worldwide Application Security Project</i>) é uma fundação aberta que publica, a cada 3–4 anos, as 10 categorias de risco mais críticas em aplicações web. Categoria é um <b>tipo de falha no software</b> — não é boa prática, nem treinamento, nem processo. Esse é o filtro que resolveu a Q63.</p>\n<p><b>OWASP Top 10:2021</b> (a cobrada em 2024):</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">A01</span> Quebra de controle de acesso — usuário acessa o que não devia (trocar o id na URL e ver o dado de outro)</div>\n  <div class=\"def\"><span class=\"def-t\">A02</span> Falhas criptográficas — dado sensível sem cifra, algoritmo fraco, senha sem hash</div>\n  <div class=\"def\"><span class=\"def-t\">A03</span> Injeção — SQL injection, XSS (o XSS foi incorporado aqui em 2021)</div>\n  <div class=\"def\"><span class=\"def-t\">A04</span> Design inseguro — falha de projeto, não de código (nova em 2021)</div>\n  <div class=\"def\"><span class=\"def-t\">A05</span> Configuração incorreta de segurança — senha padrão, erro detalhado exposto, porta aberta</div>\n  <div class=\"def\"><span class=\"def-t\">A06</span> Componentes vulneráveis e desatualizados — biblioteca com CVE conhecida</div>\n  <div class=\"def\"><span class=\"def-t\">A07</span> Falhas de identificação e autenticação</div>\n  <div class=\"def\"><span class=\"def-t\">A08</span> Falhas de integridade de software e dados — atualização sem assinatura, pipeline CI/CD comprometido, desserialização insegura</div>\n  <div class=\"def\"><span class=\"def-t\">A09</span> Falhas de registro e monitoramento de segurança — não logar, não alertar</div>\n  <div class=\"def\"><span class=\"def-t\">A10</span> <b>SSRF — falsificação de solicitação do lado do servidor</b> — o atacante faz o servidor chamar uma URL escolhida por ele (ex.: serviços internos da nuvem)</div>\n</div>\n<p><b>OWASP Top 10:2025</b> (lançada no fim de 2025 — pode aparecer na prova de 2026, já que o edital não fixa versão). Mudanças principais:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">Entrou A03</span> <b>Falhas na cadeia de suprimentos de software</b> — amplia o antigo \"componentes vulneráveis\"</div>\n  <div class=\"def\"><span class=\"def-t\">Entrou A10</span> <b>Tratamento inadequado de condições excepcionais</b> — erros e exceções mal tratados</div>\n  <div class=\"def\"><span class=\"def-t\">Subiu</span> Configuração incorreta foi para <b>A02</b></div>\n  <div class=\"def\"><span class=\"def-t\">Saiu</span> SSRF deixou de ser categoria própria e foi absorvida pela quebra de controle de acesso (<b>A01</b>, que continua em 1º)</div>\n</div>\n<p>Ordem de 2025: A01 Quebra de controle de acesso · A02 Configuração incorreta · A03 Cadeia de suprimentos · A04 Falhas criptográficas · A05 Injeção · A06 Design inseguro · A07 Falhas de autenticação · A08 Integridade de software e dados · A09 Registro e alerta · A10 Condições excepcionais.</p>\n<p><b>Autópsia da Q63 (gabarito A).</b> Perguntava a versão <b>2021</b>: SSRF é a A10:2021. As outras são processos ou práticas, não categorias de falha: \"proteção do ambiente de engenharia\", \"treinamento operacional\", \"uso de recursos de linguagens\". A (B) \"cadeia de suprimentos\" é uma armadilha interessante: em 2021 ela <b>não</b> era categoria (só em 2025).</p>\n<div class=\"destaque\"><i class=\"ti ti-alert-triangle\"></i> Em 2026, leia o enunciado procurando o <b>ano da versão</b>. Se disser 2021, SSRF é categoria e cadeia de suprimentos não. Se disser 2025, é o contrário.</div>\n<div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> As três que nunca saem do topo: <b>acesso, criptografia, injeção</b>. Se você só lembrar três, lembre destas.</div>\n"
+    }
+  ],
+  "flashcards": [
+    {
+      "tema": "SSL/TLS",
+      "pergunta": "Qual a relação entre SSL e TLS?",
+      "resposta": "O TLS é o sucessor do SSL (padronizado pela IETF). Todas as versões do SSL são obsoletas e inseguras; o TLS corrigiu as vulnerabilidades. Hoje só TLS 1.2 e 1.3 são aceitos."
+    },
+    {
+      "tema": "SSL/TLS",
+      "pergunta": "No HTTPS, que tipo de criptografia protege os dados trafegados após o handshake?",
+      "resposta": "Simétrica (ex.: AES). A assimétrica é usada só no início, para autenticar o servidor (certificado) e combinar a chave de sessão."
+    },
+    {
+      "tema": "SSL/TLS",
+      "pergunta": "O que é sigilo futuro (forward secrecy)?",
+      "resposta": "Garantia de que, se a chave privada do servidor vazar no futuro, as sessões gravadas no passado continuam ilegíveis. É obrigatório no TLS 1.3."
+    },
+    {
+      "tema": "SSL/TLS",
+      "pergunta": "O que o navegador confere no certificado do servidor?",
+      "resposta": "Se foi assinado por uma Autoridade Certificadora confiável (cadeia de confiança), se está no prazo e se pertence ao domínio acessado."
+    },
+    {
+      "tema": "Métricas",
+      "pergunta": "Ponto de Função mede o quê, e de que ponto de vista?",
+      "resposta": "O tamanho funcional do software, do ponto de vista do usuário — independente de linguagem, tecnologia e time."
+    },
+    {
+      "tema": "Métricas",
+      "pergunta": "Quais as 5 funções da APF e como se dividem?",
+      "resposta": "Dados: ALI (mantido pelo sistema) e AIE (só lido, mantido por outro). Transações: EE (entrada), SE (saída com cálculo) e CE (consulta, sem cálculo)."
+    },
+    {
+      "tema": "Métricas",
+      "pergunta": "Diferença entre Saída Externa (SE) e Consulta Externa (CE)?",
+      "resposta": "A SE envia dados para fora com cálculo, derivação ou totalização; a CE só recupera e mostra, sem cálculo."
+    },
+    {
+      "tema": "Métricas",
+      "pergunta": "Story Points podem ser comparados entre times diferentes?",
+      "resposta": "Não. São relativos à escala de cada time. Quem permite comparar projetos e times é o Ponto de Função."
+    },
+    {
+      "tema": "Métricas",
+      "pergunta": "Qual técnica combina com contrato de escopo fechado e pagamento ao fornecedor?",
+      "resposta": "Ponto de Função (objetivo e auditável; base do Roteiro de Métricas do SISP no governo)."
+    },
+    {
+      "tema": "Métricas",
+      "pergunta": "O que é velocity no ágil?",
+      "resposta": "A quantidade de story points que o time entrega por sprint; usada para prever quantas sprints faltam."
+    },
+    {
+      "tema": "Controle de acesso",
+      "pergunta": "Qual modelo usa rótulos de segurança comparados com habilitações?",
+      "resposta": "MAC — controle de acesso mandatório (obrigatório). A política central decide; o dono não pode alterar."
+    },
+    {
+      "tema": "Controle de acesso",
+      "pergunta": "No DAC, quem decide o acesso?",
+      "resposta": "O dono do recurso, a seu critério (discricionário). Ex.: compartilhar uma pasta com quem quiser; implementado com ACLs."
+    },
+    {
+      "tema": "Controle de acesso",
+      "pergunta": "RBAC x ABAC?",
+      "resposta": "RBAC dá permissões a papéis/funções. ABAC decide por atributos do usuário, do recurso e do contexto (horário, local, dispositivo)."
+    },
+    {
+      "tema": "Controle de acesso",
+      "pergunta": "Privilégio mínimo é um modelo de controle de acesso?",
+      "resposta": "Não. É um princípio (dar apenas o acesso necessário para a tarefa), aplicável a qualquer modelo."
+    },
+    {
+      "tema": "Controle de acesso",
+      "pergunta": "Resuma Bell-LaPadula e Biba.",
+      "resposta": "Bell-LaPadula (confidencialidade): não lê para cima, não escreve para baixo. Biba (integridade): não lê para baixo, não escreve para cima."
+    },
+    {
+      "tema": "X.800",
+      "pergunta": "Quais os 5 serviços de segurança da X.800?",
+      "resposta": "Autenticação, controle de acesso, confidencialidade, integridade e irretratabilidade (não repúdio)."
+    },
+    {
+      "tema": "X.800",
+      "pergunta": "Quais os 5 mecanismos pervasivos da X.800?",
+      "resposta": "Funcionalidade confiável, rótulo de segurança, detecção de evento, trilha de auditoria de segurança e recuperação de segurança. ('O fiscal Confia, Rotula, Detecta, Trilha e Recupera.')"
+    },
+    {
+      "tema": "X.800",
+      "pergunta": "Cite os 8 mecanismos específicos da X.800.",
+      "resposta": "Cifragem, assinatura digital, controle de acesso, integridade de dados, troca de autenticação, preenchimento de tráfego, controle de roteamento e notarização."
+    },
+    {
+      "tema": "X.800",
+      "pergunta": "Para que serve o preenchimento de tráfego?",
+      "resposta": "Inserir bits nas lacunas do fluxo de dados para frustrar a análise de tráfego (ataque passivo). É mecanismo específico."
+    },
+    {
+      "tema": "X.800",
+      "pergunta": "Ataque passivo x ativo?",
+      "resposta": "Passivo só observa (vazamento de conteúdo, análise de tráfego) — difícil de detectar, previne-se. Ativo altera algo (disfarce, repetição, modificação, negação de serviço) — detecta-se e recupera-se."
+    },
+    {
+      "tema": "ETL/ELT",
+      "pergunta": "Diferença essencial entre ETL e ELT?",
+      "resposta": "A ordem e o local da transformação: no ETL transforma antes de carregar, fora do destino (staging); no ELT carrega o bruto e transforma dentro do destino."
+    },
+    {
+      "tema": "ETL/ELT",
+      "pergunta": "Quando o ELT é mais vantajoso?",
+      "resposta": "Com grandes volumes e destino com alta capacidade de processamento (DW em nuvem, data lake/lakehouse)."
+    },
+    {
+      "tema": "ETL/ELT",
+      "pergunta": "O que é CDC?",
+      "resposta": "Change Data Capture: captura só as mudanças feitas na origem (geralmente pelo log do banco), permitindo carga incremental."
+    },
+    {
+      "tema": "ETL/ELT",
+      "pergunta": "Schema-on-write x schema-on-read?",
+      "resposta": "On-write: o esquema é definido antes de gravar (DW tradicional, ETL). On-read: grava bruto e aplica o esquema na leitura (data lake, ELT)."
+    },
+    {
+      "tema": "BI/SSD",
+      "pergunta": "Quais os três tipos de decisão e exemplos?",
+      "resposta": "Estruturada (regra clara, automatizável: folha), semiestruturada (parte regra, parte julgamento: orçamento) e não estruturada (nova, intuição: novo mercado)."
+    },
+    {
+      "tema": "BI/SSD",
+      "pergunta": "Qual sistema atende cada nível: operacional, tático, estratégico?",
+      "resposta": "Operacional: SPT/TPS. Tático: SIG/MIS (e SSD). Estratégico: SAE/EIS."
+    },
+    {
+      "tema": "BI/SSD",
+      "pergunta": "Qual a lição da Q60 da FGV 2024?",
+      "resposta": "O enunciado afirmava que SSDs apoiam de problemas bem definidos até os que exigem intuição; a certa foi a que repetia isso (estruturados, semi e não estruturados)."
+    },
+    {
+      "tema": "OWASP",
+      "pergunta": "Qual categoria era A10 no OWASP Top 10:2021?",
+      "resposta": "SSRF — Server-Side Request Forgery (falsificação de solicitação do lado do servidor)."
+    },
+    {
+      "tema": "OWASP",
+      "pergunta": "Quais categorias novas entraram no OWASP Top 10:2025?",
+      "resposta": "A03 Falhas na cadeia de suprimentos de software e A10 Tratamento inadequado de condições excepcionais. SSRF foi absorvido pela A01."
+    },
+    {
+      "tema": "OWASP",
+      "pergunta": "Qual categoria está em 1º lugar em 2021 e em 2025?",
+      "resposta": "Quebra de controle de acesso (Broken Access Control)."
+    }
+  ]
+}

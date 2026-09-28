@@ -1,0 +1,177 @@
+{
+  "id": "ti-erros-2024-02",
+  "materiaId": "ti-erros-2024",
+  "nome": "Treino: SSL/TLS, métricas, acesso, X.800, ETL e OWASP",
+  "descricao": "Doze questões novas no padrão FGV, cobrindo os mesmos pontos em que você errou — com os distratores típicos da banca.",
+  "nivel": "Treino",
+  "questoes": [
+    {
+      "type": "mc",
+      "tag": "SSL/TLS",
+      "text": "Durante o estabelecimento de uma sessão HTTPS com TLS, a criptografia assimétrica é utilizada principalmente para",
+      "options": [
+        "cifrar todo o conteúdo das páginas trafegadas, por ser mais rápida que a simétrica.",
+        "autenticar o servidor e permitir que as partes combinem uma chave de sessão, que será usada com criptografia simétrica na troca de dados.",
+        "comprimir os dados antes do envio, reduzindo o consumo de banda.",
+        "substituir o certificado digital, dispensando Autoridades Certificadoras.",
+        "garantir que o SSL 3.0 continue compatível com navegadores antigos."
+      ],
+      "answer": 1,
+      "exp": "B. A assimétrica apresenta (certificado) e combina a chave; a simétrica, mais rápida, carrega os dados. A inverte a velocidade; C, D e E não são funções do handshake."
+    },
+    {
+      "type": "mc",
+      "tag": "SSL/TLS",
+      "text": "Uma auditoria recomendou desabilitar SSL 3.0, TLS 1.0 e TLS 1.1 nos servidores web de um órgão, mantendo apenas versões mais recentes. A recomendação é",
+      "options": [
+        "inadequada, pois o SSL 3.0 é mais robusto que qualquer versão do TLS.",
+        "inadequada, pois o HTTPS depende do SSL 3.0 para validar certificados.",
+        "adequada, pois essas versões têm vulnerabilidades conhecidas; devem permanecer TLS 1.2 e TLS 1.3.",
+        "adequada apenas se o site não usar certificado digital.",
+        "indiferente, pois todas as versões de SSL e TLS oferecem o mesmo nível de segurança."
+      ],
+      "answer": 2,
+      "exp": "C. Versões antigas foram descontinuadas por falhas (POODLE, BEAST etc.). O padrão atual é TLS 1.2 e 1.3."
+    },
+    {
+      "type": "mc",
+      "tag": "Métricas · APF",
+      "text": "Um sistema de benefícios mantém o cadastro de segurados e apenas consulta, sem alterar, a tabela de municípios mantida pelo IBGE. Na Análise de Pontos de Função, essas duas estruturas são classificadas, respectivamente, como",
+      "options": [
+        "EE e SE.",
+        "AIE e ALI.",
+        "ALI e CE.",
+        "ALI e AIE.",
+        "CE e AIE."
+      ],
+      "answer": 3,
+      "exp": "D. Dado mantido pelo próprio sistema = ALI; dado de outro sistema, só lido = AIE. EE, SE e CE são funções de transação, não de dados."
+    },
+    {
+      "type": "mc",
+      "tag": "Métricas · APF",
+      "text": "Uma funcionalidade gera o extrato anual de contribuições de um segurado, com cálculo do total recolhido e da média mensal. Na APF, ela é classificada como",
+      "options": [
+        "Entrada Externa, pois recebe o CPF do segurado.",
+        "Consulta Externa, pois apenas recupera dados.",
+        "Saída Externa, pois envia dados para fora com cálculo/derivação.",
+        "Arquivo Lógico Interno, pois lê o cadastro.",
+        "Arquivo de Interface Externa, pois gera um documento."
+      ],
+      "answer": 2,
+      "exp": "C. Saiu dado com cálculo (total, média) → SE. Se só exibisse os lançamentos, sem cálculo, seria CE. Receber um filtro não torna o processo uma EE (EE altera um ALI)."
+    },
+    {
+      "type": "mc",
+      "tag": "Métricas · Story Points",
+      "text": "Dois times ágeis de uma empresa informam velocidades de 30 e 60 story points por sprint. Com base nisso, é correto afirmar que",
+      "options": [
+        "o segundo time é duas vezes mais produtivo que o primeiro.",
+        "os números não permitem comparar produtividade entre os times, pois story points são uma medida relativa à escala de cada equipe.",
+        "o primeiro time deve adotar a escala do segundo para padronizar os contratos.",
+        "a empresa pode converter story points em pontos de função multiplicando por uma constante fixa.",
+        "story points medem o tamanho funcional pela visão do usuário, como os pontos de função."
+      ],
+      "answer": 1,
+      "exp": "B. Story points são relativos e internos ao time; 60 de um time pode valer o mesmo que 30 do outro. Comparação entre times é papel do Ponto de Função."
+    },
+    {
+      "type": "mc",
+      "tag": "Controle de acesso",
+      "text": "Em um sistema, cada usuário recebe permissões de acordo com a função que exerce — atendente, supervisor ou auditor —, e ao mudar de função passa a ter automaticamente as permissões da nova. Trata-se do modelo",
+      "options": [
+        "DAC.",
+        "MAC.",
+        "RBAC.",
+        "Bell-LaPadula.",
+        "de privilégio mínimo."
+      ],
+      "answer": 2,
+      "exp": "C. Permissões ligadas a papéis = RBAC. DAC seria o dono decidindo; MAC, rótulos x habilitações; Bell-LaPadula é um modelo de MAC; privilégio mínimo é princípio."
+    },
+    {
+      "type": "mc",
+      "tag": "Controle de acesso",
+      "text": "Sobre o modelo de controle de acesso discricionário (DAC), assinale a afirmativa correta.",
+      "options": [
+        "O acesso é determinado pela comparação entre o rótulo do objeto e a habilitação do sujeito.",
+        "O proprietário do recurso define, a seu critério, quem pode acessá-lo, geralmente por listas de controle de acesso (ACL).",
+        "O usuário não consegue repassar permissões a terceiros.",
+        "É o modelo típico de ambientes militares com classificação de sigilo.",
+        "Decide o acesso com base em atributos de contexto, como horário e localização."
+      ],
+      "answer": 1,
+      "exp": "B. Discricionário = critério do dono. A e D descrevem o MAC; E descreve o ABAC; C é falsa — no DAC o dono pode repassar."
+    },
+    {
+      "type": "mc",
+      "tag": "X.800",
+      "text": "Segundo a recomendação X.800, é um mecanismo de segurança pervasivo:",
+      "options": [
+        "a cifragem.",
+        "a assinatura digital.",
+        "a notarização.",
+        "o controle de roteamento.",
+        "a recuperação de segurança."
+      ],
+      "answer": 4,
+      "exp": "E. Pervasivos: funcionalidade confiável, rótulo de segurança, detecção de evento, trilha de auditoria e recuperação de segurança. As demais são mecanismos específicos."
+    },
+    {
+      "type": "mc",
+      "tag": "X.800",
+      "text": "Um atacante não consegue decifrar as mensagens de uma rede, mas observa a frequência e o tamanho dos pacotes trocados entre dois órgãos para deduzir quando ocorrem negociações. O ataque e o mecanismo específico da X.800 mais indicado para frustrá-lo são, respectivamente,",
+      "options": [
+        "ataque ativo de modificação e assinatura digital.",
+        "ataque passivo de análise de tráfego e preenchimento de tráfego.",
+        "ataque ativo de repetição e notarização.",
+        "ataque passivo de vazamento de conteúdo e trilha de auditoria.",
+        "negação de serviço e controle de roteamento."
+      ],
+      "answer": 1,
+      "exp": "B. Só observar padrões, sem ler conteúdo, é análise de tráfego (passivo). O preenchimento de tráfego insere dados falsos para mascarar o padrão."
+    },
+    {
+      "type": "mc",
+      "tag": "ETL/ELT",
+      "text": "Um órgão migrou seu data warehouse para uma plataforma em nuvem com grande capacidade de processamento e passou a receber terabytes diários de dados brutos de várias fontes, preservando-os para análises futuras. A abordagem de integração mais adequada é",
+      "options": [
+        "ETL, pois a transformação deve ocorrer em servidor intermediário antes da carga.",
+        "ELT, carregando os dados brutos e transformando-os dentro da plataforma de destino.",
+        "ETL, pois o ELT só funciona com volumes pequenos.",
+        "carga manual por planilhas, para garantir qualidade.",
+        "ELT, pois ele dispensa qualquer etapa de transformação."
+      ],
+      "answer": 1,
+      "exp": "B. Grande volume + destino potente + guardar o bruto = ELT. E é falsa: o ELT transforma, só que depois de carregar."
+    },
+    {
+      "type": "mc",
+      "tag": "ETL/ELT",
+      "text": "Em um processo de carga de data warehouse, a técnica que identifica e captura apenas as inserções, alterações e exclusões ocorridas na origem desde a última carga, geralmente lendo o log de transações, é conhecida como",
+      "options": [
+        "CDC (Change Data Capture).",
+        "carga full.",
+        "staging area.",
+        "OLAP.",
+        "schema-on-read."
+      ],
+      "answer": 0,
+      "exp": "A. CDC permite carga incremental. Carga full recarrega tudo; staging é a área intermediária do ETL."
+    },
+    {
+      "type": "mc",
+      "tag": "OWASP",
+      "text": "Uma aplicação permite que o usuário informe uma URL para importar uma imagem. Um atacante informa o endereço de um serviço interno da nuvem, e o servidor da aplicação faz a requisição e devolve dados sigilosos. No OWASP Top 10:2021, essa falha corresponde a",
+      "options": [
+        "injeção de SQL.",
+        "falhas criptográficas.",
+        "design inseguro.",
+        "falhas de registro e monitoramento.",
+        "SSRF — falsificação de solicitação do lado do servidor."
+      ],
+      "answer": 4,
+      "exp": "E. O servidor foi induzido a fazer uma requisição escolhida pelo atacante: SSRF (A10:2021). Na versão 2025, esse tipo de falha foi incorporado à A01 (quebra de controle de acesso)."
+    }
+  ]
+}
