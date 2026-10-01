@@ -5,6 +5,10 @@
   "descricao": "Lei de Acesso à Informação. Regra de ouro: o acesso é a regra; o sigilo, a exceção.",
   "resumo": [
     {
+      "titulo": "Mapa mental — revisão visual",
+      "html": "<a class=\"mapa-link\" href=\"/mapas/legislacao.html#lai\"><span class=\"mapa-link-ic\"><i class=\"ti ti-sitemap\"></i></span><span class=\"mapa-link-body\"><b>Abrir os mapas mentais</b><span>7 mapas coloridos: a ideia da lei, transparência ativa e passiva, o pedido passo a passo com os prazos, os três graus de sigilo, informação pessoal, responsabilidades e os dois decretos.</span></span><i class=\"ti ti-arrow-right mapa-link-go\"></i></a><p>Use os mapas para revisar depois de ler a teoria abaixo, e na véspera da prova. No fim da página há uma tabela com todos os números das quatro leis.</p>"
+    },
+    {
       "titulo": "De onde veio e o espírito da lei",
       "html": "\n                <p>Nasceu para concretizar o direito constitucional de acesso à informação pública (art. 5º, XXXIII, da CF), obrigando o Estado a ser transparente com o cidadão sobre o que faz e como gasta.</p>\n                <p>Publicada em 18/11/2011, entrou em vigor após <b>vacatio legis de 180 dias</b>, em <b>16/05/2012</b>.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Regra de ouro: <b>acesso é a regra, sigilo é a exceção.</b></div>\n              "
     },

@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legislação sem Medo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: mesma família dos mapas de crase. Uma coluna de cartões, um mapa por assunto, cada lei aberta por uma faixa de título. A cor diz o tipo da informação, não a lei. */
+:root{
+  --bg:#eef0f3; --paper:#ffffff; --ink:#15171c; --muted:#5b606b; --line:#d9dce2;
+  --red:#e0283a; --red-soft:#fde8ea;
+  --green:#1b9a4b; --green-soft:#e6f6ec;
+  --blue:#1f66d1; --blue-soft:#e6effc;
+  --orange:#dd6a12; --orange-soft:#fdf0e4;
+  --purple:#7a3cc4; --purple-soft:#f1e9fb;
+  --shadow:0 2px 0 rgba(20,22,28,.06);
+  --display:"Oswald","Arial Narrow",sans-serif;
+  --body:"Nunito",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --shadow:none;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--body);padding-inline:16px;padding-block:20px 60px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+header.intro{text-align:center;display:flex;flex-direction:column;gap:8px}
+header.intro h1{font:700 clamp(28px,5vw,42px)/1.05 var(--display);text-transform:uppercase;letter-spacing:.01em;margin:0;text-wrap:balance}
+header.intro p{margin:0 auto;color:var(--muted);max-width:62ch}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:6px}
+.legend span{font:600 13px var(--display);letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;color:#fff}
+.legend .lg{background:#1b9a4b}.legend .lr{background:#e0283a}.legend .lb{background:#1f66d1}.legend .lp{background:#7a3cc4}.legend .lo{background:#dd6a12}
+
+nav.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+nav.jump a{font:600 13px var(--display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:var(--paper);border:2px solid var(--ink);border-radius:99px;padding:4px 11px;white-space:nowrap}
+nav.jump a:hover{background:var(--ink);color:var(--paper)}
+
+/* faixa que abre cada lei */
+.law{display:flex;flex-direction:column;gap:8px;border-top:6px solid var(--ink);padding-top:14px;scroll-margin-top:64px}
+.law .num{font:500 14px var(--mono);color:var(--muted)}
+.law h2{margin:0;font:700 clamp(26px,5vw,38px)/1.05 var(--display);text-transform:uppercase;text-wrap:balance}
+.law p{margin:0;color:var(--muted);max-width:70ch}
+.law p b{color:var(--ink)}
+.scope{display:flex;flex-wrap:wrap;gap:6px}
+.scope span{font:500 13px var(--mono);border:1.5px solid var(--line);background:var(--paper);border-radius:6px;padding:2px 8px}
+
+/* cartão de mapa */
+.map{background:var(--paper);border-radius:14px;padding:22px clamp(14px,3vw,28px) 26px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow)}
+.banner{align-self:center;border:4px solid var(--ink);border-radius:10px;padding:6px 18px;position:relative;text-align:center;max-width:100%}
+.banner::after{content:"";position:absolute;left:50%;bottom:-13px;transform:translateX(-50%);border:9px solid transparent;border-top-color:var(--ink);border-bottom:0}
+.banner h3{margin:0;font:700 clamp(20px,3.6vw,28px)/1.1 var(--display);text-transform:uppercase;text-wrap:balance}
+.lead{margin:0 auto;max-width:64ch;text-align:center;color:var(--muted)}
+.lead b{color:var(--ink)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;margin-top:6px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 20px;margin-top:6px}
+@media (max-width:760px){.trio{grid-template-columns:1fr}}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0}
+.big{width:100%;border:3px solid var(--c);border-radius:14px;padding:6px;background:var(--c)}
+.big div{background:var(--paper);border-radius:9px;text-align:center;padding:12px 8px;font:700 clamp(24px,4.6vw,36px)/1.05 var(--display);text-transform:uppercase}
+.big small{display:block;font:500 14px var(--mono);color:var(--muted);text-transform:none;margin-top:6px}
+.down{width:0;height:0;border:11px solid transparent;border-top:14px solid var(--c);border-bottom:0}
+.result{width:100%;border:2px solid var(--c);border-radius:12px;overflow:hidden;background:var(--paper)}
+.result .head{background:var(--soft);padding:10px 12px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.result .head b{color:var(--c);font-weight:800}
+.result .head .f{font:500 13.5px var(--mono);color:var(--muted)}
+.result .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:10px}
+.result .body p{margin:0}
+.lbl{font:600 13px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;text-align:left}
+.list li{padding-left:18px;position:relative}
+.list li::before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--c,var(--ink))}
+.tip{border-top:1px dashed var(--line);padding-top:10px;font-size:14.5px;color:var(--muted)}
+.tip strong,.tip b{color:var(--ink)}
+.rule{align-self:center;background:var(--soft,var(--green-soft));border-radius:10px;padding:10px 16px;text-align:center;max-width:64ch;font-weight:700}
+.trap{border:2px dashed var(--red);border-radius:12px;padding:12px 14px;background:var(--red-soft);display:flex;flex-direction:column;gap:6px}
+.trap .lbl{color:var(--red)}
+.trap p{margin:0}
+.fgv{border:2px solid var(--ink);border-radius:12px;padding:12px 14px;background:var(--bg);display:flex;flex-direction:column;gap:6px}
+.fgv .lbl{color:var(--ink)}
+.fgv p{margin:0}
+
+/* cores de sentido */
+.c-green{--c:var(--green);--soft:var(--green-soft)}
+.c-blue{--c:var(--blue);--soft:var(--blue-soft)}
+.c-orange{--c:var(--orange);--soft:var(--orange-soft)}
+.c-purple{--c:var(--purple);--soft:var(--purple-soft)}
+.c-red{--c:var(--red);--soft:var(--red-soft)}
+.c-ink{--c:var(--ink);--soft:var(--bg)}
+.g{color:var(--green);font-weight:800}
+.r{color:var(--red);font-weight:800}
+.b{color:var(--blue);font-weight:800}
+.p{color:var(--purple);font-weight:800}
+.o{color:var(--orange);font-weight:800}
+.mono{font-family:var(--mono);font-size:.88em}
+.art{font:500 12.5px var(--mono);color:var(--muted);white-space:nowrap}
+
+/* passo a passo */
+.steps{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border:2px solid var(--line);border-radius:12px;padding:12px 14px}
+.steps .n{font:700 18px/1 var(--display);width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center}
+.steps .t{min-width:0;display:flex;flex-direction:column;gap:4px}
+.steps h4{margin:0;font:700 17px/1.2 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.steps p{margin:0}
+.chip{display:inline-block;font:700 13px var(--mono);padding:1px 8px;border-radius:6px;background:var(--blue-soft);color:var(--blue);white-space:nowrap}
+
+/* tabelas */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px;font-variant-numeric:tabular-nums}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font:600 13px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:800}
+tr.grp td{background:var(--bg);font:600 13px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:640px){table{min-width:0;font-size:14px}th,td{padding:8px 6px;overflow-wrap:anywhere}td:first-child{width:34%}}
+footer{text-align:center;color:var(--muted);font-size:14px}
+</style>
+
+<style>
+body{margin:0}
+.back{max-width:980px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.back a{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line);border-radius:9px;padding:6px 12px;background:var(--paper)}
+.back a:hover{color:var(--ink)}
+.back a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+<nav class="back"><a href="/#/a/legislacao">← Voltar para Legislação</a><a href="/#/">Estudos DataPrev</a></nav>
+<div class="wrap">
+
+<header class="intro">
+  <h1>Legislação sem medo</h1>
+  <p>As quatro leis do edital, no mesmo formato dos mapas de crase. Aqui a cor mostra <b style="color:var(--ink)">o tipo da informação</b>, porque é isso que a FGV troca nas alternativas: o prazo, a autoridade, a regra pela exceção, a pena.</p>
+  <div class="legend">
+    <span class="lg">Regra · pode</span>
+    <span class="lr">Proibido · pegadinha</span>
+    <span class="lb">Prazo · número</span>
+    <span class="lp">Quem</span>
+    <span class="lo">Pena · sanção</span>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Ir para">
+  <a href="#lai">LAI</a>
+  <a href="#delitos">Delitos</a>
+  <a href="#marco">Marco Civil</a>
+  <a href="#lgpd">LGPD</a>
+  <a href="#numeros">Números</a>
+</nav>
+
+<!-- COMO A BANCA COBRA -->
+<section class="map">
+  <div class="banner"><h3>Como a FGV cobra essa matéria</h3></div>
+  <p class="lead">São <b>5 questões</b>. Na prova de 2024 (mesmo cargo) caiu <b>1 de LAI, 1 de Delitos Informáticos, 1 de Marco Civil e 2 de LGPD</b>. Todas eram letra de lei com um detalhe trocado. A banca quase nunca pede interpretação: ela copia o artigo e mexe em uma peça.</p>
+  <div class="pair">
+    <div class="col c-blue">
+      <div class="result">
+        <div class="head"><span><b>Troca o número</b></span><span class="f">prazo, percentual, fração</span></div>
+        <div class="body">
+          <p>Em 2024: “multa de 10% extraída da <span class="r">média dos últimos três exercícios</span>”. A lei diz <span class="b">último exercício</span>.</p>
+          <div class="tip">Por isso todo número desta página está em azul. Na véspera, releia só o azul.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="result">
+        <div class="head"><span><b>Troca quem faz</b></span><span class="f">órgão, autoridade, vítima</span></div>
+        <div class="body">
+          <p>Em 2024: deu ao <span class="r">Conselho Diretor</span> a composição que é do <span class="p">CNPD</span>, e aumentou a pena por causa do <span class="r">vice</span>-presidente da Câmara, que não está na lista.</p>
+          <div class="tip">Roxo marca quem decide, quem classifica, quem guarda, quem é punido.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Vira a regra do avesso</b></span><span class="f">só · sempre · nunca · exceto</span></div>
+        <div class="body">
+          <p>Em 2024: “as sanções <span class="r">só</span> podem ser aplicadas isoladamente”. A lei diz <span class="g">isolada ou cumulativa</span>.</p>
+          <div class="tip">Desconfie de alternativa absoluta. Quase toda regra dessas leis tem exceção escrita.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Inventa um requisito</b></span><span class="f">exigência que a lei não faz</span></div>
+        <div class="body">
+          <p>Em 2024: o crime exigiria tablet <span class="r">conectado à rede</span> e <span class="r">efetiva adulteração</span> dos dados. A lei não exige nenhum dos dois.</p>
+          <div class="tip">Também inventa nomes: “ultrassigilosa”, “censura”. Se o nome não está aqui, não está na lei.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LAI ============ -->
+<div class="law" id="lai">
+  <span class="num">Lei nº 12.527/2011 · Decreto nº 7.724/2012 · Decreto nº 7.845/2012</span>
+  <h2>Lei de Acesso à Informação</h2>
+  <p>É a lei que obriga o poder público a mostrar o que faz. Ela regulamenta um direito que já estava na Constituição: <b>todo mundo pode pedir informação a um órgão público</b>. O edital cobra os capítulos I a V e os dois decretos.</p>
+  <div class="scope"><span>Cap. I · arts. 1–5</span><span>Cap. II · arts. 6–9</span><span>Cap. III · arts. 10–20</span><span>Cap. IV · arts. 21–31</span><span>Cap. V · arts. 32–34</span></div>
+</div>
+
+<section class="map">
+  <div class="banner"><h3>A ideia da lei</h3></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Publicidade<small>é a regra</small></div></div>
+      <div class="down"></div>
+      <div class="result">
+        <div class="head"><span>O que o Estado produz ou guarda <b>é público</b></span><span class="f">art. 3º, I</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>O órgão divulga <b>sem ninguém pedir</b> o que é de interesse coletivo.</li>
+            <li>O que não foi divulgado, qualquer pessoa <b>pode pedir</b>.</li>
+            <li>Se parte do documento é sigilosa, você recebe o resto, com a parte sigilosa <b>tarjada</b> <span class="art">art. 7º, §2º</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="big"><div>Sigilo<small>é a exceção</small></div></div>
+      <div class="down"></div>
+      <div class="result">
+        <div class="head"><span><b>Três tipos</b> de informação com acesso restrito</span><span class="f">arts. 22, 23 e 31</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><b>Informação classificada</b>: imprescindível à segurança da sociedade ou do Estado. Tem grau e prazo.</li>
+            <li><b>Informação pessoal</b>: sobre intimidade, vida privada, honra e imagem de alguém.</li>
+            <li><b>Outros sigilos previstos em lei</b>: fiscal, bancário, segredo de justiça, segredo industrial.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col c-purple">
+    <div class="result">
+      <div class="head"><span><b>Quem tem que cumprir</b></span><span class="f">arts. 1º e 2º</span></div>
+      <div class="body">
+        <ul class="list">
+          <li><span class="p">União, Estados, DF e Municípios</span>, nos três Poderes, mais Tribunais de Contas e Ministério Público.</li>
+          <li><span class="p">Autarquias, fundações, empresas públicas e sociedades de economia mista</span>. A Dataprev é empresa pública, então entra aqui.</li>
+          <li><span class="p">Entidade privada sem fins lucrativos</span> que recebe dinheiro público. Para ela a obrigação alcança <b>só a parcela de recursos públicos recebida</b> e o destino dela.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>A <b>lei</b> vale para todas as esferas e Poderes. O <b>Decreto 7.724</b> vale <span class="r">só para o Poder Executivo federal</span>. Se a questão falar de prefeitura ou de tribunal “nos termos do Decreto 7.724”, está errada.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Duas formas de transparência</h3></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Ativa<small>o órgão publica por conta própria</small></div></div>
+      <div class="result">
+        <div class="head"><span>Divulga <b>sem requerimento</b></span><span class="f">art. 8º</span></div>
+        <div class="body">
+          <p class="lbl">Mínimo que tem de estar no site</p>
+          <ul class="list">
+            <li>competências, estrutura, endereços, telefones e horários</li>
+            <li>repasses e transferências de dinheiro</li>
+            <li>despesas</li>
+            <li>licitações, editais, resultados e contratos</li>
+            <li>dados de programas, ações, projetos e obras</li>
+            <li>respostas a perguntas frequentes</li>
+          </ul>
+          <div class="tip">A divulgação na <b>internet é obrigatória</b>. Município com <span class="b">até 10.000 habitantes</span> fica dispensado do site, mas continua obrigado a divulgar em tempo real a execução orçamentária e financeira.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>Passiva<small>alguém pede e o órgão responde</small></div></div>
+      <div class="result">
+        <div class="head"><span>O <b>pedido de acesso</b></span><span class="f">arts. 10 a 12</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><span class="p">Qualquer interessado</span> pode pedir, por qualquer meio legítimo.</li>
+            <li>Precisa <span class="g">se identificar</span> e dizer qual informação quer.</li>
+            <li><span class="r">Não precisa dizer o motivo.</span> É vedado exigir a justificativa do pedido.</li>
+            <li>É <span class="g">gratuito</span>. Só pode ser cobrado o <b>custo da reprodução</b> (cópias, mídia). Quem não pode pagar sem prejuízo do sustento fica isento.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>“O requerente deve demonstrar interesse” ou “justificar o pedido”: <span class="r">errado</span>. Identificação sim, motivo não. E a identificação não pode ter exigências que inviabilizem o pedido.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>O pedido, passo a passo</h3></div>
+  <p class="lead">Guarde a sequência <b>20 + 10 para responder, 10 para recorrer, 5 para decidir</b>. Os mesmos números se repetem em todos os degraus.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><div class="t"><h4>Pedido</h4><p>Se a informação está disponível, o acesso é <span class="chip">imediato</span>. <span class="art">art. 11</span></p></div></li>
+    <li><span class="n">2</span><div class="t"><h4>Resposta</h4><p>Não dá para entregar na hora? O órgão tem <span class="chip">até 20 dias</span> para entregar, negar com fundamento ou dizer que não tem a informação e indicar quem tem. Pode prorrogar por <span class="chip">+10 dias</span>, com justificativa expressa e ciência do requerente.</p></div></li>
+    <li><span class="n">3</span><div class="t"><h4>Negativa</h4><p>Quem recebeu um não tem direito ao <b>inteiro teor da decisão</b>, por certidão ou cópia. <span class="art">art. 14</span></p></div></li>
+    <li><span class="n">4</span><div class="t"><h4>Recurso à autoridade superior</h4><p><span class="chip">10 dias</span> para recorrer à <span class="p">autoridade hierarquicamente superior</span> a quem negou. Ela decide em <span class="chip">5 dias</span>. <span class="art">art. 15</span></p></div></li>
+    <li><span class="n">5</span><div class="t"><h4>Autoridade máxima do órgão</h4><p>Degrau criado pelo <b>Decreto 7.724</b>: de novo <span class="chip">10 dias</span> para recorrer e <span class="chip">5 dias</span> para decidir. <span class="art">Dec. 7.724, art. 21</span></p></div></li>
+    <li><span class="n">6</span><div class="t"><h4>CGU</h4><p>No Executivo federal, o passo seguinte é a <span class="p">Controladoria-Geral da União</span>, que delibera em <span class="chip">5 dias</span>. Só cabe depois de pelo menos uma autoridade superior já ter apreciado. <span class="art">art. 16</span></p></div></li>
+    <li><span class="n">7</span><div class="t"><h4>CMRI</h4><p>Se a CGU também negar, cabe recurso à <span class="p">Comissão Mista de Reavaliação de Informações</span>, em <span class="chip">10 dias</span>. É o último degrau.</p></div></li>
+  </ol>
+  <div class="col c-blue">
+    <div class="result">
+      <div class="head"><span><b>E se o órgão simplesmente não responde?</b></span><span class="f">Dec. 7.724, art. 22</span></div>
+      <div class="body">
+        <p>Cabe <b>reclamação</b> à <span class="p">autoridade de monitoramento</span> do órgão, em <span class="b">10 dias</span>. Esse prazo começa a contar <span class="b">30 dias</span> depois do pedido. A autoridade responde em <span class="b">5 dias</span>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Informação classificada: os três graus</h3></div>
+  <p class="lead">“Classificar” é declarar oficialmente que uma informação fica em sigilo por um tempo, porque divulgá-la poria em risco a <b>segurança da sociedade ou do Estado</b>. Os prazos descem de dez em dez: <b>25, 15, 5</b>.</p>
+  <div class="trio">
+    <div class="col c-blue">
+      <div class="big"><div>25 anos<small>ultrassecreta</small></div></div>
+      <div class="result c-purple">
+        <div class="head"><span class="lbl">Quem classifica</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Presidente e Vice-Presidente da República</li>
+            <li>Ministros de Estado e equivalentes</li>
+            <li>Comandantes da Marinha, do Exército e da Aeronáutica</li>
+            <li>Chefes de missões diplomáticas e consulares permanentes no exterior</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>15 anos<small>secreta</small></div></div>
+      <div class="result c-purple">
+        <div class="head"><span class="lbl">Quem classifica</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Todos os da coluna anterior</li>
+            <li><b>mais</b> os titulares de autarquias, fundações, empresas públicas e sociedades de economia mista</li>
+          </ul>
+          <div class="tip">O presidente da Dataprev classifica até <b>secreto</b>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>5 anos<small>reservada</small></div></div>
+      <div class="result c-purple">
+        <div class="head"><span class="lbl">Quem classifica</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Todos os das colunas anteriores</li>
+            <li><b>mais</b> quem exerce direção, comando ou chefia de nível <span class="mono">DAS 101.5</span> ou superior</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Regras do prazo</b></span><span class="f">art. 24</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>São prazos <b>máximos</b> e contam da <span class="b">data de produção</span> da informação, não da classificação.</li>
+            <li>Em vez de data, o fim pode ser um <b>evento</b>, desde que ele ocorra antes do prazo máximo.</li>
+            <li>Acabou o prazo ou ocorreu o evento, a informação vira pública <span class="g">automaticamente</span>. Não precisa de decisão nem de procedimento.</li>
+            <li>Na escolha do grau, usa-se o <b>critério menos restritivo possível</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Depois de classificada</b></span><span class="f">arts. 28 e 29</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>A classificação é uma <b>decisão formal e fundamentada</b>: assunto, fundamento, prazo e autoridade. No Executivo federal é o <span class="mono">TCI</span>, Termo de Classificação de Informação.</li>
+            <li>Pode ser <b>reavaliada</b> pela autoridade que classificou ou por outra superior, <b>a pedido ou de ofício</b>, para <span class="g">desclassificar ou reduzir o prazo</span>.</li>
+            <li>Só o grau <b>ultrassecreto</b> pode ser prorrogado, <span class="b">uma única vez</span>, pela CMRI. Teto de 50 anos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>Os nomes são <b>ultrassecreta, secreta e reservada</b>. Em 2024 a alternativa errada dizia “ultrassigilosas, sigilosas ou reservadas”.</p>
+    <p>Informação que põe em risco a segurança do Presidente, do Vice e de cônjuges e filhos é <b>reservada</b> e fica em sigilo <span class="b">até o fim do mandato</span> (do último, se houver reeleição). Não são 5 anos.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>O que nunca pode ser negado · informação pessoal</h3></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Sem sigilo<small>art. 21</small></div></div>
+      <div class="result">
+        <div class="head"><span>Duas situações em que o acesso <b>não pode ser negado</b></span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Informação necessária à <b>tutela judicial ou administrativa de direitos fundamentais</b>. Em português simples: você precisa dela para defender um direito seu.</li>
+            <li>Informações ou documentos sobre <b>violação de direitos humanos</b> praticada por agentes públicos ou a mando de autoridades públicas. Estas <span class="g">não podem ser objeto de restrição de acesso</span>.</li>
+          </ul>
+          <div class="tip">A segunda foi a resposta certa da questão de LAI em 2024.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>100 anos<small>informação pessoal · art. 31</small></div></div>
+      <div class="result">
+        <div class="head"><span>Acesso restrito por <b>até 100 anos</b>, contados da produção</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Vale <span class="r">independentemente de classificação</span>. Informação pessoal não é ultrassecreta, secreta nem reservada: tem regra própria.</li>
+            <li>Acessam: <span class="p">agentes públicos legalmente autorizados</span> e <span class="p">a própria pessoa</span>.</li>
+            <li>Terceiros só com <b>previsão legal</b> ou <b>consentimento expresso</b> da pessoa.</li>
+          </ul>
+          <div class="tip"><b>Dispensa o consentimento:</b> tratamento médico de quem está incapaz; estatística e pesquisa de evidente interesse público, sem identificar a pessoa; ordem judicial; defesa de direitos humanos; interesse público e geral preponderante.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>A proteção da informação pessoal <span class="r">não pode ser usada</span> para atrapalhar a apuração de irregularidades em que a pessoa esteja envolvida, nem a recuperação de fatos históricos de maior relevância.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Responsabilidades</h3></div>
+  <div class="trio">
+    <div class="col c-orange">
+      <div class="big"><div>Agente público<small>art. 32</small></div></div>
+      <div class="result">
+        <div class="head"><span>Recusar, <b>retardar de propósito</b>, entregar errado, destruir, divulgar o que é sigiloso</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><span class="p">Servidor civil</span>: infração administrativa punida com, <span class="o">no mínimo, suspensão</span>.</li>
+            <li><span class="p">Militar</span>: transgressão <span class="o">média ou grave</span>.</li>
+            <li>Pode responder também por <b>improbidade administrativa</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-orange">
+      <div class="big"><div>Particular<small>art. 33</small></div></div>
+      <div class="result">
+        <div class="head"><span>Pessoa ou entidade privada com <b>vínculo</b> com o poder público</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>advertência</li>
+            <li>multa</li>
+            <li>rescisão do vínculo</li>
+            <li>suspensão de licitar e contratar por <span class="b">até 2 anos</span></li>
+            <li>declaração de inidoneidade, aplicada só pela <span class="p">autoridade máxima</span> do órgão</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-orange">
+      <div class="big"><div>O órgão<small>art. 34</small></div></div>
+      <div class="result">
+        <div class="head"><span>Responde <b>diretamente</b> pelos danos</span></div>
+        <div class="body">
+          <p>Se informação sigilosa ou pessoal for divulgada sem autorização ou usada indevidamente, quem indeniza é o <span class="p">órgão ou entidade</span>.</p>
+          <p>Depois ele cobra do agente, se houve <b>dolo ou culpa</b>. Isso se chama direito de regresso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Os dois decretos</h3></div>
+  <p class="lead">Os dois valem só para o <b>Poder Executivo federal</b>. O primeiro diz como atender o cidadão. O segundo diz como guardar e transportar o que é classificado.</p>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Dec. 7.724<small>regulamenta a LAI</small></div></div>
+      <div class="result">
+        <div class="head"><span>Como o órgão <b>atende o pedido</b></span></div>
+        <div class="body">
+          <ul class="list">
+            <li><span class="mono">SIC</span>, Serviço de Informações ao Cidadão: o balcão, físico e eletrônico, que recebe e registra os pedidos.</li>
+            <li>O pedido traz nome, documento, especificação clara da informação e endereço para resposta.</li>
+            <li><span class="r">Não são atendidos</span> pedidos genéricos, desproporcionais ou desarrazoados, nem os que exigem trabalho adicional de análise, interpretação ou consolidação de dados. <span class="art">art. 13</span></li>
+            <li>Divulga-se a <b>remuneração individualizada</b> de quem ocupa cargo público. <span class="art">art. 7º</span></li>
+            <li><b>Estatal que atua em concorrência</b> segue as normas da <span class="p">CVM</span> na divulgação, para não perder competitividade. <span class="art">art. 5º, §1º</span></li>
+            <li>Cria a <b>autoridade de monitoramento</b> em cada órgão e detalha a <span class="mono">CMRI</span>, que revê de ofício as classificações ultrassecretas e secretas <span class="b">no máximo a cada 4 anos</span>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>Dec. 7.845<small>informação classificada</small></div></div>
+      <div class="result">
+        <div class="head"><span>Como se <b>manuseia o que é sigiloso</b></span></div>
+        <div class="body">
+          <ul class="list">
+            <li><b>Credencial de segurança</b>: certificado que autoriza a pessoa a tratar informação classificada. Só acessa quem é credenciado <b>e</b> tem <b>necessidade de conhecer</b>.</li>
+            <li>Sem credencial, só em caráter excepcional e assinando o <span class="mono">TCMS</span>, Termo de Compromisso de Manutenção de Sigilo.</li>
+            <li><span class="p">Núcleo de Segurança e Credenciamento</span>: fica no <span class="p">GSI</span>, Gabinete de Segurança Institucional da Presidência. Habilita órgãos e credencia pessoas.</li>
+            <li>Documento classificado viaja em <b>envelope duplo</b>: o de fora sem nenhuma marca de sigilo, o de dentro com o grau.</li>
+            <li>Ultrassecreto é sempre <b>Documento Controlado (DC)</b> e não pode ir pelo correio.</li>
+            <li><span class="mono">CIDIC</span>: código que identifica o documento classificado. Meio eletrônico usa criptografia com <b>algoritmo de Estado</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Cola rápida · LAI</h3></div>
+  <div class="fgv">
+    <span class="lbl">Caiu em 2024 · questão 36</span>
+    <p>Certa: informação sobre violação de direitos humanos praticada por agentes públicos <b>não pode ter acesso restrito</b>.</p>
+    <p>Erradas: nomes de grau inventados; dizer que, vencido o prazo, ainda é preciso procedimento e decisão para tornar público; dizer que a lei permite desclassificar mas não reduzir prazo.</p>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Ponto</th><th>O que a lei diz</th><th>O que a banca escreve</th></tr></thead>
+      <tbody>
+        <tr><td>Motivo do pedido</td><td>Não pode ser exigido</td><td class="r">“demonstrado o interesse”</td></tr>
+        <tr><td>Custo</td><td>Gratuito, salvo reprodução</td><td class="r">“mediante taxa”</td></tr>
+        <tr><td>Prazo de resposta</td><td class="b">20 dias + 10</td><td class="r">30 dias · prorrogável por igual período</td></tr>
+        <tr><td>Recurso</td><td class="b">10 dias, decide em 5</td><td class="r">15 dias · 10 dias</td></tr>
+        <tr><td>Graus</td><td class="b">25 · 15 · 5 anos</td><td class="r">30 · 20 · 10</td></tr>
+        <tr><td>Início do prazo</td><td>Data de produção</td><td class="r">data da classificação</td></tr>
+        <tr><td>Fim do prazo</td><td>Público automaticamente</td><td class="r">“depende de decisão específica”</td></tr>
+        <tr><td>Reavaliação</td><td>Desclassifica ou reduz prazo</td><td class="r">“não admite redução”</td></tr>
+        <tr><td>Informação pessoal</td><td class="b">Até 100 anos, sem classificação</td><td class="r">“classificada como reservada”</td></tr>
+        <tr><td>Direitos humanos</td><td>Nunca restrita</td><td class="r">“pode ser classificada como secreta”</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ DELITOS INFORMÁTICOS ============ -->
+<div class="law" id="delitos">
+  <span class="num">Lei nº 12.737/2012 · art. 2º → Código Penal, arts. 154-A e 154-B</span>
+  <h2>Lei de Delitos Informáticos</h2>
+  <p>Ficou conhecida como Lei Carolina Dieckmann. O art. 2º dela criou no Código Penal o crime de <b>invasão de dispositivo informático</b>. O edital cobra só esse artigo, então a matéria inteira é um crime, suas penas e o tipo de ação penal.</p>
+  <div class="scope"><span>CP art. 154-A · o crime</span><span>CP art. 154-B · a ação penal</span></div>
+</div>
+
+<section class="map">
+  <div class="banner"><h3>O crime, peça por peça</h3></div>
+  <p class="lead">Leia o artigo como uma lista de peças. A banca tira uma, troca outra ou acrescenta uma que não existe.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><div class="t"><h4>Invadir</h4><p>Entrar sem permissão. O crime se consuma com a invasão. <span class="g">Não precisa conseguir</span> obter, alterar ou destruir nada: basta invadir <b>com essa finalidade</b>.</p></div></li>
+    <li><span class="n">2</span><div class="t"><h4>Dispositivo informático de uso alheio</h4><p>Computador, celular, tablet, servidor. “De uso alheio” quer dizer usado por outra pessoa, mesmo que ela não seja a dona.</p></div></li>
+    <li><span class="n">3</span><div class="t"><h4>Conectado ou não à rede</h4><p><span class="g">Tanto faz.</span> Invadir um notebook desligado da internet também é crime.</p></div></li>
+    <li><span class="n">4</span><div class="t"><h4>Com o fim de obter, adulterar ou destruir dados</h4><p>Ou então de <b>instalar vulnerabilidades para obter vantagem ilícita</b>. É a intenção que importa.</p></div></li>
+    <li><span class="n">5</span><div class="t"><h4>Sem autorização do usuário</h4><p>A autorização pode ser <b>expressa ou tácita</b>. Se o usuário deixou, não há crime.</p></div></li>
+  </ol>
+  <div class="col c-orange">
+    <div class="big"><div>Reclusão de 1 a 4 anos e multa<small>pena do caput · redação da Lei 14.155/2021</small></div></div>
+  </div>
+  <div class="trap">
+    <span class="lbl">O que mudou em 2021</span>
+    <p>O texto original de 2012 exigia invasão “<span class="r">mediante violação indevida de mecanismo de segurança</span>” e a pena era detenção de 3 meses a 1 ano. A Lei 14.155/2021 <b>retirou essa exigência</b> e subiu as penas. Hoje é crime mesmo que o aparelho não tenha senha.</p>
+    <p>O edital cita a Lei 12.737, mas o que vale é o texto atual do Código Penal. Se a alternativa exigir quebra de mecanismo de segurança, está cobrando o texto velho.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>A escada das penas</h3></div>
+  <div class="pair">
+    <div class="col c-orange">
+      <div class="result">
+        <div class="head"><span><b>Mesma pena</b> do caput</span><span class="f">§1º</span></div>
+        <div class="body">
+          <p>Para quem <b>produz, oferece, distribui, vende ou difunde</b> dispositivo ou programa de computador feito para permitir a invasão.</p>
+          <div class="tip">Quem cria e espalha o programa invasor responde igual a quem invade.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="result">
+        <div class="head"><span>Aumento de <b>1/3 a 2/3</b></span><span class="f">§2º</span></div>
+        <div class="body">
+          <p>Se da invasão resulta <b>prejuízo econômico</b>.</p>
+          <div class="tip">Só prejuízo <b>econômico</b>. Em 2024 a banca falou em “prejuízo político” e em aumento de “metade”. As duas coisas erradas.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-orange">
+      <div class="result">
+        <div class="head"><span>Forma qualificada: <b>reclusão de 2 a 5 anos e multa</b></span><span class="f">§3º</span></div>
+        <div class="body">
+          <p>Se a invasão resulta em:</p>
+          <ul class="list">
+            <li>obtenção de conteúdo de <b>comunicações eletrônicas privadas</b></li>
+            <li><b>segredos comerciais ou industriais</b></li>
+            <li><b>informações sigilosas</b>, assim definidas em lei</li>
+            <li><b>controle remoto</b> não autorizado do dispositivo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="result">
+        <div class="head"><span>Aumento de <b>1/3 a 2/3</b></span><span class="f">§4º · só sobre o §3º</span></div>
+        <div class="body">
+          <p>Se houver <b>divulgação, comercialização ou transmissão a terceiro</b>, a qualquer título, dos dados obtidos.</p>
+          <div class="tip">Primeiro obteve o conteúdo (§3º), depois passou adiante (§4º).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col c-purple">
+    <div class="result">
+      <div class="head"><span>Aumento de <b>1/3 à metade</b> conforme a vítima</span><span class="f">§5º</span></div>
+      <div class="body">
+        <ul class="list">
+          <li><span class="p">Presidente da República, governadores e prefeitos</span></li>
+          <li><span class="p">Presidente do Supremo Tribunal Federal</span></li>
+          <li><span class="p">Presidente</span> da Câmara dos Deputados, do Senado, de Assembleia Legislativa, da Câmara Legislativa do DF ou de Câmara Municipal</li>
+          <li><span class="p">Dirigente máximo</span> da administração direta e indireta federal, estadual, municipal ou do DF</li>
+        </ul>
+        <div class="tip">Todos são <b>chefes</b>: presidente, governador, prefeito, dirigente máximo. Vice, ministro, deputado comum e senador comum <b>não estão na lista</b>.</div>
+      </div>
+    </div>
+  </div>
+  <div class="rule c-blue">Duas frações para guardar: <span class="b">1/3 a 2/3</span> pelo que aconteceu (prejuízo econômico, repasse dos dados) e <span class="b">1/3 à metade</span> por quem é a vítima.</div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Quem pode processar</h3></div>
+  <p class="lead">“Ação penal” é o processo criminal. A pergunta aqui é quem dá o primeiro passo. Em qualquer dos dois casos abaixo, quem processa é o <b>Ministério Público</b>.</p>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Regra<small>ação pública condicionada</small></div></div>
+      <div class="down"></div>
+      <div class="result">
+        <div class="head"><span>Depende de <b>representação</b> da vítima</span><span class="f">art. 154-B</span></div>
+        <div class="body">
+          <p>Representação é a vítima dizer à polícia ou ao MP que <b>quer</b> que o autor seja processado. Sem isso, o MP não pode agir.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="big"><div>Exceção<small>ação pública incondicionada</small></div></div>
+      <div class="down"></div>
+      <div class="result">
+        <div class="head"><span>O MP age <b>sem precisar de ninguém</b></span><span class="f">art. 154-B, parte final</span></div>
+        <div class="body">
+          <p>Quando o crime é contra:</p>
+          <ul class="list">
+            <li>a <span class="p">administração pública</span> direta ou indireta de qualquer Poder, da União, Estados, DF ou Municípios</li>
+            <li><span class="p">empresas concessionárias de serviços públicos</span></li>
+          </ul>
+          <div class="tip">Invasão a sistema da Dataprev cai aqui.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p><b>Queixa-crime</b> é a ação penal <b>privada</b>, movida pela própria vítima com advogado. <span class="r">Não existe</span> queixa-crime nesse crime. Se o enunciado diz que a vítima “ajuizou queixa-crime”, o erro já está aí.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Cola rápida · Delitos</h3></div>
+  <div class="fgv">
+    <span class="lbl">Caiu em 2024 · questão 37</span>
+    <p>Um hacker invade o tablet do vice-presidente da Câmara, adultera dados e causa prejuízo político. A vítima ajuíza queixa-crime e a pena é aumentada em um terço por causa da vítima.</p>
+    <p>Certa: a ação <b>deveria ter sido iniciada pelo Ministério Público</b>. O enunciado ainda escondia outra falha: vice não está na lista do §5º.</p>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Ponto</th><th>O que a lei diz</th><th>O que a banca escreve</th></tr></thead>
+      <tbody>
+        <tr><td>Rede</td><td>Conectado ou não</td><td class="r">“exige conexão à rede”</td></tr>
+        <tr><td>Resultado</td><td>Basta invadir com a finalidade</td><td class="r">“exige efetiva adulteração”</td></tr>
+        <tr><td>Mecanismo de segurança</td><td>Não é mais exigido</td><td class="r">“mediante violação de mecanismo de segurança”</td></tr>
+        <tr><td>Pena básica</td><td class="o">Reclusão, 1 a 4 anos, e multa</td><td class="r">detenção, 3 meses a 1 ano</td></tr>
+        <tr><td>Qualificada</td><td class="o">Reclusão, 2 a 5 anos, e multa</td><td class="r">6 meses a 2 anos</td></tr>
+        <tr><td>Prejuízo econômico</td><td class="b">+1/3 a 2/3</td><td class="r">+1/6 a 1/3 · metade</td></tr>
+        <tr><td>Vítima autoridade</td><td class="b">+1/3 à metade</td><td class="r">+2/3 · inclui vice</td></tr>
+        <tr><td>Ação penal</td><td>Pública condicionada; incondicionada contra a administração</td><td class="r">privada · queixa-crime</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ MARCO CIVIL ============ -->
+<div class="law" id="marco">
+  <span class="num">Lei nº 12.965/2014</span>
+  <h2>Marco Civil da Internet</h2>
+  <p>É a lei que fixa princípios, garantias, direitos e deveres para o uso da internet no Brasil. O edital recorta três pedaços: os <b>direitos do usuário</b>, a <b>neutralidade de rede</b> e a <b>guarda de registros</b>. A parte de responsabilidade por conteúdo de terceiros (arts. 18 a 21) ficou de fora.</p>
+  <div class="scope"><span>Cap. II, Seção I · arts. 7–8</span><span>Cap. III, Seção I · art. 9</span><span>Cap. III, Seção II · arts. 10–17</span></div>
+</div>
+
+<section class="map">
+  <div class="banner"><h3>Primeiro: os dois tipos de provedor</h3></div>
+  <p class="lead">Quase toda questão dessa lei depende de saber de qual provedor se está falando. Um <b>leva você até a internet</b>. O outro é <b>o que você usa quando já está nela</b>.</p>
+  <div class="pair">
+    <div class="col c-purple">
+      <div class="big"><div>Conexão<small>a operadora · quem te dá o IP</small></div></div>
+      <div class="down"></div>
+      <div class="result c-blue">
+        <div class="head"><span>Guarda <b>registros de conexão</b> por <b>1 ano</b></span><span class="f">art. 13</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><b>Registro de conexão</b>: data e hora de início e fim da conexão, duração e o endereço IP usado.</li>
+            <li>Em sigilo, em ambiente controlado e de segurança.</li>
+            <li>A responsabilidade pela guarda <span class="r">não pode ser transferida a terceiros</span>.</li>
+            <li><span class="r">É vedado</span> ao provedor de conexão guardar registros de acesso a aplicações. <span class="art">art. 14</span></li>
+          </ul>
+          <div class="tip">A lei chama esse provedor de <b>administrador de sistema autônomo</b>. Se aparecer esse nome, é o de conexão.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>Aplicação<small>site, app, rede social, e-mail</small></div></div>
+      <div class="down"></div>
+      <div class="result c-blue">
+        <div class="head"><span>Guarda <b>registros de acesso a aplicações</b> por <b>6 meses</b></span><span class="f">art. 15</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><b>Registro de acesso a aplicação</b>: data e hora em que a aplicação foi usada a partir de um IP.</li>
+            <li>A obrigação é só do provedor que é <b>pessoa jurídica</b> e atua de forma organizada, profissional e com <b>fins econômicos</b>.</li>
+            <li>Os demais podem ser obrigados por <b>ordem judicial</b>, por tempo certo e sobre fatos específicos.</li>
+            <li><span class="r">É vedado</span> guardar registros de acesso a <b>outras</b> aplicações sem consentimento prévio, e dados pessoais excessivos para a finalidade. <span class="art">art. 16</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rule c-blue">Para decorar: a <b>conexão</b> dura mais, <span class="b">1 ano</span>. A <b>aplicação</b>, metade, <span class="b">6 meses</span>.</div>
+  <div class="col c-blue">
+    <div class="result">
+      <div class="head"><span><b>Guardar por mais tempo</b></span><span class="f">art. 13, §§2º e 3º · art. 15, §2º</span></div>
+      <div class="body">
+        <p>A <span class="p">autoridade policial ou administrativa</span> ou o <span class="p">Ministério Público</span> podem requerer, de forma cautelar, que os registros sejam guardados por prazo maior. A autoridade tem <span class="b">60 dias</span> a partir do requerimento para pedir a autorização judicial de acesso. Sem o pedido no prazo, ou se ele for negado, o requerimento perde a eficácia.</p>
+        <div class="tip">Pedir para <b>guardar</b> não precisa de juiz. <b>Acessar</b> o que foi guardado precisa.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>O que precisa de ordem judicial</h3></div>
+  <div class="trio">
+    <div class="col c-red">
+      <div class="big"><div>Registros<small>de conexão e de acesso</small></div></div>
+      <div class="result">
+        <div class="head"><span><b>Só com ordem judicial</b></span><span class="f">art. 10, §1º</span></div>
+        <div class="body"><p>O provedor só é obrigado a entregar os registros, sozinhos ou associados a dados pessoais, por ordem do juiz.</p></div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="big"><div>Conteúdo<small>das comunicações privadas</small></div></div>
+      <div class="result">
+        <div class="head"><span><b>Só com ordem judicial</b></span><span class="f">art. 10, §2º</span></div>
+        <div class="body"><p>O que foi escrito nas mensagens só é disponibilizado por ordem judicial, nas hipóteses e na forma que a lei estabelecer.</p></div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="big"><div>Dados cadastrais<small>qualificação, filiação, endereço</small></div></div>
+      <div class="result">
+        <div class="head"><span><b>Sem ordem judicial</b></span><span class="f">art. 10, §3º</span></div>
+        <div class="body"><p>As <span class="p">autoridades administrativas</span> que tenham competência legal para requisitar podem acessar direto.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>Dado cadastral diz <b>quem a pessoa é</b>. Registro diz <b>quando e de onde ela conectou</b>. A alternativa errada costuma dizer que a autoridade administrativa acessa <span class="r">registros</span> sem ordem judicial, ou que o delegado acessa o <span class="r">conteúdo</span> por requisição.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Direitos do usuário</h3></div>
+  <p class="lead">O art. 7º começa dizendo que o acesso à internet é <b>essencial ao exercício da cidadania</b>. Depois lista os direitos. Estes são os que a banca mais usa.</p>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Privacidade e sigilo</b></span><span class="f">art. 7º, I a III</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Inviolabilidade da <b>intimidade e da vida privada</b>, com indenização pelo dano material ou moral.</li>
+            <li>Sigilo do <b>fluxo</b> das comunicações (o que está trafegando), salvo ordem judicial.</li>
+            <li>Sigilo das comunicações <b>armazenadas</b> (o que já está guardado), salvo ordem judicial.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Conexão</b></span><span class="f">art. 7º, IV e V</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><b>Não suspensão</b> da conexão, <span class="r">salvo por débito diretamente decorrente de sua utilização</span>.</li>
+            <li>Manutenção da <b>qualidade contratada</b>.</li>
+          </ul>
+          <div class="tip">A única hipótese de corte é não pagar a própria internet. Dívida de outro serviço da operadora não autoriza.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Dados pessoais</b></span><span class="f">art. 7º, VII a X</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Não fornecimento a terceiros, salvo <b>consentimento livre, expresso e informado</b> ou hipótese legal.</li>
+            <li>Informações claras e completas sobre coleta, uso, armazenamento e proteção.</li>
+            <li>O consentimento vem em <b>cláusula destacada</b> das demais.</li>
+            <li><b>Exclusão definitiva</b> dos dados ao fim da relação, <b>a requerimento</b> do usuário, ressalvada a guarda obrigatória de registros.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Cláusulas nulas de pleno direito</b></span><span class="f">art. 8º</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>As que ofendam a inviolabilidade e o sigilo das comunicações privadas.</li>
+            <li>Em <b>contrato de adesão</b>, as que não ofereçam ao contratante a opção do <b>foro brasileiro</b> para resolver controvérsias de serviço prestado no Brasil.</li>
+          </ul>
+          <div class="tip">O art. 8º também diz que privacidade e liberdade de expressão são <b>condição</b> para o pleno exercício do direito de acesso à internet.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Neutralidade de rede</h3></div>
+  <p class="lead">Quem transmite os dados não pode escolher qual conteúdo anda mais rápido. A operadora não pode deixar um serviço de vídeo lento e outro rápido porque um deles pagou.</p>
+  <div class="col c-green">
+    <div class="result">
+      <div class="head"><span>Tratar <b>de forma isonômica</b> quaisquer pacotes de dados</span><span class="f">art. 9º, caput</span></div>
+      <div class="body">
+        <p style="text-align:center">Sem distinção por <b>conteúdo · origem e destino · serviço · terminal · aplicação</b></p>
+      </div>
+    </div>
+  </div>
+  <div class="pair">
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Só duas exceções</b> permitem discriminar ou degradar o tráfego</span><span class="f">art. 9º, §1º</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><b>Requisitos técnicos indispensáveis</b> à prestação adequada dos serviços e aplicações.</li>
+            <li><b>Priorização de serviços de emergência</b>.</li>
+          </ul>
+          <div class="tip">Mesmo nesses casos o responsável deve: não causar dano aos usuários, agir com proporcionalidade, transparência e isonomia, informar antes as práticas de gerenciamento e não adotar conduta anticoncorrencial.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="result">
+        <div class="head"><span><b>Quem regulamenta</b></span><span class="f">art. 9º, §1º</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><span class="p">Presidente da República</span>, por decreto.</li>
+            <li>Ouvidos o <span class="p">Comitê Gestor da Internet</span> (CGI.br) e a <span class="p">Anatel</span>.</li>
+          </ul>
+          <div class="tip">CGI.br e Anatel são <b>ouvidos</b>. Não são eles que regulamentam.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>Na provisão de conexão, <b>paga ou gratuita</b>, é vedado <span class="r">bloquear, monitorar, filtrar ou analisar o conteúdo</span> dos pacotes de dados. A alternativa errada costuma dizer que a vedação vale só para conexão paga. <span class="art">art. 9º, §3º</span></p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Lei brasileira e sanções</h3></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Quando vale a lei brasileira</b></span><span class="f">art. 11</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Quando <b>pelo menos um</b> dos atos de coleta, armazenamento, guarda ou tratamento ocorre em <b>território nacional</b>.</li>
+            <li>Vale para dados coletados aqui e para comunicações em que <b>ao menos um dos terminais</b> esteja no Brasil.</li>
+            <li>Vale para <span class="p">empresa sediada no exterior</span> que oferte serviço ao público brasileiro, ou que tenha integrante do grupo econômico com estabelecimento no Brasil.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-orange">
+      <div class="result">
+        <div class="head"><span><b>As quatro sanções</b></span><span class="f">art. 12</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><span class="o">Advertência</span>, com indicação de <b>prazo para medidas corretivas</b>.</li>
+            <li><span class="o">Multa</span> de até <span class="b">10%</span> do faturamento do <b>grupo econômico no Brasil</b> no <span class="b">último exercício</span>, excluídos os tributos.</li>
+            <li><span class="o">Suspensão temporária</span> das atividades de coleta, guarda e tratamento.</li>
+            <li><span class="o">Proibição</span> de exercício dessas atividades.</li>
+          </ul>
+          <div class="tip">Aplicadas de forma <b>isolada ou cumulativa</b>, sem prejuízo das sanções cíveis, criminais ou administrativas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p><b>Empresa estrangeira</b> não fica sem punição: a filial, sucursal, escritório ou estabelecimento no Brasil responde <span class="g">solidariamente</span> pelo pagamento da multa.</p>
+    <p>Não confunda com a LGPD: lá a multa é de até <span class="b">2%</span>, com teto de R$ 50 milhões por infração. Aqui é <span class="b">10%</span> e <b>não há teto em reais</b>.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Cola rápida · Marco Civil</h3></div>
+  <div class="fgv">
+    <span class="lbl">Caiu em 2024 · questão 38</span>
+    <p>Certa: a advertência tem uma face repressiva e outra corretiva, porque vem com <b>prazo para adoção de medidas de regularização</b>.</p>
+    <p>Erradas: sanções só isoladas; “censura” ao dono do provedor; multa calculada pela média de três exercícios; vácuo legislativo para empresas estrangeiras.</p>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Ponto</th><th>O que a lei diz</th><th>O que a banca escreve</th></tr></thead>
+      <tbody>
+        <tr><td>Registro de conexão</td><td class="b">1 ano · provedor de conexão</td><td class="r">6 meses</td></tr>
+        <tr><td>Registro de acesso a aplicação</td><td class="b">6 meses · provedor de aplicação</td><td class="r">1 ano</td></tr>
+        <tr><td>Conexão guardar acesso a aplicações</td><td>Vedado</td><td class="r">“facultado”</td></tr>
+        <tr><td>Guarda de conexão por terceiro</td><td>Não pode transferir</td><td class="r">“pode terceirizar”</td></tr>
+        <tr><td>Pedido de autorização judicial</td><td class="b">60 dias</td><td class="r">30 dias · 90 dias</td></tr>
+        <tr><td>Dados cadastrais</td><td>Autoridade administrativa, sem juiz</td><td class="r">“somente por ordem judicial”</td></tr>
+        <tr><td>Registros e conteúdo</td><td>Só ordem judicial</td><td class="r">“por requisição do delegado”</td></tr>
+        <tr><td>Suspensão da conexão</td><td>Só por débito do próprio serviço</td><td class="r">“por qualquer débito”</td></tr>
+        <tr><td>Neutralidade</td><td>Decreto do Presidente, ouvidos CGI.br e Anatel</td><td class="r">“regulamentada pela Anatel”</td></tr>
+        <tr><td>Multa</td><td class="b">Até 10% · último exercício · sem tributos</td><td class="r">2% · média de três exercícios</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ LGPD ============ -->
+<div class="law" id="lgpd">
+  <span class="num">Lei nº 13.709/2018</span>
+  <h2>Lei Geral de Proteção de Dados</h2>
+  <p>É a lei que diz quando e como alguém pode usar dados de uma pessoa. Protege a <b>pessoa natural</b> (gente de carne e osso, nunca empresa). Em 2024 foram <b>2 das 5 questões</b>, as duas dos capítulos finais: sanções e ANPD.</p>
+  <div class="scope"><span>Cap. I · arts. 1–6</span><span>Cap. II · arts. 7–16</span><span>Cap. III · arts. 17–22</span><span>Cap. IV · arts. 23–32</span><span>Cap. VII · arts. 46–51</span><span>Cap. VIII · arts. 52–54</span><span>Cap. IX · arts. 55-A–58-B</span></div>
+</div>
+
+<section class="map">
+  <div class="banner"><h3>O vocabulário da lei</h3></div>
+  <div class="trio">
+    <div class="col c-green">
+      <div class="big"><div>Dado pessoal<small>art. 5º, I</small></div></div>
+      <div class="result">
+        <div class="head"><span>Informação sobre pessoa natural <b>identificada ou identificável</b></span></div>
+        <div class="body"><p>Nome, CPF, e-mail, endereço, placa do carro, IP. Basta que dê para chegar na pessoa.</p></div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="big"><div>Dado sensível<small>art. 5º, II</small></div></div>
+      <div class="result">
+        <div class="head"><span>Dado que pode gerar <b>discriminação</b></span></div>
+        <div class="body">
+          <ul class="list">
+            <li>origem racial ou étnica</li>
+            <li>convicção religiosa · opinião política</li>
+            <li>filiação a sindicato ou a organização religiosa, filosófica ou política</li>
+            <li>saúde · vida sexual</li>
+            <li>genético · biométrico</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>Dado anonimizado<small>art. 5º, III · art. 12</small></div></div>
+      <div class="result">
+        <div class="head"><span>O titular <b>não pode ser identificado</b></span></div>
+        <div class="body"><p><span class="g">Não é dado pessoal</span> para a lei, salvo se a anonimização puder ser revertida com esforços razoáveis.</p><div class="tip"><b>Pseudonimizado</b> é diferente: a chave para identificar existe, só está guardada em separado. Continua sendo dado pessoal.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p><span class="r">Não são sensíveis</span>: dado financeiro, bancário, salário, endereço, CPF. A lista do sensível é fechada. E <b>tratamento</b> é qualquer operação com o dado: coletar, guardar, consultar, compartilhar, apagar. Só armazenar já é tratar.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Quem é quem</h3></div>
+  <div class="pair">
+    <div class="col c-purple">
+      <div class="big"><div>Titular<small>o dono do dado</small></div></div>
+      <div class="result"><div class="body"><p>A <b>pessoa natural</b> a quem os dados se referem. Você, na fila do INSS.</p></div></div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>Controlador<small>quem decide</small></div></div>
+      <div class="result"><div class="body"><p>Pessoa natural ou jurídica, pública ou privada, a quem competem as <b>decisões</b> sobre o tratamento. O INSS decide o que fazer com os dados dos segurados.</p></div></div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>Operador<small>quem executa</small></div></div>
+      <div class="result"><div class="body"><p>Quem realiza o tratamento <b>em nome do controlador</b>. A Dataprev, quando processa os dados para o INSS.</p></div></div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>Encarregado<small>o canal de comunicação</small></div></div>
+      <div class="result"><div class="body"><p>Pessoa indicada para ser a ponte entre o <b>controlador</b>, os <b>titulares</b> e a <b>ANPD</b>. É o DPO.</p></div></div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p><b>Agentes de tratamento</b> são só dois: <span class="g">controlador e operador</span>. O encarregado <span class="r">não é</span> agente de tratamento. E o <b>relatório de impacto</b> (RIPD) é documento do <span class="p">controlador</span>, não do operador.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Onde a lei vale e onde não vale</h3></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Vale<small>art. 3º</small></div></div>
+      <div class="result">
+        <div class="head"><span>Qualquer meio, <b>qualquer que seja o país da sede</b> ou onde estejam os dados, desde que:</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>a operação de tratamento seja feita <b>no Brasil</b>; ou</li>
+            <li>o objetivo seja oferecer bens ou serviços, ou tratar dados de pessoas <b>localizadas no Brasil</b>; ou</li>
+            <li>os dados tenham sido <b>coletados no Brasil</b>.</li>
+          </ul>
+          <div class="tip">Vale para meio digital <b>e papel</b>, para empresa <b>e poder público</b>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="big"><div>Não vale<small>art. 4º</small></div></div>
+      <div class="result">
+        <div class="head"><span>Tratamento feito:</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>por <b>pessoa natural</b>, para fins exclusivamente <b>particulares e não econômicos</b></li>
+            <li>para fins exclusivamente <b>jornalísticos, artísticos</b> ou <b>acadêmicos</b></li>
+            <li>para fins exclusivos de <b>segurança pública, defesa nacional, segurança do Estado</b> ou <b>investigação e repressão penal</b></li>
+            <li>com dados vindos de fora que só passam pelo Brasil, sem compartilhamento com agentes brasileiros</li>
+          </ul>
+          <div class="tip">No fim acadêmico ainda se aplicam as bases legais dos arts. 7º e 11.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Os dez princípios</h3></div>
+  <p class="lead">Além da <b>boa-fé</b>, o art. 6º lista dez. A banca descreve um e dá o nome de outro. Os três primeiros são os mais trocados.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Princípio</th><th>Em uma frase</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="2">O trio que a banca embaralha</td></tr>
+        <tr><td style="color:var(--green)">Finalidade</td><td>Tratar para propósito legítimo, específico, explícito e <b>informado ao titular</b>. Pergunta: para quê?</td></tr>
+        <tr><td style="color:var(--green)">Adequação</td><td>O tratamento é <b>compatível</b> com a finalidade informada. Pergunta: combina com o que foi dito?</td></tr>
+        <tr><td style="color:var(--green)">Necessidade</td><td>Só o <b>mínimo necessário</b>, sem dados excessivos. Pergunta: precisa de tudo isso?</td></tr>
+        <tr class="grp"><td colspan="2">Direitos do titular sobre os próprios dados</td></tr>
+        <tr><td>Livre acesso</td><td>Consulta facilitada e <b>gratuita</b> sobre a forma, a duração e a integralidade dos dados.</td></tr>
+        <tr><td>Qualidade dos dados</td><td>Dados exatos, claros, relevantes e <b>atualizados</b>.</td></tr>
+        <tr><td>Transparência</td><td>Informações claras e acessíveis sobre o tratamento e sobre quem trata, respeitados os segredos comercial e industrial.</td></tr>
+        <tr class="grp"><td colspan="2">Proteção</td></tr>
+        <tr><td>Segurança</td><td>Medidas técnicas e administrativas para <b>proteger</b> contra acesso não autorizado, perda, alteração.</td></tr>
+        <tr><td>Prevenção</td><td>Medidas para <b>evitar que o dano aconteça</b>.</td></tr>
+        <tr><td>Não discriminação</td><td>Não tratar para fins discriminatórios <b>ilícitos ou abusivos</b>.</td></tr>
+        <tr><td>Responsabilização e prestação de contas</td><td>O agente <b>demonstra</b> que adotou medidas eficazes e que cumpre a lei.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p><b>Segurança</b> é proteger o dado. <b>Prevenção</b> é evitar o dano. “Coletar só o indispensável” é <b>necessidade</b>, não adequação.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>As bases legais</h3></div>
+  <p class="lead">“Base legal” é o motivo que autoriza tratar o dado. São dez para dado comum. <b>Consentimento é só uma delas</b> e não vale mais que as outras. Para dado sensível a lista encolhe.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Base legal</th><th>Dado comum <span class="art">art. 7º</span></th><th>Dado sensível <span class="art">art. 11</span></th></tr></thead>
+      <tbody>
+        <tr><td>Consentimento</td><td class="g">Sim</td><td class="g">Sim, específico e destacado</td></tr>
+        <tr><td>Obrigação legal ou regulatória do controlador</td><td class="g">Sim</td><td class="g">Sim</td></tr>
+        <tr><td>Políticas públicas, pela administração pública</td><td class="g">Sim</td><td class="g">Sim</td></tr>
+        <tr><td>Estudos por órgão de pesquisa</td><td class="g">Sim</td><td class="g">Sim</td></tr>
+        <tr><td>Exercício regular de direitos em processo</td><td class="g">Sim</td><td class="g">Sim, inclusive em contrato</td></tr>
+        <tr><td>Proteção da vida ou da incolumidade física</td><td class="g">Sim</td><td class="g">Sim</td></tr>
+        <tr><td>Tutela da saúde</td><td class="g">Sim</td><td class="g">Sim</td></tr>
+        <tr><td>Execução de contrato a pedido do titular</td><td class="g">Sim</td><td class="r">Não</td></tr>
+        <tr><td>Legítimo interesse do controlador ou de terceiro</td><td class="g">Sim</td><td class="r">Não</td></tr>
+        <tr><td>Proteção do crédito</td><td class="g">Sim</td><td class="r">Não</td></tr>
+        <tr><td>Prevenção à fraude e segurança do titular em cadastro eletrônico</td><td class="r">Não está na lista</td><td class="g">Sim</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Consentimento</b></span><span class="f">art. 5º, XII · art. 8º</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Manifestação <b>livre, informada e inequívoca</b>, para finalidade determinada.</li>
+            <li>Por escrito, em <b>cláusula destacada</b>, ou por outro meio que demonstre a vontade.</li>
+            <li>O <b>ônus da prova</b> de que foi obtido direito é do <span class="p">controlador</span>.</li>
+            <li>Autorização <span class="r">genérica é nula</span>.</li>
+            <li>Pode ser <b>revogado a qualquer momento</b>, por procedimento gratuito e facilitado.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="result">
+        <div class="head"><span><b>Crianças e adolescentes</b></span><span class="f">art. 14</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Sempre no <b>melhor interesse</b> deles.</li>
+            <li>Dado de <b>criança</b>: consentimento <b>específico e em destaque</b> de <span class="p">pelo menos um dos pais</span> ou do responsável legal.</li>
+            <li>Sem consentimento só para <b>contatar os pais</b> (uma única vez, sem armazenar) ou para <b>proteger a criança</b>. Nunca repassar a terceiro.</li>
+          </ul>
+          <div class="tip">Basta <b>um</b> dos pais. A alternativa errada pede “ambos os pais”.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>Dizer que dado sensível pode ser tratado por <span class="r">legítimo interesse</span> ou para <span class="r">proteção do crédito</span>. Não pode. São as duas ausências mais cobradas do art. 11.</p>
+    <p>Na <b>tutela da saúde</b>, o tratamento é exclusivo de <span class="p">profissionais de saúde, serviços de saúde ou autoridade sanitária</span>.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Direitos do titular e fim do tratamento</h3></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>O que o titular pode exigir</b></span><span class="f">art. 18</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><b>confirmação</b> de que o tratamento existe</li>
+            <li><b>acesso</b> aos dados</li>
+            <li><b>correção</b> de dados incompletos, inexatos ou desatualizados</li>
+            <li><b>anonimização, bloqueio ou eliminação</b> do que for desnecessário, excessivo ou ilegal</li>
+            <li><b>portabilidade</b> para outro fornecedor</li>
+            <li><b>eliminação</b> dos dados tratados com consentimento</li>
+            <li>saber <b>com quem</b> o dado foi compartilhado</li>
+            <li>saber que pode <b>negar o consentimento</b> e o que acontece se negar</li>
+            <li><b>revogar</b> o consentimento</li>
+          </ul>
+          <div class="tip">Tudo <b>sem custo</b> para o titular. Ele também pode reclamar na ANPD.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="result">
+        <div class="head"><span><b>Prazos da resposta</b></span><span class="f">art. 19</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Formato simplificado: <span class="b">imediatamente</span>.</li>
+            <li>Declaração clara e completa (origem dos dados, critérios, finalidade): <span class="b">até 15 dias</span> do requerimento.</li>
+          </ul>
+          <p class="lbl">Decisão automatizada · art. 20</p>
+          <p>O titular pode pedir <b>revisão</b> de decisão tomada <b>unicamente</b> por tratamento automatizado que afete seus interesses, como perfil de crédito ou de consumo.</p>
+          <div class="tip">A lei <span class="r">não exige</span> que a revisão seja feita por pessoa natural. Essa parte foi vetada.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col c-ink">
+    <div class="result">
+      <div class="head"><span><b>Quando o tratamento termina</b></span><span class="f">arts. 15 e 16</span></div>
+      <div class="body">
+        <p>Termina quando a <b>finalidade foi alcançada</b>, o <b>prazo acabou</b>, o <b>titular pediu</b> (inclusive revogando o consentimento) ou a <b>ANPD determinou</b>. A regra então é <span class="r">eliminar</span>. A conservação só é autorizada para:</p>
+        <ul class="list">
+          <li>cumprir <b>obrigação legal ou regulatória</b></li>
+          <li><b>estudo</b> por órgão de pesquisa, anonimizando sempre que possível</li>
+          <li><b>transferência a terceiro</b>, respeitada a lei</li>
+          <li><b>uso exclusivo do controlador</b>, sem acesso de terceiro e com os dados <b>anonimizados</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Tratamento pelo poder público</h3></div>
+  <p class="lead">É o capítulo que fala da realidade da Dataprev. O poder público trata dados para cumprir sua <b>finalidade pública</b>, no <b>interesse público</b>, e precisa dizer com clareza o que faz.</p>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Deveres do órgão</b></span><span class="f">art. 23</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Informar as hipóteses em que trata dados, com previsão legal, finalidade e procedimentos, em veículo de fácil acesso, <b>de preferência no site</b>.</li>
+            <li><b>Indicar um encarregado</b>.</li>
+            <li>Manter os dados em <b>formato interoperável e estruturado</b> para uso compartilhado. <span class="art">art. 25</span></li>
+          </ul>
+          <div class="tip">Cartórios (serviços notariais e de registro) recebem o mesmo tratamento dos órgãos públicos.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="result">
+        <div class="head"><span><b>Empresa pública e sociedade de economia mista</b></span><span class="f">art. 24</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Atuando em <b>regime de concorrência</b>: mesmo tratamento das <span class="p">empresas privadas</span>.</li>
+            <li><b>Operacionalizando política pública</b>: mesmo tratamento dos <span class="p">órgãos públicos</span>.</li>
+          </ul>
+          <div class="tip">O que define a regra é a <b>atividade</b>, não o tipo de empresa. A mesma estatal pode estar nos dois lados.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col c-red">
+    <div class="result">
+      <div class="head"><span>É <b>vedado</b> ao poder público transferir a entidades privadas os dados de suas bases</span><span class="f">art. 26, §1º</span></div>
+      <div class="body">
+        <p class="lbl">Exceto em quatro casos</p>
+        <ul class="list">
+          <li><b>execução descentralizada</b> de atividade pública que exija a transferência, só para esse fim</li>
+          <li>dados <b>acessíveis publicamente</b></li>
+          <li><b>previsão legal</b>, ou transferência respaldada em <b>contratos, convênios</b> ou instrumentos parecidos</li>
+          <li><b>prevenção de fraudes e irregularidades</b>, ou proteção da segurança e da integridade do titular</li>
+        </ul>
+        <div class="tip">Compartilhar com pessoa jurídica privada deve ser <b>informado à ANPD</b> e, em regra, depende de <b>consentimento</b> do titular, com as exceções da lei. <span class="art">art. 27</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>Órgão público <span class="r">não recebe multa</span> da LGPD. Quando há infração, a ANPD pode enviar informe com medidas para fazer cessar a violação e pedir o relatório de impacto. <span class="art">arts. 31 e 32</span></p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Segurança e incidentes</h3></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>Segurança desde a concepção</b></span><span class="f">arts. 46 e 47</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Os <span class="p">agentes de tratamento</span> adotam medidas <b>técnicas e administrativas</b> contra acesso não autorizado, destruição, perda, alteração ou vazamento.</li>
+            <li>As medidas valem <b>desde a fase de concepção</b> do produto ou serviço até a execução. É o <i>privacy by design</i>.</li>
+            <li>O dever de segurança continua <b>mesmo depois que o tratamento termina</b>.</li>
+          </ul>
+          <div class="tip">Regras de <b>boas práticas e governança</b> (art. 50) são faculdade: controladores e operadores “<b>poderão</b>” formulá-las.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="result">
+        <div class="head"><span><b>Aconteceu um incidente</b></span><span class="f">art. 48</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><span class="p">O controlador</span> comunica à <b>ANPD e ao titular</b>.</li>
+            <li>Só o incidente que possa causar <b>risco ou dano relevante</b>.</li>
+            <li>Em <span class="b">prazo razoável</span>, definido pela ANPD.</li>
+            <li>A comunicação descreve: natureza dos dados, titulares envolvidos, medidas de segurança usadas, riscos, motivo da demora (se houve) e o que foi feito para reverter ou reduzir o prejuízo.</li>
+          </ul>
+          <div class="tip">A <b>lei</b> diz “prazo razoável”. O regulamento da ANPD fixou <b>3 dias úteis</b>. Se a questão pedir “nos termos da LGPD”, a resposta é prazo razoável.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>Quem comunica o incidente é o <span class="p">controlador</span>, não o operador nem o encarregado. E comunica <b>aos dois</b>: ANPD e titular.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>As sanções da LGPD</h3></div>
+  <p class="lead">Foi tema de questão em 2024. Quem aplica é a <b>ANPD</b>, sempre depois de <b>processo administrativo com ampla defesa</b>, de forma <b>gradativa, isolada ou cumulativa</b>.</p>
+  <div class="pair">
+    <div class="col c-orange">
+      <div class="result">
+        <div class="head"><span><b>As mais leves</b></span><span class="f">art. 52, I a VI</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><span class="o">Advertência</span>, com prazo para medidas corretivas</li>
+            <li><span class="o">Multa simples</span> de até <span class="b">2%</span> do faturamento da pessoa jurídica de direito privado, grupo ou conglomerado no Brasil, no <span class="b">último exercício</span>, excluídos os tributos, limitada a <span class="b">R$ 50 milhões por infração</span></li>
+            <li><span class="o">Multa diária</span>, respeitado o mesmo limite total</li>
+            <li><span class="o">Publicização</span> da infração, depois de apurada e confirmada</li>
+            <li><span class="o">Bloqueio</span> dos dados até a regularização</li>
+            <li><span class="o">Eliminação</span> dos dados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>As mais pesadas</b></span><span class="f">art. 52, X a XII</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><span class="o">Suspensão parcial do banco de dados</span> por até <span class="b">6 meses</span>, prorrogável por igual período</li>
+            <li><span class="o">Suspensão da atividade de tratamento</span> por até <span class="b">6 meses</span>, prorrogável por igual período</li>
+            <li><span class="o">Proibição parcial ou total</span> das atividades de tratamento</li>
+          </ul>
+          <div class="tip">Só podem ser aplicadas <b>depois</b> de já imposta ao menos uma das sanções de multa, publicização, bloqueio ou eliminação <b>para o mesmo caso</b>. <span class="art">§6º</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pair">
+    <div class="col c-purple">
+      <div class="result">
+        <div class="head"><span><b>Órgão público</b></span><span class="f">art. 52, §3º</span></div>
+        <div class="body">
+          <p>Recebe advertência, publicização, bloqueio, eliminação, suspensão e proibição. <span class="r">Não recebe multa</span>, nem simples nem diária.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>O que pesa na dosagem</b></span><span class="f">art. 52, §1º</span></div>
+        <div class="body">
+          <p>Gravidade, <b>boa-fé</b>, vantagem obtida, condição econômica, <b>reincidência</b>, grau do dano, cooperação, mecanismos internos, boas práticas, pronta correção e proporcionalidade.</p>
+          <div class="tip">Nacionalidade do infrator <span class="r">não é</span> critério. Foi alternativa errada em 2024.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">A banca troca</span>
+    <p>O dinheiro das multas vai para o <b>Fundo de Defesa de Direitos Difusos</b>, <span class="r">não para as vítimas</span>. <span class="art">§5º</span></p>
+    <p><b>Vazamento individual</b> ou acesso não autorizado pode ser resolvido por <span class="g">conciliação direta</span> entre controlador e titular. Sem acordo, o controlador fica sujeito às penalidades. <span class="art">§7º</span></p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>ANPD e CNPD</h3></div>
+  <p class="lead">A ANPD é quem <b>manda</b>: regulamenta, fiscaliza e pune. O CNPD é o conselho que <b>aconselha</b>. A banca dá a um as características do outro.</p>
+  <div class="pair">
+    <div class="col c-purple">
+      <div class="big"><div>ANPD<small>decide, fiscaliza, sanciona</small></div></div>
+      <div class="result">
+        <div class="head"><span><b>Autarquia de natureza especial</b></span><span class="f">art. 55-A</span></div>
+        <div class="body">
+          <ul class="list">
+            <li>Vinculada ao <span class="p">Ministério da Justiça e Segurança Pública</span>, com autonomia funcional, técnica, decisória, administrativa e financeira.</li>
+            <li>Órgão máximo: <b>Conselho Diretor</b>, com <span class="b">5 diretores</span>, incluído o Diretor-Presidente.</li>
+            <li>Escolhidos pelo <span class="p">Presidente da República</span> e nomeados depois de aprovação do <span class="p">Senado</span>.</li>
+            <li>Mandato de <span class="b">4 anos</span>.</li>
+            <li>Só perdem o cargo por <b>renúncia</b>, <b>condenação judicial transitada em julgado</b> ou <b>demissão em processo administrativo disciplinar</b>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="big"><div>CNPD<small>propõe, sugere, estuda, divulga</small></div></div>
+      <div class="result">
+        <div class="head"><span><b>Conselho consultivo</b> dentro da ANPD</span><span class="f">arts. 58-A e 58-B</span></div>
+        <div class="body">
+          <ul class="list">
+            <li><span class="b">23 representantes</span>, titulares e suplentes: Executivo federal, Senado, Câmara, CNJ, CNMP, CGI.br, sociedade civil, instituições científicas, confederações sindicais, setor empresarial e setor laboral.</li>
+            <li>Mandato de <span class="b">2 anos</span>, com <span class="b">1 recondução</span>.</li>
+            <li>Participação <b>não remunerada</b>: é serviço público relevante.</li>
+            <li>Propõe diretrizes para a Política Nacional de Proteção de Dados, faz relatório anual, <b>sugere ações à ANPD</b>, elabora estudos e debates e <b>dissemina conhecimento</b> sobre proteção de dados à população.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Mudou em 2026</span>
+    <p>A Lei 15.352/2026 transformou a ANPD em <b>Agência Nacional de Proteção de Dados</b>. A sigla continua ANPD. Ela é uma agência reguladora, autarquia de natureza especial ligada ao Ministério da Justiça, e a estrutura ganhou uma <b>Auditoria</b>. Material antigo ainda diz “órgão da Presidência da República”: esse texto está superado.</p>
+    <p>O edital é de julho de 2026, depois da mudança. Vale o texto novo.</p>
+  </div>
+</section>
+
+<section class="map">
+  <div class="banner"><h3>Cola rápida · LGPD</h3></div>
+  <div class="fgv">
+    <span class="lbl">Caiu em 2024 · questões 39 e 40</span>
+    <p><b>39, sanções.</b> Certa: vazamento individual admite conciliação direta entre controlador e titular e, sem acordo, o controlador fica sujeito às penalidades.</p>
+    <p><b>40, ANPD e CNPD.</b> Certa: o CNPD tem atribuição de sugerir ações à ANPD e disseminar conhecimento sobre proteção de dados à população.</p>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Ponto</th><th>O que a lei diz</th><th>O que a banca escreve</th></tr></thead>
+      <tbody>
+        <tr><td>Quem é protegido</td><td>Pessoa natural</td><td class="r">“pessoas naturais e jurídicas”</td></tr>
+        <tr><td>Agentes de tratamento</td><td>Controlador e operador</td><td class="r">inclui o encarregado</td></tr>
+        <tr><td>Dado sensível</td><td>Lista fechada: raça, religião, política, sindicato, saúde, vida sexual, genético, biométrico</td><td class="r">inclui dado financeiro</td></tr>
+        <tr><td>Sensível sem consentimento</td><td>Sem legítimo interesse e sem proteção do crédito</td><td class="r">“por legítimo interesse”</td></tr>
+        <tr><td>Criança</td><td>Um dos pais ou responsável</td><td class="r">“ambos os pais”</td></tr>
+        <tr><td>Declaração completa ao titular</td><td class="b">Até 15 dias</td><td class="r">30 dias</td></tr>
+        <tr><td>Incidente</td><td>Controlador comunica ANPD e titular, em prazo razoável</td><td class="r">“o operador” · “apenas à ANPD”</td></tr>
+        <tr><td>Multa simples</td><td class="b">Até 2% · teto R$ 50 milhões por infração</td><td class="r">10% · R$ 50 milhões no total</td></tr>
+        <tr><td>Órgão público</td><td>Sem multa</td><td class="r">“multa calculada sobre a arrecadação”</td></tr>
+        <tr><td>Destino da multa</td><td>Fundo de Defesa de Direitos Difusos</td><td class="r">“às pessoas lesadas”</td></tr>
+        <tr><td>Sanção sem processo</td><td>Nunca</td><td class="r">“dispensado para infrator contumaz”</td></tr>
+        <tr><td>Conselho Diretor</td><td class="b">5 diretores · 4 anos</td><td class="r">recebe a composição do CNPD</td></tr>
+        <tr><td>CNPD</td><td class="b">23 membros · 2 anos · sem remuneração</td><td class="r">recebe a regra de perda de cargo dos diretores</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ NÚMEROS ============ -->
+<div class="law" id="numeros">
+  <span class="num">Para a véspera da prova</span>
+  <h2>Todos os números em uma tabela</h2>
+  <p>É aqui que a banca mais mexe. Cubra a coluna da direita e tente lembrar.</p>
+</div>
+
+<section class="map">
+  <div class="tbl">
+    <table>
+      <thead><tr><th>O quê</th><th>Número</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="2">LAI</td></tr>
+        <tr><td>Responder o pedido</td><td class="b">20 dias + 10</td></tr>
+        <tr><td>Recorrer da negativa</td><td class="b">10 dias</td></tr>
+        <tr><td>Decidir o recurso</td><td class="b">5 dias</td></tr>
+        <tr><td>Reclamar de omissão (decreto)</td><td class="b">10 dias, contados a partir de 30 dias do pedido</td></tr>
+        <tr><td>Ultrassecreta · secreta · reservada</td><td class="b">25 · 15 · 5 anos</td></tr>
+        <tr><td>Informação pessoal</td><td class="b">até 100 anos</td></tr>
+        <tr><td>Município dispensado de site</td><td class="b">até 10.000 habitantes</td></tr>
+        <tr><td>Suspensão de licitar (particular)</td><td class="b">até 2 anos</td></tr>
+        <tr><td>Revisão de ofício pela CMRI (decreto)</td><td class="b">no máximo a cada 4 anos</td></tr>
+        <tr class="grp"><td colspan="2">Delitos Informáticos</td></tr>
+        <tr><td>Pena básica</td><td class="o">reclusão de 1 a 4 anos e multa</td></tr>
+        <tr><td>Pena qualificada</td><td class="o">reclusão de 2 a 5 anos e multa</td></tr>
+        <tr><td>Prejuízo econômico · repasse dos dados</td><td class="b">+1/3 a 2/3</td></tr>
+        <tr><td>Vítima da lista de autoridades</td><td class="b">+1/3 à metade</td></tr>
+        <tr class="grp"><td colspan="2">Marco Civil</td></tr>
+        <tr><td>Registros de conexão</td><td class="b">1 ano</td></tr>
+        <tr><td>Registros de acesso a aplicações</td><td class="b">6 meses</td></tr>
+        <tr><td>Pedir autorização judicial após requerer a guarda</td><td class="b">60 dias</td></tr>
+        <tr><td>Multa</td><td class="b">até 10% do faturamento do grupo no Brasil, último exercício</td></tr>
+        <tr class="grp"><td colspan="2">LGPD</td></tr>
+        <tr><td>Declaração completa ao titular</td><td class="b">até 15 dias</td></tr>
+        <tr><td>Multa simples</td><td class="b">até 2%, teto de R$ 50 milhões por infração</td></tr>
+        <tr><td>Suspensão do banco de dados ou da atividade</td><td class="b">até 6 meses, prorrogável por igual período</td></tr>
+        <tr><td>Conselho Diretor da ANPD</td><td class="b">5 diretores, mandato de 4 anos</td></tr>
+        <tr><td>CNPD</td><td class="b">23 membros, mandato de 2 anos, 1 recondução</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="trap">
+    <span class="lbl">As duas multas lado a lado</span>
+    <p><b>Marco Civil:</b> até <span class="b">10%</span>, sem teto em reais. <b>LGPD:</b> até <span class="b">2%</span>, teto de <span class="b">R$ 50 milhões</span> por infração. Nas duas a base é o faturamento no Brasil no <b>último exercício</b>, excluídos os tributos.</p>
+  </div>
+</section>
+
+<footer>Concurso DATAPREV 2026 · Legislação acerca de Segurança da Informação e Proteção de Dados · textos conferidos em 1º/10/2026.</footer>
+</div>
+
+</body>
+</html>

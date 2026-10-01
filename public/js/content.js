@@ -3374,6 +3374,10 @@ window.CONTENT = {
           "descricao": "Lei Geral de Proteção de Dados Pessoais. Protege liberdade e privacidade no tratamento de dados pessoais.",
           "resumo": [
             {
+              "titulo": "Mapa mental — revisão visual",
+              "html": "<a class=\"mapa-link\" href=\"/mapas/legislacao.html#lgpd\"><span class=\"mapa-link-ic\"><i class=\"ti ti-sitemap\"></i></span><span class=\"mapa-link-body\"><b>Abrir os mapas mentais</b><span>10 mapas coloridos: vocabulário, quem é quem, onde a lei vale, princípios, bases legais, direitos do titular, poder público, incidentes, sanções e ANPD × CNPD.</span></span><i class=\"ti ti-arrow-right mapa-link-go\"></i></a><p>Use os mapas para revisar depois de ler a teoria abaixo, e na véspera da prova. No fim da página há uma tabela com todos os números das quatro leis.</p>"
+            },
+            {
               "titulo": "O que é e por que surgiu",
               "html": "\n                <p><b>O que é.</b> A LGPD define como os dados pessoais — qualquer informação que identifique uma pessoa: nome, CPF, e-mail, telefone, localização, histórico de navegação, hábitos de compra — podem ser coletados, usados, guardados e compartilhados por empresas e órgãos públicos. Em uma frase: ela devolve ao cidadão o controle sobre as próprias informações e impõe regras a quem as utiliza.</p>\n                <p><b>Por que surgiu.</b> Com a internet e a economia digital, os dados pessoais viraram um ativo valioso (o \"novo petróleo\"). Empresas passaram a coletar e negociar informações em larga escala, muitas vezes sem o cidadão saber ou consentir. No Brasil, a proteção era esparsa (regras soltas no CDC, no Marco Civil etc.). Escândalos como o caso Cambridge Analytica (2018) escancararam a necessidade de regras claras.</p>\n                <p><b>De onde veio.</b> Foi fortemente inspirada no GDPR europeu (em vigor desde 2018). Isso também permite ao Brasil trocar dados com países que exigem nível equivalente de proteção.</p>\n                <p><b>Linha do tempo.</b> Sancionada em 2018, entrou em vigor em setembro de 2020, e as sanções passaram a valer em agosto de 2021.</p>\n                <p><b>O espírito da lei.</b> Equilibrar o direito à privacidade e o desenvolvimento econômico e tecnológico. A LGPD não proíbe usar dados — permite, desde que com base legal, finalidade definida, transparência e responsabilidade.</p>\n              "
             },
@@ -3707,6 +3711,10 @@ window.CONTENT = {
           "descricao": "Lei de Acesso à Informação. Regra de ouro: o acesso é a regra; o sigilo, a exceção.",
           "resumo": [
             {
+              "titulo": "Mapa mental — revisão visual",
+              "html": "<a class=\"mapa-link\" href=\"/mapas/legislacao.html#lai\"><span class=\"mapa-link-ic\"><i class=\"ti ti-sitemap\"></i></span><span class=\"mapa-link-body\"><b>Abrir os mapas mentais</b><span>7 mapas coloridos: a ideia da lei, transparência ativa e passiva, o pedido passo a passo com os prazos, os três graus de sigilo, informação pessoal, responsabilidades e os dois decretos.</span></span><i class=\"ti ti-arrow-right mapa-link-go\"></i></a><p>Use os mapas para revisar depois de ler a teoria abaixo, e na véspera da prova. No fim da página há uma tabela com todos os números das quatro leis.</p>"
+            },
+            {
               "titulo": "De onde veio e o espírito da lei",
               "html": "\n                <p>Nasceu para concretizar o direito constitucional de acesso à informação pública (art. 5º, XXXIII, da CF), obrigando o Estado a ser transparente com o cidadão sobre o que faz e como gasta.</p>\n                <p>Publicada em 18/11/2011, entrou em vigor após <b>vacatio legis de 180 dias</b>, em <b>16/05/2012</b>.</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> Regra de ouro: <b>acesso é a regra, sigilo é a exceção.</b></div>\n              "
             },
@@ -4015,6 +4023,10 @@ window.CONTENT = {
           "descricao": "A 'constituição da internet' brasileira: princípios, direitos e deveres no uso da rede.",
           "resumo": [
             {
+              "titulo": "Mapa mental — revisão visual",
+              "html": "<a class=\"mapa-link\" href=\"/mapas/legislacao.html#marco\"><span class=\"mapa-link-ic\"><i class=\"ti ti-sitemap\"></i></span><span class=\"mapa-link-body\"><b>Abrir os mapas mentais</b><span>5 mapas coloridos: os dois tipos de provedor e os prazos de guarda, o que exige ordem judicial, direitos do usuário, neutralidade de rede e sanções.</span></span><i class=\"ti ti-arrow-right mapa-link-go\"></i></a><p>Use os mapas para revisar depois de ler a teoria abaixo, e na véspera da prova. No fim da página há uma tabela com todos os números das quatro leis.</p>"
+            },
+            {
               "titulo": "De onde veio",
               "html": "\n                <p>É a \"constituição da internet\" brasileira (2014), criada para garantir direitos dos usuários e regras claras — neutralidade de rede, privacidade e liberdade de expressão — num ambiente que até então não tinha lei própria.</p>\n                <p><b>Fundamentos (art. 2º):</b> o respeito à liberdade de expressão, além do reconhecimento da escala mundial da rede, dos direitos humanos, da pluralidade, da livre iniciativa e da finalidade social da rede.</p>\n                <p><b>Princípios (art. 3º):</b> liberdade de expressão; proteção da privacidade; proteção dos dados pessoais; preservação e garantia da neutralidade de rede; preservação da estabilidade, segurança e funcionalidade da rede; responsabilização dos agentes conforme suas atividades; preservação da natureza participativa da rede; e liberdade dos modelos de negócios.</p>\n              "
             },
@@ -4111,6 +4123,10 @@ window.CONTENT = {
           "icon": "ti-lock-access",
           "descricao": "A 'Lei Carolina Dieckmann'. Criou o crime de invasão de dispositivo informático (art. 154-A do CP).",
           "resumo": [
+            {
+              "titulo": "Mapa mental — revisão visual",
+              "html": "<a class=\"mapa-link\" href=\"/mapas/legislacao.html#delitos\"><span class=\"mapa-link-ic\"><i class=\"ti ti-sitemap\"></i></span><span class=\"mapa-link-body\"><b>Abrir os mapas mentais</b><span>3 mapas coloridos: o crime do art. 154-A peça por peça, a escada das penas e quem pode processar.</span></span><i class=\"ti ti-arrow-right mapa-link-go\"></i></a><p>Use os mapas para revisar depois de ler a teoria abaixo, e na véspera da prova. No fim da página há uma tabela com todos os números das quatro leis.</p>"
+            },
             {
               "titulo": "De onde veio",
               "html": "\n                <p>Surgiu após o vazamento de fotos íntimas da atriz Carolina Dieckmann (2012), quando se percebeu que não havia crime específico para punir a invasão de dispositivos e o roubo de dados. O art. 2º inseriu os arts. <b>154-A</b> e <b>154-B</b> no Código Penal; o art. 3º alterou os arts. <b>266</b> (interrupção de serviço telemático ou de informação de utilidade pública) e <b>298</b> (equiparou o cartão de crédito ou débito a documento particular, para fins de falsificação).</p>\n                <div class=\"mnemonic\"><i class=\"ti ti-bulb\"></i> A lei é de 2012, mas a redação que vale hoje é a da <b>Lei nº 14.155/2021</b>, que endureceu as penas e ampliou o tipo. Estudar a redação antiga é o erro mais caro nessa matéria.</div>\n              "

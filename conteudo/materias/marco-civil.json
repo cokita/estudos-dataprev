@@ -5,6 +5,10 @@
   "descricao": "A 'constituição da internet' brasileira: princípios, direitos e deveres no uso da rede.",
   "resumo": [
     {
+      "titulo": "Mapa mental — revisão visual",
+      "html": "<a class=\"mapa-link\" href=\"/mapas/legislacao.html#marco\"><span class=\"mapa-link-ic\"><i class=\"ti ti-sitemap\"></i></span><span class=\"mapa-link-body\"><b>Abrir os mapas mentais</b><span>5 mapas coloridos: os dois tipos de provedor e os prazos de guarda, o que exige ordem judicial, direitos do usuário, neutralidade de rede e sanções.</span></span><i class=\"ti ti-arrow-right mapa-link-go\"></i></a><p>Use os mapas para revisar depois de ler a teoria abaixo, e na véspera da prova. No fim da página há uma tabela com todos os números das quatro leis.</p>"
+    },
+    {
       "titulo": "De onde veio",
       "html": "\n                <p>É a \"constituição da internet\" brasileira (2014), criada para garantir direitos dos usuários e regras claras — neutralidade de rede, privacidade e liberdade de expressão — num ambiente que até então não tinha lei própria.</p>\n                <p><b>Fundamentos (art. 2º):</b> o respeito à liberdade de expressão, além do reconhecimento da escala mundial da rede, dos direitos humanos, da pluralidade, da livre iniciativa e da finalidade social da rede.</p>\n                <p><b>Princípios (art. 3º):</b> liberdade de expressão; proteção da privacidade; proteção dos dados pessoais; preservação e garantia da neutralidade de rede; preservação da estabilidade, segurança e funcionalidade da rede; responsabilização dos agentes conforme suas atividades; preservação da natureza participativa da rede; e liberdade dos modelos de negócios.</p>\n              "
     },
