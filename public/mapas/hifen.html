@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hífen sem Medo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#eef0f3; --paper:#ffffff; --ink:#15171c; --muted:#5b606b; --line:#d9dce2;
+  --red:#e0283a; --red-soft:#fde8ea;
+  --green:#1b9a4b; --green-soft:#e6f6ec;
+  --blue:#1f66d1; --blue-soft:#e6effc;
+  --orange:#dd6a12; --orange-soft:#fdf0e4;
+  --purple:#7a3cc4; --purple-soft:#f1e9fb;
+  --pink:#d6307a; --shadow:0 2px 0 rgba(20,22,28,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --pink:#ff6aa8; --shadow:none;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --pink:#ff6aa8; --shadow:none;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 "Nunito",system-ui,sans-serif;padding-inline:16px;padding-block:28px 60px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header.intro{text-align:center;display:flex;flex-direction:column;gap:6px}
+header.intro h1{font:700 clamp(28px,5vw,42px)/1.05 "Oswald",sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0;text-wrap:balance}
+header.intro p{margin:0 auto;color:var(--muted);max-width:60ch}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+.legend span{font:600 13px "Oswald",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;color:#fff}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.9em}
+
+/* map card */
+.map{background:var(--paper);border-radius:14px;padding:22px clamp(14px,3vw,28px) 26px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow)}
+.banner{align-self:center;border:4px solid var(--red);border-radius:10px;padding:6px 18px;position:relative;text-align:center;max-width:100%}
+.banner::after{content:"";position:absolute;left:50%;bottom:-13px;transform:translateX(-50%);border:9px solid transparent;border-top-color:var(--red);border-bottom:0}
+.banner h2{margin:0;font:700 clamp(20px,3.6vw,30px)/1.1 "Oswald",sans-serif;text-transform:uppercase;text-wrap:balance}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;margin-top:6px}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;align-items:center;gap:10px}
+.big{width:100%;border:3px solid var(--c);border-radius:14px;padding:6px;background:var(--c)}
+.big div{background:var(--paper);border-radius:9px;text-align:center;padding:12px 8px;font:700 clamp(26px,5vw,40px)/1.05 "Oswald",sans-serif;text-transform:uppercase}
+.big small{display:block;font:500 15px "JetBrains Mono",monospace;color:var(--muted);text-transform:none;margin-top:6px}
+.arrow{width:28px;height:34px;color:var(--c)}
+.pill{border:3px solid var(--red);border-radius:8px;padding:3px 16px;font:700 17px "Oswald",sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.pill.eq{border-color:var(--ink)}
+.result{width:100%;border:2px solid var(--c);border-radius:12px;overflow:hidden;background:var(--paper)}
+.result .head{background:var(--soft);padding:10px 12px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.result .head b{color:var(--c);font-weight:800}
+.result .head .f{font:500 14px "JetBrains Mono",monospace;color:var(--muted)}
+.result .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:10px;text-align:center}
+.lbl{font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ex{margin:0}
+.k{color:var(--c);font-weight:800}
+.no{color:var(--red);font-weight:800}
+.tip{border-top:1px dashed var(--line);padding-top:10px;font-size:14.5px;color:var(--muted)}
+.tip strong{color:var(--ink)}
+.rule{align-self:center;background:var(--soft,var(--red-soft));border-radius:10px;padding:10px 16px;text-align:center;max-width:60ch;font-weight:700}
+.trap{border:2px dashed var(--red);border-radius:12px;padding:12px 14px;background:var(--red-soft);display:flex;flex-direction:column;gap:6px}
+.trap .lbl{color:var(--red)}
+.trap p{margin:0}
+.x{color:var(--red);font-weight:800}
+.ok{color:var(--green);font-weight:800}
+
+.c-green{--c:var(--green);--soft:var(--green-soft)}
+.c-blue{--c:var(--blue);--soft:var(--blue-soft)}
+.c-orange{--c:var(--orange);--soft:var(--orange-soft)}
+.c-purple{--c:var(--purple);--soft:var(--purple-soft)}
+.c-red{--c:var(--red);--soft:var(--red-soft)}
+.single{max-width:420px;width:100%;margin:0 auto}
+
+/* summary table */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:800}
+tr.grp td{background:var(--bg);font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+footer{text-align:center;color:var(--muted);font-size:14px}
+</style>
+
+<style>
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 20px;margin-top:6px}
+@media (max-width:760px){.trio{grid-template-columns:1fr}}
+.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;text-align:left}
+.list li{padding-left:18px;position:relative}
+.list li::before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--c)}
+.eqn{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 14px;font:700 clamp(22px,4.2vw,34px)/1 "Oswald",sans-serif}
+.eqn .t{border:3px solid var(--c);border-radius:10px;padding:8px 14px;display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--soft)}
+.eqn .t small{font:600 12px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.eqn .op{color:var(--muted)}
+.c-ink{--c:var(--ink);--soft:var(--bg)}
+</style>
+<style>
+body{margin:0}
+.back{max-width:980px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.back a{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line);border-radius:9px;padding:6px 12px;background:var(--paper)}
+.back a:hover{color:var(--ink)}
+.back a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+<nav class="back"><a href="/#/m/hifen">← Voltar para Hífen</a><a href="/#/">Estudos DataPrev</a></nav>
+<div class="wrap">
+
+<header class="intro">
+  <h1>Hífen sem medo</h1>
+  <p>Regras do Novo Acordo Ortográfico, no formato de mapas. Uma cor por resultado: <b style="color:var(--green)">verde</b> quando leva hífen, <b style="color:var(--red)">vermelho</b> quando junta sem hífen, <b style="color:var(--blue)">azul</b> quando junta e dobra a letra, <b style="color:var(--purple)">roxo</b> para as exceções.</p>
+  <div class="legend">
+    <span style="background:var(--green)">Com hífen</span>
+    <span style="background:var(--red)">Junto</span>
+    <span style="background:var(--blue)">Junta e dobra</span>
+    <span style="background:var(--purple)">Exceção</span>
+  </div>
+</header>
+
+<!-- MAPA 1 -->
+<section class="map">
+  <div class="banner"><h2>Para que serve o hífen</h2></div>
+  <p style="margin:0 auto;max-width:62ch;text-align:center;color:var(--muted)">O hífen (-) é o tracinho que <b style="color:var(--ink)">liga pedaços que formam uma palavra só</b>. Ele aparece em três situações, e cada uma tem sua regra.</p>
+  <div class="trio">
+    <div class="col c-orange">
+      <div class="big"><div>Prefixo<small>anti-, super-, micro-…</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="result">
+        <div class="head"><span>Pedaço que <b>vem antes</b> e não vive sozinho</span></div>
+        <div class="body">
+          <p class="ex">micro<span class="k">-</span>ondas · super<span class="k">-</span>homem · autoescola</p>
+          <div class="tip">A regra é <strong>olhar as letras</strong> que se encontram (mapas 2 a 4).</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-orange">
+      <div class="big"><div>Composto<small>palavra + palavra</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="result">
+        <div class="head"><span>Duas palavras que <b>viram uma</b></span></div>
+        <div class="body">
+          <p class="ex">guarda<span class="k">-</span>chuva · segunda<span class="k">-</span>feira · dia a dia</p>
+          <div class="tip">A regra é ver se há <strong>“de”, “a”, “que” no meio</strong> (mapa 5).</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-orange">
+      <div class="big"><div>Pronome<small>verbo + lo, lhe, se</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="result">
+        <div class="head"><span>Pronome <b>grudado no verbo</b></span></div>
+        <div class="body">
+          <p class="ex">enviá<span class="k">-</span>lo · dir<span class="k">-</span>se<span class="k">-</span>ia · entreguei<span class="k">-</span>lhe</p>
+          <div class="tip">Pronome depois do verbo <strong>sempre</strong> leva hífen (mapa 6).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA 2 -->
+<section class="map">
+  <div class="banner"><h2>Prefixos: a regra das letras</h2></div>
+  <div class="rule" style="background:var(--green-soft)">Frase para decorar: <u>letras iguais se separam</u>, <u>letras diferentes se juntam</u>.<br><span style="font-weight:600;color:var(--muted)">Compare a última letra do prefixo com a primeira letra da palavra.</span></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Vogal + mesma vogal<small>o + o · i + i · a + a</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Com hífen</div>
+      <div class="result">
+        <div class="head"><span>micr<b>o-o</b>ndas</span></div>
+        <div class="body">
+          <p class="ex">anti<span class="k">-</span>inflamatório · contra<span class="k">-</span>ataque · auto<span class="k">-</span>observação · micro<span class="k">-</span>ônibus</p>
+          <div class="tip">Iguais <strong>se separam</strong>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="big"><div>Vogal + vogal diferente<small>o + e · i + a · a + e</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill">Junto</div>
+      <div class="result">
+        <div class="head"><span>aut<b>oe</b>scola</span></div>
+        <div class="body">
+          <p class="ex">infraestrutura · antiaéreo · extraescolar · semiaberto · autoajuda</p>
+          <div class="tip">Diferentes <strong>se juntam</strong>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="big"><div>Consoante + mesma consoante<small>r + r · b + b</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Com hífen</div>
+      <div class="result">
+        <div class="head"><span>supe<b>r-r</b>esistente</span></div>
+        <div class="body">
+          <p class="ex">inter<span class="k">-</span>regional · hiper<span class="k">-</span>realista · sub<span class="k">-</span>base</p>
+          <div class="tip">Iguais <strong>se separam</strong>, igual às vogais.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="big"><div>Consoante + letra diferente<small>r + m · r + e · b + s</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill">Junto</div>
+      <div class="result">
+        <div class="head"><span>hipe<b>rm</b>ercado</span></div>
+        <div class="body">
+          <p class="ex">superinteressante · interestadual · subsolo · supermercado</p>
+          <div class="tip">Diferentes <strong>se juntam</strong>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Exceções da regra das vogais</span>
+    <p><span class="x">co-</span> e <span class="x">re-</span> juntam mesmo com a mesma vogal: <em>cooperar, coordenar, coobrigação, reeleger, reescrever</em>. O mesmo vale para <em>preexistente, preencher</em>.</p>
+  </div>
+</section>
+
+<!-- MAPA 3 -->
+<section class="map">
+  <div class="banner"><h2>Prefixo + R ou S · Prefixo + H</h2></div>
+  <div class="pair">
+    <div class="col c-blue">
+      <div class="big"><div>Vogal + R ou S<small>anti + rugas · ultra + som</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Junta e dobra</div>
+      <div class="result">
+        <div class="head"><span>anti<b>rr</b>ugas · ultra<b>ss</b>om</span><span class="f">o R ou o S vira RR ou SS</span></div>
+        <div class="body">
+          <p class="ex">autorretrato · contrarregra · minissaia · antissocial · microssistema</p>
+          <div class="tip"><strong>Por que dobra?</strong> Para manter o som. “Antisocial” seria lido com som de Z, como em “casa”.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="big"><div>Qualquer prefixo + H<small>anti + higiênico</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Com hífen</div>
+      <div class="result">
+        <div class="head"><span>anti<b>-h</b>igiênico</span><span class="f">o H fica, o hífen separa</span></div>
+        <div class="body">
+          <p class="ex">super<span class="k">-</span>homem · pré<span class="k">-</span>história · sub<span class="k">-</span>humano · mini<span class="k">-</span>hotel</p>
+          <div class="tip"><strong>Exceções:</strong> com <em>co-, re-, des-, in-</em> o H cai e junta: <em>coerdeiro, reabilitar, desumano, inábil</em>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Atenção à ordem</span>
+    <p>Prefixo terminado em <b>R</b> + palavra com <b>R</b> segue a regra das iguais: <em>hiper-realista, inter-racial</em> (com hífen, sem dobrar).</p>
+  </div>
+</section>
+
+<!-- MAPA 4 -->
+<section class="map">
+  <div class="banner"><h2>Prefixos que sempre pedem hífen</h2></div>
+  <p style="margin:0 auto;max-width:62ch;text-align:center;color:var(--muted)">Esses ignoram a regra das letras. Vale decorar a lista.</p>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>ex- · vice-</b></span><span class="f">sempre, em qualquer caso</span></div>
+        <div class="body">
+          <p class="ex">ex<span class="k">-</span>diretor · ex<span class="k">-</span>aluna · vice<span class="k">-</span>presidente · vice<span class="k">-</span>reitor</p>
+          <div class="tip">“Ex” no sentido de “que deixou de ser”. Em <em>exportar</em> não é esse prefixo.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>sem- · além- · aquém- · recém-</b></span></div>
+        <div class="body">
+          <p class="ex">sem<span class="k">-</span>terra · além<span class="k">-</span>mar · aquém<span class="k">-</span>fronteira · recém<span class="k">-</span>nascido · recém<span class="k">-</span>aprovado</p>
+          <div class="tip">Todos têm acento ou som próprio e ficam sempre separados.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="result">
+        <div class="head"><span><b>pós- · pré- · pró-</b> com acento</span><span class="f">sem acento, junta</span></div>
+        <div class="body">
+          <p class="ex">pós<span class="k">-</span>graduação · pré<span class="k">-</span>edital · pró<span class="k">-</span>reitor</p>
+          <p class="ex" style="color:var(--muted)">sem acento: pospor · prever · promover</p>
+          <div class="tip">O acento é o sinal: <strong>tem acento, tem hífen</strong>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="result">
+        <div class="head"><span><b>bem- · mal-</b></span><span class="f">dependem da letra seguinte</span></div>
+        <div class="body">
+          <p class="ex"><b>bem</b>: quase sempre hífen: bem<span class="k">-</span>vindo · bem<span class="k">-</span>estar · bem<span class="k">-</span>humorado <span style="color:var(--muted)">(mas benfeito, benfeitor)</span></p>
+          <p class="ex"><b>mal</b>: hífen só antes de <b>vogal, H ou L</b>: mal<span class="k">-</span>estar · mal<span class="k">-</span>humorado · mal<span class="k">-</span>limpo · mas malcriado, malsucedido</p>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="result">
+        <div class="head"><span><b>sub-</b> antes de B, R, H</span></div>
+        <div class="body">
+          <p class="ex">sub<span class="k">-</span>base · sub<span class="k">-</span>reitor · sub<span class="k">-</span>humano · mas subsolo, subgerente</p>
+          <div class="tip">Antes de R separa para não ler “su-brei-tor”.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="result">
+        <div class="head"><span><b>pan- · circum-</b></span><span class="f">antes de vogal, H, M, N</span></div>
+        <div class="body">
+          <p class="ex">pan<span class="k">-</span>americano · pan<span class="k">-</span>helenismo · circum<span class="k">-</span>navegação · mas panfleto</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Nunca leva hífen</span>
+    <p><b>não</b> e <b>quase</b> usados como prefixo: <em>não fumante, não governamental, quase contrato</em>.</p>
+  </div>
+</section>
+
+<!-- MAPA 5 -->
+<section class="map">
+  <div class="banner"><h2>Palavras compostas</h2></div>
+  <div class="col c-orange single">
+    <div class="big"><div>Tem palavra de ligação no meio?<small>de · a · que · do · da</small></div></div>
+  </div>
+  <div class="pair">
+    <div class="col c-green">
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Não tem</div>
+      <div class="result">
+        <div class="head"><span><b>Com hífen</b></span><span class="f">palavra + palavra direto</span></div>
+        <div class="body">
+          <p class="ex">guarda<span class="k">-</span>chuva · segunda<span class="k">-</span>feira · arco<span class="k">-</span>íris · decreto<span class="k">-</span>lei · azul<span class="k">-</span>escuro · tenente<span class="k">-</span>coronel</p>
+          <div class="tip">Cada parte mantém seu sentido e seu acento.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill">Tem</div>
+      <div class="result">
+        <div class="head"><span><b>Sem hífen</b></span><span class="f">regra nova do Acordo</span></div>
+        <div class="body">
+          <p class="ex">dia a dia · fim de semana · mão de obra · pé de moleque · cara de pau · tomara que caia</p>
+          <div class="tip">Antes do Acordo era “dia-a-dia”. Hoje fica <strong>tudo separado</strong>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pair">
+    <div class="col c-purple">
+      <div class="result">
+        <div class="head"><span><b>Exceções com hífen</b></span><span class="f">mesmo tendo “de”</span></div>
+        <div class="body">
+          <p class="ex">cor<span class="k">-</span>de<span class="k">-</span>rosa · água<span class="k">-</span>de<span class="k">-</span>colônia · mais<span class="k">-</span>que<span class="k">-</span>perfeito · pé<span class="k">-</span>de<span class="k">-</span>meia · arco<span class="k">-</span>da<span class="k">-</span>velha</p>
+          <div class="tip"><strong>Plantas e animais</strong> mantêm sempre o hífen: bem<span class="k">-</span>te<span class="k">-</span>vi · joão<span class="k">-</span>de<span class="k">-</span>barro · couve<span class="k">-</span>flor · erva<span class="k">-</span>doce.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-red">
+      <div class="result">
+        <div class="head"><span><b>Viraram palavra só</b></span><span class="f">perderam a ideia de composição</span></div>
+        <div class="body">
+          <p class="ex">girassol · mandachuva · paraquedas · passatempo · pontapé</p>
+          <div class="tip">Cuidado: <em>para-choque, para-brisa, para-lama</em> continuam com hífen. Só <em>paraquedas</em> e derivados juntaram.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA 6 -->
+<section class="map">
+  <div class="banner"><h2>Pronome junto do verbo</h2></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Pronome depois<small>ênclise</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Com hífen</div>
+      <div class="result">
+        <div class="head"><span>verbo <b>-</b> pronome</span></div>
+        <div class="body">
+          <p class="ex">Entregaram<span class="k">-</span>lhe o edital. · Vou enviá<span class="k">-</span>lo hoje. · Fizeram<span class="k">-</span>no.</p>
+          <div class="tip">Verbo terminado em R, S ou Z perde a letra e o pronome vira <strong>lo, la</strong>: enviar + o = enviá<span class="k">-</span>lo.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="big"><div>Pronome no meio<small>mesóclise</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Dois hífens</div>
+      <div class="result">
+        <div class="head"><span>verbo <b>-</b> pronome <b>-</b> final</span><span class="f">só no futuro</span></div>
+        <div class="body">
+          <p class="ex">dir<span class="k">-</span>se<span class="k">-</span>ia · far<span class="k">-</span>se<span class="k">-</span>á · entregar<span class="k">-</span>lhe<span class="k">-</span>ei</p>
+          <div class="tip">Aparece em texto formal e em questão de colocação pronominal.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Pronome antes do verbo</span>
+    <p>Não tem hífen: <em>Não <b>lhe</b> entregaram o edital.</em> O hífen só aparece quando o pronome vem depois do verbo ou no meio dele.</p>
+  </div>
+</section>
+
+<!-- RESUMO -->
+<section class="map">
+  <div class="banner"><h2>Cola rápida</h2></div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Situação</th><th>Resultado</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="3">Prefixo: regra das letras</td></tr>
+        <tr><td>Vogal + mesma vogal</td><td class="ok">Hífen</td><td>micro-ondas, anti-inflamatório</td></tr>
+        <tr><td>Vogal + vogal diferente</td><td class="x">Junto</td><td>autoescola, infraestrutura</td></tr>
+        <tr><td>Vogal + R ou S</td><td style="color:var(--blue);font-weight:800">Junta e dobra</td><td>antirrugas, ultrassom</td></tr>
+        <tr><td>Consoante + mesma consoante</td><td class="ok">Hífen</td><td>inter-regional, sub-base</td></tr>
+        <tr><td>Consoante + letra diferente</td><td class="x">Junto</td><td>hipermercado, interestadual</td></tr>
+        <tr><td>Prefixo + H</td><td class="ok">Hífen</td><td>anti-higiênico, super-homem</td></tr>
+        <tr class="grp"><td colspan="3">Exceções</td></tr>
+        <tr><td style="color:var(--purple)">co-, re-, pre- + mesma vogal</td><td class="x">Junto</td><td>cooperar, reeleger, preexistente</td></tr>
+        <tr><td style="color:var(--purple)">co-, re-, des-, in- + H</td><td class="x">Junto, sem H</td><td>coerdeiro, desumano</td></tr>
+        <tr><td style="color:var(--purple)">ex-, vice-, sem-, além-, recém-</td><td class="ok">Sempre hífen</td><td>ex-diretor, recém-nascido</td></tr>
+        <tr><td style="color:var(--purple)">pós-, pré-, pró- com acento</td><td class="ok">Hífen</td><td>pós-graduação (mas prever)</td></tr>
+        <tr><td style="color:var(--purple)">mal- + vogal, H, L</td><td class="ok">Hífen</td><td>mal-estar (mas malcriado)</td></tr>
+        <tr><td style="color:var(--purple)">sub- + B, R, H</td><td class="ok">Hífen</td><td>sub-reitor (mas subsolo)</td></tr>
+        <tr><td style="color:var(--purple)">não, quase</td><td class="x">Nunca hífen</td><td>não fumante</td></tr>
+        <tr class="grp"><td colspan="3">Compostos e pronomes</td></tr>
+        <tr><td>Palavra + palavra direto</td><td class="ok">Hífen</td><td>guarda-chuva, segunda-feira</td></tr>
+        <tr><td>Com “de, a, que” no meio</td><td class="x">Sem hífen</td><td>dia a dia, fim de semana</td></tr>
+        <tr><td>Plantas e animais</td><td class="ok">Hífen</td><td>bem-te-vi, couve-flor</td></tr>
+        <tr><td>Exceções consagradas</td><td class="ok">Hífen</td><td>cor-de-rosa, água-de-colônia</td></tr>
+        <tr><td>Pronome depois do verbo</td><td class="ok">Hífen</td><td>enviá-lo, dir-se-ia</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>Concurso DATAPREV 2026 · Língua Portuguesa · Hífen.</footer>
+</div>
+
+</body>
+</html>

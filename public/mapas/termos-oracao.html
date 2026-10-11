@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termos da Oração</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#eef0f3; --paper:#ffffff; --ink:#15171c; --muted:#5b606b; --line:#d9dce2;
+  --red:#e0283a; --red-soft:#fde8ea;
+  --green:#1b9a4b; --green-soft:#e6f6ec;
+  --blue:#1f66d1; --blue-soft:#e6effc;
+  --orange:#dd6a12; --orange-soft:#fdf0e4;
+  --purple:#7a3cc4; --purple-soft:#f1e9fb;
+  --pink:#d6307a; --shadow:0 2px 0 rgba(20,22,28,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --pink:#ff6aa8; --shadow:none;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#12141a; --paper:#1b1e26; --ink:#eef0f4; --muted:#a3a8b4; --line:#323744;
+  --red:#ff5a67; --red-soft:#3a1d22;
+  --green:#4cc97a; --green-soft:#17301f;
+  --blue:#6aa2ff; --blue-soft:#172640;
+  --orange:#ff9a4d; --orange-soft:#3a2615;
+  --purple:#b48bff; --purple-soft:#2a1f3d;
+  --pink:#ff6aa8; --shadow:none;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 "Nunito",system-ui,sans-serif;padding-inline:16px;padding-block:28px 60px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+header.intro{text-align:center;display:flex;flex-direction:column;gap:6px}
+header.intro h1{font:700 clamp(28px,5vw,42px)/1.05 "Oswald",sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:0;text-wrap:balance}
+header.intro p{margin:0 auto;color:var(--muted);max-width:60ch}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+.legend span{font:600 13px "Oswald",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;color:#fff}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.9em}
+
+/* map card */
+.map{background:var(--paper);border-radius:14px;padding:22px clamp(14px,3vw,28px) 26px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow)}
+.banner{align-self:center;border:4px solid var(--red);border-radius:10px;padding:6px 18px;position:relative;text-align:center;max-width:100%}
+.banner::after{content:"";position:absolute;left:50%;bottom:-13px;transform:translateX(-50%);border:9px solid transparent;border-top-color:var(--red);border-bottom:0}
+.banner h2{margin:0;font:700 clamp(20px,3.6vw,30px)/1.1 "Oswald",sans-serif;text-transform:uppercase;text-wrap:balance}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;margin-top:6px}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;align-items:center;gap:10px}
+.big{width:100%;border:3px solid var(--c);border-radius:14px;padding:6px;background:var(--c)}
+.big div{background:var(--paper);border-radius:9px;text-align:center;padding:12px 8px;font:700 clamp(26px,5vw,40px)/1.05 "Oswald",sans-serif;text-transform:uppercase}
+.big small{display:block;font:500 15px "JetBrains Mono",monospace;color:var(--muted);text-transform:none;margin-top:6px}
+.arrow{width:28px;height:34px;color:var(--c)}
+.pill{border:3px solid var(--red);border-radius:8px;padding:3px 16px;font:700 17px "Oswald",sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.pill.eq{border-color:var(--ink)}
+.result{width:100%;border:2px solid var(--c);border-radius:12px;overflow:hidden;background:var(--paper)}
+.result .head{background:var(--soft);padding:10px 12px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.result .head b{color:var(--c);font-weight:800}
+.result .head .f{font:500 14px "JetBrains Mono",monospace;color:var(--muted)}
+.result .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:10px;text-align:center}
+.lbl{font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ex{margin:0}
+.k{color:var(--c);font-weight:800}
+.no{color:var(--red);font-weight:800}
+.tip{border-top:1px dashed var(--line);padding-top:10px;font-size:14.5px;color:var(--muted)}
+.tip strong{color:var(--ink)}
+.rule{align-self:center;background:var(--soft,var(--red-soft));border-radius:10px;padding:10px 16px;text-align:center;max-width:60ch;font-weight:700}
+.trap{border:2px dashed var(--red);border-radius:12px;padding:12px 14px;background:var(--red-soft);display:flex;flex-direction:column;gap:6px}
+.trap .lbl{color:var(--red)}
+.trap p{margin:0}
+.x{color:var(--red);font-weight:800}
+.ok{color:var(--green);font-weight:800}
+
+.c-green{--c:var(--green);--soft:var(--green-soft)}
+.c-blue{--c:var(--blue);--soft:var(--blue-soft)}
+.c-orange{--c:var(--orange);--soft:var(--orange-soft)}
+.c-purple{--c:var(--purple);--soft:var(--purple-soft)}
+.c-red{--c:var(--red);--soft:var(--red-soft)}
+.single{max-width:420px;width:100%;margin:0 auto}
+
+/* summary table */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:800}
+tr.grp td{background:var(--bg);font:600 13px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+footer{text-align:center;color:var(--muted);font-size:14px}
+</style>
+
+<style>
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 20px;margin-top:6px}
+@media (max-width:760px){.trio{grid-template-columns:1fr}}
+.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;text-align:left}
+.list li{padding-left:18px;position:relative}
+.list li::before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--c)}
+.eqn{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 14px;font:700 clamp(22px,4.2vw,34px)/1 "Oswald",sans-serif}
+.eqn .t{border:3px solid var(--c);border-radius:10px;padding:8px 14px;display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--soft)}
+.eqn .t small{font:600 12px "Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.eqn .op{color:var(--muted)}
+.c-ink{--c:var(--ink);--soft:var(--bg)}
+</style>
+<style>
+body{margin:0}
+.back{max-width:980px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.back a{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line);border-radius:9px;padding:6px 12px;background:var(--paper)}
+.back a:hover{color:var(--ink)}
+.back a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+<nav class="back"><a href="/#/m/termos-oracao">← Voltar para Termos da Oração</a><a href="/#/">Estudos DataPrev</a></nav>
+<div class="wrap">
+
+<header class="intro">
+  <h1>Termos da oração</h1>
+  <p>Cada parte da frase tem um “cargo”. Os mapas seguem a ordem de importância: <b style="color:var(--orange)">laranja</b> para os essenciais, <b style="color:var(--blue)">azul</b> para os que completam, <b style="color:var(--green)">verde</b> para os acessórios e <b style="color:var(--purple)">roxo</b> para os que ficam à parte.</p>
+  <div class="legend">
+    <span style="background:var(--orange)">Essenciais</span>
+    <span style="background:var(--blue)">Integrantes</span>
+    <span style="background:var(--green)">Acessórios</span>
+    <span style="background:var(--purple)">À parte</span>
+  </div>
+</header>
+
+<!-- MAPA 1 -->
+<section class="map">
+  <div class="banner"><h2>Os dois pilares: sujeito e predicado</h2></div>
+  <div class="eqn" style="margin-top:8px">
+    <div class="t c-orange">Os policiais<small>sujeito</small></div>
+    <span class="op">+</span>
+    <div class="t c-orange">prenderam o suspeito<small>predicado</small></div>
+  </div>
+  <div class="pair">
+    <div class="col c-orange">
+      <div class="big"><div>Sujeito<small>de quem se fala</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Pergunta-teste</div>
+      <div class="result">
+        <div class="head"><span><b>“Quem</b> + verbo?”</span><span class="f">quem prendeu? → os policiais</span></div>
+        <div class="body">
+          <p class="ex">Pratica a ação: <span class="k">Os policiais</span> prenderam o suspeito.</p>
+          <p class="ex">Ou sofre a ação: <span class="k">O suspeito</span> foi preso.</p>
+          <div class="tip">O verbo <strong>concorda</strong> com o sujeito. Se mudar o sujeito para o plural, o verbo vai junto.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-orange">
+      <div class="big"><div>Predicado<small>o que se diz dele</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Regra</div>
+      <div class="result">
+        <div class="head"><span>Tudo o que <b>sobra</b> tirando o sujeito</span><span class="f">sempre tem um verbo</span></div>
+        <div class="body">
+          <p class="ex">O suspeito <span class="k">foi preso</span>.</p>
+          <p class="ex">O suspeito <span class="k">está calmo</span>. <span style="color:var(--muted)">(“calmo” é o predicativo: uma qualidade do sujeito ligada por verbo de ligação: ser, estar, parecer, ficar)</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Sujeito que não aparece</span>
+    <p><b>Oculto:</b> <em>Prendemos o suspeito</em> (nós, pela terminação do verbo). <b>Indeterminado:</b> <em>Prenderam o suspeito</em> (alguém, não se sabe quem). <b>Sem sujeito:</b> <em>Choveu. Há vagas.</em> (fenômeno da natureza e “haver” = existir).</p>
+  </div>
+</section>
+
+<!-- MAPA 2 -->
+<section class="map">
+  <div class="banner"><h2>Complementos do verbo</h2></div>
+  <p style="margin:0 auto;max-width:62ch;text-align:center;color:var(--muted)">Alguns verbos ficam “incompletos” sozinhos: quem prende, prende <b style="color:var(--ink)">alguém</b>. O termo que completa é o objeto.</p>
+  <div class="pair">
+    <div class="col c-blue">
+      <div class="big"><div>Objeto direto<small>sem preposição</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Teste</div>
+      <div class="result">
+        <div class="head"><span>Verbo + <b>o quê? / quem?</b></span><span class="f">prendeu quem? → o suspeito</span></div>
+        <div class="body">
+          <p class="ex">A polícia prendeu <span class="k">o suspeito</span>.</p>
+          <p class="ex">Analisei <span class="k">os documentos</span>.</p>
+          <div class="tip">Pode ser trocado por <strong>o, a, os, as</strong>: <em>A polícia prendeu<b>-o</b></em>. É ele que vira sujeito na voz passiva.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>Objeto indireto<small>com preposição</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Teste</div>
+      <div class="result">
+        <div class="head"><span>Verbo + <b>de / em / a / com</b> quem?</span><span class="f">confiou em quem? → no parceiro</span></div>
+        <div class="body">
+          <p class="ex">O policial confiou <span class="k">no parceiro</span>.</p>
+          <p class="ex">Ele precisa <span class="k">de ajuda</span>.</p>
+          <div class="tip">A preposição é <strong>exigida pelo verbo</strong>: quem confia, confia <em>em</em>. Pode virar <strong>lhe</strong>: <em>Obedeço<b>-lhe</b></em>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Verbo que pede os dois</span>
+    <p><em>Entreguei <b>o relatório</b> (OD) <b>ao chefe</b> (OI).</em> Quem entrega, entrega <b>algo</b> <b>a alguém</b>.</p>
+  </div>
+</section>
+
+<!-- MAPA 3 -->
+<section class="map">
+  <div class="banner"><h2>Complemento nominal × adjunto adnominal</h2></div>
+  <p style="margin:0 auto;max-width:62ch;text-align:center;color:var(--muted)">É a pegadinha preferida da FGV: os dois aparecem como <b style="color:var(--ink)">“de + alguma coisa”</b> depois de um nome. O que muda é o papel.</p>
+  <div class="pair">
+    <div class="col c-blue">
+      <div class="big"><div>Complemento nominal<small>completa um nome</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Sentido passivo</div>
+      <div class="result">
+        <div class="head"><span>O termo <b>recebe</b> a ação</span><span class="f">nome abstrato, adjetivo ou advérbio + preposição</span></div>
+        <div class="body">
+          <p class="ex">O policial tem orgulho <span class="k">da profissão</span>.</p>
+          <p class="ex">A investigação <span class="k">do crime</span> demorou. <span style="color:var(--muted)">(o crime foi investigado)</span></p>
+          <p class="ex">Ele é favorável <span class="k">à proposta</span>.</p>
+          <div class="tip">Sem ele, o nome fica <strong>incompleto</strong>: orgulho <em>de quê?</em></div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-green">
+      <div class="big"><div>Adjunto adnominal<small>caracteriza um substantivo</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Sentido ativo ou posse</div>
+      <div class="result">
+        <div class="head"><span>O termo <b>pratica</b> a ação ou <b>possui</b></span><span class="f">só se liga a substantivo</span></div>
+        <div class="body">
+          <p class="ex">As viaturas <span class="k">da polícia</span> chegaram. <span style="color:var(--muted)">(a polícia possui)</span></p>
+          <p class="ex">A investigação <span class="k">da delegada</span> demorou. <span style="color:var(--muted)">(a delegada investigou)</span></p>
+          <p class="ex">Também são adjuntos: <span class="k">as</span>, <span class="k">minha</span>, <span class="k">três</span>, <span class="k">nova</span> (artigos, pronomes, numerais e adjetivos).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Teste rápido</span>
+    <p>1. Liga-se a <b>adjetivo ou advérbio</b>? Então é <b>complemento nominal</b>.</p>
+    <p>2. Liga-se a substantivo? Pergunte: o termo <b>sofre</b> a ação (CN) ou <b>faz/possui</b> (AA)? <em>A invenção <b>do rádio</b></em> → o rádio foi inventado → CN. <em>A invenção <b>de Santos Dumont</b></em> → ele inventou → AA.</p>
+  </div>
+</section>
+
+<!-- MAPA 4 -->
+<section class="map">
+  <div class="banner"><h2>Adjunto adverbial e agente da passiva</h2></div>
+  <div class="pair">
+    <div class="col c-green">
+      <div class="big"><div>Adjunto adverbial<small>circunstância</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Teste</div>
+      <div class="result">
+        <div class="head"><span><b>Quando? Onde? Como? Por quê?</b></span><span class="f">modifica verbo, adjetivo ou advérbio</span></div>
+        <div class="body">
+          <p class="ex">A equipe chegou <span class="k">rapidamente</span>. <span style="color:var(--muted)">(modo)</span></p>
+          <p class="ex"><span class="k">Ontem</span>, a operação começou <span class="k">no centro</span>. <span style="color:var(--muted)">(tempo, lugar)</span></p>
+          <p class="ex">Faltou <span class="k">por doença</span>. <span style="color:var(--muted)">(causa)</span></p>
+          <div class="tip">É o único que <strong>pode mudar de lugar</strong> na frase sem estragar o sentido. Quando vem deslocado e longo, costuma ganhar vírgula.</div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-blue">
+      <div class="big"><div>Agente da passiva<small>quem faz, na voz passiva</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Teste</div>
+      <div class="result">
+        <div class="head"><span>verbo <b>ser + particípio</b> + <b>por / pelo</b></span><span class="f">foi preso por quem?</span></div>
+        <div class="body">
+          <p class="ex">O suspeito foi preso <span class="k">pelos policiais</span>.</p>
+          <p class="ex">Na voz ativa ele <strong>vira sujeito</strong>: <span class="k">Os policiais</span> prenderam o suspeito.</p>
+          <div class="tip">Só existe em frase passiva. Sem “foi/é/será + particípio”, não é agente da passiva.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA 5 -->
+<section class="map">
+  <div class="banner"><h2>Aposto × vocativo</h2></div>
+  <p style="margin:0 auto;max-width:62ch;text-align:center;color:var(--muted)">Os dois costumam vir <b style="color:var(--ink)">entre vírgulas</b>. A diferença é com quem eles falam.</p>
+  <div class="pair">
+    <div class="col c-purple">
+      <div class="big"><div>Aposto<small>explica outro termo</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Teste</div>
+      <div class="result">
+        <div class="head"><span>Pode <b>substituir</b> o termo explicado</span></div>
+        <div class="body">
+          <p class="ex">O delegado, <span class="k">chefe da operação</span>, falou.</p>
+          <p class="ex" style="color:var(--muted)">→ “Chefe da operação falou.” Faz sentido: é aposto.</p>
+          <div class="tip">Também aparece depois de dois-pontos: <em>Levou duas coisas: <b>coragem e paciência</b>.</em></div>
+        </div>
+      </div>
+    </div>
+    <div class="col c-purple">
+      <div class="big"><div>Vocativo<small>chama alguém</small></div></div>
+      <svg class="arrow" viewBox="0 0 28 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2v28M5 21l9 9 9-9"/></svg>
+      <div class="pill eq">Teste</div>
+      <div class="result">
+        <div class="head"><span>Aceita um <b>“ó”</b> na frente</span><span class="f">não se liga a nenhum termo</span></div>
+        <div class="body">
+          <p class="ex"><span class="k">Equipe</span>, atenção à missão!</p>
+          <p class="ex" style="color:var(--muted)">→ “Ó equipe, atenção!” Faz sentido: é vocativo.</p>
+          <div class="tip">Não faz parte nem do sujeito nem do predicado. É a pessoa com quem se fala.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trap">
+    <span class="lbl">Pegadinha de vírgula</span>
+    <p><em>“Pedro, saiu cedo”</em> está errado se Pedro é sujeito (vírgula separando sujeito do verbo). Está certo se Pedro é vocativo: <em>“Pedro, saia cedo!”</em></p>
+  </div>
+</section>
+
+<!-- RESUMO -->
+<section class="map">
+  <div class="banner"><h2>Cola rápida</h2></div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Termo</th><th>O que faz</th><th>Pergunta-teste</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="4">Essenciais</td></tr>
+        <tr><td style="color:var(--orange)">Sujeito</td><td>Pratica ou sofre a ação</td><td>Quem + verbo?</td><td><u>Os policiais</u> prenderam o suspeito.</td></tr>
+        <tr><td style="color:var(--orange)">Predicado</td><td>Informa algo sobre o sujeito</td><td>Tudo menos o sujeito</td><td>O suspeito <u>foi preso</u>.</td></tr>
+        <tr class="grp"><td colspan="4">Integrantes (completam)</td></tr>
+        <tr><td style="color:var(--blue)">Objeto direto</td><td>Completa o verbo sem preposição</td><td>O quê? Quem?</td><td>Prendeu <u>o suspeito</u>.</td></tr>
+        <tr><td style="color:var(--blue)">Objeto indireto</td><td>Completa o verbo com preposição</td><td>De/em/a quem?</td><td>Confiou <u>no parceiro</u>.</td></tr>
+        <tr><td style="color:var(--blue)">Complemento nominal</td><td>Completa nome, adjetivo ou advérbio</td><td>Sofre a ação?</td><td>Orgulho <u>da profissão</u>.</td></tr>
+        <tr><td style="color:var(--blue)">Agente da passiva</td><td>Quem faz, na voz passiva</td><td>Por quem?</td><td>Preso <u>pelos policiais</u>.</td></tr>
+        <tr class="grp"><td colspan="4">Acessórios (caracterizam)</td></tr>
+        <tr><td style="color:var(--green)">Adjunto adnominal</td><td>Caracteriza substantivo</td><td>Faz ou possui?</td><td>Viaturas <u>da polícia</u>.</td></tr>
+        <tr><td style="color:var(--green)">Adjunto adverbial</td><td>Dá circunstância</td><td>Quando? Onde? Como?</td><td>Chegou <u>rapidamente</u>.</td></tr>
+        <tr class="grp"><td colspan="4">À parte</td></tr>
+        <tr><td style="color:var(--purple)">Aposto</td><td>Explica outro termo</td><td>Substitui o termo?</td><td>O delegado, <u>chefe da operação</u>, falou.</td></tr>
+        <tr><td style="color:var(--purple)">Vocativo</td><td>Chama alguém</td><td>Aceita “ó”?</td><td><u>Equipe</u>, atenção!</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>Concurso DATAPREV 2026 · Língua Portuguesa · Termos da oração.</footer>
+</div>
+
+</body>
+</html>

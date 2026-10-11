@@ -498,6 +498,10 @@ window.CONTENT = {
           "descricao": "Do zero: a diferença entre o que a palavra É e o que ela FAZ na frase. Sujeito, predicado, objetos, complemento nominal, adjuntos e apostos — com o teste que separa adjunto adnominal de complemento nominal, que é onde a FGV pega quase todo mundo.",
           "resumo": [
             {
+              "titulo": "Mapa mental — revisão visual",
+              "html": "<a class=\"mapa-link\" href=\"/mapas/termos-oracao.html\"><span class=\"mapa-link-ic\"><i class=\"ti ti-sitemap\"></i></span><span class=\"mapa-link-body\"><b>Abrir os mapas mentais</b><span>6 mapas coloridos: sujeito e predicado, objeto direto e indireto, complemento nominal × adjunto adnominal, adjunto adverbial e agente da passiva, aposto × vocativo e a cola rápida.</span></span><i class=\"ti ti-arrow-right mapa-link-go\"></i></a><p>Use os mapas para revisar depois de ler a teoria abaixo, e na véspera da prova.</p>"
+            },
+            {
               "titulo": "Antes de tudo: as duas identidades de cada palavra",
               "html": "\n<p>Toda palavra dentro de uma frase tem <b>duas identidades ao mesmo tempo</b>, e confundir as duas é o que faz análise sintática parecer difícil.</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">O que ela É</span> a classe de palavra: substantivo, adjetivo, verbo, pronome… Isso é <b>morfologia</b>.</div>\n  <div class=\"def\"><span class=\"def-t\">O que ela FAZ ali</span> a função dentro daquela frase: sujeito, objeto, adjunto… Isso é <b>sintaxe</b>.</div>\n</div>\n<p><b>Morfossintaxe</b> é justamente olhar as duas juntas. Veja a mesma palavra em duas frases:</p>\n<div class=\"defs\">\n  <div class=\"def\"><span class=\"def-t\">A <b>casa</b> é grande</span> “casa” é substantivo (o que é) e <b>sujeito</b> (o que faz)</div>\n  <div class=\"def\"><span class=\"def-t\">Comprei a <b>casa</b></span> continua substantivo, mas agora é <b>objeto direto</b></div>\n</div>\n<p class=\"mnemonic\">Classe é fixa, função depende da frase. A classe é a profissão da pessoa (ela é médica); a função é o papel dela naquela reunião (ela é a presidente da mesa).</p>\n<p>Por que isso importa para a prova: <b>crase, concordância e regência são regras escritas em cima de funções</b>. “O verbo concorda com o sujeito”, “o adjetivo concorda com o substantivo a que se refere”, “crase é preposição + artigo”. Se você não identifica sujeito, objeto e adjunto, essas regras viram decoreba solta.</p>"
             },
@@ -1810,6 +1814,133 @@ window.CONTENT = {
               ]
             }
           ]
+        },
+        {
+          "id": "hifen",
+          "nome": "Hífen",
+          "icon": "ti-minus",
+          "descricao": "Regras do Novo Acordo Ortográfico: prefixos (a regra das letras), R/S, H, os prefixos que sempre pedem hífen, palavras compostas e pronomes junto do verbo.",
+          "resumo": [
+            {
+              "titulo": "Mapa mental — revisão visual",
+              "html": "<a class=\"mapa-link\" href=\"/mapas/hifen.html\"><span class=\"mapa-link-ic\"><i class=\"ti ti-sitemap\"></i></span><span class=\"mapa-link-body\"><b>Abrir os mapas mentais</b><span>6 mapas coloridos: para que serve o hífen, a regra das letras nos prefixos, R/S e H, os prefixos que sempre pedem hífen, palavras compostas, pronomes junto do verbo e a cola rápida.</span></span><i class=\"ti ti-arrow-right mapa-link-go\"></i></a><p>Use os mapas para revisar depois de ler a teoria abaixo, e na véspera da prova.</p>"
+            },
+            {
+              "titulo": "Antes de tudo: o que é o hífen e por que ele cai",
+              "html": "<p>O <b>hífen</b> é o tracinho (-) que liga pedaços de uma mesma palavra. Não confunda com o <b>travessão</b> (—), que é maior e separa trechos da frase.</p><p>As regras atuais são as do <b>Novo Acordo Ortográfico</b>, obrigatório desde 2016. Ele mudou muita coisa: <i>auto-escola</i> virou <i>autoescola</i>, <i>anti-rugas</i> virou <i>antirrugas</i>, <i>dia-a-dia</i> virou <i>dia a dia</i>. Por isso a FGV gosta do assunto: muita gente ainda escreve do jeito antigo.</p><p>O hífen aparece em três situações, e cada uma tem sua lógica:</p><div class=\"defs\"><div class=\"def\"><span class=\"def-t\">Prefixo + palavra</span> micro-ondas, super-homem, autoescola. Decide-se olhando as letras que se encontram.</div><div class=\"def\"><span class=\"def-t\">Palavra + palavra</span> guarda-chuva, segunda-feira, dia a dia. Decide-se vendo se há palavra de ligação no meio.</div><div class=\"def\"><span class=\"def-t\">Verbo + pronome</span> enviá-lo, dir-se-ia. Sempre com hífen quando o pronome vem depois.</div></div><p><b>Prefixo</b> é um pedaço que vem antes da palavra e muda seu sentido, mas não vive sozinho: <i>anti</i> (contra), <i>super</i> (acima), <i>micro</i> (pequeno), <i>inter</i> (entre), <i>sub</i> (abaixo), <i>auto</i> (próprio).</p>"
+            },
+            {
+              "titulo": "Prefixos: a regra das letras",
+              "html": "<p>Para quase todos os prefixos, a decisão é mecânica: compare a <b>última letra do prefixo</b> com a <b>primeira letra da palavra</b>.</p><div class=\"mnemonic\"><b>Letras iguais se separam, letras diferentes se juntam.</b></div><div class=\"defs\"><div class=\"def\"><span class=\"def-t\">vogal + mesma vogal</span> hífen: micro-ondas, anti-inflamatório, contra-ataque, auto-observação</div><div class=\"def\"><span class=\"def-t\">vogal + vogal diferente</span> junto: autoescola, infraestrutura, antiaéreo, extraescolar, semiaberto</div><div class=\"def\"><span class=\"def-t\">consoante + mesma consoante</span> hífen: inter-regional, hiper-realista, super-resistente, sub-base</div><div class=\"def\"><span class=\"def-t\">consoante + letra diferente</span> junto: hipermercado, superinteressante, interestadual, subsolo</div></div><div class=\"destaque\"><b>Exceção que cai:</b> os prefixos <b>co-</b>, <b>re-</b> e <b>pre-</b> (sem acento) juntam mesmo diante da mesma vogal: <i>cooperar, coordenar, coobrigação, reeleger, reescrever, preexistente, preencher</i>.</div>"
+            },
+            {
+              "titulo": "Prefixo + R ou S: junta e dobra",
+              "html": "<p>Quando o prefixo termina em <b>vogal</b> e a palavra começa com <b>R</b> ou <b>S</b>, não há hífen: as palavras se juntam e a consoante <b>dobra</b>.</p><div class=\"defs\"><div class=\"def\"><span class=\"def-t\">anti + rugas</span> antirrugas</div><div class=\"def\"><span class=\"def-t\">auto + retrato</span> autorretrato</div><div class=\"def\"><span class=\"def-t\">ultra + som</span> ultrassom</div><div class=\"def\"><span class=\"def-t\">mini + saia</span> minissaia</div><div class=\"def\"><span class=\"def-t\">contra + regra</span> contrarregra</div></div><p><b>Por que dobra?</b> Para manter o som. Entre duas vogais, um S só tem som de Z (como em <i>casa</i>) e um R só tem som fraco (como em <i>caro</i>). “Antisocial” seria lido “antizocial”.</p><div class=\"destaque\">Se o prefixo termina em <b>R</b> e a palavra começa com <b>R</b>, vale a regra das letras iguais: <i>hiper-realista, inter-racial, super-resistente</i>. Hífen, sem dobrar.</div>"
+            },
+            {
+              "titulo": "Prefixo + H",
+              "html": "<p>Diante de palavra começada por <b>H</b>, o prefixo leva hífen e o H fica: <i>anti-higiênico, super-homem, pré-história, sub-humano, mini-hotel</i>.</p><div class=\"destaque\"><b>Exceções:</b> com <b>co-, re-, des-, in-</b> o H desaparece e a palavra junta: <i>coerdeiro</i> (co + herdeiro), <i>reabilitar</i>, <i>desumano</i>, <i>inábil</i>.</div>"
+            },
+            {
+              "titulo": "Prefixos que sempre pedem hífen",
+              "html": "<p>Alguns prefixos ignoram a regra das letras. A lista é curta e vale decorar:</p><div class=\"defs\"><div class=\"def\"><span class=\"def-t\">ex- (que deixou de ser), vice-</span> ex-diretor, ex-aluna, vice-presidente</div><div class=\"def\"><span class=\"def-t\">sem-, além-, aquém-, recém-</span> sem-terra, além-mar, recém-nascido, recém-aprovado</div><div class=\"def\"><span class=\"def-t\">pós-, pré-, pró- (com acento)</span> pós-graduação, pré-edital, pró-reitor. Sem acento, juntam: pospor, prever, promover</div><div class=\"def\"><span class=\"def-t\">bem-</span> quase sempre: bem-vindo, bem-estar, bem-humorado (exceções: benfeito, benfeitor, benquerer)</div><div class=\"def\"><span class=\"def-t\">mal-</span> só antes de vogal, H ou L: mal-estar, mal-humorado, mal-limpo. Nos outros casos junta: malcriado, malsucedido</div><div class=\"def\"><span class=\"def-t\">sub-</span> antes de B, R, H: sub-base, sub-reitor, sub-humano. Nos outros, junta: subsolo, subgerente</div><div class=\"def\"><span class=\"def-t\">pan-, circum-</span> antes de vogal, H, M, N: pan-americano, circum-navegação</div></div><div class=\"destaque\"><b>Nunca</b> levam hífen: <b>não</b> e <b>quase</b> usados como prefixo: <i>não fumante, não governamental, quase contrato</i>.</div>"
+            },
+            {
+              "titulo": "Palavras compostas",
+              "html": "<p>Palavra composta é a junção de duas ou mais palavras que formam <b>um significado novo</b>: <i>guarda-chuva</i> não é um guarda nem uma chuva.</p><div class=\"mnemonic\">Pergunta-chave: <b>tem palavra de ligação no meio</b> (de, a, que, do, da)?</div><div class=\"defs\"><div class=\"def\"><span class=\"def-t\">Não tem → hífen</span> guarda-chuva, segunda-feira, arco-íris, decreto-lei, azul-escuro, tenente-coronel</div><div class=\"def\"><span class=\"def-t\">Tem → sem hífen</span> dia a dia, fim de semana, mão de obra, pé de moleque, cara de pau</div></div><div class=\"destaque\"><b>Exceções com hífen mesmo tendo ligação:</b> cor-de-rosa, água-de-colônia, mais-que-perfeito, pé-de-meia, arco-da-velha, à queima-roupa. E <b>nomes de plantas e animais</b> mantêm sempre: bem-te-vi, joão-de-barro, couve-flor, erva-doce.</div><p>Algumas palavras <b>perderam a ideia de composição</b> e viraram uma só: <i>girassol, mandachuva, paraquedas, passatempo, pontapé</i>. Cuidado: <i>para-choque, para-brisa, para-lama</i> continuam com hífen.</p>"
+            },
+            {
+              "titulo": "Pronome junto do verbo",
+              "html": "<p>Quando o pronome oblíquo (<i>o, a, lhe, se, me, nos</i>) vem <b>depois do verbo</b> (ênclise), há hífen: <i>Entregaram-lhe o edital. Fizeram-no.</i></p><p>Se o verbo termina em R, S ou Z, essa letra cai e o pronome vira <b>lo, la, los, las</b>: <i>enviar + o = enviá-lo</i>; <i>fiz + o = fi-lo</i>.</p><p>No futuro, o pronome pode ficar <b>no meio</b> do verbo (mesóclise), com dois hífens: <i>dir-se-ia, far-se-á, entregar-lhe-ei</i>.</p><div class=\"destaque\">Pronome <b>antes</b> do verbo não tem hífen: <i>Não lhe entregaram o edital.</i></div>"
+            },
+            {
+              "titulo": "Checklist de 30 segundos",
+              "html": "<div class=\"defs\"><div class=\"def\"><span class=\"def-t\">1</span> É prefixo da lista do “sempre” (ex, vice, sem, recém, pós/pré/pró com acento)? → hífen</div><div class=\"def\"><span class=\"def-t\">2</span> A palavra começa com H? → hífen (menos co, re, des, in)</div><div class=\"def\"><span class=\"def-t\">3</span> Prefixo em vogal + R ou S? → junta e dobra</div><div class=\"def\"><span class=\"def-t\">4</span> Letras iguais? → hífen. Diferentes? → junto (menos co, re, pre)</div><div class=\"def\"><span class=\"def-t\">5</span> Composto com “de/a/que” no meio? → sem hífen (menos plantas, animais e as consagradas)</div></div>"
+            }
+          ],
+          "flashcards": [
+            {
+              "tema": "Hífen",
+              "pergunta": "Prefixo terminado em vogal + palavra com a mesma vogal: hífen ou junto?",
+              "resposta": "Hífen. Letras iguais se separam: micro-ondas, anti-inflamatório, contra-ataque."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Prefixo terminado em vogal + vogal diferente: hífen ou junto?",
+              "resposta": "Junto. Letras diferentes se juntam: autoescola, infraestrutura, extraescolar."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Prefixo terminado em vogal + palavra com R ou S?",
+              "resposta": "Junta e dobra a consoante: antirrugas, autorretrato, ultrassom, minissaia."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Prefixo + palavra iniciada por H?",
+              "resposta": "Hífen: anti-higiênico, super-homem, pré-história. Exceções co, re, des, in: coerdeiro, reabilitar, desumano."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Quais prefixos juntam mesmo diante da mesma vogal?",
+              "resposta": "co-, re- e pre- (sem acento): cooperar, coordenar, reeleger, preexistente."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Hiper-realista ou hiperrealista?",
+              "resposta": "Hiper-realista. Prefixo terminado em R + palavra com R: letras iguais, hífen."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Quais prefixos levam hífen sempre?",
+              "resposta": "ex- (que deixou de ser), vice-, sem-, além-, aquém-, recém-, e pós-, pré-, pró- quando têm acento."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Mal-estar ou malestar? Mal-criado ou malcriado?",
+              "resposta": "Mal-estar (mal- leva hífen antes de vogal, H ou L). Malcriado (antes de outras consoantes junta)."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Sub-reitor ou subreitor? Sub-solo ou subsolo?",
+              "resposta": "Sub-reitor (sub- leva hífen antes de B, R, H). Subsolo (nos outros casos junta)."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Não fumante leva hífen?",
+              "resposta": "Não. “Não” e “quase” usados como prefixo nunca levam hífen."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Dia-a-dia ou dia a dia? Fim-de-semana ou fim de semana?",
+              "resposta": "Dia a dia e fim de semana. Composto com palavra de ligação no meio não leva hífen."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Quais compostos com “de” mantêm o hífen?",
+              "resposta": "Os consagrados (cor-de-rosa, água-de-colônia, mais-que-perfeito, pé-de-meia, arco-da-velha) e nomes de plantas e animais (bem-te-vi, joão-de-barro, couve-flor)."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Paraquedas ou para-quedas? Para-choque ou parachoque?",
+              "resposta": "Paraquedas (perdeu a noção de composição). Para-choque continua com hífen."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Guarda-chuva e segunda-feira levam hífen por quê?",
+              "resposta": "São compostos de duas palavras ligadas direto, sem “de/a/que” no meio."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "Como fica enviar + o?",
+              "resposta": "Enviá-lo. O R cai, o pronome vira “lo” e entra hífen."
+            },
+            {
+              "tema": "Hífen",
+              "pergunta": "O que é mesóclise e como se escreve?",
+              "resposta": "Pronome no meio do verbo no futuro, com dois hífens: dir-se-ia, far-se-á."
+            }
+          ],
+          "simulados": []
         }
       ]
     },
